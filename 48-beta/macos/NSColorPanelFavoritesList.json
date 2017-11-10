@@ -1,0 +1,524 @@
+{
+  "imports": [
+    "NSCollectionViewDataSource.h",
+    "NSCollectionViewDelegate.h",
+    "NSUserInterfaceValidations.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSCollectionView",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSColorPanelFavoritesList",
+  "extends": "NSView",
+  "interfaces": [
+    "NSUserInterfaceValidations",
+    "NSCollectionViewDelegate",
+    "NSCollectionViewDataSource"
+  ],
+  "methods": {
+    "storeIndexForColorIndex:": {
+      "name": "storeIndexForColorIndex:",
+      "bridgedName": "storeIndexForColorIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_favoritesDidChange:": {
+      "name": "_favoritesDidChange:",
+      "bridgedName": "_favoritesDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSavedColors:": {
+      "name": "setSavedColors:",
+      "bridgedName": "setSavedColors",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "savedColors": {
+      "name": "savedColors",
+      "bridgedName": "savedColors",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didSelectItemsAtIndexPaths:": {
+      "name": "collectionView:didSelectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_didSelectItemsAtIndexPaths",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:shouldDeselectItemsAtIndexPaths:": {
+      "name": "collectionView:shouldDeselectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_shouldDeselectItemsAtIndexPaths",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:shouldSelectItemsAtIndexPaths:": {
+      "name": "collectionView:shouldSelectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_shouldSelectItemsAtIndexPaths",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingSession:endedAtPoint:dragOperation:": {
+      "name": "collectionView:draggingSession:endedAtPoint:dragOperation:",
+      "bridgedName": "collectionView_draggingSession_endedAtPoint_dragOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:acceptDrop:indexPath:dropOperation:": {
+      "name": "collectionView:acceptDrop:indexPath:dropOperation:",
+      "bridgedName": "collectionView_acceptDrop_indexPath_dropOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:validateDrop:proposedIndexPath:dropOperation:": {
+      "name": "collectionView:validateDrop:proposedIndexPath:dropOperation:",
+      "bridgedName": "collectionView_validateDrop_proposedIndexPath_dropOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        },
+        {
+          "type": "long long *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:writeItemsAtIndexPaths:toPasteboard:": {
+      "name": "collectionView:writeItemsAtIndexPaths:toPasteboard:",
+      "bridgedName": "collectionView_writeItemsAtIndexPaths_toPasteboard",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:canDragItemsAtIndexPaths:withEvent:": {
+      "name": "collectionView:canDragItemsAtIndexPaths:withEvent:",
+      "bridgedName": "collectionView_canDragItemsAtIndexPaths_withEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:itemForRepresentedObjectAtIndexPath:": {
+      "name": "collectionView:itemForRepresentedObjectAtIndexPath:",
+      "bridgedName": "collectionView_itemForRepresentedObjectAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:numberOfItemsInSection:": {
+      "name": "collectionView:numberOfItemsInSection:",
+      "bridgedName": "collectionView_numberOfItemsInSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInit": {
+      "name": "_commonInit",
+      "bridgedName": "_commonInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentRectInsets": {
+      "name": "alignmentRectInsets",
+      "bridgedName": "alignmentRectInsets",
+      "args": [],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paste:": {
+      "name": "paste:",
+      "bridgedName": "paste",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cut:": {
+      "name": "cut:",
+      "bridgedName": "cut",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy:": {
+      "name": "copy:",
+      "bridgedName": "copy",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delete:": {
+      "name": "delete:",
+      "bridgedName": "delete",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteToEndOfParagraph:": {
+      "name": "deleteToEndOfParagraph:",
+      "bridgedName": "deleteToEndOfParagraph",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteToBeginningOfParagraph:": {
+      "name": "deleteToBeginningOfParagraph:",
+      "bridgedName": "deleteToBeginningOfParagraph",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteToEndOfLine:": {
+      "name": "deleteToEndOfLine:",
+      "bridgedName": "deleteToEndOfLine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteToBeginningOfLine:": {
+      "name": "deleteToBeginningOfLine:",
+      "bridgedName": "deleteToBeginningOfLine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteWordBackward:": {
+      "name": "deleteWordBackward:",
+      "bridgedName": "deleteWordBackward",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteWordForward:": {
+      "name": "deleteWordForward:",
+      "bridgedName": "deleteWordForward",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteBackwardByDecomposingPreviousCharacter:": {
+      "name": "deleteBackwardByDecomposingPreviousCharacter:",
+      "bridgedName": "deleteBackwardByDecomposingPreviousCharacter",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteBackward:": {
+      "name": "deleteBackward:",
+      "bridgedName": "deleteBackward",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteForward:": {
+      "name": "deleteForward:",
+      "bridgedName": "deleteForward",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteCurrentColorAndSelectNext": {
+      "name": "deleteCurrentColorAndSelectNext",
+      "bridgedName": "deleteCurrentColorAndSelectNext",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteCurrentColorAndSelectPrevious": {
+      "name": "deleteCurrentColorAndSelectPrevious",
+      "bridgedName": "deleteCurrentColorAndSelectPrevious",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "colorSelectionHandler": {
+      "name": "colorSelectionHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "presentedColors": {
+      "name": "presentedColors",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

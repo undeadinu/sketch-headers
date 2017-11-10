@@ -1,0 +1,979 @@
+{
+  "imports": [
+    "NSNumberFormatter.h",
+    "NSObservable.h",
+    "NSObserver.h"
+  ],
+  "classes": [
+    "NSAttributedString",
+    "NSDecimalNumberHandler",
+    "NSDictionary",
+    "NSLocale",
+    "NSMutableDictionary",
+    "NSNumber",
+    "NSRecursiveLock",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSNumberFormatter",
+  "extends": "NSFormatter",
+  "interfaces": [
+    "NSObservable",
+    "NSObserver"
+  ],
+  "methods": {
+    "_percentageColorValueTransformer": {
+      "name": "_percentageColorValueTransformer",
+      "bridgedName": "_percentageColorValueTransformer",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_hueColorValueFormatter": {
+      "name": "_hueColorValueFormatter",
+      "bridgedName": "_hueColorValueFormatter",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "localizedStringFromNumber:numberStyle:": {
+      "name": "localizedStringFromNumber:numberStyle:",
+      "bridgedName": "localizedStringFromNumber_numberStyle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setDefaultFormatterBehavior:": {
+      "name": "setDefaultFormatterBehavior:",
+      "bridgedName": "setDefaultFormatterBehavior",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultFormatterBehavior": {
+      "name": "defaultFormatterBehavior",
+      "bridgedName": "defaultFormatterBehavior",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setDefaultRedColor:": {
+      "name": "_setDefaultRedColor:",
+      "bridgedName": "_setDefaultRedColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setUsesCharacterDirection:": {
+      "name": "_setUsesCharacterDirection:",
+      "bridgedName": "_setUsesCharacterDirection",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usesCharacterDirection": {
+      "name": "_usesCharacterDirection",
+      "bridgedName": "_usesCharacterDirection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasSetInternationalCurrencySymbol": {
+      "name": "_hasSetInternationalCurrencySymbol",
+      "bridgedName": "_hasSetInternationalCurrencySymbol",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasSetCurrencySymbol": {
+      "name": "_hasSetCurrencySymbol",
+      "bridgedName": "_hasSetCurrencySymbol",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasSetCurrencyCode": {
+      "name": "_hasSetCurrencyCode",
+      "bridgedName": "_hasSetCurrencyCode",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberFromString:": {
+      "name": "numberFromString:",
+      "bridgedName": "numberFromString",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringFromNumber:": {
+      "name": "stringFromNumber:",
+      "bridgedName": "stringFromNumber",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getObjectValue:forString:range:error:": {
+      "name": "getObjectValue:forString:range:error:",
+      "bridgedName": "getObjectValue_forString_range_error",
+      "args": [
+        {
+          "type": "out id *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "inout struct _NSRange *"
+        },
+        {
+          "type": "out id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getObjectValue:forString:errorDescription:": {
+      "name": "getObjectValue:forString:errorDescription:",
+      "bridgedName": "getObjectValue_forString_errorDescription",
+      "args": [
+        {
+          "type": "out id *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "out id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attributedStringForObjectValue:withDefaultAttributes:": {
+      "name": "attributedStringForObjectValue:withDefaultAttributes:",
+      "bridgedName": "attributedStringForObjectValue_withDefaultAttributes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mayDecorateAttributedStringForObjectValue:": {
+      "name": "_mayDecorateAttributedStringForObjectValue:",
+      "bridgedName": "_mayDecorateAttributedStringForObjectValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheGenerationCount": {
+      "name": "_cacheGenerationCount",
+      "bridgedName": "_cacheGenerationCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tracksCacheGenerationCount": {
+      "name": "_tracksCacheGenerationCount",
+      "bridgedName": "_tracksCacheGenerationCount",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringForObjectValue:": {
+      "name": "stringForObjectValue:",
+      "bridgedName": "stringForObjectValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reset": {
+      "name": "_reset",
+      "bridgedName": "_reset",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__Keynote_NOOP": {
+      "name": "__Keynote_NOOP",
+      "bridgedName": "__Keynote_NOOP",
+      "args": [],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_regenerateFormatter": {
+      "name": "_regenerateFormatter",
+      "bridgedName": "_regenerateFormatter",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearFormatter": {
+      "name": "_clearFormatter",
+      "bridgedName": "_clearFormatter",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateCache": {
+      "name": "_invalidateCache",
+      "bridgedName": "_invalidateCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkLocaleChange": {
+      "name": "checkLocaleChange",
+      "bridgedName": "checkLocaleChange",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCheckLocaleChange": {
+      "name": "resetCheckLocaleChange",
+      "bridgedName": "resetCheckLocaleChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCheckModify": {
+      "name": "resetCheckModify",
+      "bridgedName": "resetCheckModify",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkModify": {
+      "name": "checkModify",
+      "bridgedName": "checkModify",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearPropertyBit": {
+      "name": "clearPropertyBit",
+      "bridgedName": "clearPropertyBit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPropertyBit": {
+      "name": "setPropertyBit",
+      "bridgedName": "setPropertyBit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getFormatter": {
+      "name": "getFormatter",
+      "bridgedName": "getFormatter",
+      "args": [],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLocalizationFromDefaults": {
+      "name": "setLocalizationFromDefaults",
+      "bridgedName": "setLocalizationFromDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeInternalRedFromTextAttributesOfNegativeValues": {
+      "name": "_removeInternalRedFromTextAttributesOfNegativeValues",
+      "bridgedName": "_removeInternalRedFromTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_containsColorForTextAttributesOfNegativeValues": {
+      "name": "_containsColorForTextAttributesOfNegativeValues",
+      "bridgedName": "_containsColorForTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addInternalRedToTextAttributesOfNegativeValues": {
+      "name": "_addInternalRedToTextAttributesOfNegativeValues",
+      "bridgedName": "_addInternalRedToTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_getObjectValue:forString:errorDescription:": {
+      "name": "__oldnf_getObjectValue:forString:errorDescription:",
+      "bridgedName": "__oldnf_getObjectValue_forString_errorDescription",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_stringForObjectValue:": {
+      "name": "__oldnf_stringForObjectValue:",
+      "bridgedName": "__oldnf_stringForObjectValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_decimalIsNotANumber:": {
+      "name": "__oldnf_decimalIsNotANumber:",
+      "bridgedName": "__oldnf_decimalIsNotANumber",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_numberStringForValueObject:withBuffer:andNegativeFlag:": {
+      "name": "__oldnf_numberStringForValueObject:withBuffer:andNegativeFlag:",
+      "bridgedName": "__oldnf_numberStringForValueObject_withBuffer_andNegativeFlag",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDStruct_177dfe65 *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_surroundValueInString:withLength:andBuffer:": {
+      "name": "__oldnf_surroundValueInString:withLength:andBuffer:",
+      "bridgedName": "__oldnf_surroundValueInString_withLength_andBuffer",
+      "args": [
+        {
+          "type": "unsigned short *"
+        },
+        {
+          "type": "long long *"
+        },
+        {
+          "type": "CDStruct_177dfe65 *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_setLocalizationFromDefaults": {
+      "name": "__oldnf_setLocalizationFromDefaults",
+      "bridgedName": "__oldnf_setLocalizationFromDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_removeInternalRedFromTextAttributesOfNegativeValues": {
+      "name": "__oldnf_removeInternalRedFromTextAttributesOfNegativeValues",
+      "bridgedName": "__oldnf_removeInternalRedFromTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_containsColorForTextAttributesOfNegativeValues": {
+      "name": "__oldnf_containsColorForTextAttributesOfNegativeValues",
+      "bridgedName": "__oldnf_containsColorForTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_addInternalRedToTextAttributesOfNegativeValues": {
+      "name": "__oldnf_addInternalRedToTextAttributesOfNegativeValues",
+      "bridgedName": "__oldnf_addInternalRedToTextAttributesOfNegativeValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_addThousandSeparatorsToFormat:withBuffer:": {
+      "name": "__oldnf_addThousandSeparatorsToFormat:withBuffer:",
+      "bridgedName": "__oldnf_addThousandSeparatorsToFormat_withBuffer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDStruct_177dfe65 *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_addThousandSeparators:withBuffer:": {
+      "name": "__oldnf_addThousandSeparators:withBuffer:",
+      "bridgedName": "__oldnf_addThousandSeparators_withBuffer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDStruct_177dfe65 *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "receiveObservedValue:": {
+      "name": "receiveObservedValue:",
+      "bridgedName": "receiveObservedValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "partialStringValidationEnabled": {
+      "name": "partialStringValidationEnabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isPartialStringValidationEnabled"
+      ]
+    },
+    "lenient": {
+      "name": "lenient",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isLenient"
+      ]
+    },
+    "currencyGroupingSeparator": {
+      "name": "currencyGroupingSeparator",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "maximum": {
+      "name": "maximum",
+      "pointer": true,
+      "type": "NSNumber",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "minimum": {
+      "name": "minimum",
+      "pointer": true,
+      "type": "NSNumber",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "roundingIncrement": {
+      "name": "roundingIncrement",
+      "pointer": true,
+      "type": "NSNumber",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "paddingCharacter": {
+      "name": "paddingCharacter",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "multiplier": {
+      "name": "multiplier",
+      "pointer": true,
+      "type": "NSNumber",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "exponentSymbol": {
+      "name": "exponentSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "plusSign": {
+      "name": "plusSign",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "minusSign": {
+      "name": "minusSign",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "perMillSymbol": {
+      "name": "perMillSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "percentSymbol": {
+      "name": "percentSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "internationalCurrencySymbol": {
+      "name": "internationalCurrencySymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "currencySymbol": {
+      "name": "currencySymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "currencyCode": {
+      "name": "currencyCode",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "negativeSuffix": {
+      "name": "negativeSuffix",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "negativePrefix": {
+      "name": "negativePrefix",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "positiveSuffix": {
+      "name": "positiveSuffix",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "positivePrefix": {
+      "name": "positivePrefix",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForNegativeInfinity": {
+      "name": "textAttributesForNegativeInfinity",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "negativeInfinitySymbol": {
+      "name": "negativeInfinitySymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForPositiveInfinity": {
+      "name": "textAttributesForPositiveInfinity",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "positiveInfinitySymbol": {
+      "name": "positiveInfinitySymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForNotANumber": {
+      "name": "textAttributesForNotANumber",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "notANumberSymbol": {
+      "name": "notANumberSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForNil": {
+      "name": "textAttributesForNil",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "nilSymbol": {
+      "name": "nilSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForZero": {
+      "name": "textAttributesForZero",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "zeroSymbol": {
+      "name": "zeroSymbol",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "groupingSeparator": {
+      "name": "groupingSeparator",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "currencyDecimalSeparator": {
+      "name": "currencyDecimalSeparator",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "decimalSeparator": {
+      "name": "decimalSeparator",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForPositiveValues": {
+      "name": "textAttributesForPositiveValues",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "positiveFormat": {
+      "name": "positiveFormat",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textAttributesForNegativeValues": {
+      "name": "textAttributesForNegativeValues",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "negativeFormat": {
+      "name": "negativeFormat",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "locale": {
+      "name": "locale",
+      "pointer": true,
+      "type": "NSLocale",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "roundingBehavior": {
+      "name": "roundingBehavior",
+      "pointer": true,
+      "type": "NSDecimalNumberHandler",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "attributedStringForNotANumber": {
+      "name": "attributedStringForNotANumber",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "attributedStringForNil": {
+      "name": "attributedStringForNil",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "attributedStringForZero": {
+      "name": "attributedStringForZero",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "format": {
+      "name": "format",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "thousandSeparator": {
+      "name": "thousandSeparator",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

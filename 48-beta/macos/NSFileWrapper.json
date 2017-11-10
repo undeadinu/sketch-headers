@@ -1,0 +1,1034 @@
+{
+  "imports": [
+    "NSFileWrapper.h",
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSImage",
+    "NSData",
+    "NSDictionary",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "NSFileWrapper",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    "_iconData": {
+      "name": "_iconData",
+      "bridgedName": "_iconData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasIcon": {
+      "name": "_hasIcon",
+      "bridgedName": "_hasIcon",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initIconWithData:": {
+      "name": "_initIconWithData:",
+      "bridgedName": "_initIconWithData",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initIcon:": {
+      "name": "_initIcon:",
+      "bridgedName": "_initIcon",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newContentsAtURL:path:itemKind:oldChildrenByUniqueFileName:options:error:": {
+      "name": "_newContentsAtURL:path:itemKind:oldChildrenByUniqueFileName:options:error:",
+      "bridgedName": "_newContentsAtURL_path_itemKind_oldChildrenByUniqueFileName_options_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_canSafelyMapFilesAtPath:": {
+      "name": "_canSafelyMapFilesAtPath:",
+      "bridgedName": "_canSafelyMapFilesAtPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_forPath:getItemKind:modificationDate:": {
+      "name": "_forPath:getItemKind:modificationDate:",
+      "bridgedName": "_forPath_getItemKind_modificationDate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newFileWrapperWithWriter:uniqueFileName:": {
+      "name": "_newFileWrapperWithWriter:uniqueFileName:",
+      "bridgedName": "_newFileWrapperWithWriter_uniqueFileName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_writeWithWriter:toItemAtPath:": {
+      "name": "_writeWithWriter:toItemAtPath:",
+      "bridgedName": "_writeWithWriter_toItemAtPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "attemptOverwrite:": {
+      "name": "attemptOverwrite:",
+      "bridgedName": "attemptOverwrite",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newWriterWithData:preferredName:": {
+      "name": "_newWriterWithData:preferredName:",
+      "bridgedName": "_newWriterWithData_preferredName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_readWithReader:preferredFileName:": {
+      "name": "_readWithReader:preferredFileName:",
+      "bridgedName": "_readWithReader_preferredFileName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newReaderWithItemAtPath:": {
+      "name": "_newReaderWithItemAtPath:",
+      "bridgedName": "_newReaderWithItemAtPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_removeTemporaryDirectoryAtURL:": {
+      "name": "_removeTemporaryDirectoryAtURL:",
+      "bridgedName": "_removeTemporaryDirectoryAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_finishWritingToURL:byTakingContentsFromItemAtURL:addingAttributes:usingTemporaryDirectoryAtURL:backupFileName:error:": {
+      "name": "_finishWritingToURL:byTakingContentsFromItemAtURL:addingAttributes:usingTemporaryDirectoryAtURL:backupFileName:error:",
+      "bridgedName": "_finishWritingToURL_byTakingContentsFromItemAtURL_addingAttributes_usingTemporaryDirectoryAtURL_backupFileName_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_finishWritingToURL:byMovingItemAtURL:addingAttributes:error:": {
+      "name": "_finishWritingToURL:byMovingItemAtURL:addingAttributes:error:",
+      "bridgedName": "_finishWritingToURL_byMovingItemAtURL_addingAttributes_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_writeAttributes:toURL:": {
+      "name": "_writeAttributes:toURL:",
+      "bridgedName": "_writeAttributes_toURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_temporaryDirectoryURLForWritingToURL:error:": {
+      "name": "_temporaryDirectoryURLForWritingToURL:error:",
+      "bridgedName": "_temporaryDirectoryURLForWritingToURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_pathForURL:reading:error:": {
+      "name": "_pathForURL:reading:error:",
+      "bridgedName": "_pathForURL_reading_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_temporaryDirectoryPathForWritingToPath:forResaving:error:": {
+      "name": "_temporaryDirectoryPathForWritingToPath:forResaving:error:",
+      "bridgedName": "_temporaryDirectoryPathForWritingToPath_forResaving_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyForFileWrapper:": {
+      "name": "keyForFileWrapper:",
+      "bridgedName": "keyForFileWrapper",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFileWrapper:": {
+      "name": "removeFileWrapper:",
+      "bridgedName": "removeFileWrapper",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeChild:forUniqueFileName:": {
+      "name": "_removeChild:forUniqueFileName:",
+      "bridgedName": "_removeChild_forUniqueFileName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_uniqueFileNameOfChild:": {
+      "name": "_uniqueFileNameOfChild:",
+      "bridgedName": "_uniqueFileNameOfChild",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRegularFileWithContents:preferredFilename:": {
+      "name": "addRegularFileWithContents:preferredFilename:",
+      "bridgedName": "addRegularFileWithContents_preferredFilename",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addFileWrapper:": {
+      "name": "addFileWrapper:",
+      "bridgedName": "addFileWrapper",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetFileModificationDate": {
+      "name": "_resetFileModificationDate",
+      "bridgedName": "_resetFileModificationDate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addChild:forUniqueFileName:": {
+      "name": "_addChild:forUniqueFileName:",
+      "bridgedName": "_addChild_forUniqueFileName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initDirectoryContents": {
+      "name": "_initDirectoryContents",
+      "bridgedName": "_initDirectoryContents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeParent:": {
+      "name": "_removeParent:",
+      "bridgedName": "_removeParent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addParent:": {
+      "name": "_addParent:",
+      "bridgedName": "_addParent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newImpl": {
+      "name": "_newImpl",
+      "bridgedName": "_newImpl",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithImpl:preferredFileName:uniqueFileName:docInfo:iconData:": {
+      "name": "_initWithImpl:preferredFileName:uniqueFileName:docInfo:iconData:",
+      "bridgedName": "_initWithImpl_preferredFileName_uniqueFileName_docInfo_iconData",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToURL:options:originalContentsURL:error:": {
+      "name": "writeToURL:options:originalContentsURL:error:",
+      "bridgedName": "writeToURL_options_originalContentsURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDescendantFileNames": {
+      "name": "_updateDescendantFileNames",
+      "bridgedName": "_updateDescendantFileNames",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_attributesToWrite": {
+      "name": "_attributesToWrite",
+      "bridgedName": "_attributesToWrite",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeContentsToURL:path:originalContentsURL:tryHardLinking:didHardLinking:error:": {
+      "name": "_writeContentsToURL:path:originalContentsURL:tryHardLinking:didHardLinking:error:",
+      "bridgedName": "_writeContentsToURL_path_originalContentsURL_tryHardLinking_didHardLinking_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "char *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forWritingToURL:returnContentsLazyReadingError:": {
+      "name": "_forWritingToURL:returnContentsLazyReadingError:",
+      "bridgedName": "_forWritingToURL_returnContentsLazyReadingError",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readFromURL:options:error:": {
+      "name": "readFromURL:options:error:",
+      "bridgedName": "readFromURL_options_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_readContentsFromURL:path:itemKind:options:error:": {
+      "name": "_readContentsFromURL:path:itemKind:options:error:",
+      "bridgedName": "_readContentsFromURL_path_itemKind_options_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchesContentsOfURL:": {
+      "name": "matchesContentsOfURL:",
+      "bridgedName": "matchesContentsOfURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_matchesItemKind:modificationDate:": {
+      "name": "_matchesItemKind:modificationDate:",
+      "bridgedName": "_matchesItemKind_modificationDate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFileType:": {
+      "name": "_setFileType:",
+      "bridgedName": "_setFileType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_observePreferredFileNameOfChild:": {
+      "name": "_observePreferredFileNameOfChild:",
+      "bridgedName": "_observePreferredFileNameOfChild",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSerializedRepresentation:": {
+      "name": "initWithSerializedRepresentation:",
+      "bridgedName": "initWithSerializedRepresentation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initSymbolicLinkWithDestinationURL:": {
+      "name": "initSymbolicLinkWithDestinationURL:",
+      "bridgedName": "initSymbolicLinkWithDestinationURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initRegularFileWithContents:": {
+      "name": "initRegularFileWithContents:",
+      "bridgedName": "initRegularFileWithContents",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initDirectoryWithFileWrappers:": {
+      "name": "initDirectoryWithFileWrappers:",
+      "bridgedName": "initDirectoryWithFileWrappers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithURL:options:error:": {
+      "name": "initWithURL:options:error:",
+      "bridgedName": "initWithURL_options_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_init": {
+      "name": "_init",
+      "bridgedName": "_init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fullDescription:": {
+      "name": "_fullDescription:",
+      "bridgedName": "_fullDescription",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fileType": {
+      "name": "_fileType",
+      "bridgedName": "_fileType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_icon": {
+      "name": "_icon",
+      "bridgedName": "_icon",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIcon:": {
+      "name": "_setIcon:",
+      "bridgedName": "_setIcon",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadIcon": {
+      "name": "_loadIcon",
+      "bridgedName": "_loadIcon",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolicLinkDestination": {
+      "name": "symbolicLinkDestination",
+      "bridgedName": "symbolicLinkDestination",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSymbolicLinkWithDestination:preferredFilename:": {
+      "name": "addSymbolicLinkWithDestination:preferredFilename:",
+      "bridgedName": "addSymbolicLinkWithDestination_preferredFilename",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addFileWithPath:": {
+      "name": "addFileWithPath:",
+      "bridgedName": "addFileWithPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToFile:atomically:updateFilenames:": {
+      "name": "writeToFile:atomically:updateFilenames:",
+      "bridgedName": "writeToFile_atomically_updateFilenames",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateFromPath:": {
+      "name": "updateFromPath:",
+      "bridgedName": "updateFromPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "needsToBeUpdatedFromPath:": {
+      "name": "needsToBeUpdatedFromPath:",
+      "bridgedName": "needsToBeUpdatedFromPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initSymbolicLinkWithDestination:": {
+      "name": "initSymbolicLinkWithDestination:",
+      "bridgedName": "initSymbolicLinkWithDestination",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:": {
+      "name": "initWithPath:",
+      "bridgedName": "initWithPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "icon": {
+      "name": "icon",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "symbolicLinkDestinationURL": {
+      "name": "symbolicLinkDestinationURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "regularFileContents": {
+      "name": "regularFileContents",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "fileWrappers": {
+      "name": "fileWrappers",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "serializedRepresentation": {
+      "name": "serializedRepresentation",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "fileAttributes": {
+      "name": "fileAttributes",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "filename": {
+      "name": "filename",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "preferredFilename": {
+      "name": "preferredFilename",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "symbolicLink": {
+      "name": "symbolicLink",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isSymbolicLink"
+      ]
+    },
+    "regularFile": {
+      "name": "regularFile",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isRegularFile"
+      ]
+    },
+    "directory": {
+      "name": "directory",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isDirectory"
+      ]
+    }
+  }
+}

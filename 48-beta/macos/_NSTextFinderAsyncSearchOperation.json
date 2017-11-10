@@ -1,0 +1,164 @@
+{
+  "imports": [
+    "NSOperation.h"
+  ],
+  "classes": [
+    "NSCondition",
+    "NSIndexSet",
+    "NSLock",
+    "NSMutableIndexSet",
+    "NSMutableRangeArray",
+    "NSString",
+    "NSTextFinderAsyncSearch"
+  ],
+  "protocol": false,
+  "className": "_NSTextFinderAsyncSearchOperation",
+  "extends": "NSOperation",
+  "interfaces": [],
+  "methods": {
+    "main": {
+      "name": "main",
+      "bridgedName": "main",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendUpdate": {
+      "name": "_sendUpdate",
+      "bridgedName": "_sendUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchFinished": {
+      "name": "searchFinished",
+      "bridgedName": "searchFinished",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "waitUntilSearchCompletedForRanges:orTimeout:": {
+      "name": "waitUntilSearchCompletedForRanges:orTimeout:",
+      "bridgedName": "waitUntilSearchCompletedForRanges_orTimeout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchCompletedForIndexes:": {
+      "name": "_searchCompletedForIndexes:",
+      "bridgedName": "_searchCompletedForIndexes",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addMatchRange:searchedRange:": {
+      "name": "_addMatchRange:searchedRange:",
+      "bridgedName": "_addMatchRange_searchedRange",
+      "args": [
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessSearchResultsInBlock:": {
+      "name": "accessSearchResultsInBlock:",
+      "bridgedName": "accessSearchResultsInBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "indexesWaitedFor": {
+      "name": "indexesWaitedFor",
+      "pointer": true,
+      "type": "NSIndexSet",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "searchedIndexes": {
+      "name": "searchedIndexes",
+      "pointer": true,
+      "type": "NSMutableIndexSet",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "matchRanges": {
+      "name": "matchRanges",
+      "pointer": true,
+      "type": "NSMutableRangeArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "contentString": {
+      "name": "contentString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "searchString": {
+      "name": "searchString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "searchController": {
+      "name": "searchController",
+      "pointer": true,
+      "type": "NSTextFinderAsyncSearch",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

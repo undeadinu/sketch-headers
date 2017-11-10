@@ -1,0 +1,195 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSPointSnapperWorkings",
+    "NSArray"
+  ],
+  "protocol": false,
+  "className": "MSPointSnapper",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapToTargets:": {
+      "name": "snapToTargets:",
+      "bridgedName": "snapToTargets",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapPoint:inLayer:": {
+      "name": "snapPoint:inLayer:",
+      "bridgedName": "snapPoint_inLayer",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "configureRulerGuideTargetsForPage:": {
+      "name": "configureRulerGuideTargetsForPage:",
+      "bridgedName": "configureRulerGuideTargetsForPage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetForSnappingToHandleAtIndexPath:location:shape:excluding:": {
+      "name": "targetForSnappingToHandleAtIndexPath:location:shape:excluding:",
+      "bridgedName": "targetForSnappingToHandleAtIndexPath_location_shape_excluding",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "populateArray:withTargetsForSnappingToMidpointOfLayer:": {
+      "name": "populateArray:withTargetsForSnappingToMidpointOfLayer:",
+      "bridgedName": "populateArray_withTargetsForSnappingToMidpointOfLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetsForMidpointsOfLayers:": {
+      "name": "targetsForMidpointsOfLayers:",
+      "bridgedName": "targetsForMidpointsOfLayers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shapePointTargetsWithContext:excludingPointsAtIndexPaths:": {
+      "name": "shapePointTargetsWithContext:excludingPointsAtIndexPaths:",
+      "bridgedName": "shapePointTargetsWithContext_excludingPointsAtIndexPaths",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "yWorkings": {
+      "name": "yWorkings",
+      "pointer": true,
+      "type": "MSPointSnapperWorkings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "xWorkings": {
+      "name": "xWorkings",
+      "pointer": true,
+      "type": "MSPointSnapperWorkings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "snapToRulerGuides": {
+      "name": "snapToRulerGuides",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rulerGuideTargets": {
+      "name": "rulerGuideTargets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "snapTargets": {
+      "name": "snapTargets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "allowedAxes": {
+      "name": "allowedAxes",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "snapThreshold": {
+      "name": "snapThreshold",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

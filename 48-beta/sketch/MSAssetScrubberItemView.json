@@ -1,0 +1,234 @@
+{
+  "imports": [
+    "NSScrubberItemView.h"
+  ],
+  "classes": [
+    "MSColor",
+    "MSGradient",
+    "MSImageData",
+    "NSColorSpace",
+    "NSImage"
+  ],
+  "protocol": false,
+  "className": "MSAssetScrubberItemView",
+  "extends": "NSScrubberItemView",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "patternPreviewImageWithDrawingBounds:": {
+      "name": "patternPreviewImageWithDrawingBounds:",
+      "bridgedName": "patternPreviewImageWithDrawingBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gradientPreviewImageWithDrawingBounds:": {
+      "name": "gradientPreviewImageWithDrawingBounds:",
+      "bridgedName": "gradientPreviewImageWithDrawingBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorPreviewImageWithDrawingBounds:": {
+      "name": "colorPreviewImageWithDrawingBounds:",
+      "bridgedName": "colorPreviewImageWithDrawingBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewImage": {
+      "name": "previewImage",
+      "bridgedName": "previewImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deviceColorPreviewRectForRect:drawingBorder:": {
+      "name": "deviceColorPreviewRectForRect:drawingBorder:",
+      "bridgedName": "deviceColorPreviewRectForRect_drawingBorder",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipPathForRect:cornerRadius:": {
+      "name": "clipPathForRect:cornerRadius:",
+      "bridgedName": "clipPathForRect_cornerRadius",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipPath": {
+      "name": "clipPath",
+      "bridgedName": "clipPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawingBounds": {
+      "name": "drawingBounds",
+      "bridgedName": "drawingBounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawBorderForColor:": {
+      "name": "shouldDrawBorderForColor:",
+      "bridgedName": "shouldDrawBorderForColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithAssetAtIndex:amongAssets:canvasColorSpace:tailPadding:": {
+      "name": "initWithAssetAtIndex:amongAssets:canvasColorSpace:tailPadding:",
+      "bridgedName": "initWithAssetAtIndex_amongAssets_canvasColorSpace_tailPadding",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "cachedPreviewImage": {
+      "name": "cachedPreviewImage",
+      "pointer": true,
+      "type": "__weak NSImage",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "tailPadding": {
+      "name": "tailPadding",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isLastInCollection": {
+      "name": "isLastInCollection",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isFirstInCollection": {
+      "name": "isFirstInCollection",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pattern": {
+      "name": "pattern",
+      "pointer": true,
+      "type": "MSImageData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "gradient": {
+      "name": "gradient",
+      "pointer": true,
+      "type": "MSGradient",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canvasColorSpace": {
+      "name": "canvasColorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "color": {
+      "name": "color",
+      "pointer": true,
+      "type": "MSColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

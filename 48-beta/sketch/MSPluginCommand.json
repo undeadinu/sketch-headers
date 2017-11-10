@@ -1,0 +1,921 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "COScript",
+    "ECLogChannel",
+    "MSPluginBundle",
+    "MSPluginCommandSpecifier",
+    "MSPluginScript",
+    "NSDictionary",
+    "NSMutableDictionary",
+    "NSMutableString",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSPluginCommand",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "commandWithJSON:scripts:scriptsURL:": {
+      "name": "commandWithJSON:scripts:scriptsURL:",
+      "bridgedName": "commandWithJSON_scripts_scriptsURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "actionIDsNotToReload": {
+      "name": "actionIDsNotToReload",
+      "bridgedName": "actionIDsNotToReload",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:onDocument:": {
+      "name": "setValue:forKey:onDocument:",
+      "bridgedName": "setValue_forKey_onDocument",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForKey:onDocument:": {
+      "name": "valueForKey:onDocument:",
+      "bridgedName": "valueForKey_onDocument",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:onLayer:": {
+      "name": "setValue:forKey:onLayer:",
+      "bridgedName": "setValue_forKey_onLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForKey:onLayer:": {
+      "name": "valueForKey:onLayer:",
+      "bridgedName": "valueForKey_onLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pluginBundleIdentifierForMetadata": {
+      "name": "pluginBundleIdentifierForMetadata",
+      "bridgedName": "pluginBundleIdentifierForMetadata",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:onObject:forPluginIdentifier:": {
+      "name": "setValue:forKey:onObject:forPluginIdentifier:",
+      "bridgedName": "setValue_forKey_onObject_forPluginIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:onDocument:forPluginIdentifier:": {
+      "name": "setValue:forKey:onDocument:forPluginIdentifier:",
+      "bridgedName": "setValue_forKey_onDocument_forPluginIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:onLayer:forPluginIdentifier:": {
+      "name": "setValue:forKey:onLayer:forPluginIdentifier:",
+      "bridgedName": "setValue_forKey_onLayer_forPluginIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForKey:onDocument:forPluginIdentifier:": {
+      "name": "valueForKey:onDocument:forPluginIdentifier:",
+      "bridgedName": "valueForKey_onDocument_forPluginIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForKey:onLayer:forPluginIdentifier:": {
+      "name": "valueForKey:onLayer:forPluginIdentifier:",
+      "bridgedName": "valueForKey_onLayer_forPluginIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadata": {
+      "name": "metadata",
+      "bridgedName": "metadata",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldReloadWithActionID:": {
+      "name": "shouldReloadWithActionID:",
+      "bridgedName": "shouldReloadWithActionID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuItemWithAction:": {
+      "name": "menuItemWithAction:",
+      "bridgedName": "menuItemWithAction",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shortcutModifiers": {
+      "name": "shortcutModifiers",
+      "bridgedName": "shortcutModifiers",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shortcutKey": {
+      "name": "shortcutKey",
+      "bridgedName": "shortcutKey",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "testDeprecationLogging": {
+      "name": "testDeprecationLogging",
+      "bridgedName": "testDeprecationLogging",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "error:": {
+      "name": "error:",
+      "bridgedName": "error",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "print:": {
+      "name": "print:",
+      "bridgedName": "print",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetLogger": {
+      "name": "resetLogger",
+      "bridgedName": "resetLogger",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coscript:hadError:onLineNumber:atSourceURL:": {
+      "name": "coscript:hadError:onLineNumber:atSourceURL:",
+      "bridgedName": "coscript_hadError_onLineNumber_atSourceURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "executeScript:": {
+      "name": "executeScript:",
+      "bridgedName": "executeScript",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "executeScriptAtURL:": {
+      "name": "executeScriptAtURL:",
+      "bridgedName": "executeScriptAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasRunHandler": {
+      "name": "hasRunHandler",
+      "bridgedName": "hasRunHandler",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tearDownIfFinished": {
+      "name": "tearDownIfFinished",
+      "bridgedName": "tearDownIfFinished",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runHandlerWithKey:context:manager:": {
+      "name": "runHandlerWithKey:context:manager:",
+      "bridgedName": "runHandlerWithKey_context_manager",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "run:manager:": {
+      "name": "run:manager:",
+      "bridgedName": "run_manager",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runHandler:context:": {
+      "name": "runHandler:context:",
+      "bridgedName": "runHandler_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fullContextFromContext:url:": {
+      "name": "fullContextFromContext:url:",
+      "bridgedName": "fullContextFromContext_url",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tearDownSession": {
+      "name": "tearDownSession",
+      "bridgedName": "tearDownSession",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUpSessionWithContext:": {
+      "name": "setUpSessionWithContext:",
+      "bridgedName": "setUpSessionWithContext",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newSessionForURL:shouldReload:": {
+      "name": "newSessionForURL:shouldReload:",
+      "bridgedName": "newSessionForURL_shouldReload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadAPISupport": {
+      "name": "loadAPISupport",
+      "bridgedName": "loadAPISupport",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopCapturingDeprecatedChannel:": {
+      "name": "stopCapturingDeprecatedChannel:",
+      "bridgedName": "stopCapturingDeprecatedChannel",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startCapturingDeprecatedChannel": {
+      "name": "startCapturingDeprecatedChannel",
+      "bridgedName": "startCapturingDeprecatedChannel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flattenedHandlerIndexWithHandlers:": {
+      "name": "flattenedHandlerIndexWithHandlers:",
+      "bridgedName": "flattenedHandlerIndexWithHandlers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithScript:identifier:name:handlers:shortcut:scope:": {
+      "name": "initWithScript:identifier:name:handlers:shortcut:scope:",
+      "bridgedName": "initWithScript_identifier_name_handlers_shortcut_scope",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithScript:identifier:name:runHandler:scope:": {
+      "name": "initWithScript:identifier:name:runHandler:scope:",
+      "bridgedName": "initWithScript_identifier_name_runHandler_scope",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "timeToExecuteSelector:target:iterations:": {
+      "name": "timeToExecuteSelector:target:iterations:",
+      "bridgedName": "timeToExecuteSelector_target_iterations",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "callback:asBlockWithArguments:data:": {
+      "name": "callback:asBlockWithArguments:data:",
+      "bridgedName": "callback_asBlockWithArguments_data",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "callCallback:withBlockArguments:data:timestamp:": {
+      "name": "callCallback:withBlockArguments:data:timestamp:",
+      "bridgedName": "callCallback_withBlockArguments_data_timestamp",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runCallback:withDocumentAtURL:data:": {
+      "name": "runCallback:withDocumentAtURL:data:",
+      "bridgedName": "runCallback_withDocumentAtURL_data",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishTestingMultipleItems": {
+      "name": "finishTestingMultipleItems",
+      "bridgedName": "finishTestingMultipleItems",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "testNextItem": {
+      "name": "testNextItem",
+      "bridgedName": "testNextItem",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishTestingItem:results:": {
+      "name": "finishTestingItem:results:",
+      "bridgedName": "finishTestingItem_results",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginTestingMultipleItems:withItemCallback:finishCallback:": {
+      "name": "beginTestingMultipleItems:withItemCallback:finishCallback:",
+      "bridgedName": "beginTestingMultipleItems_withItemCallback_finishCallback",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishPerformanceTestingWithResults:": {
+      "name": "finishPerformanceTestingWithResults:",
+      "bridgedName": "finishPerformanceTestingWithResults",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginPerformanceTesting:minimumAPI:": {
+      "name": "beginPerformanceTesting:minimumAPI:",
+      "bridgedName": "beginPerformanceTesting_minimumAPI",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForPerformanceTesting": {
+      "name": "prepareForPerformanceTesting",
+      "bridgedName": "prepareForPerformanceTesting",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLForPerformanceTempFileWithName:": {
+      "name": "URLForPerformanceTempFileWithName:",
+      "bridgedName": "URLForPerformanceTempFileWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLForPerformanceDocumentWithName:": {
+      "name": "URLForPerformanceDocumentWithName:",
+      "bridgedName": "URLForPerformanceDocumentWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "executingScript": {
+      "name": "executingScript",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "skipNextLog": {
+      "name": "skipNextLog",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "errorInScript": {
+      "name": "errorInScript",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "api": {
+      "name": "api",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "context": {
+      "name": "context",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "session": {
+      "name": "session",
+      "pointer": true,
+      "type": "COScript",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "log": {
+      "name": "log",
+      "pointer": true,
+      "type": "NSMutableString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "logger": {
+      "name": "logger",
+      "pointer": true,
+      "type": "ECLogChannel",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "scope": {
+      "name": "scope",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pluginBundle": {
+      "name": "pluginBundle",
+      "pointer": true,
+      "type": "__weak MSPluginBundle",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shortcut": {
+      "name": "shortcut",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "handlers": {
+      "name": "handlers",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "script": {
+      "name": "script",
+      "pointer": true,
+      "type": "MSPluginScript",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "identifier": {
+      "name": "identifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "commandSpecifier": {
+      "name": "commandSpecifier",
+      "pointer": true,
+      "type": "MSPluginCommandSpecifier",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "stayRunning": {
+      "name": "stayRunning",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "performanceData": {
+      "name": "performanceData",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "imports": [
+    "NSControlTextEditingDelegate.h"
+  ],
+  "classes": [
+    "NSCell",
+    "NSEvent",
+    "NSIndexSet",
+    "NSNotification",
+    "NSOutlineView",
+    "NSString",
+    "NSTableColumn",
+    "NSTableRowView",
+    "NSView"
+  ],
+  "protocol": true,
+  "className": "NSOutlineViewDelegate",
+  "interfaces": [],
+  "methods": {
+    "outlineViewItemDidCollapse:": {
+      "name": "outlineViewItemDidCollapse:",
+      "bridgedName": "outlineViewItemDidCollapse",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewItemWillCollapse:": {
+      "name": "outlineViewItemWillCollapse:",
+      "bridgedName": "outlineViewItemWillCollapse",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewItemDidExpand:": {
+      "name": "outlineViewItemDidExpand:",
+      "bridgedName": "outlineViewItemDidExpand",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewItemWillExpand:": {
+      "name": "outlineViewItemWillExpand:",
+      "bridgedName": "outlineViewItemWillExpand",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewSelectionIsChanging:": {
+      "name": "outlineViewSelectionIsChanging:",
+      "bridgedName": "outlineViewSelectionIsChanging",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewColumnDidResize:": {
+      "name": "outlineViewColumnDidResize:",
+      "bridgedName": "outlineViewColumnDidResize",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewColumnDidMove:": {
+      "name": "outlineViewColumnDidMove:",
+      "bridgedName": "outlineViewColumnDidMove",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewSelectionDidChange:": {
+      "name": "outlineViewSelectionDidChange:",
+      "bridgedName": "outlineViewSelectionDidChange",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldShowOutlineCellForItem:": {
+      "name": "outlineView:shouldShowOutlineCellForItem:",
+      "bridgedName": "outlineView_shouldShowOutlineCellForItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldReorderColumn:toColumn:": {
+      "name": "outlineView:shouldReorderColumn:toColumn:",
+      "bridgedName": "outlineView_shouldReorderColumn_toColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:sizeToFitWidthOfColumn:": {
+      "name": "outlineView:sizeToFitWidthOfColumn:",
+      "bridgedName": "outlineView_sizeToFitWidthOfColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:willDisplayOutlineCell:forTableColumn:item:": {
+      "name": "outlineView:willDisplayOutlineCell:forTableColumn:item:",
+      "bridgedName": "outlineView_willDisplayOutlineCell_forTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldCollapseItem:": {
+      "name": "outlineView:shouldCollapseItem:",
+      "bridgedName": "outlineView_shouldCollapseItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldExpandItem:": {
+      "name": "outlineView:shouldExpandItem:",
+      "bridgedName": "outlineView_shouldExpandItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:isGroupItem:": {
+      "name": "outlineView:isGroupItem:",
+      "bridgedName": "outlineView_isGroupItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:dataCellForTableColumn:item:": {
+      "name": "outlineView:dataCellForTableColumn:item:",
+      "bridgedName": "outlineView_dataCellForTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "NSCell *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldTrackCell:forTableColumn:item:": {
+      "name": "outlineView:shouldTrackCell:forTableColumn:item:",
+      "bridgedName": "outlineView_shouldTrackCell_forTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSCell *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldShowCellExpansionForTableColumn:item:": {
+      "name": "outlineView:shouldShowCellExpansionForTableColumn:item:",
+      "bridgedName": "outlineView_shouldShowCellExpansionForTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldTypeSelectForEvent:withCurrentSearchString:": {
+      "name": "outlineView:shouldTypeSelectForEvent:withCurrentSearchString:",
+      "bridgedName": "outlineView_shouldTypeSelectForEvent_withCurrentSearchString",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSEvent *"
+        },
+        {
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:nextTypeSelectMatchFromItem:toItem:forString:": {
+      "name": "outlineView:nextTypeSelectMatchFromItem:toItem:forString:",
+      "bridgedName": "outlineView_nextTypeSelectMatchFromItem_toItem_forString",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSString *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:typeSelectStringForTableColumn:item:": {
+      "name": "outlineView:typeSelectStringForTableColumn:item:",
+      "bridgedName": "outlineView_typeSelectStringForTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:heightOfRowByItem:": {
+      "name": "outlineView:heightOfRowByItem:",
+      "bridgedName": "outlineView_heightOfRowByItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:toolTipForCell:rect:tableColumn:item:mouseLocation:": {
+      "name": "outlineView:toolTipForCell:rect:tableColumn:item:mouseLocation:",
+      "bridgedName": "outlineView_toolTipForCell_rect_tableColumn_item_mouseLocation",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSCell *"
+        },
+        {
+          "type": "struct CGRect *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:didDragTableColumn:": {
+      "name": "outlineView:didDragTableColumn:",
+      "bridgedName": "outlineView_didDragTableColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:didClickTableColumn:": {
+      "name": "outlineView:didClickTableColumn:",
+      "bridgedName": "outlineView_didClickTableColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:mouseDownInHeaderOfTableColumn:": {
+      "name": "outlineView:mouseDownInHeaderOfTableColumn:",
+      "bridgedName": "outlineView_mouseDownInHeaderOfTableColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldSelectTableColumn:": {
+      "name": "outlineView:shouldSelectTableColumn:",
+      "bridgedName": "outlineView_shouldSelectTableColumn",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:selectionIndexesForProposedSelection:": {
+      "name": "outlineView:selectionIndexesForProposedSelection:",
+      "bridgedName": "outlineView_selectionIndexesForProposedSelection",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSIndexSet *"
+        }
+      ],
+      "returns": "NSIndexSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldSelectItem:": {
+      "name": "outlineView:shouldSelectItem:",
+      "bridgedName": "outlineView_shouldSelectItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionShouldChangeInOutlineView:": {
+      "name": "selectionShouldChangeInOutlineView:",
+      "bridgedName": "selectionShouldChangeInOutlineView",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldEditTableColumn:item:": {
+      "name": "outlineView:shouldEditTableColumn:item:",
+      "bridgedName": "outlineView_shouldEditTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:willDisplayCell:forTableColumn:item:": {
+      "name": "outlineView:willDisplayCell:forTableColumn:item:",
+      "bridgedName": "outlineView_willDisplayCell_forTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:didRemoveRowView:forRow:": {
+      "name": "outlineView:didRemoveRowView:forRow:",
+      "bridgedName": "outlineView_didRemoveRowView_forRow",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableRowView *"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:didAddRowView:forRow:": {
+      "name": "outlineView:didAddRowView:forRow:",
+      "bridgedName": "outlineView_didAddRowView_forRow",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableRowView *"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:rowViewForItem:": {
+      "name": "outlineView:rowViewForItem:",
+      "bridgedName": "outlineView_rowViewForItem",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "NSTableRowView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:viewForTableColumn:item:": {
+      "name": "outlineView:viewForTableColumn:item:",
+      "bridgedName": "outlineView_viewForTableColumn_item",
+      "args": [
+        {
+          "type": "NSOutlineView *"
+        },
+        {
+          "type": "NSTableColumn *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "NSView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

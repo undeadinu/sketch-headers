@@ -1,0 +1,151 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDate",
+    "NSMapTable",
+    "NSView",
+    "_NSTouchBarCustomizationDragRecord"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarCustomizationPreviewInteractionCoordinator",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "cancelDragOfItem:isRemoval:": {
+      "name": "cancelDragOfItem:isRemoval:",
+      "bridgedName": "cancelDragOfItem_isRemoval",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endDragOfItem:isRemoval:": {
+      "name": "endDragOfItem:isRemoval:",
+      "bridgedName": "endDragOfItem_isRemoval",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateDragOfItem:toPoint:": {
+      "name": "updateDragOfItem:toPoint:",
+      "bridgedName": "updateDragOfItem_toPoint",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginDragOfItem:anchorPoint:dragType:atPoint:isInsertion:": {
+      "name": "beginDragOfItem:anchorPoint:dragType:atPoint:isInsertion:",
+      "bridgedName": "beginDragOfItem_anchorPoint_dragType_atPoint_isInsertion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragRecordForItem:": {
+      "name": "dragRecordForItem:",
+      "bridgedName": "dragRecordForItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isItemBeingDragged:": {
+      "name": "isItemBeingDragged:",
+      "bridgedName": "isItemBeingDragged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDelegate:referenceCoordinateSpace:": {
+      "name": "initWithDelegate:referenceCoordinateSpace:",
+      "bridgedName": "initWithDelegate_referenceCoordinateSpace",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "interactionStartTime": {
+      "name": "interactionStartTime",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "cursorDragRecord": {
+      "name": "cursorDragRecord",
+      "pointer": true,
+      "type": "_NSTouchBarCustomizationDragRecord",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

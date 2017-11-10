@@ -1,0 +1,676 @@
+{
+  "imports": [
+    "NSRolloverButtonDelegate.h",
+    "_NSVibrancyTransitioningImageViewDelegate.h"
+  ],
+  "classes": [
+    "CALayer",
+    "NSArray",
+    "NSAttributedString",
+    "NSImage",
+    "NSLayoutConstraint",
+    "NSMutableArray",
+    "NSRolloverButton",
+    "NSStackView",
+    "NSString",
+    "NSTabBarItem",
+    "NSTextField",
+    "NSView",
+    "NSVisualEffectView",
+    "_NSKeyLoopSplicingContainerView",
+    "_NSTabButtonAccessibilityHelper",
+    "_NSVibrancyTransitioningImageView"
+  ],
+  "protocol": false,
+  "className": "NSTabButton",
+  "extends": "NSTabBarViewButton",
+  "interfaces": [
+    "_NSVibrancyTransitioningImageViewDelegate",
+    "NSRolloverButtonDelegate"
+  ],
+  "methods": {
+    "_titleFont": {
+      "name": "_titleFont",
+      "bridgedName": "_titleFont",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformPress": {
+      "name": "accessibilityPerformPress",
+      "bridgedName": "accessibilityPerformPress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformShowMenu": {
+      "name": "accessibilityPerformShowMenu",
+      "bridgedName": "accessibilityPerformShowMenu",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rolloverButtonDidResignFirstResponder:": {
+      "name": "rolloverButtonDidResignFirstResponder:",
+      "bridgedName": "rolloverButtonDidResignFirstResponder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rolloverButtonDidBecomeFirstResponder:": {
+      "name": "rolloverButtonDidBecomeFirstResponder:",
+      "bridgedName": "rolloverButtonDidBecomeFirstResponder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resignFirstResponder": {
+      "name": "resignFirstResponder",
+      "bridgedName": "resignFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "becomeFirstResponder": {
+      "name": "becomeFirstResponder",
+      "bridgedName": "becomeFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayer": {
+      "name": "updateLayer",
+      "bridgedName": "updateLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pinnedTabDragImageOfSize:": {
+      "name": "pinnedTabDragImageOfSize:",
+      "bridgedName": "pinnedTabDragImageOfSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabDragImageOfSize:": {
+      "name": "tabDragImageOfSize:",
+      "bridgedName": "tabDragImageOfSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "vibrancyTransitionForVibrancyTransitioningImageView:transitioningFromVibrant:toVibrant:": {
+      "name": "vibrancyTransitionForVibrancyTransitioningImageView:transitioningFromVibrant:toVibrant:",
+      "bridgedName": "vibrancyTransitionForVibrancyTransitioningImageView_transitioningFromVibrant_toVibrant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titleStringAttributesForMainWindow:activeTab:isDragging:isDark:": {
+      "name": "_titleStringAttributesForMainWindow:activeTab:isDragging:isDark:",
+      "bridgedName": "_titleStringAttributesForMainWindow_activeTab_isDragging_isDark",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTitleTextFieldAndAccessibilityProperties": {
+      "name": "_updateTitleTextFieldAndAccessibilityProperties",
+      "bridgedName": "_updateTitleTextFieldAndAccessibilityProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHasPressedHighlight:": {
+      "name": "setHasPressedHighlight:",
+      "bridgedName": "setHasPressedHighlight",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHasMouseOverHighlight:shouldAnimateCloseButton:": {
+      "name": "setHasMouseOverHighlight:shouldAnimateCloseButton:",
+      "bridgedName": "setHasMouseOverHighlight_shouldAnimateCloseButton",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeButtonClicked:": {
+      "name": "_closeButtonClicked:",
+      "bridgedName": "_closeButtonClicked",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowCloseButton": {
+      "name": "_shouldShowCloseButton",
+      "bridgedName": "_shouldShowCloseButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updatePinnedTabImageViewAnimated:": {
+      "name": "_updatePinnedTabImageViewAnimated:",
+      "bridgedName": "_updatePinnedTabImageViewAnimated",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reconfigureFullscreenViewsUsingVisualEffectViews:": {
+      "name": "_reconfigureFullscreenViewsUsingVisualEffectViews:",
+      "bridgedName": "_reconfigureFullscreenViewsUsingVisualEffectViews",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeWebsiteIconVisualEffectViewForFullScreenToolbarWindow": {
+      "name": "_removeWebsiteIconVisualEffectViewForFullScreenToolbarWindow",
+      "bridgedName": "_removeWebsiteIconVisualEffectViewForFullScreenToolbarWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addWebsiteIconVisualEffectViewForFullScreenToolbarWindow": {
+      "name": "_addWebsiteIconVisualEffectViewForFullScreenToolbarWindow",
+      "bridgedName": "_addWebsiteIconVisualEffectViewForFullScreenToolbarWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updatePinnedTabFaviconFullscreenBackgroundColor": {
+      "name": "_updatePinnedTabFaviconFullscreenBackgroundColor",
+      "bridgedName": "_updatePinnedTabFaviconFullscreenBackgroundColor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDark": {
+      "name": "_isDark",
+      "bridgedName": "_isDark",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowIsActive": {
+      "name": "_windowIsActive",
+      "bridgedName": "_windowIsActive",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateConstraints": {
+      "name": "_updateConstraints",
+      "bridgedName": "_updateConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUpConstraints": {
+      "name": "_setUpConstraints",
+      "bridgedName": "_setUpConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTitleContainerConstraints": {
+      "name": "_updateTitleContainerConstraints",
+      "bridgedName": "_updateTitleContainerConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setActive:": {
+      "name": "setActive:",
+      "bridgedName": "setActive",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitleTextFieldCenterOffset:animated:": {
+      "name": "setTitleTextFieldCenterOffset:animated:",
+      "bridgedName": "setTitleTextFieldCenterOffset_animated",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMainContentContainerCenterOffset:animated:": {
+      "name": "setMainContentContainerCenterOffset:animated:",
+      "bridgedName": "setMainContentContainerCenterOffset_animated",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setButtonWidthForTitleLayout:animated:": {
+      "name": "setButtonWidthForTitleLayout:animated:",
+      "bridgedName": "setButtonWidthForTitleLayout_animated",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateAccessoryViews": {
+      "name": "_updateAccessoryViews",
+      "bridgedName": "_updateAccessoryViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forKey:": {
+      "name": "setValue:forKey:",
+      "bridgedName": "setValue_forKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuForEvent:": {
+      "name": "menuForEvent:",
+      "bridgedName": "menuForEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToWindow:": {
+      "name": "viewWillMoveToWindow:",
+      "bridgedName": "viewWillMoveToWindow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keysToObserve": {
+      "name": "_keysToObserve",
+      "bridgedName": "_keysToObserve",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDownCanMoveWindow": {
+      "name": "mouseDownCanMoveWindow",
+      "bridgedName": "mouseDownCanMoveWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewDidChangeAppearance:": {
+      "name": "_viewDidChangeAppearance:",
+      "bridgedName": "_viewDidChangeAppearance",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:tabBarViewItem:": {
+      "name": "initWithFrame:tabBarViewItem:",
+      "bridgedName": "initWithFrame_tabBarViewItem",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDoLayerPerformanceUpdates": {
+      "name": "_shouldDoLayerPerformanceUpdates",
+      "bridgedName": "_shouldDoLayerPerformanceUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "showingCloseButton": {
+      "name": "showingCloseButton",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic",
+        "getter=isShowingCloseButton"
+      ]
+    },
+    "alternateImage": {
+      "name": "alternateImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pinned": {
+      "name": "pinned",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic",
+        "getter=isPinned"
+      ]
+    },
+    "tabBarViewItem": {
+      "name": "tabBarViewItem",
+      "pointer": true,
+      "type": "NSTabBarItem",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "accessoryViews": {
+      "name": "accessoryViews",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "accessibilityHelper": {
+      "name": "accessibilityHelper",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "attributedTitle": {
+      "name": "attributedTitle",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "title": {
+      "name": "title",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <NSTabButtonDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "test_titleTextField": {
+      "name": "test_titleTextField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "test_closeButton": {
+      "name": "test_closeButton",
+      "pointer": true,
+      "type": "NSRolloverButton",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canShowCloseButton": {
+      "name": "canShowCloseButton",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "titleTextFieldCenterOffset": {
+      "name": "titleTextFieldCenterOffset",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mainContentContainerCenterOffset": {
+      "name": "mainContentContainerCenterOffset",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "alignment": {
+      "name": "alignment",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "buttonWidthForTitleLayout": {
+      "name": "buttonWidthForTitleLayout",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
