@@ -27,7 +27,7 @@ fs.writeFileSync(
 
 require('./generate-headers')(argv)
 .then(() => {
-  return exec(`git add . && git commit -m "version ${version}" && git tag ${version} && git push && git push origin ${version} && cp -r headers .temp-headers && git checkout gh-pages && cp .temp-headers ${version} && cp .temp-headers latest && git add . && git commit -m "version ${version}" && git push && git checkout master && rm -rf .temp-headers`)
+  return exec(`git add . && git commit -m "version ${version}" && git tag ${version} && git push && git push origin ${version} && cp -r headers .temp-headers && git checkout gh-pages && cp .temp-headers ${version} && cp .temp-headers latest && git add . && git commit -m "version ${version}" && git push && git checkout master && rm -rf .temp-headers`, {maxBuffer: 1024 * 3000})
 })
 .then(() => console.log('done'))
 .catch(console.error)
