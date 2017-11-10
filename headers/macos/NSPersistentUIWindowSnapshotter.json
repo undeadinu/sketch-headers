@@ -1,0 +1,270 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSData",
+    "NSMutableDictionary",
+    "NSObject<OS_dispatch_queue>",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "NSPersistentUIWindowSnapshotter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "writeWindowSnapshot:length:width:height:bytesPerRow:toFile:inDirectory:encryptingWithKey:uuid:checksum:fd:": {
+      "name": "writeWindowSnapshot:length:width:height:bytesPerRow:toFile:inDirectory:encryptingWithKey:uuid:checksum:fd:",
+      "bridgedName": "writeWindowSnapshot_length_width_height_bytesPerRow_toFile_inDirectory_encryptingWithKey_uuid_checksum_fd",
+      "args": [
+        {
+          "type": "const void *"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned int *"
+        },
+        {
+          "type": "int *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "captureAndWriteSnapshotForWindowNumber:forWindowID:waitUntilDone:": {
+      "name": "captureAndWriteSnapshotForWindowNumber:forWindowID:waitUntilDone:",
+      "bridgedName": "captureAndWriteSnapshotForWindowNumber_forWindowID_waitUntilDone",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteSnapshotForWindowID:": {
+      "name": "deleteSnapshotForWindowID:",
+      "bridgedName": "deleteSnapshotForWindowID",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enqueueWindowForSnapshotting:forWindowNumber:": {
+      "name": "enqueueWindowForSnapshotting:forWindowNumber:",
+      "bridgedName": "enqueueWindowForSnapshotting_forWindowNumber",
+      "args": [
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishPendingSnapshotsImmediatelyWithCompletionHandler:": {
+      "name": "finishPendingSnapshotsImmediatelyWithCompletionHandler:",
+      "bridgedName": "finishPendingSnapshotsImmediatelyWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "asynchronouslySnapshotPendingWindows": {
+      "name": "asynchronouslySnapshotPendingWindows",
+      "bridgedName": "asynchronouslySnapshotPendingWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "synchronouslySnapshotPendingWindows": {
+      "name": "synchronouslySnapshotPendingWindows",
+      "bridgedName": "synchronouslySnapshotPendingWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapshotOnePendingWindowWaitUntilDone:": {
+      "name": "snapshotOnePendingWindowWaitUntilDone:",
+      "bridgedName": "snapshotOnePendingWindowWaitUntilDone",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dequeueOneWindowToSnapshot:windowNumber:": {
+      "name": "dequeueOneWindowToSnapshot:windowNumber:",
+      "bridgedName": "dequeueOneWindowToSnapshot_windowNumber",
+      "args": [
+        {
+          "type": "unsigned int *"
+        },
+        {
+          "type": "long long *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessWindowBits:handler:": {
+      "name": "accessWindowBits:handler:",
+      "bridgedName": "accessWindowBits_handler",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowHasBeenSnapshotted:": {
+      "name": "windowHasBeenSnapshotted:",
+      "bridgedName": "windowHasBeenSnapshotted",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "discardAllSnapshotData": {
+      "name": "discardAllSnapshotData",
+      "bridgedName": "discardAllSnapshotData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateSuddenTermination": {
+      "name": "updateSuddenTermination",
+      "bridgedName": "updateSuddenTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCryptoKey:uuid:": {
+      "name": "setCryptoKey:uuid:",
+      "bridgedName": "setCryptoKey_uuid",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPersistentStateDirectoryURL:IOQueue:": {
+      "name": "initWithPersistentStateDirectoryURL:IOQueue:",
+      "bridgedName": "initWithPersistentStateDirectoryURL_IOQueue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFileManager:": {
+      "name": "initWithFileManager:",
+      "bridgedName": "initWithFileManager",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "cryptoKey": {
+      "name": "cryptoKey",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "cryptoUUID": {
+      "name": "cryptoUUID",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

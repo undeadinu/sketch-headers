@@ -1,0 +1,169 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSFileManager",
+    "NSObject<OS_dispatch_queue>"
+  ],
+  "protocol": false,
+  "className": "SMKDiskCache",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObject:forKeyedSubscript:": {
+      "name": "setObject:forKeyedSubscript:",
+      "bridgedName": "setObject_forKeyedSubscript",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectForKeyedSubscript:": {
+      "name": "objectForKeyedSubscript:",
+      "bridgedName": "objectForKeyedSubscript",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsObjectForKey:": {
+      "name": "containsObjectForKey:",
+      "bridgedName": "containsObjectForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filePathForKey:": {
+      "name": "filePathForKey:",
+      "bridgedName": "filePathForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileNameForKey:": {
+      "name": "fileNameForKey:",
+      "bridgedName": "fileNameForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeCacheDirectory": {
+      "name": "removeCacheDirectory",
+      "bridgedName": "removeCacheDirectory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createCacheDirectory": {
+      "name": "createCacheDirectory",
+      "bridgedName": "createCacheDirectory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applicationWillTerminateNotification:": {
+      "name": "applicationWillTerminateNotification:",
+      "bridgedName": "applicationWillTerminateNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithQOS:": {
+      "name": "initWithQOS:",
+      "bridgedName": "initWithQOS",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "fileManager": {
+      "name": "fileManager",
+      "pointer": true,
+      "type": "NSFileManager",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "queue": {
+      "name": "queue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <SMKDiskCacheDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

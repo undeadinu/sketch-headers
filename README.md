@@ -6,6 +6,7 @@
 
 | Version        | Compare           | Patch  |
 | -------------- | ----------------- | ------ |
+| [47.1](https://github.com/skpm/sketch-headers/tree/47.1) | X | X |
 
 ## API
 

@@ -1,0 +1,1084 @@
+{
+  "imports": [
+    "NSSplitViewDelegate.h",
+    "NSUserInterfaceValidations.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSSplitView",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSSplitViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSSplitViewDelegate",
+    "NSUserInterfaceValidations"
+  ],
+  "methods": {
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "respondsToSelector:": {
+      "name": "respondsToSelector:",
+      "bridgedName": "respondsToSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleSidebar:": {
+      "name": "toggleSidebar:",
+      "bridgedName": "toggleSidebar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sidebarItemForToggling": {
+      "name": "_sidebarItemForToggling",
+      "bridgedName": "_sidebarItemForToggling",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:didStopOverlayingView:": {
+      "name": "_splitView:didStopOverlayingView:",
+      "bridgedName": "_splitView_didStopOverlayingView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:didStartOverlayingView:": {
+      "name": "_splitView:didStartOverlayingView:",
+      "bridgedName": "_splitView_didStartOverlayingView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidesFirstDivider:": {
+      "name": "setHidesFirstDivider:",
+      "bridgedName": "setHidesFirstDivider",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hidesFirstDivider": {
+      "name": "hidesFirstDivider",
+      "bridgedName": "hidesFirstDivider",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidesLastDivider:": {
+      "name": "setHidesLastDivider:",
+      "bridgedName": "setHidesLastDivider",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hidesLastDivider": {
+      "name": "hidesLastDivider",
+      "bridgedName": "hidesLastDivider",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setHoldingPriority:forSplitViewItem:": {
+      "name": "_setHoldingPriority:forSplitViewItem:",
+      "bridgedName": "_setHoldingPriority_forSplitViewItem",
+      "args": [
+        {
+          "type": "float"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:holdingPriorityForViewAtIndex:": {
+      "name": "_splitView:holdingPriorityForViewAtIndex:",
+      "bridgedName": "_splitView_holdingPriorityForViewAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitViewItemSizesAfterSplitViewItem:isCollapsed:": {
+      "name": "_splitViewItemSizesAfterSplitViewItem:isCollapsed:",
+      "bridgedName": "_splitViewItemSizesAfterSplitViewItem_isCollapsed",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collapse:splitViewItem:forceOverlay:completionHandler:": {
+      "name": "_collapse:splitViewItem:forceOverlay:completionHandler:",
+      "bridgedName": "_collapse_splitViewItem_forceOverlay_completionHandler",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldUseConstraintAnimationToCollapseItem:withWindowResize:": {
+      "name": "_shouldUseConstraintAnimationToCollapseItem:withWindowResize:",
+      "bridgedName": "_shouldUseConstraintAnimationToCollapseItem_withWindowResize",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shrinkingWindowAnchorEdgeToShowItem:withSize:atIndex:": {
+      "name": "_shrinkingWindowAnchorEdgeToShowItem:withSize:atIndex:",
+      "bridgedName": "_shrinkingWindowAnchorEdgeToShowItem_withSize_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_growingWindowAnchorEdgeToShowItem:withSize:atIndex:": {
+      "name": "_growingWindowAnchorEdgeToShowItem:withSize:atIndex:",
+      "bridgedName": "_growingWindowAnchorEdgeToShowItem_withSize_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShrinkWindowToShowItem:withSize:": {
+      "name": "_shouldShrinkWindowToShowItem:withSize:",
+      "bridgedName": "_shouldShrinkWindowToShowItem_withSize",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldGrowWindowToShowItem:withSize:": {
+      "name": "_shouldGrowWindowToShowItem:withSize:",
+      "bridgedName": "_shouldGrowWindowToShowItem_withSize",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canOverlaySplitViewItem:": {
+      "name": "_canOverlaySplitViewItem:",
+      "bridgedName": "_canOverlaySplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:appearanceForDividerAtIndex:": {
+      "name": "_splitView:appearanceForDividerAtIndex:",
+      "bridgedName": "_splitView_appearanceForDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:blendingModeForDividerAtIndex:": {
+      "name": "_splitView:blendingModeForDividerAtIndex:",
+      "bridgedName": "_splitView_blendingModeForDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:shouldHaveVibrantDividerAtIndex:": {
+      "name": "_splitView:shouldHaveVibrantDividerAtIndex:",
+      "bridgedName": "_splitView_shouldHaveVibrantDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:canSpringLoadRevealArrangedSubview:": {
+      "name": "_splitView:canSpringLoadRevealArrangedSubview:",
+      "bridgedName": "_splitView_canSpringLoadRevealArrangedSubview",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitViewDidResizeSubviews:": {
+      "name": "splitViewDidResizeSubviews:",
+      "bridgedName": "splitViewDidResizeSubviews",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:doubleClickedOnDividerAtIndex:": {
+      "name": "splitView:doubleClickedOnDividerAtIndex:",
+      "bridgedName": "splitView_doubleClickedOnDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView:canLiveCollapseArrangedSubview:": {
+      "name": "_splitView:canLiveCollapseArrangedSubview:",
+      "bridgedName": "_splitView_canLiveCollapseArrangedSubview",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:additionalEffectiveRectOfDividerAtIndex:": {
+      "name": "splitView:additionalEffectiveRectOfDividerAtIndex:",
+      "bridgedName": "splitView_additionalEffectiveRectOfDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:effectiveRect:forDrawnRect:ofDividerAtIndex:": {
+      "name": "splitView:effectiveRect:forDrawnRect:ofDividerAtIndex:",
+      "bridgedName": "splitView_effectiveRect_forDrawnRect_ofDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:shouldHideDividerAtIndex:": {
+      "name": "splitView:shouldHideDividerAtIndex:",
+      "bridgedName": "splitView_shouldHideDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:shouldCollapseSubview:forDoubleClickOnDividerAtIndex:": {
+      "name": "splitView:shouldCollapseSubview:forDoubleClickOnDividerAtIndex:",
+      "bridgedName": "splitView_shouldCollapseSubview_forDoubleClickOnDividerAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitView:canCollapseSubview:": {
+      "name": "splitView:canCollapseSubview:",
+      "bridgedName": "splitView_canCollapseSubview",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfSplitViewItem:": {
+      "name": "_indexOfSplitViewItem:",
+      "bridgedName": "_indexOfSplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_arrangedViewForSplitViewItem:": {
+      "name": "_arrangedViewForSplitViewItem:",
+      "bridgedName": "_arrangedViewForSplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitViewItemForArrangedView:": {
+      "name": "_splitViewItemForArrangedView:",
+      "bridgedName": "_splitViewItemForArrangedView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitViewItemForViewAtIndex:": {
+      "name": "_splitViewItemForViewAtIndex:",
+      "bridgedName": "_splitViewItemForViewAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitViewItemForViewControllerAtIndex:": {
+      "name": "_splitViewItemForViewControllerAtIndex:",
+      "bridgedName": "_splitViewItemForViewControllerAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitViewItemForViewController:": {
+      "name": "splitViewItemForViewController:",
+      "bridgedName": "splitViewItemForViewController",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeSplitViewItem:": {
+      "name": "removeSplitViewItem:",
+      "bridgedName": "removeSplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertArrangedView:atIndex:": {
+      "name": "_insertArrangedView:atIndex:",
+      "bridgedName": "_insertArrangedView_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewInsertionIndexForSplitViewItem:": {
+      "name": "_viewInsertionIndexForSplitViewItem:",
+      "bridgedName": "_viewInsertionIndexForSplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertWrapperViewIntoSplitViewForSplitViewItem:atIndex:": {
+      "name": "_insertWrapperViewIntoSplitViewForSplitViewItem:atIndex:",
+      "bridgedName": "_insertWrapperViewIntoSplitViewForSplitViewItem_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertSplitViewItem:atIndex:": {
+      "name": "insertSplitViewItem:atIndex:",
+      "bridgedName": "insertSplitViewItem_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSplitViewItem:": {
+      "name": "addSplitViewItem:",
+      "bridgedName": "addSplitViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMinimumSizeForInlineSidebars:": {
+      "name": "setMinimumSizeForInlineSidebars:",
+      "bridgedName": "setMinimumSizeForInlineSidebars",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minimumSizeForInlineSidebars": {
+      "name": "minimumSizeForInlineSidebars",
+      "bridgedName": "minimumSizeForInlineSidebars",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeChildViewControllerAtIndex:": {
+      "name": "removeChildViewControllerAtIndex:",
+      "bridgedName": "removeChildViewControllerAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertChildViewController:atIndex:": {
+      "name": "insertChildViewController:atIndex:",
+      "bridgedName": "insertChildViewController_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillDisappear": {
+      "name": "viewWillDisappear",
+      "bridgedName": "viewWillDisappear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillAppear": {
+      "name": "viewWillAppear",
+      "bridgedName": "viewWillAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSplitViewPositioningConstraints": {
+      "name": "_updateSplitViewPositioningConstraints",
+      "bridgedName": "_updateSplitViewPositioningConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tearDownSplitView": {
+      "name": "_tearDownSplitView",
+      "bridgedName": "_tearDownSplitView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupSplitView": {
+      "name": "_setupSplitView",
+      "bridgedName": "_setupSplitView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setView:": {
+      "name": "setView:",
+      "bridgedName": "setView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitViewFrame": {
+      "name": "_splitViewFrame",
+      "bridgedName": "_splitViewFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultFrame": {
+      "name": "_defaultFrame",
+      "bridgedName": "_defaultFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeSplitViewWithFrame:": {
+      "name": "_makeSplitViewWithFrame:",
+      "bridgedName": "_makeSplitViewWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_splitView": {
+      "name": "_splitView",
+      "bridgedName": "_splitView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSplitView:withBlock:": {
+      "name": "_updateSplitView:withBlock:",
+      "bridgedName": "_updateSplitView_withBlock",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewControllerSupports10_10Features": {
+      "name": "_viewControllerSupports10_10Features",
+      "bridgedName": "_viewControllerSupports10_10Features",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitViewItem:didChangeCollapsed:animated:": {
+      "name": "splitViewItem:didChangeCollapsed:animated:",
+      "bridgedName": "splitViewItem_didChangeCollapsed_animated",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitViewItem:isChangingCollapsed:animated:": {
+      "name": "splitViewItem:isChangingCollapsed:animated:",
+      "bridgedName": "splitViewItem_isChangingCollapsed_animated",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "splitViewItem:willChangeCollapsed:animated:": {
+      "name": "splitViewItem:willChangeCollapsed:animated:",
+      "bridgedName": "splitViewItem_willChangeCollapsed_animated",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingEdgeHover": {
+      "name": "_stopObservingEdgeHover",
+      "bridgedName": "_stopObservingEdgeHover",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_uncollapseEdgeRevealItem:": {
+      "name": "_uncollapseEdgeRevealItem:",
+      "bridgedName": "_uncollapseEdgeRevealItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingEdgeHover": {
+      "name": "_startObservingEdgeHover",
+      "bridgedName": "_startObservingEdgeHover",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateHasItemToRevealOnEdgeHover": {
+      "name": "_updateHasItemToRevealOnEdgeHover",
+      "bridgedName": "_updateHasItemToRevealOnEdgeHover",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setHasItemToRevealOnEdgeHover:": {
+      "name": "_setHasItemToRevealOnEdgeHover:",
+      "bridgedName": "_setHasItemToRevealOnEdgeHover",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasItemToRevealOnEdgeHover": {
+      "name": "_hasItemToRevealOnEdgeHover",
+      "bridgedName": "_hasItemToRevealOnEdgeHover",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didExitFullscreen:": {
+      "name": "_didExitFullscreen:",
+      "bridgedName": "_didExitFullscreen",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didEnterFullscreen:": {
+      "name": "_didEnterFullscreen:",
+      "bridgedName": "_didEnterFullscreen",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingFullscreenForWindow:": {
+      "name": "_stopObservingFullscreenForWindow:",
+      "bridgedName": "_stopObservingFullscreenForWindow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingFullscreenForWindow:": {
+      "name": "_startObservingFullscreenForWindow:",
+      "bridgedName": "_startObservingFullscreenForWindow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "splitViewItems": {
+      "name": "splitViewItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "splitView": {
+      "name": "splitView",
+      "pointer": true,
+      "type": "NSSplitView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

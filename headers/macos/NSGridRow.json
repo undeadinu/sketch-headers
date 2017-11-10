@@ -1,0 +1,326 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSGridView",
+    "NSLayoutYAxisAnchor",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "NSGridRow",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    "_previousVisibleRow": {
+      "name": "_previousVisibleRow",
+      "bridgedName": "_previousVisibleRow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextVisibleRow": {
+      "name": "_nextVisibleRow",
+      "bridgedName": "_nextVisibleRow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_bottomContentAnchor": {
+      "name": "_bottomContentAnchor",
+      "bridgedName": "_bottomContentAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_bottomBoundaryAnchor": {
+      "name": "_bottomBoundaryAnchor",
+      "bridgedName": "_bottomBoundaryAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findBottomBoundaryAnchorAndContentOffset:": {
+      "name": "_findBottomBoundaryAnchorAndContentOffset:",
+      "bridgedName": "_findBottomBoundaryAnchorAndContentOffset",
+      "args": [
+        {
+          "type": "double *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_topContentAnchor": {
+      "name": "_topContentAnchor",
+      "bridgedName": "_topContentAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_topBoundaryAnchor": {
+      "name": "_topBoundaryAnchor",
+      "bridgedName": "_topBoundaryAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removedFromGridView": {
+      "name": "_removedFromGridView",
+      "bridgedName": "_removedFromGridView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mergeCellsInRange:": {
+      "name": "mergeCellsInRange:",
+      "bridgedName": "mergeCellsInRange",
+      "args": [
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellAtIndex:": {
+      "name": "cellAtIndex:",
+      "bridgedName": "cellAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cellAtIndex:allocatingIfNeeded:": {
+      "name": "_cellAtIndex:allocatingIfNeeded:",
+      "bridgedName": "_cellAtIndex_allocatingIfNeeded",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sanityCheck": {
+      "name": "_sanityCheck",
+      "bridgedName": "_sanityCheck",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didDeleteColumnAtIndex:": {
+      "name": "_didDeleteColumnAtIndex:",
+      "bridgedName": "_didDeleteColumnAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didInsertColumn:atIndex:": {
+      "name": "_didInsertColumn:atIndex:",
+      "bridgedName": "_didInsertColumn_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertCell:atIndex:": {
+      "name": "_insertCell:atIndex:",
+      "bridgedName": "_insertCell_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeCellAtIndex:": {
+      "name": "_removeCellAtIndex:",
+      "bridgedName": "_removeCellAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setViews:": {
+      "name": "_setViews:",
+      "bridgedName": "_setViews",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forEachCell:": {
+      "name": "_forEachCell:",
+      "bridgedName": "_forEachCell",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "index": {
+      "name": "index",
+      "bridgedName": "index",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_hasContentInGeneration:": {
+      "name": "set_hasContentInGeneration:",
+      "bridgedName": "set_hasContentInGeneration",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasContentInGeneration": {
+      "name": "_hasContentInGeneration",
+      "bridgedName": "_hasContentInGeneration",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithGridView:": {
+      "name": "initWithGridView:",
+      "bridgedName": "initWithGridView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "numberOfCells": {
+      "name": "numberOfCells",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "gridView": {
+      "name": "gridView",
+      "pointer": true,
+      "type": "__weak NSGridView",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "hidden": {
+      "name": "hidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isHidden"
+      ]
+    }
+  }
+}

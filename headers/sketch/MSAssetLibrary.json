@@ -1,0 +1,320 @@
+{
+  "imports": [
+    "NSObject.h",
+    "BCSortable.h",
+    "MSLibraryObject.h",
+    "NSCoding.h",
+    "QLPreviewItem.h"
+  ],
+  "classes": [
+    "MSDocumentData",
+    "NSDate",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSAssetLibrary",
+  "extends": "NSObject",
+  "interfaces": [
+    "QLPreviewItem",
+    "BCSortable",
+    "NSCoding",
+    "MSLibraryObject"
+  ],
+  "methods": {
+    "URLForTemplateLibraryNamed:": {
+      "name": "URLForTemplateLibraryNamed:",
+      "bridgedName": "URLForTemplateLibraryNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingValid": {
+      "name": "keyPathsForValuesAffectingValid",
+      "bridgedName": "keyPathsForValuesAffectingValid",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resolveLocationOnDisk": {
+      "name": "resolveLocationOnDisk",
+      "bridgedName": "resolveLocationOnDisk",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolWithID:": {
+      "name": "symbolWithID:",
+      "bridgedName": "symbolWithID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unload": {
+      "name": "unload",
+      "bridgedName": "unload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadAsyncWithCompletion:": {
+      "name": "loadAsyncWithCompletion:",
+      "bridgedName": "loadAsyncWithCompletion",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadSynchronously": {
+      "name": "loadSynchronously",
+      "bridgedName": "loadSynchronously",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleDocumentLoaded:": {
+      "name": "handleDocumentLoaded:",
+      "bridgedName": "handleDocumentLoaded",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDocument:": {
+      "name": "loadDocument:",
+      "bridgedName": "loadDocument",
+      "args": [
+        {
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setName:": {
+      "name": "setName:",
+      "bridgedName": "setName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocumentAtURL:": {
+      "name": "initWithDocumentAtURL:",
+      "bridgedName": "initWithDocumentAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "libraryID": {
+      "name": "libraryID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSAssetLibraryDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "locationOnDisk": {
+      "name": "locationOnDisk",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "status": {
+      "name": "status",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "dateLastModified": {
+      "name": "dateLastModified",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isUserLibrary": {
+      "name": "isUserLibrary",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "valid": {
+      "name": "valid",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "previewItemTitle": {
+      "name": "previewItemTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "previewItemURL": {
+      "name": "previewItemURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "previewItemDisplayState": {
+      "name": "previewItemDisplayState",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

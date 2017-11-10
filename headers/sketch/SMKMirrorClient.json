@@ -1,0 +1,71 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSUUID",
+    "SMKAdvertisement"
+  ],
+  "protocol": false,
+  "className": "SMKMirrorClient",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "clientWithConnectionInfo:": {
+      "name": "clientWithConnectionInfo:",
+      "bridgedName": "clientWithConnectionInfo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "type": {
+      "name": "type",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "status": {
+      "name": "status",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "advertisement": {
+      "name": "advertisement",
+      "pointer": true,
+      "type": "SMKAdvertisement",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "connectionID": {
+      "name": "connectionID",
+      "pointer": true,
+      "type": "NSUUID",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    }
+  }
+}

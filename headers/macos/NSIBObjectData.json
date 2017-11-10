@@ -1,0 +1,394 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSIBObjectDataAuxilary",
+    "NSMapTable",
+    "NSMutableArray",
+    "NSMutableSet",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSIBObjectData",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeEarlyDecodingObjectConnectionsFromConnections:": {
+      "name": "_removeEarlyDecodingObjectConnectionsFromConnections:",
+      "bridgedName": "_removeEarlyDecodingObjectConnectionsFromConnections",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addEarlyDecodingObjectsFromObjectList:toConnections:": {
+      "name": "_addEarlyDecodingObjectsFromObjectList:toConnections:",
+      "bridgedName": "_addEarlyDecodingObjectsFromObjectList_toConnections",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nibInstantiateWithOwner:options:topLevelObjects:": {
+      "name": "nibInstantiateWithOwner:options:topLevelObjects:",
+      "bridgedName": "nibInstantiateWithOwner_options_topLevelObjects",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nibInstantiateWithOwner:topLevelObjects:": {
+      "name": "nibInstantiateWithOwner:topLevelObjects:",
+      "bridgedName": "nibInstantiateWithOwner_topLevelObjects",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nibInstantiateWithOwner:": {
+      "name": "nibInstantiateWithOwner:",
+      "bridgedName": "nibInstantiateWithOwner",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "instantiateObject:": {
+      "name": "instantiateObject:",
+      "bridgedName": "instantiateObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setShouldEncodeDesigntimeData:": {
+      "name": "setShouldEncodeDesigntimeData:",
+      "bridgedName": "setShouldEncodeDesigntimeData",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldEncodeDesigntimeData": {
+      "name": "shouldEncodeDesigntimeData",
+      "bridgedName": "shouldEncodeDesigntimeData",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "classTable": {
+      "name": "classTable",
+      "bridgedName": "classTable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "oidTable": {
+      "name": "oidTable",
+      "bridgedName": "oidTable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nameTable": {
+      "name": "nameTable",
+      "bridgedName": "nameTable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectTable": {
+      "name": "objectTable",
+      "bridgedName": "objectTable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRootObject:": {
+      "name": "setRootObject:",
+      "bridgedName": "setRootObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rootObject": {
+      "name": "rootObject",
+      "bridgedName": "rootObject",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFirstResponder:": {
+      "name": "setFirstResponder:",
+      "bridgedName": "setFirstResponder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstResponder": {
+      "name": "firstResponder",
+      "bridgedName": "firstResponder",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNextObjectID:": {
+      "name": "setNextObjectID:",
+      "bridgedName": "setNextObjectID",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nextObjectID": {
+      "name": "nextObjectID",
+      "bridgedName": "nextObjectID",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTargetFramework:": {
+      "name": "setTargetFramework:",
+      "bridgedName": "setTargetFramework",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetFramework": {
+      "name": "targetFramework",
+      "bridgedName": "targetFramework",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setConnections:": {
+      "name": "setConnections:",
+      "bridgedName": "setConnections",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connections": {
+      "name": "connections",
+      "bridgedName": "connections",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setVisibleWindows:": {
+      "name": "setVisibleWindows:",
+      "bridgedName": "setVisibleWindows",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visibleWindows": {
+      "name": "visibleWindows",
+      "bridgedName": "visibleWindows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_assignObjectIds": {
+      "name": "_assignObjectIds",
+      "bridgedName": "_assignObjectIds",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_readVersion0:": {
+      "name": "_readVersion0:",
+      "bridgedName": "_readVersion0",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodeMapTable:forTypes:withCoder:": {
+      "name": "_encodeMapTable:forTypes:withCoder:",
+      "bridgedName": "_encodeMapTable_forTypes_withCoder",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "const char *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodeIntValuedMapTable:withCoder:": {
+      "name": "_encodeIntValuedMapTable:withCoder:",
+      "bridgedName": "_encodeIntValuedMapTable_withCoder",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodeObjectValuedMapTable:withCoder:": {
+      "name": "_encodeObjectValuedMapTable:withCoder:",
+      "bridgedName": "_encodeObjectValuedMapTable_withCoder",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

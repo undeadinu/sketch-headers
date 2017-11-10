@@ -1,0 +1,180 @@
+{
+  "imports": [
+    "NSObject.h",
+    "BITCrashManagerDelegate.h",
+    "BITHockeyManagerDelegate.h",
+    "MSActionObserver.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSCrashLogManager",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSActionObserver",
+    "BITHockeyManagerDelegate",
+    "BITCrashManagerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applicationLogForCrashManager:": {
+      "name": "applicationLogForCrashManager:",
+      "bridgedName": "applicationLogForCrashManager",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setup": {
+      "name": "setup",
+      "bridgedName": "setup",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:didInstantActionWithID:context:": {
+      "name": "actionController:didInstantActionWithID:context:",
+      "bridgedName": "actionController_didInstantActionWithID_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:didFinishActionWithID:context:": {
+      "name": "actionController:didFinishActionWithID:context:",
+      "bridgedName": "actionController_didFinishActionWithID_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:willBeginActionWithID:context:": {
+      "name": "actionController:willBeginActionWithID:context:",
+      "bridgedName": "actionController_willBeginActionWithID_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "log:": {
+      "name": "log:",
+      "bridgedName": "log",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "url": {
+      "name": "url",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "items": {
+      "name": "items",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "text": {
+      "name": "text",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

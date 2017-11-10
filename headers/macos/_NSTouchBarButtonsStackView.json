@@ -1,0 +1,452 @@
+{
+  "imports": [
+    "_NSTouchBarItemLayoutWrapper.h"
+  ],
+  "classes": [
+    "NSButtonGroupTouchBarItem",
+    "NSLayoutConstraint",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "_NSTouchBarButtonsStackView",
+  "extends": "NSStackView",
+  "interfaces": [
+    "_NSTouchBarItemLayoutWrapper"
+  ],
+  "methods": {
+    "makePopoverItemWithIdentifier:popoverTouchBar:title:image:preferredWidth:": {
+      "name": "makePopoverItemWithIdentifier:popoverTouchBar:title:image:preferredWidth:",
+      "bridgedName": "makePopoverItemWithIdentifier_popoverTouchBar_title_image_preferredWidth",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "makeAlertButtonWithTitle:image:target:action:": {
+      "name": "makeAlertButtonWithTitle:image:target:action:",
+      "bridgedName": "makeAlertButtonWithTitle_image_target_action",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "makeButtonWithTitle:image:target:action:preferredWidth:": {
+      "name": "makeButtonWithTitle:image:target:action:preferredWidth:",
+      "bridgedName": "makeButtonWithTitle_image_target_action_preferredWidth",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_buttonWithTitle:image:target:action:preferredWidth:isAlertButton:": {
+      "name": "_buttonWithTitle:image:target:action:preferredWidth:isAlertButton:",
+      "bridgedName": "_buttonWithTitle_image_target_action_preferredWidth_isAlertButton",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compressedImagePosition": {
+      "name": "_compressedImagePosition",
+      "bridgedName": "_compressedImagePosition",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setButtonsWithShortTitlesCompressedImage": {
+      "name": "_setButtonsWithShortTitlesCompressedImage",
+      "bridgedName": "_setButtonsWithShortTitlesCompressedImage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setButtonsWithShortTitles": {
+      "name": "_setButtonsWithShortTitles",
+      "bridgedName": "_setButtonsWithShortTitles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setButtonsWithFullTitles": {
+      "name": "_setButtonsWithFullTitles",
+      "bridgedName": "_setButtonsWithFullTitles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_buttonsFitShortTitles": {
+      "name": "_buttonsFitShortTitles",
+      "bridgedName": "_buttonsFitShortTitles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_buttonsFitFullTitles": {
+      "name": "_buttonsFitFullTitles",
+      "bridgedName": "_buttonsFitFullTitles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPopover:atIndex:": {
+      "name": "insertPopover:atIndex:",
+      "bridgedName": "insertPopover_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertView:atIndex:": {
+      "name": "insertView:atIndex:",
+      "bridgedName": "insertView_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetButtons": {
+      "name": "resetButtons",
+      "bridgedName": "resetButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateButtons": {
+      "name": "updateButtons",
+      "bridgedName": "updateButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrame:": {
+      "name": "setFrame:",
+      "bridgedName": "setFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetLayout": {
+      "name": "resetLayout",
+      "bridgedName": "resetLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeConstraintsForView:fromConstraints:": {
+      "name": "_removeConstraintsForView:fromConstraints:",
+      "bridgedName": "_removeConstraintsForView_fromConstraints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeConstraintsForView:": {
+      "name": "_removeConstraintsForView:",
+      "bridgedName": "_removeConstraintsForView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeSubview:": {
+      "name": "_removeSubview:",
+      "bridgedName": "_removeSubview",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithBarItem:": {
+      "name": "initWithBarItem:",
+      "bridgedName": "initWithBarItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "popoverItems": {
+      "name": "popoverItems",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "adjustableButtons": {
+      "name": "adjustableButtons",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "desiredWidthConstraint": {
+      "name": "desiredWidthConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "equalWidthConstraints": {
+      "name": "equalWidthConstraints",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "preferredWidthConstraints": {
+      "name": "preferredWidthConstraints",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "isSpace": {
+      "name": "isSpace",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "contentClippingSize": {
+      "name": "contentClippingSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "maxSize": {
+      "name": "maxSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "minSize": {
+      "name": "minSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "itemPadding": {
+      "name": "itemPadding",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "itemPosition": {
+      "name": "itemPosition",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "preferredSize": {
+      "name": "preferredSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "preferredZOrder": {
+      "name": "preferredZOrder",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "priorityIndex": {
+      "name": "priorityIndex",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

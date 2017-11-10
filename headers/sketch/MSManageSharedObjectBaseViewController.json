@@ -1,0 +1,192 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h"
+  ],
+  "classes": [
+    "MSDocument",
+    "NSArray",
+    "NSString",
+    "NSTableView"
+  ],
+  "protocol": false,
+  "className": "MSManageSharedObjectBaseViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSTableViewDataSource",
+    "NSTableViewDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:setObjectValue:forTableColumn:row:": {
+      "name": "tableView:setObjectValue:forTableColumn:row:",
+      "bridgedName": "tableView_setObjectValue_forTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:objectValueForTableColumn:row:": {
+      "name": "tableView:objectValueForTableColumn:row:",
+      "bridgedName": "tableView_objectValueForTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteSelectedObjects:": {
+      "name": "deleteSelectedObjects:",
+      "bridgedName": "deleteSelectedObjects",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeSharedObject:": {
+      "name": "removeSharedObject:",
+      "bridgedName": "removeSharedObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "tableView": {
+      "name": "tableView",
+      "pointer": true,
+      "type": "NSTableView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "sharedObjectsSortedByName": {
+      "name": "sharedObjectsSortedByName",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

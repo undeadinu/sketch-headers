@@ -1,0 +1,229 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "AFAmazonS3Manager",
+    "NSError",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSCloudShareUploadController",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel": {
+      "name": "cancel",
+      "bridgedName": "cancel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "queueFileToUpload:index:stepSize:progressTracker:": {
+      "name": "queueFileToUpload:index:stepSize:progressTracker:",
+      "bridgedName": "queueFileToUpload_index_stepSize_progressTracker",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "queueFilesToUploadForShare:": {
+      "name": "queueFilesToUploadForShare:",
+      "bridgedName": "queueFilesToUploadForShare",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reportProgress:stepSize:": {
+      "name": "reportProgress:stepSize:",
+      "bridgedName": "reportProgress_stepSize",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createS3ManagerWithCredentials:bucket:region:": {
+      "name": "createS3ManagerWithCredentials:bucket:region:",
+      "bridgedName": "createS3ManagerWithCredentials_bucket_region",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadFilesForShare:": {
+      "name": "uploadFilesForShare:",
+      "bridgedName": "uploadFilesForShare",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldAttemptReuploadAfterError:": {
+      "name": "shouldAttemptReuploadAfterError:",
+      "bridgedName": "shouldAttemptReuploadAfterError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadManifest": {
+      "name": "loadManifest",
+      "bridgedName": "loadManifest",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadManifest": {
+      "name": "uploadManifest",
+      "bridgedName": "uploadManifest",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startUpload": {
+      "name": "startUpload",
+      "bridgedName": "startUpload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "uploadFailed": {
+      "name": "uploadFailed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "uploadError": {
+      "name": "uploadError",
+      "pointer": true,
+      "type": "NSError",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "s3Manager": {
+      "name": "s3Manager",
+      "pointer": true,
+      "type": "AFAmazonS3Manager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "localURL": {
+      "name": "localURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": false,
+      "type": "__weak id <MSCloudExportableDocument>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "includeDocument": {
+      "name": "includeDocument",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSCloudShareUploadControllerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

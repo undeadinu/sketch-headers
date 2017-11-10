@@ -1,0 +1,1015 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSOutlineViewDataSource.h",
+    "NSOutlineViewDelegate.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableIndexSet",
+    "NSMutableSet",
+    "NSNavDataSource",
+    "NSNavNode",
+    "NSNavVirtualNode",
+    "NSOutlineView",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSNavSidebarController",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSOutlineViewDelegate",
+    "NSOutlineViewDataSource"
+  ],
+  "methods": {
+    "outlineView:acceptDrop:item:childIndex:": {
+      "name": "outlineView:acceptDrop:item:childIndex:",
+      "bridgedName": "outlineView_acceptDrop_item_childIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performDragOperationForFilenameDrop:asChildOfNode:atIndex:": {
+      "name": "_performDragOperationForFilenameDrop:asChildOfNode:atIndex:",
+      "bridgedName": "_performDragOperationForFilenameDrop_asChildOfNode_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performDragOperationForReorder:parentItem:toIndex:": {
+      "name": "_performDragOperationForReorder:parentItem:toIndex:",
+      "bridgedName": "_performDragOperationForReorder_parentItem_toIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:draggedImage:movedTo:": {
+      "name": "outlineView:draggedImage:movedTo:",
+      "bridgedName": "outlineView_draggedImage_movedTo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:validateDrop:proposedItem:proposedChildIndex:": {
+      "name": "outlineView:validateDrop:proposedItem:proposedChildIndex:",
+      "bridgedName": "outlineView_validateDrop_proposedItem_proposedChildIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggingUpdatedForFilenameDrop:inProposedItem:proposedChildIndex:": {
+      "name": "_draggingUpdatedForFilenameDrop:inProposedItem:proposedChildIndex:",
+      "bridgedName": "_draggingUpdatedForFilenameDrop_inProposedItem_proposedChildIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggedFilenameFromPasteboard:": {
+      "name": "_draggedFilenameFromPasteboard:",
+      "bridgedName": "_draggedFilenameFromPasteboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getResolvedNavNodeForFilename:": {
+      "name": "_getResolvedNavNodeForFilename:",
+      "bridgedName": "_getResolvedNavNodeForFilename",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:draggingEndedAt:operation:": {
+      "name": "outlineView:draggingEndedAt:operation:",
+      "bridgedName": "outlineView_draggingEndedAt_operation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewShouldSlideBackAfterDragFailed:": {
+      "name": "outlineViewShouldSlideBackAfterDragFailed:",
+      "bridgedName": "outlineViewShouldSlideBackAfterDragFailed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nodeRefFromNode:": {
+      "name": "_nodeRefFromNode:",
+      "bridgedName": "_nodeRefFromNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct OpaqueNodeRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggingUpdatedForReorder:proposedItem:proposedChildIndex:": {
+      "name": "_draggingUpdatedForReorder:proposedItem:proposedChildIndex:",
+      "bridgedName": "_draggingUpdatedForReorder_proposedItem_proposedChildIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:writeItems:toPasteboard:": {
+      "name": "outlineView:writeItems:toPasteboard:",
+      "bridgedName": "outlineView_writeItems_toPasteboard",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canDragNode:": {
+      "name": "_canDragNode:",
+      "bridgedName": "_canDragNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:isGroupItem:": {
+      "name": "outlineView:isGroupItem:",
+      "bridgedName": "outlineView_isGroupItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:shouldTrackCell:forTableColumn:item:": {
+      "name": "outlineView:shouldTrackCell:forTableColumn:item:",
+      "bridgedName": "outlineView_shouldTrackCell_forTableColumn_item",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ejectButtonClicked:": {
+      "name": "_ejectButtonClicked:",
+      "bridgedName": "_ejectButtonClicked",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:willDisplayCell:forTableColumn:item:": {
+      "name": "outlineView:willDisplayCell:forTableColumn:item:",
+      "bridgedName": "outlineView_willDisplayCell_forTableColumn_item",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:wantsTrackingAreasForRow:column:": {
+      "name": "outlineView:wantsTrackingAreasForRow:column:",
+      "bridgedName": "outlineView_wantsTrackingAreasForRow_column",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "useTemplateSidebarIcons": {
+      "name": "useTemplateSidebarIcons",
+      "bridgedName": "useTemplateSidebarIcons",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewAction:": {
+      "name": "outlineViewAction:",
+      "bridgedName": "outlineViewAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewSelectionDidChange:": {
+      "name": "outlineViewSelectionDidChange:",
+      "bridgedName": "outlineViewSelectionDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateRootNodeFromSelectedRowUsingCurrentDirectoryNode:": {
+      "name": "_updateRootNodeFromSelectedRowUsingCurrentDirectoryNode:",
+      "bridgedName": "_updateRootNodeFromSelectedRowUsingCurrentDirectoryNode",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openPrefPane:": {
+      "name": "_openPrefPane:",
+      "bridgedName": "_openPrefPane",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewItemDidCollapse:": {
+      "name": "outlineViewItemDidCollapse:",
+      "bridgedName": "outlineViewItemDidCollapse",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineViewItemDidExpand:": {
+      "name": "outlineViewItemDidExpand:",
+      "bridgedName": "outlineViewItemDidExpand",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:objectValueForTableColumn:byItem:": {
+      "name": "outlineView:objectValueForTableColumn:byItem:",
+      "bridgedName": "outlineView_objectValueForTableColumn_byItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:numberOfChildrenOfItem:": {
+      "name": "outlineView:numberOfChildrenOfItem:",
+      "bridgedName": "outlineView_numberOfChildrenOfItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:isItemExpandable:": {
+      "name": "outlineView:isItemExpandable:",
+      "bridgedName": "outlineView_isItemExpandable",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:child:ofItem:": {
+      "name": "outlineView:child:ofItem:",
+      "bridgedName": "outlineView_child_ofItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_childrenForNode:": {
+      "name": "_childrenForNode:",
+      "bridgedName": "_childrenForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isHiddenSidebarNode:": {
+      "name": "_isHiddenSidebarNode:",
+      "bridgedName": "_isHiddenSidebarNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_convertRootIndex:": {
+      "name": "_convertRootIndex:",
+      "bridgedName": "_convertRootIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reorderAppSmartFolderNode:toIndex:": {
+      "name": "_reorderAppSmartFolderNode:toIndex:",
+      "bridgedName": "_reorderAppSmartFolderNode_toIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeAppSmartFolderNode:": {
+      "name": "_removeAppSmartFolderNode:",
+      "bridgedName": "_removeAppSmartFolderNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleFileListModeChanged": {
+      "name": "handleFileListModeChanged",
+      "bridgedName": "handleFileListModeChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleRootNodeChanged:": {
+      "name": "_handleRootNodeChanged:",
+      "bridgedName": "_handleRootNodeChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectRootNode": {
+      "name": "_selectRootNode",
+      "bridgedName": "_selectRootNode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleNodePropertyChanged:": {
+      "name": "_handleNodePropertyChanged:",
+      "bridgedName": "_handleNodePropertyChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleChildrenChanged:": {
+      "name": "_handleChildrenChanged:",
+      "bridgedName": "_handleChildrenChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleChildrenChangedForNode:": {
+      "name": "_handleChildrenChangedForNode:",
+      "bridgedName": "_handleChildrenChangedForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_releaseDraggingNode": {
+      "name": "_releaseDraggingNode",
+      "bridgedName": "_releaseDraggingNode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadChildrenForDelayedNodes": {
+      "name": "_reloadChildrenForDelayedNodes",
+      "bridgedName": "_reloadChildrenForDelayedNodes",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadChildrenForNode:": {
+      "name": "_reloadChildrenForNode:",
+      "bridgedName": "_reloadChildrenForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_releaseChildrenForNode:": {
+      "name": "_releaseChildrenForNode:",
+      "bridgedName": "_releaseChildrenForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addDelayReloadChildrenForNode:": {
+      "name": "_addDelayReloadChildrenForNode:",
+      "bridgedName": "_addDelayReloadChildrenForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDragging": {
+      "name": "_isDragging",
+      "bridgedName": "_isDragging",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "savedSearchesNode": {
+      "name": "savedSearchesNode",
+      "bridgedName": "savedSearchesNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "favoritesNode": {
+      "name": "favoritesNode",
+      "bridgedName": "favoritesNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sharedNode": {
+      "name": "sharedNode",
+      "bridgedName": "sharedNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "volumesNode": {
+      "name": "volumesNode",
+      "bridgedName": "volumesNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "load": {
+      "name": "load",
+      "bridgedName": "load",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidesSharedSection:": {
+      "name": "setHidesSharedSection:",
+      "bridgedName": "setHidesSharedSection",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hidesSharedSection": {
+      "name": "hidesSharedSection",
+      "bridgedName": "hidesSharedSection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mediaNodeTitle": {
+      "name": "_mediaNodeTitle",
+      "bridgedName": "_mediaNodeTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_savedSearcheNodeTitle": {
+      "name": "_savedSearcheNodeTitle",
+      "bridgedName": "_savedSearcheNodeTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowParentNode:": {
+      "name": "_shouldShowParentNode:",
+      "bridgedName": "_shouldShowParentNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNavDataSource:": {
+      "name": "setNavDataSource:",
+      "bridgedName": "setNavDataSource",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:selectionIndexesForProposedSelection:": {
+      "name": "outlineView:selectionIndexesForProposedSelection:",
+      "bridgedName": "outlineView_selectionIndexesForProposedSelection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowGroupRowsToBeSelected": {
+      "name": "_allowGroupRowsToBeSelected",
+      "bridgedName": "_allowGroupRowsToBeSelected",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSidebarOutlineView:": {
+      "name": "setSidebarOutlineView:",
+      "bridgedName": "setSidebarOutlineView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadDataForNode:": {
+      "name": "_reloadDataForNode:",
+      "bridgedName": "_reloadDataForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadData": {
+      "name": "_reloadData",
+      "bridgedName": "_reloadData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMediaBrowserNode:": {
+      "name": "setMediaBrowserNode:",
+      "bridgedName": "setMediaBrowserNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mediaBrowsrNode": {
+      "name": "mediaBrowsrNode",
+      "bridgedName": "mediaBrowsrNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appSmartFoldersNode": {
+      "name": "appSmartFoldersNode",
+      "bridgedName": "appSmartFoldersNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addAppSmartFolderForNode:": {
+      "name": "addAppSmartFolderForNode:",
+      "bridgedName": "addAppSmartFolderForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadAppSmartFolders": {
+      "name": "_loadAppSmartFolders",
+      "bridgedName": "_loadAppSmartFolders",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_saveLayout": {
+      "name": "_saveLayout",
+      "bridgedName": "_saveLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadSavedLayoutWithKey:": {
+      "name": "loadSavedLayoutWithKey:",
+      "bridgedName": "loadSavedLayoutWithKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreExpandedState": {
+      "name": "_restoreExpandedState",
+      "bridgedName": "_restoreExpandedState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyForNode:": {
+      "name": "_keyForNode:",
+      "bridgedName": "_keyForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowOrderedIn": {
+      "name": "windowOrderedIn",
+      "bridgedName": "windowOrderedIn",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowOrderedOut": {
+      "name": "windowOrderedOut",
+      "bridgedName": "windowOrderedOut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingChildren": {
+      "name": "_stopObservingChildren",
+      "bridgedName": "_stopObservingChildren",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,846 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSString",
+    "NSXMLDocument"
+  ],
+  "protocol": false,
+  "className": "NSXMLNode",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "_contentsOfHTMLData:encoding:strippingTagsSeparatedByString:": {
+      "name": "_contentsOfHTMLData:encoding:strippingTagsSeparatedByString:",
+      "bridgedName": "_contentsOfHTMLData_encoding_strippingTagsSeparatedByString",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_contentsOfHTMLData:strippingTagsSeparatedByString:": {
+      "name": "_contentsOfHTMLData:strippingTagsSeparatedByString:",
+      "bridgedName": "_contentsOfHTMLData_strippingTagsSeparatedByString",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_nodeFromLibXML2Node:": {
+      "name": "_nodeFromLibXML2Node:",
+      "bridgedName": "_nodeFromLibXML2Node",
+      "args": [
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_htmlFromTidyNode:tidyDoc:appendingToString:": {
+      "name": "_htmlFromTidyNode:tidyDoc:appendingToString:",
+      "bridgedName": "_htmlFromTidyNode_tidyDoc_appendingToString",
+      "args": [
+        {
+          "type": "void *"
+        },
+        {
+          "type": "void *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tidyHTMLBody:": {
+      "name": "_tidyHTMLBody:",
+      "bridgedName": "_tidyHTMLBody",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_escapeHTMLAttributeCharacters:withQuote:appendingToString:": {
+      "name": "_escapeHTMLAttributeCharacters:withQuote:appendingToString:",
+      "bridgedName": "_escapeHTMLAttributeCharacters_withQuote_appendingToString",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned short"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_escapeCharacters:countOfCharacters:inString:appendingToString:": {
+      "name": "_escapeCharacters:countOfCharacters:inString:appendingToString:",
+      "bridgedName": "_escapeCharacters_countOfCharacters_inString_appendingToString",
+      "args": [
+        {
+          "type": "const unsigned short *"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "predefinedNamespaceForPrefix:": {
+      "name": "predefinedNamespaceForPrefix:",
+      "bridgedName": "predefinedNamespaceForPrefix",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "prefixForName:": {
+      "name": "prefixForName:",
+      "bridgedName": "prefixForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "localNameForName:": {
+      "name": "localNameForName:",
+      "bridgedName": "localNameForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "DTDNodeWithXMLString:": {
+      "name": "DTDNodeWithXMLString:",
+      "bridgedName": "DTDNodeWithXMLString",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "textWithStringValue:": {
+      "name": "textWithStringValue:",
+      "bridgedName": "textWithStringValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "commentWithStringValue:": {
+      "name": "commentWithStringValue:",
+      "bridgedName": "commentWithStringValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "processingInstructionWithName:stringValue:": {
+      "name": "processingInstructionWithName:stringValue:",
+      "bridgedName": "processingInstructionWithName_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "namespaceWithName:stringValue:": {
+      "name": "namespaceWithName:stringValue:",
+      "bridgedName": "namespaceWithName_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "attributeWithName:URI:stringValue:": {
+      "name": "attributeWithName:URI:stringValue:",
+      "bridgedName": "attributeWithName_URI_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "attributeWithLocalName:URI:stringValue:": {
+      "name": "attributeWithLocalName:URI:stringValue:",
+      "bridgedName": "attributeWithLocalName_URI_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "attributeWithName:stringValue:": {
+      "name": "attributeWithName:stringValue:",
+      "bridgedName": "attributeWithName_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "elementWithName:children:attributes:": {
+      "name": "elementWithName:children:attributes:",
+      "bridgedName": "elementWithName_children_attributes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "elementWithName:stringValue:": {
+      "name": "elementWithName:stringValue:",
+      "bridgedName": "elementWithName_stringValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "elementWithName:URI:": {
+      "name": "elementWithName:URI:",
+      "bridgedName": "elementWithName_URI",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "elementWithLocalName:URI:": {
+      "name": "elementWithLocalName:URI:",
+      "bridgedName": "elementWithLocalName_URI",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "elementWithName:": {
+      "name": "elementWithName:",
+      "bridgedName": "elementWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "documentWithRootElement:": {
+      "name": "documentWithRootElement:",
+      "bridgedName": "documentWithRootElement",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "documentWithContentsOfURL:options:error:": {
+      "name": "documentWithContentsOfURL:options:error:",
+      "bridgedName": "documentWithContentsOfURL_options_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "document": {
+      "name": "document",
+      "bridgedName": "document",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_alloc": {
+      "name": "_alloc",
+      "bridgedName": "_alloc",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setParent:": {
+      "name": "_setParent:",
+      "bridgedName": "_setParent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setKind:": {
+      "name": "_setKind:",
+      "bridgedName": "_setKind",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIndex:": {
+      "name": "_setIndex:",
+      "bridgedName": "_setIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectsForXQuery:constants:error:": {
+      "name": "objectsForXQuery:constants:error:",
+      "bridgedName": "objectsForXQuery_constants_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectsForXQuery:error:": {
+      "name": "objectsForXQuery:error:",
+      "bridgedName": "objectsForXQuery_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nodesForXPath:error:": {
+      "name": "nodesForXPath:error:",
+      "bridgedName": "nodesForXPath_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "XMLData": {
+      "name": "XMLData",
+      "bridgedName": "XMLData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canonicalXMLStringPreservingComments:": {
+      "name": "canonicalXMLStringPreservingComments:",
+      "bridgedName": "canonicalXMLStringPreservingComments",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_XMLStringWithOptions:appendingToString:": {
+      "name": "_XMLStringWithOptions:appendingToString:",
+      "bridgedName": "_XMLStringWithOptions_appendingToString",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "XMLStringWithOptions:": {
+      "name": "XMLStringWithOptions:",
+      "bridgedName": "XMLStringWithOptions",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setURI:": {
+      "name": "_setURI:",
+      "bridgedName": "_setURI",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detach": {
+      "name": "detach",
+      "bridgedName": "detach",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "childAtIndex:": {
+      "name": "childAtIndex:",
+      "bridgedName": "childAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setStringValue:resolvingEntities:": {
+      "name": "setStringValue:resolvingEntities:",
+      "bridgedName": "setStringValue_resolvingEntities",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithKind:options:": {
+      "name": "initWithKind:options:",
+      "bridgedName": "initWithKind_options",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithKind:": {
+      "name": "initWithKind:",
+      "bridgedName": "initWithKind",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "XMLString": {
+      "name": "XMLString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "URI": {
+      "name": "URI",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "prefix": {
+      "name": "prefix",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "localName": {
+      "name": "localName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "XPath": {
+      "name": "XPath",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "nextNode": {
+      "name": "nextNode",
+      "pointer": true,
+      "type": "NSXMLNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "previousNode": {
+      "name": "previousNode",
+      "pointer": true,
+      "type": "NSXMLNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "nextSibling": {
+      "name": "nextSibling",
+      "pointer": true,
+      "type": "NSXMLNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "previousSibling": {
+      "name": "previousSibling",
+      "pointer": true,
+      "type": "NSXMLNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "level": {
+      "name": "level",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "index": {
+      "name": "index",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "stringValue": {
+      "name": "stringValue",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "objectValue": {
+      "name": "objectValue",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "rootDocument": {
+      "name": "rootDocument",
+      "pointer": true,
+      "type": "NSXMLDocument",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "childCount": {
+      "name": "childCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "children": {
+      "name": "children",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "parent": {
+      "name": "parent",
+      "pointer": true,
+      "type": "NSXMLNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "kind": {
+      "name": "kind",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

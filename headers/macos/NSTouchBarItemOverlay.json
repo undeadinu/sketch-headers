@@ -1,0 +1,287 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSTouchBarPressAndHoldTransposerDelegate.h"
+  ],
+  "classes": [
+    "NSButton",
+    "NSFunctionRow",
+    "NSFunctionRowBackgroundColorView",
+    "NSString",
+    "NSTouchBar",
+    "NSTouchBarItem",
+    "NSTouchBarItemOverlayOptions",
+    "NSTouchBarView",
+    "NSTouchBarViewController",
+    "_NSTouchBarItemOverlayTouchInterceptionView"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarItemOverlay",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSTouchBarPressAndHoldTransposerDelegate"
+  ],
+  "methods": {
+    "_createContainerViewWithFrame:": {
+      "name": "_createContainerViewWithFrame:",
+      "bridgedName": "_createContainerViewWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "activeOverlay": {
+      "name": "activeOverlay",
+      "bridgedName": "activeOverlay",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackTouches": {
+      "name": "trackTouches",
+      "bridgedName": "trackTouches",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackTouch:fromSourceFrame:toFrame:": {
+      "name": "trackTouch:fromSourceFrame:toFrame:",
+      "bridgedName": "trackTouch_fromSourceFrame_toFrame",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setContainerView:": {
+      "name": "_setContainerView:",
+      "bridgedName": "_setContainerView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hide": {
+      "name": "hide",
+      "bridgedName": "hide",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showWithOptions:": {
+      "name": "showWithOptions:",
+      "bridgedName": "showWithOptions",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "show": {
+      "name": "show",
+      "bridgedName": "show",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithItem:": {
+      "name": "initWithItem:",
+      "bridgedName": "initWithItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transposerDidCancel:": {
+      "name": "transposerDidCancel:",
+      "bridgedName": "transposerDidCancel",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transposerDidEnd:": {
+      "name": "transposerDidEnd:",
+      "bridgedName": "transposerDidEnd",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cleanupFromPressAndHold": {
+      "name": "_cleanupFromPressAndHold",
+      "bridgedName": "_cleanupFromPressAndHold",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "trackingTouches": {
+      "name": "trackingTouches",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isTrackingTouches"
+      ]
+    },
+    "currentRecommendedOptions": {
+      "name": "currentRecommendedOptions",
+      "pointer": true,
+      "type": "NSTouchBarItemOverlayOptions",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "touchBarView": {
+      "name": "touchBarView",
+      "pointer": true,
+      "type": "NSTouchBarView",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "popoverTouchBar": {
+      "name": "popoverTouchBar",
+      "pointer": true,
+      "type": "NSTouchBar",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "overlayTouchBar": {
+      "name": "overlayTouchBar",
+      "pointer": true,
+      "type": "NSTouchBar",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "item": {
+      "name": "item",
+      "pointer": true,
+      "type": "__weak NSTouchBarItem",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
