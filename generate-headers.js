@@ -97,7 +97,7 @@ function generate (_argv) {
     );
   }
 
-  exec(`./class-dump -H "${SKETCH_BIN_PATH}" -o "${HEADERS}/sketch"`)
+  return exec(`./class-dump -H "${SKETCH_BIN_PATH}" -o "${HEADERS}/sketch"`)
     .then(() => {
       console.log(
         `${chalk.dim('[3/4]')} 🍏  Generating the macOS headers...`
