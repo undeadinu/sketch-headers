@@ -3,7 +3,8 @@
     "MSStyledLayer.h"
   ],
   "classes": [
-    "NSDictionary",
+    "NSArray",
+    "NSMutableArray",
     "NSString"
   ],
   "protocol": false,
@@ -82,6 +83,164 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "moveOverrideValueIndex:toIndex:": {
+      "name": "moveOverrideValueIndex:toIndex:",
+      "bridgedName": "moveOverrideValueIndex_toIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllOverrideValues": {
+      "name": "removeAllOverrideValues",
+      "bridgedName": "removeAllOverrideValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeOverrideValuesAtIndexes:": {
+      "name": "removeOverrideValuesAtIndexes:",
+      "bridgedName": "removeOverrideValuesAtIndexes",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeOverrideValueAtIndex:": {
+      "name": "removeOverrideValueAtIndex:",
+      "bridgedName": "removeOverrideValueAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeOverrideValue:": {
+      "name": "removeOverrideValue:",
+      "bridgedName": "removeOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertOverrideValues:afterOverrideValue:": {
+      "name": "insertOverrideValues:afterOverrideValue:",
+      "bridgedName": "insertOverrideValues_afterOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertOverrideValue:afterOverrideValue:": {
+      "name": "insertOverrideValue:afterOverrideValue:",
+      "bridgedName": "insertOverrideValue_afterOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertOverrideValues:beforeOverrideValue:": {
+      "name": "insertOverrideValues:beforeOverrideValue:",
+      "bridgedName": "insertOverrideValues_beforeOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertOverrideValue:beforeOverrideValue:": {
+      "name": "insertOverrideValue:beforeOverrideValue:",
+      "bridgedName": "insertOverrideValue_beforeOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertOverrideValue:atIndex:": {
+      "name": "insertOverrideValue:atIndex:",
+      "bridgedName": "insertOverrideValue_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addOverrideValues:": {
+      "name": "addOverrideValues:",
+      "bridgedName": "addOverrideValues",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addOverrideValue:": {
+      "name": "addOverrideValue:",
+      "bridgedName": "addOverrideValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initializeUnsetObjectPropertiesWithDefaults": {
       "name": "initializeUnsetObjectPropertiesWithDefaults",
       "bridgedName": "initializeUnsetObjectPropertiesWithDefaults",
@@ -144,6 +303,15 @@
     }
   },
   "properties": {
+    "overrideValues": {
+      "name": "overrideValues",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "verticalSpacing": {
       "name": "verticalSpacing",
       "pointer": false,
@@ -161,12 +329,11 @@
         "nonatomic"
       ]
     },
-    "overrides": {
-      "name": "overrides",
-      "pointer": true,
-      "type": "NSDictionary",
+    "scale": {
+      "name": "scale",
+      "pointer": false,
+      "type": "double",
       "attributes": [
-        "retain",
         "nonatomic"
       ]
     },

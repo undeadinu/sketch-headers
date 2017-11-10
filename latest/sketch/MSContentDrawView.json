@@ -2,6 +2,7 @@
   "imports": [
     "NSView.h",
     "MSEventHandlerManagerDelegate.h",
+    "MSOverlayRenderingDelegate.h",
     "MSTiledLayerPileHostView.h"
   ],
   "classes": [
@@ -25,7 +26,8 @@
   "extends": "NSView",
   "interfaces": [
     "MSEventHandlerManagerDelegate",
-    "MSTiledLayerPileHostView"
+    "MSTiledLayerPileHostView",
+    "MSOverlayRenderingDelegate"
   ],
   "methods": {
     "absoluteCoordinatesFromViewCoordinates:forViewPort:": {
@@ -276,9 +278,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "currentView": {
-      "name": "currentView",
-      "bridgedName": "currentView",
+    "contentDrawView": {
+      "name": "contentDrawView",
+      "bridgedName": "contentDrawView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -360,11 +362,35 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "switchToSymbolHandlerIfPasteboardContentsDetected:": {
+      "name": "switchToSymbolHandlerIfPasteboardContentsDetected:",
+      "bridgedName": "switchToSymbolHandlerIfPasteboardContentsDetected",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "wantsPeriodicDraggingUpdates": {
       "name": "wantsPeriodicDraggingUpdates",
       "bridgedName": "wantsPeriodicDraggingUpdates",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateDraggingItemsForDrag:": {
+      "name": "updateDraggingItemsForDrag:",
+      "bridgedName": "updateDraggingItemsForDrag",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -849,9 +875,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshOverlayOfViews": {
-      "name": "refreshOverlayOfViews",
-      "bridgedName": "refreshOverlayOfViews",
+    "refreshOverlay": {
+      "name": "refreshOverlay",
+      "bridgedName": "refreshOverlay",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -1140,6 +1166,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "refreshOverlayAfterSettingsChange": {
+      "name": "refreshOverlayAfterSettingsChange",
+      "bridgedName": "refreshOverlayAfterSettingsChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshEverythingAfterSettingsChange": {
+      "name": "refreshEverythingAfterSettingsChange",
+      "bridgedName": "refreshEverythingAfterSettingsChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "queuePendingMonitor": {
       "name": "queuePendingMonitor",
       "bridgedName": "queuePendingMonitor",
@@ -1163,21 +1205,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tiledLayerPile:renderOverlayInRect:": {
-      "name": "tiledLayerPile:renderOverlayInRect:",
-      "bridgedName": "tiledLayerPile_renderOverlayInRect",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "tiledLayerPile:requiresRedrawInRect:": {
       "name": "tiledLayerPile:requiresRedrawInRect:",
       "bridgedName": "tiledLayerPile_requiresRedrawInRect",
@@ -1190,6 +1217,50 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tile:renderOverlayInRect:context:": {
+      "name": "tile:renderOverlayInRect:context:",
+      "bridgedName": "tile_renderOverlayInRect_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayOptionsForPage:zoom:fullScreen:": {
+      "name": "overlayOptionsForPage:zoom:fullScreen:",
+      "bridgedName": "overlayOptionsForPage_zoom_fullScreen",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayRenderer": {
+      "name": "overlayRenderer",
+      "bridgedName": "overlayRenderer",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1285,9 +1356,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "debugSettingChanged:": {
-      "name": "debugSettingChanged:",
-      "bridgedName": "debugSettingChanged",
+    "visualSettingChanged:": {
+      "name": "visualSettingChanged:",
+      "bridgedName": "visualSettingChanged",
       "args": [
         {
           "type": "id"
@@ -1402,6 +1473,14 @@
       "bridgedName": "useDebugDriver",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initDrivers": {
+      "name": "initDrivers",
+      "bridgedName": "initDrivers",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1551,8 +1630,8 @@
         "nonatomic"
       ]
     },
-    "ignoreScheduledRedrawRequests": {
-      "name": "ignoreScheduledRedrawRequests",
+    "redrawPending": {
+      "name": "redrawPending",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -1583,8 +1662,8 @@
         "nonatomic"
       ]
     },
-    "overlayRectNeedingRedraw": {
-      "name": "overlayRectNeedingRedraw",
+    "overlayDirtyRect": {
+      "name": "overlayDirtyRect",
       "pointer": false,
       "type": "struct CGRect",
       "attributes": [

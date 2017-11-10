@@ -3,7 +3,9 @@
     "MSSortableObjectMenuBuilder.h"
   ],
   "classes": [
-    "NSImage"
+    "NSColorSpace",
+    "NSImage",
+    "NSMutableDictionary"
   ],
   "protocol": false,
   "className": "MSSymbolsMenuBuilder",
@@ -30,10 +32,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
+    "updateImages": {
+      "name": "updateImages",
+      "bridgedName": "updateImages",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPreviewColorSpace:": {
+      "name": "initWithPreviewColorSpace:",
+      "bridgedName": "initWithPreviewColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -46,6 +60,24 @@
       "type": "NSImage",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "previewColorSpace": {
+      "name": "previewColorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "collatedImages": {
+      "name": "collatedImages",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

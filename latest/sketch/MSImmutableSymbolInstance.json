@@ -2,7 +2,9 @@
   "imports": [
     "_MSImmutableSymbolInstance.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSDictionary"
+  ],
   "protocol": false,
   "className": "MSImmutableSymbolInstance",
   "extends": "_MSImmutableSymbolInstance",
@@ -29,6 +31,22 @@
       "bridgedName": "masterInfluenceEdgePadding",
       "args": [],
       "returns": "struct BCEdgePaddings",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scale": {
+      "name": "scale",
+      "bridgedName": "scale",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isScaled": {
+      "name": "isScaled",
+      "bridgedName": "isScaled",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -103,6 +121,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "encodePropertiesWithCoder:": {
+      "name": "encodePropertiesWithCoder:",
+      "bridgedName": "encodePropertiesWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithGroupForMigration:": {
       "name": "initWithGroupForMigration:",
       "bridgedName": "initWithGroupForMigration",
@@ -115,42 +145,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "possibleOverridesInDocument:forSymbolID:actualOverrides:skipping:": {
-      "name": "possibleOverridesInDocument:forSymbolID:actualOverrides:skipping:",
-      "bridgedName": "possibleOverridesInDocument_forSymbolID_actualOverrides_skipping",
+    "overrideViewControllerClassForOverridePoint:": {
+      "name": "overrideViewControllerClassForOverridePoint:",
+      "bridgedName": "overrideViewControllerClassForOverridePoint",
       "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
         {
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "possibleOverridesInDocument:actualOverrides:skipping:": {
-      "name": "possibleOverridesInDocument:actualOverrides:skipping:",
-      "bridgedName": "possibleOverridesInDocument_actualOverrides_skipping",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
+      "returns": "Class",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -238,6 +241,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "migratePropertiesFromV96OrEarlierWithUnarchiver:": {
+      "name": "migratePropertiesFromV96OrEarlierWithUnarchiver:",
+      "bridgedName": "migratePropertiesFromV96OrEarlierWithUnarchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "migratePropertiesFromV89OrEarlierWithUnarchiver:": {
       "name": "migratePropertiesFromV89OrEarlierWithUnarchiver:",
       "bridgedName": "migratePropertiesFromV89OrEarlierWithUnarchiver",
@@ -307,6 +322,15 @@
       "name": "masterRefreshCounter",
       "pointer": false,
       "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "overrides": {
+      "name": "overrides",
+      "pointer": true,
+      "type": "NSDictionary",
       "attributes": [
         "readonly",
         "nonatomic"

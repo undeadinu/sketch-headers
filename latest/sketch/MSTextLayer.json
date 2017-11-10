@@ -1,11 +1,11 @@
 {
   "imports": [
     "_MSTextLayer.h",
-    "MSColorSpaceConvertible.h",
+    "MSColorConvertible.h",
     "MSFirstLineTypesetterDelegate.h"
   ],
   "classes": [
-    "MSColor",
+    "MSImmutableColor",
     "NSArray",
     "NSAttributedString",
     "NSBezierPath",
@@ -18,7 +18,7 @@
   "extends": "_MSTextLayer",
   "interfaces": [
     "MSFirstLineTypesetterDelegate",
-    "MSColorSpaceConvertible"
+    "MSColorConvertible"
   ],
   "methods": {
     "menuItemStateForTest:forLayers:": {
@@ -698,22 +698,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "baselineOffsets": {
-      "name": "baselineOffsets",
-      "bridgedName": "baselineOffsets",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "firstBaselineOffset": {
-      "name": "firstBaselineOffset",
-      "bridgedName": "firstBaselineOffset",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setupBehaviour:": {
       "name": "setupBehaviour:",
       "bridgedName": "setupBehaviour",
@@ -808,12 +792,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithFrame:attributes:type:": {
-      "name": "initWithFrame:attributes:type:",
-      "bridgedName": "initWithFrame_attributes_type",
+    "initWithFrame:attributes:documentColorSpace:type:": {
+      "name": "initWithFrame:attributes:documentColorSpace:type:",
+      "bridgedName": "initWithFrame_attributes_documentColorSpace_type",
       "args": [
         {
           "type": "struct CGRect"
+        },
+        {
+          "type": "id"
         },
         {
           "type": "id"
@@ -826,10 +813,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithAttributedString:maxWidth:": {
-      "name": "initWithAttributedString:maxWidth:",
-      "bridgedName": "initWithAttributedString_maxWidth",
+    "initWithAttributedString:documentColorSpace:maxWidth:": {
+      "name": "initWithAttributedString:documentColorSpace:maxWidth:",
+      "bridgedName": "initWithAttributedString_documentColorSpace_maxWidth",
       "args": [
+        {
+          "type": "id"
+        },
         {
           "type": "id"
         },
@@ -889,14 +879,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "overrideViewControllerClass": {
-      "name": "overrideViewControllerClass",
-      "bridgedName": "overrideViewControllerClass",
-      "args": [],
-      "returns": "Class",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "shouldDrawSelection": {
       "name": "shouldDrawSelection",
       "bridgedName": "shouldDrawSelection",
@@ -905,11 +887,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "handlerName": {
-      "name": "handlerName",
-      "bridgedName": "handlerName",
+    "handlerClass": {
+      "name": "handlerClass",
+      "bridgedName": "handlerClass",
       "args": [],
-      "returns": "id",
+      "returns": "Class",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1056,18 +1038,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "acceptsOverrideValue:": {
-      "name": "acceptsOverrideValue:",
-      "bridgedName": "acceptsOverrideValue",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "reapplyPreviousAttributesFromString:": {
       "name": "reapplyPreviousAttributesFromString:",
       "bridgedName": "reapplyPreviousAttributesFromString",
@@ -1080,10 +1050,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "applyOverridesFromSource:": {
-      "name": "applyOverridesFromSource:",
-      "bridgedName": "applyOverridesFromSource",
+    "applyOverride:toPoint:": {
+      "name": "applyOverride:toPoint:",
+      "bridgedName": "applyOverride_toPoint",
       "args": [
+        {
+          "type": "id"
+        },
         {
           "type": "id"
         }
@@ -1234,7 +1207,7 @@
     "textColor": {
       "name": "textColor",
       "pointer": true,
-      "type": "MSColor",
+      "type": "MSImmutableColor",
       "attributes": [
         "copy",
         "nonatomic"

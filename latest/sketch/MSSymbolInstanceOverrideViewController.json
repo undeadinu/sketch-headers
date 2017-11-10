@@ -5,7 +5,10 @@
   ],
   "classes": [
     "MSDocument",
+    "MSDocumentData",
     "MSForeignSymbolMenuBuilder",
+    "MSSymbolInstance",
+    "MSSymbolMaster",
     "NSPopUpButton",
     "NSString",
     "NSTextField"
@@ -68,13 +71,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateOtherOverridesForNestedSymbolFromID:toID:": {
-      "name": "updateOtherOverridesForNestedSymbolFromID:toID:",
-      "bridgedName": "updateOtherOverridesForNestedSymbolFromID_toID",
+    "applyOverrideToSelectedLayers:": {
+      "name": "applyOverrideToSelectedLayers:",
+      "bridgedName": "applyOverrideToSelectedLayers",
       "args": [
-        {
-          "type": "id"
-        },
         {
           "type": "id"
         }
@@ -83,15 +83,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "overrideValueAction:": {
-      "name": "overrideValueAction:",
-      "bridgedName": "overrideValueAction",
+    "valueFromSymbolMasterReference:": {
+      "name": "valueFromSymbolMasterReference:",
+      "bridgedName": "valueFromSymbolMasterReference",
       "args": [
         {
           "type": "id"
         }
       ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -135,22 +135,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "viewDidAppear": {
-      "name": "viewDidAppear",
-      "bridgedName": "viewDidAppear",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "currentlySelectedItemInMenu:": {
-      "name": "currentlySelectedItemInMenu:",
-      "bridgedName": "currentlySelectedItemInMenu",
+    "overrideValueAction:": {
+      "name": "overrideValueAction:",
+      "bridgedName": "overrideValueAction",
       "args": [
         {
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nameOfCurrentNestedSymbol": {
+      "name": "nameOfCurrentNestedSymbol",
+      "bridgedName": "nameOfCurrentNestedSymbol",
+      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -171,15 +171,6 @@
       "type": "MSForeignSymbolMenuBuilder",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "currentMasterID": {
-      "name": "currentMasterID",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "copy",
         "nonatomic"
       ]
     },
@@ -210,10 +201,55 @@
         "nonatomic"
       ]
     },
+    "firstInstance": {
+      "name": "firstInstance",
+      "pointer": true,
+      "type": "MSSymbolInstance",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "originalMaster": {
+      "name": "originalMaster",
+      "pointer": true,
+      "type": "MSSymbolMaster",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "originalMasterID": {
+      "name": "originalMasterID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentMasterID": {
+      "name": "currentMasterID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "document": {
       "name": "document",
       "pointer": true,
       "type": "MSDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "MSDocumentData",
       "attributes": [
         "readonly",
         "nonatomic"

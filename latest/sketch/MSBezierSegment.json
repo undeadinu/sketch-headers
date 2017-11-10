@@ -124,14 +124,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "derivative": {
-      "name": "derivative",
-      "bridgedName": "derivative",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "reversedSegment": {
       "name": "reversedSegment",
       "bridgedName": "reversedSegment",
@@ -378,6 +370,30 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "arcLengthWithSegments:": {
+      "name": "arcLengthWithSegments:",
+      "bridgedName": "arcLengthWithSegments",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "segmentMirroredAtOffset:": {
+      "name": "segmentMirroredAtOffset:",
+      "bridgedName": "segmentMirroredAtOffset",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "segmentWithEndPoint2:": {
       "name": "segmentWithEndPoint2:",
       "bridgedName": "segmentWithEndPoint2",
@@ -473,6 +489,24 @@
     }
   },
   "properties": {
+    "derivative": {
+      "name": "derivative",
+      "pointer": true,
+      "type": "MSBezierSegment",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "inflectionOffsets": {
+      "name": "inflectionOffsets",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "yAxisRoots": {
       "name": "yAxisRoots",
       "pointer": true,
@@ -536,15 +570,6 @@
         "nonatomic"
       ]
     },
-    "inflectionOffsets": {
-      "name": "inflectionOffsets",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "curviness": {
       "name": "curviness",
       "pointer": false,
@@ -576,6 +601,15 @@
       "name": "looksLikeALine",
       "pointer": false,
       "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "arcLength": {
+      "name": "arcLength",
+      "pointer": false,
+      "type": "double",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -6,6 +6,7 @@
   "classes": [
     "BCCache",
     "MSExportRequest",
+    "MSRenderingDriver",
     "NSColorSpace",
     "NSString"
   ],
@@ -16,6 +17,24 @@
     "MSRenderingContextCacheProvider"
   ],
   "methods": {
+    "exporterForRequest:colorSpace:driver:": {
+      "name": "exporterForRequest:colorSpace:driver:",
+      "bridgedName": "exporterForRequest_colorSpace_driver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "exporterForRequest:colorSpace:": {
       "name": "exporterForRequest:colorSpace:",
       "bridgedName": "exporterForRequest_colorSpace",
@@ -172,6 +191,24 @@
       "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithRequest:colorSpace:driver:": {
+      "name": "initWithRequest:colorSpace:driver:",
+      "bridgedName": "initWithRequest_colorSpace_driver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -204,6 +241,15 @@
       "name": "colorSpace",
       "pointer": true,
       "type": "NSColorSpace",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
       "attributes": [
         "retain",
         "nonatomic"

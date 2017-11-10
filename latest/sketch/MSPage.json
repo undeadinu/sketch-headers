@@ -5,8 +5,8 @@
   ],
   "classes": [
     "MSArtboardGroup",
-    "MSLayer<MSRootLayer>",
     "MSLayerArray",
+    "MSLayerGroup<MSRootLayer>",
     "MSLayoutGrid",
     "MSRulerData",
     "MSSimpleGrid",
@@ -654,7 +654,7 @@
     "currentRoot": {
       "name": "currentRoot",
       "pointer": true,
-      "type": "MSLayer<MSRootLayer>",
+      "type": "MSLayerGroup<MSRootLayer>",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -745,6 +745,15 @@
       "type": "MSLayoutGrid",
       "attributes": [
         "copy",
+        "nonatomic"
+      ]
+    },
+    "rect": {
+      "name": "rect",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

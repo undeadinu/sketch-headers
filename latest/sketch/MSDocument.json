@@ -151,6 +151,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "symbolReferenceForRecipe:": {
+      "name": "symbolReferenceForRecipe:",
+      "bridgedName": "symbolReferenceForRecipe",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "localSymbolForSymbol:inLibrary:": {
       "name": "localSymbolForSymbol:inLibrary:",
       "bridgedName": "localSymbolForSymbol_inLibrary",
@@ -634,18 +646,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "debugStressTestRendering:": {
-      "name": "debugStressTestRendering:",
-      "bridgedName": "debugStressTestRendering",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "layerPositionPossiblyChanged": {
       "name": "layerPositionPossiblyChanged",
       "bridgedName": "layerPositionPossiblyChanged",
@@ -793,12 +793,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "toggleHandlerKey:": {
-      "name": "toggleHandlerKey:",
-      "bridgedName": "toggleHandlerKey",
+    "toggleHandlerClass:": {
+      "name": "toggleHandlerClass:",
+      "bridgedName": "toggleHandlerClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
@@ -821,9 +821,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshOverlayOfViews": {
-      "name": "refreshOverlayOfViews",
-      "bridgedName": "refreshOverlayOfViews",
+    "refreshOverlay": {
+      "name": "refreshOverlay",
+      "bridgedName": "refreshOverlay",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -837,14 +837,6 @@
           "type": "struct CGRect"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshAfterArtboardDeletion": {
-      "name": "refreshAfterArtboardDeletion",
-      "bridgedName": "refreshAfterArtboardDeletion",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1322,18 +1314,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "saveDocumentAs:": {
-      "name": "saveDocumentAs:",
-      "bridgedName": "saveDocumentAs",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "duplicateAndReturnError:": {
       "name": "duplicateAndReturnError:",
       "bridgedName": "duplicateAndReturnError",
@@ -1526,9 +1506,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "currentView": {
-      "name": "currentView",
-      "bridgedName": "currentView",
+    "contentDrawView": {
+      "name": "contentDrawView",
+      "bridgedName": "contentDrawView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -1866,6 +1846,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "warnAboutOldVersion": {
+      "name": "warnAboutOldVersion",
+      "bridgedName": "warnAboutOldVersion",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "askToOpenDocumentRepairingMetadata": {
       "name": "askToOpenDocumentRepairingMetadata",
       "bridgedName": "askToOpenDocumentRepairingMetadata",
@@ -2154,9 +2142,42 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForDocument:": {
-      "name": "generatePreviewForDocument:",
-      "bridgedName": "generatePreviewForDocument",
+    "findLibraryPreviewArtboardForDocument:outPage:": {
+      "name": "findLibraryPreviewArtboardForDocument:outPage:",
+      "bridgedName": "findLibraryPreviewArtboardForDocument_outPage",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewImageForDocument:page:rect:": {
+      "name": "previewImageForDocument:page:rect:",
+      "bridgedName": "previewImageForDocument_page_rect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generatePreviewsForDocument:": {
+      "name": "generatePreviewsForDocument:",
+      "bridgedName": "generatePreviewsForDocument",
       "args": [
         {
           "type": "id"
@@ -2337,6 +2358,15 @@
     },
     "colorSpaceMismatchWarning": {
       "name": "colorSpaceMismatchWarning",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "oldDocumentVersionWarning": {
+      "name": "oldDocumentVersionWarning",
       "pointer": false,
       "type": "id",
       "attributes": [
@@ -2540,6 +2570,15 @@
       "name": "immutableDocumentData",
       "pointer": true,
       "type": "MSImmutableDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canvasColorSpace": {
+      "name": "canvasColorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -1,7 +1,6 @@
 {
   "imports": [
     "MSLayerSection.h",
-    "BCPopoverDelegate.h",
     "MSColorInspectorDelegate.h",
     "MSColorPreviewButtonDelegate.h",
     "NSComboBoxDataSource.h",
@@ -25,7 +24,6 @@
   "extends": "MSLayerSection",
   "interfaces": [
     "NSMenuDelegate",
-    "BCPopoverDelegate",
     "MSColorInspectorDelegate",
     "NSComboBoxDataSource",
     "MSColorPreviewButtonDelegate"
@@ -47,9 +45,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "colorPreviewButtonColorSpace:": {
-      "name": "colorPreviewButtonColorSpace:",
-      "bridgedName": "colorPreviewButtonColorSpace",
+    "colorPreviewButtonPreviewColorSpace:": {
+      "name": "colorPreviewButtonPreviewColorSpace:",
+      "bridgedName": "colorPreviewButtonPreviewColorSpace",
       "args": [
         {
           "type": "id"
@@ -214,9 +212,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "popoverWillReturnUndoManager:": {
-      "name": "popoverWillReturnUndoManager:",
-      "bridgedName": "popoverWillReturnUndoManager",
+    "colorInspectorUndoManager:": {
+      "name": "colorInspectorUndoManager:",
+      "bridgedName": "colorInspectorUndoManager",
       "args": [
         {
           "type": "id"
@@ -346,9 +344,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "currentView": {
-      "name": "currentView",
-      "bridgedName": "currentView",
+    "contentDrawView": {
+      "name": "contentDrawView",
+      "bridgedName": "contentDrawView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -452,6 +450,14 @@
     "documentColorSpace": {
       "name": "documentColorSpace",
       "bridgedName": "documentColorSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canvasColorSpace": {
+      "name": "canvasColorSpace",
+      "bridgedName": "canvasColorSpace",
       "args": [],
       "returns": "id",
       "kind": "instance",

@@ -3,8 +3,10 @@
     "NSObject.h"
   ],
   "classes": [
+    "MSDocument",
     "MSEventHandler",
-    "MSNormalEventHandler"
+    "MSNormalEventHandler",
+    "NSUndoManager"
   ],
   "protocol": false,
   "className": "MSEventHandlerManager",
@@ -94,36 +96,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "switchToEventHandlerKey:": {
-      "name": "switchToEventHandlerKey:",
-      "bridgedName": "switchToEventHandlerKey",
+    "switchToEventHandlerClass:": {
+      "name": "switchToEventHandlerClass:",
+      "bridgedName": "switchToEventHandlerClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "toggleHandlerKey:": {
-      "name": "toggleHandlerKey:",
-      "bridgedName": "toggleHandlerKey",
+    "toggleHandlerClass:": {
+      "name": "toggleHandlerClass:",
+      "bridgedName": "toggleHandlerClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "handlerForKey:": {
-      "name": "handlerForKey:",
-      "bridgedName": "handlerForKey",
+    "handlerForClass:": {
+      "name": "handlerForClass:",
+      "bridgedName": "handlerForClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
@@ -144,6 +146,15 @@
     }
   },
   "properties": {
+    "undoManager": {
+      "name": "undoManager",
+      "pointer": true,
+      "type": "NSUndoManager",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "lastEventType": {
       "name": "lastEventType",
       "pointer": false,
@@ -182,6 +193,14 @@
       "name": "delegate",
       "pointer": false,
       "type": "__weak id <MSEventHandlerManagerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
       "attributes": [
         "nonatomic"
       ]

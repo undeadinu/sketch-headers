@@ -3,9 +3,12 @@
     "CHSheetController.h"
   ],
   "classes": [
+    "MSDocument",
     "NSButton",
+    "NSLayoutConstraint",
     "NSPopUpButton",
-    "NSTextField"
+    "NSTextField",
+    "NSView"
   ],
   "protocol": false,
   "className": "MSEditColorSpaceSheetController",
@@ -47,6 +50,14 @@
     "disableUI": {
       "name": "disableUI",
       "bridgedName": "disableUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showOptionsViewIfAppropriate": {
+      "name": "showOptionsViewIfAppropriate",
+      "bridgedName": "showOptionsViewIfAppropriate",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -99,33 +110,35 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "selectedColorSpace": {
-      "name": "selectedColorSpace",
-      "bridgedName": "selectedColorSpace",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "currentColorSpace": {
-      "name": "currentColorSpace",
-      "bridgedName": "currentColorSpace",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "currentDocument": {
-      "name": "currentDocument",
-      "bridgedName": "currentDocument",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
+    "optionsViewHeight": {
+      "name": "optionsViewHeight",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "optionsViewBottomMargin": {
+      "name": "optionsViewBottomMargin",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "convertDescriptionTextField": {
+      "name": "convertDescriptionTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "convertButton": {
       "name": "convertButton",
       "pointer": true,
@@ -158,11 +171,64 @@
         "nonatomic"
       ]
     },
+    "assignDescriptionTextField": {
+      "name": "assignDescriptionTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "assignButton": {
       "name": "assignButton",
       "pointer": true,
       "type": "__weak NSButton",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "optionsViewBottomMarginConstraint": {
+      "name": "optionsViewBottomMarginConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "optionsView": {
+      "name": "optionsView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "selectedColorSpace": {
+      "name": "selectedColorSpace",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentColorSpace": {
+      "name": "currentColorSpace",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentDocument": {
+      "name": "currentDocument",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

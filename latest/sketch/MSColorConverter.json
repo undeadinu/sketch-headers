@@ -3,61 +3,61 @@
     "NSObject.h"
   ],
   "classes": [
-    "NSColor"
+    "MSColor",
+    "MSImmutableColor"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "MSColorConverter",
-  "extends": "NSObject",
   "interfaces": [],
   "methods": {
-    "converterWithColor:colorspace:": {
-      "name": "converterWithColor:colorspace:",
-      "bridgedName": "converterWithColor_colorspace",
+    "shouldConvertImmutableColor:": {
+      "name": "shouldConvertImmutableColor:",
+      "bridgedName": "shouldConvertImmutableColor",
       "args": [
         {
-          "type": "id"
-        },
-        {
-          "type": "id"
+          "type": "MSImmutableColor *"
         }
       ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
-      "args": [],
-      "returns": "void",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithColor:colorspace:": {
-      "name": "initWithColor:colorspace:",
-      "bridgedName": "initWithColor_colorspace",
+    "shouldConvertColor:": {
+      "name": "shouldConvertColor:",
+      "bridgedName": "shouldConvertColor",
       "args": [
         {
-          "type": "id"
-        },
-        {
-          "type": "id"
+          "type": "MSColor *"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertImmutableColor:": {
+      "name": "convertImmutableColor:",
+      "bridgedName": "convertImmutableColor",
+      "args": [
+        {
+          "type": "MSImmutableColor *"
+        }
+      ],
+      "returns": "MSImmutableColor *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertColor:": {
+      "name": "convertColor:",
+      "bridgedName": "convertColor",
+      "args": [
+        {
+          "type": "MSColor *"
+        }
+      ],
+      "returns": "MSColor *",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
-  "properties": {
-    "color": {
-      "name": "color",
-      "pointer": true,
-      "type": "NSColor",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    }
-  }
+  "properties": {}
 }

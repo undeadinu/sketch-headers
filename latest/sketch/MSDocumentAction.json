@@ -6,6 +6,7 @@
   ],
   "classes": [
     "MSDocument",
+    "NSEvent",
     "NSString",
     "NSTouchBarItem"
   ],
@@ -45,9 +46,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshOverlayOfViews": {
-      "name": "refreshOverlayOfViews",
-      "bridgedName": "refreshOverlayOfViews",
+    "refreshOverlay": {
+      "name": "refreshOverlay",
+      "bridgedName": "refreshOverlay",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -77,24 +78,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setCurrentHandlerKey:": {
-      "name": "setCurrentHandlerKey:",
-      "bridgedName": "setCurrentHandlerKey",
+    "setCurrentHandlerClass:": {
+      "name": "setCurrentHandlerClass:",
+      "bridgedName": "setCurrentHandlerClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "toggleHandlerKey:": {
-      "name": "toggleHandlerKey:",
-      "bridgedName": "toggleHandlerKey",
+    "toggleHandlerClass:": {
+      "name": "toggleHandlerClass:",
+      "bridgedName": "toggleHandlerClass",
       "args": [
         {
-          "type": "id"
+          "type": "Class"
         }
       ],
       "returns": "id",
@@ -114,14 +115,6 @@
       "bridgedName": "isInNormalHandler",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "currentHandlerKey": {
-      "name": "currentHandlerKey",
-      "bridgedName": "currentHandlerKey",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -266,20 +259,20 @@
     }
   },
   "properties": {
+    "previousEvent": {
+      "name": "previousEvent",
+      "pointer": true,
+      "type": "__weak NSEvent",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "cachedTouchedBarItem": {
       "name": "cachedTouchedBarItem",
       "pointer": true,
       "type": "NSTouchBarItem",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "delegate": {
-      "name": "delegate",
-      "pointer": false,
-      "type": "__weak id <MSBasicDelegate>",
-      "attributes": [
         "nonatomic"
       ]
     },

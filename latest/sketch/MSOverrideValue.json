@@ -1,58 +1,29 @@
 {
   "imports": [
-    "NSObject.h"
+    "_MSOverrideValue.h"
   ],
-  "classes": [
-    "NSString"
-  ],
+  "classes": [],
   "protocol": false,
   "className": "MSOverrideValue",
-  "extends": "NSObject",
+  "extends": "_MSOverrideValue",
   "interfaces": [],
   "methods": {
-    "overrideValuesFromDictionary:": {
-      "name": "overrideValuesFromDictionary:",
-      "bridgedName": "overrideValuesFromDictionary",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "dictionaryFromOverrideValues:": {
-      "name": "dictionaryFromOverrideValues:",
-      "bridgedName": "dictionaryFromOverrideValues",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "overrideValuesFromDictionary:withPrefix:": {
-      "name": "overrideValuesFromDictionary:withPrefix:",
-      "bridgedName": "overrideValuesFromDictionary_withPrefix",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPredecessor:": {
+      "name": "addPredecessor:",
+      "bridgedName": "addPredecessor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -82,21 +53,20 @@
     }
   },
   "properties": {
-    "value": {
-      "name": "value",
-      "pointer": false,
-      "type": "id",
+    "predecessor": {
+      "name": "predecessor",
+      "pointer": true,
+      "type": "MSOverrideValue",
       "attributes": [
-        "readonly",
+        "retain",
         "nonatomic"
       ]
     },
-    "overrideName": {
-      "name": "overrideName",
-      "pointer": true,
-      "type": "NSString",
+    "isInherited": {
+      "name": "isInherited",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
-        "readonly",
         "nonatomic"
       ]
     }

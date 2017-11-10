@@ -66,43 +66,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "segmentsByJoiningCurveSegment1:withLineSegment2:": {
-      "name": "segmentsByJoiningCurveSegment1:withLineSegment2:",
-      "bridgedName": "segmentsByJoiningCurveSegment1_withLineSegment2",
+    "segmentsByDiscardingTinySegments:closed:": {
+      "name": "segmentsByDiscardingTinySegments:closed:",
+      "bridgedName": "segmentsByDiscardingTinySegments_closed",
       "args": [
         {
           "type": "id"
         },
         {
-          "type": "id"
+          "type": "BOOL"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "segmentsByJoiningLineSegment1:withCurveSegment2:": {
-      "name": "segmentsByJoiningLineSegment1:withCurveSegment2:",
-      "bridgedName": "segmentsByJoiningLineSegment1_withCurveSegment2",
+    "segmentsByCheckingForPointsInJoin:": {
+      "name": "segmentsByCheckingForPointsInJoin:",
+      "bridgedName": "segmentsByCheckingForPointsInJoin",
       "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "segmentsByJoiningLineSegment1:withLineSegment2:": {
-      "name": "segmentsByJoiningLineSegment1:withLineSegment2:",
-      "bridgedName": "segmentsByJoiningLineSegment1_withLineSegment2",
-      "args": [
-        {
-          "type": "id"
-        },
         {
           "type": "id"
         }
@@ -140,48 +122,6 @@
         },
         {
           "type": "double"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "closestOffsetGreaterThan:inSet:": {
-      "name": "closestOffsetGreaterThan:inSet:",
-      "bridgedName": "closestOffsetGreaterThan_inSet",
-      "args": [
-        {
-          "type": "double"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "closestOffsetLessThan:inSet:": {
-      "name": "closestOffsetLessThan:inSet:",
-      "bridgedName": "closestOffsetLessThan_inSet",
-      "args": [
-        {
-          "type": "double"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "firstOffsetInBezierIntervalFromSet:": {
-      "name": "firstOffsetInBezierIntervalFromSet:",
-      "bridgedName": "firstOffsetInBezierIntervalFromSet",
-      "args": [
-        {
-          "type": "id"
         }
       ],
       "returns": "id",
@@ -256,6 +196,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "doSegmentsFormARectangle:closed:": {
+      "name": "doSegmentsFormARectangle:closed:",
+      "bridgedName": "doSegmentsFormARectangle_closed",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setBounds:": {
       "name": "setBounds:",
       "bridgedName": "setBounds",
@@ -285,6 +240,14 @@
     }
   },
   "properties": {
+    "cachedIsRectangular": {
+      "name": "cachedIsRectangular",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "cachedBounds": {
       "name": "cachedBounds",
       "pointer": false,
@@ -337,6 +300,14 @@
       "attributes": [
         "nonatomic",
         "getter=isClockwise"
+      ]
+    },
+    "isRectangular": {
+      "name": "isRectangular",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
       ]
     },
     "bounds": {

@@ -10,7 +10,8 @@
     "NSColor",
     "NSColorSpace",
     "NSGraphicsContext",
-    "NSMutableArray"
+    "NSMutableArray",
+    "NSString"
   ],
   "protocol": false,
   "className": "MSRenderingContext",
@@ -22,6 +23,14 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldLog": {
+      "name": "shouldLog",
+      "bridgedName": "shouldLog",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -164,9 +173,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerIntersectsDirtyRect:": {
-      "name": "layerIntersectsDirtyRect:",
-      "bridgedName": "layerIntersectsDirtyRect",
+    "drawingAreaIntersectsLayer:": {
+      "name": "drawingAreaIntersectsLayer:",
+      "bridgedName": "drawingAreaIntersectsLayer",
       "args": [
         {
           "type": "id"
@@ -176,9 +185,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawLayer:withMaskingShapeGroup:ignoreDirtyRect:": {
-      "name": "shouldDrawLayer:withMaskingShapeGroup:ignoreDirtyRect:",
-      "bridgedName": "shouldDrawLayer_withMaskingShapeGroup_ignoreDirtyRect",
+    "shouldDrawLayer:withMaskingShapeGroup:ignoreDrawingArea:": {
+      "name": "shouldDrawLayer:withMaskingShapeGroup:ignoreDrawingArea:",
+      "bridgedName": "shouldDrawLayer_withMaskingShapeGroup_ignoreDrawingArea",
       "args": [
         {
           "type": "id"
@@ -191,6 +200,18 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipToRect:": {
+      "name": "clipToRect:",
+      "bridgedName": "clipToRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -461,29 +482,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "transparencyLayerInRect:mayOptimise:inBlock:": {
-      "name": "transparencyLayerInRect:mayOptimise:inBlock:",
-      "bridgedName": "transparencyLayerInRect_mayOptimise_inBlock",
-      "args": [
-        {
-          "type": "struct CGRect"
-        },
-        {
-          "type": "BOOL"
-        },
-        {
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "cancel": {
       "name": "cancel",
       "bridgedName": "cancel",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "depthOfLayer:": {
+      "name": "depthOfLayer:",
+      "bridgedName": "depthOfLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layer:isSiblingOfLayer:": {
+      "name": "layer:isSiblingOfLayer:",
+      "bridgedName": "layer_isSiblingOfLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -664,9 +694,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "renderLayer:ignoreCacheAndDirtyRect:": {
-      "name": "renderLayer:ignoreCacheAndDirtyRect:",
-      "bridgedName": "renderLayer_ignoreCacheAndDirtyRect",
+    "renderLayer:ignoreCacheAndDrawingArea:": {
+      "name": "renderLayer:ignoreCacheAndDrawingArea:",
+      "bridgedName": "renderLayer_ignoreCacheAndDrawingArea",
       "args": [
         {
           "type": "id"
@@ -757,10 +787,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithDriver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:": {
-      "name": "initWithDriver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:",
-      "bridgedName": "initWithDriver_cgContext_contextIsVectorBacked_colorSpace_atZoomLevel_document",
+    "initWithName:driver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:": {
+      "name": "initWithName:driver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:",
+      "bridgedName": "initWithName_driver_cgContext_contextIsVectorBacked_colorSpace_atZoomLevel_document",
       "args": [
+        {
+          "type": "id"
+        },
         {
           "type": "id"
         },
@@ -778,6 +811,30 @@
         },
         {
           "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:driver:context:colorSpace:zoom:": {
+      "name": "initWithName:driver:context:colorSpace:zoom:",
+      "bridgedName": "initWithName_driver_context_colorSpace_zoom",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGContext *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
         }
       ],
       "returns": "id",
@@ -867,6 +924,15 @@
       "pointer": true,
       "type": "struct CGContext",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -982,14 +1048,6 @@
         "nonatomic"
       ]
     },
-    "dirtyRect": {
-      "name": "dirtyRect",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "contextIsVectorBacked": {
       "name": "contextIsVectorBacked",
       "pointer": false,
@@ -1013,14 +1071,6 @@
       "type": "NSColorSpace",
       "attributes": [
         "readonly",
-        "nonatomic"
-      ]
-    },
-    "scrollOrigin": {
-      "name": "scrollOrigin",
-      "pointer": false,
-      "type": "struct CGPoint",
-      "attributes": [
         "nonatomic"
       ]
     },
@@ -1072,6 +1122,14 @@
         "nonatomic"
       ]
     },
+    "isPrinting": {
+      "name": "isPrinting",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "isExporting": {
       "name": "isExporting",
       "pointer": false,
@@ -1096,10 +1154,10 @@
         "nonatomic"
       ]
     },
-    "isDrawingReflection": {
-      "name": "isDrawingReflection",
+    "drawingArea": {
+      "name": "drawingArea",
       "pointer": false,
-      "type": "BOOL",
+      "type": "struct CGRect",
       "attributes": [
         "nonatomic"
       ]

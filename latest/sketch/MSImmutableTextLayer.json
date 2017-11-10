@@ -6,7 +6,7 @@
     "NSLayoutManagerDelegate.h"
   ],
   "classes": [
-    "NSArray",
+    "MSTextLayout",
     "NSAttributedString",
     "NSObject",
     "NSString"
@@ -29,24 +29,6 @@
         }
       ],
       "returns": "unsigned long long",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "calculateBaselineOffsets:lineFragmentBounds:firstLineCapOffset:": {
-      "name": "calculateBaselineOffsets:lineFragmentBounds:firstLineCapOffset:",
-      "bridgedName": "calculateBaselineOffsets_lineFragmentBounds_firstLineCapOffset",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "struct CGRect *"
-        },
-        {
-          "type": "double *"
-        }
-      ],
-      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -216,14 +198,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "capHeightBounds": {
-      "name": "capHeightBounds",
-      "bridgedName": "capHeightBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "textContainerSize": {
       "name": "textContainerSize",
       "bridgedName": "textContainerSize",
@@ -276,16 +250,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "possibleOverridesInDocument:actualOverrides:skipping:": {
-      "name": "possibleOverridesInDocument:actualOverrides:skipping:",
-      "bridgedName": "possibleOverridesInDocument_actualOverrides_skipping",
+    "overrideViewControllerClassForOverridePoint:": {
+      "name": "overrideViewControllerClassForOverridePoint:",
+      "bridgedName": "overrideViewControllerClassForOverridePoint",
       "args": [
         {
           "type": "id"
-        },
-        {
-          "type": "id"
-        },
+        }
+      ],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overridePointsWithParent:": {
+      "name": "overridePointsWithParent:",
+      "bridgedName": "overridePointsWithParent",
+      "args": [
         {
           "type": "id"
         }
@@ -303,18 +283,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overridePointsWithParent:": {
-      "name": "overridePointsWithParent:",
-      "bridgedName": "overridePointsWithParent",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -580,16 +548,6 @@
     }
   },
   "properties": {
-    "baselineOffsetsValue": {
-      "name": "baselineOffsetsValue",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "readonly",
-        "copy",
-        "nonatomic"
-      ]
-    },
     "isEditingText": {
       "name": "isEditingText",
       "pointer": false,
@@ -599,40 +557,12 @@
         "nonatomic"
       ]
     },
-    "firstBaselineOffset": {
-      "name": "firstBaselineOffset",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "firstLineCapOffset": {
-      "name": "firstLineCapOffset",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "lineFragmentBounds": {
-      "name": "lineFragmentBounds",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "baselineOffsets": {
-      "name": "baselineOffsets",
+    "textLayout": {
+      "name": "textLayout",
       "pointer": true,
-      "type": "NSArray",
+      "type": "MSTextLayout",
       "attributes": [
         "readonly",
-        "copy",
         "nonatomic"
       ]
     },
@@ -678,6 +608,15 @@
       "name": "shouldUseBezierRepresentationForRendering",
       "pointer": false,
       "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "capHeightBounds": {
+      "name": "capHeightBounds",
+      "pointer": false,
+      "type": "struct CGRect",
       "attributes": [
         "readonly",
         "nonatomic"

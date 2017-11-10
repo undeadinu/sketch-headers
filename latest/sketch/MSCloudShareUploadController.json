@@ -1,17 +1,22 @@
 {
   "imports": [
-    "NSObject.h"
+    "NSObject.h",
+    "SCKShareUploadDataSource.h"
   ],
   "classes": [
-    "AFAmazonS3Manager",
-    "NSError",
+    "MSWebExporter",
+    "NSProgress",
     "NSString",
-    "NSURL"
+    "NSURL",
+    "SCKShare",
+    "SCKShareUploadOperation"
   ],
   "protocol": false,
   "className": "MSCloudShareUploadController",
   "extends": "NSObject",
-  "interfaces": [],
+  "interfaces": [
+    "SCKShareUploadDataSource"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -21,101 +26,59 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "documentFileURLForShareUploadOperation:": {
+      "name": "documentFileURLForShareUploadOperation:",
+      "bridgedName": "documentFileURLForShareUploadOperation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shareUploadOperation:fileURLForItemWithHash:": {
+      "name": "shareUploadOperation:fileURLForItemWithHash:",
+      "bridgedName": "shareUploadOperation_fileURLForItemWithHash",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "cancel": {
       "name": "cancel",
       "bridgedName": "cancel",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "queueFileToUpload:index:stepSize:progressTracker:": {
-      "name": "queueFileToUpload:index:stepSize:progressTracker:",
-      "bridgedName": "queueFileToUpload_index_stepSize_progressTracker",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "unsigned long long"
-        },
-        {
-          "type": "double"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "queueFilesToUploadForShare:": {
-      "name": "queueFilesToUploadForShare:",
-      "bridgedName": "queueFilesToUploadForShare",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "reportProgress:stepSize:": {
-      "name": "reportProgress:stepSize:",
-      "bridgedName": "reportProgress_stepSize",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "createS3ManagerWithCredentials:bucket:region:": {
-      "name": "createS3ManagerWithCredentials:bucket:region:",
-      "bridgedName": "createS3ManagerWithCredentials_bucket_region",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "uploadFilesForShare:": {
-      "name": "uploadFilesForShare:",
-      "bridgedName": "uploadFilesForShare",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shouldAttemptReuploadAfterError:": {
-      "name": "shouldAttemptReuploadAfterError:",
-      "bridgedName": "shouldAttemptReuploadAfterError",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -143,6 +106,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithDocument:": {
       "name": "initWithDocument:",
       "bridgedName": "initWithDocument",
@@ -157,11 +128,21 @@
     }
   },
   "properties": {
-    "uploadFailed": {
-      "name": "uploadFailed",
-      "pointer": false,
-      "type": "BOOL",
+    "operation": {
+      "name": "operation",
+      "pointer": true,
+      "type": "SCKShareUploadOperation",
       "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "webExporter": {
+      "name": "webExporter",
+      "pointer": true,
+      "type": "MSWebExporter",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -171,24 +152,6 @@
       "type": "NSString",
       "attributes": [
         "copy",
-        "nonatomic"
-      ]
-    },
-    "uploadError": {
-      "name": "uploadError",
-      "pointer": true,
-      "type": "NSError",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "s3Manager": {
-      "name": "s3Manager",
-      "pointer": true,
-      "type": "AFAmazonS3Manager",
-      "attributes": [
-        "retain",
         "nonatomic"
       ]
     },
@@ -209,11 +172,21 @@
         "nonatomic"
       ]
     },
-    "includeDocument": {
-      "name": "includeDocument",
+    "cancelled": {
+      "name": "cancelled",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "existingShare": {
+      "name": "existingShare",
+      "pointer": true,
+      "type": "SCKShare",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -223,6 +196,49 @@
       "type": "__weak id <MSCloudShareUploadControllerDelegate>",
       "attributes": [
         "nonatomic"
+      ]
+    },
+    "progress": {
+      "name": "progress",
+      "pointer": true,
+      "type": "NSProgress",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

@@ -4,6 +4,7 @@
     "MSAssetLibraryDelegate.h"
   ],
   "classes": [
+    "MSAssetLibraryUpdater",
     "NSArray",
     "NSHashTable",
     "NSMutableArray",
@@ -20,6 +21,100 @@
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadVersionZeroLibrariesWithDispatchGroup:": {
+      "name": "loadVersionZeroLibrariesWithDispatchGroup:",
+      "bridgedName": "loadVersionZeroLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadVersionZeroLibrariesFromUnarchiver:forKey:dispatchGroup:": {
+      "name": "loadVersionZeroLibrariesFromUnarchiver:forKey:dispatchGroup:",
+      "bridgedName": "loadVersionZeroLibrariesFromUnarchiver_forKey_dispatchGroup",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldAttemptToLoadVersionZeroLibraries": {
+      "name": "shouldAttemptToLoadVersionZeroLibraries",
+      "bridgedName": "shouldAttemptToLoadVersionZeroLibraries",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "librariesWithUpdates": {
+      "name": "librariesWithUpdates",
+      "bridgedName": "librariesWithUpdates",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateAndLoadAssetLibrary:completionHandler:": {
+      "name": "updateAndLoadAssetLibrary:completionHandler:",
+      "bridgedName": "updateAndLoadAssetLibrary_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startDownloadingAssetLibrary:progressHandler:completionHandler:": {
+      "name": "startDownloadingAssetLibrary:progressHandler:completionHandler:",
+      "bridgedName": "startDownloadingAssetLibrary_progressHandler_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadAssetLibraryAppcastsWithHandler:completionHandler:": {
+      "name": "downloadAssetLibraryAppcastsWithHandler:completionHandler:",
+      "bridgedName": "downloadAssetLibraryAppcastsWithHandler_completionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -108,21 +203,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateOverrideIDsForForeignSymbol:inLibrary:": {
-      "name": "updateOverrideIDsForForeignSymbol:inLibrary:",
-      "bridgedName": "updateOverrideIDsForForeignSymbol_inLibrary",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "symbolIDsMappingFrom:toLibrary:": {
       "name": "symbolIDsMappingFrom:toLibrary:",
       "bridgedName": "symbolIDsMappingFrom_toLibrary",
@@ -156,25 +236,81 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "loadLibraries": {
-      "name": "loadLibraries",
-      "bridgedName": "loadLibraries",
+    "shouldLoadPreviouslySavedLibraries": {
+      "name": "shouldLoadPreviouslySavedLibraries",
+      "bridgedName": "shouldLoadPreviouslySavedLibraries",
       "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadInternalLibraryRepresentationWithCompletionHandler:": {
+      "name": "loadInternalLibraryRepresentationWithCompletionHandler:",
+      "bridgedName": "loadInternalLibraryRepresentationWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setupInternalLibraries": {
-      "name": "setupInternalLibraries",
-      "bridgedName": "setupInternalLibraries",
-      "args": [],
+    "loadLibrariesWithDispatchGroup:": {
+      "name": "loadLibrariesWithDispatchGroup:",
+      "bridgedName": "loadLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "loadLibrariesFromUnarchiver:forKey:": {
-      "name": "loadLibrariesFromUnarchiver:forKey:",
-      "bridgedName": "loadLibrariesFromUnarchiver_forKey",
+    "setupInitialRemoteLibrariesWithDispatchGroup:": {
+      "name": "setupInitialRemoteLibrariesWithDispatchGroup:",
+      "bridgedName": "setupInitialRemoteLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupInternalLibrariesWithDispatchGroup:": {
+      "name": "setupInternalLibrariesWithDispatchGroup:",
+      "bridgedName": "setupInternalLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initialInternalLibraries": {
+      "name": "initialInternalLibraries",
+      "bridgedName": "initialInternalLibraries",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initialRemoteLibraryDefinitions": {
+      "name": "initialRemoteLibraryDefinitions",
+      "bridgedName": "initialRemoteLibraryDefinitions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadLibrariesForKey:dispatchGroup:": {
+      "name": "loadLibrariesForKey:dispatchGroup:",
+      "bridgedName": "loadLibrariesForKey_dispatchGroup",
       "args": [
         {
           "type": "id"
@@ -267,6 +403,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "saveLibraries:withLibrariesKey:": {
+      "name": "saveLibraries:withLibrariesKey:",
+      "bridgedName": "saveLibraries_withLibrariesKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "removeAssetLibrary:": {
       "name": "removeAssetLibrary:",
       "bridgedName": "removeAssetLibrary",
@@ -301,10 +452,28 @@
     }
   },
   "properties": {
+    "assetLibraryUpdater": {
+      "name": "assetLibraryUpdater",
+      "pointer": true,
+      "type": "MSAssetLibraryUpdater",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "delegates": {
       "name": "delegates",
       "pointer": true,
       "type": "NSHashTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "remoteLibraries": {
+      "name": "remoteLibraries",
+      "pointer": true,
+      "type": "NSArray",
       "attributes": [
         "retain",
         "nonatomic"

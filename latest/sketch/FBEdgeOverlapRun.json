@@ -64,9 +64,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addStartAndStopCrossings": {
-      "name": "addStartAndStopCrossings",
-      "bridgedName": "addStartAndStopCrossings",
+    "addStopCrossing": {
+      "name": "addStopCrossing",
+      "bridgedName": "addStopCrossing",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addStartCrossing": {
+      "name": "addStartCrossing",
+      "bridgedName": "addStartCrossing",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -75,6 +83,14 @@
     "addMiddleCrossing": {
       "name": "addMiddleCrossing",
       "bridgedName": "addMiddleCrossing",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeCrossings": {
+      "name": "removeCrossings",
+      "bridgedName": "removeCrossings",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -91,6 +107,14 @@
     "isCrossing": {
       "name": "isCrossing",
       "bridgedName": "isCrossing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isCrossingWithOutsetLines": {
+      "name": "isCrossingWithOutsetLines",
+      "bridgedName": "isCrossingWithOutsetLines",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -151,6 +175,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "calculateContour2StartStopInsides": {
+      "name": "calculateContour2StartStopInsides",
+      "bridgedName": "calculateContour2StartStopInsides",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculateContour1StartStopInsides": {
+      "name": "calculateContour1StartStopInsides",
+      "bridgedName": "calculateContour1StartStopInsides",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contour2TestPoints": {
+      "name": "contour2TestPoints",
+      "bridgedName": "contour2TestPoints",
+      "args": [],
+      "returns": "struct FBEdgeOverlapRunTestPoints *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contour1TestPoints": {
+      "name": "contour1TestPoints",
+      "bridgedName": "contour1TestPoints",
+      "args": [],
+      "returns": "struct FBEdgeOverlapRunTestPoints *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -183,6 +239,51 @@
       "name": "contour1",
       "pointer": true,
       "type": "FBBezierContour",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "crossingType": {
+      "name": "crossingType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "stopIsInsideContour2": {
+      "name": "stopIsInsideContour2",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "stopIsInsideContour1": {
+      "name": "stopIsInsideContour1",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "startIsInsideContour2": {
+      "name": "startIsInsideContour2",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "startIsInsideContour1": {
+      "name": "startIsInsideContour1",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

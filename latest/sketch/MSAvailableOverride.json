@@ -81,11 +81,19 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "createOverrideViewController": {
+      "name": "createOverrideViewController",
+      "bridgedName": "createOverrideViewController",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
-    "overrideValue": {
-      "name": "overrideValue",
+    "internalOverrideValue": {
+      "name": "internalOverrideValue",
       "pointer": true,
       "type": "MSOverrideValue",
       "attributes": [
@@ -124,6 +132,42 @@
       "name": "parent",
       "pointer": true,
       "type": "__weak MSAvailableOverride",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasOverride": {
+      "name": "hasOverride",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "overrideValue": {
+      "name": "overrideValue",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "defaultValue": {
+      "name": "defaultValue",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentValue": {
+      "name": "currentValue",
+      "pointer": false,
+      "type": "id",
       "attributes": [
         "readonly",
         "nonatomic"

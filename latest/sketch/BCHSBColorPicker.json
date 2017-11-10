@@ -1,6 +1,8 @@
 {
   "imports": [
-    "NSControl.h"
+    "NSControl.h",
+    "BCColorPreviewDelegate.h",
+    "BCMagnifierButtonDelegate.h"
   ],
   "classes": [
     "BCAlphaColorPicker",
@@ -10,12 +12,16 @@
     "BCSaturationBrightnessColorPicker",
     "MSColor",
     "MSColorInspectorSeparatorView",
+    "NSString",
     "NSTextField"
   ],
   "protocol": false,
   "className": "BCHSBColorPicker",
   "extends": "NSControl",
-  "interfaces": [],
+  "interfaces": [
+    "BCColorPreviewDelegate",
+    "BCMagnifierButtonDelegate"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -148,6 +154,30 @@
       "name": "flexibleColor",
       "bridgedName": "flexibleColor",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magnifierButtonDocumentColorSpace:": {
+      "name": "magnifierButtonDocumentColorSpace:",
+      "bridgedName": "magnifierButtonDocumentColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorPreviewColorSpace:": {
+      "name": "colorPreviewColorSpace:",
+      "bridgedName": "colorPreviewColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -478,6 +508,40 @@
       "attributes": [
         "copy",
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

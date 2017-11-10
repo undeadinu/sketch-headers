@@ -3,8 +3,10 @@
     "NSTableCellView.h"
   ],
   "classes": [
+    "MSAssetLibrariesPreferencePane",
     "MSAssetLibraryPreview",
     "MSAssetPreferenceItem",
+    "NSProgressIndicator",
     "NSTextField"
   ],
   "protocol": false,
@@ -12,6 +14,18 @@
   "extends": "NSTableCellView",
   "interfaces": [],
   "methods": {
+    "keyPathsForValuesAffectingValueForKey:": {
+      "name": "keyPathsForValuesAffectingValueForKey:",
+      "bridgedName": "keyPathsForValuesAffectingValueForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "initialize": {
       "name": "initialize",
       "bridgedName": "initialize",
@@ -24,6 +38,42 @@
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPrimaryTextFieldTextColor:": {
+      "name": "setPrimaryTextFieldTextColor:",
+      "bridgedName": "setPrimaryTextFieldTextColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSecondaryTextFieldTextColor:": {
+      "name": "setSecondaryTextFieldTextColor:",
+      "bridgedName": "setSecondaryTextFieldTextColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadLibrary:": {
+      "name": "downloadLibrary:",
+      "bridgedName": "downloadLibrary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -45,6 +95,22 @@
           "type": "void *"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startDownloading": {
+      "name": "startDownloading",
+      "bridgedName": "startDownloading",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupButtons": {
+      "name": "setupButtons",
+      "bridgedName": "setupButtons",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -75,10 +141,66 @@
     }
   },
   "properties": {
+    "downloadProgressHidden": {
+      "name": "downloadProgressHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "downloadButtonHidden": {
+      "name": "downloadButtonHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "quickLookButtonHidden": {
+      "name": "quickLookButtonHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "downloadProgress": {
+      "name": "downloadProgress",
+      "pointer": true,
+      "type": "__weak NSProgressIndicator",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "previewContainer": {
       "name": "previewContainer",
       "pointer": true,
       "type": "__weak MSAssetLibraryPreview",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "libraryPreferencePane": {
+      "name": "libraryPreferencePane",
+      "pointer": true,
+      "type": "__weak MSAssetLibrariesPreferencePane",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "updateAvailableSecondaryTextField": {
+      "name": "updateAvailableSecondaryTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "updateAvailablePrimaryTextField": {
+      "name": "updateAvailablePrimaryTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
       "attributes": [
         "nonatomic"
       ]
@@ -95,6 +217,14 @@
       "name": "primaryTextField",
       "pointer": true,
       "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "nonatomic"
       ]
