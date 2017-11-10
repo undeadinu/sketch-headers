@@ -1,0 +1,966 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSSelectVectorHandleGestureRecognizerDelegate.h"
+  ],
+  "classes": [
+    "MSClickGestureRecognizer",
+    "MSContentDrawView",
+    "MSDragHandleGestureRecognizer",
+    "MSDragToSelectGestureRecognizer",
+    "MSMouseTracker",
+    "MSPathController",
+    "MSPointSnapper",
+    "MSPointSnappingResult",
+    "MSSelectVectorHandleGestureRecognizer",
+    "MSShapeEditingBehavior",
+    "MSShapeEventHandler",
+    "MSVectorHandleStateDecider",
+    "NSArray",
+    "NSBezierPath",
+    "NSIndexPath",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSVectorCanvas",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSSelectVectorHandleGestureRecognizerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gestureRecognizerShouldDelaySelectionUntilMouseUp:": {
+      "name": "gestureRecognizerShouldDelaySelectionUntilMouseUp:",
+      "bridgedName": "gestureRecognizerShouldDelaySelectionUntilMouseUp",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gestureRecognizer:shouldAttemptToRecognizeAtPoint:modifierFlags:": {
+      "name": "gestureRecognizer:shouldAttemptToRecognizeAtPoint:modifierFlags:",
+      "bridgedName": "gestureRecognizer_shouldAttemptToRecognizeAtPoint_modifierFlags",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCursorIfActive": {
+      "name": "updateCursorIfActive",
+      "bridgedName": "updateCursorIfActive",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCursor": {
+      "name": "updateCursor",
+      "bridgedName": "updateCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorUpdate:": {
+      "name": "cursorUpdate:",
+      "bridgedName": "cursorUpdate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInsertionPoint:indexPath:": {
+      "name": "setInsertionPoint:indexPath:",
+      "bridgedName": "setInsertionPoint_indexPath",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clickToEndEditing:": {
+      "name": "clickToEndEditing:",
+      "bridgedName": "clickToEndEditing",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "locationForAddingPoint:modifierFlags:sourceIndexPath:": {
+      "name": "locationForAddingPoint:modifierFlags:sourceIndexPath:",
+      "bridgedName": "locationForAddingPoint_modifierFlags_sourceIndexPath",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPointAtIndexPath:location:modifierFlags:": {
+      "name": "insertPointAtIndexPath:location:modifierFlags:",
+      "bridgedName": "insertPointAtIndexPath_location_modifierFlags",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPointForMouseDown:modifierFlags:": {
+      "name": "addPointForMouseDown:modifierFlags:",
+      "bridgedName": "addPointForMouseDown_modifierFlags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectHandle:": {
+      "name": "selectHandle:",
+      "bridgedName": "selectHandle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveCurveAdjustmentHandleToPoint:didChangeCurveMode:": {
+      "name": "moveCurveAdjustmentHandleToPoint:didChangeCurveMode:",
+      "bridgedName": "moveCurveAdjustmentHandleToPoint_didChangeCurveMode",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleCurveModeOfPointAtIndexPath:modifierFlags:": {
+      "name": "toggleCurveModeOfPointAtIndexPath:modifierFlags:",
+      "bridgedName": "toggleCurveModeOfPointAtIndexPath_modifierFlags",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "determineLocationAndSnappingOfDrag:": {
+      "name": "determineLocationAndSnappingOfDrag:",
+      "bridgedName": "determineLocationAndSnappingOfDrag",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragHandle:": {
+      "name": "dragHandle:",
+      "bridgedName": "dragHandle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flagsChanged:": {
+      "name": "flagsChanged:",
+      "bridgedName": "flagsChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isMakingRectSelection": {
+      "name": "isMakingRectSelection",
+      "bridgedName": "isMakingRectSelection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragToSelect:": {
+      "name": "dragToSelect:",
+      "bridgedName": "dragToSelect",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clickToSelect:": {
+      "name": "clickToSelect:",
+      "bridgedName": "clickToSelect",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUpAtPoint:": {
+      "name": "mouseUpAtPoint:",
+      "bridgedName": "mouseUpAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doubleMouseDownAtPoint:modifierFlags:": {
+      "name": "doubleMouseDownAtPoint:modifierFlags:",
+      "bridgedName": "doubleMouseDownAtPoint_modifierFlags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "singleMouseDownAtPoint:modifierFlags:": {
+      "name": "singleMouseDownAtPoint:modifierFlags:",
+      "bridgedName": "singleMouseDownAtPoint_modifierFlags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delete:": {
+      "name": "delete:",
+      "bridgedName": "delete",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "adjustHandlesToValue:onAxis:": {
+      "name": "adjustHandlesToValue:onAxis:",
+      "bridgedName": "adjustHandlesToValue_onAxis",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "distributeVectorPointsToAxis:": {
+      "name": "distributeVectorPointsToAxis:",
+      "bridgedName": "distributeVectorPointsToAxis",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignVectorPointsToKey:": {
+      "name": "alignVectorPointsToKey:",
+      "bridgedName": "alignVectorPointsToKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeToCurveMode:": {
+      "name": "changeToCurveMode:",
+      "bridgedName": "changeToCurveMode",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexPathsForHandlesInRect:": {
+      "name": "indexPathsForHandlesInRect:",
+      "bridgedName": "indexPathsForHandlesInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexPathOfSegmentAtPoint:": {
+      "name": "indexPathOfSegmentAtPoint:",
+      "bridgedName": "indexPathOfSegmentAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexPathOfHandleAtPoint:": {
+      "name": "indexPathOfHandleAtPoint:",
+      "bridgedName": "indexPathOfHandleAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayDrawingRectForLayer:": {
+      "name": "overlayDrawingRectForLayer:",
+      "bridgedName": "overlayDrawingRectForLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOverlayNeedsDisplay": {
+      "name": "setOverlayNeedsDisplay",
+      "bridgedName": "setOverlayNeedsDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertPointToView:fromPathCoordinatesOfShape:": {
+      "name": "convertPointToView:fromPathCoordinatesOfShape:",
+      "bridgedName": "convertPointToView_fromPathCoordinatesOfShape",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHandles": {
+      "name": "drawHandles",
+      "bridgedName": "drawHandles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHighlightedSegment": {
+      "name": "drawHighlightedSegment",
+      "bridgedName": "drawHighlightedSegment",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawSnaps": {
+      "name": "drawSnaps",
+      "bridgedName": "drawSnaps",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawWire": {
+      "name": "drawWire",
+      "bridgedName": "drawWire",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wireBezierPathFromPoint:controlPoint:toPoint:forceStraight:": {
+      "name": "wireBezierPathFromPoint:controlPoint:toPoint:forceStraight:",
+      "bridgedName": "wireBezierPathFromPoint_controlPoint_toPoint_forceStraight",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateWire": {
+      "name": "updateWire",
+      "bridgedName": "updateWire",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareSnapperForDragging:": {
+      "name": "prepareSnapperForDragging:",
+      "bridgedName": "prepareSnapperForDragging",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeContext": {
+      "name": "changeContext",
+      "bridgedName": "changeContext",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleSelectionOfHandleAtIndexPath:notifyDelegate:": {
+      "name": "toggleSelectionOfHandleAtIndexPath:notifyDelegate:",
+      "bridgedName": "toggleSelectionOfHandleAtIndexPath_notifyDelegate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didChangeSelection": {
+      "name": "didChangeSelection",
+      "bridgedName": "didChangeSelection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deselectHandleAtIndexPath:": {
+      "name": "deselectHandleAtIndexPath:",
+      "bridgedName": "deselectHandleAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectHandlesAtIndexPaths:notifyDelegate:": {
+      "name": "selectHandlesAtIndexPaths:notifyDelegate:",
+      "bridgedName": "selectHandlesAtIndexPaths_notifyDelegate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectHandlesAtIndexPaths:": {
+      "name": "selectHandlesAtIndexPaths:",
+      "bridgedName": "selectHandlesAtIndexPaths",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectHandleAtIndexPath:extendSelection:notifyDelegate:": {
+      "name": "selectHandleAtIndexPath:extendSelection:notifyDelegate:",
+      "bridgedName": "selectHandleAtIndexPath_extendSelection_notifyDelegate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectHandleAtIndexPath:extendSelection:": {
+      "name": "selectHandleAtIndexPath:extendSelection:",
+      "bridgedName": "selectHandleAtIndexPath_extendSelection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "forceSelectionMode:": {
+      "name": "forceSelectionMode:",
+      "bridgedName": "forceSelectionMode",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectLayers:extendSelection:": {
+      "name": "selectLayers:extendSelection:",
+      "bridgedName": "selectLayers_extendSelection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathLayersForLayer:": {
+      "name": "pathLayersForLayer:",
+      "bridgedName": "pathLayersForLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rebuildVisibleLayersMaintainingSelection:": {
+      "name": "rebuildVisibleLayersMaintainingSelection:",
+      "bridgedName": "rebuildVisibleLayersMaintainingSelection",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setVisibleLayers:": {
+      "name": "setVisibleLayers:",
+      "bridgedName": "setVisibleLayers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerWithEventHandler:": {
+      "name": "registerWithEventHandler:",
+      "bridgedName": "registerWithEventHandler",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "handleStateDecider": {
+      "name": "handleStateDecider",
+      "pointer": true,
+      "type": "MSVectorHandleStateDecider",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "wireBezierPath": {
+      "name": "wireBezierPath",
+      "pointer": true,
+      "type": "NSBezierPath",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "snapper": {
+      "name": "snapper",
+      "pointer": true,
+      "type": "MSPointSnapper",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "activeHandleBehavior": {
+      "name": "activeHandleBehavior",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mouseTracker": {
+      "name": "mouseTracker",
+      "pointer": true,
+      "type": "MSMouseTracker",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "clickToEndEditingGestureRecognizer": {
+      "name": "clickToEndEditingGestureRecognizer",
+      "pointer": true,
+      "type": "MSClickGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dragHandleGestureRecognizer": {
+      "name": "dragHandleGestureRecognizer",
+      "pointer": true,
+      "type": "MSDragHandleGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "clickToSelectGestureRecognizer": {
+      "name": "clickToSelectGestureRecognizer",
+      "pointer": true,
+      "type": "MSSelectVectorHandleGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dragToSelectGestureRecognizer": {
+      "name": "dragToSelectGestureRecognizer",
+      "pointer": true,
+      "type": "MSDragToSelectGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSVectorCanvasDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "snaps": {
+      "name": "snaps",
+      "pointer": true,
+      "type": "MSPointSnappingResult",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "hoveringHandle": {
+      "name": "hoveringHandle",
+      "pointer": true,
+      "type": "NSIndexPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "insertionPoint": {
+      "name": "insertionPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pointInsertionIndexPath": {
+      "name": "pointInsertionIndexPath",
+      "pointer": true,
+      "type": "NSIndexPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "activeHandle": {
+      "name": "activeHandle",
+      "pointer": true,
+      "type": "NSIndexPath",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "editingBehavior": {
+      "name": "editingBehavior",
+      "pointer": true,
+      "type": "MSShapeEditingBehavior",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "visibleLayers": {
+      "name": "visibleLayers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "selectedLayers": {
+      "name": "selectedLayers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "pathController": {
+      "name": "pathController",
+      "pointer": true,
+      "type": "MSPathController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "view": {
+      "name": "view",
+      "pointer": true,
+      "type": "MSContentDrawView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "eventHandler": {
+      "name": "eventHandler",
+      "pointer": true,
+      "type": "__weak MSShapeEventHandler",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "indexPathsForSelectedHandles": {
+      "name": "indexPathsForSelectedHandles",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

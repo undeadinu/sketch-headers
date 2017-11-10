@@ -1,0 +1,604 @@
+{
+  "imports": [
+    "NSCoding.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSImage"
+  ],
+  "protocol": false,
+  "className": "NSImageCell",
+  "extends": "NSCell",
+  "interfaces": [
+    "NSCopying",
+    "NSCoding"
+  ],
+  "methods": {
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "controlView": {
+      "name": "controlView",
+      "bridgedName": "controlView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setControlView:": {
+      "name": "setControlView:",
+      "bridgedName": "setControlView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFormatter:": {
+      "name": "setFormatter:",
+      "bridgedName": "setFormatter",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOpaque": {
+      "name": "isOpaque",
+      "bridgedName": "isOpaque",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interiorBackgroundStyle": {
+      "name": "interiorBackgroundStyle",
+      "bridgedName": "interiorBackgroundStyle",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawWithFrame:inView:": {
+      "name": "drawWithFrame:inView:",
+      "bridgedName": "drawWithFrame_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawBorderStyleWithRect:inView:": {
+      "name": "_drawBorderStyleWithRect:inView:",
+      "bridgedName": "_drawBorderStyleWithRect_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "focusRingMaskBoundsForFrame:inView:": {
+      "name": "focusRingMaskBoundsForFrame:inView:",
+      "bridgedName": "focusRingMaskBoundsForFrame_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFocusRingMaskWithFrame:inView:": {
+      "name": "drawFocusRingMaskWithFrame:inView:",
+      "bridgedName": "drawFocusRingMaskWithFrame_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrancyFilterForControlView:": {
+      "name": "_vibrancyFilterForControlView:",
+      "bridgedName": "_vibrancyFilterForControlView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsVibrancyForControlView:": {
+      "name": "_allowsVibrancyForControlView:",
+      "bridgedName": "_allowsVibrancyForControlView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newCUIGrayBezelDrawOptionsInView:": {
+      "name": "_newCUIGrayBezelDrawOptionsInView:",
+      "bridgedName": "_newCUIGrayBezelDrawOptionsInView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct __CFDictionary *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsFocusRingForControlView:": {
+      "name": "_wantsFocusRingForControlView:",
+      "bridgedName": "_wantsFocusRingForControlView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestForEvent:inRect:ofView:": {
+      "name": "hitTestForEvent:inRect:ofView:",
+      "bridgedName": "hitTestForEvent_inRect_ofView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInteriorWithFrame:inView:": {
+      "name": "drawInteriorWithFrame:inView:",
+      "bridgedName": "drawInteriorWithFrame_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawImageWithFrame:inView:": {
+      "name": "_drawImageWithFrame:inView:",
+      "bridgedName": "_drawImageWithFrame_inView",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveBackgroundStyleInView:": {
+      "name": "_effectiveBackgroundStyleInView:",
+      "bridgedName": "_effectiveBackgroundStyleInView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentImageStateForView:": {
+      "name": "_currentImageStateForView:",
+      "bridgedName": "_currentImageStateForView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldClip": {
+      "name": "_shouldClip",
+      "bridgedName": "_shouldClip",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageRectForDrawing:inFrame:inView:": {
+      "name": "_imageRectForDrawing:inFrame:inView:",
+      "bridgedName": "_imageRectForDrawing_inFrame_inView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cellSizeAccountingForImageInControl:": {
+      "name": "_cellSizeAccountingForImageInControl:",
+      "bridgedName": "_cellSizeAccountingForImageInControl",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellSizeForBounds:": {
+      "name": "cellSizeForBounds:",
+      "bridgedName": "cellSizeForBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawingRectForBounds:": {
+      "name": "drawingRectForBounds:",
+      "bridgedName": "drawingRectForBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "titleRectForBounds:": {
+      "name": "titleRectForBounds:",
+      "bridgedName": "titleRectForBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageRectForBounds:": {
+      "name": "imageRectForBounds:",
+      "bridgedName": "imageRectForBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setImage:": {
+      "name": "setImage:",
+      "bridgedName": "setImage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "image": {
+      "name": "image",
+      "bridgedName": "image",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObjectValue:": {
+      "name": "setObjectValue:",
+      "bridgedName": "setObjectValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEditable:": {
+      "name": "setEditable:",
+      "bridgedName": "setEditable",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "trackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "trackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "highlight:withFrame:inView:": {
+      "name": "highlight:withFrame:inView:",
+      "bridgedName": "highlight_withFrame_inView",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setContents:": {
+      "name": "_setContents:",
+      "bridgedName": "_setContents",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy": {
+      "name": "copy",
+      "bridgedName": "copy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initImageCell:": {
+      "name": "initImageCell:",
+      "bridgedName": "initImageCell",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationTimerCallback:": {
+      "name": "_animationTimerCallback:",
+      "bridgedName": "_animationTimerCallback",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopAnimation": {
+      "name": "_stopAnimation",
+      "bridgedName": "_stopAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startAnimation": {
+      "name": "_startAnimation",
+      "bridgedName": "_startAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAnimates:": {
+      "name": "_setAnimates:",
+      "bridgedName": "_setAnimates",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animates": {
+      "name": "_animates",
+      "bridgedName": "_animates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasAccessibilityTitle": {
+      "name": "_hasAccessibilityTitle",
+      "bridgedName": "_hasAccessibilityTitle",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAuditLabel": {
+      "name": "accessibilityAuditLabel",
+      "bridgedName": "accessibilityAuditLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsDescriptionAttributeSettable": {
+      "name": "accessibilityIsDescriptionAttributeSettable",
+      "bridgedName": "accessibilityIsDescriptionAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDescriptionAttribute": {
+      "name": "accessibilityDescriptionAttribute",
+      "bridgedName": "accessibilityDescriptionAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRoleAttribute": {
+      "name": "accessibilityRoleAttribute",
+      "bridgedName": "accessibilityRoleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,769 @@
+{
+  "imports": [
+    "_MSPage.h",
+    "MSRootLayer.h"
+  ],
+  "classes": [
+    "MSArtboardGroup",
+    "MSLayer<MSRootLayer>",
+    "MSLayerArray",
+    "MSLayoutGrid",
+    "MSRulerData",
+    "MSSimpleGrid",
+    "NSArray",
+    "NSMutableSet",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSPage",
+  "extends": "_MSPage",
+  "interfaces": [
+    "MSRootLayer"
+  ],
+  "methods": {
+    "enumerateExportableLayersWithPage:block:": {
+      "name": "enumerateExportableLayersWithPage:block:",
+      "bridgedName": "enumerateExportableLayersWithPage_block",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "page": {
+      "name": "page",
+      "bridgedName": "page",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIsLocked:": {
+      "name": "setIsLocked:",
+      "bridgedName": "setIsLocked",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLocked": {
+      "name": "isLocked",
+      "bridgedName": "isLocked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIsVisible:": {
+      "name": "setIsVisible:",
+      "bridgedName": "setIsVisible",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isVisible": {
+      "name": "isVisible",
+      "bridgedName": "isVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "originForNewArtboard": {
+      "name": "originForNewArtboard",
+      "bridgedName": "originForNewArtboard",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasClickThrough": {
+      "name": "hasClickThrough",
+      "bridgedName": "hasClickThrough",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "limitsSelectionToBounds": {
+      "name": "limitsSelectionToBounds",
+      "bridgedName": "limitsSelectionToBounds",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsPoint:zoomValue:": {
+      "name": "containsPoint:zoomValue:",
+      "bridgedName": "containsPoint_zoomValue",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveLayersToArtboards": {
+      "name": "moveLayersToArtboards",
+      "bridgedName": "moveLayersToArtboards",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canContainLayer:": {
+      "name": "canContainLayer:",
+      "bridgedName": "canContainLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectSizeDidChange:": {
+      "name": "rectSizeDidChange:",
+      "bridgedName": "rectSizeDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeLayerExpandedTypeToAutomaticIfCollapsed": {
+      "name": "changeLayerExpandedTypeToAutomaticIfCollapsed",
+      "bridgedName": "changeLayerExpandedTypeToAutomaticIfCollapsed",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentRoot": {
+      "name": "parentRoot",
+      "bridgedName": "parentRoot",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ancestorsAndSelfTransforms": {
+      "name": "ancestorsAndSelfTransforms",
+      "bridgedName": "ancestorsAndSelfTransforms",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentPage": {
+      "name": "parentPage",
+      "bridgedName": "parentPage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resizeToFitChildrenWithOption:": {
+      "name": "resizeToFitChildrenWithOption:",
+      "bridgedName": "resizeToFitChildrenWithOption",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layers:fitOnArtboard:": {
+      "name": "layers:fitOnArtboard:",
+      "bridgedName": "layers_fitOnArtboard",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "destinationArtboardForLayers:artboards:": {
+      "name": "destinationArtboardForLayers:artboards:",
+      "bridgedName": "destinationArtboardForLayers_artboards",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToMoveLayerToArtboard:": {
+      "name": "tryToMoveLayerToArtboard:",
+      "bridgedName": "tryToMoveLayerToArtboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addOrRemoveLayerFromArtboardIfNecessary:": {
+      "name": "addOrRemoveLayerFromArtboardIfNecessary:",
+      "bridgedName": "addOrRemoveLayerFromArtboardIfNecessary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToMoveLayer:toArtboards:": {
+      "name": "tryToMoveLayer:toArtboards:",
+      "bridgedName": "tryToMoveLayer_toArtboards",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolLayersInGroup:": {
+      "name": "symbolLayersInGroup:",
+      "bridgedName": "symbolLayersInGroup",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "artboardForSlice:inArtboards:": {
+      "name": "artboardForSlice:inArtboards:",
+      "bridgedName": "artboardForSlice_inArtboards",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOverlayInRect:": {
+      "name": "refreshOverlayInRect:",
+      "bridgedName": "refreshOverlayInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transform": {
+      "name": "transform",
+      "bridgedName": "transform",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "object:didChangeProperty:": {
+      "name": "object:didChangeProperty:",
+      "bridgedName": "object_didChangeProperty",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeContainedByDocument": {
+      "name": "canBeContainedByDocument",
+      "bridgedName": "canBeContainedByDocument",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearSelectionCache": {
+      "name": "clearSelectionCache",
+      "bridgedName": "clearSelectionCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeSelectionBySelectingLayers:": {
+      "name": "changeSelectionBySelectingLayers:",
+      "bridgedName": "changeSelectionBySelectingLayers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeSelectionUsingBlock:": {
+      "name": "changeSelectionUsingBlock:",
+      "bridgedName": "changeSelectionUsingBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLayerSelected:": {
+      "name": "isLayerSelected:",
+      "bridgedName": "isLayerSelected",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layersWithIDs:": {
+      "name": "layersWithIDs:",
+      "bridgedName": "layersWithIDs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedLayers": {
+      "name": "selectedLayers",
+      "bridgedName": "selectedLayers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentGroup": {
+      "name": "parentGroup",
+      "bridgedName": "parentGroup",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectDidInit": {
+      "name": "objectDidInit",
+      "bridgedName": "objectDidInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithImmutableModelObject:": {
+      "name": "performInitWithImmutableModelObject:",
+      "bridgedName": "performInitWithImmutableModelObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollOriginToCenterContentInViewBounds:": {
+      "name": "scrollOriginToCenterContentInViewBounds:",
+      "bridgedName": "scrollOriginToCenterContentInViewBounds",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "adjustRulerDataToTopLeftInViewBounds": {
+      "name": "adjustRulerDataToTopLeftInViewBounds",
+      "bridgedName": "adjustRulerDataToTopLeftInViewBounds",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawSelection": {
+      "name": "shouldDrawSelection",
+      "bridgedName": "shouldDrawSelection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeHovered": {
+      "name": "canBeHovered",
+      "bridgedName": "canBeHovered",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayName": {
+      "name": "displayName",
+      "bridgedName": "displayName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloneForDocument:": {
+      "name": "cloneForDocument:",
+      "bridgedName": "cloneForDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExportableViaDragAndDrop": {
+      "name": "isExportableViaDragAndDrop",
+      "bridgedName": "isExportableViaDragAndDrop",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canCopyToLayer:beforeLayer:": {
+      "name": "canCopyToLayer:beforeLayer:",
+      "bridgedName": "canCopyToLayer_beforeLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewImages": {
+      "name": "previewImages",
+      "bridgedName": "previewImages",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "duplicate:": {
+      "name": "duplicate:",
+      "bridgedName": "duplicate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayType": {
+      "name": "displayType",
+      "bridgedName": "displayType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "selectedLayerIDs": {
+      "name": "selectedLayerIDs",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "cachedSelectedLayers": {
+      "name": "cachedSelectedLayers",
+      "pointer": true,
+      "type": "MSLayerArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cachedArtboards": {
+      "name": "cachedArtboards",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cachedExportableLayers": {
+      "name": "cachedExportableLayers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentArtboard": {
+      "name": "currentArtboard",
+      "pointer": true,
+      "type": "__weak MSArtboardGroup",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "scrollOrigin": {
+      "name": "scrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "symbols": {
+      "name": "symbols",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentVerticalRulerData": {
+      "name": "currentVerticalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentHorizontalRulerData": {
+      "name": "currentHorizontalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "artboards": {
+      "name": "artboards",
+      "pointer": true,
+      "type": "__weak NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentRoot": {
+      "name": "currentRoot",
+      "pointer": true,
+      "type": "MSLayer<MSRootLayer>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "contentBounds": {
+      "name": "contentBounds",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "exportableLayers": {
+      "name": "exportableLayers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "exportableLayersCount": {
+      "name": "exportableLayersCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rulerBase": {
+      "name": "rulerBase",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "grid": {
+      "name": "grid",
+      "pointer": true,
+      "type": "MSSimpleGrid",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "horizontalRulerData": {
+      "name": "horizontalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "layout": {
+      "name": "layout",
+      "pointer": true,
+      "type": "MSLayoutGrid",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "verticalRulerData": {
+      "name": "verticalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    }
+  }
+}

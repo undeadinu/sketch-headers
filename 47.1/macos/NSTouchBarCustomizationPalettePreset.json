@@ -1,0 +1,109 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSCandidateListTouchBarItem",
+    "NSImage",
+    "NSTouchBarItemTree"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarCustomizationPalettePreset",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "presetForItemTree:inBarWithSize:": {
+      "name": "presetForItemTree:inBarWithSize:",
+      "bridgedName": "presetForItemTree_inBarWithSize",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cleanUpPaletteViewAfterSnapshot:": {
+      "name": "cleanUpPaletteViewAfterSnapshot:",
+      "bridgedName": "cleanUpPaletteViewAfterSnapshot",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makePaletteViewForSnapshot": {
+      "name": "makePaletteViewForSnapshot",
+      "bridgedName": "makePaletteViewForSnapshot",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "maxSize": {
+      "name": "maxSize",
+      "bridgedName": "maxSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minSize": {
+      "name": "minSize",
+      "bridgedName": "minSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "representedItemTree": {
+      "name": "representedItemTree",
+      "pointer": true,
+      "type": "NSTouchBarItemTree",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "presetSnapshot": {
+      "name": "presetSnapshot",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

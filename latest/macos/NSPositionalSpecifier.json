@@ -1,0 +1,263 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSScriptClassDescription",
+    "NSScriptObjectSpecifier",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSPositionalSpecifier",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "_describedClass:isSubclassOfClass:": {
+      "name": "_describedClass:isSubclassOfClass:",
+      "bridgedName": "_describedClass_isSubclassOfClass",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_positionalSpecifierFromDescriptor:": {
+      "name": "_positionalSpecifierFromDescriptor:",
+      "bridgedName": "_positionalSpecifierFromDescriptor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_scriptingLocationSpecifierWithDescriptor:": {
+      "name": "_scriptingLocationSpecifierWithDescriptor:",
+      "bridgedName": "_scriptingLocationSpecifierWithDescriptor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForPortCoder:": {
+      "name": "replacementObjectForPortCoder:",
+      "bridgedName": "replacementObjectForPortCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluate": {
+      "name": "evaluate",
+      "bridgedName": "evaluate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_evaluateRelativeToObjectInContainer:": {
+      "name": "_evaluateRelativeToObjectInContainer:",
+      "bridgedName": "_evaluateRelativeToObjectInContainer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_evaluateToBeginningOrEndOfContainer:": {
+      "name": "_evaluateToBeginningOrEndOfContainer:",
+      "bridgedName": "_evaluateToBeginningOrEndOfContainer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preEvaluate": {
+      "name": "_preEvaluate",
+      "bridgedName": "_preEvaluate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInsertionClassDescription:": {
+      "name": "setInsertionClassDescription:",
+      "bridgedName": "setInsertionClassDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPosition:objectSpecifier:": {
+      "name": "initWithPosition:objectSpecifier:",
+      "bridgedName": "initWithPosition_objectSpecifier",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertionIsAtEnd": {
+      "name": "_insertionIsAtEnd",
+      "bridgedName": "_insertionIsAtEnd",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_specifiesUnorderedAddition": {
+      "name": "_specifiesUnorderedAddition",
+      "bridgedName": "_specifiesUnorderedAddition",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_specifiesSetting": {
+      "name": "_specifiesSetting",
+      "bridgedName": "_specifiesSetting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initFromRecord:": {
+      "name": "_initFromRecord:",
+      "bridgedName": "_initFromRecord",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "insertionReplaces": {
+      "name": "insertionReplaces",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "insertionIndex": {
+      "name": "insertionIndex",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "insertionKey": {
+      "name": "insertionKey",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "insertionContainer": {
+      "name": "insertionContainer",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "objectSpecifier": {
+      "name": "objectSpecifier",
+      "pointer": true,
+      "type": "NSScriptObjectSpecifier",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "position": {
+      "name": "position",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

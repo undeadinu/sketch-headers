@@ -1,0 +1,287 @@
+{
+  "imports": [
+    "CHSheetController.h",
+    "BCPopoverDelegate.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h",
+    "NSWindowDelegate.h"
+  ],
+  "classes": [
+    "BCPopover",
+    "NSMutableArray",
+    "NSString",
+    "NSTableView",
+    "NSViewController"
+  ],
+  "protocol": false,
+  "className": "MSReplaceFontsSheet",
+  "extends": "CHSheetController",
+  "interfaces": [
+    "NSTableViewDataSource",
+    "NSTableViewDelegate",
+    "BCPopoverDelegate",
+    "NSWindowDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverShouldCauseExistingPopoversToClose:": {
+      "name": "popoverShouldCauseExistingPopoversToClose:",
+      "bridgedName": "popoverShouldCauseExistingPopoversToClose",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverShouldCloseWhenNewPopoverOpens:newPopover:": {
+      "name": "popoverShouldCloseWhenNewPopoverOpens:newPopover:",
+      "bridgedName": "popoverShouldCloseWhenNewPopoverOpens_newPopover",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closePopover": {
+      "name": "closePopover",
+      "bridgedName": "closePopover",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "confirm:": {
+      "name": "confirm:",
+      "bridgedName": "confirm",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel:": {
+      "name": "cancel:",
+      "bridgedName": "cancel",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:viewForTableColumn:row:": {
+      "name": "tableView:viewForTableColumn:row:",
+      "bridgedName": "tableView_viewForTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldSelectRow:": {
+      "name": "tableView:shouldSelectRow:",
+      "bridgedName": "tableView_shouldSelectRow",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fontFamilyAction:": {
+      "name": "fontFamilyAction:",
+      "bridgedName": "fontFamilyAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadFontWeightPopup:familyName:row:": {
+      "name": "reloadFontWeightPopup:familyName:row:",
+      "bridgedName": "reloadFontWeightPopup_familyName_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fontWeightAction:": {
+      "name": "fontWeightAction:",
+      "bridgedName": "fontWeightAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeFontFamilyTo:forRow:": {
+      "name": "changeFontFamilyTo:forRow:",
+      "bridgedName": "changeFontFamilyTo_forRow",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObject:": {
+      "name": "setObject:",
+      "bridgedName": "setObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidLoad": {
+      "name": "windowDidLoad",
+      "bridgedName": "windowDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "popover": {
+      "name": "popover",
+      "pointer": true,
+      "type": "__weak BCPopover",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "viewController": {
+      "name": "viewController",
+      "pointer": true,
+      "type": "NSViewController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "fonts": {
+      "name": "fonts",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "tableView": {
+      "name": "tableView",
+      "pointer": true,
+      "type": "NSTableView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

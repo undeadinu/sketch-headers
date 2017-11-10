@@ -1,0 +1,1676 @@
+{
+  "imports": [
+    "NSLayoutConstraint.h",
+    "NSObject.h",
+    "NSISConstraint.h"
+  ],
+  "classes": [
+    "NSLayoutAnchor",
+    "NSSet",
+    "NSString",
+    "_NSConstraintDescriptionLayoutRuleNode"
+  ],
+  "protocol": false,
+  "className": "NSLayoutConstraint",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSISConstraint"
+  ],
+  "methods": {
+    "defaultAnimationForKey:": {
+      "name": "defaultAnimationForKey:",
+      "bridgedName": "defaultAnimationForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "animationForKey:": {
+      "name": "animationForKey:",
+      "bridgedName": "animationForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animator": {
+      "name": "animator",
+      "bridgedName": "animator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingConsistentIntegralization": {
+      "name": "_usingConsistentIntegralization",
+      "bridgedName": "_usingConsistentIntegralization",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isPrototypingConstraint": {
+      "name": "_isPrototypingConstraint",
+      "bridgedName": "_isPrototypingConstraint",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ns_constraintsWithItem:attribute:toItem:attribute:inequalityRelation:inequalityIdentifier:inequalityPriority:inequalityConstant:equivalencePriority:equivalenceIdentifier:equalityConstant:layoutDirection:": {
+      "name": "_ns_constraintsWithItem:attribute:toItem:attribute:inequalityRelation:inequalityIdentifier:inequalityPriority:inequalityConstant:equivalencePriority:equivalenceIdentifier:equalityConstant:layoutDirection:",
+      "bridgedName": "_ns_constraintsWithItem_attribute_toItem_attribute_inequalityRelation_inequalityIdentifier_inequalityPriority_inequalityConstant_equivalencePriority_equivalenceIdentifier_equalityConstant_layoutDirection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_ns_constraintsWithItem:attribute:toItem:attribute:constant:inequalityRelation:inequalityIdentifier:inequalityPriority:equivalencePriority:equivalenceIdentifier:layoutDirection:": {
+      "name": "_ns_constraintsWithItem:attribute:toItem:attribute:constant:inequalityRelation:inequalityIdentifier:inequalityPriority:equivalencePriority:equivalenceIdentifier:layoutDirection:",
+      "bridgedName": "_ns_constraintsWithItem_attribute_toItem_attribute_constant_inequalityRelation_inequalityIdentifier_inequalityPriority_equivalencePriority_equivalenceIdentifier_layoutDirection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_ns_constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:layoutDirection:priority:identifier:": {
+      "name": "_ns_constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:layoutDirection:priority:identifier:",
+      "bridgedName": "_ns_constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant_layoutDirection_priority_identifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "float"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_geometricCompare:": {
+      "name": "_geometricCompare:",
+      "bridgedName": "_geometricCompare",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visualCenterInWindowSpace": {
+      "name": "_visualCenterInWindowSpace",
+      "bridgedName": "_visualCenterInWindowSpace",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orientation": {
+      "name": "_orientation",
+      "bridgedName": "_orientation",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultResolvedValue:forSymbolicConstant:error:": {
+      "name": "defaultResolvedValue:forSymbolicConstant:error:",
+      "bridgedName": "defaultResolvedValue_forSymbolicConstant_error",
+      "args": [
+        {
+          "type": "double *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintsMatchingFrameOfView:withFrameOfView:edgeInsets:priority:": {
+      "name": "_constraintsMatchingFrameOfView:withFrameOfView:edgeInsets:priority:",
+      "bridgedName": "_constraintsMatchingFrameOfView_withFrameOfView_edgeInsets_priority",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct NSEdgeInsets"
+        },
+        {
+          "type": "float"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_constraintsMatchingFrameOfView:withFrameOfView:edgeInsets:": {
+      "name": "_constraintsMatchingFrameOfView:withFrameOfView:edgeInsets:",
+      "bridgedName": "_constraintsMatchingFrameOfView_withFrameOfView_edgeInsets",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct NSEdgeInsets"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_constraintsMatchingFrameOfView:withFrameOfView:": {
+      "name": "_constraintsMatchingFrameOfView:withFrameOfView:",
+      "bridgedName": "_constraintsMatchingFrameOfView_withFrameOfView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:priority:": {
+      "name": "_constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:priority:",
+      "bridgedName": "_constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant_priority",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "float"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_minimizingConstraintWithItem:attribute:": {
+      "name": "_minimizingConstraintWithItem:attribute:",
+      "bridgedName": "_minimizingConstraintWithItem_attribute",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setConstant:animated:": {
+      "name": "_setConstant:animated:",
+      "bridgedName": "_setConstant_animated",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraintWithAnchor:relatedBy:constant:": {
+      "name": "constraintWithAnchor:relatedBy:constant:",
+      "bridgedName": "constraintWithAnchor_relatedBy_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithAnchor:relatedBy:toAnchor:multiplier:constant:": {
+      "name": "constraintWithAnchor:relatedBy:toAnchor:multiplier:constant:",
+      "bridgedName": "constraintWithAnchor_relatedBy_toAnchor_multiplier_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:constant:": {
+      "name": "constraintWithItem:attribute:relatedBy:constant:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:constant:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:constant:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:symbolicConstant:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:symbolicConstant:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_symbolicConstant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:symbolicConstant:theme:": {
+      "name": "constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:symbolicConstant:theme:",
+      "bridgedName": "constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_symbolicConstant_theme",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "constraintsWithVisualFormat:options:metrics:views:": {
+      "name": "constraintsWithVisualFormat:options:metrics:views:",
+      "bridgedName": "constraintsWithVisualFormat_options_metrics_views",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_findCommonAncestorOfItem:andItem:": {
+      "name": "_findCommonAncestorOfItem:andItem:",
+      "bridgedName": "_findCommonAncestorOfItem_andItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_addOrRemoveConstraints:activate:": {
+      "name": "_addOrRemoveConstraints:activate:",
+      "bridgedName": "_addOrRemoveConstraints_activate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "deactivateConstraints:": {
+      "name": "deactivateConstraints:",
+      "bridgedName": "deactivateConstraints",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "activateConstraints:": {
+      "name": "activateConstraints:",
+      "bridgedName": "activateConstraints",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setLegacyDecodingOnly:": {
+      "name": "_setLegacyDecodingOnly:",
+      "bridgedName": "_setLegacyDecodingOnly",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setActive:mutuallyExclusiveConstraints:": {
+      "name": "_setActive:mutuallyExclusiveConstraints:",
+      "bridgedName": "_setActive_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nsib_isRedundant": {
+      "name": "_nsib_isRedundant",
+      "bridgedName": "_nsib_isRedundant",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nsib_isRedundantInEngine:": {
+      "name": "_nsib_isRedundantInEngine:",
+      "bridgedName": "_nsib_isRedundantInEngine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutEngine": {
+      "name": "_layoutEngine",
+      "bridgedName": "_layoutEngine",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_descriptionOfVariable:": {
+      "name": "nsis_descriptionOfVariable:",
+      "bridgedName": "nsis_descriptionOfVariable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_explainUnsatisfaction": {
+      "name": "_explainUnsatisfaction",
+      "bridgedName": "_explainUnsatisfaction",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forceSatisfactionMeasuringUnsatisfactionChanges:andMutuallyExclusiveConstraints:": {
+      "name": "_forceSatisfactionMeasuringUnsatisfactionChanges:andMutuallyExclusiveConstraints:",
+      "bridgedName": "_forceSatisfactionMeasuringUnsatisfactionChanges_andMutuallyExclusiveConstraints",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tryToActivateMeasuringUnsatisfactionChanges:andMutuallyExclusiveConstraints:": {
+      "name": "_tryToActivateMeasuringUnsatisfactionChanges:andMutuallyExclusiveConstraints:",
+      "bridgedName": "_tryToActivateMeasuringUnsatisfactionChanges_andMutuallyExclusiveConstraints",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loweredExpression": {
+      "name": "_loweredExpression",
+      "bridgedName": "_loweredExpression",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lowerIntoExpression:reportingConstantIsRounded:": {
+      "name": "_lowerIntoExpression:reportingConstantIsRounded:",
+      "bridgedName": "_lowerIntoExpression_reportingConstantIsRounded",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_engineToContainerScalingCoefficients": {
+      "name": "_engineToContainerScalingCoefficients",
+      "bridgedName": "_engineToContainerScalingCoefficients",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeExtraVars": {
+      "name": "_makeExtraVars",
+      "bridgedName": "_makeExtraVars",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeFromEngine:": {
+      "name": "_removeFromEngine:",
+      "bridgedName": "_removeFromEngine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addToEngine:": {
+      "name": "_addToEngine:",
+      "bridgedName": "_addToEngine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addToEngine:integralizationAdjustment:mutuallyExclusiveConstraints:": {
+      "name": "_addToEngine:integralizationAdjustment:mutuallyExclusiveConstraints:",
+      "bridgedName": "_addToEngine_integralizationAdjustment_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addLoweredExpression:toEngine:integralizationAdjustment:lastLoweredConstantWasRounded:mutuallyExclusiveConstraints:": {
+      "name": "_addLoweredExpression:toEngine:integralizationAdjustment:lastLoweredConstantWasRounded:mutuallyExclusiveConstraints:",
+      "bridgedName": "_addLoweredExpression_toEngine_integralizationAdjustment_lastLoweredConstantWasRounded_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "priorityForVariable:": {
+      "name": "priorityForVariable:",
+      "bridgedName": "priorityForVariable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintValueCopy": {
+      "name": "_constraintValueCopy",
+      "bridgedName": "_constraintValueCopy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMutablePropertiesFromConstraint:": {
+      "name": "_setMutablePropertiesFromConstraint:",
+      "bridgedName": "_setMutablePropertiesFromConstraint",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isEqualToConstraintValue:includingConstant:includeOtherMutableProperties:": {
+      "name": "_isEqualToConstraintValue:includingConstant:includeOtherMutableProperties:",
+      "bridgedName": "_isEqualToConstraintValue_includingConstant_includeOtherMutableProperties",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintValueHashIncludingConstant:includeOtherMutableProperties:": {
+      "name": "_constraintValueHashIncludingConstant:includeOtherMutableProperties:",
+      "bridgedName": "_constraintValueHashIncludingConstant_includeOtherMutableProperties",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_describesSameRestrictionAsConstraint:": {
+      "name": "_describesSameRestrictionAsConstraint:",
+      "bridgedName": "_describesSameRestrictionAsConstraint",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_referencesLayoutItem:": {
+      "name": "_referencesLayoutItem:",
+      "bridgedName": "_referencesLayoutItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintByReplacingView:withView:": {
+      "name": "_constraintByReplacingView:withView:",
+      "bridgedName": "_constraintByReplacingView_withView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintByReplacingItem:withItem:": {
+      "name": "_constraintByReplacingItem:withItem:",
+      "bridgedName": "_constraintByReplacingItem_withItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deallocSafeDescription": {
+      "name": "_deallocSafeDescription",
+      "bridgedName": "_deallocSafeDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "equationDescription": {
+      "name": "equationDescription",
+      "bridgedName": "equationDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "descriptionAccessory": {
+      "name": "descriptionAccessory",
+      "bridgedName": "descriptionAccessory",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_priorityDescription": {
+      "name": "_priorityDescription",
+      "bridgedName": "_priorityDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "asciiArtDescription": {
+      "name": "asciiArtDescription",
+      "bridgedName": "asciiArtDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintType": {
+      "name": "_constraintType",
+      "bridgedName": "_constraintType",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSymbolicConstant:": {
+      "name": "_setSymbolicConstant:",
+      "bridgedName": "_setSymbolicConstant",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_symbolicConstant": {
+      "name": "_symbolicConstant",
+      "bridgedName": "_symbolicConstant",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureValueMaintainsArbitraryLimit:": {
+      "name": "_ensureValueMaintainsArbitraryLimit:",
+      "bridgedName": "_ensureValueMaintainsArbitraryLimit",
+      "args": [
+        {
+          "type": "double *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constantDescriptionForDTrace": {
+      "name": "_constantDescriptionForDTrace",
+      "bridgedName": "_constantDescriptionForDTrace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_descriptionforSymbolicConstant": {
+      "name": "_descriptionforSymbolicConstant",
+      "bridgedName": "_descriptionforSymbolicConstant",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSymbolicConstant:constant:": {
+      "name": "_setSymbolicConstant:constant:",
+      "bridgedName": "_setSymbolicConstant_constant",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveConstant:error:": {
+      "name": "_effectiveConstant:error:",
+      "bridgedName": "_effectiveConstant_error",
+      "args": [
+        {
+          "type": "double *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_containerGeometryDidChange": {
+      "name": "_containerGeometryDidChange",
+      "bridgedName": "_containerGeometryDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tryToChangeContainerGeometryWithUndoHandler:": {
+      "name": "_tryToChangeContainerGeometryWithUndoHandler:",
+      "bridgedName": "_tryToChangeContainerGeometryWithUndoHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearWeakContainerReference": {
+      "name": "_clearWeakContainerReference",
+      "bridgedName": "_clearWeakContainerReference",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loweredConstantIsRounded": {
+      "name": "_loweredConstantIsRounded",
+      "bridgedName": "_loweredConstantIsRounded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocationDescription": {
+      "name": "_allocationDescription",
+      "bridgedName": "_allocationDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPrimitiveConstraintType:": {
+      "name": "_setPrimitiveConstraintType:",
+      "bridgedName": "_setPrimitiveConstraintType",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_primitiveConstraintType": {
+      "name": "_primitiveConstraintType",
+      "bridgedName": "_primitiveConstraintType",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDeferDTraceLogging:": {
+      "name": "_setDeferDTraceLogging:",
+      "bridgedName": "_setDeferDTraceLogging",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deferDTraceLogging": {
+      "name": "_deferDTraceLogging",
+      "bridgedName": "_deferDTraceLogging",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNegativeExtraVar:": {
+      "name": "_setNegativeExtraVar:",
+      "bridgedName": "_setNegativeExtraVar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_negativeExtraVar": {
+      "name": "_negativeExtraVar",
+      "bridgedName": "_negativeExtraVar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMarkerAndPositiveErrorVar:": {
+      "name": "_setMarkerAndPositiveErrorVar:",
+      "bridgedName": "_setMarkerAndPositiveErrorVar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_markerAndPositiveExtraVar": {
+      "name": "_markerAndPositiveExtraVar",
+      "bridgedName": "_markerAndPositiveExtraVar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_valueOfVariableIsUserObservable:": {
+      "name": "nsis_valueOfVariableIsUserObservable:",
+      "bridgedName": "nsis_valueOfVariableIsUserObservable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_shouldIntegralizeVariable:": {
+      "name": "nsis_shouldIntegralizeVariable:",
+      "bridgedName": "nsis_shouldIntegralizeVariable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_valueOfVariable:didChangeInEngine:": {
+      "name": "nsis_valueOfVariable:didChangeInEngine:",
+      "bridgedName": "nsis_valueOfVariable_didChangeInEngine",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarker:": {
+      "name": "nsis_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarker:",
+      "bridgedName": "nsis_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarker",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarkerScaling:": {
+      "name": "_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarkerScaling:",
+      "bridgedName": "_allowedMagnitudeForIntegralizationAdjustmentOfConstraintWithMarkerScaling",
+      "args": [
+        {
+          "type": "double *"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowedMagnitudeForIntegralizationAdjustment": {
+      "name": "_allowedMagnitudeForIntegralizationAdjustment",
+      "bridgedName": "_allowedMagnitudeForIntegralizationAdjustment",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fudgeIncrement": {
+      "name": "_fudgeIncrement",
+      "bridgedName": "_fudgeIncrement",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isFudgeable": {
+      "name": "_isFudgeable",
+      "bridgedName": "_isFudgeable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAnimations:": {
+      "name": "setAnimations:",
+      "bridgedName": "setAnimations",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animations": {
+      "name": "animations",
+      "bridgedName": "animations",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIdentifier:": {
+      "name": "_setIdentifier:",
+      "bridgedName": "_setIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_identifier": {
+      "name": "_identifier",
+      "bridgedName": "_identifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHasBeenLowered:": {
+      "name": "setHasBeenLowered:",
+      "bridgedName": "setHasBeenLowered",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_existsInEngine:": {
+      "name": "_existsInEngine:",
+      "bridgedName": "_existsInEngine",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isIBPrototypingLayoutConstraint": {
+      "name": "_isIBPrototypingLayoutConstraint",
+      "bridgedName": "_isIBPrototypingLayoutConstraint",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSecondItem:attribute:": {
+      "name": "_setSecondItem:attribute:",
+      "bridgedName": "_setSecondItem_attribute",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFirstItem:attribute:": {
+      "name": "_setFirstItem:attribute:",
+      "bridgedName": "_setFirstItem_attribute",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dissatisfaction": {
+      "name": "dissatisfaction",
+      "bridgedName": "dissatisfaction",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sourceRuleHierarchy": {
+      "name": "sourceRuleHierarchy",
+      "bridgedName": "sourceRuleHierarchy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ancestorRuleNodes": {
+      "name": "_ancestorRuleNodes",
+      "bridgedName": "_ancestorRuleNodes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "secondAnchor": {
+      "name": "secondAnchor",
+      "pointer": true,
+      "type": "NSLayoutAnchor",
+      "attributes": [
+        "copy",
+        "setter=_setSecondAnchor:"
+      ]
+    },
+    "firstAnchor": {
+      "name": "firstAnchor",
+      "pointer": true,
+      "type": "NSLayoutAnchor",
+      "attributes": [
+        "copy",
+        "setter=_setFirstAnchor:"
+      ]
+    },
+    "active": {
+      "name": "active",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isActive"
+      ]
+    },
+    "_referencedLayoutItems": {
+      "name": "_referencedLayoutItems",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "symbolicConstant": {
+      "name": "symbolicConstant",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "_containerDeclaredConstraint": {
+      "name": "_containerDeclaredConstraint",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "setter=_setContainerDeclaredConstraint:"
+      ]
+    },
+    "identifier": {
+      "name": "identifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "hasBeenLowered": {
+      "name": "hasBeenLowered",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "secondAttribute": {
+      "name": "secondAttribute",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "secondItem": {
+      "name": "secondItem",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "multiplier": {
+      "name": "multiplier",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "setter=_setMultiplier:"
+      ]
+    },
+    "relation": {
+      "name": "relation",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "setter=_setRelation:"
+      ]
+    },
+    "firstAttribute": {
+      "name": "firstAttribute",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "firstItem": {
+      "name": "firstItem",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "loweredConstantNeedsUpdate": {
+      "name": "loweredConstantNeedsUpdate",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic",
+        "getter=_loweredConstantNeedsUpdate",
+        "setter=_setLoweredConstantNeedsUpdate:"
+      ]
+    },
+    "unsatisfaction": {
+      "name": "unsatisfaction",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_associatedRuleNode": {
+      "name": "_associatedRuleNode",
+      "pointer": true,
+      "type": "_NSConstraintDescriptionLayoutRuleNode",
+      "attributes": [
+        "setter=_setAssociatedRuleNode:"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

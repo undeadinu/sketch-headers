@@ -1,0 +1,264 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSDocumentData",
+    "NSObject<OS_dispatch_queue>",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSWebExporter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "fileURLWithHash:inDirectory:": {
+      "name": "fileURLWithHash:inDirectory:",
+      "bridgedName": "fileURLWithHash_inDirectory",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exportDocument:withName:includeDocument:toLocalURL:completionBlock:": {
+      "name": "exportDocument:withName:includeDocument:toLocalURL:completionBlock:",
+      "bridgedName": "exportDocument_withName_includeDocument_toLocalURL_completionBlock",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:": {
+      "name": "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:",
+      "bridgedName": "exportSelectedArtboardsOfDocument_withName_includeDocument_toLocalURL_completionBlock",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveManifestFile:withError:": {
+      "name": "saveManifestFile:withError:",
+      "bridgedName": "saveManifestFile_withError",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageRepresentationFromRootLayer:onPage:scale:": {
+      "name": "imageRepresentationFromRootLayer:onPage:scale:",
+      "bridgedName": "imageRepresentationFromRootLayer_onPage_scale",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportedImageDataForRoot:onPage:scale:": {
+      "name": "exportedImageDataForRoot:onPage:scale:",
+      "bridgedName": "exportedImageDataForRoot_onPage_scale",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForDocument:": {
+      "name": "metadataForDocument:",
+      "bridgedName": "metadataForDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "callCompletionBlock:withDidExport:error:": {
+      "name": "callCompletionBlock:withDidExport:error:",
+      "bridgedName": "callCompletionBlock_withDidExport_error",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportWithCompletionBlock:": {
+      "name": "exportWithCompletionBlock:",
+      "bridgedName": "exportWithCompletionBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:name:includeDocument:localURL:": {
+      "name": "initWithDocument:name:includeDocument:localURL:",
+      "bridgedName": "initWithDocument_name_includeDocument_localURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "exportingQueue": {
+      "name": "exportingQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "includeDocument": {
+      "name": "includeDocument",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectiveExport": {
+      "name": "selectiveExport",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "includeBackground": {
+      "name": "includeBackground",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "destinationURL": {
+      "name": "destinationURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "MSDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSMutableArray",
+    "NSPort"
+  ],
+  "protocol": false,
+  "className": "NSPortMessage",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendBeforeDate:": {
+      "name": "sendBeforeDate:",
+      "bridgedName": "sendBeforeDate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithReceivePort:sendPort:components:": {
+      "name": "initWithReceivePort:sendPort:components:",
+      "bridgedName": "initWithReceivePort_sendPort_components",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSendPort:receivePort:components:": {
+      "name": "initWithSendPort:receivePort:components:",
+      "bridgedName": "initWithSendPort_receivePort_components",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMachMessage:": {
+      "name": "initWithMachMessage:",
+      "bridgedName": "initWithMachMessage",
+      "args": [
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "components": {
+      "name": "components",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "receivePort": {
+      "name": "receivePort",
+      "pointer": true,
+      "type": "NSPort",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "sendPort": {
+      "name": "sendPort",
+      "pointer": true,
+      "type": "NSPort",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    }
+  }
+}

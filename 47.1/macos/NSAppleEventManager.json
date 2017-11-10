@@ -1,0 +1,283 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSAppleEventDescriptor"
+  ],
+  "protocol": false,
+  "className": "NSAppleEventManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "sharedAppleEventManager": {
+      "name": "sharedAppleEventManager",
+      "bridgedName": "sharedAppleEventManager",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_eventAccessGroups:matchesDefinitionGroups:": {
+      "name": "_eventAccessGroups:matchesDefinitionGroups:",
+      "bridgedName": "_eventAccessGroups_matchesDefinitionGroups",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "resumeWithSuspensionID:": {
+      "name": "resumeWithSuspensionID:",
+      "bridgedName": "resumeWithSuspensionID",
+      "args": [
+        {
+          "type": "struct __NSAppleEventManagerSuspension *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCurrentAppleEventAndReplyEventWithSuspensionID:": {
+      "name": "setCurrentAppleEventAndReplyEventWithSuspensionID:",
+      "bridgedName": "setCurrentAppleEventAndReplyEventWithSuspensionID",
+      "args": [
+        {
+          "type": "struct __NSAppleEventManagerSuspension *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replyAppleEventForSuspensionID:": {
+      "name": "replyAppleEventForSuspensionID:",
+      "bridgedName": "replyAppleEventForSuspensionID",
+      "args": [
+        {
+          "type": "struct __NSAppleEventManagerSuspension *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appleEventForSuspensionID:": {
+      "name": "appleEventForSuspensionID:",
+      "bridgedName": "appleEventForSuspensionID",
+      "args": [
+        {
+          "type": "struct __NSAppleEventManagerSuspension *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suspendCurrentAppleEvent": {
+      "name": "suspendCurrentAppleEvent",
+      "bridgedName": "suspendCurrentAppleEvent",
+      "args": [],
+      "returns": "const struct __NSAppleEventManagerSuspension *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dispatchRawAppleEvent:withRawReply:handlerRefCon:": {
+      "name": "dispatchRawAppleEvent:withRawReply:handlerRefCon:",
+      "bridgedName": "dispatchRawAppleEvent_withRawReply_handlerRefCon",
+      "args": [
+        {
+          "type": "const struct AEDesc *"
+        },
+        {
+          "type": "struct AEDesc *"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "short",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeEventHandlerForEventClass:andEventID:": {
+      "name": "removeEventHandlerForEventClass:andEventID:",
+      "bridgedName": "removeEventHandlerForEventClass_andEventID",
+      "args": [
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEventHandler:andSelector:forEventClass:andEventID:": {
+      "name": "setEventHandler:andSelector:forEventClass:andEventID:",
+      "bridgedName": "setEventHandler_andSelector_forEventClass_andEventID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareForDispatch": {
+      "name": "_prepareForDispatch",
+      "bridgedName": "_prepareForDispatch",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setEventSecurityHandler:andSelector:forEventClass:andEventID:": {
+      "name": "_setEventSecurityHandler:andSelector:forEventClass:andEventID:",
+      "bridgedName": "_setEventSecurityHandler_andSelector_forEventClass_andEventID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resumeIfNotTopHandling:withScriptCommandResult:": {
+      "name": "_resumeIfNotTopHandling:withScriptCommandResult:",
+      "bridgedName": "_resumeIfNotTopHandling_withScriptCommandResult",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suspendIfTopHandling:": {
+      "name": "_suspendIfTopHandling:",
+      "bridgedName": "_suspendIfTopHandling",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popIfTopHandling:": {
+      "name": "_popIfTopHandling:",
+      "bridgedName": "_popIfTopHandling",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_poppedTopHandling": {
+      "name": "_poppedTopHandling",
+      "bridgedName": "_poppedTopHandling",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pushHandling:": {
+      "name": "_pushHandling:",
+      "bridgedName": "_pushHandling",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_topHandling": {
+      "name": "_topHandling",
+      "bridgedName": "_topHandling",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_perThreadHandlingStack:": {
+      "name": "_perThreadHandlingStack:",
+      "bridgedName": "_perThreadHandlingStack",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "currentReplyAppleEvent": {
+      "name": "currentReplyAppleEvent",
+      "pointer": true,
+      "type": "NSAppleEventDescriptor",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "currentAppleEvent": {
+      "name": "currentAppleEvent",
+      "pointer": true,
+      "type": "NSAppleEventDescriptor",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    }
+  }
+}

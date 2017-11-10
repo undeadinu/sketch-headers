@@ -1,0 +1,1293 @@
+{
+  "imports": [
+    "NSCollectionViewDataSource.h",
+    "NSCollectionViewDelegateDFRCustomizationLayout.h",
+    "NSTouchBarCustomizationPreviewFlexibleSectionLayoutDelegate.h",
+    "NSTouchBarCustomizationPreviewInteractionCoordinatorDelegate.h",
+    "NSTouchBarCustomizationPreviewMiniControlStripSectionLayoutDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSCollectionView",
+    "NSString",
+    "NSTouchBarCustomizationPreviewInteractionCoordinator",
+    "NSTouchBarItemTree",
+    "_NSFunctionRowCustomizationDFRItem"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarCustomizationPreviewViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSTouchBarCustomizationPreviewInteractionCoordinatorDelegate",
+    "NSCollectionViewDelegateDFRCustomizationLayout",
+    "NSCollectionViewDataSource",
+    "NSTouchBarCustomizationPreviewFlexibleSectionLayoutDelegate",
+    "NSTouchBarCustomizationPreviewMiniControlStripSectionLayoutDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLayout": {
+      "name": "viewDidLayout",
+      "bridgedName": "viewDidLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexPathForInsertingItemWithFrame:withApproximateIndex:": {
+      "name": "indexPathForInsertingItemWithFrame:withApproximateIndex:",
+      "bridgedName": "indexPathForInsertingItemWithFrame_withApproximateIndex",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isItemAtIndexPathEditable:": {
+      "name": "isItemAtIndexPathEditable:",
+      "bridgedName": "isItemAtIndexPathEditable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlStripGrabberStateInCollectionView:layout:": {
+      "name": "controlStripGrabberStateInCollectionView:layout:",
+      "bridgedName": "controlStripGrabberStateInCollectionView_layout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowDoneInCollectionView:layout:": {
+      "name": "shouldShowDoneInCollectionView:layout:",
+      "bridgedName": "shouldShowDoneInCollectionView_layout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteIconDisplayModeInCollectionView:layout:": {
+      "name": "deleteIconDisplayModeInCollectionView:layout:",
+      "bridgedName": "deleteIconDisplayModeInCollectionView_layout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "escapeKeyFrameForCollectionView:layout:": {
+      "name": "escapeKeyFrameForCollectionView:layout:",
+      "bridgedName": "escapeKeyFrameForCollectionView_layout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualCenterXOffsetForSectionLayout:": {
+      "name": "visualCenterXOffsetForSectionLayout:",
+      "bridgedName": "visualCenterXOffsetForSectionLayout",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sectionLayout:itemStateForItemAtIndex:withFrame:": {
+      "name": "sectionLayout:itemStateForItemAtIndex:withFrame:",
+      "bridgedName": "sectionLayout_itemStateForItemAtIndex_withFrame",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sectionLayout:descriptionForItemAtIndex:": {
+      "name": "sectionLayout:descriptionForItemAtIndex:",
+      "bridgedName": "sectionLayout_descriptionForItemAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_priorityIndexForItem:": {
+      "name": "_priorityIndexForItem:",
+      "bridgedName": "_priorityIndexForItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:sectionLayoutForSection:": {
+      "name": "collectionView:layout:sectionLayoutForSection:",
+      "bridgedName": "collectionView_layout_sectionLayoutForSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:paddingForSection:": {
+      "name": "collectionView:layout:paddingForSection:",
+      "bridgedName": "collectionView_layout_paddingForSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:containmentFrameForSection:": {
+      "name": "collectionView:layout:containmentFrameForSection:",
+      "bridgedName": "collectionView_layout_containmentFrameForSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paddingForSectionLayout:": {
+      "name": "paddingForSectionLayout:",
+      "bridgedName": "paddingForSectionLayout",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containmentRectForSectionLayout:": {
+      "name": "containmentRectForSectionLayout:",
+      "bridgedName": "containmentRectForSectionLayout",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paddingForSection:": {
+      "name": "paddingForSection:",
+      "bridgedName": "paddingForSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containmentRectForSection:": {
+      "name": "containmentRectForSection:",
+      "bridgedName": "containmentRectForSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sectionLayoutIsVisible:": {
+      "name": "sectionLayoutIsVisible:",
+      "bridgedName": "sectionLayoutIsVisible",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:shouldDisplayBackgroundForSection:withRect:": {
+      "name": "collectionView:layout:shouldDisplayBackgroundForSection:withRect:",
+      "bridgedName": "collectionView_layout_shouldDisplayBackgroundForSection_withRect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "struct CGRect *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:shouldDisplayShadeRectForSection:": {
+      "name": "collectionView:layout:shouldDisplayShadeRectForSection:",
+      "bridgedName": "collectionView_layout_shouldDisplayShadeRectForSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contentIsAnimatedInCollectionView:layout:": {
+      "name": "contentIsAnimatedInCollectionView:layout:",
+      "bridgedName": "contentIsAnimatedInCollectionView_layout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:viewForSupplementaryElementOfKind:atIndexPath:": {
+      "name": "collectionView:viewForSupplementaryElementOfKind:atIndexPath:",
+      "bridgedName": "collectionView_viewForSupplementaryElementOfKind_atIndexPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:itemForRepresentedObjectAtIndexPath:": {
+      "name": "collectionView:itemForRepresentedObjectAtIndexPath:",
+      "bridgedName": "collectionView_itemForRepresentedObjectAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfItemsForSectionLayout:": {
+      "name": "numberOfItemsForSectionLayout:",
+      "bridgedName": "numberOfItemsForSectionLayout",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:numberOfItemsInSection:": {
+      "name": "collectionView:numberOfItemsInSection:",
+      "bridgedName": "collectionView_numberOfItemsInSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfItemsInSection:": {
+      "name": "numberOfItemsInSection:",
+      "bridgedName": "numberOfItemsInSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfSectionsInCollectionView:": {
+      "name": "numberOfSectionsInCollectionView:",
+      "bridgedName": "numberOfSectionsInCollectionView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notifyDelegateOfBarUpdate:inTree:": {
+      "name": "_notifyDelegateOfBarUpdate:inTree:",
+      "bridgedName": "_notifyDelegateOfBarUpdate_inTree",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeItem:inSection:reload:": {
+      "name": "removeItem:inSection:reload:",
+      "bridgedName": "removeItem_inSection_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeItemAtIndex:inSection:reload:": {
+      "name": "removeItemAtIndex:inSection:reload:",
+      "bridgedName": "removeItemAtIndex_inSection_reload",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canRemoveItem:inSection:": {
+      "name": "canRemoveItem:inSection:",
+      "bridgedName": "canRemoveItem_inSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canRemoveItemAtIndex:inSection:": {
+      "name": "canRemoveItemAtIndex:inSection:",
+      "bridgedName": "canRemoveItemAtIndex_inSection",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveItemAtIndex:toIndex:inSection:reload:": {
+      "name": "moveItemAtIndex:toIndex:inSection:reload:",
+      "bridgedName": "moveItemAtIndex_toIndex_inSection_reload",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canMoveItemAtIndex:toIndex:inSection:": {
+      "name": "canMoveItemAtIndex:toIndex:inSection:",
+      "bridgedName": "canMoveItemAtIndex_toIndex_inSection",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canReorderItemAtIndex:inSection:": {
+      "name": "canReorderItemAtIndex:inSection:",
+      "bridgedName": "canReorderItemAtIndex_inSection",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToInsertItem:inSection:reload:": {
+      "name": "prepareToInsertItem:inSection:reload:",
+      "bridgedName": "prepareToInsertItem_inSection_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertItem:atIndex:inSection:reload:": {
+      "name": "insertItem:atIndex:inSection:reload:",
+      "bridgedName": "insertItem_atIndex_inSection_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canInsertItem:atIndex:inSection:": {
+      "name": "canInsertItem:atIndex:inSection:",
+      "bridgedName": "canInsertItem_atIndex_inSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentedExpandedControlStripItems": {
+      "name": "_presentedExpandedControlStripItems",
+      "bridgedName": "_presentedExpandedControlStripItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentedMiniControlStripItems": {
+      "name": "_presentedMiniControlStripItems",
+      "bridgedName": "_presentedMiniControlStripItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentedApplicationItems": {
+      "name": "_presentedApplicationItems",
+      "bridgedName": "_presentedApplicationItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentedItemsInSection:": {
+      "name": "_presentedItemsInSection:",
+      "bridgedName": "_presentedItemsInSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateModel:animated:": {
+      "name": "updateModel:animated:",
+      "bridgedName": "updateModel_animated",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPendingItem:inSection:reload:": {
+      "name": "_setPendingItem:inSection:reload:",
+      "bridgedName": "_setPendingItem_inSection_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pendingItemInSection:": {
+      "name": "_pendingItemInSection:",
+      "bridgedName": "_pendingItemInSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPendingExpandedControlStripItem:reload:": {
+      "name": "_setPendingExpandedControlStripItem:reload:",
+      "bridgedName": "_setPendingExpandedControlStripItem_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setExpandedControlStripItemTree:reload:": {
+      "name": "_setExpandedControlStripItemTree:reload:",
+      "bridgedName": "_setExpandedControlStripItemTree_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateExpandedControlStripPresentedItemsReload:": {
+      "name": "_invalidateExpandedControlStripPresentedItemsReload:",
+      "bridgedName": "_invalidateExpandedControlStripPresentedItemsReload",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPendingMiniControlStripItem:reload:": {
+      "name": "_setPendingMiniControlStripItem:reload:",
+      "bridgedName": "_setPendingMiniControlStripItem_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMiniControlStripItemTree:reload:": {
+      "name": "_setMiniControlStripItemTree:reload:",
+      "bridgedName": "_setMiniControlStripItemTree_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateMiniControlStripPresentedItemsReload:": {
+      "name": "_invalidateMiniControlStripPresentedItemsReload:",
+      "bridgedName": "_invalidateMiniControlStripPresentedItemsReload",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPendingApplicationItem:reload:": {
+      "name": "_setPendingApplicationItem:reload:",
+      "bridgedName": "_setPendingApplicationItem_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setApplicationItemTree:reload:": {
+      "name": "_setApplicationItemTree:reload:",
+      "bridgedName": "_setApplicationItemTree_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateApplicationPresentedItemsReload:": {
+      "name": "_invalidateApplicationPresentedItemsReload:",
+      "bridgedName": "_invalidateApplicationPresentedItemsReload",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadItemsInSection:": {
+      "name": "reloadItemsInSection:",
+      "bridgedName": "reloadItemsInSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setItemTree:inSection:reload:": {
+      "name": "_setItemTree:inSection:reload:",
+      "bridgedName": "_setItemTree_inSection_reload",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItemTree:inSection:": {
+      "name": "setItemTree:inSection:",
+      "bridgedName": "setItemTree_inSection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemTreeInSection:": {
+      "name": "itemTreeInSection:",
+      "bridgedName": "itemTreeInSection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectSection:": {
+      "name": "selectSection:",
+      "bridgedName": "selectSection",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applicationSectionIsCustomizable": {
+      "name": "applicationSectionIsCustomizable",
+      "bridgedName": "applicationSectionIsCustomizable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleGrabber:": {
+      "name": "toggleGrabber:",
+      "bridgedName": "toggleGrabber",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "done:": {
+      "name": "done:",
+      "bridgedName": "done",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateForAnimationOut": {
+      "name": "updateForAnimationOut",
+      "bridgedName": "updateForAnimationOut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToAnimateOut": {
+      "name": "prepareToAnimateOut",
+      "bridgedName": "prepareToAnimateOut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateForAnimationIn": {
+      "name": "updateForAnimationIn",
+      "bridgedName": "updateForAnimationIn",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToAnimateIn": {
+      "name": "prepareToAnimateIn",
+      "bridgedName": "prepareToAnimateIn",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewControllerSupports10_10Features": {
+      "name": "_viewControllerSupports10_10Features",
+      "bridgedName": "_viewControllerSupports10_10Features",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorCancelled": {
+      "name": "cursorCancelled",
+      "bridgedName": "cursorCancelled",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorMouseUpAtPoint:": {
+      "name": "cursorMouseUpAtPoint:",
+      "bridgedName": "cursorMouseUpAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorMouseDownAtPoint:": {
+      "name": "cursorMouseDownAtPoint:",
+      "bridgedName": "cursorMouseDownAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorMovedToPoint:withDelta:mouseIsDown:": {
+      "name": "cursorMovedToPoint:withDelta:mouseIsDown:",
+      "bridgedName": "cursorMovedToPoint_withDelta_mouseIsDown",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorExitAtPoint:withItem:": {
+      "name": "cursorExitAtPoint:withItem:",
+      "bridgedName": "cursorExitAtPoint_withItem",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorEnterAtPoint:mouseIsDown:withPreset:": {
+      "name": "cursorEnterAtPoint:mouseIsDown:withPreset:",
+      "bridgedName": "cursorEnterAtPoint_mouseIsDown_withPreset",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorEnterAtPoint:mouseIsDown:withItem:": {
+      "name": "cursorEnterAtPoint:mouseIsDown:withItem:",
+      "bridgedName": "cursorEnterAtPoint_mouseIsDown_withItem",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorCanEnterCustomizationWithItem:orPreset:": {
+      "name": "cursorCanEnterCustomizationWithItem:orPreset:",
+      "bridgedName": "cursorCanEnterCustomizationWithItem_orPreset",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinator:didCancelDrag:isRemoval:": {
+      "name": "coordinator:didCancelDrag:isRemoval:",
+      "bridgedName": "coordinator_didCancelDrag_isRemoval",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinator:didFinishDrag:isRemoval:": {
+      "name": "coordinator:didFinishDrag:isRemoval:",
+      "bridgedName": "coordinator_didFinishDrag_isRemoval",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinator:willFinishDrag:": {
+      "name": "coordinator:willFinishDrag:",
+      "bridgedName": "coordinator_willFinishDrag",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinator:didUpdateDrag:": {
+      "name": "coordinator:didUpdateDrag:",
+      "bridgedName": "coordinator_didUpdateDrag",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinator:didBeginDrag:isInsertion:": {
+      "name": "coordinator:didBeginDrag:isInsertion:",
+      "bridgedName": "coordinator_didBeginDrag_isInsertion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityResetToPreset:": {
+      "name": "accessibilityResetToPreset:",
+      "bridgedName": "accessibilityResetToPreset",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAddItem:": {
+      "name": "accessibilityAddItem:",
+      "bridgedName": "accessibilityAddItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRemoveItem:": {
+      "name": "accessibilityRemoveItem:",
+      "bridgedName": "accessibilityRemoveItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "expandedControlStripItemTree": {
+      "name": "expandedControlStripItemTree",
+      "pointer": true,
+      "type": "NSTouchBarItemTree",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "miniControlStripItemTree": {
+      "name": "miniControlStripItemTree",
+      "pointer": true,
+      "type": "NSTouchBarItemTree",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "applicationItemTree": {
+      "name": "applicationItemTree",
+      "pointer": true,
+      "type": "NSTouchBarItemTree",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSArray"
+  ],
+  "protocol": false,
+  "className": "MSPointSnappingResult",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "snappingResultWithPoint:axes:": {
+      "name": "snappingResultWithPoint:axes:",
+      "bridgedName": "snappingResultWithPoint_axes",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawAtZoomValue:": {
+      "name": "drawAtZoomValue:",
+      "bridgedName": "drawAtZoomValue",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPoint:guides:snappedAxes:": {
+      "name": "initWithPoint:guides:snappedAxes:",
+      "bridgedName": "initWithPoint_guides_snappedAxes",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "snappedAxes": {
+      "name": "snappedAxes",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "guides": {
+      "name": "guides",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "point": {
+      "name": "point",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

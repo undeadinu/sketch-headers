@@ -1,0 +1,384 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSAssetLibraryDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSHashTable",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSAssetLibraryController",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSAssetLibraryDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "libraryForSymbol:": {
+      "name": "libraryForSymbol:",
+      "bridgedName": "libraryForSymbol",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateForeignSymbolsInDocument:includeDisabled:block:": {
+      "name": "enumerateForeignSymbolsInDocument:includeDisabled:block:",
+      "bridgedName": "enumerateForeignSymbolsInDocument_includeDisabled_block",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncForeignSymbol:withMaster:fromLibrary:": {
+      "name": "syncForeignSymbol:withMaster:fromLibrary:",
+      "bridgedName": "syncForeignSymbol_withMaster_fromLibrary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "importForeignSymbol:fromLibrary:intoDocument:": {
+      "name": "importForeignSymbol:fromLibrary:intoDocument:",
+      "bridgedName": "importForeignSymbol_fromLibrary_intoDocument",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncNestedSymbolsOf:withMaster:fromLibrary:": {
+      "name": "syncNestedSymbolsOf:withMaster:fromLibrary:",
+      "bridgedName": "syncNestedSymbolsOf_withMaster_fromLibrary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateOverrideIDsForForeignSymbol:inLibrary:": {
+      "name": "updateOverrideIDsForForeignSymbol:inLibrary:",
+      "bridgedName": "updateOverrideIDsForForeignSymbol_inLibrary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolIDsMappingFrom:toLibrary:": {
+      "name": "symbolIDsMappingFrom:toLibrary:",
+      "bridgedName": "symbolIDsMappingFrom_toLibrary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "foreignSymbolInDocument:matchingMaster:inLibrary:": {
+      "name": "foreignSymbolInDocument:matchingMaster:inLibrary:",
+      "bridgedName": "foreignSymbolInDocument_matchingMaster_inLibrary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadLibraries": {
+      "name": "loadLibraries",
+      "bridgedName": "loadLibraries",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupInternalLibraries": {
+      "name": "setupInternalLibraries",
+      "bridgedName": "setupInternalLibraries",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadLibrariesFromUnarchiver:forKey:": {
+      "name": "loadLibrariesFromUnarchiver:forKey:",
+      "bridgedName": "loadLibrariesFromUnarchiver_forKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "assetLibraryEnableStateChanged:": {
+      "name": "assetLibraryEnableStateChanged:",
+      "bridgedName": "assetLibraryEnableStateChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "assetLibraryChangedOnDisk:": {
+      "name": "assetLibraryChangedOnDisk:",
+      "bridgedName": "assetLibraryChangedOnDisk",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadLibrary:": {
+      "name": "reloadLibrary:",
+      "bridgedName": "reloadLibrary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "notifyLibraryChange:": {
+      "name": "notifyLibraryChange:",
+      "bridgedName": "notifyLibraryChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeDelegate:": {
+      "name": "removeDelegate:",
+      "bridgedName": "removeDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDelegate:": {
+      "name": "addDelegate:",
+      "bridgedName": "addDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveLibraries": {
+      "name": "saveLibraries",
+      "bridgedName": "saveLibraries",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAssetLibrary:": {
+      "name": "removeAssetLibrary:",
+      "bridgedName": "removeAssetLibrary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addAssetLibraryAtURL:": {
+      "name": "addAssetLibraryAtURL:",
+      "bridgedName": "addAssetLibraryAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "delegates": {
+      "name": "delegates",
+      "pointer": true,
+      "type": "NSHashTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "userLibraries": {
+      "name": "userLibraries",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "internalLibraries": {
+      "name": "internalLibraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "libraries": {
+      "name": "libraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "availableLibraries": {
+      "name": "availableLibraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

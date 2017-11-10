@@ -1,0 +1,235 @@
+{
+  "imports": [
+    "NSFileAccessArbiter.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSFileAccessClaim",
+    "NSFileSubarbitrationClaim",
+    "NSNumber",
+    "NSSet",
+    "NSString",
+    "NSURL",
+    "NSUUID",
+    "NSXPCListenerEndpoint"
+  ],
+  "protocol": true,
+  "className": "NSFileAccessArbiterXPCInterface",
+  "interfaces": [],
+  "methods": {
+    "performBarrierWithCompletionHandler:": {
+      "name": "performBarrierWithCompletionHandler:",
+      "bridgedName": "performBarrierWithCompletionHandler",
+      "args": [
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideSubarbiterDebugInfoIncludingEverything:completionHandler:*, NSError *))arg2": {
+      "name": "provideSubarbiterDebugInfoIncludingEverything:completionHandler:*, NSError *))arg2",
+      "bridgedName": "provideSubarbiterDebugInfoIncludingEverything_completionHandler_*, NSError *))arg2",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideDebugInfoWithLocalInfo:completionHandler:*, NSError *))arg2": {
+      "name": "provideDebugInfoWithLocalInfo:completionHandler:*, NSError *))arg2",
+      "bridgedName": "provideDebugInfoWithLocalInfo_completionHandler_*, NSError *))arg2",
+      "args": [
+        {
+          "type": "NSString *"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getItemHasPresentersAtURL:completionHandler:": {
+      "name": "getItemHasPresentersAtURL:completionHandler:",
+      "bridgedName": "getItemHasPresentersAtURL_completionHandler",
+      "args": [
+        {
+          "type": "NSURL *"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startArbitratingWithReply:": {
+      "name": "startArbitratingWithReply:",
+      "bridgedName": "startArbitratingWithReply",
+      "args": [
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToArbitrateForURLs:": {
+      "name": "prepareToArbitrateForURLs:",
+      "bridgedName": "prepareToArbitrateForURLs",
+      "args": [
+        {
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantSubarbitrationClaim:withServer:reply:*))arg3": {
+      "name": "grantSubarbitrationClaim:withServer:reply:*))arg3",
+      "bridgedName": "grantSubarbitrationClaim_withServer_reply_*))arg3",
+      "args": [
+        {
+          "type": "NSFileSubarbitrationClaim *"
+        },
+        {
+          "type": "NSXPCListenerEndpoint *"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeProviderWithID:uniqueID:": {
+      "name": "removeProviderWithID:uniqueID:",
+      "bridgedName": "removeProviderWithID_uniqueID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSUUID *"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addProvider:withID:uniqueID:forProvidedItemsURL:options:withServer:reply:": {
+      "name": "addProvider:withID:uniqueID:forProvidedItemsURL:options:withServer:reply:",
+      "bridgedName": "addProvider_withID_uniqueID_forProvidedItemsURL_options_withServer_reply",
+      "args": [
+        {
+          "type": "id <NSFileProviderXPCInterface>"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSUUID *"
+        },
+        {
+          "type": "NSURL *"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "NSXPCListenerEndpoint *"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePresenterWithID:": {
+      "name": "removePresenterWithID:",
+      "bridgedName": "removePresenterWithID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPresenter:withID:fileURL:lastPresentedItemEventIdentifier:ubiquityAttributes:options:responses:": {
+      "name": "addPresenter:withID:fileURL:lastPresentedItemEventIdentifier:ubiquityAttributes:options:responses:",
+      "bridgedName": "addPresenter_withID_fileURL_lastPresentedItemEventIdentifier_ubiquityAttributes_options_responses",
+      "args": [
+        {
+          "type": "id <NSFilePresenterXPCInterface>"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "NSURL *"
+        },
+        {
+          "type": "NSNumber *"
+        },
+        {
+          "type": "NSSet *"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revokeAccessClaimForID:": {
+      "name": "revokeAccessClaimForID:",
+      "bridgedName": "revokeAccessClaimForID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantAccessClaim:withReply:*, NSArray *, NSArray *, NSError *))arg2": {
+      "name": "grantAccessClaim:withReply:*, NSArray *, NSArray *, NSError *))arg2",
+      "bridgedName": "grantAccessClaim_withReply_*, NSArray *, NSArray *, NSError *))arg2",
+      "args": [
+        {
+          "type": "NSFileAccessClaim *"
+        },
+        {
+          "type": "void (^"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

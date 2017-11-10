@@ -1,0 +1,571 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSFileAccessClientLocalArbiterInterface.h",
+    "NSXPCConnectionDelegate.h",
+    "NSXPCListenerDelegate.h"
+  ],
+  "classes": [
+    "NSMapTable",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableSet",
+    "NSObject<OS_dispatch_queue>",
+    "NSString",
+    "NSXPCConnection"
+  ],
+  "protocol": false,
+  "className": "NSFileAccessArbiterProxy",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSFileAccessClientLocalArbiterInterface",
+    "NSXPCListenerDelegate",
+    "NSXPCConnectionDelegate"
+  ],
+  "methods": {
+    "_fileReactorDebuggingInformation": {
+      "name": "_fileReactorDebuggingInformation",
+      "bridgedName": "_fileReactorDebuggingInformation",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_willBeginOperationForReactor:withDescription:": {
+      "name": "_willBeginOperationForReactor:withDescription:",
+      "bridgedName": "_willBeginOperationForReactor_withDescription",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_accessPresenterOperationRecordsUsingBlock:": {
+      "name": "_accessPresenterOperationRecordsUsingBlock:",
+      "bridgedName": "_accessPresenterOperationRecordsUsingBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_fetchProviderMessengerForListener:": {
+      "name": "_fetchProviderMessengerForListener:",
+      "bridgedName": "_fetchProviderMessengerForListener",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setProviderMessenger:forListener:": {
+      "name": "_setProviderMessenger:forListener:",
+      "bridgedName": "_setProviderMessenger_forListener",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_idForReactor:": {
+      "name": "_idForReactor:",
+      "bridgedName": "_idForReactor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "handleCanceledServer": {
+      "name": "handleCanceledServer",
+      "bridgedName": "handleCanceledServer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performBarrierAsync:": {
+      "name": "performBarrierAsync:",
+      "bridgedName": "performBarrierAsync",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performBarrier": {
+      "name": "performBarrier",
+      "bridgedName": "performBarrier",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemHasPresentersAtURL:": {
+      "name": "itemHasPresentersAtURL:",
+      "bridgedName": "itemHasPresentersAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getDebugInfoWithCompletionHandler:": {
+      "name": "getDebugInfoWithCompletionHandler:",
+      "bridgedName": "getDebugInfoWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "idForFileReactor:": {
+      "name": "idForFileReactor:",
+      "bridgedName": "idForFileReactor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileProviders": {
+      "name": "fileProviders",
+      "bridgedName": "fileProviders",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_onqueue_fileProviders": {
+      "name": "_onqueue_fileProviders",
+      "bridgedName": "_onqueue_fileProviders",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFileProvider:": {
+      "name": "removeFileProvider:",
+      "bridgedName": "removeFileProvider",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addFileProvider:completionHandler:": {
+      "name": "addFileProvider:completionHandler:",
+      "bridgedName": "addFileProvider_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "listener:shouldAcceptNewConnection:": {
+      "name": "listener:shouldAcceptNewConnection:",
+      "bridgedName": "listener_shouldAcceptNewConnection",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filePresenters": {
+      "name": "filePresenters",
+      "bridgedName": "filePresenters",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_onqueue_filePresenters": {
+      "name": "_onqueue_filePresenters",
+      "bridgedName": "_onqueue_filePresenters",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFilePresenter:": {
+      "name": "removeFilePresenter:",
+      "bridgedName": "removeFilePresenter",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addFilePresenter:": {
+      "name": "addFilePresenter:",
+      "bridgedName": "addFilePresenter",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tiePresenterForID:toItemAtURL:": {
+      "name": "tiePresenterForID:toItemAtURL:",
+      "bridgedName": "tiePresenterForID_toItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didVersionChangeOfKind:toItemAtURL:withClientID:name:": {
+      "name": "writerWithPurposeID:didVersionChangeOfKind:toItemAtURL:withClientID:name:",
+      "bridgedName": "writerWithPurposeID_didVersionChangeOfKind_toItemAtURL_withClientID_name",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didMakeItemDisappearAtURL:": {
+      "name": "writerWithPurposeID:didMakeItemDisappearAtURL:",
+      "bridgedName": "writerWithPurposeID_didMakeItemDisappearAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeUbiquityAttributes:ofItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeUbiquityAttributes:ofItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeUbiquityAttributes_ofItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeSharingOfItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeSharingOfItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeSharingOfItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeUbiquityOfItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeUbiquityOfItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeUbiquityOfItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didReconnectItemAtURL:": {
+      "name": "writerWithPurposeID:didReconnectItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didReconnectItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didDisconnectItemAtURL:": {
+      "name": "writerWithPurposeID:didDisconnectItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didDisconnectItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didMoveItemAtURL:toURL:": {
+      "name": "writerWithPurposeID:didMoveItemAtURL:toURL:",
+      "bridgedName": "writerWithPurposeID_didMoveItemAtURL_toURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelAccessClaimForID:": {
+      "name": "cancelAccessClaimForID:",
+      "bridgedName": "cancelAccessClaimForID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revokeSubarbitrationClaimForID:": {
+      "name": "revokeSubarbitrationClaimForID:",
+      "bridgedName": "revokeSubarbitrationClaimForID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantSubarbitrationClaim:withServer:": {
+      "name": "grantSubarbitrationClaim:withServer:",
+      "bridgedName": "grantSubarbitrationClaim_withServer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revokeAccessClaimForID:": {
+      "name": "revokeAccessClaimForID:",
+      "bridgedName": "revokeAccessClaimForID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantAccessClaim:synchronouslyIfPossible:": {
+      "name": "grantAccessClaim:synchronouslyIfPossible:",
+      "bridgedName": "grantAccessClaim_synchronouslyIfPossible",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForXPCConnection:encoder:object:": {
+      "name": "replacementObjectForXPCConnection:encoder:object:",
+      "bridgedName": "replacementObjectForXPCConnection_encoder_object",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithServer:queue:": {
+      "name": "initWithServer:queue:",
+      "bridgedName": "initWithServer_queue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

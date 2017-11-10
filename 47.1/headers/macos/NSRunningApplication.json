@@ -1,0 +1,675 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDate",
+    "NSImage",
+    "NSLock",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "NSRunningApplication",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "terminateAutomaticallyTerminableApplications": {
+      "name": "terminateAutomaticallyTerminableApplications",
+      "bridgedName": "terminateAutomaticallyTerminableApplications",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_deactivateCurrentAppAndCheckIfFrontReservationIsAvailable": {
+      "name": "_deactivateCurrentAppAndCheckIfFrontReservationIsAvailable",
+      "bridgedName": "_deactivateCurrentAppAndCheckIfFrontReservationIsAvailable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "currentApplication": {
+      "name": "currentApplication",
+      "bridgedName": "currentApplication",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "runningApplicationWithProcessIdentifier:": {
+      "name": "runningApplicationWithProcessIdentifier:",
+      "bridgedName": "runningApplicationWithProcessIdentifier",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "runningApplicationsWithBundleIdentifier:": {
+      "name": "runningApplicationsWithBundleIdentifier:",
+      "bridgedName": "runningApplicationsWithBundleIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_TALTerminatedApplications": {
+      "name": "_TALTerminatedApplications",
+      "bridgedName": "_TALTerminatedApplications",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_allApplications": {
+      "name": "_allApplications",
+      "bridgedName": "_allApplications",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_allRunningApplications": {
+      "name": "_allRunningApplications",
+      "bridgedName": "_allRunningApplications",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_transformASNArrayToAppArrayWithRelease:": {
+      "name": "_transformASNArrayToAppArrayWithRelease:",
+      "bridgedName": "_transformASNArrayToAppArrayWithRelease",
+      "args": [
+        {
+          "type": "struct __CFArray *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_dumpRunningApplicationObservationInfo": {
+      "name": "_dumpRunningApplicationObservationInfo",
+      "bridgedName": "_dumpRunningApplicationObservationInfo",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "terminate": {
+      "name": "terminate",
+      "bridgedName": "terminate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "forceTerminate": {
+      "name": "forceTerminate",
+      "bridgedName": "forceTerminate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isLSStopped": {
+      "name": "_isLSStopped",
+      "bridgedName": "_isLSStopped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isProxiedByTalagent": {
+      "name": "_isProxiedByTalagent",
+      "bridgedName": "_isProxiedByTalagent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "activateWithOptions:": {
+      "name": "activateWithOptions:",
+      "bridgedName": "activateWithOptions",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unhide": {
+      "name": "unhide",
+      "bridgedName": "unhide",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hide": {
+      "name": "hide",
+      "bridgedName": "hide",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performWithPSN:": {
+      "name": "_performWithPSN:",
+      "bridgedName": "_performWithPSN",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observationInfo": {
+      "name": "observationInfo",
+      "bridgedName": "observationInfo",
+      "args": [],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObservationInfo:": {
+      "name": "setObservationInfo:",
+      "bridgedName": "setObservationInfo",
+      "args": [
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasASN:": {
+      "name": "_hasASN:",
+      "bridgedName": "_hasASN",
+      "args": [
+        {
+          "type": "struct __LSASN *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initDeadWithLSDictionary:forASN:": {
+      "name": "_initDeadWithLSDictionary:forASN:",
+      "bridgedName": "_initDeadWithLSDictionary_forASN",
+      "args": [
+        {
+          "type": "struct __CFDictionary *"
+        },
+        {
+          "type": "struct __LSASN *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithApplicationSerialNumber:": {
+      "name": "initWithApplicationSerialNumber:",
+      "bridgedName": "initWithApplicationSerialNumber",
+      "args": [
+        {
+          "type": "struct __LSASN *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchStaticInformationWithAtLeastKey:": {
+      "name": "_fetchStaticInformationWithAtLeastKey:",
+      "bridgedName": "_fetchStaticInformationWithAtLeastKey",
+      "args": [
+        {
+          "type": "struct __CFString *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applyInformationFromLSDictionary:includeDynamicProperties:": {
+      "name": "_applyInformationFromLSDictionary:includeDynamicProperties:",
+      "bridgedName": "_applyInformationFromLSDictionary_includeDynamicProperties",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reasonThatQuittingWillBeNoisyOrLoseData": {
+      "name": "_reasonThatQuittingWillBeNoisyOrLoseData",
+      "bridgedName": "_reasonThatQuittingWillBeNoisyOrLoseData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_quittingWillBeNoisyOrLoseData": {
+      "name": "_quittingWillBeNoisyOrLoseData",
+      "bridgedName": "_quittingWillBeNoisyOrLoseData",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateOrStaleProperty:": {
+      "name": "_updateOrStaleProperty:",
+      "bridgedName": "_updateOrStaleProperty",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preserveStaleDynamicPropertiesForRemainderOfRunLoop": {
+      "name": "_preserveStaleDynamicPropertiesForRemainderOfRunLoop",
+      "bridgedName": "_preserveStaleDynamicPropertiesForRemainderOfRunLoop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preservingStaleProperties": {
+      "name": "_preservingStaleProperties",
+      "bridgedName": "_preservingStaleProperties",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchDynamicPropertiesIfNecessaryOrAppSeedIsOutOfDate": {
+      "name": "_fetchDynamicPropertiesIfNecessaryOrAppSeedIsOutOfDate",
+      "bridgedName": "_fetchDynamicPropertiesIfNecessaryOrAppSeedIsOutOfDate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchDynamicPropertiesIfNecessary": {
+      "name": "_fetchDynamicPropertiesIfNecessary",
+      "bridgedName": "_fetchDynamicPropertiesIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchDynamicProperties": {
+      "name": "_fetchDynamicProperties",
+      "bridgedName": "_fetchDynamicProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyPendingPropertyChanges": {
+      "name": "applyPendingPropertyChanges",
+      "bridgedName": "applyPendingPropertyChanges",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateActiveAndMenuBarOwnerProperties": {
+      "name": "_updateActiveAndMenuBarOwnerProperties",
+      "bridgedName": "_updateActiveAndMenuBarOwnerProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applyPropertyChanges:fromDictionary:": {
+      "name": "_applyPropertyChanges:fromDictionary:",
+      "bridgedName": "_applyPropertyChanges_fromDictionary",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "struct __CFDictionary *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchValueForKey:": {
+      "name": "_fetchValueForKey:",
+      "bridgedName": "_fetchValueForKey",
+      "args": [
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getProcessSerialNumber:": {
+      "name": "_getProcessSerialNumber:",
+      "bridgedName": "_getProcessSerialNumber",
+      "args": [
+        {
+          "type": "struct ProcessSerialNumber *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applicationSerialNumber": {
+      "name": "applicationSerialNumber",
+      "bridgedName": "applicationSerialNumber",
+      "args": [],
+      "returns": "struct __LSASN *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObserver:forKeyPath:": {
+      "name": "removeObserver:forKeyPath:",
+      "bridgedName": "removeObserver_forKeyPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObserver:forKeyPath:options:context:": {
+      "name": "addObserver:forKeyPath:options:context:",
+      "bridgedName": "addObserver_forKeyPath_options_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAppPropertyUpdatedByLSNotifications:": {
+      "name": "_isAppPropertyUpdatedByLSNotifications:",
+      "bridgedName": "_isAppPropertyUpdatedByLSNotifications",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_checkForUnecessaryLSNotifications": {
+      "name": "_checkForUnecessaryLSNotifications",
+      "bridgedName": "_checkForUnecessaryLSNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateObservationMask": {
+      "name": "_updateObservationMask",
+      "bridgedName": "_updateObservationMask",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeObservingNotificationMask:to:": {
+      "name": "_changeObservingNotificationMask:to:",
+      "bridgedName": "_changeObservingNotificationMask_to",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_observeChangeInKey:withDataRef:": {
+      "name": "_observeChangeInKey:withDataRef:",
+      "bridgedName": "_observeChangeInKey_withDataRef",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postWillOrDidChangeNotificationsForKeyIndex:isWill:": {
+      "name": "_postWillOrDidChangeNotificationsForKeyIndex:isWill:",
+      "bridgedName": "_postWillOrDidChangeNotificationsForKeyIndex_isWill",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "executableArchitecture": {
+      "name": "executableArchitecture",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "launchDate": {
+      "name": "launchDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "processIdentifier": {
+      "name": "processIdentifier",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "icon": {
+      "name": "icon",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "executableURL": {
+      "name": "executableURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "bundleURL": {
+      "name": "bundleURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "bundleIdentifier": {
+      "name": "bundleIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "localizedName": {
+      "name": "localizedName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "activationPolicy": {
+      "name": "activationPolicy",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "ownsMenuBar": {
+      "name": "ownsMenuBar",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "active": {
+      "name": "active",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isActive"
+      ]
+    },
+    "hidden": {
+      "name": "hidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isHidden"
+      ]
+    },
+    "finishedLaunching": {
+      "name": "finishedLaunching",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isFinishedLaunching"
+      ]
+    },
+    "terminated": {
+      "name": "terminated",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isTerminated"
+      ]
+    }
+  }
+}

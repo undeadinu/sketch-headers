@@ -1,0 +1,211 @@
+{
+  "imports": [],
+  "classes": [
+    "NSFileProviderXPCMessenger",
+    "NSString",
+    "NSUUID"
+  ],
+  "protocol": false,
+  "className": "NSFileProviderProxy",
+  "extends": "NSFileReactorProxy",
+  "interfaces": [],
+  "methods": {
+    "observeEndOfWriteAtLocation:forAccessClaim:": {
+      "name": "observeEndOfWriteAtLocation:forAccessClaim:",
+      "bridgedName": "observeEndOfWriteAtLocation_forAccessClaim",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observePresentationChangeOfKind:withPresenter:url:newURL:": {
+      "name": "observePresentationChangeOfKind:withPresenter:url:newURL:",
+      "bridgedName": "observePresentationChangeOfKind_withPresenter_url_newURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideLogicalURLForURL:completionHandler:": {
+      "name": "provideLogicalURLForURL:completionHandler:",
+      "bridgedName": "provideLogicalURLForURL_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "providePhysicalURLForURL:completionHandler:": {
+      "name": "providePhysicalURLForURL:completionHandler:",
+      "bridgedName": "providePhysicalURLForURL_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideItemAtURL:withOptions:forAccessClaim:completionHandler:": {
+      "name": "provideItemAtURL:withOptions:forAccessClaim:completionHandler:",
+      "bridgedName": "provideItemAtURL_withOptions_forAccessClaim_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "CDUnknownBlockType",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowedForURL:": {
+      "name": "allowedForURL:",
+      "bridgedName": "allowedForURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidate": {
+      "name": "invalidate",
+      "bridgedName": "invalidate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "forwardUsingProxy:": {
+      "name": "forwardUsingProxy:",
+      "bridgedName": "forwardUsingProxy",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItemLocation:": {
+      "name": "setItemLocation:",
+      "bridgedName": "setItemLocation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clientProxy": {
+      "name": "_clientProxy",
+      "bridgedName": "_clientProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithClient:remoteProvider:reactorID:secureID:uniqueID:": {
+      "name": "initWithClient:remoteProvider:reactorID:secureID:uniqueID:",
+      "bridgedName": "initWithClient_remoteProvider_reactorID_secureID_uniqueID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "remoteProvider": {
+      "name": "remoteProvider",
+      "pointer": false,
+      "type": "id <NSFileProviderXPCInterface><NSXPCProxyCreating>",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "uniqueID": {
+      "name": "uniqueID",
+      "pointer": true,
+      "type": "NSUUID",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "secureID": {
+      "name": "secureID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

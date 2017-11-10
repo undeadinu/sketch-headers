@@ -1,0 +1,101 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSDiscardableContent.h"
+  ],
+  "classes": [
+    "NSHashTable"
+  ],
+  "protocol": false,
+  "className": "BCObjectPool",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSDiscardableContent"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isContentDiscarded": {
+      "name": "isContentDiscarded",
+      "bridgedName": "isContentDiscarded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "discardContentIfPossible": {
+      "name": "discardContentIfPossible",
+      "bridgedName": "discardContentIfPossible",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endContentAccess": {
+      "name": "endContentAccess",
+      "bridgedName": "endContentAccess",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginContentAccess": {
+      "name": "beginContentAccess",
+      "bridgedName": "beginContentAccess",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recycleObject:": {
+      "name": "recycleObject:",
+      "bridgedName": "recycleObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "vendObject": {
+      "name": "vendObject",
+      "bridgedName": "vendObject",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithObjectCreatorBlock:": {
+      "name": "initWithObjectCreatorBlock:",
+      "bridgedName": "initWithObjectCreatorBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "creatorBlock": {
+      "name": "creatorBlock",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    }
+  }
+}

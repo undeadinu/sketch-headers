@@ -1,0 +1,186 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSArray"
+  ],
+  "protocol": false,
+  "className": "AFSecurityPolicy",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSSecureCoding",
+    "NSCopying"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingPinnedPublicKeys": {
+      "name": "keyPathsForValuesAffectingPinnedPublicKeys",
+      "bridgedName": "keyPathsForValuesAffectingPinnedPublicKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "policyWithPinningMode:": {
+      "name": "policyWithPinningMode:",
+      "bridgedName": "policyWithPinningMode",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultPolicy": {
+      "name": "defaultPolicy",
+      "bridgedName": "defaultPolicy",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultPinnedCertificates": {
+      "name": "defaultPinnedCertificates",
+      "bridgedName": "defaultPinnedCertificates",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluateServerTrust:forDomain:": {
+      "name": "evaluateServerTrust:forDomain:",
+      "bridgedName": "evaluateServerTrust_forDomain",
+      "args": [
+        {
+          "type": "struct __SecTrust *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluateServerTrust:": {
+      "name": "evaluateServerTrust:",
+      "bridgedName": "evaluateServerTrust",
+      "args": [
+        {
+          "type": "struct __SecTrust *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "pinnedPublicKeys": {
+      "name": "pinnedPublicKeys",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "validatesDomainName": {
+      "name": "validatesDomainName",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "allowInvalidCertificates": {
+      "name": "allowInvalidCertificates",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "pinnedCertificates": {
+      "name": "pinnedCertificates",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "SSLPinningMode": {
+      "name": "SSLPinningMode",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

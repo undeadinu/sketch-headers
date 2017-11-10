@@ -1,0 +1,231 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSObject<OS_dispatch_queue>",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "FMDatabasePool",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "databasePoolWithPath:flags:": {
+      "name": "databasePoolWithPath:flags:",
+      "bridgedName": "databasePoolWithPath_flags",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "databasePoolWithPath:": {
+      "name": "databasePoolWithPath:",
+      "bridgedName": "databasePoolWithPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "inSavePoint:": {
+      "name": "inSavePoint:",
+      "bridgedName": "inSavePoint",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inTransaction:": {
+      "name": "inTransaction:",
+      "bridgedName": "inTransaction",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inDeferredTransaction:": {
+      "name": "inDeferredTransaction:",
+      "bridgedName": "inDeferredTransaction",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginTransaction:withBlock:": {
+      "name": "beginTransaction:withBlock:",
+      "bridgedName": "beginTransaction_withBlock",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inDatabase:": {
+      "name": "inDatabase:",
+      "bridgedName": "inDatabase",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "releaseAllDatabases": {
+      "name": "releaseAllDatabases",
+      "bridgedName": "releaseAllDatabases",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "countOfOpenDatabases": {
+      "name": "countOfOpenDatabases",
+      "bridgedName": "countOfOpenDatabases",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "countOfCheckedOutDatabases": {
+      "name": "countOfCheckedOutDatabases",
+      "bridgedName": "countOfCheckedOutDatabases",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "countOfCheckedInDatabases": {
+      "name": "countOfCheckedInDatabases",
+      "bridgedName": "countOfCheckedInDatabases",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "db": {
+      "name": "db",
+      "bridgedName": "db",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pushDatabaseBackInPool:": {
+      "name": "pushDatabaseBackInPool:",
+      "bridgedName": "pushDatabaseBackInPool",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "executeLocked:": {
+      "name": "executeLocked:",
+      "bridgedName": "executeLocked",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:": {
+      "name": "initWithPath:",
+      "bridgedName": "initWithPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:flags:": {
+      "name": "initWithPath:flags:",
+      "bridgedName": "initWithPath_flags",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "openFlags": {
+      "name": "openFlags",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "path": {
+      "name": "path",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

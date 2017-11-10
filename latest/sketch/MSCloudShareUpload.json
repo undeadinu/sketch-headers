@@ -1,0 +1,95 @@
+{
+  "imports": [
+    "SCKShare.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSCloudShareUpload",
+  "extends": "SCKShare",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDictionary:atDocumentURL:": {
+      "name": "initWithDictionary:atDocumentURL:",
+      "bridgedName": "initWithDictionary_atDocumentURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithData:atDocumentURL:error:": {
+      "name": "initWithData:atDocumentURL:error:",
+      "bridgedName": "initWithData_atDocumentURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "files": {
+      "name": "files",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "s3Region": {
+      "name": "s3Region",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "s3Bucket": {
+      "name": "s3Bucket",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "s3Credentials": {
+      "name": "s3Credentials",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "imports": [
+    "NSObject.h",
+    "AFMultipartFormData.h"
+  ],
+  "classes": [
+    "AFMultipartBodyStream",
+    "NSMutableURLRequest",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "AFStreamingMultipartFormData",
+  "extends": "NSObject",
+  "interfaces": [
+    "AFMultipartFormData"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestByFinalizingMultipartFormData": {
+      "name": "requestByFinalizingMultipartFormData",
+      "bridgedName": "requestByFinalizingMultipartFormData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "throttleBandwidthWithPacketSize:delay:": {
+      "name": "throttleBandwidthWithPacketSize:delay:",
+      "bridgedName": "throttleBandwidthWithPacketSize_delay",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithHeaders:body:": {
+      "name": "appendPartWithHeaders:body:",
+      "bridgedName": "appendPartWithHeaders_body",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithFormData:name:": {
+      "name": "appendPartWithFormData:name:",
+      "bridgedName": "appendPartWithFormData_name",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithFileData:name:fileName:mimeType:": {
+      "name": "appendPartWithFileData:name:fileName:mimeType:",
+      "bridgedName": "appendPartWithFileData_name_fileName_mimeType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithInputStream:name:fileName:length:mimeType:": {
+      "name": "appendPartWithInputStream:name:fileName:length:mimeType:",
+      "bridgedName": "appendPartWithInputStream_name_fileName_length_mimeType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithFileURL:name:fileName:mimeType:error:": {
+      "name": "appendPartWithFileURL:name:fileName:mimeType:error:",
+      "bridgedName": "appendPartWithFileURL_name_fileName_mimeType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendPartWithFileURL:name:error:": {
+      "name": "appendPartWithFileURL:name:error:",
+      "bridgedName": "appendPartWithFileURL_name_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithURLRequest:stringEncoding:": {
+      "name": "initWithURLRequest:stringEncoding:",
+      "bridgedName": "initWithURLRequest_stringEncoding",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "bodyStream": {
+      "name": "bodyStream",
+      "pointer": true,
+      "type": "AFMultipartBodyStream",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "boundary": {
+      "name": "boundary",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "stringEncoding": {
+      "name": "stringEncoding",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "request": {
+      "name": "request",
+      "pointer": true,
+      "type": "NSMutableURLRequest",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

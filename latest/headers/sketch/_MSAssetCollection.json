@@ -1,0 +1,668 @@
+{
+  "imports": [
+    "MSModelObject.h"
+  ],
+  "classes": [
+    "MSImageCollection",
+    "NSArray",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "_MSAssetCollection",
+  "extends": "MSModelObject",
+  "interfaces": [],
+  "methods": {
+    "allowsFaulting": {
+      "name": "allowsFaulting",
+      "bridgedName": "allowsFaulting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "immutableClass": {
+      "name": "immutableClass",
+      "bridgedName": "immutableClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncPropertiesFromObject:": {
+      "name": "syncPropertiesFromObject:",
+      "bridgedName": "syncPropertiesFromObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertiesAreEqual:": {
+      "name": "propertiesAreEqual:",
+      "bridgedName": "propertiesAreEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyPropertiesToObject:options:": {
+      "name": "copyPropertiesToObject:options:",
+      "bridgedName": "copyPropertiesToObject_options",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAsParentOnChildren": {
+      "name": "setAsParentOnChildren",
+      "bridgedName": "setAsParentOnChildren",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveGradientIndex:toIndex:": {
+      "name": "moveGradientIndex:toIndex:",
+      "bridgedName": "moveGradientIndex_toIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllGradients": {
+      "name": "removeAllGradients",
+      "bridgedName": "removeAllGradients",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeGradientsAtIndexes:": {
+      "name": "removeGradientsAtIndexes:",
+      "bridgedName": "removeGradientsAtIndexes",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeGradientAtIndex:": {
+      "name": "removeGradientAtIndex:",
+      "bridgedName": "removeGradientAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeGradient:": {
+      "name": "removeGradient:",
+      "bridgedName": "removeGradient",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertGradients:afterGradient:": {
+      "name": "insertGradients:afterGradient:",
+      "bridgedName": "insertGradients_afterGradient",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertGradient:afterGradient:": {
+      "name": "insertGradient:afterGradient:",
+      "bridgedName": "insertGradient_afterGradient",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertGradients:beforeGradient:": {
+      "name": "insertGradients:beforeGradient:",
+      "bridgedName": "insertGradients_beforeGradient",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertGradient:beforeGradient:": {
+      "name": "insertGradient:beforeGradient:",
+      "bridgedName": "insertGradient_beforeGradient",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertGradient:atIndex:": {
+      "name": "insertGradient:atIndex:",
+      "bridgedName": "insertGradient_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addGradients:": {
+      "name": "addGradients:",
+      "bridgedName": "addGradients",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addGradient:": {
+      "name": "addGradient:",
+      "bridgedName": "addGradient",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveExportPresetIndex:toIndex:": {
+      "name": "moveExportPresetIndex:toIndex:",
+      "bridgedName": "moveExportPresetIndex_toIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllExportPresets": {
+      "name": "removeAllExportPresets",
+      "bridgedName": "removeAllExportPresets",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeExportPresetsAtIndexes:": {
+      "name": "removeExportPresetsAtIndexes:",
+      "bridgedName": "removeExportPresetsAtIndexes",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeExportPresetAtIndex:": {
+      "name": "removeExportPresetAtIndex:",
+      "bridgedName": "removeExportPresetAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeExportPreset:": {
+      "name": "removeExportPreset:",
+      "bridgedName": "removeExportPreset",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertExportPresets:afterExportPreset:": {
+      "name": "insertExportPresets:afterExportPreset:",
+      "bridgedName": "insertExportPresets_afterExportPreset",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertExportPreset:afterExportPreset:": {
+      "name": "insertExportPreset:afterExportPreset:",
+      "bridgedName": "insertExportPreset_afterExportPreset",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertExportPresets:beforeExportPreset:": {
+      "name": "insertExportPresets:beforeExportPreset:",
+      "bridgedName": "insertExportPresets_beforeExportPreset",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertExportPreset:beforeExportPreset:": {
+      "name": "insertExportPreset:beforeExportPreset:",
+      "bridgedName": "insertExportPreset_beforeExportPreset",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertExportPreset:atIndex:": {
+      "name": "insertExportPreset:atIndex:",
+      "bridgedName": "insertExportPreset_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addExportPresets:": {
+      "name": "addExportPresets:",
+      "bridgedName": "addExportPresets",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addExportPreset:": {
+      "name": "addExportPreset:",
+      "bridgedName": "addExportPreset",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveColorIndex:toIndex:": {
+      "name": "moveColorIndex:toIndex:",
+      "bridgedName": "moveColorIndex_toIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllColors": {
+      "name": "removeAllColors",
+      "bridgedName": "removeAllColors",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColorsAtIndexes:": {
+      "name": "removeColorsAtIndexes:",
+      "bridgedName": "removeColorsAtIndexes",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColorAtIndex:": {
+      "name": "removeColorAtIndex:",
+      "bridgedName": "removeColorAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColor:": {
+      "name": "removeColor:",
+      "bridgedName": "removeColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColors:afterColor:": {
+      "name": "insertColors:afterColor:",
+      "bridgedName": "insertColors_afterColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColor:afterColor:": {
+      "name": "insertColor:afterColor:",
+      "bridgedName": "insertColor_afterColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColors:beforeColor:": {
+      "name": "insertColors:beforeColor:",
+      "bridgedName": "insertColors_beforeColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColor:beforeColor:": {
+      "name": "insertColor:beforeColor:",
+      "bridgedName": "insertColor_beforeColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColor:atIndex:": {
+      "name": "insertColor:atIndex:",
+      "bridgedName": "insertColor_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addColors:": {
+      "name": "addColors:",
+      "bridgedName": "addColors",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addColor:": {
+      "name": "addColor:",
+      "bridgedName": "addColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initializeUnsetObjectPropertiesWithDefaults": {
+      "name": "initializeUnsetObjectPropertiesWithDefaults",
+      "bridgedName": "initializeUnsetObjectPropertiesWithDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasDefaultValues": {
+      "name": "hasDefaultValues",
+      "bridgedName": "hasDefaultValues",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitEmptyObject": {
+      "name": "performInitEmptyObject",
+      "bridgedName": "performInitEmptyObject",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithImmutableModelObject:": {
+      "name": "performInitWithImmutableModelObject:",
+      "bridgedName": "performInitWithImmutableModelObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateChildProperties:": {
+      "name": "enumerateChildProperties:",
+      "bridgedName": "enumerateChildProperties",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateProperties:": {
+      "name": "enumerateProperties:",
+      "bridgedName": "enumerateProperties",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "imageCollection": {
+      "name": "imageCollection",
+      "pointer": true,
+      "type": "MSImageCollection",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "gradients": {
+      "name": "gradients",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "exportPresets": {
+      "name": "exportPresets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "colors": {
+      "name": "colors",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "images": {
+      "name": "images",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

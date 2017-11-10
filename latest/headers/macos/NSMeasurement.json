@@ -1,0 +1,196 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSUnit"
+  ],
+  "protocol": false,
+  "className": "NSMeasurement",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSSecureCoding"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "measurementBySubtractingMeasurement:": {
+      "name": "measurementBySubtractingMeasurement:",
+      "bridgedName": "measurementBySubtractingMeasurement",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "measurementByAddingMeasurement:": {
+      "name": "measurementByAddingMeasurement:",
+      "bridgedName": "measurementByAddingMeasurement",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performOperation:withMeasurement:": {
+      "name": "_performOperation:withMeasurement:",
+      "bridgedName": "_performOperation_withMeasurement",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "measurementByConvertingToUnit:": {
+      "name": "measurementByConvertingToUnit:",
+      "bridgedName": "measurementByConvertingToUnit",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeConvertedToUnit:": {
+      "name": "canBeConvertedToUnit:",
+      "bridgedName": "canBeConvertedToUnit",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDoubleValue:unit:": {
+      "name": "initWithDoubleValue:unit:",
+      "bridgedName": "initWithDoubleValue_unit",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "doubleValue": {
+      "name": "doubleValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "unit": {
+      "name": "unit",
+      "pointer": true,
+      "type": "NSUnit",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

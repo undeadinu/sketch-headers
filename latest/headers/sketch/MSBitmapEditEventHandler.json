@@ -1,0 +1,626 @@
+{
+  "imports": [
+    "MSEventHandler.h"
+  ],
+  "classes": [
+    "MSBitmapEditInspectorViewController",
+    "MSBitmapMagicWandEditor",
+    "MSBitmapRectangleEditor",
+    "NSBezierPath",
+    "NSBitmapImageRep",
+    "NSCursor"
+  ],
+  "protocol": false,
+  "className": "MSBitmapEditEventHandler",
+  "extends": "MSEventHandler",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorShouldShowLayerSpecificProperties": {
+      "name": "inspectorShouldShowLayerSpecificProperties",
+      "bridgedName": "inspectorShouldShowLayerSpecificProperties",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorLocation": {
+      "name": "inspectorLocation",
+      "bridgedName": "inspectorLocation",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorViewControllersForLayers:standardControllers:": {
+      "name": "inspectorViewControllersForLayers:standardControllers:",
+      "bridgedName": "inspectorViewControllersForLayers_standardControllers",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "configureInspector:": {
+      "name": "configureInspector:",
+      "bridgedName": "configureInspector",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateMeasurementLabel": {
+      "name": "updateMeasurementLabel",
+      "bridgedName": "updateMeasurementLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "crossHairCursorRemove": {
+      "name": "crossHairCursorRemove",
+      "bridgedName": "crossHairCursorRemove",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "crossHairCursorAdd": {
+      "name": "crossHairCursorAdd",
+      "bridgedName": "crossHairCursorAdd",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "crossHairCursor": {
+      "name": "crossHairCursor",
+      "bridgedName": "crossHairCursor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magicWandCursorRemove": {
+      "name": "magicWandCursorRemove",
+      "bridgedName": "magicWandCursorRemove",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magicWandCursorAdd": {
+      "name": "magicWandCursorAdd",
+      "bridgedName": "magicWandCursorAdd",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magicWandCursor": {
+      "name": "magicWandCursor",
+      "bridgedName": "magicWandCursor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDraggedOutsideViewShouldMoveScrollOrigin": {
+      "name": "mouseDraggedOutsideViewShouldMoveScrollOrigin",
+      "bridgedName": "mouseDraggedOutsideViewShouldMoveScrollOrigin",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeNewBackupImage": {
+      "name": "makeNewBackupImage",
+      "bridgedName": "makeNewBackupImage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setImage:forBitmapLayer:": {
+      "name": "setImage:forBitmapLayer:",
+      "bridgedName": "setImage_forBitmapLayer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bitmapLayer": {
+      "name": "bitmapLayer",
+      "bridgedName": "bitmapLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinateTransformMatrix": {
+      "name": "coordinateTransformMatrix",
+      "bridgedName": "coordinateTransformMatrix",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawBorderAroundBounds": {
+      "name": "drawBorderAroundBounds",
+      "bridgedName": "drawBorderAroundBounds",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:cache:": {
+      "name": "drawInRect:cache:",
+      "bridgedName": "drawInRect_cache",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawLayerSelection": {
+      "name": "shouldDrawLayerSelection",
+      "bridgedName": "shouldDrawLayerSelection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionBezierForFlippingCoordinates": {
+      "name": "selectionBezierForFlippingCoordinates",
+      "bridgedName": "selectionBezierForFlippingCoordinates",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageBounds": {
+      "name": "imageBounds",
+      "bridgedName": "imageBounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageSize": {
+      "name": "imageSize",
+      "bridgedName": "imageSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearAreaUnderSelection": {
+      "name": "clearAreaUnderSelection",
+      "bridgedName": "clearAreaUnderSelection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fillSelectionWithColor:blending:": {
+      "name": "fillSelectionWithColor:blending:",
+      "bridgedName": "fillSelectionWithColor_blending",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fillSelectionWithColor:": {
+      "name": "fillSelectionWithColor:",
+      "bridgedName": "fillSelectionWithColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "duplicate:": {
+      "name": "duplicate:",
+      "bridgedName": "duplicate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canDuplicate": {
+      "name": "canDuplicate",
+      "bridgedName": "canDuplicate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paste:": {
+      "name": "paste:",
+      "bridgedName": "paste",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy:": {
+      "name": "copy:",
+      "bridgedName": "copy",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cut:": {
+      "name": "cut:",
+      "bridgedName": "cut",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectLayerBelowPoint:": {
+      "name": "selectLayerBelowPoint:",
+      "bridgedName": "selectLayerBelowPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDragged:flags:": {
+      "name": "absoluteMouseDragged:flags:",
+      "bridgedName": "absoluteMouseDragged_flags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseMoved:flags:": {
+      "name": "absoluteMouseMoved:flags:",
+      "bridgedName": "absoluteMouseMoved_flags",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flagsChanged:": {
+      "name": "flagsChanged:",
+      "bridgedName": "flagsChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectIsCropOfImage:fromImage:": {
+      "name": "rectIsCropOfImage:fromImage:",
+      "bridgedName": "rectIsCropOfImage_fromImage",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cropLayerFrame": {
+      "name": "cropLayerFrame",
+      "bridgedName": "cropLayerFrame",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageFromSelectedArea": {
+      "name": "imageFromSelectedArea",
+      "bridgedName": "imageFromSelectedArea",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bitmapLayerFromSelectedArea": {
+      "name": "bitmapLayerFromSelectedArea",
+      "bridgedName": "bitmapLayerFromSelectedArea",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cropAction:": {
+      "name": "cropAction:",
+      "bridgedName": "cropAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedRect": {
+      "name": "selectedRect",
+      "bridgedName": "selectedRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectFromBitmapToBoundsCoordinates:": {
+      "name": "rectFromBitmapToBoundsCoordinates:",
+      "bridgedName": "rectFromBitmapToBoundsCoordinates",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionRectInLayerCoordinates": {
+      "name": "selectionRectInLayerCoordinates",
+      "bridgedName": "selectionRectInLayerCoordinates",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invertAction:": {
+      "name": "invertAction:",
+      "bridgedName": "invertAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerWillLoseFocus": {
+      "name": "handlerWillLoseFocus",
+      "bridgedName": "handlerWillLoseFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerGotFocus": {
+      "name": "handlerGotFocus",
+      "bridgedName": "handlerGotFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarIdentifier": {
+      "name": "toolbarIdentifier",
+      "bridgedName": "toolbarIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "currentCursor": {
+      "name": "currentCursor",
+      "pointer": true,
+      "type": "NSCursor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cachedFirstBitmapImageRep": {
+      "name": "cachedFirstBitmapImageRep",
+      "pointer": true,
+      "type": "NSBitmapImageRep",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "backupImageRep": {
+      "name": "backupImageRep",
+      "pointer": true,
+      "type": "NSBitmapImageRep",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "magicWandEditor": {
+      "name": "magicWandEditor",
+      "pointer": true,
+      "type": "MSBitmapMagicWandEditor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "rectangleEditor": {
+      "name": "rectangleEditor",
+      "pointer": true,
+      "type": "MSBitmapRectangleEditor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "accumulatedSelection": {
+      "name": "accumulatedSelection",
+      "pointer": true,
+      "type": "NSBezierPath",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentMode": {
+      "name": "currentMode",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "inspectorViewController": {
+      "name": "inspectorViewController",
+      "pointer": true,
+      "type": "MSBitmapEditInspectorViewController",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

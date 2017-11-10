@@ -1,0 +1,652 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSHapticFeedbackPerformer.h"
+  ],
+  "classes": [
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSTouchDevice",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSHapticFeedbackPerformer"
+  ],
+  "methods": {
+    "_touchDeviceRemoved:": {
+      "name": "_touchDeviceRemoved:",
+      "bridgedName": "_touchDeviceRemoved",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_touchDeviceAdded:": {
+      "name": "_touchDeviceAdded:",
+      "bridgedName": "_touchDeviceAdded",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_hasForceCapableTouchDevice": {
+      "name": "_hasForceCapableTouchDevice",
+      "bridgedName": "_hasForceCapableTouchDevice",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_hasPressureEnabledTouchDevice": {
+      "name": "_hasPressureEnabledTouchDevice",
+      "bridgedName": "_hasPressureEnabledTouchDevice",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isTouchStillValid:": {
+      "name": "_isTouchStillValid:",
+      "bridgedName": "_isTouchStillValid",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_firstTouchInView:contextID:": {
+      "name": "_firstTouchInView:contextID:",
+      "bridgedName": "_firstTouchInView_contextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_touchDeviceFromTrueDeviceID:": {
+      "name": "_touchDeviceFromTrueDeviceID:",
+      "bridgedName": "_touchDeviceFromTrueDeviceID",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchDeviceFromDeviceID:": {
+      "name": "touchDeviceFromDeviceID:",
+      "bridgedName": "touchDeviceFromDeviceID",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchDevices": {
+      "name": "touchDevices",
+      "bridgedName": "touchDevices",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_touchDeviceWithIOHIDDictionary:": {
+      "name": "_touchDeviceWithIOHIDDictionary:",
+      "bridgedName": "_touchDeviceWithIOHIDDictionary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_pressureCapabilitiesPrefChanged:": {
+      "name": "_pressureCapabilitiesPrefChanged:",
+      "bridgedName": "_pressureCapabilitiesPrefChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportsForce": {
+      "name": "supportsForce",
+      "bridgedName": "supportsForce",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasActuation": {
+      "name": "hasActuation",
+      "bridgedName": "hasActuation",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelledTouches": {
+      "name": "_cancelledTouches",
+      "bridgedName": "_cancelledTouches",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchingTouches": {
+      "name": "_touchingTouches",
+      "bridgedName": "_touchingTouches",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deviceInfo": {
+      "name": "_deviceInfo",
+      "bridgedName": "_deviceInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preventFlushingContextID:during:": {
+      "name": "_preventFlushingContextID:during:",
+      "bridgedName": "_preventFlushingContextID_during",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_flushContextID:": {
+      "name": "_flushContextID:",
+      "bridgedName": "_flushContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commandeerDirectTouches:handler:": {
+      "name": "_commandeerDirectTouches:handler:",
+      "bridgedName": "_commandeerDirectTouches_handler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelAllTouchesRemoving:": {
+      "name": "_cancelAllTouchesRemoving:",
+      "bridgedName": "_cancelAllTouchesRemoving",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelTouchesForContextID:removing:": {
+      "name": "_cancelTouchesForContextID:removing:",
+      "bridgedName": "_cancelTouchesForContextID_removing",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelCommandeeredTouchesForContextId:": {
+      "name": "_cancelCommandeeredTouchesForContextId:",
+      "bridgedName": "_cancelCommandeeredTouchesForContextId",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelViewTouchesForContextID:": {
+      "name": "_cancelViewTouchesForContextID:",
+      "bridgedName": "_cancelViewTouchesForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelActiveTouchGestureRecognizersForContextID:": {
+      "name": "_cancelActiveTouchGestureRecognizersForContextID:",
+      "bridgedName": "_cancelActiveTouchGestureRecognizersForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lastEndedTouches": {
+      "name": "_lastEndedTouches",
+      "bridgedName": "_lastEndedTouches",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setLastEndedTouches:": {
+      "name": "_setLastEndedTouches:",
+      "bridgedName": "_setLastEndedTouches",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelledTouchesForContextID:": {
+      "name": "_cancelledTouchesForContextID:",
+      "bridgedName": "_cancelledTouchesForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginTouchForIdentity:contextId:": {
+      "name": "_beginTouchForIdentity:contextId:",
+      "bridgedName": "_beginTouchForIdentity_contextId",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchingTouchesForContextID:": {
+      "name": "_touchingTouchesForContextID:",
+      "bridgedName": "_touchingTouchesForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTouches:forContextID:": {
+      "name": "setTouches:forContextID:",
+      "bridgedName": "setTouches_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeCommandeeredTouchIdentities:forContextID:": {
+      "name": "_removeCommandeeredTouchIdentities:forContextID:",
+      "bridgedName": "_removeCommandeeredTouchIdentities_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commandeeredTouchIdentitiesForContextID:": {
+      "name": "_commandeeredTouchIdentitiesForContextID:",
+      "bridgedName": "_commandeeredTouchIdentitiesForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commandeerTouches:": {
+      "name": "_commandeerTouches:",
+      "bridgedName": "_commandeerTouches",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commandeerTouchIdentities:forContextID:": {
+      "name": "_commandeerTouchIdentities:forContextID:",
+      "bridgedName": "_commandeerTouchIdentities_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_gestureRecognizerClaimedTouchIdentitiesForContextID:": {
+      "name": "_gestureRecognizerClaimedTouchIdentitiesForContextID:",
+      "bridgedName": "_gestureRecognizerClaimedTouchIdentitiesForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeClaimedTouchIdentities:forContextID:": {
+      "name": "_removeClaimedTouchIdentities:forContextID:",
+      "bridgedName": "_removeClaimedTouchIdentities_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_claimTouchesAssociatedWithGestureRecognizer:forContextID:": {
+      "name": "_claimTouchesAssociatedWithGestureRecognizer:forContextID:",
+      "bridgedName": "_claimTouchesAssociatedWithGestureRecognizer_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeActiveGestureRecognizer:forContextID:": {
+      "name": "_removeActiveGestureRecognizer:forContextID:",
+      "bridgedName": "_removeActiveGestureRecognizer_forContextID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_activeTouchGestureRecognizersForContextID:": {
+      "name": "_activeTouchGestureRecognizersForContextID:",
+      "bridgedName": "_activeTouchGestureRecognizersForContextID",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeGestureRecognizersForTouch:": {
+      "name": "removeGestureRecognizersForTouch:",
+      "bridgedName": "removeGestureRecognizersForTouch",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addGestureRecognizers:forTouch:": {
+      "name": "addGestureRecognizers:forTouch:",
+      "bridgedName": "addGestureRecognizers_forTouch",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_gestureRecognizersForTouch:": {
+      "name": "_gestureRecognizersForTouch:",
+      "bridgedName": "_gestureRecognizersForTouch",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOverridePressureConfiguration:": {
+      "name": "setOverridePressureConfiguration:",
+      "bridgedName": "setOverridePressureConfiguration",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performFeedbackPattern:performanceTime:": {
+      "name": "performFeedbackPattern:performanceTime:",
+      "bridgedName": "performFeedbackPattern_performanceTime",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trueDeviceID": {
+      "name": "_trueDeviceID",
+      "bridgedName": "_trueDeviceID",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deviceType": {
+      "name": "deviceType",
+      "bridgedName": "deviceType",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithIOHIDDictionary:": {
+      "name": "_initWithIOHIDDictionary:",
+      "bridgedName": "_initWithIOHIDDictionary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "surfaceSize": {
+      "name": "surfaceSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "deviceID": {
+      "name": "deviceID",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

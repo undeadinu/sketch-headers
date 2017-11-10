@@ -1,0 +1,534 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableSet",
+    "NSScriptClassDescription",
+    "NSScriptCommandDescription"
+  ],
+  "protocol": false,
+  "className": "NSScriptSuiteRegistry",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "_isScriptingEnabled": {
+      "name": "_isScriptingEnabled",
+      "bridgedName": "_isScriptingEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setSharedScriptSuiteRegistry:": {
+      "name": "setSharedScriptSuiteRegistry:",
+      "bridgedName": "setSharedScriptSuiteRegistry",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedScriptSuiteRegistry": {
+      "name": "sharedScriptSuiteRegistry",
+      "bridgedName": "sharedScriptSuiteRegistry",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_loadScriptSuites": {
+      "name": "_loadScriptSuites",
+      "bridgedName": "_loadScriptSuites",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "aeteResource:": {
+      "name": "aeteResource:",
+      "bridgedName": "aeteResource",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commandDescriptionWithAppleEventClass:andAppleEventCode:": {
+      "name": "commandDescriptionWithAppleEventClass:andAppleEventCode:",
+      "bridgedName": "commandDescriptionWithAppleEventClass_andAppleEventCode",
+      "args": [
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "classDescriptionWithAppleEventCode:": {
+      "name": "classDescriptionWithAppleEventCode:",
+      "bridgedName": "classDescriptionWithAppleEventCode",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suiteForAppleEventCode:": {
+      "name": "suiteForAppleEventCode:",
+      "bridgedName": "suiteForAppleEventCode",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commandDescriptionsInSuite:": {
+      "name": "commandDescriptionsInSuite:",
+      "bridgedName": "commandDescriptionsInSuite",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "classDescriptionsInSuite:": {
+      "name": "classDescriptionsInSuite:",
+      "bridgedName": "classDescriptionsInSuite",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bundleForSuite:": {
+      "name": "bundleForSuite:",
+      "bridgedName": "bundleForSuite",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appleEventCodeForSuite:": {
+      "name": "appleEventCodeForSuite:",
+      "bridgedName": "appleEventCodeForSuite",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerCommandDescription:": {
+      "name": "registerCommandDescription:",
+      "bridgedName": "registerCommandDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerClassDescription:": {
+      "name": "registerClassDescription:",
+      "bridgedName": "registerClassDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newRegisteredSuiteDescriptionForName:": {
+      "name": "_newRegisteredSuiteDescriptionForName:",
+      "bridgedName": "_newRegisteredSuiteDescriptionForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadSuiteWithDictionary:fromBundle:": {
+      "name": "loadSuiteWithDictionary:fromBundle:",
+      "bridgedName": "loadSuiteWithDictionary_fromBundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadSuitesFromBundle:": {
+      "name": "loadSuitesFromBundle:",
+      "bridgedName": "loadSuitesFromBundle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadSuitesForSecurityOverride": {
+      "name": "_loadSuitesForSecurityOverride",
+      "bridgedName": "_loadSuitesForSecurityOverride",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadSuitesForJustLoadedBundle:": {
+      "name": "_loadSuitesForJustLoadedBundle:",
+      "bridgedName": "_loadSuitesForJustLoadedBundle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadSuitesForAlreadyLoadedBundles": {
+      "name": "_loadSuitesForAlreadyLoadedBundles",
+      "bridgedName": "_loadSuitesForAlreadyLoadedBundles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadIntrinsicScriptingDefinitions": {
+      "name": "_loadIntrinsicScriptingDefinitions",
+      "bridgedName": "_loadIntrinsicScriptingDefinitions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadSuitesFromSDEFData:bundle:": {
+      "name": "_loadSuitesFromSDEFData:bundle:",
+      "bridgedName": "_loadSuitesFromSDEFData_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadSuiteDescription:": {
+      "name": "_loadSuiteDescription:",
+      "bridgedName": "_loadSuiteDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerOrCollectSuiteDescription:": {
+      "name": "_registerOrCollectSuiteDescription:",
+      "bridgedName": "_registerOrCollectSuiteDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerSuiteDescriptions:": {
+      "name": "_registerSuiteDescriptions:",
+      "bridgedName": "_registerSuiteDescriptions",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_aeteDataForAllSuites": {
+      "name": "_aeteDataForAllSuites",
+      "bridgedName": "_aeteDataForAllSuites",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendTypeNamesSuiteDeclarationToAETEData:": {
+      "name": "_appendTypeNamesSuiteDeclarationToAETEData:",
+      "bridgedName": "_appendTypeNamesSuiteDeclarationToAETEData",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendTypeDefinitionsSuiteDeclarationToAETEData:": {
+      "name": "_appendTypeDefinitionsSuiteDeclarationToAETEData:",
+      "bridgedName": "_appendTypeDefinitionsSuiteDeclarationToAETEData",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suiteDescriptions": {
+      "name": "_suiteDescriptions",
+      "bridgedName": "_suiteDescriptions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithSDEFData:otherAppBundle:": {
+      "name": "_initWithSDEFData:otherAppBundle:",
+      "bridgedName": "_initWithSDEFData_otherAppBundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typeDescriptionForAppleEventCode:": {
+      "name": "_typeDescriptionForAppleEventCode:",
+      "bridgedName": "_typeDescriptionForAppleEventCode",
+      "args": [
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_listTypeDescriptions": {
+      "name": "_listTypeDescriptions",
+      "bridgedName": "_listTypeDescriptions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_complexTypeDescriptions": {
+      "name": "_complexTypeDescriptions",
+      "bridgedName": "_complexTypeDescriptions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suiteDescriptionsByName": {
+      "name": "_suiteDescriptionsByName",
+      "bridgedName": "_suiteDescriptionsByName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subclassDescriptionsForDescription:": {
+      "name": "_subclassDescriptionsForDescription:",
+      "bridgedName": "_subclassDescriptionsForDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_objectSpecifierTypeDescription": {
+      "name": "_objectSpecifierTypeDescription",
+      "bridgedName": "_objectSpecifierTypeDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_objectTypeDescriptionForClassAppleEventCode:isValid:": {
+      "name": "_objectTypeDescriptionForClassAppleEventCode:isValid:",
+      "bridgedName": "_objectTypeDescriptionForClassAppleEventCode_isValid",
+      "args": [
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typeDescriptionForName:suiteName:isValid:": {
+      "name": "_typeDescriptionForName:suiteName:isValid:",
+      "bridgedName": "_typeDescriptionForName_suiteName_isValid",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typeDescriptionForName:": {
+      "name": "_typeDescriptionForName:",
+      "bridgedName": "_typeDescriptionForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_classDescriptionForName:suiteName:isValid:": {
+      "name": "_classDescriptionForName:suiteName:isValid:",
+      "bridgedName": "_classDescriptionForName_suiteName_isValid",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_classDescriptionForName:": {
+      "name": "_classDescriptionForName:",
+      "bridgedName": "_classDescriptionForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isLoadingSDEFFiles": {
+      "name": "_isLoadingSDEFFiles",
+      "bridgedName": "_isLoadingSDEFFiles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "suiteNames": {
+      "name": "suiteNames",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSTouchBarItemTreeBarProviderNode",
+    "NSTouchBarItemTreeNode"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarItemTree",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "itemTreeWithDefaultPresetTouchBars:": {
+      "name": "itemTreeWithDefaultPresetTouchBars:",
+      "bridgedName": "itemTreeWithDefaultPresetTouchBars",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "itemTreeWithTouchBars:": {
+      "name": "itemTreeWithTouchBars:",
+      "bridgedName": "itemTreeWithTouchBars",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "bridgedName": "debugDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentItemNodeForNode:": {
+      "name": "parentItemNodeForNode:",
+      "bridgedName": "parentItemNodeForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentNodeForNode:": {
+      "name": "parentNodeForNode:",
+      "bridgedName": "parentNodeForNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentNodeForNode:outIndex:": {
+      "name": "parentNodeForNode:outIndex:",
+      "bridgedName": "parentNodeForNode_outIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithRootNode:centeredRootNode:": {
+      "name": "initWithRootNode:centeredRootNode:",
+      "bridgedName": "initWithRootNode_centeredRootNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nodeForItem:": {
+      "name": "nodeForItem:",
+      "bridgedName": "nodeForItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nodeForBar:": {
+      "name": "nodeForBar:",
+      "bridgedName": "nodeForBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_spliceTreeFromRootNode:centerNode:foundCenter:": {
+      "name": "_spliceTreeFromRootNode:centerNode:foundCenter:",
+      "bridgedName": "_spliceTreeFromRootNode_centerNode_foundCenter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customization_node:canBeMovedAfterNode:": {
+      "name": "customization_node:canBeMovedAfterNode:",
+      "bridgedName": "customization_node_canBeMovedAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customization_itemWithIdentifier:canBeInsertedAfterNode:": {
+      "name": "customization_itemWithIdentifier:canBeInsertedAfterNode:",
+      "bridgedName": "customization_itemWithIdentifier_canBeInsertedAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customization_nodeCanBeReordered:": {
+      "name": "customization_nodeCanBeReordered:",
+      "bridgedName": "customization_nodeCanBeReordered",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customization_nodeCanBeRemoved:": {
+      "name": "customization_nodeCanBeRemoved:",
+      "bridgedName": "customization_nodeCanBeRemoved",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positionForInsertingItemWithIdentifier:toBeAfterNode:": {
+      "name": "positionForInsertingItemWithIdentifier:toBeAfterNode:",
+      "bridgedName": "positionForInsertingItemWithIdentifier_toBeAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positionForInsertingItemFromTouchBar:toBeAfterNode:": {
+      "name": "positionForInsertingItemFromTouchBar:toBeAfterNode:",
+      "bridgedName": "positionForInsertingItemFromTouchBar_toBeAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positionForInsertingItemWithPredicate:toBeAfterNode:": {
+      "name": "positionForInsertingItemWithPredicate:toBeAfterNode:",
+      "bridgedName": "positionForInsertingItemWithPredicate_toBeAfterNode",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positionForMovingNode:toBeAfterNode:": {
+      "name": "positionForMovingNode:toBeAfterNode:",
+      "bridgedName": "positionForMovingNode_toBeAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positionOfNode:": {
+      "name": "positionOfNode:",
+      "bridgedName": "positionOfNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByRemovingItemIdentifier:": {
+      "name": "treeByRemovingItemIdentifier:",
+      "bridgedName": "treeByRemovingItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByRemovingNode:": {
+      "name": "treeByRemovingNode:",
+      "bridgedName": "treeByRemovingNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByInsertingItem:toBeAfterNode:": {
+      "name": "treeByInsertingItem:toBeAfterNode:",
+      "bridgedName": "treeByInsertingItem_toBeAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByMovingNode:toBeAfterNode:": {
+      "name": "treeByMovingNode:toBeAfterNode:",
+      "bridgedName": "treeByMovingNode_toBeAfterNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByReplacingNode:withNode:": {
+      "name": "treeByReplacingNode:withNode:",
+      "bridgedName": "treeByReplacingNode_withNode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "treeByReplacingNode:withNodes:": {
+      "name": "treeByReplacingNode:withNodes:",
+      "bridgedName": "treeByReplacingNode_withNodes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lastLeafPositionForMovingNode:": {
+      "name": "lastLeafPositionForMovingNode:",
+      "bridgedName": "lastLeafPositionForMovingNode",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lastLeafPositionForInsertingItemFromTouchBar:": {
+      "name": "lastLeafPositionForInsertingItemFromTouchBar:",
+      "bridgedName": "lastLeafPositionForInsertingItemFromTouchBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lastLeafPositionForInsertingItemWithIdentifier:": {
+      "name": "lastLeafPositionForInsertingItemWithIdentifier:",
+      "bridgedName": "lastLeafPositionForInsertingItemWithIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "persistBarNode:toDomain:": {
+      "name": "persistBarNode:toDomain:",
+      "bridgedName": "persistBarNode_toDomain",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "persistBar:toDomain:": {
+      "name": "persistBar:toDomain:",
+      "bridgedName": "persistBar_toDomain",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "persistTreeToDomain:": {
+      "name": "persistTreeToDomain:",
+      "bridgedName": "persistTreeToDomain",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "centeredRootNode": {
+      "name": "centeredRootNode",
+      "pointer": true,
+      "type": "NSTouchBarItemTreeNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "rootNode": {
+      "name": "rootNode",
+      "pointer": true,
+      "type": "NSTouchBarItemTreeBarProviderNode",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "prioritizedLeafNodes": {
+      "name": "prioritizedLeafNodes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "centeredLeafNodes": {
+      "name": "centeredLeafNodes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "layoutOrderedLeafNodes": {
+      "name": "layoutOrderedLeafNodes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "leafNodes": {
+      "name": "leafNodes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,793 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSTouchBarProvider.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSAttributedString",
+    "NSButton",
+    "NSImage",
+    "NSPanel",
+    "NSString",
+    "NSTextField",
+    "NSTouchBar",
+    "NSView",
+    "NSWindow"
+  ],
+  "protocol": false,
+  "className": "NSAlert",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSTouchBarProvider"
+  ],
+  "methods": {
+    "stopAllTimersForSpeaking": {
+      "name": "stopAllTimersForSpeaking",
+      "bridgedName": "stopAllTimersForSpeaking",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_dontShowMessageAgainTitle": {
+      "name": "_dontShowMessageAgainTitle",
+      "bridgedName": "_dontShowMessageAgainTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_dontSaveButtonTitle": {
+      "name": "_dontSaveButtonTitle",
+      "bridgedName": "_dontSaveButtonTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "alertWithError:": {
+      "name": "alertWithError:",
+      "bridgedName": "alertWithError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "alertWithMessageText:defaultButton:alternateButton:otherButton:informativeTextWithFormat:": {
+      "name": "alertWithMessageText:defaultButton:alternateButton:otherButton:informativeTextWithFormat:",
+      "bridgedName": "alertWithMessageText_defaultButton_alternateButton_otherButton_informativeTextWithFormat",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setSuppressionButton:": {
+      "name": "_setSuppressionButton:",
+      "bridgedName": "_setSuppressionButton",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suppressionButton": {
+      "name": "_suppressionButton",
+      "bridgedName": "_suppressionButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDidDismissSelector:": {
+      "name": "_setDidDismissSelector:",
+      "bridgedName": "_setDidDismissSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDidEndSelector:": {
+      "name": "_setDidEndSelector:",
+      "bridgedName": "_setDidEndSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setModalDelegate:": {
+      "name": "_setModalDelegate:",
+      "bridgedName": "_setModalDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_helpButton": {
+      "name": "_helpButton",
+      "bridgedName": "_helpButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageView": {
+      "name": "_imageView",
+      "bridgedName": "_imageView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_informationField": {
+      "name": "_informationField",
+      "bridgedName": "_informationField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_messageField": {
+      "name": "_messageField",
+      "bridgedName": "_messageField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_third": {
+      "name": "_third",
+      "bridgedName": "_third",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_second": {
+      "name": "_second",
+      "bridgedName": "_second",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_first": {
+      "name": "_first",
+      "bridgedName": "_first",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_thirdButtonExists": {
+      "name": "_thirdButtonExists",
+      "bridgedName": "_thirdButtonExists",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_secondButtonExists": {
+      "name": "_secondButtonExists",
+      "bridgedName": "_secondButtonExists",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_firstButtonExists": {
+      "name": "_firstButtonExists",
+      "bridgedName": "_firstButtonExists",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didEndSheet:returnCode:contextInfo:": {
+      "name": "didEndSheet:returnCode:contextInfo:",
+      "bridgedName": "didEndSheet_returnCode_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buildAlertStyle:title:message:first:second:third:oldStyle:args:": {
+      "name": "buildAlertStyle:title:message:first:second:third:oldStyle:args:",
+      "bridgedName": "buildAlertStyle_title_message_first_second_third_oldStyle_args",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "struct __va_list_tag [1]"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buildAlertStyle:title:formattedMessage:first:second:third:oldStyle:": {
+      "name": "buildAlertStyle:title:formattedMessage:first:second:third:oldStyle:",
+      "bridgedName": "buildAlertStyle_title_formattedMessage_first_second_third_oldStyle",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintsForExplicitFrameSize:forView:": {
+      "name": "_constraintsForExplicitFrameSize:forView:",
+      "bridgedName": "_constraintsForExplicitFrameSize_forView",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintForExplicitFrameHeight:forView:strength:": {
+      "name": "_constraintForExplicitFrameHeight:forView:strength:",
+      "bridgedName": "_constraintForExplicitFrameHeight_forView_strength",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constraintsForExplicitFrameSize:forView:strength:": {
+      "name": "_constraintsForExplicitFrameSize:forView:strength:",
+      "bridgedName": "_constraintsForExplicitFrameSize_forView_strength",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startSpeaking:": {
+      "name": "startSpeaking:",
+      "bridgedName": "startSpeaking",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startTimerForSpeaking": {
+      "name": "startTimerForSpeaking",
+      "bridgedName": "startTimerForSpeaking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopTimerForSpeaking": {
+      "name": "stopTimerForSpeaking",
+      "bridgedName": "stopTimerForSpeaking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeKey:": {
+      "name": "windowDidBecomeKey:",
+      "bridgedName": "windowDidBecomeKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitle:andMessage:": {
+      "name": "setTitle:andMessage:",
+      "bridgedName": "setTitle_andMessage",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "messageWidthForMessage:": {
+      "name": "messageWidthForMessage:",
+      "bridgedName": "messageWidthForMessage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "placeButtons:firstWidth:secondWidth:thirdWidth:": {
+      "name": "placeButtons:firstWidth:secondWidth:thirdWidth:",
+      "bridgedName": "placeButtons_firstWidth_secondWidth_thirdWidth",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interceptKeyEquivalent:": {
+      "name": "_interceptKeyEquivalent:",
+      "bridgedName": "_interceptKeyEquivalent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDontSaveButton:": {
+      "name": "_setDontSaveButton:",
+      "bridgedName": "_setDontSaveButton",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dontSaveButton": {
+      "name": "_dontSaveButton",
+      "bridgedName": "_dontSaveButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buttonPressed:": {
+      "name": "buttonPressed:",
+      "bridgedName": "buttonPressed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_screenForMaxHeight": {
+      "name": "_screenForMaxHeight",
+      "bridgedName": "_screenForMaxHeight",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didEndAlert:returnCode:contextInfo:": {
+      "name": "didEndAlert:returnCode:contextInfo:",
+      "bridgedName": "didEndAlert_returnCode_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetModalForWindow:completionHandler:": {
+      "name": "beginSheetModalForWindow:completionHandler:",
+      "bridgedName": "beginSheetModalForWindow_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:": {
+      "name": "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginSheetModalForWindow_modalDelegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModal": {
+      "name": "runModal",
+      "bridgedName": "runModal",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepare": {
+      "name": "prepare",
+      "bridgedName": "prepare",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dontWarnAgain": {
+      "name": "_dontWarnAgain",
+      "bridgedName": "_dontWarnAgain",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDontWarnMessage:": {
+      "name": "_setDontWarnMessage:",
+      "bridgedName": "_setDontWarnMessage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showsDontWarnAgain": {
+      "name": "_showsDontWarnAgain",
+      "bridgedName": "_showsDontWarnAgain",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addButtonWithTitle:": {
+      "name": "addButtonWithTitle:",
+      "bridgedName": "addButtonWithTitle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearTargetAndReleaseButton:": {
+      "name": "_clearTargetAndReleaseButton:",
+      "bridgedName": "_clearTargetAndReleaseButton",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTouchBar": {
+      "name": "_removeTouchBar",
+      "bridgedName": "_removeTouchBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowClosing:": {
+      "name": "windowClosing:",
+      "bridgedName": "windowClosing",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertTouchBar": {
+      "name": "_alertTouchBar",
+      "bridgedName": "_alertTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "accessoryView": {
+      "name": "accessoryView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "suppressionButton": {
+      "name": "suppressionButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "window": {
+      "name": "window",
+      "pointer": true,
+      "type": "NSWindow",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "helpAnchor": {
+      "name": "helpAnchor",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "buttons": {
+      "name": "buttons",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "icon": {
+      "name": "icon",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "informativeText": {
+      "name": "informativeText",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "messageText": {
+      "name": "messageText",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "attributedInformativeText": {
+      "name": "attributedInformativeText",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "attributedMessageText": {
+      "name": "attributedMessageText",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "touchBar": {
+      "name": "touchBar",
+      "pointer": true,
+      "type": "NSTouchBar",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

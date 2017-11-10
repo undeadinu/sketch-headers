@@ -1,0 +1,727 @@
+{
+  "imports": [
+    "PDFScanner.h"
+  ],
+  "classes": [
+    "MSLayerGroup",
+    "MSPDFState",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSPDFScanner",
+  "extends": "PDFScanner",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endText": {
+      "name": "endText",
+      "bridgedName": "endText",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendText:": {
+      "name": "appendText:",
+      "bridgedName": "appendText",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextMatrix:": {
+      "name": "setTextMatrix:",
+      "bridgedName": "setTextMatrix",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nextLineWithOffset:": {
+      "name": "nextLineWithOffset:",
+      "bridgedName": "nextLineWithOffset",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "offset:": {
+      "name": "offset:",
+      "bridgedName": "offset",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextMode:": {
+      "name": "setTextMode:",
+      "bridgedName": "setTextMode",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextScale:": {
+      "name": "setTextScale:",
+      "bridgedName": "setTextScale",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextRise:": {
+      "name": "setTextRise:",
+      "bridgedName": "setTextRise",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextLeading:": {
+      "name": "setTextLeading:",
+      "bridgedName": "setTextLeading",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextWordSpacing:": {
+      "name": "setTextWordSpacing:",
+      "bridgedName": "setTextWordSpacing",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextCharacterSpacing:": {
+      "name": "setTextCharacterSpacing:",
+      "bridgedName": "setTextCharacterSpacing",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFontName:size:info:": {
+      "name": "setFontName:size:info:",
+      "bridgedName": "setFontName_size_info",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginText": {
+      "name": "beginText",
+      "bridgedName": "beginText",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextTransform:resettingLineTransform:": {
+      "name": "setTextTransform:resettingLineTransform:",
+      "bridgedName": "setTextTransform_resettingLineTransform",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "processImage:info:": {
+      "name": "processImage:info:",
+      "bridgedName": "processImage_info",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fillWithShadingPattern:": {
+      "name": "fillWithShadingPattern:",
+      "bridgedName": "fillWithShadingPattern",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gradientForLayer:pattern:": {
+      "name": "gradientForLayer:pattern:",
+      "bridgedName": "gradientForLayer_pattern",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fillWithWinding:": {
+      "name": "fillWithWinding:",
+      "bridgedName": "fillWithWinding",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipWithWinding:": {
+      "name": "clipWithWinding:",
+      "bridgedName": "clipWithWinding",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColourRenderingIntent:": {
+      "name": "setColourRenderingIntent:",
+      "bridgedName": "setColourRenderingIntent",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFillAlphaConstant:": {
+      "name": "setFillAlphaConstant:",
+      "bridgedName": "setFillAlphaConstant",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setStrokeAlphaConstant:": {
+      "name": "setStrokeAlphaConstant:",
+      "bridgedName": "setStrokeAlphaConstant",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFillColour:": {
+      "name": "setFillColour:",
+      "bridgedName": "setFillColour",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setStrokeColour:": {
+      "name": "setStrokeColour:",
+      "bridgedName": "setStrokeColour",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFillColourSpace:mapping:": {
+      "name": "setFillColourSpace:mapping:",
+      "bridgedName": "setFillColourSpace_mapping",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setStrokeColourSpace:mapping:": {
+      "name": "setStrokeColourSpace:mapping:",
+      "bridgedName": "setStrokeColourSpace_mapping",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "strokeWithWinding:": {
+      "name": "strokeWithWinding:",
+      "bridgedName": "strokeWithWinding",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transformedPath": {
+      "name": "transformedPath",
+      "bridgedName": "transformedPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLineDash:phase:": {
+      "name": "setLineDash:phase:",
+      "bridgedName": "setLineDash_phase",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLineCap:": {
+      "name": "setLineCap:",
+      "bridgedName": "setLineCap",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLineJoin:": {
+      "name": "setLineJoin:",
+      "bridgedName": "setLineJoin",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLineWidth:": {
+      "name": "setLineWidth:",
+      "bridgedName": "setLineWidth",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restoreGraphicState": {
+      "name": "restoreGraphicState",
+      "bridgedName": "restoreGraphicState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveGraphicState": {
+      "name": "saveGraphicState",
+      "bridgedName": "saveGraphicState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentRenderingIntent": {
+      "name": "currentRenderingIntent",
+      "bridgedName": "currentRenderingIntent",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentFillColorSpaceMapping": {
+      "name": "currentFillColorSpaceMapping",
+      "bridgedName": "currentFillColorSpaceMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentFillColorSpace": {
+      "name": "currentFillColorSpace",
+      "bridgedName": "currentFillColorSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentStrokeColorSpaceMapping": {
+      "name": "currentStrokeColorSpaceMapping",
+      "bridgedName": "currentStrokeColorSpaceMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentStrokeColorSpace": {
+      "name": "currentStrokeColorSpace",
+      "bridgedName": "currentStrokeColorSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentLeading": {
+      "name": "currentLeading",
+      "bridgedName": "currentLeading",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentPoint": {
+      "name": "currentPoint",
+      "bridgedName": "currentPoint",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentFont": {
+      "name": "currentFont",
+      "bridgedName": "currentFont",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "concatMatrix:": {
+      "name": "concatMatrix:",
+      "bridgedName": "concatMatrix",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendRectangle:": {
+      "name": "appendRectangle:",
+      "bridgedName": "appendRectangle",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endPath": {
+      "name": "endPath",
+      "bridgedName": "endPath",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closePath": {
+      "name": "closePath",
+      "bridgedName": "closePath",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "curveTo:control1:control2:": {
+      "name": "curveTo:control1:control2:",
+      "bridgedName": "curveTo_control1_control2",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lineTo:": {
+      "name": "lineTo:",
+      "bridgedName": "lineTo",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveTo:": {
+      "name": "moveTo:",
+      "bridgedName": "moveTo",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doClipping": {
+      "name": "doClipping",
+      "bridgedName": "doClipping",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doRestoreState": {
+      "name": "doRestoreState",
+      "bridgedName": "doRestoreState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doSaveState": {
+      "name": "doSaveState",
+      "bridgedName": "doSaveState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doNewPath": {
+      "name": "doNewPath",
+      "bridgedName": "doNewPath",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doText": {
+      "name": "doText",
+      "bridgedName": "doText",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doClose": {
+      "name": "doClose",
+      "bridgedName": "doClose",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scanStream:dictionary:": {
+      "name": "scanStream:dictionary:",
+      "bridgedName": "scanStream_dictionary",
+      "args": [
+        {
+          "type": "struct CGPDFContentStream *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scanPage:parser:": {
+      "name": "scanPage:parser:",
+      "bridgedName": "scanPage_parser",
+      "args": [
+        {
+          "type": "struct CGPDFPage *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nameForType:": {
+      "name": "nameForType:",
+      "bridgedName": "nameForType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "state": {
+      "name": "state",
+      "pointer": true,
+      "type": "MSPDFState",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "stack": {
+      "name": "stack",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "nextID": {
+      "name": "nextID",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "substituteFontName": {
+      "name": "substituteFontName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "rootLayer": {
+      "name": "rootLayer",
+      "pointer": true,
+      "type": "MSLayerGroup",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

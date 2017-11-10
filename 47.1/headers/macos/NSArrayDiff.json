@@ -1,0 +1,84 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSIndexSet",
+    "NSSet"
+  ],
+  "protocol": false,
+  "className": "NSArrayDiff",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPreviousObjects:currentObjects:": {
+      "name": "initWithPreviousObjects:currentObjects:",
+      "bridgedName": "initWithPreviousObjects_currentObjects",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "movedObjectIndexes": {
+      "name": "movedObjectIndexes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "insertedObjectIndexes": {
+      "name": "insertedObjectIndexes",
+      "pointer": true,
+      "type": "NSIndexSet",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "removedObjectIndexes": {
+      "name": "removedObjectIndexes",
+      "pointer": true,
+      "type": "NSIndexSet",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "empty": {
+      "name": "empty",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isEmpty"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1044 @@
+{
+  "imports": [
+    "NSColorPickingCustom.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSButton",
+    "NSColorList",
+    "NSLayoutConstraint",
+    "NSMutableDictionary",
+    "NSPageableTableView",
+    "NSPanel",
+    "NSPopUpButton",
+    "NSSearchField",
+    "NSString",
+    "NSTextField",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSColorPickerPageableNameList",
+  "extends": "NSColorPicker",
+  "interfaces": [
+    "NSColorPickingCustom"
+  ],
+  "methods": {
+    "keyPathsForValuesAffectingValueForKey:": {
+      "name": "keyPathsForValuesAffectingValueForKey:",
+      "bridgedName": "keyPathsForValuesAffectingValueForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "tableView:acceptDrop:row:dropOperation:": {
+      "name": "tableView:acceptDrop:row:dropOperation:",
+      "bridgedName": "tableView_acceptDrop_row_dropOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:validateDrop:proposedRow:proposedDropOperation:": {
+      "name": "tableView:validateDrop:proposedRow:proposedDropOperation:",
+      "bridgedName": "tableView_validateDrop_proposedRow_proposedDropOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:writeRowsWithIndexes:toPasteboard:": {
+      "name": "tableView:writeRowsWithIndexes:toPasteboard:",
+      "bridgedName": "tableView_writeRowsWithIndexes_toPasteboard",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteboardTypeForReordering": {
+      "name": "pasteboardTypeForReordering",
+      "bridgedName": "pasteboardTypeForReordering",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pageableTableView:handleKeyDownEvent:": {
+      "name": "pageableTableView:handleKeyDownEvent:",
+      "bridgedName": "pageableTableView_handleKeyDownEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "activeColorList": {
+      "name": "activeColorList",
+      "bridgedName": "activeColorList",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewClicked:": {
+      "name": "tableViewClicked:",
+      "bridgedName": "tableViewClicked",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewSelectionDidChange:": {
+      "name": "tableViewSelectionDidChange:",
+      "bridgedName": "tableViewSelectionDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldEditTableColumn:row:": {
+      "name": "tableView:shouldEditTableColumn:row:",
+      "bridgedName": "tableView_shouldEditTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:willDisplayCell:forTableColumn:row:": {
+      "name": "tableView:willDisplayCell:forTableColumn:row:",
+      "bridgedName": "tableView_willDisplayCell_forTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorForRow:": {
+      "name": "_colorForRow:",
+      "bridgedName": "_colorForRow",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textShouldEndEditing:": {
+      "name": "control:textShouldEndEditing:",
+      "bridgedName": "control_textShouldEndEditing",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:setObjectValue:forTableColumn:row:": {
+      "name": "tableView:setObjectValue:forTableColumn:row:",
+      "bridgedName": "tableView_setObjectValue_forTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didPresentErrorWithRecovery:contextInfo:": {
+      "name": "didPresentErrorWithRecovery:contextInfo:",
+      "bridgedName": "didPresentErrorWithRecovery_contextInfo",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_errorDuplicateColor:": {
+      "name": "_errorDuplicateColor:",
+      "bridgedName": "_errorDuplicateColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:objectValueForTableColumn:row:": {
+      "name": "tableView:objectValueForTableColumn:row:",
+      "bridgedName": "tableView_objectValueForTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endSheetReturningTag:": {
+      "name": "endSheetReturningTag:",
+      "bridgedName": "endSheetReturningTag",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filterChanged:": {
+      "name": "filterChanged:",
+      "bridgedName": "filterChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidChange:": {
+      "name": "controlTextDidChange:",
+      "bridgedName": "controlTextDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:doCommandBySelector:": {
+      "name": "control:textView:doCommandBySelector:",
+      "bridgedName": "control_textView_doCommandBySelector",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeList:": {
+      "name": "removeList:",
+      "bridgedName": "removeList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeListSheetDidEnd:returnCode:context:": {
+      "name": "removeListSheetDidEnd:returnCode:context:",
+      "bridgedName": "removeListSheetDidEnd_returnCode_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColor:": {
+      "name": "removeColor:",
+      "bridgedName": "removeColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeCurrentColor": {
+      "name": "_removeCurrentColor",
+      "bridgedName": "_removeCurrentColor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentSelectedColorListColorName": {
+      "name": "_currentSelectedColorListColorName",
+      "bridgedName": "_currentSelectedColorListColorName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renameList:": {
+      "name": "renameList:",
+      "bridgedName": "renameList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openList:": {
+      "name": "openList:",
+      "bridgedName": "openList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openListFromFile:": {
+      "name": "openListFromFile:",
+      "bridgedName": "openListFromFile",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newList:": {
+      "name": "newList:",
+      "bridgedName": "newList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newListName:": {
+      "name": "newListName:",
+      "bridgedName": "newListName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newColor:": {
+      "name": "newColor:",
+      "bridgedName": "newColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newColorName:": {
+      "name": "newColorName:",
+      "bridgedName": "newColorName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyColorAtIndex:toIndex:saveList:": {
+      "name": "copyColorAtIndex:toIndex:saveList:",
+      "bridgedName": "copyColorAtIndex_toIndex_saveList",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveColorAtIndex:toIndex:saveList:": {
+      "name": "moveColorAtIndex:toIndex:saveList:",
+      "bridgedName": "moveColorAtIndex_toIndex_saveList",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertNewColor:atIndex:andShowInWell:": {
+      "name": "insertNewColor:atIndex:andShowInWell:",
+      "bridgedName": "insertNewColor_atIndex_andShowInWell",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addNewColor:andShowInWell:": {
+      "name": "addNewColor:andShowInWell:",
+      "bridgedName": "addNewColor_andShowInWell",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveList:": {
+      "name": "saveList:",
+      "bridgedName": "saveList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addColorAllowed": {
+      "name": "addColorAllowed",
+      "bridgedName": "addColorAllowed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColorAllowed": {
+      "name": "removeColorAllowed",
+      "bridgedName": "removeColorAllowed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isCurrListEditable": {
+      "name": "isCurrListEditable",
+      "bridgedName": "isCurrListEditable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeListEnabled": {
+      "name": "removeListEnabled",
+      "bridgedName": "removeListEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "findColorNamed:inList:usingLocalName:": {
+      "name": "findColorNamed:inList:usingLocalName:",
+      "bridgedName": "findColorNamed_inList_usingLocalName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restoreDefaults": {
+      "name": "restoreDefaults",
+      "bridgedName": "restoreDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveDefaults": {
+      "name": "saveDefaults",
+      "bridgedName": "saveDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadColorLists": {
+      "name": "loadColorLists",
+      "bridgedName": "loadColorLists",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachedListDictionary": {
+      "name": "attachedListDictionary",
+      "bridgedName": "attachedListDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "listDictionary": {
+      "name": "listDictionary",
+      "bridgedName": "listDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCurrListName:": {
+      "name": "setCurrListName:",
+      "bridgedName": "setCurrListName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detachColorList:": {
+      "name": "detachColorList:",
+      "bridgedName": "detachColorList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachColorList:": {
+      "name": "attachColorList:",
+      "bridgedName": "attachColorList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachColorList:makeSelected:": {
+      "name": "attachColorList:makeSelected:",
+      "bridgedName": "attachColorList_makeSelected",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachColorList:systemList:makeSelected:": {
+      "name": "attachColorList:systemList:makeSelected:",
+      "bridgedName": "attachColorList_systemList_makeSelected",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceColorList:withColorList:": {
+      "name": "replaceColorList:withColorList:",
+      "bridgedName": "replaceColorList_withColorList",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchList:": {
+      "name": "switchList:",
+      "bridgedName": "switchList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchToListNamed:": {
+      "name": "switchToListNamed:",
+      "bridgedName": "switchToListNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endColorListInlineEditing": {
+      "name": "_endColorListInlineEditing",
+      "bridgedName": "_endColorListInlineEditing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshUI": {
+      "name": "refreshUI",
+      "bridgedName": "refreshUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadColorListTableView": {
+      "name": "_reloadColorListTableView",
+      "bridgedName": "_reloadColorListTableView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorListChanged:": {
+      "name": "_colorListChanged:",
+      "bridgedName": "_colorListChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadColorListTableViewForFilterChange": {
+      "name": "_reloadColorListTableViewForFilterChange",
+      "bridgedName": "_reloadColorListTableViewForFilterChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSortedColorListNames": {
+      "name": "_updateSortedColorListNames",
+      "bridgedName": "_updateSortedColorListNames",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentFilterString": {
+      "name": "_currentFilterString",
+      "bridgedName": "_currentFilterString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPopItemWithTitle:andObject:atIndex:": {
+      "name": "insertPopItemWithTitle:andObject:atIndex:",
+      "bridgedName": "insertPopItemWithTitle_andObject_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPopItemWithTitle:andObject:": {
+      "name": "insertPopItemWithTitle:andObject:",
+      "bridgedName": "insertPopItemWithTitle_andObject",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buttonToolTip": {
+      "name": "buttonToolTip",
+      "bridgedName": "buttonToolTip",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPickerMask:colorPanel:": {
+      "name": "initWithPickerMask:colorPanel:",
+      "bridgedName": "initWithPickerMask_colorPanel",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minContentSize": {
+      "name": "minContentSize",
+      "bridgedName": "minContentSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertionOrder": {
+      "name": "_insertionOrder",
+      "bridgedName": "_insertionOrder",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideNewButtonImage": {
+      "name": "provideNewButtonImage",
+      "bridgedName": "provideNewButtonImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColor:": {
+      "name": "setColor:",
+      "bridgedName": "setColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectColorInTableView": {
+      "name": "_selectColorInTableView",
+      "bridgedName": "_selectColorInTableView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorIndexInTableView": {
+      "name": "_colorIndexInTableView",
+      "bridgedName": "_colorIndexInTableView",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_matchQualityOfColorAtIndex:toColor:ifBetterThan:": {
+      "name": "_matchQualityOfColorAtIndex:toColor:ifBetterThan:",
+      "bridgedName": "_matchQualityOfColorAtIndex_toColor_ifBetterThan",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideNewView:": {
+      "name": "provideNewView:",
+      "bridgedName": "provideNewView",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changedPossibleKeys": {
+      "name": "_changedPossibleKeys",
+      "bridgedName": "_changedPossibleKeys",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupLoadedNib": {
+      "name": "setupLoadedNib",
+      "bridgedName": "setupLoadedNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentMode": {
+      "name": "currentMode",
+      "bridgedName": "currentMode",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsMode:": {
+      "name": "supportsMode:",
+      "bridgedName": "supportsMode",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentColorIndex": {
+      "name": "_currentColorIndex",
+      "bridgedName": "_currentColorIndex",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

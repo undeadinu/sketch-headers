@@ -1,0 +1,720 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSAnimatablePropertyContainer.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "CAMediaTimingFunction",
+    "NSArray",
+    "NSCache",
+    "NSDictionary",
+    "NSSet",
+    "NSString",
+    "NSTouchBarCustomizableConfiguration",
+    "NSTouchBarItem"
+  ],
+  "protocol": false,
+  "className": "NSTouchBar",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSAnimatablePropertyContainer",
+    "NSCoding"
+  ],
+  "methods": {
+    "automaticallyNotifiesObserversOfVisible": {
+      "name": "automaticallyNotifiesObserversOfVisible",
+      "bridgedName": "automaticallyNotifiesObserversOfVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticRTLMirroringSupported": {
+      "name": "automaticRTLMirroringSupported",
+      "bridgedName": "automaticRTLMirroringSupported",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingItems": {
+      "name": "keyPathsForValuesAffectingItems",
+      "bridgedName": "keyPathsForValuesAffectingItems",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingItemIdentifiers": {
+      "name": "keyPathsForValuesAffectingItemIdentifiers",
+      "bridgedName": "keyPathsForValuesAffectingItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "resetUserDefinedTouchBar": {
+      "name": "resetUserDefinedTouchBar",
+      "bridgedName": "resetUserDefinedTouchBar",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "userDefinedTouchBar": {
+      "name": "userDefinedTouchBar",
+      "bridgedName": "userDefinedTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathToUserDefinedTouchBar": {
+      "name": "pathToUserDefinedTouchBar",
+      "bridgedName": "pathToUserDefinedTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSuppressedByMoreFocusedTouchBars": {
+      "name": "automaticallyNotifiesObserversOfSuppressedByMoreFocusedTouchBars",
+      "bridgedName": "automaticallyNotifiesObserversOfSuppressedByMoreFocusedTouchBars",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSuppressedByLessFocusedTouchBars": {
+      "name": "automaticallyNotifiesObserversOfSuppressedByLessFocusedTouchBars",
+      "bridgedName": "automaticallyNotifiesObserversOfSuppressedByLessFocusedTouchBars",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSuppressesMoreFocusedBars": {
+      "name": "automaticallyNotifiesObserversOfSuppressesMoreFocusedBars",
+      "bridgedName": "automaticallyNotifiesObserversOfSuppressesMoreFocusedBars",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSuppressesLessFocusedBars": {
+      "name": "automaticallyNotifiesObserversOfSuppressesLessFocusedBars",
+      "bridgedName": "automaticallyNotifiesObserversOfSuppressesLessFocusedBars",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setAllowsTouchesDuringTrackingLoops:": {
+      "name": "setAllowsTouchesDuringTrackingLoops:",
+      "bridgedName": "setAllowsTouchesDuringTrackingLoops",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "allowsTouchesDuringTrackingLoops": {
+      "name": "allowsTouchesDuringTrackingLoops",
+      "bridgedName": "allowsTouchesDuringTrackingLoops",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultAnimationForKey:": {
+      "name": "defaultAnimationForKey:",
+      "bridgedName": "defaultAnimationForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "minimizeSystemModalTouchBar:": {
+      "name": "minimizeSystemModalTouchBar:",
+      "bridgedName": "minimizeSystemModalTouchBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "dismissSystemModalTouchBar:": {
+      "name": "dismissSystemModalTouchBar:",
+      "bridgedName": "dismissSystemModalTouchBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "presentSystemModalTouchBar:placement:systemTrayItemIdentifier:": {
+      "name": "presentSystemModalTouchBar:placement:systemTrayItemIdentifier:",
+      "bridgedName": "presentSystemModalTouchBar_placement_systemTrayItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "presentSystemModalTouchBar:systemTrayItemIdentifier:": {
+      "name": "presentSystemModalTouchBar:systemTrayItemIdentifier:",
+      "bridgedName": "presentSystemModalTouchBar_systemTrayItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "minimizeSystemModalFunctionBar:": {
+      "name": "minimizeSystemModalFunctionBar:",
+      "bridgedName": "minimizeSystemModalFunctionBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "dismissSystemModalFunctionBar:": {
+      "name": "dismissSystemModalFunctionBar:",
+      "bridgedName": "dismissSystemModalFunctionBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "presentSystemModalFunctionBar:systemTrayItemIdentifier:": {
+      "name": "presentSystemModalFunctionBar:systemTrayItemIdentifier:",
+      "bridgedName": "presentSystemModalFunctionBar_systemTrayItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "presentSystemModalFunctionBar:placement:systemTrayItemIdentifier:": {
+      "name": "presentSystemModalFunctionBar:placement:systemTrayItemIdentifier:",
+      "bridgedName": "presentSystemModalFunctionBar_placement_systemTrayItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingDefaultItems": {
+      "name": "keyPathsForValuesAffectingDefaultItems",
+      "bridgedName": "keyPathsForValuesAffectingDefaultItems",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingCustomizationDefaultItemIdentifiers": {
+      "name": "keyPathsForValuesAffectingCustomizationDefaultItemIdentifiers",
+      "bridgedName": "keyPathsForValuesAffectingCustomizationDefaultItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingEscapeKeyReplacementItem": {
+      "name": "keyPathsForValuesAffectingEscapeKeyReplacementItem",
+      "bridgedName": "keyPathsForValuesAffectingEscapeKeyReplacementItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchBarWithDelegate:customizationIdentifier:defaultItemIdentifiers:allowedItemIdentifiers:": {
+      "name": "touchBarWithDelegate:customizationIdentifier:defaultItemIdentifiers:allowedItemIdentifiers:",
+      "bridgedName": "touchBarWithDelegate_customizationIdentifier_defaultItemIdentifiers_allowedItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchBarWithDelegate:itemIdentifiers:": {
+      "name": "touchBarWithDelegate:itemIdentifiers:",
+      "bridgedName": "touchBarWithDelegate_itemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchBarWithItems:": {
+      "name": "touchBarWithItems:",
+      "bridgedName": "touchBarWithItems",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "bridgedName": "debugDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTouchBarLayoutDirection:": {
+      "name": "setTouchBarLayoutDirection:",
+      "bridgedName": "setTouchBarLayoutDirection",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBarLayoutDirection": {
+      "name": "touchBarLayoutDirection",
+      "bridgedName": "touchBarLayoutDirection",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemForIdentifier:": {
+      "name": "itemForIdentifier:",
+      "bridgedName": "itemForIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didItemsReallyChange:": {
+      "name": "_didItemsReallyChange:",
+      "bridgedName": "_didItemsReallyChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "items": {
+      "name": "items",
+      "bridgedName": "items",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minWidthGivenVisualCenterX:": {
+      "name": "minWidthGivenVisualCenterX:",
+      "bridgedName": "minWidthGivenVisualCenterX",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_playgroundPreviewView": {
+      "name": "_playgroundPreviewView",
+      "bridgedName": "_playgroundPreviewView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_playgroundQuickLookView": {
+      "name": "_playgroundQuickLookView",
+      "bridgedName": "_playgroundQuickLookView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistWithItemIdentifiers:toDomain:": {
+      "name": "_persistWithItemIdentifiers:toDomain:",
+      "bridgedName": "_persistWithItemIdentifiers_toDomain",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetCustomization": {
+      "name": "_resetCustomization",
+      "bridgedName": "_resetCustomization",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animationForKey:": {
+      "name": "animationForKey:",
+      "bridgedName": "animationForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animator": {
+      "name": "animator",
+      "bridgedName": "animator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animatorClass": {
+      "name": "_animatorClass",
+      "bridgedName": "_animatorClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDefaultItems:": {
+      "name": "setDefaultItems:",
+      "bridgedName": "setDefaultItems",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultItems": {
+      "name": "defaultItems",
+      "bridgedName": "defaultItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItemIdentifiers:": {
+      "name": "setItemIdentifiers:",
+      "bridgedName": "setItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCustomizationDefaultItemIdentifiers:": {
+      "name": "setCustomizationDefaultItemIdentifiers:",
+      "bridgedName": "setCustomizationDefaultItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customizationDefaultItemIdentifiers": {
+      "name": "customizationDefaultItemIdentifiers",
+      "bridgedName": "customizationDefaultItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "visible": {
+      "name": "visible",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isVisible"
+      ]
+    },
+    "escapeKeyReplacementItemIdentifier": {
+      "name": "escapeKeyReplacementItemIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "principalItemIdentifier": {
+      "name": "principalItemIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "templateItems": {
+      "name": "templateItems",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "customizationRequiredItemIdentifiers": {
+      "name": "customizationRequiredItemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "customizationAllowedItemIdentifiers": {
+      "name": "customizationAllowedItemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "customizationIdentifier": {
+      "name": "customizationIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "defaultItemIdentifiers": {
+      "name": "defaultItemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "configuration": {
+      "name": "configuration",
+      "pointer": true,
+      "type": "NSTouchBarCustomizableConfiguration",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "itemIdentifiers": {
+      "name": "itemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "suppressedByMoreFocusedTouchBars": {
+      "name": "suppressedByMoreFocusedTouchBars",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isSuppressedByMoreFocusedTouchBars"
+      ]
+    },
+    "suppressedByLessFocusedTouchBars": {
+      "name": "suppressedByLessFocusedTouchBars",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isSuppressedByLessFocusedTouchBars"
+      ]
+    },
+    "animationTimingFunction": {
+      "name": "animationTimingFunction",
+      "pointer": true,
+      "type": "CAMediaTimingFunction",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "animationDuration": {
+      "name": "animationDuration",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "animations": {
+      "name": "animations",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "escapeKeyReplacementItem": {
+      "name": "escapeKeyReplacementItem",
+      "pointer": true,
+      "type": "NSTouchBarItem",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "customizationPresets": {
+      "name": "customizationPresets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

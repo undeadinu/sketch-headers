@@ -1,0 +1,593 @@
+{
+  "imports": [
+    "NSTextDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSEvent",
+    "NSMenu",
+    "NSNotification",
+    "NSOrthography",
+    "NSPasteboard",
+    "NSSharingServicePicker",
+    "NSString",
+    "NSTextAttachment",
+    "NSTextView",
+    "NSURL",
+    "NSUndoManager"
+  ],
+  "protocol": true,
+  "className": "NSTextViewDelegate",
+  "interfaces": [],
+  "methods": {
+    "textView:draggedCell:inRect:event:": {
+      "name": "textView:draggedCell:inRect:event:",
+      "bridgedName": "textView_draggedCell_inRect_event",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:doubleClickedOnCell:inRect:": {
+      "name": "textView:doubleClickedOnCell:inRect:",
+      "bridgedName": "textView_doubleClickedOnCell_inRect",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:clickedOnCell:inRect:": {
+      "name": "textView:clickedOnCell:inRect:",
+      "bridgedName": "textView_clickedOnCell_inRect",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:clickedOnLink:": {
+      "name": "textView:clickedOnLink:",
+      "bridgedName": "textView_clickedOnLink",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldSelectCandidateAtIndex:": {
+      "name": "textView:shouldSelectCandidateAtIndex:",
+      "bridgedName": "textView_shouldSelectCandidateAtIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:candidates:forSelectedRange:": {
+      "name": "textView:candidates:forSelectedRange:",
+      "bridgedName": "textView_candidates_forSelectedRange",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSArray *"
+        },
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:candidatesForSelectedRange:": {
+      "name": "textView:candidatesForSelectedRange:",
+      "bridgedName": "textView_candidatesForSelectedRange",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldUpdateTouchBarItemIdentifiers:": {
+      "name": "textView:shouldUpdateTouchBarItemIdentifiers:",
+      "bridgedName": "textView_shouldUpdateTouchBarItemIdentifiers",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoManagerForTextView:": {
+      "name": "undoManagerForTextView:",
+      "bridgedName": "undoManagerForTextView",
+      "args": [
+        {
+          "type": "NSTextView *"
+        }
+      ],
+      "returns": "NSUndoManager *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:willShowSharingServicePicker:forItems:": {
+      "name": "textView:willShowSharingServicePicker:forItems:",
+      "bridgedName": "textView_willShowSharingServicePicker_forItems",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSSharingServicePicker *"
+        },
+        {
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "NSSharingServicePicker *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:URLForContentsOfTextAttachment:atIndex:": {
+      "name": "textView:URLForContentsOfTextAttachment:atIndex:",
+      "bridgedName": "textView_URLForContentsOfTextAttachment_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSTextAttachment *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "NSURL *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:didCheckTextInRange:types:options:results:orthography:wordCount:": {
+      "name": "textView:didCheckTextInRange:types:options:results:orthography:wordCount:",
+      "bridgedName": "textView_didCheckTextInRange_types_options_results_orthography_wordCount",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "NSDictionary *"
+        },
+        {
+          "type": "NSArray *"
+        },
+        {
+          "type": "NSOrthography *"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:willCheckTextInRange:options:types:": {
+      "name": "textView:willCheckTextInRange:options:types:",
+      "bridgedName": "textView_willCheckTextInRange_options_types",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "NSDictionary *"
+        },
+        {
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "NSDictionary *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:menu:forEvent:atIndex:": {
+      "name": "textView:menu:forEvent:atIndex:",
+      "bridgedName": "textView_menu_forEvent_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSMenu *"
+        },
+        {
+          "type": "NSEvent *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "NSMenu *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldSetSpellingState:range:": {
+      "name": "textView:shouldSetSpellingState:range:",
+      "bridgedName": "textView_shouldSetSpellingState_range",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:doCommandBySelector:": {
+      "name": "textView:doCommandBySelector:",
+      "bridgedName": "textView_doCommandBySelector",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldChangeTextInRange:replacementString:": {
+      "name": "textView:shouldChangeTextInRange:replacementString:",
+      "bridgedName": "textView_shouldChangeTextInRange_replacementString",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:completions:forPartialWordRange:indexOfSelectedItem:": {
+      "name": "textView:completions:forPartialWordRange:indexOfSelectedItem:",
+      "bridgedName": "textView_completions_forPartialWordRange_indexOfSelectedItem",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSArray *"
+        },
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "long long *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:willDisplayToolTip:forCharacterAtIndex:": {
+      "name": "textView:willDisplayToolTip:forCharacterAtIndex:",
+      "bridgedName": "textView_willDisplayToolTip_forCharacterAtIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSString *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textViewDidChangeTypingAttributes:": {
+      "name": "textViewDidChangeTypingAttributes:",
+      "bridgedName": "textViewDidChangeTypingAttributes",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textViewDidChangeSelection:": {
+      "name": "textViewDidChangeSelection:",
+      "bridgedName": "textViewDidChangeSelection",
+      "args": [
+        {
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldChangeTypingAttributes:toAttributes:": {
+      "name": "textView:shouldChangeTypingAttributes:toAttributes:",
+      "bridgedName": "textView_shouldChangeTypingAttributes_toAttributes",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSDictionary *"
+        },
+        {
+          "type": "NSDictionary *"
+        }
+      ],
+      "returns": "NSDictionary *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:shouldChangeTextInRanges:replacementStrings:": {
+      "name": "textView:shouldChangeTextInRanges:replacementStrings:",
+      "bridgedName": "textView_shouldChangeTextInRanges_replacementStrings",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSArray *"
+        },
+        {
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:willChangeSelectionFromCharacterRanges:toCharacterRanges:": {
+      "name": "textView:willChangeSelectionFromCharacterRanges:toCharacterRanges:",
+      "bridgedName": "textView_willChangeSelectionFromCharacterRanges_toCharacterRanges",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "NSArray *"
+        },
+        {
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:willChangeSelectionFromCharacterRange:toCharacterRange:": {
+      "name": "textView:willChangeSelectionFromCharacterRange:toCharacterRange:",
+      "bridgedName": "textView_willChangeSelectionFromCharacterRange_toCharacterRange",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:writeCell:atIndex:toPasteboard:type:": {
+      "name": "textView:writeCell:atIndex:toPasteboard:type:",
+      "bridgedName": "textView_writeCell_atIndex_toPasteboard_type",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "NSPasteboard *"
+        },
+        {
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:writablePasteboardTypesForCell:atIndex:": {
+      "name": "textView:writablePasteboardTypesForCell:atIndex:",
+      "bridgedName": "textView_writablePasteboardTypesForCell_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:draggedCell:inRect:event:atIndex:": {
+      "name": "textView:draggedCell:inRect:event:atIndex:",
+      "bridgedName": "textView_draggedCell_inRect_event_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "NSEvent *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:doubleClickedOnCell:inRect:atIndex:": {
+      "name": "textView:doubleClickedOnCell:inRect:atIndex:",
+      "bridgedName": "textView_doubleClickedOnCell_inRect_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:clickedOnCell:inRect:atIndex:": {
+      "name": "textView:clickedOnCell:inRect:atIndex:",
+      "bridgedName": "textView_clickedOnCell_inRect_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id <NSTextAttachmentCell>"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textView:clickedOnLink:atIndex:": {
+      "name": "textView:clickedOnLink:atIndex:",
+      "bridgedName": "textView_clickedOnLink_atIndex",
+      "args": [
+        {
+          "type": "NSTextView *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

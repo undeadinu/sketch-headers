@@ -1,0 +1,156 @@
+{
+  "imports": [
+    "NSObject.h",
+    "SMKMessageCoding.h"
+  ],
+  "classes": [
+    "NSData",
+    "NSDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "SMKMessage",
+  "extends": "NSObject",
+  "interfaces": [
+    "SMKMessageCoding"
+  ],
+  "methods": {
+    "classForType:": {
+      "name": "classForType:",
+      "bridgedName": "classForType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "messageFromData:": {
+      "name": "messageFromData:",
+      "bridgedName": "messageFromData",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithType:": {
+      "name": "initWithType:",
+      "bridgedName": "initWithType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDictionary:": {
+      "name": "initWithDictionary:",
+      "bridgedName": "initWithDictionary",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "content": {
+      "name": "content",
+      "pointer": false,
+      "type": "id <SMKMessageCoding>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "type": {
+      "name": "type",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contentClass": {
+      "name": "contentClass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dictionaryRepresentation": {
+      "name": "dictionaryRepresentation",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "messageData": {
+      "name": "messageData",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
