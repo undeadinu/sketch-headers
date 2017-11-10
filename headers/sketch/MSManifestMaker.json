@@ -3,7 +3,8 @@
     "NSObject.h"
   ],
   "classes": [
-    "MSImmutableDocumentData"
+    "MSImmutableDocumentData",
+    "NSString"
   ],
   "protocol": false,
   "className": "MSManifestMaker",
@@ -55,24 +56,12 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "manifestForDocument:withName:selectiveExport:usePageIfMissingArtboard:imageProviderBlock:": {
-      "name": "manifestForDocument:withName:selectiveExport:usePageIfMissingArtboard:imageProviderBlock:",
-      "bridgedName": "manifestForDocument_withName_selectiveExport_usePageIfMissingArtboard_imageProviderBlock",
+    "manifestValueForColorSpace:": {
+      "name": "manifestValueForColorSpace:",
+      "bridgedName": "manifestValueForColorSpace",
       "args": [
         {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "BOOL"
-        },
-        {
-          "type": "BOOL"
-        },
-        {
-          "type": "CDUnknownBlockType"
+          "type": "unsigned long long"
         }
       ],
       "returns": "id",
@@ -87,54 +76,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "fileMetadataForRoot:onPage:id:exportScale:manifestScale:": {
-      "name": "fileMetadataForRoot:onPage:id:exportScale:manifestScale:",
-      "bridgedName": "fileMetadataForRoot_onPage_id_exportScale_manifestScale",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "double"
-        },
-        {
-          "type": "double"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "filesMetadataForRootLayer:onPage:id:scale:": {
-      "name": "filesMetadataForRootLayer:onPage:id:scale:",
-      "bridgedName": "filesMetadataForRootLayer_onPage_id_scale",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "double"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "metadataAndExportForRootLayer:onPage:earlierSlugs:": {
-      "name": "metadataAndExportForRootLayer:onPage:earlierSlugs:",
-      "bridgedName": "metadataAndExportForRootLayer_onPage_earlierSlugs",
+    "metadataForRootLayer:onPage:earlierSlugs:": {
+      "name": "metadataForRootLayer:onPage:earlierSlugs:",
+      "bridgedName": "metadataForRootLayer_onPage_earlierSlugs",
       "args": [
         {
           "type": "id"
@@ -201,9 +145,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "manifestWithName:": {
-      "name": "manifestWithName:",
-      "bridgedName": "manifestWithName",
+    "createManifest": {
+      "name": "createManifest",
+      "bridgedName": "createManifest",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
       "args": [
         {
           "type": "id"
@@ -231,21 +183,21 @@
         "nonatomic"
       ]
     },
-    "imageProviderBlock": {
-      "name": "imageProviderBlock",
-      "pointer": false,
-      "type": "CDUnknownBlockType",
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
       "attributes": [
-        "copy",
+        "retain",
         "nonatomic"
       ]
     },
-    "doc": {
-      "name": "doc",
+    "documentData": {
+      "name": "documentData",
       "pointer": true,
       "type": "MSImmutableDocumentData",
       "attributes": [
-        "retain",
+        "readonly",
         "nonatomic"
       ]
     }

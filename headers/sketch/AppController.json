@@ -11,6 +11,7 @@
     "ECLogManagerMacUISupport",
     "MSActionController",
     "MSAssetLibraryController",
+    "MSComponentsPanelController",
     "MSCrashLogManager",
     "MSDocumentationSearcher",
     "MSHUDWindowController",
@@ -400,6 +401,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "checkForAssetLibraryUpdates": {
+      "name": "checkForAssetLibraryUpdates",
+      "bridgedName": "checkForAssetLibraryUpdates",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "createActions": {
       "name": "createActions",
       "bridgedName": "createActions",
@@ -512,11 +521,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "toggleComponentsPanel": {
+      "name": "toggleComponentsPanel",
+      "bridgedName": "toggleComponentsPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "isFirstLaunchOfNewVersion": {
       "name": "isFirstLaunchOfNewVersion",
       "bridgedName": "isFirstLaunchOfNewVersion",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadAssetLibraryPreferencesTableView": {
+      "name": "reloadAssetLibraryPreferencesTableView",
+      "bridgedName": "reloadAssetLibraryPreferencesTableView",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -577,17 +602,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeObserversForDebugSettings": {
-      "name": "removeObserversForDebugSettings",
-      "bridgedName": "removeObserversForDebugSettings",
+    "removeObserversForVisualSettings": {
+      "name": "removeObserversForVisualSettings",
+      "bridgedName": "removeObserversForVisualSettings",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addObserversForDebugSettings": {
-      "name": "addObserversForDebugSettings",
-      "bridgedName": "addObserversForDebugSettings",
+    "addObserversForVisualSettings": {
+      "name": "addObserversForVisualSettings",
+      "bridgedName": "addObserversForVisualSettings",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -619,6 +644,18 @@
     "openCloudURL:": {
       "name": "openCloudURL:",
       "bridgedName": "openCloudURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didOpenURL:": {
+      "name": "didOpenURL:",
+      "bridgedName": "didOpenURL",
       "args": [
         {
           "type": "id"
@@ -858,8 +895,8 @@
         "nonatomic"
       ]
     },
-    "debugSettings": {
-      "name": "debugSettings",
+    "visualSettings": {
+      "name": "visualSettings",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
@@ -894,15 +931,6 @@
         "nonatomic"
       ]
     },
-    "globalAssets": {
-      "name": "globalAssets",
-      "pointer": true,
-      "type": "MSPersistentAssetCollection",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "migrationSemaphore": {
       "name": "migrationSemaphore",
       "pointer": true,
@@ -917,6 +945,33 @@
       "pointer": true,
       "type": "NSString",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "sketchSafeModeOn": {
+      "name": "sketchSafeModeOn",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "componentsPanelController": {
+      "name": "componentsPanelController",
+      "pointer": true,
+      "type": "MSComponentsPanelController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "globalAssets": {
+      "name": "globalAssets",
+      "pointer": true,
+      "type": "MSPersistentAssetCollection",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },

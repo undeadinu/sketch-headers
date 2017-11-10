@@ -3,7 +3,8 @@
     "MSPopoverAction.h"
   ],
   "classes": [
-    "MSCloudController"
+    "MSCloudController",
+    "NSImage"
   ],
   "protocol": false,
   "className": "MSCloudAction",
@@ -69,18 +70,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setToolbarImage:": {
-      "name": "setToolbarImage:",
-      "bridgedName": "setToolbarImage",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setCloudPlatform:": {
       "name": "setCloudPlatform:",
       "bridgedName": "setCloudPlatform",
@@ -117,14 +106,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setProgressImageAt:": {
-      "name": "setProgressImageAt:",
-      "bridgedName": "setProgressImageAt",
-      "args": [
-        {
-          "type": "double"
-        }
-      ],
+    "updateProgressImage": {
+      "name": "updateProgressImage",
+      "bridgedName": "updateProgressImage",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -250,6 +235,15 @@
       "type": "MSCloudController",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "toolbarImage": {
+      "name": "toolbarImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     }

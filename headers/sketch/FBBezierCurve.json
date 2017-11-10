@@ -5,6 +5,7 @@
   "classes": [
     "FBBezierContour",
     "FBEdgeCrossing",
+    "NSArray",
     "NSMutableArray"
   ],
   "protocol": false,
@@ -264,9 +265,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeCrossingsInOverlap": {
-      "name": "removeCrossingsInOverlap",
-      "bridgedName": "removeCrossingsInOverlap",
+    "removeCrossingsInNonCrossingOverlapRuns": {
+      "name": "removeCrossingsInNonCrossingOverlapRuns",
+      "bridgedName": "removeCrossingsInNonCrossingOverlapRuns",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -696,6 +697,16 @@
       "type": "FBEdgeCrossing",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "crossings": {
+      "name": "crossings",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
         "nonatomic"
       ]
     },

@@ -4,6 +4,7 @@
     "MSClickableTextFieldDelegate.h"
   ],
   "classes": [
+    "NSButton",
     "NSLayoutConstraint",
     "NSProgressIndicator",
     "NSString",
@@ -46,6 +47,18 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelUpload:": {
+      "name": "cancelUpload:",
+      "bridgedName": "cancelUpload",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -96,6 +109,18 @@
     "cloudControllerDidChangeUploadingNotification:": {
       "name": "cloudControllerDidChangeUploadingNotification:",
       "bridgedName": "cloudControllerDidChangeUploadingNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadProgressDidChangeNotification:": {
+      "name": "uploadProgressDidChangeNotification:",
+      "bridgedName": "uploadProgressDidChangeNotification",
       "args": [
         {
           "type": "id"
@@ -179,6 +204,15 @@
       "name": "labelUpdateTimer",
       "pointer": true,
       "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cancelButton": {
+      "name": "cancelButton",
+      "pointer": true,
+      "type": "NSButton",
       "attributes": [
         "retain",
         "nonatomic"

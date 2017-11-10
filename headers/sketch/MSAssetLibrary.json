@@ -9,6 +9,7 @@
   "classes": [
     "MSDocumentData",
     "NSDate",
+    "NSDictionary",
     "NSString",
     "NSURL"
   ],
@@ -22,6 +23,26 @@
     "MSLibraryObject"
   ],
   "methods": {
+    "URLForApplicationSupportLibraryNamed:": {
+      "name": "URLForApplicationSupportLibraryNamed:",
+      "bridgedName": "URLForApplicationSupportLibraryNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "assetLibraryFolder": {
+      "name": "assetLibraryFolder",
+      "bridgedName": "assetLibraryFolder",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "URLForTemplateLibraryNamed:": {
       "name": "URLForTemplateLibraryNamed:",
       "bridgedName": "URLForTemplateLibraryNamed",
@@ -78,10 +99,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "loadAsyncWithCompletion:": {
-      "name": "loadAsyncWithCompletion:",
-      "bridgedName": "loadAsyncWithCompletion",
+    "handleAssetLibraryUpdateWithCompletionHandler:": {
+      "name": "handleAssetLibraryUpdateWithCompletionHandler:",
+      "bridgedName": "handleAssetLibraryUpdateWithCompletionHandler",
       "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadAsyncWithDispatchGroup:completionHandler:": {
+      "name": "loadAsyncWithDispatchGroup:completionHandler:",
+      "bridgedName": "loadAsyncWithDispatchGroup_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
         {
           "type": "CDUnknownBlockType"
         }
@@ -158,6 +194,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "initWithName:": {
+      "name": "initWithName:",
+      "bridgedName": "initWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithDocumentAtURL:": {
       "name": "initWithDocumentAtURL:",
       "bridgedName": "initWithDocumentAtURL",
@@ -178,6 +226,24 @@
       "type": "NSString",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "propertyListDictionaryRepresentation": {
+      "name": "propertyListDictionaryRepresentation",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "libraryType": {
+      "name": "libraryType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
@@ -235,15 +301,6 @@
       "name": "dateLastModified",
       "pointer": true,
       "type": "NSDate",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "isUserLibrary": {
-      "name": "isUserLibrary",
-      "pointer": false,
-      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

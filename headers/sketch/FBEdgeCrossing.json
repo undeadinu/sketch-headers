@@ -4,7 +4,8 @@
   ],
   "classes": [
     "FBBezierCurve",
-    "FBBezierIntersection"
+    "FBBezierIntersection",
+    "FBEdgeOverlapRun"
   ],
   "protocol": false,
   "className": "FBEdgeCrossing",
@@ -143,11 +144,12 @@
         "nonatomic"
       ]
     },
-    "fromCrossingOverlap": {
-      "name": "fromCrossingOverlap",
-      "pointer": false,
-      "type": "BOOL",
+    "overlapRun": {
+      "name": "overlapRun",
+      "pointer": true,
+      "type": "FBEdgeOverlapRun",
       "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -192,6 +194,16 @@
       "type": "__weak FBBezierCurve",
       "attributes": [
         "nonatomic"
+      ]
+    },
+    "fromCrossingOverlap": {
+      "name": "fromCrossingOverlap",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isFromCrossingOverlap"
       ]
     },
     "atEnd": {

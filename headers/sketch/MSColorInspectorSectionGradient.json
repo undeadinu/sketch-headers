@@ -8,7 +8,8 @@
     "MSGradientBarView",
     "MSGradientEventHandler",
     "NSButton",
-    "NSString"
+    "NSString",
+    "NSView"
   ],
   "protocol": false,
   "className": "MSColorInspectorSectionGradient",
@@ -129,9 +130,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawGradient:inRect:colorspace:": {
-      "name": "drawGradient:inRect:colorspace:",
-      "bridgedName": "drawGradient_inRect_colorspace",
+    "drawGradient:inRect:colorSpace:": {
+      "name": "drawGradient:inRect:colorSpace:",
+      "bridgedName": "drawGradient_inRect_colorSpace",
       "args": [
         {
           "type": "id"
@@ -354,6 +355,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "gradientBarViewPreviewColorSpace:": {
+      "name": "gradientBarViewPreviewColorSpace:",
+      "bridgedName": "gradientBarViewPreviewColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "gradientBarChanged:": {
       "name": "gradientBarChanged:",
       "bridgedName": "gradientBarChanged",
@@ -425,6 +438,22 @@
       "name": "gradientBarView",
       "pointer": true,
       "type": "__weak MSGradientBarView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "gradientRotationView": {
+      "name": "gradientRotationView",
+      "pointer": true,
+      "type": "__weak NSView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "gradientBarParentView": {
+      "name": "gradientBarParentView",
+      "pointer": true,
+      "type": "__weak NSView",
       "attributes": [
         "nonatomic"
       ]

@@ -2,6 +2,7 @@
   "imports": [
     "_MSImmutableArtboardGroup.h",
     "MSArtboardGroup.h",
+    "MSColorUser.h",
     "MSImmutableRootLayer.h",
     "MSLayerWithBackgroundColor.h",
     "MSWebExportableRootLayer.h"
@@ -18,6 +19,7 @@
   "extends": "_MSImmutableArtboardGroup",
   "interfaces": [
     "MSWebExportableRootLayer",
+    "MSColorUser",
     "MSLayerWithBackgroundColor",
     "MSArtboardGroup",
     "MSImmutableRootLayer"
@@ -125,21 +127,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "possibleOverridesInDocument:actualOverrides:skipping:": {
-      "name": "possibleOverridesInDocument:actualOverrides:skipping:",
-      "bridgedName": "possibleOverridesInDocument_actualOverrides_skipping",
+    "updateColorCounter:": {
+      "name": "updateColorCounter:",
+      "bridgedName": "updateColorCounter",
       "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        },
         {
           "type": "id"
         }
       ],
-      "returns": "id",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBreakMaskChain": {
+      "name": "canBreakMaskChain",
+      "bridgedName": "canBreakMaskChain",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -158,6 +162,18 @@
     "migratePropertiesFromV57OrEarlierWithUnarchiver:": {
       "name": "migratePropertiesFromV57OrEarlierWithUnarchiver:",
       "bridgedName": "migratePropertiesFromV57OrEarlierWithUnarchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackColors:": {
+      "name": "trackColors:",
+      "bridgedName": "trackColors",
       "args": [
         {
           "type": "id"
@@ -209,6 +225,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "appendBaseTranslation:exporter:": {
+      "name": "appendBaseTranslation:exporter:",
+      "bridgedName": "appendBaseTranslation_exporter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "svgStyle:": {
       "name": "svgStyle:",
       "bridgedName": "svgStyle",
@@ -248,14 +279,6 @@
       "attributes": [
         "readonly",
         "nonatomic"
-      ]
-    },
-    "exporterRequiresContentClipping": {
-      "name": "exporterRequiresContentClipping",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly"
       ]
     },
     "CGTransformForFrame": {

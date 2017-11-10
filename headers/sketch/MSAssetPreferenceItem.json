@@ -4,6 +4,7 @@
   ],
   "classes": [
     "MSAssetLibrary",
+    "MSRemoteAssetLibrary",
     "NSImage",
     "NSString"
   ],
@@ -29,6 +30,46 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluateSecondaryTitle": {
+      "name": "evaluateSecondaryTitle",
+      "bridgedName": "evaluateSecondaryTitle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "secondaryTitleStringWhenUpdateAvailable": {
+      "name": "secondaryTitleStringWhenUpdateAvailable",
+      "bridgedName": "secondaryTitleStringWhenUpdateAvailable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadProgress": {
+      "name": "downloadProgress",
+      "bridgedName": "downloadProgress",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "infoText": {
+      "name": "infoText",
+      "bridgedName": "infoText",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valid": {
+      "name": "valid",
+      "bridgedName": "valid",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -83,6 +124,39 @@
     }
   },
   "properties": {
+    "downloadedSoFar": {
+      "name": "downloadedSoFar",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "fileSize": {
+      "name": "fileSize",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "currentlyDownloading": {
+      "name": "currentlyDownloading",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "secondaryTitle": {
+      "name": "secondaryTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "preview": {
       "name": "preview",
       "pointer": true,
@@ -109,12 +183,13 @@
         "nonatomic"
       ]
     },
-    "secondaryTitle": {
-      "name": "secondaryTitle",
+    "remoteLibrary": {
+      "name": "remoteLibrary",
       "pointer": true,
-      "type": "NSString",
+      "type": "MSRemoteAssetLibrary",
       "attributes": [
-        "readonly"
+        "readonly",
+        "nonatomic"
       ]
     },
     "modificationDate": {
@@ -126,8 +201,35 @@
         "nonatomic"
       ]
     },
-    "valid": {
-      "name": "valid",
+    "hasAppcastURL": {
+      "name": "hasAppcastURL",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "downloadAvailable": {
+      "name": "downloadAvailable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "updateAvailable": {
+      "name": "updateAvailable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "validForSecondaryTextField": {
+      "name": "validForSecondaryTextField",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

@@ -1,39 +1,161 @@
 {
   "imports": [
-    "NSObject.h"
+    "NSObject.h",
+    "MSColorConverter.h"
   ],
   "classes": [
-    "MSColor",
-    "NSColor"
+    "NSColorSpace",
+    "NSString"
   ],
-  "protocol": true,
+  "protocol": false,
   "className": "MSColorSpaceConverter",
-  "interfaces": [],
+  "extends": "NSObject",
+  "interfaces": [
+    "MSColorConverter"
+  ],
   "methods": {
-    "convertNSColor:": {
-      "name": "convertNSColor:",
-      "bridgedName": "convertNSColor",
-      "args": [
-        {
-          "type": "NSColor *"
-        }
-      ],
-      "returns": "NSColor *",
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "convertMSColor:": {
-      "name": "convertMSColor:",
-      "bridgedName": "convertMSColor",
+    "shouldConvertImmutableColor:": {
+      "name": "shouldConvertImmutableColor:",
+      "bridgedName": "shouldConvertImmutableColor",
       "args": [
         {
-          "type": "MSColor *"
+          "type": "id"
         }
       ],
-      "returns": "MSColor *",
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldConvertColor:": {
+      "name": "shouldConvertColor:",
+      "bridgedName": "shouldConvertColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertColor:": {
+      "name": "convertColor:",
+      "bridgedName": "convertColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertImmutableColor:": {
+      "name": "convertImmutableColor:",
+      "bridgedName": "convertImmutableColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initForConversionFromColorSpace:to:": {
+      "name": "initForConversionFromColorSpace:to:",
+      "bridgedName": "initForConversionFromColorSpace_to",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "targetNSColorSpace": {
+      "name": "targetNSColorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "oldNSColorSpace": {
+      "name": "oldNSColorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "targetColorSpace": {
+      "name": "targetColorSpace",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "oldColorSpace": {
+      "name": "oldColorSpace",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
 }

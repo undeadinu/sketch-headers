@@ -3,7 +3,8 @@
     "NSObject.h"
   ],
   "classes": [
-    "MSTiledLayer"
+    "MSTiledLayer",
+    "NSView<MSOverlayRenderingDelegate>"
   ],
   "protocol": true,
   "className": "MSTiledLayerDelegate",
@@ -18,21 +19,6 @@
         },
         {
           "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "tiledLayer:renderOverlayInRect:": {
-      "name": "tiledLayer:renderOverlayInRect:",
-      "bridgedName": "tiledLayer_renderOverlayInRect",
-      "args": [
-        {
-          "type": "MSTiledLayer *"
-        },
-        {
-          "type": "struct CGRect"
         }
       ],
       "returns": "void",
@@ -66,6 +52,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayRenderer": {
+      "name": "overlayRenderer",
+      "bridgedName": "overlayRenderer",
+      "args": [],
+      "returns": "NSView<MSOverlayRenderingDelegate> *",
       "kind": "instance",
       "kindIndicator": "-"
     }

@@ -1,17 +1,14 @@
 {
   "imports": [
-    "NSObject.h",
-    "MSAllRenderers.h"
+    "MSNullRenderer.h"
   ],
   "classes": [
     "NSString"
   ],
   "protocol": false,
   "className": "MSOptionalRenderer",
-  "extends": "NSObject",
-  "interfaces": [
-    "MSAllRenderers"
-  ],
+  "extends": "MSNullRenderer",
+  "interfaces": [],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -59,15 +56,6 @@
         "nonatomic"
       ]
     },
-    "nullRenderer": {
-      "name": "nullRenderer",
-      "pointer": false,
-      "type": "id",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "baseRenderer": {
       "name": "baseRenderer",
       "pointer": false,
@@ -84,40 +72,6 @@
       "attributes": [
         "readonly",
         "nonatomic"
-      ]
-    },
-    "debugDescription": {
-      "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
       ]
     }
   }

@@ -1,19 +1,21 @@
 {
   "imports": [
-    "CALayer.h",
+    "MSRenderingCALayer.h",
     "CALayerDelegate.h",
     "MSTileRenderOperationDelegate.h"
   ],
   "classes": [
-    "MSPage",
+    "CALayer",
+    "CATextLayer",
+    "MSContentCALayer",
+    "MSOverlayCALayer",
     "MSRenderingDriver",
     "MSTileRenderOperation",
-    "MSTileRenderer",
     "NSString"
   ],
   "protocol": false,
   "className": "MSTile",
-  "extends": "CALayer",
+  "extends": "MSRenderingCALayer",
   "interfaces": [
     "MSTileRenderOperationDelegate",
     "CALayerDelegate"
@@ -60,33 +62,6 @@
       "bridgedName": "scaleForContentLayer",
       "args": [],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawOverlayInContext:": {
-      "name": "drawOverlayInContext:",
-      "bridgedName": "drawOverlayInContext",
-      "args": [
-        {
-          "type": "struct CGContext *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawLayer:inContext:": {
-      "name": "drawLayer:inContext:",
-      "bridgedName": "drawLayer_inContext",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "struct CGContext *"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -161,10 +136,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "enableDebugFramesInner:outer:": {
-      "name": "enableDebugFramesInner:outer:",
-      "bridgedName": "enableDebugFramesInner_outer",
+    "updateDebugLabel": {
+      "name": "updateDebugLabel",
+      "bridgedName": "updateDebugLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupDebugLabel": {
+      "name": "setupDebugLabel",
+      "bridgedName": "setupDebugLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupDebugDrawingArea": {
+      "name": "setupDebugDrawingArea",
+      "bridgedName": "setupDebugDrawingArea",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDebugOptionsToDrawInner:outer:dirty:": {
+      "name": "setDebugOptionsToDrawInner:outer:dirty:",
+      "bridgedName": "setDebugOptionsToDrawInner_outer_dirty",
       "args": [
+        {
+          "type": "BOOL"
+        },
         {
           "type": "BOOL"
         },
@@ -172,46 +174,6 @@
           "type": "BOOL"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "clearLayerAnimationsForLayer:": {
-      "name": "clearLayerAnimationsForLayer:",
-      "bridgedName": "clearLayerAnimationsForLayer",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "prepareLayer:": {
-      "name": "prepareLayer:",
-      "bridgedName": "prepareLayer",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "makeNewOverlayLayer": {
-      "name": "makeNewOverlayLayer",
-      "bridgedName": "makeNewOverlayLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "makeNewContentLayer": {
-      "name": "makeNewContentLayer",
-      "bridgedName": "makeNewContentLayer",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -240,9 +202,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithDriver:size:colorSpace:": {
-      "name": "initWithDriver:size:colorSpace:",
-      "bridgedName": "initWithDriver_size_colorSpace",
+    "initWithTiledLayer:size:colorSpace:": {
+      "name": "initWithTiledLayer:size:colorSpace:",
+      "bridgedName": "initWithTiledLayer_size_colorSpace",
       "args": [
         {
           "type": "id"
@@ -268,19 +230,19 @@
         "nonatomic"
       ]
     },
-    "tileRenderer": {
-      "name": "tileRenderer",
+    "debugDrawingAreaLayer": {
+      "name": "debugDrawingAreaLayer",
       "pointer": true,
-      "type": "MSTileRenderer",
+      "type": "CALayer",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "pageForOverlay": {
-      "name": "pageForOverlay",
+    "debugLabelLayer": {
+      "name": "debugLabelLayer",
       "pointer": true,
-      "type": "MSPage",
+      "type": "CATextLayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -289,7 +251,7 @@
     "contentLayer": {
       "name": "contentLayer",
       "pointer": true,
-      "type": "CALayer",
+      "type": "MSContentCALayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -298,7 +260,7 @@
     "overlayLayer": {
       "name": "overlayLayer",
       "pointer": true,
-      "type": "CALayer",
+      "type": "MSOverlayCALayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -321,6 +283,14 @@
         "nonatomic"
       ]
     },
+    "index": {
+      "name": "index",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "driver": {
       "name": "driver",
       "pointer": true,
@@ -340,14 +310,6 @@
     },
     "shouldHideOverlayControls": {
       "name": "shouldHideOverlayControls",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "drawDottedDirtyRect": {
-      "name": "drawDottedDirtyRect",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -384,14 +346,6 @@
       "type": "struct CGColorSpace",
       "attributes": [
         "readonly",
-        "nonatomic"
-      ]
-    },
-    "tileDelegate": {
-      "name": "tileDelegate",
-      "pointer": false,
-      "type": "__weak id <MSTileDelegate>",
-      "attributes": [
         "nonatomic"
       ]
     },

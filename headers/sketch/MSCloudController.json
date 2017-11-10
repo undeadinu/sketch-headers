@@ -6,6 +6,7 @@
   "classes": [
     "MSCloudShareUploadController",
     "MSDocument",
+    "NSProgress",
     "NSString"
   ],
   "protocol": false,
@@ -117,7 +118,7 @@
           "type": "id"
         },
         {
-          "type": "double"
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -162,11 +163,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "startUpload": {
-      "name": "startUpload",
-      "bridgedName": "startUpload",
-      "args": [],
+    "startUploadUpdating:": {
+      "name": "startUploadUpdating:",
+      "bridgedName": "startUploadUpdating",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadIncludesDocumentData": {
+      "name": "uploadIncludesDocumentData",
+      "bridgedName": "uploadIncludesDocumentData",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -223,8 +236,8 @@
     },
     "uploadProgress": {
       "name": "uploadProgress",
-      "pointer": false,
-      "type": "double",
+      "pointer": true,
+      "type": "NSProgress",
       "attributes": [
         "nonatomic"
       ]
@@ -237,13 +250,14 @@
         "nonatomic"
       ]
     },
-    "uploadIncludesDocumentData": {
-      "name": "uploadIncludesDocumentData",
+    "uploadCancelled": {
+      "name": "uploadCancelled",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
         "readonly",
-        "nonatomic"
+        "nonatomic",
+        "getter=isUploadCancelled"
       ]
     },
     "uploading": {

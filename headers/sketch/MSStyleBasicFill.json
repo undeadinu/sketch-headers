@@ -1,7 +1,7 @@
 {
   "imports": [
     "_MSStyleBasicFill.h",
-    "MSColorSpaceConvertible.h"
+    "MSColorConvertible.h"
   ],
   "classes": [
     "NSString"
@@ -10,7 +10,7 @@
   "className": "MSStyleBasicFill",
   "extends": "_MSStyleBasicFill",
   "interfaces": [
-    "MSColorSpaceConvertible"
+    "MSColorConvertible"
   ],
   "methods": {
     "defaultFillColor": {
@@ -54,10 +54,13 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "drawGradientFill:inRect:": {
-      "name": "drawGradientFill:inRect:",
-      "bridgedName": "drawGradientFill_inRect",
+    "drawGradientFill:colorSpace:inRect:": {
+      "name": "drawGradientFill:colorSpace:inRect:",
+      "bridgedName": "drawGradientFill_colorSpace_inRect",
       "args": [
+        {
+          "type": "id"
+        },
         {
           "type": "id"
         },

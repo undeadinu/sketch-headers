@@ -4,12 +4,11 @@
     "CALayerDelegate.h"
   ],
   "classes": [
-    "CALayer",
     "MSCGContextPool",
+    "MSContentCALayer",
     "MSImmutableDocumentData",
     "MSImmutablePage",
-    "MSTileRenderer",
-    "NSArray",
+    "MSRenderingContext",
     "NSString"
   ],
   "protocol": false,
@@ -27,9 +26,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "renderBackgroundInContext:": {
-      "name": "renderBackgroundInContext:",
-      "bridgedName": "renderBackgroundInContext",
+    "drawBackgroundInContext:": {
+      "name": "drawBackgroundInContext:",
+      "bridgedName": "drawBackgroundInContext",
       "args": [
         {
           "type": "struct CGContext *"
@@ -39,24 +38,51 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawContentInContext:": {
-      "name": "drawContentInContext:",
-      "bridgedName": "drawContentInContext",
-      "args": [
-        {
-          "type": "struct CGContext *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawPage:inContext:": {
-      "name": "drawPage:inContext:",
-      "bridgedName": "drawPage_inContext",
+    "makeRenderingContextForPage:rect:scale:zoom:context:": {
+      "name": "makeRenderingContextForPage:rect:scale:zoom:context:",
+      "bridgedName": "makeRenderingContextForPage_rect_scale_zoom_context",
       "args": [
         {
           "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawContentInContext:clipRect:": {
+      "name": "drawContentInContext:clipRect:",
+      "bridgedName": "drawContentInContext_clipRect",
+      "args": [
+        {
+          "type": "struct CGContext *"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "combineContent:withBackground:": {
+      "name": "combineContent:withBackground:",
+      "bridgedName": "combineContent_withBackground",
+      "args": [
+        {
+          "type": "struct CGContext *"
         },
         {
           "type": "struct CGContext *"
@@ -112,13 +138,12 @@
     }
   },
   "properties": {
-    "tileRenderer": {
-      "name": "tileRenderer",
+    "context": {
+      "name": "context",
       "pointer": true,
-      "type": "MSTileRenderer",
+      "type": "MSRenderingContext",
       "attributes": [
-        "retain",
-        "nonatomic"
+        "retain"
       ]
     },
     "contextPool": {
@@ -134,15 +159,6 @@
       "name": "renderingCacheProvider",
       "pointer": false,
       "type": "id <MSRenderingContextCacheProvider>",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "artboardFrames": {
-      "name": "artboardFrames",
-      "pointer": true,
-      "type": "NSArray",
       "attributes": [
         "retain",
         "nonatomic"
@@ -182,8 +198,8 @@
         "nonatomic"
       ]
     },
-    "drawDottedDirtyRect": {
-      "name": "drawDottedDirtyRect",
+    "showDrawingArea": {
+      "name": "showDrawingArea",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -218,7 +234,7 @@
     "contentLayer": {
       "name": "contentLayer",
       "pointer": true,
-      "type": "CALayer",
+      "type": "MSContentCALayer",
       "attributes": [
         "retain",
         "nonatomic"

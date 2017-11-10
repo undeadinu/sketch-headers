@@ -1,41 +1,22 @@
 {
   "imports": [
-    "NSViewController.h",
-    "MSInspectorSection.h"
+    "NSViewController.h"
   ],
   "classes": [
-    "MSLayer",
+    "MSAvailableOverride",
     "NSArray",
-    "NSSet",
-    "NSString"
+    "NSSet"
   ],
   "protocol": false,
   "className": "MSOverrideViewController",
   "extends": "NSViewController",
-  "interfaces": [
-    "MSInspectorSection"
-  ],
+  "interfaces": [],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "wantsSeparatorBetweenView:andView:": {
-      "name": "wantsSeparatorBetweenView:andView:",
-      "bridgedName": "wantsSeparatorBetweenView_andView",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -91,6 +72,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "hasStandardCellHeight": {
+      "name": "hasStandardCellHeight",
+      "bridgedName": "hasStandardCellHeight",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "build": {
       "name": "build",
       "bridgedName": "build",
@@ -107,38 +96,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
-      "args": [],
+    "initWithPrimaryOverride:": {
+      "name": "initWithPrimaryOverride:",
+      "bridgedName": "initWithPrimaryOverride",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
-    "overrides": {
-      "name": "overrides",
+    "allOverrides": {
+      "name": "allOverrides",
       "pointer": true,
       "type": "NSSet",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "info": {
-      "name": "info",
-      "pointer": false,
-      "type": "id",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "layerInsideSymbol": {
-      "name": "layerInsideSymbol",
-      "pointer": true,
-      "type": "MSLayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -153,38 +128,22 @@
         "nonatomic"
       ]
     },
-    "debugDescription": {
-      "name": "debugDescription",
+    "primaryOverride": {
+      "name": "primaryOverride",
       "pointer": true,
-      "type": "NSString",
+      "type": "MSAvailableOverride",
       "attributes": [
         "readonly",
-        "copy"
+        "nonatomic"
       ]
     },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
+    "hasSingleOverride": {
+      "name": "hasSingleOverride",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
-        "copy"
-      ]
-    },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
+        "nonatomic"
       ]
     }
   }

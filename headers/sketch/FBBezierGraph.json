@@ -334,6 +334,42 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "addReverseCurvesFromCrossing:useNonself:toContour:": {
+      "name": "addReverseCurvesFromCrossing:useNonself:toContour:",
+      "bridgedName": "addReverseCurvesFromCrossing_useNonself_toContour",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addCurvesFromCrossing:useNonself:toContour:": {
+      "name": "addCurvesFromCrossing:useNonself:toContour:",
+      "bridgedName": "addCurvesFromCrossing_useNonself_toContour",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "firstUnprocessedCrossing:": {
       "name": "firstUnprocessedCrossing:",
       "bridgedName": "firstUnprocessedCrossing",
@@ -584,19 +620,7 @@
           "type": "id"
         }
       ],
-      "returns": "struct FBContourWindingRuleResult",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "insertSelfCrossings:": {
-      "name": "insertSelfCrossings:",
-      "bridgedName": "insertSelfCrossings",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -658,17 +682,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "insertCrossingsAtOverlapStartStop": {
-      "name": "insertCrossingsAtOverlapStartStop",
-      "bridgedName": "insertCrossingsAtOverlapStartStop",
-      "args": [],
+    "removeCrossingsInOverlapsWithTypes:": {
+      "name": "removeCrossingsInOverlapsWithTypes:",
+      "bridgedName": "removeCrossingsInOverlapsWithTypes",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeCrossingsInOverlaps": {
-      "name": "removeCrossingsInOverlaps",
-      "bridgedName": "removeCrossingsInOverlaps",
+    "removeCrossingsInNonCrossingOverlapRuns": {
+      "name": "removeCrossingsInNonCrossingOverlapRuns",
+      "bridgedName": "removeCrossingsInNonCrossingOverlapRuns",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -683,6 +711,24 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCrossingsWithBezierGraph:overlapRunCrossingTypes:crossingPosition:": {
+      "name": "insertCrossingsWithBezierGraph:overlapRunCrossingTypes:crossingPosition:",
+      "bridgedName": "insertCrossingsWithBezierGraph_overlapRunCrossingTypes_crossingPosition",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -713,6 +759,14 @@
     "bezierPath": {
       "name": "bezierPath",
       "bridgedName": "bezierPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierGraphWithClockwiseFillsAnticlockwiseHoles": {
+      "name": "bezierGraphWithClockwiseFillsAnticlockwiseHoles",
+      "bridgedName": "bezierGraphWithClockwiseFillsAnticlockwiseHoles",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -916,36 +970,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierGraphBySplittingOverlapsInContours:": {
-      "name": "bezierGraphBySplittingOverlapsInContours:",
-      "bridgedName": "bezierGraphBySplittingOverlapsInContours",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "contourByFollowingCrossingsFromEdge:atOffset:usedEdges:": {
-      "name": "contourByFollowingCrossingsFromEdge:atOffset:usedEdges:",
-      "bridgedName": "contourByFollowingCrossingsFromEdge_atOffset_usedEdges",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "double"
-        },
-        {
-          "type": "id *"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "contourByFollowingCrossingsFromEdge:atOffset:": {
       "name": "contourByFollowingCrossingsFromEdge:atOffset:",
       "bridgedName": "contourByFollowingCrossingsFromEdge_atOffset",
@@ -961,9 +985,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "contourByFollowingCrossingsFromEdge:": {
-      "name": "contourByFollowingCrossingsFromEdge:",
-      "bridgedName": "contourByFollowingCrossingsFromEdge",
+    "contourByFollowingUnprocessedCrossingsFromCrossing:": {
+      "name": "contourByFollowingUnprocessedCrossingsFromCrossing:",
+      "bridgedName": "contourByFollowingUnprocessedCrossingsFromCrossing",
       "args": [
         {
           "type": "id"
@@ -1030,6 +1054,14 @@
     }
   },
   "properties": {
+    "insertedSelfCrossings": {
+      "name": "insertedSelfCrossings",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "CGPath": {
       "name": "CGPath",
       "pointer": true,

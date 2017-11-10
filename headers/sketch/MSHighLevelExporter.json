@@ -2,7 +2,9 @@
   "imports": [
     "NSObject.h"
   ],
-  "classes": [],
+  "classes": [
+    "MSRenderingDriver"
+  ],
   "protocol": false,
   "className": "MSHighLevelExporter",
   "extends": "NSObject",
@@ -135,6 +137,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "initWithDelegate:driver:": {
+      "name": "initWithDelegate:driver:",
+      "bridgedName": "initWithDelegate_driver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithDelegate:": {
       "name": "initWithDelegate:",
       "bridgedName": "initWithDelegate",
@@ -157,6 +174,15 @@
     }
   },
   "properties": {
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "delegate": {
       "name": "delegate",
       "pointer": false,
