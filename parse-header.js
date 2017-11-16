@@ -31,7 +31,7 @@ module.exports = function parseHeader (data) {
   }
 
   // INTERFACE
-  const interfaceRegex = /@interface ([^ ]+)( : ([^ \n]+)( <([^>\n]+)>){0,1}){0,1}/g;
+  const interfaceRegex = /@interface ([^ \n]+)( : ([^ \n]+)( <([^>\n]+)>){0,1}){0,1}/g;
   let matchInterface;
   while ((matchInterface = interfaceRegex.exec(data)) !== null) {
     if (matchInterface.index === interfaceRegex.lastIndex) {
@@ -45,7 +45,7 @@ module.exports = function parseHeader (data) {
   }
 
   // PROTOCOL
-  const protocolRegex = /@protocol ([^ ]+)( : ([^ \n]+)( <([^>\n]+)>){0,1}){0,1}/g;
+  const protocolRegex = /@protocol ([^ \n]+)( : ([^ \n]+)( <([^>\n]+)>){0,1}){0,1}/g;
   let matchProtocol;
   while ((matchProtocol = protocolRegex.exec(data)) !== null) {
     if (matchProtocol.index === matchProtocol.lastIndex) {
