@@ -68,7 +68,7 @@ module.exports = function parseHeader (data) {
     }
     let name = '';
     let args = [];
-    const methodNameRegex = /([^:]+)(:\(([^\)]+)\)([^ ]+))*/g;
+    const methodNameRegex = /([^:]+)(:\((([^\(\)]*\(\^\)\s*\()*[^\)]+\)*)\)([^ ]+))*/g;
     let matchMethodName;
     while ((matchMethodName = methodNameRegex.exec(matchMethod[3])) !== null) {
       name += `${matchMethodName[1].trim()}${matchMethodName[2] ? ':' : ''}`;
