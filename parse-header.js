@@ -63,8 +63,8 @@ module.exports = function parseHeader (data) {
   const methodsRegex = /(\+|\-){1} \(([^\)]+)\)([^;]+);/g;
   let matchMethod;
   while ((matchMethod = methodsRegex.exec(data)) !== null) {
-    if (matchMethod.index === importRegex.lastIndex) {
-      importRegex.lastIndex++;
+    if (matchMethod.index === methodsRegex.lastIndex) {
+      methodsRegex.lastIndex++;
     }
     let name = '';
     let args = [];
