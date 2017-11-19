@@ -48,8 +48,8 @@ module.exports = function parseHeader (data) {
   const protocolRegex = /@protocol ([^ \n]+)( : ([^ \n]+)( <([^>\n]+)>){0,1}){0,1}/g;
   let matchProtocol;
   while ((matchProtocol = protocolRegex.exec(data)) !== null) {
-    if (matchProtocol.index === matchProtocol.lastIndex) {
-      matchProtocol.lastIndex++;
+    if (matchProtocol.index === protocolRegex.lastIndex) {
+      protocolRegex.lastIndex++;
     }
     headerData.protocol = true;
     headerData.className = matchProtocol[1].trim();
