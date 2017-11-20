@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs-extra')
 const path = require('path')
 const rimraf = require('rimraf')
@@ -8,6 +10,7 @@ const parseHeader = require('./parse-header')
 
 const TEMP_DIR = '.raw-headers'
 const HEADERS = path.resolve('./' + TEMP_DIR)
+const CLASSDUMP_PATH = path.join(__dirname, './class-dump')
 
 function generate (_argv) {
   const SKETCH_PATH = (_argv.sketchPath || '').trim() || '/Applications/Sketch.app'
@@ -97,13 +100,13 @@ function generate (_argv) {
     );
   }
 
-  return exec(`./class-dump -H "${SKETCH_BIN_PATH}" -o "${HEADERS}/sketch"`)
+  return exec(`${CLASSDUMP_PATH} -H "${SKETCH_BIN_PATH}" -o "${HEADERS}/sketch"`)
     .then(() => {
       console.log(
         `${chalk.dim('[3/4]')} 🍏  Generating the macOS headers...`
       )
 
-      return exec(`./class-dump -H "${MACOS_SDK}/AppKit.framework" -o "${HEADERS}/macos" && ./class-dump -H "${MACOS_SDK}/Foundation.framework" -o "${HEADERS}/macos"`)
+      return exec(`${CLASSDUMP_PATH} -H "${MACOS_SDK}/AppKit.framework" -o "${HEADERS}/macos" && ${CLASSDUMP_PATH} -H "${MACOS_SDK}/Foundation.framework" -o "${HEADERS}/macos"`)
     })
     .then(() => {
       console.log(
