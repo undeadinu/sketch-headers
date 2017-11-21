@@ -4,16 +4,69 @@
     "MSShapeGroup.h"
   ],
   "classes": [
+    "BCCache",
     "MSPath",
+    "MSShapePathLayer",
     "NSBezierPath"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "MSShapeGroup",
   "extends": "_MSShapeGroup",
   "interfaces": [
     "MSShapeGroup"
   ],
   "methods": {
+    "applyPropertiesToBezier:": {
+      "name": "applyPropertiesToBezier:",
+      "bridgedName": "applyPropertiesToBezier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathWithTransformsUsingCache:": {
+      "name": "pathWithTransformsUsingCache:",
+      "bridgedName": "pathWithTransformsUsingCache",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierPathOfSubPath:inRect:": {
+      "name": "bezierPathOfSubPath:inRect:",
+      "bridgedName": "bezierPathOfSubPath_inRect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierPathInRect:": {
+      "name": "bezierPathInRect:",
+      "bridgedName": "bezierPathInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "groupBoundsForContainer:": {
       "name": "groupBoundsForContainer:",
       "bridgedName": "groupBoundsForContainer",
@@ -249,63 +302,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierPathOfSubPath:inRect:": {
-      "name": "bezierPathOfSubPath:inRect:",
-      "bridgedName": "bezierPathOfSubPath_inRect",
-      "args": [
-        {
-          "type": "id"
-        },
-        {
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
-        {
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_bezierPathInSize:": {
       "name": "_bezierPathInSize:",
       "bridgedName": "_bezierPathInSize",
       "args": [
         {
           "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "applyPropertiesToBezier:": {
-      "name": "applyPropertiesToBezier:",
-      "bridgedName": "applyPropertiesToBezier",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathWithTransformsUsingCache:": {
-      "name": "pathWithTransformsUsingCache:",
-      "bridgedName": "pathWithTransformsUsingCache",
-      "args": [
-        {
-          "type": "id"
         }
       ],
       "returns": "id",
@@ -863,23 +865,6 @@
         "nonatomic"
       ]
     },
-    "isClosed": {
-      "name": "isClosed",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "bezierPath": {
-      "name": "bezierPath",
-      "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "hasDecorations": {
       "name": "hasDecorations",
       "pointer": false,
@@ -907,12 +892,29 @@
         "nonatomic"
       ]
     },
+    "bezierPath": {
+      "name": "bezierPath",
+      "pointer": true,
+      "type": "NSBezierPath",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "pathInBounds": {
       "name": "pathInBounds",
       "pointer": true,
       "type": "MSPath",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "isClosed": {
+      "name": "isClosed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
         "nonatomic"
       ]
     },

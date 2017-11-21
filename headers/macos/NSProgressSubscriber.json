@@ -3,6 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
+    "NSArray",
     "NSProgressValues",
     "NSString"
   ],
@@ -22,9 +23,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "observePublisherForID:value:forKey:inUserInfo:": {
-      "name": "observePublisherForID:value:forKey:inUserInfo:",
-      "bridgedName": "observePublisherForID_value_forKey_inUserInfo",
+    "observePublisherUserInfoForID:value:forKey:": {
+      "name": "observePublisherUserInfoForID:value:forKey:",
+      "bridgedName": "observePublisherUserInfoForID_value_forKey",
       "args": [
         {
           "type": "NSString *"
@@ -34,9 +35,24 @@
         },
         {
           "type": "NSString *"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observePublisherForID:values:forKeys:": {
+      "name": "observePublisherForID:values:forKeys:",
+      "bridgedName": "observePublisherForID_values_forKeys",
+      "args": [
+        {
+          "type": "NSString *"
         },
         {
-          "type": "BOOL"
+          "type": "NSArray *"
+        },
+        {
+          "type": "NSArray *"
         }
       ],
       "returns": "oneway void",

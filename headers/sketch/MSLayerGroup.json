@@ -6,7 +6,7 @@
   "classes": [
     "NSArray"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "MSLayerGroup",
   "extends": "_MSLayerGroup",
   "interfaces": [
@@ -632,6 +632,15 @@
     }
   },
   "properties": {
+    "layers": {
+      "name": "layers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "disableAutomaticScalingCounter": {
       "name": "disableAutomaticScalingCounter",
       "pointer": false,
@@ -652,15 +661,6 @@
       "name": "isAutomaticScalingEnabled",
       "pointer": false,
       "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "layers": {
-      "name": "layers",
-      "pointer": true,
-      "type": "NSArray",
       "attributes": [
         "readonly",
         "nonatomic"
