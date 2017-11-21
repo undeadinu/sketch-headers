@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// usage: npm run deploy --sketchVersion=48-beta2 --sketchPath=PATH_TO_SKETCH
+
 const fs = require('fs')
 const {argv} = require('yargs')
 const {exec} = require('child-process-promise')
