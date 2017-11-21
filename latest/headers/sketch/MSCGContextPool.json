@@ -1,0 +1,75 @@
+{
+  "imports": [
+    "BCObjectPool.h"
+  ],
+  "classes": [],
+  "protocol": false,
+  "className": "MSCGContextPool",
+  "extends": "BCObjectPool",
+  "interfaces": [],
+  "methods": {
+    "recycleContext:": {
+      "name": "recycleContext:",
+      "bridgedName": "recycleContext",
+      "args": [
+        {
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "vendOrCreateContext": {
+      "name": "vendOrCreateContext",
+      "bridgedName": "vendOrCreateContext",
+      "args": [],
+      "returns": "struct CGContext *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSize:colorSpace:": {
+      "name": "initWithSize:colorSpace:",
+      "bridgedName": "initWithSize_colorSpace",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "struct CGColorSpace *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "contextSize": {
+      "name": "contextSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "struct CGColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

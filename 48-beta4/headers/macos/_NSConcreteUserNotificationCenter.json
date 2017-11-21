@@ -1,0 +1,727 @@
+{
+  "imports": [],
+  "classes": [
+    "NSObject<OS_dispatch_queue>",
+    "NSObject<OS_xpc_object>",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "_NSConcreteUserNotificationCenter",
+  "extends": "NSUserNotificationCenter",
+  "interfaces": [],
+  "methods": {
+    "_preventApplicationLaunching": {
+      "name": "_preventApplicationLaunching",
+      "bridgedName": "_preventApplicationLaunching",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delegate": {
+      "name": "delegate",
+      "bridgedName": "delegate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_connectToServerIfNecessary": {
+      "name": "_connectToServerIfNecessary",
+      "bridgedName": "_connectToServerIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_serverConnection": {
+      "name": "_serverConnection",
+      "bridgedName": "_serverConnection",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_server_did_come_alive:": {
+      "name": "_server_did_come_alive:",
+      "bridgedName": "_server_did_come_alive",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_send_connection_authentication": {
+      "name": "_send_connection_authentication",
+      "bridgedName": "_send_connection_authentication",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldPresentNotification:": {
+      "name": "_shouldPresentNotification:",
+      "bridgedName": "_shouldPresentNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendNotificationPrefsChanged:": {
+      "name": "_sendNotificationPrefsChanged:",
+      "bridgedName": "_sendNotificationPrefsChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendNotificationsDisabledChanged:": {
+      "name": "_sendNotificationsDisabledChanged:",
+      "bridgedName": "_sendNotificationsDisabledChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSummaryStateChanged:": {
+      "name": "_sendSummaryStateChanged:",
+      "bridgedName": "_sendSummaryStateChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_responseChangedMessage:": {
+      "name": "_responseChangedMessage:",
+      "bridgedName": "_responseChangedMessage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scheduledNotificationsExpired:": {
+      "name": "_scheduledNotificationsExpired:",
+      "bridgedName": "_scheduledNotificationsExpired",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deliveredMessagesRemoved:": {
+      "name": "_deliveredMessagesRemoved:",
+      "bridgedName": "_deliveredMessagesRemoved",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_remotePushResponse:": {
+      "name": "_remotePushResponse:",
+      "bridgedName": "_remotePushResponse",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertSnoozed:": {
+      "name": "_alertSnoozed:",
+      "bridgedName": "_alertSnoozed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertDismissed:": {
+      "name": "_alertDismissed:",
+      "bridgedName": "_alertDismissed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notificationClickedMessage:": {
+      "name": "_notificationClickedMessage:",
+      "bridgedName": "_notificationClickedMessage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notificationPresentedMessage:": {
+      "name": "_notificationPresentedMessage:",
+      "bridgedName": "_notificationPresentedMessage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDelegateMessage:sendToAppDelegate:withObject:": {
+      "name": "_sendDelegateMessage:sendToAppDelegate:withObject:",
+      "bridgedName": "_sendDelegateMessage_sendToAppDelegate_withObject",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDelegateMessage:sendToAppDelegate:withNotificationFromMessage:": {
+      "name": "_sendDelegateMessage:sendToAppDelegate:withNotificationFromMessage:",
+      "bridgedName": "_sendDelegateMessage_sendToAppDelegate_withNotificationFromMessage",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNotifications:forMessageType:": {
+      "name": "_setNotifications:forMessageType:",
+      "bridgedName": "_setNotifications_forMessageType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeNotification:withMessageType:": {
+      "name": "_removeNotification:withMessageType:",
+      "bridgedName": "_removeNotification_withMessageType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addScheduledNotification:immediate:": {
+      "name": "_addScheduledNotification:immediate:",
+      "bridgedName": "_addScheduledNotification_immediate",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendAsyncMessage:withBlock:": {
+      "name": "_sendAsyncMessage:withBlock:",
+      "bridgedName": "_sendAsyncMessage_withBlock",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSyncMessage:result:": {
+      "name": "_sendSyncMessage:result:",
+      "bridgedName": "_sendSyncMessage_result",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_retrieveServerArrayForMessageType:timedOut:": {
+      "name": "_retrieveServerArrayForMessageType:timedOut:",
+      "bridgedName": "_retrieveServerArrayForMessageType_timedOut",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setProgress:forNotificationWithIdentifier:": {
+      "name": "_setProgress:forNotificationWithIdentifier:",
+      "bridgedName": "_setProgress_forNotificationWithIdentifier",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearCenterCache": {
+      "name": "_clearCenterCache",
+      "bridgedName": "_clearCenterCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateAndUnregister": {
+      "name": "_invalidateAndUnregister",
+      "bridgedName": "_invalidateAndUnregister",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unRegisterForRemotePushNotifications": {
+      "name": "_unRegisterForRemotePushNotifications",
+      "bridgedName": "_unRegisterForRemotePushNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForRemotePushNotificationTypes:": {
+      "name": "_registerForRemotePushNotificationTypes:",
+      "bridgedName": "_registerForRemotePushNotificationTypes",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForRemotePushNotificationsWithEnvironment:types:": {
+      "name": "_registerForRemotePushNotificationsWithEnvironment:types:",
+      "bridgedName": "_registerForRemotePushNotificationsWithEnvironment_types",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeAllPresentedAlerts": {
+      "name": "_removeAllPresentedAlerts",
+      "bridgedName": "_removeAllPresentedAlerts",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removePresentedAlert:": {
+      "name": "_removePresentedAlert:",
+      "bridgedName": "_removePresentedAlert",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeAllDisplayedNotifications": {
+      "name": "_removeAllDisplayedNotifications",
+      "bridgedName": "_removeAllDisplayedNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeDisplayedNotification:": {
+      "name": "_removeDisplayedNotification:",
+      "bridgedName": "_removeDisplayedNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeScheduledNotification:": {
+      "name": "removeScheduledNotification:",
+      "bridgedName": "removeScheduledNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllDeliveredNotifications": {
+      "name": "removeAllDeliveredNotifications",
+      "bridgedName": "removeAllDeliveredNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeDeliveredNotification:": {
+      "name": "removeDeliveredNotification:",
+      "bridgedName": "removeDeliveredNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deliverNotification:": {
+      "name": "deliverNotification:",
+      "bridgedName": "deliverNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleNotification:": {
+      "name": "scheduleNotification:",
+      "bridgedName": "scheduleNotification",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notificationPreferences": {
+      "name": "_notificationPreferences",
+      "bridgedName": "_notificationPreferences",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notificationsDisabled": {
+      "name": "_notificationsDisabled",
+      "bridgedName": "_notificationsDisabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_tomorrowSummaryNotifications:": {
+      "name": "set_tomorrowSummaryNotifications:",
+      "bridgedName": "set_tomorrowSummaryNotifications",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tomorrowSummaryNotifications": {
+      "name": "_tomorrowSummaryNotifications",
+      "bridgedName": "_tomorrowSummaryNotifications",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_todaySummaryNotifications:": {
+      "name": "set_todaySummaryNotifications:",
+      "bridgedName": "set_todaySummaryNotifications",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_todaySummaryNotifications": {
+      "name": "_todaySummaryNotifications",
+      "bridgedName": "_todaySummaryNotifications",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registeredPushToken": {
+      "name": "_registeredPushToken",
+      "bridgedName": "_registeredPushToken",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setReverseDeliveredNotifications:": {
+      "name": "_setReverseDeliveredNotifications:",
+      "bridgedName": "_setReverseDeliveredNotifications",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reverseDeliveredNotifications": {
+      "name": "_reverseDeliveredNotifications",
+      "bridgedName": "_reverseDeliveredNotifications",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPreventApplicationLaunching:": {
+      "name": "_setPreventApplicationLaunching:",
+      "bridgedName": "_setPreventApplicationLaunching",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_maxPresentedNotifications": {
+      "name": "_maxPresentedNotifications",
+      "bridgedName": "_maxPresentedNotifications",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentedAlerts": {
+      "name": "_presentedAlerts",
+      "bridgedName": "_presentedAlerts",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayedNotifications": {
+      "name": "_displayedNotifications",
+      "bridgedName": "_displayedNotifications",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDeliveredNotifications:": {
+      "name": "_setDeliveredNotifications:",
+      "bridgedName": "_setDeliveredNotifications",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deliveredNotifications": {
+      "name": "deliveredNotifications",
+      "bridgedName": "deliveredNotifications",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setScheduledNotifications:": {
+      "name": "setScheduledNotifications:",
+      "bridgedName": "setScheduledNotifications",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduledNotifications": {
+      "name": "scheduledNotifications",
+      "bridgedName": "scheduledNotifications",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAppDelegate:connect:": {
+      "name": "_setAppDelegate:connect:",
+      "bridgedName": "_setAppDelegate_connect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDelegate:": {
+      "name": "setDelegate:",
+      "bridgedName": "setDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithBundleIdentifier:type:": {
+      "name": "_initWithBundleIdentifier:type:",
+      "bridgedName": "_initWithBundleIdentifier_type",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "bundleIdentifier": {
+      "name": "bundleIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "_appDelegate": {
+      "name": "_appDelegate",
+      "pointer": false,
+      "type": "id <_NSUserNotificationCenterAppKitDelegatePrivate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

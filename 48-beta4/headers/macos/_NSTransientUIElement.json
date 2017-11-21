@@ -1,0 +1,101 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSEvent",
+    "NSWindow"
+  ],
+  "protocol": true,
+  "className": "_NSTransientUIElement",
+  "interfaces": [],
+  "methods": {
+    "_closeForToolbarPresentingOnWindow:": {
+      "name": "_closeForToolbarPresentingOnWindow:",
+      "bridgedName": "_closeForToolbarPresentingOnWindow",
+      "args": [
+        {
+          "type": "NSWindow *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeForSheetPresentingOnWindow:": {
+      "name": "_closeForSheetPresentingOnWindow:",
+      "bridgedName": "_closeForSheetPresentingOnWindow",
+      "args": [
+        {
+          "type": "NSWindow *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeForKeyDownEvent:": {
+      "name": "_closeForKeyDownEvent:",
+      "bridgedName": "_closeForKeyDownEvent",
+      "args": [
+        {
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeForNonDragOrResizeClickWithEvent:": {
+      "name": "_closeForNonDragOrResizeClickWithEvent:",
+      "bridgedName": "_closeForNonDragOrResizeClickWithEvent",
+      "args": [
+        {
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAffectedByEventsInWindow:": {
+      "name": "_isAffectedByEventsInWindow:",
+      "bridgedName": "_isAffectedByEventsInWindow",
+      "args": [
+        {
+          "type": "NSWindow *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "_transientBehavior": {
+      "name": "_transientBehavior",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_registeredTransientBehavior": {
+      "name": "_registeredTransientBehavior",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "setter=_setRegisteredTransientBehavior:"
+      ]
+    },
+    "detached": {
+      "name": "detached",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isDetached"
+      ]
+    }
+  }
+}

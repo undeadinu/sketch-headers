@@ -1,0 +1,297 @@
+{
+  "imports": [
+    "NSView.h",
+    "MSOverlayRenderingDelegate.h",
+    "MSTiledLayerPileHostView.h"
+  ],
+  "classes": [
+    "MSImmutableDocumentData",
+    "MSTiledLayerPile",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSSynchronousTiledRendererView",
+  "extends": "NSView",
+  "interfaces": [
+    "MSTiledLayerPileHostView",
+    "MSOverlayRenderingDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tiledLayerPileDidRefreshTileContent:finishTime:": {
+      "name": "tiledLayerPileDidRefreshTileContent:finishTime:",
+      "bridgedName": "tiledLayerPileDidRefreshTileContent_finishTime",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tile:renderOverlayInRect:context:": {
+      "name": "tile:renderOverlayInRect:context:",
+      "bridgedName": "tile_renderOverlayInRect_context",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tiledLayerPile:requiresRedrawInRect:": {
+      "name": "tiledLayerPile:requiresRedrawInRect:",
+      "bridgedName": "tiledLayerPile_requiresRedrawInRect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayRenderer": {
+      "name": "overlayRenderer",
+      "bridgedName": "overlayRenderer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageRepresentation": {
+      "name": "imageRepresentation",
+      "bridgedName": "imageRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draw": {
+      "name": "draw",
+      "bridgedName": "draw",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "redrawTiles": {
+      "name": "redrawTiles",
+      "bridgedName": "redrawTiles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleRedraw": {
+      "name": "scheduleRedraw",
+      "bridgedName": "scheduleRedraw",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTiledLayerWithZoom:scrollOrigin:": {
+      "name": "addTiledLayerWithZoom:scrollOrigin:",
+      "bridgedName": "addTiledLayerWithZoom_scrollOrigin",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canDrawConcurrently": {
+      "name": "canDrawConcurrently",
+      "bridgedName": "canDrawConcurrently",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeCGContext:": {
+      "name": "makeCGContext:",
+      "bridgedName": "makeCGContext",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTiledLayerPile": {
+      "name": "makeTiledLayerPile",
+      "bridgedName": "makeTiledLayerPile",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "driver": {
+      "name": "driver",
+      "bridgedName": "driver",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:scale:documentData:": {
+      "name": "initWithFrame:scale:documentData:",
+      "bridgedName": "initWithFrame_scale_documentData",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "finished": {
+      "name": "finished",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "tiledLayerPile": {
+      "name": "tiledLayerPile",
+      "pointer": true,
+      "type": "MSTiledLayerPile",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contextRef": {
+      "name": "contextRef",
+      "pointer": true,
+      "type": "struct CGContext",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "scrollOrigin": {
+      "name": "scrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "scale": {
+      "name": "scale",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "__weak MSImmutableDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

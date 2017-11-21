@@ -1,0 +1,141 @@
+{
+  "imports": [
+    "MSAssetLibrary.h"
+  ],
+  "classes": [
+    "MSAssetLibraryUpdatingInfo",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSRemoteAssetLibrary",
+  "extends": "MSAssetLibrary",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "libraryType": {
+      "name": "libraryType",
+      "bridgedName": "libraryType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:appcastURL:version:infoText:": {
+      "name": "initWithName:appcastURL:version:infoText:",
+      "bridgedName": "initWithName_appcastURL_version_infoText",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "updatingInfo": {
+      "name": "updatingInfo",
+      "pointer": true,
+      "type": "MSAssetLibraryUpdatingInfo",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "newUpdatingInfo": {
+      "name": "newUpdatingInfo",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "infoText": {
+      "name": "infoText",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "libraryVersion": {
+      "name": "libraryVersion",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "appcastURL": {
+      "name": "appcastURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "downloadAvailable": {
+      "name": "downloadAvailable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "updateAvailable": {
+      "name": "updateAvailable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSImage",
+    "NSString",
+    "NSTouchBarItem"
+  ],
+  "protocol": false,
+  "className": "_NSTouchBarPaletteBarItem",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "paletteItemForBarItem:customizability:": {
+      "name": "paletteItemForBarItem:customizability:",
+      "bridgedName": "paletteItemForBarItem_customizability",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "maxSize": {
+      "name": "maxSize",
+      "bridgedName": "maxSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "preferredSize": {
+      "name": "preferredSize",
+      "bridgedName": "preferredSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minSize": {
+      "name": "minSize",
+      "bridgedName": "minSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateMinMaxSizeIfNeeded": {
+      "name": "_updateMinMaxSizeIfNeeded",
+      "bridgedName": "_updateMinMaxSizeIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemSnapshotWithSize:": {
+      "name": "itemSnapshotWithSize:",
+      "bridgedName": "itemSnapshotWithSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentItemSnapshot": {
+      "name": "currentItemSnapshot",
+      "bridgedName": "currentItemSnapshot",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "disabledContainingGroupIdentifier": {
+      "name": "disabledContainingGroupIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "customizability": {
+      "name": "customizability",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "representedItem": {
+      "name": "representedItem",
+      "pointer": true,
+      "type": "NSTouchBarItem",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "itemIdentifier": {
+      "name": "itemIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "imports": [
+    "CHSheetController.h",
+    "NSTextViewDelegate.h"
+  ],
+  "classes": [
+    "JSTTextView",
+    "NSButton",
+    "NSString",
+    "NSTextField",
+    "NSTextView",
+    "NSUndoManager"
+  ],
+  "protocol": false,
+  "className": "MSRunCustomScriptSheet",
+  "extends": "CHSheetController",
+  "interfaces": [
+    "NSTextViewDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "redoAction:": {
+      "name": "redoAction:",
+      "bridgedName": "redoAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoAction:": {
+      "name": "undoAction:",
+      "bridgedName": "undoAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoManagerForTextView:": {
+      "name": "undoManagerForTextView:",
+      "bridgedName": "undoManagerForTextView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingMenuAction:": {
+      "name": "scriptingMenuAction:",
+      "bridgedName": "scriptingMenuAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commentSelection:": {
+      "name": "commentSelection:",
+      "bridgedName": "commentSelection",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveAction:": {
+      "name": "saveAction:",
+      "bridgedName": "saveAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showHelp:": {
+      "name": "showHelp:",
+      "bridgedName": "showHelp",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runScript:": {
+      "name": "runScript:",
+      "bridgedName": "runScript",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBar:makeItemForIdentifier:": {
+      "name": "touchBar:makeItemForIdentifier:",
+      "bridgedName": "touchBar_makeItemForIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectorForTouchbarItemIdentifier:": {
+      "name": "selectorForTouchbarItemIdentifier:",
+      "bridgedName": "selectorForTouchbarItemIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "SEL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBarItemIdentifiers": {
+      "name": "touchBarItemIdentifiers",
+      "bridgedName": "touchBarItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commandToRunWithName:": {
+      "name": "commandToRunWithName:",
+      "bridgedName": "commandToRunWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "touchBarRun": {
+      "name": "touchBarRun",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "touchBarSave": {
+      "name": "touchBarSave",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "undoManager": {
+      "name": "undoManager",
+      "pointer": true,
+      "type": "NSUndoManager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "logField": {
+      "name": "logField",
+      "pointer": true,
+      "type": "NSTextView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

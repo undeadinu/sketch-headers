@@ -1,0 +1,253 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSURLSessionDataDelegate.h",
+    "NSURLSessionDownloadDelegate.h",
+    "NSURLSessionTaskDelegate.h"
+  ],
+  "classes": [
+    "AFURLSessionManager",
+    "NSMutableData",
+    "NSProgress",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "AFURLSessionManagerTaskDelegate",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSURLSessionTaskDelegate",
+    "NSURLSessionDataDelegate",
+    "NSURLSessionDownloadDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:": {
+      "name": "URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:",
+      "bridgedName": "URLSession_downloadTask_didResumeAtOffset_expectedTotalBytes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:": {
+      "name": "URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:",
+      "bridgedName": "URLSession_downloadTask_didWriteData_totalBytesWritten_totalBytesExpectedToWrite",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:downloadTask:didFinishDownloadingToURL:": {
+      "name": "URLSession:downloadTask:didFinishDownloadingToURL:",
+      "bridgedName": "URLSession_downloadTask_didFinishDownloadingToURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:dataTask:didReceiveData:": {
+      "name": "URLSession:dataTask:didReceiveData:",
+      "bridgedName": "URLSession_dataTask_didReceiveData",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:task:didCompleteWithError:": {
+      "name": "URLSession:task:didCompleteWithError:",
+      "bridgedName": "URLSession_task_didCompleteWithError",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:": {
+      "name": "URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:",
+      "bridgedName": "URLSession_task_didSendBodyData_totalBytesSent_totalBytesExpectedToSend",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "completionHandler": {
+      "name": "completionHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "downloadTaskDidFinishDownloading": {
+      "name": "downloadTaskDidFinishDownloading",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "downloadFileURL": {
+      "name": "downloadFileURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "progress": {
+      "name": "progress",
+      "pointer": true,
+      "type": "NSProgress",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "mutableData": {
+      "name": "mutableData",
+      "pointer": true,
+      "type": "NSMutableData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "manager": {
+      "name": "manager",
+      "pointer": true,
+      "type": "__weak AFURLSessionManager",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

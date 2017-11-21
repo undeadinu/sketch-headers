@@ -1,0 +1,209 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSDocument",
+    "MSEventHandler",
+    "MSNormalEventHandler",
+    "NSUndoManager"
+  ],
+  "protocol": false,
+  "className": "MSEventHandlerManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recordEvent:": {
+      "name": "recordEvent:",
+      "bridgedName": "recordEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendMouseMovedEvent:": {
+      "name": "sendMouseMovedEvent:",
+      "bridgedName": "sendMouseMovedEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendMouseUpEvent:": {
+      "name": "sendMouseUpEvent:",
+      "bridgedName": "sendMouseUpEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendMouseDraggedEvent:": {
+      "name": "sendMouseDraggedEvent:",
+      "bridgedName": "sendMouseDraggedEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendMouseDownEvent:": {
+      "name": "sendMouseDownEvent:",
+      "bridgedName": "sendMouseDownEvent",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:cache:": {
+      "name": "drawInRect:cache:",
+      "bridgedName": "drawInRect_cache",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchToEventHandlerClass:": {
+      "name": "switchToEventHandlerClass:",
+      "bridgedName": "switchToEventHandlerClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleHandlerClass:": {
+      "name": "toggleHandlerClass:",
+      "bridgedName": "toggleHandlerClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerForClass:": {
+      "name": "handlerForClass:",
+      "bridgedName": "handlerForClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDelegate:": {
+      "name": "initWithDelegate:",
+      "bridgedName": "initWithDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "undoManager": {
+      "name": "undoManager",
+      "pointer": true,
+      "type": "NSUndoManager",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "lastEventType": {
+      "name": "lastEventType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lastMouseDownClickCount": {
+      "name": "lastMouseDownClickCount",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "normalHandler": {
+      "name": "normalHandler",
+      "pointer": true,
+      "type": "MSNormalEventHandler",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentHandler": {
+      "name": "currentHandler",
+      "pointer": true,
+      "type": "MSEventHandler",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSEventHandlerManagerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

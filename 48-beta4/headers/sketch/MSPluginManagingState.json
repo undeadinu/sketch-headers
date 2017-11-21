@@ -1,0 +1,242 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDictionary",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSPluginManagingState",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeIncompatibilityRegistrations": {
+      "name": "removeIncompatibilityRegistrations",
+      "bridgedName": "removeIncompatibilityRegistrations",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeDisableOverrides": {
+      "name": "removeDisableOverrides",
+      "bridgedName": "removeDisableOverrides",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerIncompatibilityForPluginIdentifier:withVersion:": {
+      "name": "registerIncompatibilityForPluginIdentifier:withVersion:",
+      "bridgedName": "registerIncompatibilityForPluginIdentifier_withVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMetadataValue:forKey:identifier:": {
+      "name": "setMetadataValue:forKey:identifier:",
+      "bridgedName": "setMetadataValue_forKey_identifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataValueForKey:identifier:": {
+      "name": "metadataValueForKey:identifier:",
+      "bridgedName": "metadataValueForKey_identifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPluginMetadaDictionary:forIdentifier:": {
+      "name": "setPluginMetadaDictionary:forIdentifier:",
+      "bridgedName": "setPluginMetadaDictionary_forIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginVersion:incompatibleWithVersion:": {
+      "name": "isPluginVersion:incompatibleWithVersion:",
+      "bridgedName": "isPluginVersion_incompatibleWithVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginWithIdentifier:incompatibleWithVersion:": {
+      "name": "isPluginWithIdentifier:incompatibleWithVersion:",
+      "bridgedName": "isPluginWithIdentifier_incompatibleWithVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerPluginIncompatibilityForVersions:": {
+      "name": "registerPluginIncompatibilityForVersions:",
+      "bridgedName": "registerPluginIncompatibilityForVersions",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateMetadataWithPluginIndentifiers:": {
+      "name": "updateMetadataWithPluginIndentifiers:",
+      "bridgedName": "updateMetadataWithPluginIndentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldEnablePluginIdentifier:withVersion:": {
+      "name": "shouldEnablePluginIdentifier:withVersion:",
+      "bridgedName": "shouldEnablePluginIdentifier_withVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEnabled:forPluginIdentifier:withVersion:": {
+      "name": "setEnabled:forPluginIdentifier:withVersion:",
+      "bridgedName": "setEnabled_forPluginIdentifier_withVersion",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetIncompatiblePluginMetadata": {
+      "name": "resetIncompatiblePluginMetadata",
+      "bridgedName": "resetIncompatiblePluginMetadata",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMetadataURL:incompatiblePlugins:": {
+      "name": "initWithMetadataURL:incompatiblePlugins:",
+      "bridgedName": "initWithMetadataURL_incompatiblePlugins",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "incompatiblePluginVersions": {
+      "name": "incompatiblePluginVersions",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "metadata": {
+      "name": "metadata",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "metadataURL": {
+      "name": "metadataURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

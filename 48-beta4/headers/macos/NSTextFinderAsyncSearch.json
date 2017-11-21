@@ -1,0 +1,203 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSMutableIndexSet",
+    "NSMutableRangeArray",
+    "_NSTextFinderAsyncSearchOperation",
+    "_NSTextFinderImpl"
+  ],
+  "protocol": false,
+  "className": "NSTextFinderAsyncSearch",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "queue": {
+      "name": "queue",
+      "bridgedName": "queue",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_scheduleFirstMatchOperation": {
+      "name": "_scheduleFirstMatchOperation",
+      "bridgedName": "_scheduleFirstMatchOperation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_locateFirstMatchIfNecessary": {
+      "name": "_locateFirstMatchIfNecessary",
+      "bridgedName": "_locateFirstMatchIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "waitUntilSearchCompletedForRanges:orTimeout:": {
+      "name": "waitUntilSearchCompletedForRanges:orTimeout:",
+      "bridgedName": "waitUntilSearchCompletedForRanges_orTimeout",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchRanges": {
+      "name": "matchRanges",
+      "bridgedName": "matchRanges",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopSearchingAndWait:": {
+      "name": "stopSearchingAndWait:",
+      "bridgedName": "stopSearchingAndWait",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchCompleted": {
+      "name": "_searchCompleted",
+      "bridgedName": "_searchCompleted",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_foundMatchRanges:searchedIndexes:": {
+      "name": "_foundMatchRanges:searchedIndexes:",
+      "bridgedName": "_foundMatchRanges_searchedIndexes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "start": {
+      "name": "start",
+      "bridgedName": "start",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_foundFirstMatchInRange:": {
+      "name": "_foundFirstMatchInRange:",
+      "bridgedName": "_foundFirstMatchInRange",
+      "args": [
+        {
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addRanges:searchedIndexes:": {
+      "name": "_addRanges:searchedIndexes:",
+      "bridgedName": "_addRanges_searchedIndexes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getIndexes:forInsertionOfRanges:": {
+      "name": "_getIndexes:forInsertionOfRanges:",
+      "bridgedName": "_getIndexes_forInsertionOfRanges",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "notifyOfFirstMatchAfterIndex:withBlock:": {
+      "name": "notifyOfFirstMatchAfterIndex:withBlock:",
+      "bridgedName": "notifyOfFirstMatchAfterIndex_withBlock",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTextFinderImpl:": {
+      "name": "initWithTextFinderImpl:",
+      "bridgedName": "initWithTextFinderImpl",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "isSearching": {
+      "name": "isSearching",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "completionBlock": {
+      "name": "completionBlock",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

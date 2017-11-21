@@ -1,0 +1,91 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSLayoutManager",
+    "NSUndoManager"
+  ],
+  "protocol": false,
+  "className": "NSUndoTextOperation",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "isSupportingCoalescing": {
+      "name": "isSupportingCoalescing",
+      "bridgedName": "isSupportingCoalescing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstTextViewForTextStorage:": {
+      "name": "firstTextViewForTextStorage:",
+      "bridgedName": "firstTextViewForTextStorage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoRedo:": {
+      "name": "undoRedo:",
+      "bridgedName": "undoRedo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithAffectedRange:layoutManager:undoManager:": {
+      "name": "initWithAffectedRange:layoutManager:undoManager:",
+      "bridgedName": "initWithAffectedRange_layoutManager_undoManager",
+      "args": [
+        {
+          "type": "struct _NSRange"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "affectedRange": {
+      "name": "affectedRange",
+      "pointer": false,
+      "type": "struct _NSRange",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "undoManager": {
+      "name": "undoManager",
+      "pointer": true,
+      "type": "NSUndoManager",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

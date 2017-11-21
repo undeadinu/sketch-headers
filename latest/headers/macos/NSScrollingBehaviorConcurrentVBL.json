@@ -1,0 +1,529 @@
+{
+  "imports": [
+    "_NSScrollStateEventListener.h"
+  ],
+  "classes": [
+    "NSString",
+    "_NSScrollingConcurrentConstantData",
+    "_NSScrollingConcurrentEventMonitor",
+    "_NSScrollingConcurrentMainThreadSynchronizer",
+    "_NSScrollingConcurrentVBLMonitor"
+  ],
+  "protocol": false,
+  "className": "NSScrollingBehaviorConcurrentVBL",
+  "extends": "NSScrollingBehavior",
+  "interfaces": [
+    "_NSScrollStateEventListener"
+  ],
+  "methods": {
+    "scrollView:panGestureRecognizerFailed:": {
+      "name": "scrollView:panGestureRecognizerFailed:",
+      "bridgedName": "scrollView_panGestureRecognizerFailed",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:panGestureRecognizer:shouldReceiveTouch:": {
+      "name": "scrollView:panGestureRecognizer:shouldReceiveTouch:",
+      "bridgedName": "scrollView_panGestureRecognizer_shouldReceiveTouch",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:panWithGestureRecognizer:": {
+      "name": "scrollView:panWithGestureRecognizer:",
+      "bridgedName": "scrollView_panWithGestureRecognizer",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateFreeMomentum": {
+      "name": "_animateFreeMomentum",
+      "bridgedName": "_animateFreeMomentum",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateSwipePageAlignment": {
+      "name": "_animateSwipePageAlignment",
+      "bridgedName": "_animateSwipePageAlignment",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_asynchronouslyAllowDelegateToModifyProposedPageAlignedOrigin:onAxis:withInitialOrigin:velocity:synchronousTimeout:gestureToken:": {
+      "name": "_asynchronouslyAllowDelegateToModifyProposedPageAlignedOrigin:onAxis:withInitialOrigin:velocity:synchronousTimeout:gestureToken:",
+      "bridgedName": "_asynchronouslyAllowDelegateToModifyProposedPageAlignedOrigin_onAxis_withInitialOrigin_velocity_synchronousTimeout_gestureToken",
+      "args": [
+        {
+          "type": "double *"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_asynchronouslyAllowDelegateToAdjustMomentum:withInitialOrigin:velocity:synchronousTimeout:gestureToken:": {
+      "name": "_asynchronouslyAllowDelegateToAdjustMomentum:withInitialOrigin:velocity:synchronousTimeout:gestureToken:",
+      "bridgedName": "_asynchronouslyAllowDelegateToAdjustMomentum_withInitialOrigin_velocity_synchronousTimeout_gestureToken",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollStateEvent:sender:": {
+      "name": "scrollStateEvent:sender:",
+      "bridgedName": "scrollStateEvent_sender",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateAnimatedMomentumStateMachineWithScrollStateEvent:sender:": {
+      "name": "_updateAnimatedMomentumStateMachineWithScrollStateEvent:sender:",
+      "bridgedName": "_updateAnimatedMomentumStateMachineWithScrollStateEvent_sender",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateMomentumEventsStateMachineWithScrollStateEvent:sender:": {
+      "name": "_updateMomentumEventsStateMachineWithScrollStateEvent:sender:",
+      "bridgedName": "_updateMomentumEventsStateMachineWithScrollStateEvent_sender",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopGestureScrollTracking": {
+      "name": "_stopGestureScrollTracking",
+      "bridgedName": "_stopGestureScrollTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "waitForEvent": {
+      "name": "waitForEvent",
+      "bridgedName": "waitForEvent",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkForGestureContinuance": {
+      "name": "checkForGestureContinuance",
+      "bridgedName": "checkForGestureContinuance",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateMomentum": {
+      "name": "_animateMomentum",
+      "bridgedName": "_animateMomentum",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapRubberbandIfRequired": {
+      "name": "_snapRubberbandIfRequired",
+      "bridgedName": "_snapRubberbandIfRequired",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapRubberband": {
+      "name": "_snapRubberband",
+      "bridgedName": "_snapRubberband",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapRubberbandWithInitialOrigin:velocity:stretch:": {
+      "name": "_snapRubberbandWithInitialOrigin:velocity:stretch:",
+      "bridgedName": "_snapRubberbandWithInitialOrigin_velocity_stretch",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginMomentumScroll": {
+      "name": "_beginMomentumScroll",
+      "bridgedName": "_beginMomentumScroll",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginPhysicalScroll": {
+      "name": "_beginPhysicalScroll",
+      "bridgedName": "_beginPhysicalScroll",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isStretched": {
+      "name": "_isStretched",
+      "bridgedName": "_isStretched",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startGestureScrollWithVBLFilter:": {
+      "name": "_startGestureScrollWithVBLFilter:",
+      "bridgedName": "_startGestureScrollWithVBLFilter",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollView:trackGestureScrollWithEvent:": {
+      "name": "_scrollView:trackGestureScrollWithEvent:",
+      "bridgedName": "_scrollView_trackGestureScrollWithEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollView:discreetScrollWithEvent:": {
+      "name": "_scrollView:discreetScrollWithEvent:",
+      "bridgedName": "_scrollView_discreetScrollWithEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollView:smoothScrollWithEvent:": {
+      "name": "_scrollView:smoothScrollWithEvent:",
+      "bridgedName": "_scrollView_smoothScrollWithEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updatePageReferenceNumber": {
+      "name": "_updatePageReferenceNumber",
+      "bridgedName": "_updatePageReferenceNumber",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollView:trackScrollMayBegin:": {
+      "name": "_scrollView:trackScrollMayBegin:",
+      "bridgedName": "_scrollView_trackScrollMayBegin",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_automateLiveScrollOfScrollView:": {
+      "name": "_automateLiveScrollOfScrollView:",
+      "bridgedName": "_automateLiveScrollOfScrollView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "automateLiveScrollOfScrollView:": {
+      "name": "automateLiveScrollOfScrollView:",
+      "bridgedName": "automateLiveScrollOfScrollView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:boundsChangedForClipView:": {
+      "name": "scrollView:boundsChangedForClipView:",
+      "bridgedName": "scrollView_boundsChangedForClipView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapRubberBandOfScrollView:": {
+      "name": "snapRubberBandOfScrollView:",
+      "bridgedName": "snapRubberBandOfScrollView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:scrollWheelWithEvent:": {
+      "name": "scrollView:scrollWheelWithEvent:",
+      "bridgedName": "scrollView_scrollWheelWithEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:endScrollGestureDueToReason:": {
+      "name": "scrollView:endScrollGestureDueToReason:",
+      "bridgedName": "scrollView_endScrollGestureDueToReason",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:responderToForwardScrollEvents:": {
+      "name": "scrollView:responderToForwardScrollEvents:",
+      "bridgedName": "scrollView_responderToForwardScrollEvents",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView:responderToForwardMayBeginScrollEvent:": {
+      "name": "scrollView:responderToForwardMayBeginScrollEvent:",
+      "bridgedName": "scrollView_responderToForwardMayBeginScrollEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsConcurrentScrolling": {
+      "name": "supportsConcurrentScrolling",
+      "bridgedName": "supportsConcurrentScrolling",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_legacyBehavior": {
+      "name": "_legacyBehavior",
+      "bridgedName": "_legacyBehavior",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

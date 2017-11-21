@@ -1,0 +1,2326 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSMenuImpl.h"
+  ],
+  "classes": [
+    "NSCarbonMenuImplExtraVars",
+    "NSMenu",
+    "NSMenuItem",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSCarbonMenuImpl",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSMenuImpl"
+  ],
+  "methods": {
+    "_menuItemWithKeyEquivalentMatchingEventRef:inMenu:includingDisabledItems:": {
+      "name": "_menuItemWithKeyEquivalentMatchingEventRef:inMenu:includingDisabledItems:",
+      "bridgedName": "_menuItemWithKeyEquivalentMatchingEventRef_inMenu_includingDisabledItems",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct _NSCarbonMenuSearchReturn",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_currentTrackingInfo": {
+      "name": "_currentTrackingInfo",
+      "bridgedName": "_currentTrackingInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_didChangeHelpMenuFrom:to:": {
+      "name": "_didChangeHelpMenuFrom:to:",
+      "bridgedName": "_didChangeHelpMenuFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_globalCarbonCommandProcessEvent:handlerCallRef:": {
+      "name": "_globalCarbonCommandProcessEvent:handlerCallRef:",
+      "bridgedName": "_globalCarbonCommandProcessEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_globalCarbonBeginOrEndTrackingEvent:handlerCallRef:": {
+      "name": "_globalCarbonBeginOrEndTrackingEvent:handlerCallRef:",
+      "bridgedName": "_globalCarbonBeginOrEndTrackingEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isItemBeingDrawn:highlightState:": {
+      "name": "isItemBeingDrawn:highlightState:",
+      "bridgedName": "isItemBeingDrawn_highlightState",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setupForNoMenuBar": {
+      "name": "setupForNoMenuBar",
+      "bridgedName": "setupForNoMenuBar",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "prepareForCarbonMenuBar": {
+      "name": "prepareForCarbonMenuBar",
+      "bridgedName": "prepareForCarbonMenuBar",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_boundsIfOpen": {
+      "name": "_boundsIfOpen",
+      "bridgedName": "_boundsIfOpen",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_privateFlagsForMenuDirectionInView:": {
+      "name": "_privateFlagsForMenuDirectionInView:",
+      "bridgedName": "_privateFlagsForMenuDirectionInView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popUpMenuPositioningItem:atCocoaIndex:atLocation:inView:withPrivateFlags:appearance:": {
+      "name": "_popUpMenuPositioningItem:atCocoaIndex:atLocation:inView:withPrivateFlags:appearance:",
+      "bridgedName": "_popUpMenuPositioningItem_atCocoaIndex_atLocation_inView_withPrivateFlags_appearance",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_image:frame:forPopUpMenuPositioningItem:atCocoaIndex:atLocation:inView:appearance:": {
+      "name": "_image:frame:forPopUpMenuPositioningItem:atCocoaIndex:atLocation:inView:appearance:",
+      "bridgedName": "_image_frame_forPopUpMenuPositioningItem_atCocoaIndex_atLocation_inView_appearance",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "struct CGRect *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeCarbonEventHandlerForToken:": {
+      "name": "_removeCarbonEventHandlerForToken:",
+      "bridgedName": "_removeCarbonEventHandlerForToken",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleCarbonEvents:count:handler:": {
+      "name": "_handleCarbonEvents:count:handler:",
+      "bridgedName": "_handleCarbonEvents_count_handler",
+      "args": [
+        {
+          "type": "const struct EventTypeSpec *"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPopUpContext:": {
+      "name": "_setPopUpContext:",
+      "bridgedName": "_setPopUpContext",
+      "args": [
+        {
+          "type": "struct SLMPopUpMenuContext_t *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popUpContext": {
+      "name": "_popUpContext",
+      "bridgedName": "_popUpContext",
+      "args": [],
+      "returns": "struct SLMPopUpMenuContext_t *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCurrentMenuUpdateFlags:": {
+      "name": "_setCurrentMenuUpdateFlags:",
+      "bridgedName": "_setCurrentMenuUpdateFlags",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentMenuUpdateFlags": {
+      "name": "_currentMenuUpdateFlags",
+      "bridgedName": "_currentMenuUpdateFlags",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackingInfo": {
+      "name": "_trackingInfo",
+      "bridgedName": "_trackingInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "highlightItemAtIndex:": {
+      "name": "highlightItemAtIndex:",
+      "bridgedName": "highlightItemAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetedItem": {
+      "name": "targetedItem",
+      "bridgedName": "targetedItem",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registeredForCloseEvents": {
+      "name": "_registeredForCloseEvents",
+      "bridgedName": "_registeredForCloseEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registeredForOpenEvents": {
+      "name": "_registeredForOpenEvents",
+      "bridgedName": "_registeredForOpenEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRefStatus": {
+      "name": "_menuRefStatus",
+      "bridgedName": "_menuRefStatus",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRefIsCheckedOutWithToken:": {
+      "name": "_menuRefIsCheckedOutWithToken:",
+      "bridgedName": "_menuRefIsCheckedOutWithToken",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_returnMenuRefWithToken:": {
+      "name": "_returnMenuRefWithToken:",
+      "bridgedName": "_returnMenuRefWithToken",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_checkoutMenuRefWithToken:creating:populating:": {
+      "name": "_checkoutMenuRefWithToken:creating:populating:",
+      "bridgedName": "_checkoutMenuRefWithToken_creating_populating",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRefIsCheckedOut": {
+      "name": "_menuRefIsCheckedOut",
+      "bridgedName": "_menuRefIsCheckedOut",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:wasAddedToNewIndex:": {
+      "name": "_menuItem:wasAddedToNewIndex:",
+      "bridgedName": "_menuItem_wasAddedToNewIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidRemoveAllItems:": {
+      "name": "_menuDidRemoveAllItems:",
+      "bridgedName": "_menuDidRemoveAllItems",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:wasRemovedFromPreviousIndex:": {
+      "name": "_menuItem:wasRemovedFromPreviousIndex:",
+      "bridgedName": "_menuItem_wasRemovedFromPreviousIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuLostMainMenuStatus": {
+      "name": "_menuLostMainMenuStatus",
+      "bridgedName": "_menuLostMainMenuStatus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuAcquiredMainMenuStatus": {
+      "name": "_menuAcquiredMainMenuStatus",
+      "bridgedName": "_menuAcquiredMainMenuStatus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isLinkedToShortcut": {
+      "name": "_isLinkedToShortcut",
+      "bridgedName": "_isLinkedToShortcut",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unlinkShortcut": {
+      "name": "_unlinkShortcut",
+      "bridgedName": "_unlinkShortcut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_linkShortcut": {
+      "name": "_linkShortcut",
+      "bridgedName": "_linkShortcut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_backgroundStyle": {
+      "name": "_backgroundStyle",
+      "bridgedName": "_backgroundStyle",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_maximumSizeForScreen:": {
+      "name": "_maximumSizeForScreen:",
+      "bridgedName": "_maximumSizeForScreen",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIndentationWidth:": {
+      "name": "setIndentationWidth:",
+      "bridgedName": "setIndentationWidth",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeIndentationWidthFrom:to:": {
+      "name": "_menuDidChangeIndentationWidthFrom:to:",
+      "bridgedName": "_menuDidChangeIndentationWidthFrom_to",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNCStyle:": {
+      "name": "setNCStyle:",
+      "bridgedName": "setNCStyle",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeNCStyleFrom:to:": {
+      "name": "_menuDidChangeNCStyleFrom:to:",
+      "bridgedName": "_menuDidChangeNCStyleFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeFontFrom:to:": {
+      "name": "_menuDidChangeFontFrom:to:",
+      "bridgedName": "_menuDidChangeFontFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_limitedViewMenuItemWantsRedisplay:inRect:": {
+      "name": "_limitedViewMenuItemWantsRedisplay:inRect:",
+      "bridgedName": "_limitedViewMenuItemWantsRedisplay_inRect",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeWidthFrom:to:": {
+      "name": "_menuDidChangeWidthFrom:to:",
+      "bridgedName": "_menuDidChangeWidthFrom_to",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemLostMagicAppleMenuStatus:": {
+      "name": "_itemLostMagicAppleMenuStatus:",
+      "bridgedName": "_itemLostMagicAppleMenuStatus",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemAcquiredMagicAppleMenuStatus:": {
+      "name": "_itemAcquiredMagicAppleMenuStatus:",
+      "bridgedName": "_itemAcquiredMagicAppleMenuStatus",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentingView": {
+      "name": "_presentingView",
+      "bridgedName": "_presentingView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initialMenuRefCreateIfNecessary": {
+      "name": "_initialMenuRefCreateIfNecessary",
+      "bridgedName": "_initialMenuRefCreateIfNecessary",
+      "args": [],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initialMenuRef": {
+      "name": "_initialMenuRef",
+      "bridgedName": "_initialMenuRef",
+      "args": [],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_principalMenuRefCreateIfNecessary": {
+      "name": "_principalMenuRefCreateIfNecessary",
+      "bridgedName": "_principalMenuRefCreateIfNecessary",
+      "args": [],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_principalMenuRef": {
+      "name": "_principalMenuRef",
+      "bridgedName": "_principalMenuRef",
+      "args": [],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeRequiresModifiersToBeVisibleFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeRequiresModifiersToBeVisibleFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeRequiresModifiersToBeVisibleFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeImageSizeFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeImageSizeFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeImageSizeFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeRespectsKeyEquivalentWhileHiddenFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeRespectsKeyEquivalentWhileHiddenFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeRespectsKeyEquivalentWhileHiddenFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeSeparatorStatusFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeSeparatorStatusFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeSeparatorStatusFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeUserInterfaceLayoutDirectionFrom:to:": {
+      "name": "_menuDidChangeUserInterfaceLayoutDirectionFrom:to:",
+      "bridgedName": "_menuDidChangeUserInterfaceLayoutDirectionFrom_to",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeCondensesSeparatorsFrom:to:": {
+      "name": "_menuDidChangeCondensesSeparatorsFrom:to:",
+      "bridgedName": "_menuDidChangeCondensesSeparatorsFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeAutoenablesFrom:to:": {
+      "name": "_menuDidChangeAutoenablesFrom:to:",
+      "bridgedName": "_menuDidChangeAutoenablesFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeShowsStateColumnFrom:to:": {
+      "name": "_menuDidChangeShowsStateColumnFrom:to:",
+      "bridgedName": "_menuDidChangeShowsStateColumnFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeHasBottomPaddingFrom:to:": {
+      "name": "_menuDidChangeHasBottomPaddingFrom:to:",
+      "bridgedName": "_menuDidChangeHasBottomPaddingFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeHasTopPaddingFrom:to:": {
+      "name": "_menuDidChangeHasTopPaddingFrom:to:",
+      "bridgedName": "_menuDidChangeHasTopPaddingFrom_to",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeHasSidebandUpdaterWithRoles:from:to:": {
+      "name": "_menuDidChangeHasSidebandUpdaterWithRoles:from:to:",
+      "bridgedName": "_menuDidChangeHasSidebandUpdaterWithRoles_from_to",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeDelegateTo:": {
+      "name": "_menuDidChangeDelegateTo:",
+      "bridgedName": "_menuDidChangeDelegateTo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeAccessibilityOverriddenAttributesFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeAccessibilityOverriddenAttributesFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeAccessibilityOverriddenAttributesFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangePluginInsertionModeFrom:to:": {
+      "name": "_menuDidChangePluginInsertionModeFrom:to:",
+      "bridgedName": "_menuDidChangePluginInsertionModeFrom_to",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeAccessibilityOverriddenAttribute:from:to:": {
+      "name": "_menuDidChangeAccessibilityOverriddenAttribute:from:to:",
+      "bridgedName": "_menuDidChangeAccessibilityOverriddenAttribute_from_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeAccessibilityOverriddenAttribute:from:to:": {
+      "name": "_menuItem:atIndex:didChangeAccessibilityOverriddenAttribute:from:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeAccessibilityOverriddenAttribute_from_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeHiddenFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeHiddenFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeHiddenFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeCustomViewHandlesEventsFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeCustomViewHandlesEventsFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeCustomViewHandlesEventsFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeCustomViewFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeCustomViewFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeCustomViewFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeTooltipFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeTooltipFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeTooltipFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeIndentFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeIndentFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeIndentFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeDestructiveFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeDestructiveFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeDestructiveFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeAlternateFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeAlternateFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeAlternateFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeKeyEquivalentModifierMaskFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeKeyEquivalentModifierMaskFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeKeyEquivalentModifierMaskFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeKeyEquivalentVirtualKeyCodeFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeKeyEquivalentVirtualKeyCodeFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeKeyEquivalentVirtualKeyCodeFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned short"
+        },
+        {
+          "type": "unsigned short"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeKeyEquivalentFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeKeyEquivalentFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeKeyEquivalentFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeImageFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeImageFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeImageFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeStateImageFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeStateImageFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeStateImageFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeActionFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeActionFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeActionFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeNewItemsCountFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeNewItemsCountFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeNewItemsCountFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeFontFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeFontFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeFontFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeAttributedTitleFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeAttributedTitleFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeAttributedTitleFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidChangeTitleFrom:to:": {
+      "name": "_menuDidChangeTitleFrom:to:",
+      "bridgedName": "_menuDidChangeTitleFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeTitleFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeTitleFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeTitleFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeSubmenuFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeSubmenuFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeSubmenuFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeSubmenuContentsWithSubmenu:": {
+      "name": "_menuItem:atIndex:didChangeSubmenuContentsWithSubmenu:",
+      "bridgedName": "_menuItem_atIndex_didChangeSubmenuContentsWithSubmenu",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeNextItemIsAlternateFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeNextItemIsAlternateFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeNextItemIsAlternateFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItem:atIndex:didChangeEnabledStateFrom:to:": {
+      "name": "_menuItem:atIndex:didChangeEnabledStateFrom:to:",
+      "bridgedName": "_menuItem_atIndex_didChangeEnabledStateFrom_to",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateEventHandlerClientCounts": {
+      "name": "_updateEventHandlerClientCounts",
+      "bridgedName": "_updateEventHandlerClientCounts",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeCustomViewClientCountBy:": {
+      "name": "_changeCustomViewClientCountBy:",
+      "bridgedName": "_changeCustomViewClientCountBy",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeCustomTextDrawingCountBy:contentCountBy:": {
+      "name": "_changeCustomTextDrawingCountBy:contentCountBy:",
+      "bridgedName": "_changeCustomTextDrawingCountBy_contentCountBy",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeFlags:forItemAtCocoaIndex:isAddingFlags:": {
+      "name": "_changeFlags:forItemAtCocoaIndex:isAddingFlags:",
+      "bridgedName": "_changeFlags_forItemAtCocoaIndex_isAddingFlags",
+      "args": [
+        {
+          "type": "unsigned int"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItemCommandID": {
+      "name": "_menuItemCommandID",
+      "bridgedName": "_menuItemCommandID",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMenuInsertItem:atCarbonIndex:": {
+      "name": "_carbonMenuInsertItem:atCarbonIndex:",
+      "bridgedName": "_carbonMenuInsertItem_atCarbonIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned short"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_populatePrivatelyIfNecessary": {
+      "name": "_populatePrivatelyIfNecessary",
+      "bridgedName": "_populatePrivatelyIfNecessary",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_privatePopulateCarbonMenu": {
+      "name": "_privatePopulateCarbonMenu",
+      "bridgedName": "_privatePopulateCarbonMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_instantiateCarbonMenu": {
+      "name": "_instantiateCarbonMenu",
+      "bridgedName": "_instantiateCarbonMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMenuHasBeenInstantiatedAndPopulated": {
+      "name": "_carbonMenuHasBeenInstantiatedAndPopulated",
+      "bridgedName": "_carbonMenuHasBeenInstantiatedAndPopulated",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSupermenuHasMenuRef:": {
+      "name": "_setSupermenuHasMenuRef:",
+      "bridgedName": "_setSupermenuHasMenuRef",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destroyMenuRefIfNotCheckedOut": {
+      "name": "_destroyMenuRefIfNotCheckedOut",
+      "bridgedName": "_destroyMenuRefIfNotCheckedOut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destroyMenuRef": {
+      "name": "_destroyMenuRef",
+      "bridgedName": "_destroyMenuRef",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createMenuRef": {
+      "name": "_createMenuRef",
+      "bridgedName": "_createMenuRef",
+      "args": [],
+      "returns": "struct OpaqueMenuRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applyAccessibilityOverrides:toCarbonIndex:": {
+      "name": "_applyAccessibilityOverrides:toCarbonIndex:",
+      "bridgedName": "_applyAccessibilityOverrides_toCarbonIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned short"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_installCarbonMenuEventHandlers": {
+      "name": "_installCarbonMenuEventHandlers",
+      "bridgedName": "_installCarbonMenuEventHandlers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginOrEndHandling:events:count:": {
+      "name": "_beginOrEndHandling:events:count:",
+      "bridgedName": "_beginOrEndHandling_events_count",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "const struct EventTypeSpec *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endHandlingEvents:count:": {
+      "name": "_endHandlingEvents:count:",
+      "bridgedName": "_endHandlingEvents_count",
+      "args": [
+        {
+          "type": "const struct EventTypeSpec *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginHandlingEvents:count:": {
+      "name": "_beginHandlingEvents:count:",
+      "bridgedName": "_beginHandlingEvents_count",
+      "args": [
+        {
+          "type": "const struct EventTypeSpec *"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRefAttributes": {
+      "name": "_menuRefAttributes",
+      "bridgedName": "_menuRefAttributes",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonDrawItemTextEvent:handlerCallRef:": {
+      "name": "_carbonDrawItemTextEvent:handlerCallRef:",
+      "bridgedName": "_carbonDrawItemTextEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonDrawItemContentEvent:handlerCallRef:": {
+      "name": "_carbonDrawItemContentEvent:handlerCallRef:",
+      "bridgedName": "_carbonDrawItemContentEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonDrawAttributedTitleForMenuItem:withEvent:": {
+      "name": "_carbonDrawAttributedTitleForMenuItem:withEvent:",
+      "bridgedName": "_carbonDrawAttributedTitleForMenuItem_withEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonDrawStateImageForMenuItem:withEvent:": {
+      "name": "_carbonDrawStateImageForMenuItem:withEvent:",
+      "bridgedName": "_carbonDrawStateImageForMenuItem_withEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonDrawLimitedViewForMenuItem:withEvent:": {
+      "name": "_carbonDrawLimitedViewForMenuItem:withEvent:",
+      "bridgedName": "_carbonDrawLimitedViewForMenuItem_withEvent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMeasureItemContentEvent:handlerCallRef:measuringHeight:": {
+      "name": "_carbonMeasureItemContentEvent:handlerCallRef:measuringHeight:",
+      "bridgedName": "_carbonMeasureItemContentEvent_handlerCallRef_measuringHeight",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMeasureItemTextEvent:handlerCallRef:measuringHeight:": {
+      "name": "_carbonMeasureItemTextEvent:handlerCallRef:measuringHeight:",
+      "bridgedName": "_carbonMeasureItemTextEvent_handlerCallRef_measuringHeight",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsElementFromAXUIElement:": {
+      "name": "nsElementFromAXUIElement:",
+      "bridgedName": "nsElementFromAXUIElement",
+      "args": [
+        {
+          "type": "struct __AXUIElement *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonIsAccessibleAttributeSettableEvent:handlerCallRef:axElement:": {
+      "name": "_carbonIsAccessibleAttributeSettableEvent:handlerCallRef:axElement:",
+      "bridgedName": "_carbonIsAccessibleAttributeSettableEvent_handlerCallRef_axElement",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        },
+        {
+          "type": "struct __AXUIElement *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonGetAccessibleAttributeEvent:handlerCallRef:axElement:": {
+      "name": "_carbonGetAccessibleAttributeEvent:handlerCallRef:axElement:",
+      "bridgedName": "_carbonGetAccessibleAttributeEvent_handlerCallRef_axElement",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        },
+        {
+          "type": "struct __AXUIElement *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonGetAccessibleAttributeNamesEvent:handlerCallRef:axElement:": {
+      "name": "_carbonGetAccessibleAttributeNamesEvent:handlerCallRef:axElement:",
+      "bridgedName": "_carbonGetAccessibleAttributeNamesEvent_handlerCallRef_axElement",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        },
+        {
+          "type": "struct __AXUIElement *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonCommandProcessEvent:handlerCallRef:": {
+      "name": "_carbonCommandProcessEvent:handlerCallRef:",
+      "bridgedName": "_carbonCommandProcessEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMenuItemSelectedEvent:handlerCallRef:": {
+      "name": "_carbonMenuItemSelectedEvent:handlerCallRef:",
+      "bridgedName": "_carbonMenuItemSelectedEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonUpdateStatusEvent:handlerCallRef:": {
+      "name": "_carbonUpdateStatusEvent:handlerCallRef:",
+      "bridgedName": "_carbonUpdateStatusEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonTargetItemEvent:handlerCallRef:": {
+      "name": "_carbonTargetItemEvent:handlerCallRef:",
+      "bridgedName": "_carbonTargetItemEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_informOwnerViewOfMenuState:withEvent:": {
+      "name": "_informOwnerViewOfMenuState:withEvent:",
+      "bridgedName": "_informOwnerViewOfMenuState_withEvent",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonCloseEvent:handlerCallRef:": {
+      "name": "_carbonCloseEvent:handlerCallRef:",
+      "bridgedName": "_carbonCloseEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonOpenEvent:handlerCallRef:": {
+      "name": "_carbonOpenEvent:handlerCallRef:",
+      "bridgedName": "_carbonOpenEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonMatchKeyEvent:handlerCallRef:": {
+      "name": "_carbonMatchKeyEvent:handlerCallRef:",
+      "bridgedName": "_carbonMatchKeyEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonPopulateEvent:handlerCallRef:": {
+      "name": "_carbonPopulateEvent:handlerCallRef:",
+      "bridgedName": "_carbonPopulateEvent_handlerCallRef",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        },
+        {
+          "type": "struct OpaqueEventHandlerCallRef *"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItemFromCarbonEventViaParamMenuItemIndexRequiringNonNull:": {
+      "name": "_menuItemFromCarbonEventViaParamMenuItemIndexRequiringNonNull:",
+      "bridgedName": "_menuItemFromCarbonEventViaParamMenuItemIndexRequiringNonNull",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuItemFromCarbonEventViaParamMenuItemIndex:": {
+      "name": "_menuItemFromCarbonEventViaParamMenuItemIndex:",
+      "bridgedName": "_menuItemFromCarbonEventViaParamMenuItemIndex",
+      "args": [
+        {
+          "type": "struct OpaqueEventRef *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isMainMenu": {
+      "name": "_isMainMenu",
+      "bridgedName": "_isMainMenu",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonUpdateMenuItemKeyEquivalentForItem:atCarbonIndex:withVirtualKeyCode:keyEquivalent:": {
+      "name": "_carbonUpdateMenuItemKeyEquivalentForItem:atCarbonIndex:withVirtualKeyCode:keyEquivalent:",
+      "bridgedName": "_carbonUpdateMenuItemKeyEquivalentForItem_atCarbonIndex_withVirtualKeyCode_keyEquivalent",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned short"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonApplyImage:forItem:forCarbonIndex:withApplicationMask:": {
+      "name": "_carbonApplyImage:forItem:forCarbonIndex:withApplicationMask:",
+      "bridgedName": "_carbonApplyImage_forItem_forCarbonIndex_withApplicationMask",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_carbonSetToolTip:forCarbonIndex:": {
+      "name": "_carbonSetToolTip:forCarbonIndex:",
+      "bridgedName": "_carbonSetToolTip_forCarbonIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dismissMenuBecauseWindowBecameMain:": {
+      "name": "_dismissMenuBecauseWindowBecameMain:",
+      "bridgedName": "_dismissMenuBecauseWindowBecameMain",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelTrackingWithAnimation:": {
+      "name": "_cancelTrackingWithAnimation:",
+      "bridgedName": "_cancelTrackingWithAnimation",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popUpContextMenu:withEvent:forView:": {
+      "name": "_popUpContextMenu:withEvent:forView:",
+      "bridgedName": "_popUpContextMenu_withEvent_forView",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popUpContextMenu:withEvent:forView:withFont:": {
+      "name": "_popUpContextMenu:withEvent:forView:withFont:",
+      "bridgedName": "_popUpContextMenu_withEvent_forView_withFont",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popUpMenu:atLocation:width:forView:withSelectedItem:withFont:withFlags:withOptions:": {
+      "name": "popUpMenu:atLocation:width:forView:withSelectedItem:withFont:withFlags:withOptions:",
+      "bridgedName": "popUpMenu_atLocation_width_forView_withSelectedItem_withFont_withFlags_withOptions",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popUpMenu:atLocation:width:forView:withSelectedItem:withFont:": {
+      "name": "popUpMenu:atLocation:width:forView:withSelectedItem:withFont:",
+      "bridgedName": "popUpMenu_atLocation_width_forView_withSelectedItem_withFont",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearAsMainCarbonMenuBar": {
+      "name": "clearAsMainCarbonMenuBar",
+      "bridgedName": "clearAsMainCarbonMenuBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAsMainCarbonMenuBar": {
+      "name": "setAsMainCarbonMenuBar",
+      "bridgedName": "setAsMainCarbonMenuBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupCarbonMenuBar": {
+      "name": "setupCarbonMenuBar",
+      "bridgedName": "setupCarbonMenuBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performMenuAction:withTarget:": {
+      "name": "performMenuAction:withTarget:",
+      "bridgedName": "performMenuAction_withTarget",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performActionWithHighlightingForItemAtIndex:": {
+      "name": "performActionWithHighlightingForItemAtIndex:",
+      "bridgedName": "performActionWithHighlightingForItemAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemRemoved:": {
+      "name": "_itemRemoved:",
+      "bridgedName": "_itemRemoved",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemAdded:": {
+      "name": "_itemAdded:",
+      "bridgedName": "_itemAdded",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemChanged:": {
+      "name": "_itemChanged:",
+      "bridgedName": "_itemChanged",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menu": {
+      "name": "menu",
+      "bridgedName": "menu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMenu:": {
+      "name": "setMenu:",
+      "bridgedName": "setMenu",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPopUpContext:": {
+      "name": "setPopUpContext:",
+      "bridgedName": "setPopUpContext",
+      "args": [
+        {
+          "type": "struct SLMPopUpMenuContext_t *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popUpContext": {
+      "name": "popUpContext",
+      "bridgedName": "popUpContext",
+      "args": [],
+      "returns": "struct SLMPopUpMenuContext_t *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCustomHandlerList:": {
+      "name": "setCustomHandlerList:",
+      "bridgedName": "setCustomHandlerList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customHandlerList": {
+      "name": "customHandlerList",
+      "bridgedName": "customHandlerList",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createExtraVars": {
+      "name": "_createExtraVars",
+      "bridgedName": "_createExtraVars",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

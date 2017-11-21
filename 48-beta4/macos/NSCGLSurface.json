@@ -1,0 +1,192 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [],
+  "protocol": false,
+  "className": "NSCGLSurface",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "flushRect:": {
+      "name": "flushRect:",
+      "bridgedName": "flushRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAttachedToCGLContext:": {
+      "name": "isAttachedToCGLContext:",
+      "bridgedName": "isAttachedToCGLContext",
+      "args": [
+        {
+          "type": "struct _CGLContextObject *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachToCGLContext:": {
+      "name": "attachToCGLContext:",
+      "bridgedName": "attachToCGLContext",
+      "args": [
+        {
+          "type": "struct _CGLContextObject *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSize:colorSpace:atomic:": {
+      "name": "initWithSize:colorSpace:atomic:",
+      "bridgedName": "initWithSize_colorSpace_atomic",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "struct CGColorSpace *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "struct CGColorSpace",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "opaque": {
+      "name": "opaque",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isOpaque"
+      ]
+    },
+    "floatingPoint": {
+      "name": "floatingPoint",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isFloatingPoint"
+      ]
+    },
+    "bitsPerPixel": {
+      "name": "bitsPerPixel",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "bitsPerComponent": {
+      "name": "bitsPerComponent",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "stereo": {
+      "name": "stereo",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isStereo"
+      ]
+    },
+    "displayMask": {
+      "name": "displayMask",
+      "pointer": false,
+      "type": "unsigned int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "size": {
+      "name": "size",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "rightImage": {
+      "name": "rightImage",
+      "pointer": true,
+      "type": "struct CGImage",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "leftImage": {
+      "name": "leftImage",
+      "pointer": true,
+      "type": "struct CGImage",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "struct CGImage",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "layerContents": {
+      "name": "layerContents",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

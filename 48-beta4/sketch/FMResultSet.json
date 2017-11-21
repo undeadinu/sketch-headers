@@ -1,0 +1,518 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "FMDatabase",
+    "FMStatement",
+    "NSMutableDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "FMResultSet",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "resultSetWithStatement:usingParentDatabase:": {
+      "name": "resultSetWithStatement:usingParentDatabase:",
+      "bridgedName": "resultSetWithStatement_usingParentDatabase",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "objectForKeyedSubscript:": {
+      "name": "objectForKeyedSubscript:",
+      "bridgedName": "objectForKeyedSubscript",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectAtIndexedSubscript:": {
+      "name": "objectAtIndexedSubscript:",
+      "bridgedName": "objectAtIndexedSubscript",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setParentDB:": {
+      "name": "setParentDB:",
+      "bridgedName": "setParentDB",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnNameForIndex:": {
+      "name": "columnNameForIndex:",
+      "bridgedName": "columnNameForIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectForColumnName:": {
+      "name": "objectForColumnName:",
+      "bridgedName": "objectForColumnName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectForColumnIndex:": {
+      "name": "objectForColumnIndex:",
+      "bridgedName": "objectForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "UTF8StringForColumnName:": {
+      "name": "UTF8StringForColumnName:",
+      "bridgedName": "UTF8StringForColumnName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "UTF8StringForColumnIndex:": {
+      "name": "UTF8StringForColumnIndex:",
+      "bridgedName": "UTF8StringForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnIsNull:": {
+      "name": "columnIsNull:",
+      "bridgedName": "columnIsNull",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnIndexIsNull:": {
+      "name": "columnIndexIsNull:",
+      "bridgedName": "columnIndexIsNull",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataNoCopyForColumnIndex:": {
+      "name": "dataNoCopyForColumnIndex:",
+      "bridgedName": "dataNoCopyForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataNoCopyForColumn:": {
+      "name": "dataNoCopyForColumn:",
+      "bridgedName": "dataNoCopyForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataForColumnIndex:": {
+      "name": "dataForColumnIndex:",
+      "bridgedName": "dataForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataForColumn:": {
+      "name": "dataForColumn:",
+      "bridgedName": "dataForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dateForColumnIndex:": {
+      "name": "dateForColumnIndex:",
+      "bridgedName": "dateForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dateForColumn:": {
+      "name": "dateForColumn:",
+      "bridgedName": "dateForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringForColumn:": {
+      "name": "stringForColumn:",
+      "bridgedName": "stringForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringForColumnIndex:": {
+      "name": "stringForColumnIndex:",
+      "bridgedName": "stringForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doubleForColumnIndex:": {
+      "name": "doubleForColumnIndex:",
+      "bridgedName": "doubleForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doubleForColumn:": {
+      "name": "doubleForColumn:",
+      "bridgedName": "doubleForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boolForColumnIndex:": {
+      "name": "boolForColumnIndex:",
+      "bridgedName": "boolForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boolForColumn:": {
+      "name": "boolForColumn:",
+      "bridgedName": "boolForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unsignedLongLongIntForColumnIndex:": {
+      "name": "unsignedLongLongIntForColumnIndex:",
+      "bridgedName": "unsignedLongLongIntForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unsignedLongLongIntForColumn:": {
+      "name": "unsignedLongLongIntForColumn:",
+      "bridgedName": "unsignedLongLongIntForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "longLongIntForColumnIndex:": {
+      "name": "longLongIntForColumnIndex:",
+      "bridgedName": "longLongIntForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "longLongIntForColumn:": {
+      "name": "longLongIntForColumn:",
+      "bridgedName": "longLongIntForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "longForColumnIndex:": {
+      "name": "longForColumnIndex:",
+      "bridgedName": "longForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "longForColumn:": {
+      "name": "longForColumn:",
+      "bridgedName": "longForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intForColumnIndex:": {
+      "name": "intForColumnIndex:",
+      "bridgedName": "intForColumnIndex",
+      "args": [
+        {
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intForColumn:": {
+      "name": "intForColumn:",
+      "bridgedName": "intForColumn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnIndexForName:": {
+      "name": "columnIndexForName:",
+      "bridgedName": "columnIndexForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasAnotherRow": {
+      "name": "hasAnotherRow",
+      "bridgedName": "hasAnotherRow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nextWithError:": {
+      "name": "nextWithError:",
+      "bridgedName": "nextWithError",
+      "args": [
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "next": {
+      "name": "next",
+      "bridgedName": "next",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resultDictionary": {
+      "name": "resultDictionary",
+      "bridgedName": "resultDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resultDict": {
+      "name": "resultDict",
+      "bridgedName": "resultDict",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "kvcMagic:": {
+      "name": "kvcMagic:",
+      "bridgedName": "kvcMagic",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnCount": {
+      "name": "columnCount",
+      "bridgedName": "columnCount",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close": {
+      "name": "close",
+      "bridgedName": "close",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finalize": {
+      "name": "finalize",
+      "bridgedName": "finalize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "statement": {
+      "name": "statement",
+      "pointer": true,
+      "type": "FMStatement",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "query": {
+      "name": "query",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "columnNameToIndexMap": {
+      "name": "columnNameToIndexMap",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

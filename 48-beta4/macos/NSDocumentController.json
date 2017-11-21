@@ -1,0 +1,2806 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h",
+    "NSUserInterfaceValidations.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDocument",
+    "NSMutableDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSDocumentController",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding",
+    "NSUserInterfaceValidations"
+  ],
+  "methods": {
+    "restoreWindowWithIdentifier:state:completionHandler:": {
+      "name": "restoreWindowWithIdentifier:state:completionHandler:",
+      "bridgedName": "restoreWindowWithIdentifier_state_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_maximumNumberOfConcurrentlyOpeningDocuments": {
+      "name": "_maximumNumberOfConcurrentlyOpeningDocuments",
+      "bridgedName": "_maximumNumberOfConcurrentlyOpeningDocuments",
+      "args": [],
+      "returns": "long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_hasOverrideForSelector:": {
+      "name": "_hasOverrideForSelector:",
+      "bridgedName": "_hasOverrideForSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setSharedDocumentController:": {
+      "name": "_setSharedDocumentController:",
+      "bridgedName": "_setSharedDocumentController",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedDocumentController": {
+      "name": "sharedDocumentController",
+      "bridgedName": "sharedDocumentController",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_seamlessDocumentCloserClass": {
+      "name": "_seamlessDocumentCloserClass",
+      "bridgedName": "_seamlessDocumentCloserClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_seamlessDocumentOpenerClass": {
+      "name": "_seamlessDocumentOpenerClass",
+      "bridgedName": "_seamlessDocumentOpenerClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_restoreAuxiliaryStateFromAutoreopenRecord:toDocument:": {
+      "name": "_restoreAuxiliaryStateFromAutoreopenRecord:toDocument:",
+      "bridgedName": "_restoreAuxiliaryStateFromAutoreopenRecord_toDocument",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_resolveAutoreopenRecord:intoDocumentURL:contentsURL:tryAgainLater:": {
+      "name": "_resolveAutoreopenRecord:intoDocumentURL:contentsURL:tryAgainLater:",
+      "bridgedName": "_resolveAutoreopenRecord_intoDocumentURL_contentsURL_tryAgainLater",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        },
+        {
+          "type": "id *"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_sharedDocumentControllerNoCreate": {
+      "name": "_sharedDocumentControllerNoCreate",
+      "bridgedName": "_sharedDocumentControllerNoCreate",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_recentMenuItemTitlesFromLocationComponentChains:includingIcons:": {
+      "name": "_recentMenuItemTitlesFromLocationComponentChains:includingIcons:",
+      "bridgedName": "_recentMenuItemTitlesFromLocationComponentChains_includingIcons",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_recentMenuItemTitlesFromRecentDocumentInfos:includingIcons:": {
+      "name": "_recentMenuItemTitlesFromRecentDocumentInfos:includingIcons:",
+      "bridgedName": "_recentMenuItemTitlesFromRecentDocumentInfos_includingIcons",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isJavaSubclass": {
+      "name": "_isJavaSubclass",
+      "bridgedName": "_isJavaSubclass",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayNameForType:": {
+      "name": "displayNameForType:",
+      "bridgedName": "displayNameForType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentClassForType:": {
+      "name": "documentClassForType:",
+      "bridgedName": "documentClassForType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "typeForContentsOfURL:error:": {
+      "name": "typeForContentsOfURL:error:",
+      "bridgedName": "typeForContentsOfURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dockRestarted": {
+      "name": "_dockRestarted",
+      "bridgedName": "_dockRestarted",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateOpenRecentDocumentsWithNewEntries:documentsSnapshot:": {
+      "name": "_updateOpenRecentDocumentsWithNewEntries:documentsSnapshot:",
+      "bridgedName": "_updateOpenRecentDocumentsWithNewEntries_documentsSnapshot",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replaceIDForRecentDocument:withID:": {
+      "name": "_replaceIDForRecentDocument:withID:",
+      "bridgedName": "_replaceIDForRecentDocument_withID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshRecentDocumentURL:newURL:forDocument:": {
+      "name": "_refreshRecentDocumentURL:newURL:forDocument:",
+      "bridgedName": "_refreshRecentDocumentURL_newURL_forDocument",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "noteNewRecentDocumentURL:": {
+      "name": "noteNewRecentDocumentURL:",
+      "bridgedName": "noteNewRecentDocumentURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notePendingRecentDocumentURLsForKey:documentsSnapshot:": {
+      "name": "_notePendingRecentDocumentURLsForKey:documentsSnapshot:",
+      "bridgedName": "_notePendingRecentDocumentURLsForKey_documentsSnapshot",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "noteNewRecentDocument:": {
+      "name": "noteNewRecentDocument:",
+      "bridgedName": "noteNewRecentDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearRecentDocuments:": {
+      "name": "clearRecentDocuments:",
+      "bridgedName": "clearRecentDocuments",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recentDocumentRecordsKeyForUserInterfaceItem:": {
+      "name": "_recentDocumentRecordsKeyForUserInterfaceItem:",
+      "bridgedName": "_recentDocumentRecordsKeyForUserInterfaceItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recentDocumentRecordsKeyForMenu:": {
+      "name": "_recentDocumentRecordsKeyForMenu:",
+      "bridgedName": "_recentDocumentRecordsKeyForMenu",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_readRecentDocumentDefaultsForKey:": {
+      "name": "_readRecentDocumentDefaultsForKey:",
+      "bridgedName": "_readRecentDocumentDefaultsForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_perAppRecentDocumentFileList": {
+      "name": "_perAppRecentDocumentFileList",
+      "bridgedName": "_perAppRecentDocumentFileList",
+      "args": [],
+      "returns": "struct OpaqueLSSharedFileListRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeRecentDocumentDefaultsForKey:": {
+      "name": "_writeRecentDocumentDefaultsForKey:",
+      "bridgedName": "_writeRecentDocumentDefaultsForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willPresentError:": {
+      "name": "willPresentError:",
+      "bridgedName": "willPresentError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentError:": {
+      "name": "presentError:",
+      "bridgedName": "presentError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentError:modalForWindow:delegate:didPresentSelector:contextInfo:": {
+      "name": "presentError:modalForWindow:delegate:didPresentSelector:contextInfo:",
+      "bridgedName": "presentError_modalForWindow_delegate_didPresentSelector_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restorePersistentDocumentWithState:completionHandler:": {
+      "name": "_restorePersistentDocumentWithState:completionHandler:",
+      "bridgedName": "_restorePersistentDocumentWithState_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistenceCanRecreateEmptyUntitledDocumentOfType:": {
+      "name": "_persistenceCanRecreateEmptyUntitledDocumentOfType:",
+      "bridgedName": "_persistenceCanRecreateEmptyUntitledDocumentOfType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistenceMustOpenDocumentsThroughApplicationDelegate": {
+      "name": "_persistenceMustOpenDocumentsThroughApplicationDelegate",
+      "bridgedName": "_persistenceMustOpenDocumentsThroughApplicationDelegate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "standardShareMenuItem": {
+      "name": "standardShareMenuItem",
+      "bridgedName": "standardShareMenuItem",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recursivelyEnumerateMenuItemsStartingFromMenu:usingBlock:": {
+      "name": "_recursivelyEnumerateMenuItemsStartingFromMenu:usingBlock:",
+      "bridgedName": "_recursivelyEnumerateMenuItemsStartingFromMenu_usingBlock",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "duplicateDocumentWithContentsOfURL:copying:displayName:error:": {
+      "name": "duplicateDocumentWithContentsOfURL:copying:displayName:error:",
+      "bridgedName": "duplicateDocumentWithContentsOfURL_copying_displayName_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_oldMakeDuplicateDocumentWithContentsOfURL:copying:displayName:error:": {
+      "name": "_oldMakeDuplicateDocumentWithContentsOfURL:copying:displayName:error:",
+      "bridgedName": "_oldMakeDuplicateDocumentWithContentsOfURL_copying_displayName_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishOpeningDocument:andShowWindows:": {
+      "name": "_finishOpeningDocument:andShowWindows:",
+      "bridgedName": "_finishOpeningDocument_andShowWindows",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closeAllDocumentsWithDelegate:didCloseAllSelector:contextInfo:": {
+      "name": "closeAllDocumentsWithDelegate:didCloseAllSelector:contextInfo:",
+      "bridgedName": "closeAllDocumentsWithDelegate_didCloseAllSelector_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reviewUnsavedDocumentsWithAlertTitle:cancellable:delegate:didReviewAllSelector:contextInfo:": {
+      "name": "reviewUnsavedDocumentsWithAlertTitle:cancellable:delegate:didReviewAllSelector:contextInfo:",
+      "bridgedName": "reviewUnsavedDocumentsWithAlertTitle_cancellable_delegate_didReviewAllSelector_contextInfo",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_runAlertPanel:msg:first:second:guardSecond:third:": {
+      "name": "_runAlertPanel:msg:first:second:guardSecond:third:",
+      "bridgedName": "_runAlertPanel_msg_first_second_guardSecond_third",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_editedDocumentCount": {
+      "name": "_editedDocumentCount",
+      "bridgedName": "_editedDocumentCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveAllDocuments:": {
+      "name": "saveAllDocuments:",
+      "bridgedName": "saveAllDocuments",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_something:didSomething:soContinue:": {
+      "name": "_something:didSomething:soContinue:",
+      "bridgedName": "_something_didSomething_soContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentForURL:withContentsOfURL:ofType:error:": {
+      "name": "makeDocumentForURL:withContentsOfURL:ofType:error:",
+      "bridgedName": "makeDocumentForURL_withContentsOfURL_ofType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reopenDocumentForURL:withContentsOfURL:display:completionHandler:": {
+      "name": "reopenDocumentForURL:withContentsOfURL:display:completionHandler:",
+      "bridgedName": "reopenDocumentForURL_withContentsOfURL_display_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willPresentReopeningError:forURL:contentsURL:": {
+      "name": "_willPresentReopeningError:forURL:contentsURL:",
+      "bridgedName": "_willPresentReopeningError_forURL_contentsURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentForURL:withContentsOfURL:alternateContents:ofType:completionHandler:": {
+      "name": "makeDocumentForURL:withContentsOfURL:alternateContents:ofType:completionHandler:",
+      "bridgedName": "makeDocumentForURL_withContentsOfURL_alternateContents_ofType_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentForURL:withAlternateContents:ofType:error:": {
+      "name": "makeDocumentForURL:withAlternateContents:ofType:error:",
+      "bridgedName": "makeDocumentForURL_withAlternateContents_ofType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentWithContentsOfURL:ofType:error:": {
+      "name": "makeDocumentWithContentsOfURL:ofType:error:",
+      "bridgedName": "makeDocumentWithContentsOfURL_ofType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentWithContentsOfURL:alternateContents:ofType:completionHandler:": {
+      "name": "makeDocumentWithContentsOfURL:alternateContents:ofType:completionHandler:",
+      "bridgedName": "makeDocumentWithContentsOfURL_alternateContents_ofType_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_errorForMissingDocumentClassWithContentsURL:ofType:": {
+      "name": "_errorForMissingDocumentClassWithContentsURL:ofType:",
+      "bridgedName": "_errorForMissingDocumentClassWithContentsURL_ofType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocumentWithContentsOfURL:display:completionHandler:": {
+      "name": "openDocumentWithContentsOfURL:display:completionHandler:",
+      "bridgedName": "openDocumentWithContentsOfURL_display_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getAlternateContentsForDocumentAtURL:withFileCoordinationInterrupter:completionHandler:": {
+      "name": "getAlternateContentsForDocumentAtURL:withFileCoordinationInterrupter:completionHandler:",
+      "bridgedName": "getAlternateContentsForDocumentAtURL_withFileCoordinationInterrupter_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL:resolvingSymlinks:thenContinueOnMainThreadWithAccessor:": {
+      "name": "_coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL:resolvingSymlinks:thenContinueOnMainThreadWithAccessor:",
+      "bridgedName": "_coordinateReadingAndGetAlternateContentsForOpeningDocumentAtURL_resolvingSymlinks_thenContinueOnMainThreadWithAccessor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_coordinateReadingForOpeningDocumentAtURL:resolvingSymlinks:byAccessor:": {
+      "name": "_coordinateReadingForOpeningDocumentAtURL:resolvingSymlinks:byAccessor:",
+      "bridgedName": "_coordinateReadingForOpeningDocumentAtURL_resolvingSymlinks_byAccessor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openDocumentWithContentsOfURL:usingProcedure:": {
+      "name": "_openDocumentWithContentsOfURL:usingProcedure:",
+      "bridgedName": "_openDocumentWithContentsOfURL_usingProcedure",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openDocumentsWithContentsOfURLs:presentErrors:completionHandler:": {
+      "name": "_openDocumentsWithContentsOfURLs:presentErrors:completionHandler:",
+      "bridgedName": "_openDocumentsWithContentsOfURLs_presentErrors_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canPerformBatchedDocumentOpening": {
+      "name": "_canPerformBatchedDocumentOpening",
+      "bridgedName": "_canPerformBatchedDocumentOpening",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openDocumentsWithContentsOfURLs:display:presentErrors:": {
+      "name": "_openDocumentsWithContentsOfURLs:display:presentErrors:",
+      "bridgedName": "_openDocumentsWithContentsOfURLs_display_presentErrors",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishBatchedOpeningAndPresentErrors:": {
+      "name": "_finishBatchedOpeningAndPresentErrors:",
+      "bridgedName": "_finishBatchedOpeningAndPresentErrors",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginBatchedOpeningWithURLs:": {
+      "name": "_beginBatchedOpeningWithURLs:",
+      "bridgedName": "_beginBatchedOpeningWithURLs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didEndAsyncOpeningOrPrinting": {
+      "name": "_didEndAsyncOpeningOrPrinting",
+      "bridgedName": "_didEndAsyncOpeningOrPrinting",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willBeginAsyncOpeningOrPrinting": {
+      "name": "_willBeginAsyncOpeningOrPrinting",
+      "bridgedName": "_willBeginAsyncOpeningOrPrinting",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_waitForAsyncOpeningOrPrintingToFinishThenContinue:": {
+      "name": "_waitForAsyncOpeningOrPrintingToFinishThenContinue:",
+      "bridgedName": "_waitForAsyncOpeningOrPrintingToFinishThenContinue",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalOpenPanel:forTypes:": {
+      "name": "runModalOpenPanel:forTypes:",
+      "bridgedName": "runModalOpenPanel_forTypes",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginOpenPanel:forTypes:completionHandler:": {
+      "name": "beginOpenPanel:forTypes:completionHandler:",
+      "bridgedName": "beginOpenPanel_forTypes_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginOpenPanelWithCompletionHandler:": {
+      "name": "beginOpenPanelWithCompletionHandler:",
+      "bridgedName": "beginOpenPanelWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLsFromRunningOpenPanel": {
+      "name": "URLsFromRunningOpenPanel",
+      "bridgedName": "URLsFromRunningOpenPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openableTypes": {
+      "name": "_openableTypes",
+      "bridgedName": "_openableTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupOpenPanel": {
+      "name": "_setupOpenPanel",
+      "bridgedName": "_setupOpenPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocument:": {
+      "name": "openDocument:",
+      "bridgedName": "openDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willPresentOpeningError:forURL:": {
+      "name": "_willPresentOpeningError:forURL:",
+      "bridgedName": "_willPresentOpeningError_forURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willPresentOpeningError:forDocumentWithDisplayName:": {
+      "name": "_willPresentOpeningError:forDocumentWithDisplayName:",
+      "bridgedName": "_willPresentOpeningError_forDocumentWithDisplayName",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_presentableFileNameFromURL:": {
+      "name": "_presentableFileNameFromURL:",
+      "bridgedName": "_presentableFileNameFromURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeUntitledDocumentOfType:error:": {
+      "name": "makeUntitledDocumentOfType:error:",
+      "bridgedName": "makeUntitledDocumentOfType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openUntitledDocumentOfType:andDisplay:error:": {
+      "name": "_openUntitledDocumentOfType:andDisplay:error:",
+      "bridgedName": "_openUntitledDocumentOfType_andDisplay_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openUntitledDocumentAndDisplay:error:": {
+      "name": "openUntitledDocumentAndDisplay:error:",
+      "bridgedName": "openUntitledDocumentAndDisplay_error",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultType:": {
+      "name": "_defaultType:",
+      "bridgedName": "_defaultType",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newDocument:": {
+      "name": "newDocument:",
+      "bridgedName": "newDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willPresentCreationError:": {
+      "name": "_willPresentCreationError:",
+      "bridgedName": "_willPresentCreationError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeDocument:": {
+      "name": "removeDocument:",
+      "bridgedName": "removeDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDocument:": {
+      "name": "addDocument:",
+      "bridgedName": "addDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "respondsToSelector:": {
+      "name": "respondsToSelector:",
+      "bridgedName": "respondsToSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newWindowForTab:": {
+      "name": "newWindowForTab:",
+      "bridgedName": "newWindowForTab",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appProbablyNeedsWarmedUpSavePanel": {
+      "name": "_appProbablyNeedsWarmedUpSavePanel",
+      "bridgedName": "_appProbablyNeedsWarmedUpSavePanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setInvokeVersionsForTimeMachine:": {
+      "name": "_setInvokeVersionsForTimeMachine:",
+      "bridgedName": "_setInvokeVersionsForTimeMachine",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ubiquityIdentityChanged:": {
+      "name": "_ubiquityIdentityChanged:",
+      "bridgedName": "_ubiquityIdentityChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appearancePreferencesChanged:": {
+      "name": "_appearancePreferencesChanged:",
+      "bridgedName": "_appearancePreferencesChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appWillBecomeInactive:": {
+      "name": "_appWillBecomeInactive:",
+      "bridgedName": "_appWillBecomeInactive",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentForWindow:": {
+      "name": "documentForWindow:",
+      "bridgedName": "documentForWindow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentForURL:": {
+      "name": "documentForURL:",
+      "bridgedName": "documentForURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentForURL:": {
+      "name": "_documentForURL:",
+      "bridgedName": "_documentForURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openRecentDocument:": {
+      "name": "_openRecentDocument:",
+      "bridgedName": "_openRecentDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recentDocumentURLsForKey:": {
+      "name": "_recentDocumentURLsForKey:",
+      "bridgedName": "_recentDocumentURLsForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mountedVolumesDidChange:": {
+      "name": "_mountedVolumesDidChange:",
+      "bridgedName": "_mountedVolumesDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startResolvingRecentDocumentURLsForKey:includingResolved:preliminaryResultsHandler:completionHandler:": {
+      "name": "_startResolvingRecentDocumentURLsForKey:includingResolved:preliminaryResultsHandler:completionHandler:",
+      "bridgedName": "_startResolvingRecentDocumentURLsForKey_includingResolved_preliminaryResultsHandler_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteRecentDocumentInfoRemoved:forKey:": {
+      "name": "_noteRecentDocumentInfoRemoved:forKey:",
+      "bridgedName": "_noteRecentDocumentInfoRemoved_forKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteNewRecentDocumentURL:forKey:": {
+      "name": "_noteNewRecentDocumentURL:forKey:",
+      "bridgedName": "_noteNewRecentDocumentURL_forKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__noteNewRecentDocumentURL:forKey:": {
+      "name": "__noteNewRecentDocumentURL:forKey:",
+      "bridgedName": "__noteNewRecentDocumentURL_forKey",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recentDocumentRecordsKeyForMenuTag:": {
+      "name": "_recentDocumentRecordsKeyForMenuTag:",
+      "bridgedName": "_recentDocumentRecordsKeyForMenuTag",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isInaccessibleUbiquitousItemAtURL:": {
+      "name": "_isInaccessibleUbiquitousItemAtURL:",
+      "bridgedName": "_isInaccessibleUbiquitousItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isPurgedItemAtURL:": {
+      "name": "_isPurgedItemAtURL:",
+      "bridgedName": "_isPurgedItemAtURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDocumentBeingDuplicated:": {
+      "name": "_setDocumentBeingDuplicated:",
+      "bridgedName": "_setDocumentBeingDuplicated",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentBeingDuplicated": {
+      "name": "_documentBeingDuplicated",
+      "bridgedName": "_documentBeingDuplicated",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_anyDocumentClassUsesUbiquitousStorage": {
+      "name": "_anyDocumentClassUsesUbiquitousStorage",
+      "bridgedName": "_anyDocumentClassUsesUbiquitousStorage",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_anyDocumentClassPreservesVersions": {
+      "name": "_anyDocumentClassPreservesVersions",
+      "bridgedName": "_anyDocumentClassPreservesVersions",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allDocumentClassesAutosaveInPlace": {
+      "name": "_allDocumentClassesAutosaveInPlace",
+      "bridgedName": "_allDocumentClassesAutosaveInPlace",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_anyDocumentClassAutosavesInPlace": {
+      "name": "_anyDocumentClassAutosavesInPlace",
+      "bridgedName": "_anyDocumentClassAutosavesInPlace",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowAboveWindowOfOpeningDocumentAtIndex:orMakeKey:": {
+      "name": "_windowAboveWindowOfOpeningDocumentAtIndex:orMakeKey:",
+      "bridgedName": "_windowAboveWindowOfOpeningDocumentAtIndex_orMakeKey",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfOpeningDocument:": {
+      "name": "_indexOfOpeningDocument:",
+      "bridgedName": "_indexOfOpeningDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_countOfOpeningDocuments": {
+      "name": "_countOfOpeningDocuments",
+      "bridgedName": "_countOfOpeningDocuments",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typeDescriptions": {
+      "name": "_typeDescriptions",
+      "bridgedName": "_typeDescriptions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typeDescriptionForName:": {
+      "name": "_typeDescriptionForName:",
+      "bridgedName": "_typeDescriptionForName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_utiUsage": {
+      "name": "_utiUsage",
+      "bridgedName": "_utiUsage",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getAutoreopenRecordForDocument:withoutException:queue:completionHandler:": {
+      "name": "_getAutoreopenRecordForDocument:withoutException:queue:completionHandler:",
+      "bridgedName": "_getAutoreopenRecordForDocument_withoutException_queue_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createAutoreopenRecordForDocument:withoutException:": {
+      "name": "_createAutoreopenRecordForDocument:withoutException:",
+      "bridgedName": "_createAutoreopenRecordForDocument_withoutException",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_customizationOfError:withDescription:recoverySuggestion:recoveryOptions:recoveryAttempter:": {
+      "name": "_customizationOfError:withDescription:recoverySuggestion:recoveryOptions:recoveryAttempter:",
+      "bridgedName": "_customizationOfError_withDescription_recoverySuggestion_recoveryOptions_recoveryAttempter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixedFailureReasonFromError:": {
+      "name": "_fixedFailureReasonFromError:",
+      "bridgedName": "_fixedFailureReasonFromError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autosaveDirectoryURLCreateIfNecessary:": {
+      "name": "_autosaveDirectoryURLCreateIfNecessary:",
+      "bridgedName": "_autosaveDirectoryURLCreateIfNecessary",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autosavingContentsURLIsReserved:": {
+      "name": "_autosavingContentsURLIsReserved:",
+      "bridgedName": "_autosavingContentsURLIsReserved",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unreserveAutosavingContentsURL:": {
+      "name": "_unreserveAutosavingContentsURL:",
+      "bridgedName": "_unreserveAutosavingContentsURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reserveAutosavingContentsURL:": {
+      "name": "_reserveAutosavingContentsURL:",
+      "bridgedName": "_reserveAutosavingContentsURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resumeMainThreadUnblocker:": {
+      "name": "_resumeMainThreadUnblocker:",
+      "bridgedName": "_resumeMainThreadUnblocker",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suspendMainThreadUnblocker:thenContinueWhenComplete:": {
+      "name": "_suspendMainThreadUnblocker:thenContinueWhenComplete:",
+      "bridgedName": "_suspendMainThreadUnblocker_thenContinueWhenComplete",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_onMainThreadInvokeWorker:": {
+      "name": "_onMainThreadInvokeWorker:",
+      "bridgedName": "_onMainThreadInvokeWorker",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isMainThreadBlockedByWaiter": {
+      "name": "_isMainThreadBlockedByWaiter",
+      "bridgedName": "_isMainThreadBlockedByWaiter",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popMainThreadUnblockerThenContinue:": {
+      "name": "_popMainThreadUnblockerThenContinue:",
+      "bridgedName": "_popMainThreadUnblockerThenContinue",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pushMainThreadUnblocker:": {
+      "name": "_pushMainThreadUnblocker:",
+      "bridgedName": "_pushMainThreadUnblocker",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_uniqueNumberForDocument:": {
+      "name": "_uniqueNumberForDocument:",
+      "bridgedName": "_uniqueNumberForDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isNativeType:forDocumentClass:": {
+      "name": "_isNativeType:forDocumentClass:",
+      "bridgedName": "_isNativeType_forDocumentClass",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getReadableNotWritable:types:forDocumentClass:": {
+      "name": "_getReadableNotWritable:types:forDocumentClass:",
+      "bridgedName": "_getReadableNotWritable_types_forDocumentClass",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteAutosavedContentsOfDocument:": {
+      "name": "_noteAutosavedContentsOfDocument:",
+      "bridgedName": "_noteAutosavedContentsOfDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteAutoreopenStateChangedForDocument:": {
+      "name": "_noteAutoreopenStateChangedForDocument:",
+      "bridgedName": "_noteAutoreopenStateChangedForDocument",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeAllDocumentsWithDelegate:shouldTerminateSelector:": {
+      "name": "_closeAllDocumentsWithDelegate:shouldTerminateSelector:",
+      "bridgedName": "_closeAllDocumentsWithDelegate_shouldTerminateSelector",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__closeAllDocumentsWithDelegate:shouldTerminateSelector:": {
+      "name": "__closeAllDocumentsWithDelegate:shouldTerminateSelector:",
+      "bridgedName": "__closeAllDocumentsWithDelegate_shouldTerminateSelector",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentDidEndAsynchronouslyPreservingVersion:": {
+      "name": "_documentDidEndAsynchronouslyPreservingVersion:",
+      "bridgedName": "_documentDidEndAsynchronouslyPreservingVersion",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentWillBeginAsynchronouslyPreservingVersion:": {
+      "name": "_documentWillBeginAsynchronouslyPreservingVersion:",
+      "bridgedName": "_documentWillBeginAsynchronouslyPreservingVersion",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeAutoreopenRecordsForOpenDocuments": {
+      "name": "_writeAutoreopenRecordsForOpenDocuments",
+      "bridgedName": "_writeAutoreopenRecordsForOpenDocuments",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeAutoreopenRecords:": {
+      "name": "_writeAutoreopenRecords:",
+      "bridgedName": "_writeAutoreopenRecords",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_printDocumentsWithContentsOfURLs:settings:showPrintPanels:completionHandler:": {
+      "name": "_printDocumentsWithContentsOfURLs:settings:showPrintPanels:completionHandler:",
+      "bridgedName": "_printDocumentsWithContentsOfURLs_settings_showPrintPanels_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willPresentOpenForPrintingError:forURL:": {
+      "name": "_willPresentOpenForPrintingError:forURL:",
+      "bridgedName": "_willPresentOpenForPrintingError_forURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openFile:": {
+      "name": "_openFile:",
+      "bridgedName": "_openFile",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showOpenPanel": {
+      "name": "_showOpenPanel",
+      "bridgedName": "_showOpenPanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openUntitled": {
+      "name": "_openUntitled",
+      "bridgedName": "_openUntitled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAutoreopening": {
+      "name": "_isAutoreopening",
+      "bridgedName": "_isAutoreopening",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoreopenDocumentsIgnoringExpendable:withCompletionHandler:": {
+      "name": "_autoreopenDocumentsIgnoringExpendable:withCompletionHandler:",
+      "bridgedName": "_autoreopenDocumentsIgnoringExpendable_withCompletionHandler",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoreopenDocumentsFromRecords:withCompletionHandler:": {
+      "name": "_autoreopenDocumentsFromRecords:withCompletionHandler:",
+      "bridgedName": "_autoreopenDocumentsFromRecords_withCompletionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_permitAutoreopeningOfDocuments": {
+      "name": "_permitAutoreopeningOfDocuments",
+      "bridgedName": "_permitAutoreopeningOfDocuments",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishedWithAutoreopenRecords": {
+      "name": "_finishedWithAutoreopenRecords",
+      "bridgedName": "_finishedWithAutoreopenRecords",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoreopenRecordsBeingReopened": {
+      "name": "_autoreopenRecordsBeingReopened",
+      "bridgedName": "_autoreopenRecordsBeingReopened",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autosaveRecordPathCreateIfNecessary:": {
+      "name": "_autosaveRecordPathCreateIfNecessary:",
+      "bridgedName": "_autosaveRecordPathCreateIfNecessary",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appPersistenceIsJustOff": {
+      "name": "_appPersistenceIsJustOff",
+      "bridgedName": "_appPersistenceIsJustOff",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notePendingRecentDocumentURLsIfNecessary": {
+      "name": "_notePendingRecentDocumentURLsIfNecessary",
+      "bridgedName": "_notePendingRecentDocumentURLsIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shareMenuDidClose:": {
+      "name": "_shareMenuDidClose:",
+      "bridgedName": "_shareMenuDidClose",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_share:": {
+      "name": "_share:",
+      "bridgedName": "_share",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_populateShareMenu:": {
+      "name": "_populateShareMenu:",
+      "bridgedName": "_populateShareMenu",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRevertToMenuHidden:": {
+      "name": "_setRevertToMenuHidden:",
+      "bridgedName": "_setRevertToMenuHidden",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_populateRevertToMenu:": {
+      "name": "_populateRevertToMenu:",
+      "bridgedName": "_populateRevertToMenu",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTitleForMenuItem:originalTitle:": {
+      "name": "_updateTitleForMenuItem:originalTitle:",
+      "bridgedName": "_updateTitleForMenuItem_originalTitle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentForAction:": {
+      "name": "_documentForAction:",
+      "bridgedName": "_documentForAction",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_installOpenRecentMenus": {
+      "name": "_installOpenRecentMenus",
+      "bridgedName": "_installOpenRecentMenus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateUnresolvedRecentDocumentInfos": {
+      "name": "_invalidateUnresolvedRecentDocumentInfos",
+      "bridgedName": "_invalidateUnresolvedRecentDocumentInfos",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateRecentDocumentInfosForVolumeURL:": {
+      "name": "_invalidateRecentDocumentInfosForVolumeURL:",
+      "bridgedName": "_invalidateRecentDocumentInfosForVolumeURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_populateOpenRecentMenu:includingIcons:": {
+      "name": "_populateOpenRecentMenu:includingIcons:",
+      "bridgedName": "_populateOpenRecentMenu_includingIcons",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resolveRecentDocumentsForKey:asynchronousUpdater:": {
+      "name": "_resolveRecentDocumentsForKey:asynchronousUpdater:",
+      "bridgedName": "_resolveRecentDocumentsForKey_asynchronousUpdater",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateMenu:withRecentDocumentInfos:includingIcons:": {
+      "name": "_updateMenu:withRecentDocumentInfos:includingIcons:",
+      "bridgedName": "_updateMenu_withRecentDocumentInfos_includingIcons",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recentDocumentInfoForKey:": {
+      "name": "_recentDocumentInfoForKey:",
+      "bridgedName": "_recentDocumentInfoForKey",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_depopulateOpenRecentMenu:": {
+      "name": "_depopulateOpenRecentMenu:",
+      "bridgedName": "_depopulateOpenRecentMenu",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchBar": {
+      "name": "_touchBar",
+      "bridgedName": "_touchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSuddenTermination": {
+      "name": "_updateSuddenTermination",
+      "bridgedName": "_updateSuddenTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabPlusButtonWasClicked": {
+      "name": "_tabPlusButtonWasClicked",
+      "bridgedName": "_tabPlusButtonWasClicked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTabPlusButtonWasClicked:": {
+      "name": "_setTabPlusButtonWasClicked:",
+      "bridgedName": "_setTabPlusButtonWasClicked",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldInvertImplicitBehaviorToYesForCurrentRunLoop": {
+      "name": "_setShouldInvertImplicitBehaviorToYesForCurrentRunLoop",
+      "bridgedName": "_setShouldInvertImplicitBehaviorToYesForCurrentRunLoop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldInvertImplicitTabbingBehavior:": {
+      "name": "_setShouldInvertImplicitTabbingBehavior:",
+      "bridgedName": "_setShouldInvertImplicitTabbingBehavior",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldInvertImplicitTabbingBehavior": {
+      "name": "_shouldInvertImplicitTabbingBehavior",
+      "bridgedName": "_shouldInvertImplicitTabbingBehavior",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateTypeDescriptionCache": {
+      "name": "_invalidateTypeDescriptionCache",
+      "bridgedName": "_invalidateTypeDescriptionCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_types": {
+      "name": "_types",
+      "bridgedName": "_types",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typesForDocumentClass:includeEditors:includeViewers:includeExportable:": {
+      "name": "_typesForDocumentClass:includeEditors:includeViewers:includeExportable:",
+      "bridgedName": "_typesForDocumentClass_includeEditors_includeViewers_includeExportable",
+      "args": [
+        {
+          "type": "Class"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resolveTypeAlias:": {
+      "name": "_resolveTypeAlias:",
+      "bridgedName": "_resolveTypeAlias",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "typeFromFileExtension:": {
+      "name": "typeFromFileExtension:",
+      "bridgedName": "typeFromFileExtension",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldCreateUI": {
+      "name": "shouldCreateUI",
+      "bridgedName": "shouldCreateUI",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setShouldCreateUI:": {
+      "name": "setShouldCreateUI:",
+      "bridgedName": "setShouldCreateUI",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reopenDocumentForURL:withContentsOfURL:error:": {
+      "name": "reopenDocumentForURL:withContentsOfURL:error:",
+      "bridgedName": "reopenDocumentForURL_withContentsOfURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openUntitledDocumentOfType:display:": {
+      "name": "openUntitledDocumentOfType:display:",
+      "bridgedName": "openUntitledDocumentOfType_display",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocumentWithContentsOfURL:display:error:": {
+      "name": "openDocumentWithContentsOfURL:display:error:",
+      "bridgedName": "openDocumentWithContentsOfURL_display_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocumentWithContentsOfURL:display:": {
+      "name": "openDocumentWithContentsOfURL:display:",
+      "bridgedName": "openDocumentWithContentsOfURL_display",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocumentWithContentsOfFile:display:": {
+      "name": "openDocumentWithContentsOfFile:display:",
+      "bridgedName": "openDocumentWithContentsOfFile_display",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openDocumentFileAt:display:": {
+      "name": "_openDocumentFileAt:display:",
+      "bridgedName": "_openDocumentFileAt_display",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeUntitledDocumentOfType:": {
+      "name": "makeUntitledDocumentOfType:",
+      "bridgedName": "makeUntitledDocumentOfType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentWithContentsOfURL:ofType:": {
+      "name": "makeDocumentWithContentsOfURL:ofType:",
+      "bridgedName": "makeDocumentWithContentsOfURL_ofType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDocumentWithContentsOfFile:ofType:": {
+      "name": "makeDocumentWithContentsOfFile:ofType:",
+      "bridgedName": "makeDocumentWithContentsOfFile_ofType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileNamesFromRunningOpenPanel": {
+      "name": "fileNamesFromRunningOpenPanel",
+      "bridgedName": "fileNamesFromRunningOpenPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openableFileExtensions": {
+      "name": "_openableFileExtensions",
+      "bridgedName": "_openableFileExtensions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileExtensionsFromType:": {
+      "name": "fileExtensionsFromType:",
+      "bridgedName": "fileExtensionsFromType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentForFileName:": {
+      "name": "documentForFileName:",
+      "bridgedName": "documentForFileName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reviewUnsavedDocumentsWithAlertTitle:cancellable:": {
+      "name": "reviewUnsavedDocumentsWithAlertTitle:cancellable:",
+      "bridgedName": "reviewUnsavedDocumentsWithAlertTitle_cancellable",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closeAllDocuments": {
+      "name": "closeAllDocuments",
+      "bridgedName": "closeAllDocuments",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_javaLastError": {
+      "name": "_javaLastError",
+      "bridgedName": "_javaLastError",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setJavaLastError:": {
+      "name": "_setJavaLastError:",
+      "bridgedName": "_setJavaLastError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invokeJavaOverrideForSelector:withErrorAndOtherArguments:": {
+      "name": "_invokeJavaOverrideForSelector:withErrorAndOtherArguments:",
+      "bridgedName": "_invokeJavaOverrideForSelector_withErrorAndOtherArguments",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initJava2": {
+      "name": "initJava2",
+      "bridgedName": "initJava2",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initJava1": {
+      "name": "initJava1",
+      "bridgedName": "initJava1",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "documentClassNames": {
+      "name": "documentClassNames",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "defaultType": {
+      "name": "defaultType",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "recentDocumentURLs": {
+      "name": "recentDocumentURLs",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "maximumRecentDocumentCount": {
+      "name": "maximumRecentDocumentCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "allowsAutomaticShareMenu": {
+      "name": "allowsAutomaticShareMenu",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "hasEditedDocuments": {
+      "name": "hasEditedDocuments",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "currentDirectory": {
+      "name": "currentDirectory",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "currentDocument": {
+      "name": "currentDocument",
+      "pointer": true,
+      "type": "NSDocument",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "documents": {
+      "name": "documents",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

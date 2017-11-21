@@ -1,0 +1,308 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSTiledLayer",
+    "NSMutableDictionary"
+  ],
+  "protocol": false,
+  "className": "MSTilePlacer",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allTileIDs": {
+      "name": "allTileIDs",
+      "bridgedName": "allTileIDs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allTiles": {
+      "name": "allTiles",
+      "bridgedName": "allTiles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "idForTile:": {
+      "name": "idForTile:",
+      "bridgedName": "idForTile",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPositionForTile:withID:": {
+      "name": "setPositionForTile:withID:",
+      "bridgedName": "setPositionForTile_withID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeNewTilesWithIDs:": {
+      "name": "makeNewTilesWithIDs:",
+      "bridgedName": "makeNewTilesWithIDs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTiles:shouldRedraw:": {
+      "name": "addTiles:shouldRedraw:",
+      "bridgedName": "addTiles_shouldRedraw",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addMissingTilesFrom:": {
+      "name": "addMissingTilesFrom:",
+      "bridgedName": "addMissingTilesFrom",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unregisterTilesWithIDs:": {
+      "name": "unregisterTilesWithIDs:",
+      "bridgedName": "unregisterTilesWithIDs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTilesWithIDsFromSuperLayer:": {
+      "name": "removeTilesWithIDsFromSuperLayer:",
+      "bridgedName": "removeTilesWithIDsFromSuperLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTilesWithIDs:": {
+      "name": "removeTilesWithIDs:",
+      "bridgedName": "removeTilesWithIDs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTilesNotIncludedIn:": {
+      "name": "removeTilesNotIncludedIn:",
+      "bridgedName": "removeTilesNotIncludedIn",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "normaliseOriginValue:": {
+      "name": "normaliseOriginValue:",
+      "bridgedName": "normaliseOriginValue",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "originForFirstTile": {
+      "name": "originForFirstTile",
+      "bridgedName": "originForFirstTile",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawPixelated": {
+      "name": "shouldDrawPixelated",
+      "bridgedName": "shouldDrawPixelated",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileSize": {
+      "name": "tileSize",
+      "bridgedName": "tileSize",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "identifiersOfVisibleTilesIncludingMargin:": {
+      "name": "identifiersOfVisibleTilesIncludingMargin:",
+      "bridgedName": "identifiersOfVisibleTilesIncludingMargin",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "repositionExistingTiles": {
+      "name": "repositionExistingTiles",
+      "bridgedName": "repositionExistingTiles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileRemovingOffscreenTiles:": {
+      "name": "tileRemovingOffscreenTiles:",
+      "bridgedName": "tileRemovingOffscreenTiles",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelAllDrawing": {
+      "name": "cancelAllDrawing",
+      "bridgedName": "cancelAllDrawing",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveTiles": {
+      "name": "moveTiles",
+      "bridgedName": "moveTiles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTiledLayer:": {
+      "name": "initWithTiledLayer:",
+      "bridgedName": "initWithTiledLayer",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "tiles": {
+      "name": "tiles",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "tiledLayer": {
+      "name": "tiledLayer",
+      "pointer": true,
+      "type": "__weak MSTiledLayer",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "viewBounds": {
+      "name": "viewBounds",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "scrollOrigin": {
+      "name": "scrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSTilePlacerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

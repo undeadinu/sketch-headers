@@ -1,0 +1,503 @@
+{
+  "imports": [],
+  "classes": [
+    "NSColor",
+    "NSColorList",
+    "NSImage",
+    "NSIndexPath",
+    "NSTrackingArea"
+  ],
+  "protocol": false,
+  "className": "NSColorPickerGridView",
+  "extends": "NSView",
+  "interfaces": [],
+  "methods": {
+    "defaultColorList": {
+      "name": "defaultColorList",
+      "bridgedName": "defaultColorList",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "accessibilityHitTest:": {
+      "name": "accessibilityHitTest:",
+      "bridgedName": "accessibilityHitTest",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityAttributeValue:forIndexedChild:": {
+      "name": "_accessibilityAttributeValue:forIndexedChild:",
+      "bridgedName": "_accessibilityAttributeValue_forIndexedChild",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityArrayAttributeValues:index:maxCount:": {
+      "name": "accessibilityArrayAttributeValues:index:maxCount:",
+      "bridgedName": "accessibilityArrayAttributeValues_index_maxCount",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityArrayAttributeCount:": {
+      "name": "accessibilityArrayAttributeCount:",
+      "bridgedName": "accessibilityArrayAttributeCount",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIndexOfChild:": {
+      "name": "accessibilityIndexOfChild:",
+      "bridgedName": "accessibilityIndexOfChild",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsAttributeSettable:": {
+      "name": "accessibilityIsAttributeSettable:",
+      "bridgedName": "accessibilityIsAttributeSettable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeValue:": {
+      "name": "accessibilityAttributeValue:",
+      "bridgedName": "accessibilityAttributeValue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityChildren": {
+      "name": "_accessibilityChildren",
+      "bridgedName": "_accessibilityChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsIgnored": {
+      "name": "accessibilityIsIgnored",
+      "bridgedName": "accessibilityIsIgnored",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectColorAtIndex:": {
+      "name": "selectColorAtIndex:",
+      "bridgedName": "selectColorAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectForColorAtIndex:": {
+      "name": "rectForColorAtIndex:",
+      "bridgedName": "rectForColorAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorAtIndex:": {
+      "name": "colorAtIndex:",
+      "bridgedName": "colorAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityIndexForIndexPath:": {
+      "name": "_accessibilityIndexForIndexPath:",
+      "bridgedName": "_accessibilityIndexForIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexPathForAccessibilityIndex:": {
+      "name": "_indexPathForAccessibilityIndex:",
+      "bridgedName": "_indexPathForAccessibilityIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectColor:withIndexPath:": {
+      "name": "_selectColor:withIndexPath:",
+      "bridgedName": "_selectColor_withIndexPath",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectColorAtIndexPath:": {
+      "name": "selectColorAtIndexPath:",
+      "bridgedName": "selectColorAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseMoved:": {
+      "name": "mouseMoved:",
+      "bridgedName": "mouseMoved",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTrackingAreas": {
+      "name": "updateTrackingAreas",
+      "bridgedName": "updateTrackingAreas",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOpaque": {
+      "name": "isOpaque",
+      "bridgedName": "isOpaque",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rectForColorAtRow:column:expanded:": {
+      "name": "_rectForColorAtRow:column:expanded:",
+      "bridgedName": "_rectForColorAtRow_column_expanded",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rectForColorAtIndexPath:expanded:": {
+      "name": "_rectForColorAtIndexPath:expanded:",
+      "bridgedName": "_rectForColorAtIndexPath_expanded",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rectForColorAtIndexPath:": {
+      "name": "_rectForColorAtIndexPath:",
+      "bridgedName": "_rectForColorAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_bezierPathForColorAtIndexPath:": {
+      "name": "_bezierPathForColorAtIndexPath:",
+      "bridgedName": "_bezierPathForColorAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorIndexPathAtPoint:": {
+      "name": "_colorIndexPathAtPoint:",
+      "bridgedName": "_colorIndexPathAtPoint",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorAtIndexPath:": {
+      "name": "_colorAtIndexPath:",
+      "bridgedName": "_colorAtIndexPath",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexPathForColor:": {
+      "name": "_indexPathForColor:",
+      "bridgedName": "_indexPathForColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColorList:": {
+      "name": "setColorList:",
+      "bridgedName": "setColorList",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSwatchSize:": {
+      "name": "setSwatchSize:",
+      "bridgedName": "setSwatchSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrameSize:": {
+      "name": "setFrameSize:",
+      "bridgedName": "setFrameSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateConfigs": {
+      "name": "_updateConfigs",
+      "bridgedName": "_updateConfigs",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "image": {
+      "name": "image",
+      "bridgedName": "image",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "selectedColor": {
+      "name": "selectedColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "emptyColorEnabled": {
+      "name": "emptyColorEnabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEmptyColorEnabled"
+      ]
+    },
+    "colorList": {
+      "name": "colorList",
+      "pointer": true,
+      "type": "NSColorList",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

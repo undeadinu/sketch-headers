@@ -1,0 +1,895 @@
+{
+  "imports": [
+    "NSTabViewDelegate.h",
+    "NSToolbarDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSString",
+    "NSTabView"
+  ],
+  "protocol": false,
+  "className": "NSTabViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSTabViewDelegate",
+    "NSToolbarDelegate"
+  ],
+  "methods": {
+    "_findWindowTabViewControllerInWindow:": {
+      "name": "_findWindowTabViewControllerInWindow:",
+      "bridgedName": "_findWindowTabViewControllerInWindow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_recursiveFindWindowTabViewController:": {
+      "name": "_recursiveFindWindowTabViewController:",
+      "bridgedName": "_recursiveFindWindowTabViewController",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSelectedTabViewItemIndex": {
+      "name": "automaticallyNotifiesObserversOfSelectedTabViewItemIndex",
+      "bridgedName": "automaticallyNotifiesObserversOfSelectedTabViewItemIndex",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "requiresConstraintBasedLayout": {
+      "name": "requiresConstraintBasedLayout",
+      "bridgedName": "requiresConstraintBasedLayout",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_associatedTabStyleForUIProvider:": {
+      "name": "_associatedTabStyleForUIProvider:",
+      "bridgedName": "_associatedTabStyleForUIProvider",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_implicitUIProviderForTabStyle:": {
+      "name": "_implicitUIProviderForTabStyle:",
+      "bridgedName": "_implicitUIProviderForTabStyle",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUIProvider:": {
+      "name": "setUIProvider:",
+      "bridgedName": "setUIProvider",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "UIProvider": {
+      "name": "UIProvider",
+      "bridgedName": "UIProvider",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarDidRemoveItem:": {
+      "name": "toolbarDidRemoveItem:",
+      "bridgedName": "toolbarDidRemoveItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarWillAddItem:": {
+      "name": "toolbarWillAddItem:",
+      "bridgedName": "toolbarWillAddItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarSelectableItemIdentifiers:": {
+      "name": "toolbarSelectableItemIdentifiers:",
+      "bridgedName": "toolbarSelectableItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarAllowedItemIdentifiers:": {
+      "name": "toolbarAllowedItemIdentifiers:",
+      "bridgedName": "toolbarAllowedItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarDefaultItemIdentifiers:": {
+      "name": "toolbarDefaultItemIdentifiers:",
+      "bridgedName": "toolbarDefaultItemIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:": {
+      "name": "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
+      "bridgedName": "toolbar_itemForItemIdentifier_willBeInsertedIntoToolbar",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:acceptDrop:index:": {
+      "name": "tabBar:acceptDrop:index:",
+      "bridgedName": "tabBar_acceptDrop_index",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:validateDrop:": {
+      "name": "tabBar:validateDrop:",
+      "bridgedName": "tabBar_validateDrop",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:didFinishTransitionAnimationForWindow:": {
+      "name": "tabBar:didFinishTransitionAnimationForWindow:",
+      "bridgedName": "tabBar_didFinishTransitionAnimationForWindow",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:destinationWindowForDetachedTabBarViewItem:": {
+      "name": "tabBar:destinationWindowForDetachedTabBarViewItem:",
+      "bridgedName": "tabBar_destinationWindowForDetachedTabBarViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:detachedWindowImageForDraggedTabBarViewItem:": {
+      "name": "tabBar:detachedWindowImageForDraggedTabBarViewItem:",
+      "bridgedName": "tabBar_detachedWindowImageForDraggedTabBarViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:acceptTabDrop:index:": {
+      "name": "tabBar:acceptTabDrop:index:",
+      "bridgedName": "tabBar_acceptTabDrop_index",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:validateTabDrop:": {
+      "name": "tabBar:validateTabDrop:",
+      "bridgedName": "tabBar_validateTabDrop",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:menuForTabBarViewItem:event:": {
+      "name": "tabBar:menuForTabBarViewItem:event:",
+      "bridgedName": "tabBar_menuForTabBarViewItem_event",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:didMoveTabBarViewItem:fromIndex:toIndex:isChangingPinnedness:": {
+      "name": "tabBar:didMoveTabBarViewItem:fromIndex:toIndex:isChangingPinnedness:",
+      "bridgedName": "tabBar_didMoveTabBarViewItem_fromIndex_toIndex_isChangingPinnedness",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:closeTabBarViewItem:": {
+      "name": "tabBar:closeTabBarViewItem:",
+      "bridgedName": "tabBar_closeTabBarViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedTabBarViewItemAfterClosingCurrentTabInTabBar:": {
+      "name": "selectedTabBarViewItemAfterClosingCurrentTabInTabBar:",
+      "bridgedName": "selectedTabBarViewItemAfterClosingCurrentTabInTabBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:selectTabBarViewItem:": {
+      "name": "tabBar:selectTabBarViewItem:",
+      "bridgedName": "tabBar_selectTabBarViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createNewTabInTabBar:": {
+      "name": "createNewTabInTabBar:",
+      "bridgedName": "createNewTabInTabBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabViewDidChangeNumberOfTabViewItems:": {
+      "name": "tabViewDidChangeNumberOfTabViewItems:",
+      "bridgedName": "tabViewDidChangeNumberOfTabViewItems",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabView:shouldSelectTabViewItem:": {
+      "name": "tabView:shouldSelectTabViewItem:",
+      "bridgedName": "tabView_shouldSelectTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabView:didSelectTabViewItem:": {
+      "name": "tabView:didSelectTabViewItem:",
+      "bridgedName": "tabView_didSelectTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabView:willSelectTabViewItem:": {
+      "name": "tabView:willSelectTabViewItem:",
+      "bridgedName": "tabView_willSelectTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasPropagatedTitle": {
+      "name": "_hasPropagatedTitle",
+      "bridgedName": "_hasPropagatedTitle",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "title": {
+      "name": "title",
+      "bridgedName": "title",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSelectedTabViewItemIndexInUI": {
+      "name": "_updateSelectedTabViewItemIndexInUI",
+      "bridgedName": "_updateSelectedTabViewItemIndexInUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabViewItemWithIdentifier:": {
+      "name": "_tabViewItemWithIdentifier:",
+      "bridgedName": "_tabViewItemWithIdentifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfTabViewItem:": {
+      "name": "_indexOfTabViewItem:",
+      "bridgedName": "_indexOfTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabViewItemForViewControllerAtIndex:": {
+      "name": "_tabViewItemForViewControllerAtIndex:",
+      "bridgedName": "_tabViewItemForViewControllerAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabViewItemForViewController:": {
+      "name": "tabViewItemForViewController:",
+      "bridgedName": "tabViewItemForViewController",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTabViewItem:": {
+      "name": "removeTabViewItem:",
+      "bridgedName": "removeTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveTabViewItem:toIndex:": {
+      "name": "moveTabViewItem:toIndex:",
+      "bridgedName": "moveTabViewItem_toIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertTabViewItem:atIndex:": {
+      "name": "insertTabViewItem:atIndex:",
+      "bridgedName": "insertTabViewItem_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTabViewItem:": {
+      "name": "addTabViewItem:",
+      "bridgedName": "addTabViewItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeChildViewControllerAtIndex:": {
+      "name": "removeChildViewControllerAtIndex:",
+      "bridgedName": "removeChildViewControllerAtIndex",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertChildViewController:atIndex:": {
+      "name": "insertChildViewController:atIndex:",
+      "bridgedName": "insertChildViewController_atIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateViewConstraints": {
+      "name": "updateViewConstraints",
+      "bridgedName": "updateViewConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setWindowTabsDelegate:": {
+      "name": "setWindowTabsDelegate:",
+      "bridgedName": "setWindowTabsDelegate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowTabsDelegate": {
+      "name": "windowTabsDelegate",
+      "bridgedName": "windowTabsDelegate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTabBar": {
+      "name": "_removeTabBar",
+      "bridgedName": "_removeTabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabBar": {
+      "name": "_makeTabBar",
+      "bridgedName": "_makeTabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTabBarAccessoryViewController:": {
+      "name": "_setTabBarAccessoryViewController:",
+      "bridgedName": "_setTabBarAccessoryViewController",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabBarAccessoryViewController": {
+      "name": "_tabBarAccessoryViewController",
+      "bridgedName": "_tabBarAccessoryViewController",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTabBar:": {
+      "name": "setTabBar:",
+      "bridgedName": "setTabBar",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar": {
+      "name": "tabBar",
+      "bridgedName": "tabBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeAllTabs": {
+      "name": "_removeAllTabs",
+      "bridgedName": "_removeAllTabs",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addAllTabs": {
+      "name": "_addAllTabs",
+      "bridgedName": "_addAllTabs",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabViewWithFrame:": {
+      "name": "_makeTabViewWithFrame:",
+      "bridgedName": "_makeTabViewWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultFrame": {
+      "name": "_defaultFrame",
+      "bridgedName": "_defaultFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setView:": {
+      "name": "setView:",
+      "bridgedName": "setView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewDidMoveToWindow:fromWindow:unhiding:": {
+      "name": "_viewDidMoveToWindow:fromWindow:unhiding:",
+      "bridgedName": "_viewDidMoveToWindow_fromWindow_unhiding",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewWillMoveToWindow:unhiding:": {
+      "name": "_viewWillMoveToWindow:unhiding:",
+      "bridgedName": "_viewWillMoveToWindow_unhiding",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_goodTabViewContentSize": {
+      "name": "_goodTabViewContentSize",
+      "bridgedName": "_goodTabViewContentSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewControllerSupports10_10Features": {
+      "name": "_viewControllerSupports10_10Features",
+      "bridgedName": "_viewControllerSupports10_10Features",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "tabViewItems": {
+      "name": "tabViewItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "tabView": {
+      "name": "tabView",
+      "pointer": true,
+      "type": "NSTabView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

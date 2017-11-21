@@ -1,0 +1,2297 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h",
+    "NSCopying.h",
+    "NSPasteboardReading.h",
+    "NSPasteboardWriting.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSColor",
+    "NSData",
+    "NSString",
+    "_NSImageAuxiliary"
+  ],
+  "protocol": false,
+  "className": "NSImage",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSCoding",
+    "NSSecureCoding",
+    "NSPasteboardReading",
+    "NSPasteboardWriting"
+  ],
+  "methods": {
+    "imageUnfilteredPasteboardTypes": {
+      "name": "imageUnfilteredPasteboardTypes",
+      "bridgedName": "imageUnfilteredPasteboardTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageUnfilteredFileTypes": {
+      "name": "imageUnfilteredFileTypes",
+      "bridgedName": "imageUnfilteredFileTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imagePasteboardTypes": {
+      "name": "imagePasteboardTypes",
+      "bridgedName": "imagePasteboardTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageFileTypes": {
+      "name": "imageFileTypes",
+      "bridgedName": "imageFileTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageUnfilteredTypes": {
+      "name": "imageUnfilteredTypes",
+      "bridgedName": "imageUnfilteredTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageTypes": {
+      "name": "imageTypes",
+      "bridgedName": "imageTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_invalidateImageTypeCaches": {
+      "name": "_invalidateImageTypeCaches",
+      "bridgedName": "_invalidateImageTypeCaches",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "readableTypesForPasteboard:": {
+      "name": "readableTypesForPasteboard:",
+      "bridgedName": "readableTypesForPasteboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_requireDefaultEndianPremultipliedLastForTIFFDataFromSnapshotReps": {
+      "name": "_requireDefaultEndianPremultipliedLastForTIFFDataFromSnapshotReps",
+      "bridgedName": "_requireDefaultEndianPremultipliedLastForTIFFDataFromSnapshotReps",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageWithSize:drawHandler:": {
+      "name": "imageWithSize:drawHandler:",
+      "bridgedName": "imageWithSize_drawHandler",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageWithSize:drawingIsFlipped:drawHandler:": {
+      "name": "imageWithSize:drawingIsFlipped:drawHandler:",
+      "bridgedName": "imageWithSize_drawingIsFlipped_drawHandler",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageWithSize:flipped:drawingHandler:": {
+      "name": "imageWithSize:flipped:drawingHandler:",
+      "bridgedName": "imageWithSize_flipped_drawingHandler",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_catalogImageWithName:bundle:": {
+      "name": "_catalogImageWithName:bundle:",
+      "bridgedName": "_catalogImageWithName_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_catalogIconImageWithName:bundle:": {
+      "name": "_catalogIconImageWithName:bundle:",
+      "bridgedName": "_catalogIconImageWithName_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_searchForSystemImageNamed:": {
+      "name": "_searchForSystemImageNamed:",
+      "bridgedName": "_searchForSystemImageNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_searchForImageNamed:": {
+      "name": "_searchForImageNamed:",
+      "bridgedName": "_searchForImageNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageNamed:": {
+      "name": "imageNamed:",
+      "bridgedName": "imageNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_coreUIImageWithName:": {
+      "name": "_coreUIImageWithName:",
+      "bridgedName": "_coreUIImageWithName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_touchBarSiriCompositeImage": {
+      "name": "_touchBarSiriCompositeImage",
+      "bridgedName": "_touchBarSiriCompositeImage",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_allNames": {
+      "name": "_allNames",
+      "bridgedName": "_allNames",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_imageNamed:": {
+      "name": "_imageNamed:",
+      "bridgedName": "_imageNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "canInitWithPasteboard:": {
+      "name": "canInitWithPasteboard:",
+      "bridgedName": "canInitWithPasteboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_canInitWithPasteboard:allowMultipleFiles:": {
+      "name": "_canInitWithPasteboard:allowMultipleFiles:",
+      "bridgedName": "_canInitWithPasteboard_allowMultipleFiles",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageWithImageRep:": {
+      "name": "imageWithImageRep:",
+      "bridgedName": "imageWithImageRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_templateImageWithImage:": {
+      "name": "_templateImageWithImage:",
+      "bridgedName": "_templateImageWithImage",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_emblemForCount:": {
+      "name": "_emblemForCount:",
+      "bridgedName": "_emblemForCount",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "layerContentsForContentsScale:": {
+      "name": "layerContentsForContentsScale:",
+      "bridgedName": "layerContentsForContentsScale",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recommendedLayerContentsScale:": {
+      "name": "recommendedLayerContentsScale:",
+      "bridgedName": "recommendedLayerContentsScale",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteboardPropertyListForType:": {
+      "name": "pasteboardPropertyListForType:",
+      "bridgedName": "pasteboardPropertyListForType",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writableTypesForPasteboard:": {
+      "name": "writableTypesForPasteboard:",
+      "bridgedName": "writableTypesForPasteboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboardPropertyList:ofType:": {
+      "name": "initWithPasteboardPropertyList:ofType:",
+      "bridgedName": "initWithPasteboardPropertyList_ofType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "TIFFRepresentationUsingCompression:factor:": {
+      "name": "TIFFRepresentationUsingCompression:factor:",
+      "bridgedName": "TIFFRepresentationUsingCompression_factor",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "float"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageByBadgingWithImage:rect:": {
+      "name": "_imageByBadgingWithImage:rect:",
+      "bridgedName": "_imageByBadgingWithImage_rect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestPoint:withImageDestinationRect:context:hints:": {
+      "name": "hitTestPoint:withImageDestinationRect:context:hints:",
+      "bridgedName": "hitTestPoint_withImageDestinationRect_context_hints",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestRect:withImageDestinationRect:context:hints:": {
+      "name": "hitTestRect:withImageDestinationRect:context:hints:",
+      "bridgedName": "hitTestRect_withImageDestinationRect_context_hints",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestRect:withImageDestinationRect:context:hints:flipped:": {
+      "name": "hitTestRect:withImageDestinationRect:context:hints:flipped:",
+      "bridgedName": "hitTestRect_withImageDestinationRect_context_hints_flipped",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockFocus": {
+      "name": "lockFocus",
+      "bridgedName": "lockFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockFocusFlipped:": {
+      "name": "lockFocusFlipped:",
+      "bridgedName": "lockFocusFlipped",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockFocusWithRect:context:hints:flipped:": {
+      "name": "lockFocusWithRect:context:hints:flipped:",
+      "bridgedName": "lockFocusWithRect_context_hints_flipped",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unlockFocus": {
+      "name": "unlockFocus",
+      "bridgedName": "unlockFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lockFocusOnRepresentation:rect:context:hints:flipped:": {
+      "name": "_lockFocusOnRepresentation:rect:context:hints:flipped:",
+      "bridgedName": "_lockFocusOnRepresentation_rect_context_hints_flipped",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRepresentation:inRect:": {
+      "name": "drawRepresentation:inRect:",
+      "bridgedName": "drawRepresentation_inRect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawRepresentation:inRect:withScaling:": {
+      "name": "_drawRepresentation:inRect:withScaling:",
+      "bridgedName": "_drawRepresentation_inRect_withScaling",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_whenDrawn:fills:": {
+      "name": "_whenDrawn:fills:",
+      "bridgedName": "_whenDrawn_fills",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "const struct CGRect *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawAtPoint:fromRect:operation:fraction:": {
+      "name": "drawAtPoint:fromRect:operation:fraction:",
+      "bridgedName": "drawAtPoint_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:fromRect:operation:fraction:": {
+      "name": "drawInRect:fromRect:operation:fraction:",
+      "bridgedName": "drawInRect_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:fromRect:operation:fraction:hints:": {
+      "name": "drawInRect:fromRect:operation:fraction:hints:",
+      "bridgedName": "drawInRect_fromRect_operation_fraction_hints",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createPatternForContext:": {
+      "name": "_createPatternForContext:",
+      "bridgedName": "_createPatternForContext",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dispatchImageDidNotDraw:": {
+      "name": "_dispatchImageDidNotDraw:",
+      "bridgedName": "_dispatchImageDidNotDraw",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageDidNotDrawHandlerRep": {
+      "name": "_imageDidNotDrawHandlerRep",
+      "bridgedName": "_imageDidNotDrawHandlerRep",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "CGImageForProposedRect:context:hints:": {
+      "name": "CGImageForProposedRect:context:hints:",
+      "bridgedName": "CGImageForProposedRect_context_hints",
+      "args": [
+        {
+          "type": "struct CGRect *"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawMappingAlignmentRectToRect:withState:backgroundStyle:operation:fraction:flip:hints:": {
+      "name": "_drawMappingAlignmentRectToRect:withState:backgroundStyle:operation:fraction:flip:hints:",
+      "bridgedName": "_drawMappingAlignmentRectToRect_withState_backgroundStyle_operation_fraction_flip_hints",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "int"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:": {
+      "name": "drawInRect:",
+      "bridgedName": "drawInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:fromRect:operation:fraction:respectFlipped:hints:": {
+      "name": "drawInRect:fromRect:operation:fraction:respectFlipped:hints:",
+      "bridgedName": "drawInRect_fromRect_operation_fraction_respectFlipped_hints",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dumpFullImageInfo": {
+      "name": "_dumpFullImageInfo",
+      "bridgedName": "_dumpFullImageInfo",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_providedAccessibilityDescription": {
+      "name": "_providedAccessibilityDescription",
+      "bridgedName": "_providedAccessibilityDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityDescriptionBackingForArchiving": {
+      "name": "_accessibilityDescriptionBackingForArchiving",
+      "bridgedName": "_accessibilityDescriptionBackingForArchiving",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityDescriptionBackingForCopying": {
+      "name": "_accessibilityDescriptionBackingForCopying",
+      "bridgedName": "_accessibilityDescriptionBackingForCopying",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAccessibilityDescriptionBacking:": {
+      "name": "_setAccessibilityDescriptionBacking:",
+      "bridgedName": "_setAccessibilityDescriptionBacking",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityDescriptionBacking": {
+      "name": "_accessibilityDescriptionBacking",
+      "bridgedName": "_accessibilityDescriptionBacking",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultAccessibilityDescription": {
+      "name": "_defaultAccessibilityDescription",
+      "bridgedName": "_defaultAccessibilityDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDefaultAccessibilityDescription:": {
+      "name": "_setDefaultAccessibilityDescription:",
+      "bridgedName": "_setDefaultAccessibilityDescription",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setImageInterpolation:": {
+      "name": "setImageInterpolation:",
+      "bridgedName": "setImageInterpolation",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageInterpolation": {
+      "name": "imageInterpolation",
+      "bridgedName": "imageInterpolation",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setImageInterpolation:": {
+      "name": "_setImageInterpolation:",
+      "bridgedName": "_setImageInterpolation",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageInterpolation": {
+      "name": "_imageInterpolation",
+      "bridgedName": "_imageInterpolation",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAlignmentRectInNormalizedCoordinates:": {
+      "name": "_setAlignmentRectInNormalizedCoordinates:",
+      "bridgedName": "_setAlignmentRectInNormalizedCoordinates",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alignmentRectInNormalizedCoordinates": {
+      "name": "_alignmentRectInNormalizedCoordinates",
+      "bridgedName": "_alignmentRectInNormalizedCoordinates",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasMultipleStates": {
+      "name": "_hasMultipleStates",
+      "bridgedName": "_hasMultipleStates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasAlpha": {
+      "name": "hasAlpha",
+      "bridgedName": "hasAlpha",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_antialiased": {
+      "name": "_antialiased",
+      "bridgedName": "_antialiased",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAntialiased:": {
+      "name": "_setAntialiased:",
+      "bridgedName": "_setAntialiased",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPrefersResolutionMatch:": {
+      "name": "_setPrefersResolutionMatch:",
+      "bridgedName": "_setPrefersResolutionMatch",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prefersResolutionMatch": {
+      "name": "_prefersResolutionMatch",
+      "bridgedName": "_prefersResolutionMatch",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageLevel_setBackgroundColor:": {
+      "name": "_imageLevel_setBackgroundColor:",
+      "bridgedName": "_imageLevel_setBackgroundColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageLevel_backgroundColor": {
+      "name": "_imageLevel_backgroundColor",
+      "bridgedName": "_imageLevel_backgroundColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "name": {
+      "name": "name",
+      "bridgedName": "name",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setName:": {
+      "name": "setName:",
+      "bridgedName": "setName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelIncrementalLoad": {
+      "name": "cancelIncrementalLoad",
+      "bridgedName": "cancelIncrementalLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeAfterUsingCoder:": {
+      "name": "awakeAfterUsingCoder:",
+      "bridgedName": "awakeAfterUsingCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deallocAuxiliaryStorage": {
+      "name": "_deallocAuxiliaryStorage",
+      "bridgedName": "_deallocAuxiliaryStorage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocAuxiliaryStorage": {
+      "name": "_allocAuxiliaryStorage",
+      "bridgedName": "_allocAuxiliaryStorage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_failsafeAllocAuxiliaryStorage": {
+      "name": "_failsafeAllocAuxiliaryStorage",
+      "bridgedName": "_failsafeAllocAuxiliaryStorage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithIconRef:": {
+      "name": "initWithIconRef:",
+      "bridgedName": "initWithIconRef",
+      "args": [
+        {
+          "type": "struct OpaqueIconRef *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithIconRef:includeThumbnail:": {
+      "name": "_initWithIconRef:includeThumbnail:",
+      "bridgedName": "_initWithIconRef_includeThumbnail",
+      "args": [
+        {
+          "type": "void *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithData:fileType:hfsType:": {
+      "name": "_initWithData:fileType:hfsType:",
+      "bridgedName": "_initWithData_fileType_hfsType",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboard:": {
+      "name": "initWithPasteboard:",
+      "bridgedName": "initWithPasteboard",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initFromImage:rect:": {
+      "name": "initFromImage:rect:",
+      "bridgedName": "initFromImage_rect",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithImageRep:": {
+      "name": "initWithImageRep:",
+      "bridgedName": "initWithImageRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCGImage:size:": {
+      "name": "initWithCGImage:size:",
+      "bridgedName": "initWithCGImage_size",
+      "args": [
+        {
+          "type": "struct CGImage *"
+        },
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSize:": {
+      "name": "initWithSize:",
+      "bridgedName": "initWithSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDataIgnoringOrientation:": {
+      "name": "initWithDataIgnoringOrientation:",
+      "bridgedName": "initWithDataIgnoringOrientation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithData:": {
+      "name": "initWithData:",
+      "bridgedName": "initWithData",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initByReferencingURLs:": {
+      "name": "initByReferencingURLs:",
+      "bridgedName": "initByReferencingURLs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initByReferencingURL:": {
+      "name": "initByReferencingURL:",
+      "bridgedName": "initByReferencingURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:": {
+      "name": "initWithContentsOfURL:",
+      "bridgedName": "initWithContentsOfURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfFile:": {
+      "name": "initWithContentsOfFile:",
+      "bridgedName": "initWithContentsOfFile",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initByReferencingFile:": {
+      "name": "initByReferencingFile:",
+      "bridgedName": "initByReferencingFile",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bestRepresentationForDevice:": {
+      "name": "bestRepresentationForDevice:",
+      "bridgedName": "bestRepresentationForDevice",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingBestRepresentationForRect:context:hints:body:": {
+      "name": "_usingBestRepresentationForRect:context:hints:body:",
+      "bridgedName": "_usingBestRepresentationForRect_context_hints_body",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingBestRepresentationAmongRepresentations:forRect:context:hints:body:": {
+      "name": "_usingBestRepresentationAmongRepresentations:forRect:context:hints:body:",
+      "bridgedName": "_usingBestRepresentationAmongRepresentations_forRect_context_hints_body",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bestRepresentationForRect:context:hints:": {
+      "name": "bestRepresentationForRect:context:hints:",
+      "bridgedName": "bestRepresentationForRect_context_hints",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bestRepresentationAmongRepresentations:forRect:context:hints:": {
+      "name": "bestRepresentationAmongRepresentations:forRect:context:hints:",
+      "bridgedName": "bestRepresentationAmongRepresentations_forRect_context_hints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_legacyAddRepresentationsForIconNamed:fromIconSectionInAppBinary:": {
+      "name": "_legacyAddRepresentationsForIconNamed:fromIconSectionInAppBinary:",
+      "bridgedName": "_legacyAddRepresentationsForIconNamed_fromIconSectionInAppBinary",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replaceRepsWithRep:": {
+      "name": "_replaceRepsWithRep:",
+      "bridgedName": "_replaceRepsWithRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRepresentation:": {
+      "name": "addRepresentation:",
+      "bridgedName": "addRepresentation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeRepresentation:": {
+      "name": "removeRepresentation:",
+      "bridgedName": "removeRepresentation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRepresentations:": {
+      "name": "addRepresentations:",
+      "bridgedName": "addRepresentations",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addRepresentations:": {
+      "name": "_addRepresentations:",
+      "bridgedName": "_addRepresentations",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRepProviderWithRepresentationsArray:": {
+      "name": "_setRepProviderWithRepresentationsArray:",
+      "bridgedName": "_setRepProviderWithRepresentationsArray",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRepProviderWithIconRef:includeThumbnail:": {
+      "name": "_setRepProviderWithIconRef:includeThumbnail:",
+      "bridgedName": "_setRepProviderWithIconRef_includeThumbnail",
+      "args": [
+        {
+          "type": "struct OpaqueIconRef *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRepProviderWithReferencingURLs:": {
+      "name": "_setRepProviderWithReferencingURLs:",
+      "bridgedName": "_setRepProviderWithReferencingURLs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRepProviderWithReferencingURL:": {
+      "name": "_setRepProviderWithReferencingURL:",
+      "bridgedName": "_setRepProviderWithReferencingURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingRepresentationsPerformBlock:": {
+      "name": "_usingRepresentationsPerformBlock:",
+      "bridgedName": "_usingRepresentationsPerformBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingRepProviderPerformBlock:": {
+      "name": "_usingRepProviderPerformBlock:",
+      "bridgedName": "_usingRepProviderPerformBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRepProvider:": {
+      "name": "_setRepProvider:",
+      "bridgedName": "_setRepProvider",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_processedHintsForHints:includeOnlyIfAvailable:": {
+      "name": "_processedHintsForHints:includeOnlyIfAvailable:",
+      "bridgedName": "_processedHintsForHints_includeOnlyIfAvailable",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultImageHintsAndOnlyIfAvailable:": {
+      "name": "_defaultImageHintsAndOnlyIfAvailable:",
+      "bridgedName": "_defaultImageHintsAndOnlyIfAvailable",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapshotRepForRep:rect:context:processedHints:": {
+      "name": "_snapshotRepForRep:rect:context:processedHints:",
+      "bridgedName": "_snapshotRepForRep_rect_context_processedHints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newSnapshotRepForRep:rect:context:processedHints:": {
+      "name": "_newSnapshotRepForRep:rect:context:processedHints:",
+      "bridgedName": "_newSnapshotRepForRep_rect_context_processedHints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newSnapshotRepForCGImage:drawingRect:applicableForRect:context:processedHints:": {
+      "name": "_newSnapshotRepForCGImage:drawingRect:applicableForRect:context:processedHints:",
+      "bridgedName": "_newSnapshotRepForCGImage_drawingRect_applicableForRect_context_processedHints",
+      "args": [
+        {
+          "type": "struct CGImage *"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheSnapshotRep:": {
+      "name": "_cacheSnapshotRep:",
+      "bridgedName": "_cacheSnapshotRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldCacheWhenDrawingRep:rect:context:processedHints:": {
+      "name": "_shouldCacheWhenDrawingRep:rect:context:processedHints:",
+      "bridgedName": "_shouldCacheWhenDrawingRep_rect_context_processedHints",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recache": {
+      "name": "recache",
+      "bridgedName": "recache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasCacheRep": {
+      "name": "_hasCacheRep",
+      "bridgedName": "_hasCacheRep",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isCachedToRep:": {
+      "name": "_isCachedToRep:",
+      "bridgedName": "_isCachedToRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usingCacheRepPerformBlock:": {
+      "name": "_usingCacheRepPerformBlock:",
+      "bridgedName": "_usingCacheRepPerformBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCacheRep:": {
+      "name": "_setCacheRep:",
+      "bridgedName": "_setCacheRep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tv_tintedImageWithTintColor:": {
+      "name": "tv_tintedImageWithTintColor:",
+      "bridgedName": "tv_tintedImageWithTintColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockFocusOnRepresentation:": {
+      "name": "lockFocusOnRepresentation:",
+      "bridgedName": "lockFocusOnRepresentation",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_composite:delta:fromRect:toPoint:": {
+      "name": "_composite:delta:fromRect:toPoint:",
+      "bridgedName": "_composite_delta_fromRect_toPoint",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compositeFlipped:atPoint:fromRect:operation:fraction:": {
+      "name": "_compositeFlipped:atPoint:fromRect:operation:fraction:",
+      "bridgedName": "_compositeFlipped_atPoint_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compositeFlipped:inRect:fromRect:operation:fraction:": {
+      "name": "_compositeFlipped:inRect:fromRect:operation:fraction:",
+      "bridgedName": "_compositeFlipped_inRect_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compositeToPoint:fromRect:operation:fraction:": {
+      "name": "_compositeToPoint:fromRect:operation:fraction:",
+      "bridgedName": "_compositeToPoint_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compositeToPoint:operation:fraction:": {
+      "name": "_compositeToPoint:operation:fraction:",
+      "bridgedName": "_compositeToPoint_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compositeToPoint:fromRect:operation:fraction:": {
+      "name": "compositeToPoint:fromRect:operation:fraction:",
+      "bridgedName": "compositeToPoint_fromRect_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compositeToPoint:operation:fraction:": {
+      "name": "compositeToPoint:operation:fraction:",
+      "bridgedName": "compositeToPoint_operation_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dissolveToPoint:fromRect:fraction:": {
+      "name": "dissolveToPoint:fromRect:fraction:",
+      "bridgedName": "dissolveToPoint_fromRect_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compositeToPoint:fromRect:operation:": {
+      "name": "compositeToPoint:fromRect:operation:",
+      "bridgedName": "compositeToPoint_fromRect_operation",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dissolveToPoint:fraction:": {
+      "name": "dissolveToPoint:fraction:",
+      "bridgedName": "dissolveToPoint_fraction",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compositeToPoint:operation:": {
+      "name": "compositeToPoint:operation:",
+      "bridgedName": "compositeToPoint_operation",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cacheDepthMatchesImageDepth": {
+      "name": "cacheDepthMatchesImageDepth",
+      "bridgedName": "cacheDepthMatchesImageDepth",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCacheDepthMatchesImageDepth:": {
+      "name": "setCacheDepthMatchesImageDepth:",
+      "bridgedName": "setCacheDepthMatchesImageDepth",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isCachedSeparately": {
+      "name": "isCachedSeparately",
+      "bridgedName": "isCachedSeparately",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCachedSeparately:": {
+      "name": "setCachedSeparately:",
+      "bridgedName": "setCachedSeparately",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isDataRetained": {
+      "name": "isDataRetained",
+      "bridgedName": "isDataRetained",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDataRetained:": {
+      "name": "setDataRetained:",
+      "bridgedName": "setDataRetained",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scalesWhenResized": {
+      "name": "scalesWhenResized",
+      "bridgedName": "scalesWhenResized",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setScalesWhenResized:": {
+      "name": "setScalesWhenResized:",
+      "bridgedName": "setScalesWhenResized",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFlipped:": {
+      "name": "setFlipped:",
+      "bridgedName": "setFlipped",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_needsRecommitOnDefaultContentsScaleChange": {
+      "name": "NS_needsRecommitOnDefaultContentsScaleChange",
+      "bridgedName": "NS_needsRecommitOnDefaultContentsScaleChange",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "CA_copyRenderValue": {
+      "name": "CA_copyRenderValue",
+      "bridgedName": "CA_copyRenderValue",
+      "args": [],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "CA_prepareRenderValue": {
+      "name": "CA_prepareRenderValue",
+      "bridgedName": "CA_prepareRenderValue",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForCoder:": {
+      "name": "replacementObjectForCoder:",
+      "bridgedName": "replacementObjectForCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_flatImageWithColor:": {
+      "name": "_flatImageWithColor:",
+      "bridgedName": "_flatImageWithColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_safari_imageWithBackgroundColor:compositingOperation:": {
+      "name": "_safari_imageWithBackgroundColor:compositingOperation:",
+      "bridgedName": "_safari_imageWithBackgroundColor_compositingOperation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageByScalingToSize:withImageInterpolation:imageScaling:": {
+      "name": "_imageByScalingToSize:withImageInterpolation:imageScaling:",
+      "bridgedName": "_imageByScalingToSize_withImageInterpolation_imageScaling",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageByScalingToSize:withImageInterpolation:": {
+      "name": "_imageByScalingToSize:withImageInterpolation:",
+      "bridgedName": "_imageByScalingToSize_withImageInterpolation",
+      "args": [
+        {
+          "type": "struct CGSize"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageByApplyingShadowForDragging": {
+      "name": "_imageByApplyingShadowForDragging",
+      "bridgedName": "_imageByApplyingShadowForDragging",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "_reps": {
+      "name": "_reps",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain",
+        "setter=_setReps:"
+      ]
+    },
+    "TIFFRepresentation": {
+      "name": "TIFFRepresentation",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "valid": {
+      "name": "valid",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isValid"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "accessibilityDescription": {
+      "name": "accessibilityDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "template": {
+      "name": "template",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isTemplate"
+      ]
+    },
+    "backgroundColor": {
+      "name": "backgroundColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "representations": {
+      "name": "representations",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSColorConverter.h"
+  ],
+  "classes": [
+    "MSColor",
+    "MSImmutableColor",
+    "NSColorSpace",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSColorReplacementConverter",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSColorConverter"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldConvertImmutableColor:": {
+      "name": "shouldConvertImmutableColor:",
+      "bridgedName": "shouldConvertImmutableColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldConvertColor:": {
+      "name": "shouldConvertColor:",
+      "bridgedName": "shouldConvertColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertImmutableColor:": {
+      "name": "convertImmutableColor:",
+      "bridgedName": "convertImmutableColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertColor:": {
+      "name": "convertColor:",
+      "bridgedName": "convertColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithColor:replacementColor:colorSpace:ignoreAlphaWhenMatching:replaceAlpha:": {
+      "name": "initWithColor:replacementColor:colorSpace:ignoreAlphaWhenMatching:replaceAlpha:",
+      "bridgedName": "initWithColor_replacementColor_colorSpace_ignoreAlphaWhenMatching_replaceAlpha",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "replacementColor": {
+      "name": "replacementColor",
+      "pointer": true,
+      "type": "MSColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "replaceAlphaOfOriginalColor": {
+      "name": "replaceAlphaOfOriginalColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "immutableReplacementColor": {
+      "name": "immutableReplacementColor",
+      "pointer": true,
+      "type": "MSImmutableColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "immutableColor": {
+      "name": "immutableColor",
+      "pointer": true,
+      "type": "MSImmutableColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "ignoreAlphaWhenMatching": {
+      "name": "ignoreAlphaWhenMatching",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "color": {
+      "name": "color",
+      "pointer": true,
+      "type": "MSColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

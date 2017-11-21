@@ -1,0 +1,174 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "BCSketchToolRunner",
+    "NSOperationQueue",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSPreviewImageCache",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "bundledSketchToolURL": {
+      "name": "bundledSketchToolURL",
+      "bridgedName": "bundledSketchToolURL",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportPreviewImageForDocumentFileURL:maximumPixelSize:handler:": {
+      "name": "exportPreviewImageForDocumentFileURL:maximumPixelSize:handler:",
+      "bridgedName": "exportPreviewImageForDocumentFileURL_maximumPixelSize_handler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cachedPreviewImageForDocumentFileURL:maximumPixelSize:error:": {
+      "name": "cachedPreviewImageForDocumentFileURL:maximumPixelSize:error:",
+      "bridgedName": "cachedPreviewImageForDocumentFileURL_maximumPixelSize_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cachedPreviewImageURLForDocumentFileURL:maximumPixelSize:createDirectoriesIfNeeded:error:": {
+      "name": "cachedPreviewImageURLForDocumentFileURL:maximumPixelSize:createDirectoriesIfNeeded:error:",
+      "bridgedName": "cachedPreviewImageURLForDocumentFileURL_maximumPixelSize_createDirectoriesIfNeeded_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "directoryURLCreateIfNeeded:error:": {
+      "name": "directoryURLCreateIfNeeded:error:",
+      "bridgedName": "directoryURLCreateIfNeeded_error",
+      "args": [
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetchPreviewImageForDocumentAtURL:maximumPixelSize:handler:": {
+      "name": "fetchPreviewImageForDocumentAtURL:maximumPixelSize:handler:",
+      "bridgedName": "fetchPreviewImageForDocumentAtURL_maximumPixelSize_handler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSubdirectoryName:": {
+      "name": "initWithSubdirectoryName:",
+      "bridgedName": "initWithSubdirectoryName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "subdirectoryName": {
+      "name": "subdirectoryName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "sketchToolRunner": {
+      "name": "sketchToolRunner",
+      "pointer": true,
+      "type": "BCSketchToolRunner",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "fetchQueue": {
+      "name": "fetchQueue",
+      "pointer": true,
+      "type": "NSOperationQueue",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "directoryURL": {
+      "name": "directoryURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

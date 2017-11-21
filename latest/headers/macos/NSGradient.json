@@ -1,0 +1,388 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSColorSpace"
+  ],
+  "protocol": false,
+  "className": "NSGradient",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSCoding"
+  ],
+  "methods": {
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_windowBorderGradientFromGrayValue:toGrayValue:colorSpace:": {
+      "name": "_windowBorderGradientFromGrayValue:toGrayValue:colorSpace:",
+      "bridgedName": "_windowBorderGradientFromGrayValue_toGrayValue_colorSpace",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "int"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy": {
+      "name": "copy",
+      "bridgedName": "copy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interpolatedColorAtLocation:": {
+      "name": "interpolatedColorAtLocation:",
+      "bridgedName": "interpolatedColorAtLocation",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getColor:location:atIndex:": {
+      "name": "getColor:location:atIndex:",
+      "bridgedName": "getColor_location_atIndex",
+      "args": [
+        {
+          "type": "id *"
+        },
+        {
+          "type": "double *"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInBezierPath:relativeCenterPosition:": {
+      "name": "drawInBezierPath:relativeCenterPosition:",
+      "bridgedName": "drawInBezierPath_relativeCenterPosition",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:relativeCenterPosition:": {
+      "name": "drawInRect:relativeCenterPosition:",
+      "bridgedName": "drawInRect_relativeCenterPosition",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFromCenter:radius:toCenter:radius:options:": {
+      "name": "drawFromCenter:radius:toCenter:radius:options:",
+      "bridgedName": "drawFromCenter_radius_toCenter_radius_options",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInBezierPath:angle:": {
+      "name": "drawInBezierPath:angle:",
+      "bridgedName": "drawInBezierPath_angle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:angle:": {
+      "name": "drawInRect:angle:",
+      "bridgedName": "drawInRect_angle",
+      "args": [
+        {
+          "type": "struct CGRect"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFromPoint:toPoint:options:": {
+      "name": "drawFromPoint:toPoint:options:",
+      "bridgedName": "drawFromPoint_toPoint_options",
+      "args": [
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "struct CGPoint"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithColors:atLocations:colorSpace:": {
+      "name": "initWithColors:atLocations:colorSpace:",
+      "bridgedName": "initWithColors_atLocations_colorSpace",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "const double *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithColorsAndLocations:": {
+      "name": "initWithColorsAndLocations:",
+      "bridgedName": "initWithColorsAndLocations",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithColors:": {
+      "name": "initWithColors:",
+      "bridgedName": "initWithColors",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithStartingColor:endingColor:": {
+      "name": "initWithStartingColor:endingColor:",
+      "bridgedName": "initWithStartingColor_endingColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithColorSpace:callbacks:data:": {
+      "name": "_initWithColorSpace:callbacks:data:",
+      "bridgedName": "_initWithColorSpace_callbacks_data",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "struct CGFunctionCallbacks"
+        },
+        {
+          "type": "void *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInitWithColorArray:colorSpace:padStart:padEnd:": {
+      "name": "_commonInitWithColorArray:colorSpace:padStart:padEnd:",
+      "bridgedName": "_commonInitWithColorArray_colorSpace_padStart_padEnd",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interpolationFunctionRefWithCallbacks:": {
+      "name": "_interpolationFunctionRefWithCallbacks:",
+      "bridgedName": "_interpolationFunctionRefWithCallbacks",
+      "args": [
+        {
+          "type": "struct CGFunctionCallbacks *"
+        }
+      ],
+      "returns": "struct CGFunction *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorSpaceForColorArray:": {
+      "name": "_colorSpaceForColorArray:",
+      "bridgedName": "_colorSpaceForColorArray",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "numberOfColorStops": {
+      "name": "numberOfColorStops",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

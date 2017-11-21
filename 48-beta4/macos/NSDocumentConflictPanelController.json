@@ -1,0 +1,614 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSFilePresenter.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h",
+    "QLPreviewPanelDataSource.h",
+    "QLPreviewPanelDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSBox",
+    "NSButton",
+    "NSFileVersion",
+    "NSImageView",
+    "NSOperationQueue",
+    "NSPanel",
+    "NSSet",
+    "NSString",
+    "NSTableView",
+    "NSURL",
+    "_NSDocumentConflictNonTableView"
+  ],
+  "protocol": false,
+  "className": "NSDocumentConflictPanelController",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSTableViewDataSource",
+    "NSTableViewDelegate",
+    "QLPreviewPanelDelegate",
+    "QLPreviewPanelDataSource",
+    "NSFilePresenter"
+  ],
+  "methods": {
+    "previewPanel:shouldShowShareButtonForItem:": {
+      "name": "previewPanel:shouldShowShareButtonForItem:",
+      "bridgedName": "previewPanel_shouldShowShareButtonForItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewPanel:shouldOpenURL:forPreviewItem:": {
+      "name": "previewPanel:shouldOpenURL:forPreviewItem:",
+      "bridgedName": "previewPanel_shouldOpenURL_forPreviewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewPanel:shouldShowOpenButtonForItem:": {
+      "name": "previewPanel:shouldShowOpenButtonForItem:",
+      "bridgedName": "previewPanel_shouldShowOpenButtonForItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewPanel:sourceFrameOnScreenForPreviewItem:": {
+      "name": "previewPanel:sourceFrameOnScreenForPreviewItem:",
+      "bridgedName": "previewPanel_sourceFrameOnScreenForPreviewItem",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewPanel:previewItemAtIndex:": {
+      "name": "previewPanel:previewItemAtIndex:",
+      "bridgedName": "previewPanel_previewItemAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfPreviewItemsInPreviewPanel:": {
+      "name": "numberOfPreviewItemsInPreviewPanel:",
+      "bridgedName": "numberOfPreviewItemsInPreviewPanel",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endPreviewPanelControl:": {
+      "name": "endPreviewPanelControl:",
+      "bridgedName": "endPreviewPanelControl",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginPreviewPanelControl:": {
+      "name": "beginPreviewPanelControl:",
+      "bridgedName": "beginPreviewPanelControl",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsPreviewPanelControl:": {
+      "name": "acceptsPreviewPanelControl:",
+      "bridgedName": "acceptsPreviewPanelControl",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didClickOnImageView:forConflict:": {
+      "name": "_didClickOnImageView:forConflict:",
+      "bridgedName": "_didClickOnImageView_forConflict",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accommodatePresentedItemDeletionWithCompletionHandler:": {
+      "name": "accommodatePresentedItemDeletionWithCompletionHandler:",
+      "bridgedName": "accommodatePresentedItemDeletionWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentedItemDidResolveConflictVersion:": {
+      "name": "presentedItemDidResolveConflictVersion:",
+      "bridgedName": "presentedItemDidResolveConflictVersion",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentedItemDidLoseVersion:": {
+      "name": "presentedItemDidLoseVersion:",
+      "bridgedName": "presentedItemDidLoseVersion",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentedItemDidGainVersion:": {
+      "name": "presentedItemDidGainVersion:",
+      "bridgedName": "presentedItemDidGainVersion",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentedItemDidChange": {
+      "name": "presentedItemDidChange",
+      "bridgedName": "presentedItemDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentedItemDidMoveToURL:": {
+      "name": "presentedItemDidMoveToURL:",
+      "bridgedName": "presentedItemDidMoveToURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowBackingDidChange:": {
+      "name": "_windowBackingDidChange:",
+      "bridgedName": "_windowBackingDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startLoadingThumbnailForConflict:force:": {
+      "name": "_startLoadingThumbnailForConflict:force:",
+      "bridgedName": "_startLoadingThumbnailForConflict_force",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadConflictsRefreshingAll:": {
+      "name": "_reloadConflictsRefreshingAll:",
+      "bridgedName": "_reloadConflictsRefreshingAll",
+      "args": [
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateConflictDisplay": {
+      "name": "_updateConflictDisplay",
+      "bridgedName": "_updateConflictDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enumerateAllRowViewsUsingBlock:": {
+      "name": "_enumerateAllRowViewsUsingBlock:",
+      "bridgedName": "_enumerateAllRowViewsUsingBlock",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_desiredHeightOfPanel": {
+      "name": "_desiredHeightOfPanel",
+      "bridgedName": "_desiredHeightOfPanel",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowTableView": {
+      "name": "_shouldShowTableView",
+      "bridgedName": "_shouldShowTableView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateNonTableView": {
+      "name": "_updateNonTableView",
+      "bridgedName": "_updateNonTableView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:viewForTableColumn:row:": {
+      "name": "tableView:viewForTableColumn:row:",
+      "bridgedName": "tableView_viewForTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeVersionView": {
+      "name": "_makeVersionView",
+      "bridgedName": "_makeVersionView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:objectValueForTableColumn:row:": {
+      "name": "tableView:objectValueForTableColumn:row:",
+      "bridgedName": "tableView_objectValueForTableColumn_row",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectedConflictsChanged": {
+      "name": "_selectedConflictsChanged",
+      "bridgedName": "_selectedConflictsChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateButtons": {
+      "name": "_updateButtons",
+      "bridgedName": "_updateButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keepButtonTitleForNumberOfSelectedVersions:totalNumber:": {
+      "name": "_keepButtonTitleForNumberOfSelectedVersions:totalNumber:",
+      "bridgedName": "_keepButtonTitleForNumberOfSelectedVersions_totalNumber",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unselectedConflicts": {
+      "name": "_unselectedConflicts",
+      "bridgedName": "_unselectedConflicts",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectedConflicts": {
+      "name": "_selectedConflicts",
+      "bridgedName": "_selectedConflicts",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel:": {
+      "name": "cancel:",
+      "bridgedName": "cancel",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keep:": {
+      "name": "keep:",
+      "bridgedName": "keep",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_panel": {
+      "name": "_panel",
+      "bridgedName": "_panel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_conflictsForURL:": {
+      "name": "_conflictsForURL:",
+      "bridgedName": "_conflictsForURL",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginConflictPanelForURL:modalForWindow:completionHandler:": {
+      "name": "beginConflictPanelForURL:modalForWindow:completionHandler:",
+      "bridgedName": "beginConflictPanelForURL_modalForWindow_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_something:wasPresentedWithResult:soContinue:": {
+      "name": "_something:wasPresentedWithResult:soContinue:",
+      "bridgedName": "_something_wasPresentedWithResult_soContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "presentedItemOperationQueue": {
+      "name": "presentedItemOperationQueue",
+      "pointer": true,
+      "type": "NSOperationQueue",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "presentedItemURL": {
+      "name": "presentedItemURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "unselectedVersions": {
+      "name": "unselectedVersions",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "selectedVersions": {
+      "name": "selectedVersions",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "currentVersion": {
+      "name": "currentVersion",
+      "pointer": true,
+      "type": "NSFileVersion",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "observedPresentedItemUbiquityAttributes": {
+      "name": "observedPresentedItemUbiquityAttributes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "primaryPresentedItemURL": {
+      "name": "primaryPresentedItemURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

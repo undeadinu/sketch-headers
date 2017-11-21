@@ -1,0 +1,856 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSPluginManagingState",
+    "NSArray",
+    "NSDictionary",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSTimer",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSPluginManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "warehousePluginFolderForIdentifier:withVersion:": {
+      "name": "warehousePluginFolderForIdentifier:withVersion:",
+      "bridgedName": "warehousePluginFolderForIdentifier_withVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pluginsWarehouseURL": {
+      "name": "pluginsWarehouseURL",
+      "bridgedName": "pluginsWarehouseURL",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pluginsURLs": {
+      "name": "pluginsURLs",
+      "bridgedName": "pluginsURLs",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultPluginURL": {
+      "name": "defaultPluginURL",
+      "bridgedName": "defaultPluginURL",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mainPluginsFolderURL": {
+      "name": "mainPluginsFolderURL",
+      "bridgedName": "mainPluginsFolderURL",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialisePlugins": {
+      "name": "initialisePlugins",
+      "bridgedName": "initialisePlugins",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePluginVersionsNotInIdentifiers:": {
+      "name": "removePluginVersionsNotInIdentifiers:",
+      "bridgedName": "removePluginVersionsNotInIdentifiers",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDownloadAndDecompressPluginError:": {
+      "name": "addDownloadAndDecompressPluginError:",
+      "bridgedName": "addDownloadAndDecompressPluginError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compatiblePluginUpdatesNotDownloaded": {
+      "name": "compatiblePluginUpdatesNotDownloaded",
+      "bridgedName": "compatiblePluginUpdatesNotDownloaded",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "latestPluginUpdatesNotDownloaded": {
+      "name": "latestPluginUpdatesNotDownloaded",
+      "bridgedName": "latestPluginUpdatesNotDownloaded",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadedPluginURLWithIdentifier:version:": {
+      "name": "downloadedPluginURLWithIdentifier:version:",
+      "bridgedName": "downloadedPluginURLWithIdentifier_version",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstPluginBundleFoundInFolder:": {
+      "name": "firstPluginBundleFoundInFolder:",
+      "bridgedName": "firstPluginBundleFoundInFolder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "installPluginAtURL:withIdentifier:error:": {
+      "name": "installPluginAtURL:withIdentifier:error:",
+      "bridgedName": "installPluginAtURL_withIdentifier_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginUpdateDownloadedWithIdentifier:version:": {
+      "name": "isPluginUpdateDownloadedWithIdentifier:version:",
+      "bridgedName": "isPluginUpdateDownloadedWithIdentifier_version",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "installPluginWithIdentifier:version:error:": {
+      "name": "installPluginWithIdentifier:version:error:",
+      "bridgedName": "installPluginWithIdentifier_version_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadAndInstallPluginWithIdentifier:version:downloadCompletionHandler:": {
+      "name": "downloadAndInstallPluginWithIdentifier:version:downloadCompletionHandler:",
+      "bridgedName": "downloadAndInstallPluginWithIdentifier_version_downloadCompletionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadPluginUpdate:withVersion:completionHandler:": {
+      "name": "downloadPluginUpdate:withVersion:completionHandler:",
+      "bridgedName": "downloadPluginUpdate_withVersion_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearPluginsCache": {
+      "name": "clearPluginsCache",
+      "bridgedName": "clearPluginsCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelDownloadingPluginVersions": {
+      "name": "cancelDownloadingPluginVersions",
+      "bridgedName": "cancelDownloadingPluginVersions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadLatestPluginUpdatesWithCompletionHandler:": {
+      "name": "downloadLatestPluginUpdatesWithCompletionHandler:",
+      "bridgedName": "downloadLatestPluginUpdatesWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadCompatiblePluginUpdatesWithCompletionHandler:": {
+      "name": "downloadCompatiblePluginUpdatesWithCompletionHandler:",
+      "bridgedName": "downloadCompatiblePluginUpdatesWithCompletionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadPluginUpdates:withCompletionHandler:": {
+      "name": "downloadPluginUpdates:withCompletionHandler:",
+      "bridgedName": "downloadPluginUpdates_withCompletionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkForPluginUpdatesWithHandler:completionHandler:": {
+      "name": "checkForPluginUpdatesWithHandler:completionHandler:",
+      "bridgedName": "checkForPluginUpdatesWithHandler_completionHandler",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkForPluginUpdates:handler:completionHandler:": {
+      "name": "checkForPluginUpdates:handler:completionHandler:",
+      "bridgedName": "checkForPluginUpdates_handler_completionHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldEnablePluginIdentifier:withVersion:": {
+      "name": "shouldEnablePluginIdentifier:withVersion:",
+      "bridgedName": "shouldEnablePluginIdentifier_withVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerIncompatiblePlugins": {
+      "name": "registerIncompatiblePlugins",
+      "bridgedName": "registerIncompatiblePlugins",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginWithIdentifier:incompatibleWithVersion:": {
+      "name": "isPluginWithIdentifier:incompatibleWithVersion:",
+      "bridgedName": "isPluginWithIdentifier_incompatibleWithVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isIncompatiblePlugin:": {
+      "name": "isIncompatiblePlugin:",
+      "bridgedName": "isIncompatiblePlugin",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "versionsForPlugin:": {
+      "name": "versionsForPlugin:",
+      "bridgedName": "versionsForPlugin",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disablePlugin:": {
+      "name": "disablePlugin:",
+      "bridgedName": "disablePlugin",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enablePlugin:": {
+      "name": "enablePlugin:",
+      "bridgedName": "enablePlugin",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPluginsToMenu:selector:": {
+      "name": "addPluginsToMenu:selector:",
+      "bridgedName": "addPluginsToMenu_selector",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addCommands:toMenu:fromDescription:selector:": {
+      "name": "addCommands:toMenu:fromDescription:selector:",
+      "bridgedName": "addCommands_toMenu_fromDescription_selector",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sortMenu:recursively:": {
+      "name": "sortMenu:recursively:",
+      "bridgedName": "sortMenu_recursively",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "editBundle:": {
+      "name": "editBundle:",
+      "bridgedName": "editBundle",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cleanupFinishedCommands": {
+      "name": "cleanupFinishedCommands",
+      "bridgedName": "cleanupFinishedCommands",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackLongRunningCommand:": {
+      "name": "trackLongRunningCommand:",
+      "bridgedName": "trackLongRunningCommand",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopTrackingLongRunningCommandWithSpecifier:": {
+      "name": "stopTrackingLongRunningCommandWithSpecifier:",
+      "bridgedName": "stopTrackingLongRunningCommandWithSpecifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commandWithSpecifier:": {
+      "name": "commandWithSpecifier:",
+      "bridgedName": "commandWithSpecifier",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupFolderMonitoringWithVisitedURLs:": {
+      "name": "setupFolderMonitoringWithVisitedURLs:",
+      "bridgedName": "setupFolderMonitoringWithVisitedURLs",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearFolderMonitors": {
+      "name": "clearFolderMonitors",
+      "bridgedName": "clearFolderMonitors",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadPlugins": {
+      "name": "reloadPlugins",
+      "bridgedName": "reloadPlugins",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pluginsFromResolvedFolderAtURL:visitedURLs:relativeFolderPath:ignoredNames:": {
+      "name": "pluginsFromResolvedFolderAtURL:visitedURLs:relativeFolderPath:ignoredNames:",
+      "bridgedName": "pluginsFromResolvedFolderAtURL_visitedURLs_relativeFolderPath_ignoredNames",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pluginsByResolvingFolderAtURL:visitedURLs:relativeFolderPath:ignoredNames:": {
+      "name": "pluginsByResolvingFolderAtURL:visitedURLs:relativeFolderPath:ignoredNames:",
+      "bridgedName": "pluginsByResolvingFolderAtURL_visitedURLs_relativeFolderPath_ignoredNames",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "relativePathByDeletingCommonPathComponentsWithFileURL:fromURL:": {
+      "name": "relativePathByDeletingCommonPathComponentsWithFileURL:fromURL:",
+      "bridgedName": "relativePathByDeletingCommonPathComponentsWithFileURL_fromURL",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "folderNamesToIgnore": {
+      "name": "folderNamesToIgnore",
+      "bridgedName": "folderNamesToIgnore",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPluginsFolderURLs:updater:pluginStateManager:": {
+      "name": "initWithPluginsFolderURLs:updater:pluginStateManager:",
+      "bridgedName": "initWithPluginsFolderURLs_updater_pluginStateManager",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "incompatiblePluginVersions": {
+      "name": "incompatiblePluginVersions",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "downloadPluginsErrors": {
+      "name": "downloadPluginsErrors",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pluginVersions": {
+      "name": "pluginVersions",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pluginStateManager": {
+      "name": "pluginStateManager",
+      "pointer": true,
+      "type": "MSPluginManagingState",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "monitorForChanges": {
+      "name": "monitorForChanges",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "folderMonitors": {
+      "name": "folderMonitors",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "updater": {
+      "name": "updater",
+      "pointer": false,
+      "type": "id <MSPluginUpdater>",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "lastTimerInterval": {
+      "name": "lastTimerInterval",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "sessionTimer": {
+      "name": "sessionTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "runningCommands": {
+      "name": "runningCommands",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "metadata": {
+      "name": "metadata",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "metadataURL": {
+      "name": "metadataURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "doNotLoadPlugins": {
+      "name": "doNotLoadPlugins",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "updatesAddedToWarehouse": {
+      "name": "updatesAddedToWarehouse",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberOfIncompatiblePluginsDisabled": {
+      "name": "numberOfIncompatiblePluginsDisabled",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "pluginsFolderURLs": {
+      "name": "pluginsFolderURLs",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "numberOfPluginsWithUpdates": {
+      "name": "numberOfPluginsWithUpdates",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "numberOfPluginsWithSketchCompatibleUpdates": {
+      "name": "numberOfPluginsWithSketchCompatibleUpdates",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "incompatiblePluginsWithCompatibleUpdates": {
+      "name": "incompatiblePluginsWithCompatibleUpdates",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "incompatiblePluginsWithUpdates": {
+      "name": "incompatiblePluginsWithUpdates",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "incompatiblePlugins": {
+      "name": "incompatiblePlugins",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "plugins": {
+      "name": "plugins",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "mainPluginsFolderURL": {
+      "name": "mainPluginsFolderURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSISRowBody.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSISObjectiveLinearExpression",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSISRowBody"
+  ],
+  "methods": {
+    "verifyInternalIntegrity": {
+      "name": "verifyInternalIntegrity",
+      "bridgedName": "verifyInternalIntegrity",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "leadingPriority:andValue:forVariable:": {
+      "name": "leadingPriority:andValue:forVariable:",
+      "bridgedName": "leadingPriority_andValue_forVariable",
+      "args": [
+        {
+          "type": "double *"
+        },
+        {
+          "type": "double *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restrictedVariableWithCoefficientOfLargestNegativeMagnitude": {
+      "name": "restrictedVariableWithCoefficientOfLargestNegativeMagnitude",
+      "bridgedName": "restrictedVariableWithCoefficientOfLargestNegativeMagnitude",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceVariable:withExpression:processVariableNewToReceiver:processVariableDroppedFromReceiver:": {
+      "name": "replaceVariable:withExpression:processVariableNewToReceiver:processVariableDroppedFromReceiver:",
+      "bridgedName": "replaceVariable_withExpression_processVariableNewToReceiver_processVariableDroppedFromReceiver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceVariable:withVariablePlusDelta:timesVariable:processVariableNewToReceiver:processVariableDroppedFromReceiver:": {
+      "name": "replaceVariable:withVariablePlusDelta:timesVariable:processVariableNewToReceiver:processVariableDroppedFromReceiver:",
+      "bridgedName": "replaceVariable_withVariablePlusDelta_timesVariable_processVariableNewToReceiver_processVariableDroppedFromReceiver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceVariable:withVariablePlusDelta:": {
+      "name": "replaceVariable:withVariablePlusDelta:",
+      "bridgedName": "replaceVariable_withVariablePlusDelta",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addExpression:priority:times:processVariableNewToReceiver:processVariableDroppedFromReceiver:": {
+      "name": "addExpression:priority:times:processVariableNewToReceiver:processVariableDroppedFromReceiver:",
+      "bridgedName": "addExpression_priority_times_processVariableNewToReceiver_processVariableDroppedFromReceiver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addVariable:priority:times:processVariableNewToReceiver:processVariableDroppedFromReceiver:": {
+      "name": "addVariable:priority:times:processVariableNewToReceiver:processVariableDroppedFromReceiver:",
+      "bridgedName": "addVariable_priority_times_processVariableNewToReceiver_processVariableDroppedFromReceiver",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addVariable:priority:times:": {
+      "name": "addVariable:priority:times:",
+      "bridgedName": "addVariable_priority_times",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPriorityVector:forKnownAbsentVariable:": {
+      "name": "setPriorityVector:forKnownAbsentVariable:",
+      "bridgedName": "setPriorityVector_forKnownAbsentVariable",
+      "args": [
+        {
+          "type": "struct __CFData *"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeVariable:": {
+      "name": "removeVariable:",
+      "bridgedName": "removeVariable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "priorityVectorForVariable:": {
+      "name": "priorityVectorForVariable:",
+      "bridgedName": "priorityVectorForVariable",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "struct __CFData *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "variableCount": {
+      "name": "variableCount",
+      "bridgedName": "variableCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateVariables:": {
+      "name": "enumerateVariables:",
+      "bridgedName": "enumerateVariables",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constantTermIsZero": {
+      "name": "constantTermIsZero",
+      "bridgedName": "constantTermIsZero",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "incrementConstantWithPriorityVector:timesScalarCoefficient:": {
+      "name": "incrementConstantWithPriorityVector:timesScalarCoefficient:",
+      "bridgedName": "incrementConstantWithPriorityVector_timesScalarCoefficient",
+      "args": [
+        {
+          "type": "struct __CFData *"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "incrementConstantWithPriority:value:": {
+      "name": "incrementConstantWithPriority:value:",
+      "bridgedName": "incrementConstantWithPriority_value",
+      "args": [
+        {
+          "type": "double"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithLinearExpression:priority:": {
+      "name": "initWithLinearExpression:priority:",
+      "bridgedName": "initWithLinearExpression_priority",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "imports": [
+    "MSModelObjectCommon.h",
+    "MSCoding.h",
+    "MSModelObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSImmutableModelObject",
+  "extends": "MSModelObjectCommon",
+  "interfaces": [
+    "MSModelObject",
+    "MSCoding"
+  ],
+  "methods": {
+    "traitsForPropertyName:": {
+      "name": "traitsForPropertyName:",
+      "bridgedName": "traitsForPropertyName",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mutableClass": {
+      "name": "mutableClass",
+      "bridgedName": "mutableClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "migrationsInList:": {
+      "name": "migrationsInList:",
+      "bridgedName": "migrationsInList",
+      "args": [
+        {
+          "type": "SEL *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "migrationListForClass:": {
+      "name": "migrationListForClass:",
+      "bridgedName": "migrationListForClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "SEL *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allocateMigrationListForClass:": {
+      "name": "allocateMigrationListForClass:",
+      "bridgedName": "allocateMigrationListForClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "SEL *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decodePropertiesWithUnarchiver:": {
+      "name": "decodePropertiesWithUnarchiver:",
+      "bridgedName": "decodePropertiesWithUnarchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performMigrationsWithUnarchiver:migratingFrom:toVersion:": {
+      "name": "performMigrationsWithUnarchiver:migratingFrom:toVersion:",
+      "bridgedName": "performMigrationsWithUnarchiver_migratingFrom_toVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateMigrations:fromVersion:toVersion:block:": {
+      "name": "enumerateMigrations:fromVersion:toVersion:block:",
+      "bridgedName": "enumerateMigrations_fromVersion_toVersion_block",
+      "args": [
+        {
+          "type": "SEL *"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithUnarchiver:": {
+      "name": "performInitWithUnarchiver:",
+      "bridgedName": "performInitWithUnarchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithUnarchiver:migratingFrom:toVersion:": {
+      "name": "initWithUnarchiver:migratingFrom:toVersion:",
+      "bridgedName": "initWithUnarchiver_migratingFrom_toVersion",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithUnarchiver:": {
+      "name": "initWithUnarchiver:",
+      "bridgedName": "initWithUnarchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithUnarchiver:decodeBlock:": {
+      "name": "initWithUnarchiver:decodeBlock:",
+      "bridgedName": "initWithUnarchiver_decodeBlock",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForJSONEncoder:": {
+      "name": "replacementObjectForJSONEncoder:",
+      "bridgedName": "replacementObjectForJSONEncoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeAsJSON:": {
+      "name": "encodeAsJSON:",
+      "bridgedName": "encodeAsJSON",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeObjectIDWithCoder:": {
+      "name": "encodeObjectIDWithCoder:",
+      "bridgedName": "encodeObjectIDWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithArchiver:": {
+      "name": "encodeWithArchiver:",
+      "bridgedName": "encodeWithArchiver",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodePropertiesWithCoder:": {
+      "name": "encodePropertiesWithCoder:",
+      "bridgedName": "encodePropertiesWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keysDifferingFromObject:": {
+      "name": "keysDifferingFromObject:",
+      "bridgedName": "keysDifferingFromObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualForDiffToObject:": {
+      "name": "isEqualForDiffToObject:",
+      "bridgedName": "isEqualForDiffToObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithMutableModelObject:": {
+      "name": "performInitWithMutableModelObject:",
+      "bridgedName": "performInitWithMutableModelObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMutableModelObject:": {
+      "name": "initWithMutableModelObject:",
+      "bridgedName": "initWithMutableModelObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newMutableCounterpart": {
+      "name": "newMutableCounterpart",
+      "bridgedName": "newMutableCounterpart",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDiffSubObjectsForDifferingObject:": {
+      "name": "shouldDiffSubObjectsForDifferingObject:",
+      "bridgedName": "shouldDiffSubObjectsForDifferingObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "differsFromObject:": {
+      "name": "differsFromObject:",
+      "bridgedName": "differsFromObject",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "subObjectsForTreeDiff": {
+      "name": "subObjectsForTreeDiff",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "archiveReferenceIdentifier_bc": {
+      "name": "archiveReferenceIdentifier_bc",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "objectID": {
+      "name": "objectID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

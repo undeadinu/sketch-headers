@@ -1,0 +1,269 @@
+{
+  "imports": [
+    "NSControl.h"
+  ],
+  "classes": [
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "MSRotationBar",
+  "extends": "NSControl",
+  "interfaces": [],
+  "methods": {
+    "shouldContinueInertialScrollingAtSpeed:": {
+      "name": "shouldContinueInertialScrollingAtSpeed:",
+      "bridgedName": "shouldContinueInertialScrollingAtSpeed",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endInertialScrolling": {
+      "name": "endInertialScrolling",
+      "bridgedName": "endInertialScrolling",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inertialScrollingTimerDidFire:": {
+      "name": "inertialScrollingTimerDidFire:",
+      "bridgedName": "inertialScrollingTimerDidFire",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startInertialScrollingAtSpeed:": {
+      "name": "startInertialScrollingAtSpeed:",
+      "bridgedName": "startInertialScrollingAtSpeed",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "liveUpdateRotation": {
+      "name": "liveUpdateRotation",
+      "bridgedName": "liveUpdateRotation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "panGestureAction:": {
+      "name": "panGestureAction:",
+      "bridgedName": "panGestureAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetTouchToX:": {
+      "name": "resetTouchToX:",
+      "bridgedName": "resetTouchToX",
+      "args": [
+        {
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopTrackingTouch": {
+      "name": "stopTrackingTouch",
+      "bridgedName": "stopTrackingTouch",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "failTouchTracking": {
+      "name": "failTouchTracking",
+      "bridgedName": "failTouchTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTouchTracking:": {
+      "name": "updateTouchTracking:",
+      "bridgedName": "updateTouchTracking",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startTrackingTouch:": {
+      "name": "startTrackingTouch:",
+      "bridgedName": "startTrackingTouch",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUpGestureRecognizer": {
+      "name": "setUpGestureRecognizer",
+      "bridgedName": "setUpGestureRecognizer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowedTouchTypes": {
+      "name": "allowedTouchTypes",
+      "bridgedName": "allowedTouchTypes",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsTouchEvents": {
+      "name": "acceptsTouchEvents",
+      "bridgedName": "acceptsTouchEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "inertialSpeed": {
+      "name": "inertialSpeed",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "inertialTimer": {
+      "name": "inertialTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "startingX": {
+      "name": "startingX",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "startingRotation": {
+      "name": "startingRotation",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lastTouchTime": {
+      "name": "lastTouchTime",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "didSnapRotation": {
+      "name": "didSnapRotation",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "currentX": {
+      "name": "currentX",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "currentlyTrackingTouch": {
+      "name": "currentlyTrackingTouch",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rotation": {
+      "name": "rotation",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

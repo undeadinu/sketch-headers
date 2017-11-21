@@ -1,0 +1,47 @@
+{
+  "imports": [
+    "NSFileAccessArbiter.h"
+  ],
+  "classes": [
+    "NSFileAccessClaim",
+    "NSFileSubarbitrationClaim",
+    "NSObject<OS_dispatch_semaphore>",
+    "NSXPCListener"
+  ],
+  "protocol": true,
+  "className": "NSFileAccessClientLocalArbiterInterface",
+  "interfaces": [],
+  "methods": {
+    "grantSubarbitrationClaim:withServer:": {
+      "name": "grantSubarbitrationClaim:withServer:",
+      "bridgedName": "grantSubarbitrationClaim_withServer",
+      "args": [
+        {
+          "type": "NSFileSubarbitrationClaim *"
+        },
+        {
+          "type": "NSXPCListener *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantAccessClaim:synchronouslyIfPossible:": {
+      "name": "grantAccessClaim:synchronouslyIfPossible:",
+      "bridgedName": "grantAccessClaim_synchronouslyIfPossible",
+      "args": [
+        {
+          "type": "NSFileAccessClaim *"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "NSObject<OS_dispatch_semaphore> *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

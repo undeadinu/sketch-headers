@@ -1,0 +1,288 @@
+{
+  "imports": [
+    "NSTouchBarColorPickerSwitcherDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSColor",
+    "NSColorList",
+    "NSString",
+    "NSView<NSTouchBarColorPickerView>",
+    "_NSTouchBarColorPickerContainerView"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarColorPickerViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSTouchBarColorPickerSwitcherDelegate"
+  ],
+  "methods": {
+    "keyPathsForValuesAffecting_currentPreferredPickerView": {
+      "name": "keyPathsForValuesAffecting_currentPreferredPickerView",
+      "bridgedName": "keyPathsForValuesAffecting_currentPreferredPickerView",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingWorkingColor": {
+      "name": "keyPathsForValuesAffectingWorkingColor",
+      "bridgedName": "keyPathsForValuesAffectingWorkingColor",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_swatchIsPrearmed": {
+      "name": "keyPathsForValuesAffecting_swatchIsPrearmed",
+      "bridgedName": "keyPathsForValuesAffecting_swatchIsPrearmed",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_shouldSwatchBeHidden": {
+      "name": "keyPathsForValuesAffecting_shouldSwatchBeHidden",
+      "bridgedName": "keyPathsForValuesAffecting_shouldSwatchBeHidden",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pickerDidCancelTracking": {
+      "name": "_pickerDidCancelTracking",
+      "bridgedName": "_pickerDidCancelTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pickerDidEndTracking": {
+      "name": "_pickerDidEndTracking",
+      "bridgedName": "_pickerDidEndTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pickerWillBeginTracking": {
+      "name": "_pickerWillBeginTracking",
+      "bridgedName": "_pickerWillBeginTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pickColor:": {
+      "name": "_pickColor:",
+      "bridgedName": "_pickColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switcher:didSelectItemAtIndex:": {
+      "name": "switcher:didSelectItemAtIndex:",
+      "bridgedName": "switcher_didSelectItemAtIndex",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithInitialColor:": {
+      "name": "initWithInitialColor:",
+      "bridgedName": "initWithInitialColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewControllerSupports10_10Features": {
+      "name": "_viewControllerSupports10_10Features",
+      "bridgedName": "_viewControllerSupports10_10Features",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "allowedColorSpaces": {
+      "name": "allowedColorSpaces",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "colorList": {
+      "name": "colorList",
+      "pointer": true,
+      "type": "NSColorList",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "currentColor": {
+      "name": "currentColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "_currentPreferredPickerView": {
+      "name": "_currentPreferredPickerView",
+      "pointer": true,
+      "type": "NSView<NSTouchBarColorPickerView>",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "workingColor": {
+      "name": "workingColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "_swatchIsPrearmed": {
+      "name": "_swatchIsPrearmed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_shouldSwatchBeHidden": {
+      "name": "_shouldSwatchBeHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "view": {
+      "name": "view",
+      "pointer": true,
+      "type": "_NSTouchBarColorPickerContainerView",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

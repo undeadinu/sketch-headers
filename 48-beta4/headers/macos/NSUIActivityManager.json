@@ -1,0 +1,268 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSUserActivityDelegate.h"
+  ],
+  "classes": [
+    "NSMapTable",
+    "NSObject<OS_dispatch_queue>",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSUIActivityManager",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSUserActivityDelegate"
+  ],
+  "methods": {
+    "sharedManager": {
+      "name": "sharedManager",
+      "bridgedName": "sharedManager",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "continueUserActivity:": {
+      "name": "continueUserActivity:",
+      "bridgedName": "continueUserActivity",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "continueUserActivityWithUUID:type:": {
+      "name": "continueUserActivityWithUUID:type:",
+      "bridgedName": "continueUserActivityWithUUID_type",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willFetchUserActivityWithType:progress:": {
+      "name": "_willFetchUserActivityWithType:progress:",
+      "bridgedName": "_willFetchUserActivityWithType_progress",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didFailToFetchUserActivityWithType:error:": {
+      "name": "_didFailToFetchUserActivityWithType:error:",
+      "bridgedName": "_didFailToFetchUserActivityWithType_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_continueUserActivity:": {
+      "name": "_continueUserActivity:",
+      "bridgedName": "_continueUserActivity",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_continueUserActivityAutomatically:": {
+      "name": "_continueUserActivityAutomatically:",
+      "bridgedName": "_continueUserActivityAutomatically",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreProviders:withUserActivity:": {
+      "name": "_restoreProviders:withUserActivity:",
+      "bridgedName": "_restoreProviders_withUserActivity",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userActivityWasContinued:": {
+      "name": "userActivityWasContinued:",
+      "bridgedName": "userActivityWasContinued",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userActivityWillSave:": {
+      "name": "userActivityWillSave:",
+      "bridgedName": "userActivityWillSave",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "infoForProvider:": {
+      "name": "infoForProvider:",
+      "bridgedName": "infoForProvider",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addProvider:toUserActivity:withSetter:": {
+      "name": "addProvider:toUserActivity:withSetter:",
+      "bridgedName": "addProvider_toUserActivity_withSetter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "queue_addProvider:toUserActivity:": {
+      "name": "queue_addProvider:toUserActivity:",
+      "bridgedName": "queue_addProvider_toUserActivity",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeProviderFromUserActivity:": {
+      "name": "removeProviderFromUserActivity:",
+      "bridgedName": "removeProviderFromUserActivity",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "queue_removeProviderFromUserActivity:": {
+      "name": "queue_removeProviderFromUserActivity:",
+      "bridgedName": "queue_removeProviderFromUserActivity",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

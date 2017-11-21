@@ -1,0 +1,844 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSCountedSet",
+    "NSError",
+    "NSFileAccessProcessManager",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableOrderedSet",
+    "NSMutableSet",
+    "NSObject<OS_dispatch_queue>",
+    "NSObject<OS_dispatch_semaphore>",
+    "NSString",
+    "NSXPCConnection"
+  ],
+  "protocol": false,
+  "className": "NSFileAccessClaim",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSSecureCoding"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "canWritingItemAtLocation:options:safelyOverlapWritingItemAtLocation:options:": {
+      "name": "canWritingItemAtLocation:options:safelyOverlapWritingItemAtLocation:options:",
+      "bridgedName": "canWritingItemAtLocation_options_safelyOverlapWritingItemAtLocation_options",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "canReadingItemAtLocation:options:safelyOverlapWritingItemAtLocation:options:": {
+      "name": "canReadingItemAtLocation:options:safelyOverlapWritingItemAtLocation:options:",
+      "bridgedName": "canReadingItemAtLocation_options_safelyOverlapWritingItemAtLocation_options",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "shouldCancelInsteadOfWaiting": {
+      "name": "shouldCancelInsteadOfWaiting",
+      "bridgedName": "shouldCancelInsteadOfWaiting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allURLs": {
+      "name": "allURLs",
+      "bridgedName": "allURLs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disavowed": {
+      "name": "disavowed",
+      "bridgedName": "disavowed",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finished": {
+      "name": "finished",
+      "bridgedName": "finished",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldBeRevokedPriorToInvokingAccessor": {
+      "name": "shouldBeRevokedPriorToInvokingAccessor",
+      "bridgedName": "shouldBeRevokedPriorToInvokingAccessor",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "purposeIDOfClaimOnItemAtLocation:forMessagingPresenter:": {
+      "name": "purposeIDOfClaimOnItemAtLocation:forMessagingPresenter:",
+      "bridgedName": "purposeIDOfClaimOnItemAtLocation_forMessagingPresenter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkIfSymbolicLinkAtURL:withResolutionCount:andIfSoThenReevaluateSelf:": {
+      "name": "checkIfSymbolicLinkAtURL:withResolutionCount:andIfSoThenReevaluateSelf:",
+      "bridgedName": "checkIfSymbolicLinkAtURL_withResolutionCount_andIfSoThenReevaluateSelf",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long *"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "descriptionWithIndenting:": {
+      "name": "descriptionWithIndenting:",
+      "bridgedName": "descriptionWithIndenting",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemAtLocation:wasReplacedByItemAtLocation:": {
+      "name": "itemAtLocation:wasReplacedByItemAtLocation:",
+      "bridgedName": "itemAtLocation_wasReplacedByItemAtLocation",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRevoked": {
+      "name": "isRevoked",
+      "bridgedName": "isRevoked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isGranted": {
+      "name": "isGranted",
+      "bridgedName": "isGranted",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "devalueOldClaim:": {
+      "name": "devalueOldClaim:",
+      "bridgedName": "devalueOldClaim",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelled": {
+      "name": "cancelled",
+      "bridgedName": "cancelled",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "devalueSelf": {
+      "name": "devalueSelf",
+      "bridgedName": "devalueSelf",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revoked": {
+      "name": "revoked",
+      "bridgedName": "revoked",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeClaimer": {
+      "name": "invokeClaimer",
+      "bridgedName": "invokeClaimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareItemForUploadingFromURL:thenContinue:": {
+      "name": "prepareItemForUploadingFromURL:thenContinue:",
+      "bridgedName": "prepareItemForUploadingFromURL_thenContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeArchiveOfDirectoryAtURL:toURL:error:": {
+      "name": "_writeArchiveOfDirectoryAtURL:toURL:error:",
+      "bridgedName": "_writeArchiveOfDirectoryAtURL_toURL_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canAccessLocations:forReading:error:": {
+      "name": "canAccessLocations:forReading:error:",
+      "bridgedName": "canAccessLocations_forReading_error",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makePresentersOfItemAtLocation:orContainedItem:relinquishUsingProcedureGetter:": {
+      "name": "makePresentersOfItemAtLocation:orContainedItem:relinquishUsingProcedureGetter:",
+      "bridgedName": "makePresentersOfItemAtLocation_orContainedItem_relinquishUsingProcedureGetter",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeProviderOfItemAtLocation:provideOrAttachPhysicalURLIfNecessaryForPurposeID:writingOptions:thenContinue:": {
+      "name": "makeProviderOfItemAtLocation:provideOrAttachPhysicalURLIfNecessaryForPurposeID:writingOptions:thenContinue:",
+      "bridgedName": "makeProviderOfItemAtLocation_provideOrAttachPhysicalURLIfNecessaryForPurposeID_writingOptions_thenContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeProviderOfItemAtLocation:provideOrAttachPhysicalURLIfNecessaryForPurposeID:readingOptions:thenContinue:": {
+      "name": "makeProviderOfItemAtLocation:provideOrAttachPhysicalURLIfNecessaryForPurposeID:readingOptions:thenContinue:",
+      "bridgedName": "makeProviderOfItemAtLocation_provideOrAttachPhysicalURLIfNecessaryForPurposeID_readingOptions_thenContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeProviderOfItemAtLocation:providePhysicalURLThenContinue:": {
+      "name": "makeProviderOfItemAtLocation:providePhysicalURLThenContinue:",
+      "bridgedName": "makeProviderOfItemAtLocation_providePhysicalURLThenContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeProviderOfItemAtLocation:provideIfNecessaryWithOptions:thenContinue:": {
+      "name": "makeProviderOfItemAtLocation:provideIfNecessaryWithOptions:thenContinue:",
+      "bridgedName": "makeProviderOfItemAtLocation_provideIfNecessaryWithOptions_thenContinue",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "granted": {
+      "name": "granted",
+      "bridgedName": "granted",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isBlockedByWritingItemAtLocation:options:": {
+      "name": "isBlockedByWritingItemAtLocation:options:",
+      "bridgedName": "isBlockedByWritingItemAtLocation_options",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isBlockedByReadingItemAtLocation:options:": {
+      "name": "isBlockedByReadingItemAtLocation:options:",
+      "bridgedName": "isBlockedByReadingItemAtLocation_options",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePendingClaims:": {
+      "name": "removePendingClaims:",
+      "bridgedName": "removePendingClaims",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pendingClaims": {
+      "name": "pendingClaims",
+      "bridgedName": "pendingClaims",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPendingClaim:": {
+      "name": "addPendingClaim:",
+      "bridgedName": "addPendingClaim",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluateNewClaim:": {
+      "name": "evaluateNewClaim:",
+      "bridgedName": "evaluateNewClaim",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleBlockedClaim:": {
+      "name": "scheduleBlockedClaim:",
+      "bridgedName": "scheduleBlockedClaim",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "givePriorityToClaim:": {
+      "name": "givePriorityToClaim:",
+      "bridgedName": "givePriorityToClaim",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isBlockedByClaimWithPurposeID:": {
+      "name": "isBlockedByClaimWithPurposeID:",
+      "bridgedName": "isBlockedByClaimWithPurposeID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "claimerInvokingIsBlockedByReactorWithID:": {
+      "name": "claimerInvokingIsBlockedByReactorWithID:",
+      "bridgedName": "claimerInvokingIsBlockedByReactorWithID",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "whenFinishedPerformProcedure:": {
+      "name": "whenFinishedPerformProcedure:",
+      "bridgedName": "whenFinishedPerformProcedure",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "whenDevaluedPerformProcedure:": {
+      "name": "whenDevaluedPerformProcedure:",
+      "bridgedName": "whenDevaluedPerformProcedure",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "whenRevokedPerformProcedure:": {
+      "name": "whenRevokedPerformProcedure:",
+      "bridgedName": "whenRevokedPerformProcedure",
+      "args": [
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluateSelfWithRootNode:checkSubarbitrability:": {
+      "name": "evaluateSelfWithRootNode:checkSubarbitrability:",
+      "bridgedName": "evaluateSelfWithRootNode_checkSubarbitrability",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "claimerError": {
+      "name": "claimerError",
+      "bridgedName": "claimerError",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setClaimerError:": {
+      "name": "setClaimerError:",
+      "bridgedName": "setClaimerError",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unblockClaimerForReason:": {
+      "name": "unblockClaimerForReason:",
+      "bridgedName": "unblockClaimerForReason",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "blockClaimerForReason:": {
+      "name": "blockClaimerForReason:",
+      "bridgedName": "blockClaimerForReason",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didWait": {
+      "name": "didWait",
+      "bridgedName": "didWait",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unblock": {
+      "name": "unblock",
+      "bridgedName": "unblock",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "block": {
+      "name": "block",
+      "bridgedName": "block",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startObservingClientState": {
+      "name": "startObservingClientState",
+      "bridgedName": "startObservingClientState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cameFromSuperarbiter": {
+      "name": "cameFromSuperarbiter",
+      "bridgedName": "cameFromSuperarbiter",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCameFromSuperarbiter": {
+      "name": "setCameFromSuperarbiter",
+      "bridgedName": "setCameFromSuperarbiter",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptClaimFromClient:arbiterQueue:grantHandler:": {
+      "name": "acceptClaimFromClient:arbiterQueue:grantHandler:",
+      "bridgedName": "acceptClaimFromClient_arbiterQueue_grantHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareClaimForGrantingWithArbiterQueue:": {
+      "name": "prepareClaimForGrantingWithArbiterQueue:",
+      "bridgedName": "prepareClaimForGrantingWithArbiterQueue",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "forwardUsingConnection:crashHandler:": {
+      "name": "forwardUsingConnection:crashHandler:",
+      "bridgedName": "forwardUsingConnection_crashHandler",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clientProcessIdentifier": {
+      "name": "clientProcessIdentifier",
+      "bridgedName": "clientProcessIdentifier",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "purposeID": {
+      "name": "purposeID",
+      "bridgedName": "purposeID",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "claimID": {
+      "name": "claimID",
+      "bridgedName": "claimID",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "client": {
+      "name": "client",
+      "bridgedName": "client",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithClient:claimID:purposeID:": {
+      "name": "initWithClient:claimID:purposeID:",
+      "bridgedName": "initWithClient_claimID_purposeID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupWithClaimID:purposeID:originatingReactorQueueID:": {
+      "name": "_setupWithClaimID:purposeID:originatingReactorQueueID:",
+      "bridgedName": "_setupWithClaimID_purposeID_originatingReactorQueueID",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldInformProvidersAboutEndOfWriteWithOptions:": {
+      "name": "shouldInformProvidersAboutEndOfWriteWithOptions:",
+      "bridgedName": "shouldInformProvidersAboutEndOfWriteWithOptions",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldReadingWithOptions:causePresenterToRelinquish:": {
+      "name": "shouldReadingWithOptions:causePresenterToRelinquish:",
+      "bridgedName": "shouldReadingWithOptions_causePresenterToRelinquish",
+      "args": [
+        {
+          "type": "unsigned long long"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "claimerWaiter": {
+      "name": "claimerWaiter",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_semaphore>",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

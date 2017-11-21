@@ -1,0 +1,111 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSColor",
+    "NSImage",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSTableViewRowAction",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "rowActionWithStyle:title:handler:": {
+      "name": "rowActionWithStyle:title:handler:",
+      "bridgedName": "rowActionWithStyle_title_handler",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithStyle:title:handler:": {
+      "name": "_initWithStyle:title:handler:",
+      "bridgedName": "_initWithStyle_title_handler",
+      "args": [
+        {
+          "type": "long long"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "handler": {
+      "name": "handler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=_handler"
+      ]
+    },
+    "title": {
+      "name": "title",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "backgroundColor": {
+      "name": "backgroundColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

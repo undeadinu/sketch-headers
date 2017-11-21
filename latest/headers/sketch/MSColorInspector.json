@@ -1,0 +1,925 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "BCHSBColorPickerDelegate.h",
+    "BCPopoverDelegate.h",
+    "MSColorInspectorSectionDelegate.h",
+    "MSColorPreviewButtonDelegate.h",
+    "MSModeModePickerDelegate.h",
+    "NSTouchBarDelegate.h"
+  ],
+  "classes": [
+    "BCHSBColorPicker",
+    "MSAlternatingView",
+    "MSColorInspectorSectionColor",
+    "MSColorInspectorSectionGradient",
+    "MSColorInspectorSectionNoise",
+    "MSColorInspectorSectionPattern",
+    "MSDocument",
+    "MSEventHandlerManager",
+    "MSModePickerView",
+    "MSPersistentAssetCollection",
+    "MSStackView",
+    "NSArray",
+    "NSString",
+    "NSTextField",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSColorInspector",
+  "extends": "NSViewController",
+  "interfaces": [
+    "MSColorInspectorSectionDelegate",
+    "MSModeModePickerDelegate",
+    "BCPopoverDelegate",
+    "NSTouchBarDelegate",
+    "BCHSBColorPickerDelegate",
+    "MSColorPreviewButtonDelegate"
+  ],
+  "methods": {
+    "presentColorInspectorPopoverForViewController:inspectorController:relativeToView:initialColor:": {
+      "name": "presentColorInspectorPopoverForViewController:inspectorController:relativeToView:initialColor:",
+      "bridgedName": "presentColorInspectorPopoverForViewController_inspectorController_relativeToView_initialColor",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBarColorAction:": {
+      "name": "touchBarColorAction:",
+      "bridgedName": "touchBarColorAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBar:makeItemForIdentifier:": {
+      "name": "touchBar:makeItemForIdentifier:",
+      "bridgedName": "touchBar_makeItemForIdentifier",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "customTouchBarItemIdentifiers": {
+      "name": "customTouchBarItemIdentifiers",
+      "bridgedName": "customTouchBarItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minimumPopoverContentViewHeight:": {
+      "name": "minimumPopoverContentViewHeight:",
+      "bridgedName": "minimumPopoverContentViewHeight",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWillReturnUndoManager:": {
+      "name": "popoverWillReturnUndoManager:",
+      "bridgedName": "popoverWillReturnUndoManager",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverShouldTrackSuperviewOfAttachedToView:": {
+      "name": "popoverShouldTrackSuperviewOfAttachedToView:",
+      "bridgedName": "popoverShouldTrackSuperviewOfAttachedToView",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "adjustInspectorToColorPopoverIfNeeded:": {
+      "name": "adjustInspectorToColorPopoverIfNeeded:",
+      "bridgedName": "adjustInspectorToColorPopoverIfNeeded",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWindowDidMove:": {
+      "name": "popoverWindowDidMove:",
+      "bridgedName": "popoverWindowDidMove",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWindowSizeDidChange:": {
+      "name": "popoverWindowSizeDidChange:",
+      "bridgedName": "popoverWindowSizeDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWillClose:": {
+      "name": "popoverWillClose:",
+      "bridgedName": "popoverWillClose",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWillShow:": {
+      "name": "popoverWillShow:",
+      "bridgedName": "popoverWillShow",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorMagnifierAction:": {
+      "name": "colorMagnifierAction:",
+      "bridgedName": "colorMagnifierAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColorTabIndex:": {
+      "name": "setColorTabIndex:",
+      "bridgedName": "setColorTabIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorTabIndex": {
+      "name": "colorTabIndex",
+      "bridgedName": "colorTabIndex",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchToColorTabAtIndex:": {
+      "name": "switchToColorTabAtIndex:",
+      "bridgedName": "switchToColorTabAtIndex",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadTouchBarsAfterSelectionChange:": {
+      "name": "reloadTouchBarsAfterSelectionChange:",
+      "bridgedName": "reloadTouchBarsAfterSelectionChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadTouchBars": {
+      "name": "reloadTouchBars",
+      "bridgedName": "reloadTouchBars",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshTabbingCycle": {
+      "name": "refreshTabbingCycle",
+      "bridgedName": "refreshTabbingCycle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickerViewChanged:": {
+      "name": "pickerViewChanged:",
+      "bridgedName": "pickerViewChanged",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickerViewWillChange:": {
+      "name": "pickerViewWillChange:",
+      "bridgedName": "pickerViewWillChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickerView:labelForMode:": {
+      "name": "pickerView:labelForMode:",
+      "bridgedName": "pickerView_labelForMode",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filteredStyleParts:": {
+      "name": "filteredStyleParts:",
+      "bridgedName": "filteredStyleParts",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close": {
+      "name": "close",
+      "bridgedName": "close",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshAction:": {
+      "name": "refreshAction:",
+      "bridgedName": "refreshAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorChangedTo:": {
+      "name": "colorChangedTo:",
+      "bridgedName": "colorChangedTo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorPickerAction:": {
+      "name": "colorPickerAction:",
+      "bridgedName": "colorPickerAction",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColor:": {
+      "name": "setColor:",
+      "bridgedName": "setColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeColor:": {
+      "name": "changeColor:",
+      "bridgedName": "changeColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorPreviewButtonPreviewColorSpace:": {
+      "name": "colorPreviewButtonPreviewColorSpace:",
+      "bridgedName": "colorPreviewButtonPreviewColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hsbColorPickerDocumentColorSpace:": {
+      "name": "hsbColorPickerDocumentColorSpace:",
+      "bridgedName": "hsbColorPickerDocumentColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hsbColorPickerPreviewColorSpace:": {
+      "name": "hsbColorPickerPreviewColorSpace:",
+      "bridgedName": "hsbColorPickerPreviewColorSpace",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "redo:": {
+      "name": "redo:",
+      "bridgedName": "redo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undo:": {
+      "name": "undo:",
+      "bridgedName": "undo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentRedoAction": {
+      "name": "documentRedoAction",
+      "bridgedName": "documentRedoAction",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentUndoAction": {
+      "name": "documentUndoAction",
+      "bridgedName": "documentUndoAction",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillDisappear": {
+      "name": "viewWillDisappear",
+      "bridgedName": "viewWillDisappear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMaximumAvailableHeight:": {
+      "name": "setMaximumAvailableHeight:",
+      "bridgedName": "setMaximumAvailableHeight",
+      "args": [
+        {
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateEnableButtons": {
+      "name": "validateEnableButtons",
+      "bridgedName": "validateEnableButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentSection": {
+      "name": "currentSection",
+      "bridgedName": "currentSection",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initialColorTypePickerMode": {
+      "name": "initialColorTypePickerMode",
+      "bridgedName": "initialColorTypePickerMode",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stack": {
+      "name": "stack",
+      "bridgedName": "stack",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stylePartIsGradient:": {
+      "name": "stylePartIsGradient:",
+      "bridgedName": "stylePartIsGradient",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "findFrequentColors": {
+      "name": "findFrequentColors",
+      "bridgedName": "findFrequentColors",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForDisplay": {
+      "name": "prepareForDisplay",
+      "bridgedName": "prepareForDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInitialColor:": {
+      "name": "setInitialColor:",
+      "bridgedName": "setInitialColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentModePicker": {
+      "name": "currentModePicker",
+      "bridgedName": "currentModePicker",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorSectionDidUpdate:": {
+      "name": "inspectorSectionDidUpdate:",
+      "bridgedName": "inspectorSectionDidUpdate",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentAssets": {
+      "name": "documentAssets",
+      "bridgedName": "documentAssets",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didRemoveAssetOfType:": {
+      "name": "didRemoveAssetOfType:",
+      "bridgedName": "didRemoveAssetOfType",
+      "args": [
+        {
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didAddAsset:": {
+      "name": "didAddAsset:",
+      "bridgedName": "didAddAsset",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorDidChangeTo:": {
+      "name": "colorDidChangeTo:",
+      "bridgedName": "colorDidChangeTo",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyBackgroundArrowColor": {
+      "name": "applyBackgroundArrowColor",
+      "bridgedName": "applyBackgroundArrowColor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorModeViewDidChange:": {
+      "name": "colorModeViewDidChange:",
+      "bridgedName": "colorModeViewDidChange",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSender:document:handlerManager:globalAssets:": {
+      "name": "initWithSender:document:handlerManager:globalAssets:",
+      "bridgedName": "initWithSender_document_handlerManager_globalAssets",
+      "args": [
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "textFieldToContinueEditing": {
+      "name": "textFieldToContinueEditing",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "stackView": {
+      "name": "stackView",
+      "pointer": true,
+      "type": "MSStackView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "globalAssets": {
+      "name": "globalAssets",
+      "pointer": true,
+      "type": "MSPersistentAssetCollection",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "eventHandlerManager": {
+      "name": "eventHandlerManager",
+      "pointer": true,
+      "type": "MSEventHandlerManager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "noiseSection": {
+      "name": "noiseSection",
+      "pointer": true,
+      "type": "MSColorInspectorSectionNoise",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "patternSection": {
+      "name": "patternSection",
+      "pointer": true,
+      "type": "MSColorInspectorSectionPattern",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "gradientSection": {
+      "name": "gradientSection",
+      "pointer": true,
+      "type": "MSColorInspectorSectionGradient",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "colorSection": {
+      "name": "colorSection",
+      "pointer": true,
+      "type": "MSColorInspectorSectionColor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "borderBlendingOpacityView": {
+      "name": "borderBlendingOpacityView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "shadowBlendingView": {
+      "name": "shadowBlendingView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "colorPickerView": {
+      "name": "colorPickerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "emptyTopView": {
+      "name": "emptyTopView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "colorPicker": {
+      "name": "colorPicker",
+      "pointer": true,
+      "type": "BCHSBColorPicker",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "fillColorTypePicker": {
+      "name": "fillColorTypePicker",
+      "pointer": true,
+      "type": "MSModePickerView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "borderColorTypePicker": {
+      "name": "borderColorTypePicker",
+      "pointer": true,
+      "type": "MSModePickerView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "hsbFieldsView": {
+      "name": "hsbFieldsView",
+      "pointer": true,
+      "type": "__weak MSAlternatingView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rgbFieldsView": {
+      "name": "rgbFieldsView",
+      "pointer": true,
+      "type": "__weak MSAlternatingView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSColorInspectorDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "styleParts": {
+      "name": "styleParts",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
