@@ -5,13 +5,17 @@
     "NSXPCListenerDelegate.h"
   ],
   "classes": [
+    "NSArray",
+    "NSProgressValues",
+    "NSSet",
+    "NSString",
+    "NSURL",
     "NSFileAccessNode",
     "NSMutableDictionary",
     "NSMutableSet",
-    "NSObject<OS_dispatch_queue>",
-    "NSString"
+    "NSObject<OS_dispatch_queue>"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "NSProgressRegistrar",
   "extends": "NSObject",
   "interfaces": [
@@ -55,24 +59,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_getRemoteProcessWithIdentifier:canReadItemAtURL:completionHandler:": {
-      "name": "_getRemoteProcessWithIdentifier:canReadItemAtURL:completionHandler:",
-      "bridgedName": "_getRemoteProcessWithIdentifier_canReadItemAtURL_completionHandler",
-      "args": [
-        {
-          "type": "int"
-        },
-        {
-          "type": "id"
-        },
-        {
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "addSubscriber:forID:appBundleID:category:completionHandler:": {
       "name": "addSubscriber:forID:appBundleID:category:completionHandler:",
       "bridgedName": "addSubscriber_forID_appBundleID_category_completionHandler",
@@ -109,9 +95,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "observePublisherForID:value:forKey:inUserInfo:": {
-      "name": "observePublisherForID:value:forKey:inUserInfo:",
-      "bridgedName": "observePublisherForID_value_forKey_inUserInfo",
+    "observePublisherUserInfoForID:value:forKey:": {
+      "name": "observePublisherUserInfoForID:value:forKey:",
+      "bridgedName": "observePublisherUserInfoForID_value_forKey",
       "args": [
         {
           "type": "id"
@@ -121,9 +107,24 @@
         },
         {
           "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observePublisherForID:values:forKeys:": {
+      "name": "observePublisherForID:values:forKeys:",
+      "bridgedName": "observePublisherForID_values_forKeys",
+      "args": [
+        {
+          "type": "id"
         },
         {
-          "type": "BOOL"
+          "type": "id"
+        },
+        {
+          "type": "id"
         }
       ],
       "returns": "oneway void",
@@ -157,6 +158,24 @@
         }
       ],
       "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getRemoteProcessWithIdentifier:canReadItemAtURL:completionHandler:": {
+      "name": "_getRemoteProcessWithIdentifier:canReadItemAtURL:completionHandler:",
+      "bridgedName": "_getRemoteProcessWithIdentifier_canReadItemAtURL_completionHandler",
+      "args": [
+        {
+          "type": "int"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

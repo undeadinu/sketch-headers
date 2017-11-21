@@ -5,11 +5,12 @@
     "NSRemoteViewDelegate.h"
   ],
   "classes": [
+    "NSColor",
     "NSColorPanel",
     "NSString",
     "NSURL"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "NSLegacyExternalColorPickerHostViewController",
   "extends": "NSViewController",
   "interfaces": [
@@ -18,27 +19,23 @@
     "NSColorPickingInternal"
   ],
   "methods": {
+    "pickColor:": {
+      "name": "pickColor:",
+      "bridgedName": "pickColor",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "warmup": {
       "name": "warmup",
       "bridgedName": "warmup",
       "args": [],
       "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_sharedXPCListenerClass": {
-      "name": "_sharedXPCListenerClass",
-      "bridgedName": "_sharedXPCListenerClass",
-      "args": [],
-      "returns": "Class",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_remoteViewClass": {
-      "name": "_remoteViewClass",
-      "bridgedName": "_remoteViewClass",
-      "args": [],
-      "returns": "Class",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -246,18 +243,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "pickColor:": {
-      "name": "pickColor:",
-      "bridgedName": "pickColor",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setColor:": {
       "name": "setColor:",
       "bridgedName": "setColor",
@@ -304,6 +289,15 @@
     }
   },
   "properties": {
+    "_currentColor": {
+      "name": "_currentColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy",
+        "setter=_setCurrentColor:"
+      ]
+    },
     "pickerIdentifier": {
       "name": "pickerIdentifier",
       "pointer": true,

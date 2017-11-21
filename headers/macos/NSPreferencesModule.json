@@ -4,31 +4,17 @@
     "NSPreferencesModule.h"
   ],
   "classes": [
-    "NSBox"
+    "NSBox",
+    "NSImage",
+    "NSString"
   ],
-  "protocol": false,
+  "protocol": true,
   "className": "NSPreferencesModule",
   "extends": "NSObject",
   "interfaces": [
     "NSPreferencesModule"
   ],
   "methods": {
-    "sharedInstance": {
-      "name": "sharedInstance",
-      "bridgedName": "sharedInstance",
-      "args": [],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "isResizable": {
-      "name": "isResizable",
-      "bridgedName": "isResizable",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "preferencesWindowShouldClose": {
       "name": "preferencesWindowShouldClose",
       "bridgedName": "preferencesWindowShouldClose",
@@ -58,26 +44,6 @@
       "bridgedName": "moduleWillBeRemoved",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setMinSize:": {
-      "name": "setMinSize:",
-      "bridgedName": "setMinSize",
-      "args": [
-        {
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "minSize": {
-      "name": "minSize",
-      "bridgedName": "minSize",
-      "args": [],
-      "returns": "struct CGSize",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -121,18 +87,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "titleForIdentifier:": {
-      "name": "titleForIdentifier:",
-      "bridgedName": "titleForIdentifier",
-      "args": [
-        {
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "imageForPreferenceNamed:": {
       "name": "imageForPreferenceNamed:",
       "bridgedName": "imageForPreferenceNamed",
@@ -148,6 +102,54 @@
     "viewForPreferenceNamed:": {
       "name": "viewForPreferenceNamed:",
       "bridgedName": "viewForPreferenceNamed",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sharedInstance": {
+      "name": "sharedInstance",
+      "bridgedName": "sharedInstance",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isResizable": {
+      "name": "isResizable",
+      "bridgedName": "isResizable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMinSize:": {
+      "name": "setMinSize:",
+      "bridgedName": "setMinSize",
+      "args": [
+        {
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minSize": {
+      "name": "minSize",
+      "bridgedName": "minSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "titleForIdentifier:": {
+      "name": "titleForIdentifier:",
+      "bridgedName": "titleForIdentifier",
       "args": [
         {
           "type": "id"

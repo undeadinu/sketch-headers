@@ -4,7 +4,8 @@
     "MSCoding.h"
   ],
   "classes": [
-    "NSString"
+    "NSString",
+    "Protocol"
   ],
   "protocol": false,
   "className": "NSObject",
@@ -240,6 +241,175 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "zone": {
+      "name": "zone",
+      "bridgedName": "zone",
+      "args": [],
+      "returns": "struct _NSZone *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "retainCount": {
+      "name": "retainCount",
+      "bridgedName": "retainCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "autorelease": {
+      "name": "autorelease",
+      "bridgedName": "autorelease",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "release": {
+      "name": "release",
+      "bridgedName": "release",
+      "args": [],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "retain": {
+      "name": "retain",
+      "bridgedName": "retain",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "respondsToSelector:": {
+      "name": "respondsToSelector:",
+      "bridgedName": "respondsToSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "conformsToProtocol:": {
+      "name": "conformsToProtocol:",
+      "bridgedName": "conformsToProtocol",
+      "args": [
+        {
+          "type": "Protocol *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isMemberOfClass:": {
+      "name": "isMemberOfClass:",
+      "bridgedName": "isMemberOfClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isKindOfClass:": {
+      "name": "isKindOfClass:",
+      "bridgedName": "isKindOfClass",
+      "args": [
+        {
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isProxy": {
+      "name": "isProxy",
+      "bridgedName": "isProxy",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performSelector:withObject:withObject:": {
+      "name": "performSelector:withObject:withObject:",
+      "bridgedName": "performSelector_withObject_withObject",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "id"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performSelector:withObject:": {
+      "name": "performSelector:withObject:",
+      "bridgedName": "performSelector_withObject",
+      "args": [
+        {
+          "type": "SEL"
+        },
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performSelector:": {
+      "name": "performSelector:",
+      "bridgedName": "performSelector",
+      "args": [
+        {
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "self": {
+      "name": "self",
+      "bridgedName": "self",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "class": {
+      "name": "class",
+      "bridgedName": "class",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "safeCastToClass:": {
       "name": "safeCastToClass:",
       "bridgedName": "safeCastToClass",
@@ -296,6 +466,40 @@
       "attributes": [
         "readonly",
         "nonatomic"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
       ]
     }
   }

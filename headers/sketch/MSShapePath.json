@@ -3,14 +3,41 @@
     "_MSShapePath.h",
     "MSShapePath.h"
   ],
-  "classes": [],
-  "protocol": false,
+  "classes": [
+    "MSPath",
+    "NSBezierPath"
+  ],
+  "protocol": true,
   "className": "MSShapePath",
   "extends": "_MSShapePath",
   "interfaces": [
     "MSShapePath"
   ],
   "methods": {
+    "bezierPathInRect:": {
+      "name": "bezierPathInRect:",
+      "bridgedName": "bezierPathInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathInRect:": {
+      "name": "pathInRect:",
+      "bridgedName": "pathInRect",
+      "args": [
+        {
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "pathWithBezierPath:inRect:": {
       "name": "pathWithBezierPath:inRect:",
       "bridgedName": "pathWithBezierPath_inRect",
@@ -79,30 +106,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
-        {
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathInRect:": {
-      "name": "pathInRect:",
-      "bridgedName": "pathInRect",
-      "args": [
-        {
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
