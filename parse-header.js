@@ -64,6 +64,7 @@ module.exports = function parseHeader (data) {
       name += `${matchMethodName[1].trim()}${matchMethodName[2] ? ':' : ''}`;
       if (matchMethodName[3]) {
         args.push({
+          name: matchMethodName[1].trim(),
           type: matchMethodName[3]
         });
       }
