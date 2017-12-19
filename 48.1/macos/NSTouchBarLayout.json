@@ -1,0 +1,506 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [],
+  "protocol": false,
+  "className": "NSTouchBarLayout",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "_calculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:": {
+      "name": "_calculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:",
+      "bridgedName": "_calculateLayoutOfItems_withAvailableSize_startingWidth_xOrigin_sharesLeftEdge_sharesRightEdge_itemsToFrames",
+      "args": [
+        {
+          "name": "_calculateLayoutOfItems",
+          "type": "id"
+        },
+        {
+          "name": "withAvailableSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "startingWidth",
+          "type": "double"
+        },
+        {
+          "name": "xOrigin",
+          "type": "double"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "itemsToFrames",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustedHeightForItem:availableHeight:": {
+      "name": "_adjustedHeightForItem:availableHeight:",
+      "bridgedName": "_adjustedHeightForItem_availableHeight",
+      "args": [
+        {
+          "name": "_adjustedHeightForItem",
+          "type": "id"
+        },
+        {
+          "name": "availableHeight",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fittingWidthForItems:availableWidth:sharesLeftEdge:sharesRightEdge:attachedItems:": {
+      "name": "_fittingWidthForItems:availableWidth:sharesLeftEdge:sharesRightEdge:attachedItems:",
+      "bridgedName": "_fittingWidthForItems_availableWidth_sharesLeftEdge_sharesRightEdge_attachedItems",
+      "args": [
+        {
+          "name": "_fittingWidthForItems",
+          "type": "id"
+        },
+        {
+          "name": "availableWidth",
+          "type": "double"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "attachedItems",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderedItemsGivenUnorderedArray:usingOrderedArray:": {
+      "name": "orderedItemsGivenUnorderedArray:usingOrderedArray:",
+      "bridgedName": "orderedItemsGivenUnorderedArray_usingOrderedArray",
+      "args": [
+        {
+          "name": "orderedItemsGivenUnorderedArray",
+          "type": "id"
+        },
+        {
+          "name": "usingOrderedArray",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_minWidthOfItems:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_minWidthOfItems:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_minWidthOfItems_sharesLeftEdge_sharesRightEdge",
+      "args": [
+        {
+          "name": "_minWidthOfItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_preferredWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_preferredWidthOfCenterItems_sharesLeftEdge_sharesRightEdge",
+      "args": [
+        {
+          "name": "_preferredWidthOfCenterItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentClippingWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_contentClippingWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_contentClippingWidthOfCenterItems_sharesLeftEdge_sharesRightEdge",
+      "args": [
+        {
+          "name": "_contentClippingWidthOfCenterItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_maxWidthOfItems_sharesLeftEdge_sharesRightEdge",
+      "args": [
+        {
+          "name": "_maxWidthOfItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemIsFlexibleSpace:": {
+      "name": "_itemIsFlexibleSpace:",
+      "bridgedName": "_itemIsFlexibleSpace",
+      "args": [
+        {
+          "name": "_itemIsFlexibleSpace",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentClippingSizeOfItem:": {
+      "name": "_contentClippingSizeOfItem:",
+      "bridgedName": "_contentClippingSizeOfItem",
+      "args": [
+        {
+          "name": "_contentClippingSizeOfItem",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredSizeOfItem:": {
+      "name": "_preferredSizeOfItem:",
+      "bridgedName": "_preferredSizeOfItem",
+      "args": [
+        {
+          "name": "_preferredSizeOfItem",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "priorityIndexOfItem:": {
+      "name": "priorityIndexOfItem:",
+      "bridgedName": "priorityIndexOfItem",
+      "args": [
+        {
+          "name": "priorityIndexOfItem",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemPaddingForItem:": {
+      "name": "itemPaddingForItem:",
+      "bridgedName": "itemPaddingForItem",
+      "args": [
+        {
+          "name": "itemPaddingForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prioritizedItems:": {
+      "name": "prioritizedItems:",
+      "bridgedName": "prioritizedItems",
+      "args": [
+        {
+          "name": "prioritizedItems",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:availableWidth:": {
+      "name": "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:availableWidth:",
+      "bridgedName": "_centerRectGivenItems_remainingLeftWidth_remainingRightWidth_sharesLeftEdge_sharesRightEdge_availableWidth",
+      "args": [
+        {
+          "name": "_centerRectGivenItems",
+          "type": "id"
+        },
+        {
+          "name": "remainingLeftWidth",
+          "type": "double"
+        },
+        {
+          "name": "remainingRightWidth",
+          "type": "double"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "availableWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_highestPriorityIndexOfItems:": {
+      "name": "_highestPriorityIndexOfItems:",
+      "bridgedName": "_highestPriorityIndexOfItems",
+      "args": [
+        {
+          "name": "_highestPriorityIndexOfItems",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchUpSpacesInItems:itemsToAttributes:": {
+      "name": "_touchUpSpacesInItems:itemsToAttributes:",
+      "bridgedName": "_touchUpSpacesInItems_itemsToAttributes",
+      "args": [
+        {
+          "name": "_touchUpSpacesInItems",
+          "type": "id"
+        },
+        {
+          "name": "itemsToAttributes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rightInsetOfItems:sharesRightEdge:": {
+      "name": "_rightInsetOfItems:sharesRightEdge:",
+      "bridgedName": "_rightInsetOfItems_sharesRightEdge",
+      "args": [
+        {
+          "name": "_rightInsetOfItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_leftInsetOfItems:sharesLeftEdge:": {
+      "name": "_leftInsetOfItems:sharesLeftEdge:",
+      "bridgedName": "_leftInsetOfItems_sharesLeftEdge",
+      "args": [
+        {
+          "name": "_leftInsetOfItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "items:centerItems:minSize:maxSize:": {
+      "name": "items:centerItems:minSize:maxSize:",
+      "bridgedName": "items_centerItems_minSize_maxSize",
+      "args": [
+        {
+          "name": "items",
+          "type": "id"
+        },
+        {
+          "name": "centerItems",
+          "type": "id"
+        },
+        {
+          "name": "minSize",
+          "type": "struct CGSize *"
+        },
+        {
+          "name": "maxSize",
+          "type": "struct CGSize *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calculateLayoutOfItems:centerItems:givenSize:": {
+      "name": "_calculateLayoutOfItems:centerItems:givenSize:",
+      "bridgedName": "_calculateLayoutOfItems_centerItems_givenSize",
+      "args": [
+        {
+          "name": "_calculateLayoutOfItems",
+          "type": "id"
+        },
+        {
+          "name": "centerItems",
+          "type": "id"
+        },
+        {
+          "name": "givenSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "framesOfItems:centerItems:givenSize:": {
+      "name": "framesOfItems:centerItems:givenSize:",
+      "bridgedName": "framesOfItems_centerItems_givenSize",
+      "args": [
+        {
+          "name": "framesOfItems",
+          "type": "id"
+        },
+        {
+          "name": "centerItems",
+          "type": "id"
+        },
+        {
+          "name": "givenSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_attributesOfItems:centerItems:givenSize:sharesRightEdge:": {
+      "name": "_attributesOfItems:centerItems:givenSize:sharesRightEdge:",
+      "bridgedName": "_attributesOfItems_centerItems_givenSize_sharesRightEdge",
+      "args": [
+        {
+          "name": "_attributesOfItems",
+          "type": "id"
+        },
+        {
+          "name": "centerItems",
+          "type": "id"
+        },
+        {
+          "name": "givenSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attributesOfItems:centerItems:givenSize:": {
+      "name": "attributesOfItems:centerItems:givenSize:",
+      "bridgedName": "attributesOfItems_centerItems_givenSize",
+      "args": [
+        {
+          "name": "attributesOfItems",
+          "type": "id"
+        },
+        {
+          "name": "centerItems",
+          "type": "id"
+        },
+        {
+          "name": "givenSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithVisualCenterX:": {
+      "name": "initWithVisualCenterX:",
+      "bridgedName": "initWithVisualCenterX",
+      "args": [
+        {
+          "name": "initWithVisualCenterX",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,1354 @@
+{
+  "imports": [
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSData",
+    "NSDate",
+    "NSDateComponents",
+    "NSString",
+    "NSTimeZone",
+    "NSURL",
+    "NSUserNotificationAction"
+  ],
+  "protocol": false,
+  "className": "_NSConcreteUserNotification",
+  "extends": "NSUserNotification",
+  "interfaces": [
+    "NSSecureCoding"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "peopleIdentifiers": {
+      "name": "peopleIdentifiers",
+      "bridgedName": "peopleIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "additionalActions": {
+      "name": "additionalActions",
+      "bridgedName": "additionalActions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "additionalActivationAction": {
+      "name": "additionalActivationAction",
+      "bridgedName": "additionalActivationAction",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alwaysShowAlternateActionMenu:": {
+      "name": "set_alwaysShowAlternateActionMenu:",
+      "bridgedName": "set_alwaysShowAlternateActionMenu",
+      "args": [
+        {
+          "name": "set_alwaysShowAlternateActionMenu",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alwaysShowAlternateActionMenu": {
+      "name": "_alwaysShowAlternateActionMenu",
+      "bridgedName": "_alwaysShowAlternateActionMenu",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_hasAttachment:": {
+      "name": "set_hasAttachment:",
+      "bridgedName": "set_hasAttachment",
+      "args": [
+        {
+          "name": "set_hasAttachment",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasAttachment": {
+      "name": "_hasAttachment",
+      "bridgedName": "_hasAttachment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_substitutesEmojiInResponse:": {
+      "name": "set_substitutesEmojiInResponse:",
+      "bridgedName": "set_substitutesEmojiInResponse",
+      "args": [
+        {
+          "name": "set_substitutesEmojiInResponse",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_substitutesEmojiInResponse": {
+      "name": "_substitutesEmojiInResponse",
+      "bridgedName": "_substitutesEmojiInResponse",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_lockscreenOnly:": {
+      "name": "set_lockscreenOnly:",
+      "bridgedName": "set_lockscreenOnly",
+      "args": [
+        {
+          "name": "set_lockscreenOnly",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lockscreenOnly": {
+      "name": "_lockscreenOnly",
+      "bridgedName": "_lockscreenOnly",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_showsButtons:": {
+      "name": "set_showsButtons:",
+      "bridgedName": "set_showsButtons",
+      "args": [
+        {
+          "name": "set_showsButtons",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showsButtons": {
+      "name": "_showsButtons",
+      "bridgedName": "_showsButtons",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alternateActionIndex": {
+      "name": "_alternateActionIndex",
+      "bridgedName": "_alternateActionIndex",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alternateActionButtonTitles:": {
+      "name": "set_alternateActionButtonTitles:",
+      "bridgedName": "set_alternateActionButtonTitles",
+      "args": [
+        {
+          "name": "set_alternateActionButtonTitles",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alternateActionButtonTitles": {
+      "name": "_alternateActionButtonTitles",
+      "bridgedName": "_alternateActionButtonTitles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setResponsePlaceholder:": {
+      "name": "setResponsePlaceholder:",
+      "bridgedName": "setResponsePlaceholder",
+      "args": [
+        {
+          "name": "setResponsePlaceholder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "responsePlaceholder": {
+      "name": "responsePlaceholder",
+      "bridgedName": "responsePlaceholder",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_identityImageStyle:": {
+      "name": "set_identityImageStyle:",
+      "bridgedName": "set_identityImageStyle",
+      "args": [
+        {
+          "name": "set_identityImageStyle",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_identityImageStyle": {
+      "name": "_identityImageStyle",
+      "bridgedName": "_identityImageStyle",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_ignoresDoNotDisturb:": {
+      "name": "set_ignoresDoNotDisturb:",
+      "bridgedName": "set_ignoresDoNotDisturb",
+      "args": [
+        {
+          "name": "set_ignoresDoNotDisturb",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ignoresDoNotDisturb": {
+      "name": "_ignoresDoNotDisturb",
+      "bridgedName": "_ignoresDoNotDisturb",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_poofsOnCancel:": {
+      "name": "set_poofsOnCancel:",
+      "bridgedName": "set_poofsOnCancel",
+      "args": [
+        {
+          "name": "set_poofsOnCancel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_poofsOnCancel": {
+      "name": "_poofsOnCancel",
+      "bridgedName": "_poofsOnCancel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_persistent:": {
+      "name": "set_persistent:",
+      "bridgedName": "set_persistent",
+      "args": [
+        {
+          "name": "set_persistent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistent": {
+      "name": "_persistent",
+      "bridgedName": "_persistent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_dismissAfterDuration:": {
+      "name": "set_dismissAfterDuration:",
+      "bridgedName": "set_dismissAfterDuration",
+      "args": [
+        {
+          "name": "set_dismissAfterDuration",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dismissAfterDuration": {
+      "name": "_dismissAfterDuration",
+      "bridgedName": "_dismissAfterDuration",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_actionButtonIsSnooze:": {
+      "name": "set_actionButtonIsSnooze:",
+      "bridgedName": "set_actionButtonIsSnooze",
+      "args": [
+        {
+          "name": "set_actionButtonIsSnooze",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_actionButtonIsSnooze": {
+      "name": "_actionButtonIsSnooze",
+      "bridgedName": "_actionButtonIsSnooze",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_allDayEvent:": {
+      "name": "set_allDayEvent:",
+      "bridgedName": "set_allDayEvent",
+      "args": [
+        {
+          "name": "set_allDayEvent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAllDayEvent": {
+      "name": "_isAllDayEvent",
+      "bridgedName": "_isAllDayEvent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_deliveryExpiration:": {
+      "name": "set_deliveryExpiration:",
+      "bridgedName": "set_deliveryExpiration",
+      "args": [
+        {
+          "name": "set_deliveryExpiration",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deliveryExpiration": {
+      "name": "_deliveryExpiration",
+      "bridgedName": "_deliveryExpiration",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_dateString:": {
+      "name": "set_dateString:",
+      "bridgedName": "set_dateString",
+      "args": [
+        {
+          "name": "set_dateString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dateString": {
+      "name": "_dateString",
+      "bridgedName": "_dateString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_eventDate:": {
+      "name": "set_eventDate:",
+      "bridgedName": "set_eventDate",
+      "args": [
+        {
+          "name": "set_eventDate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_eventDate": {
+      "name": "_eventDate",
+      "bridgedName": "_eventDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_badgeCount:": {
+      "name": "set_badgeCount:",
+      "bridgedName": "set_badgeCount",
+      "args": [
+        {
+          "name": "set_badgeCount",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_badgeCount": {
+      "name": "_badgeCount",
+      "bridgedName": "_badgeCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snoozedDate": {
+      "name": "_snoozedDate",
+      "bridgedName": "_snoozedDate",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snoozeInterval": {
+      "name": "_snoozeInterval",
+      "bridgedName": "_snoozeInterval",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snoozed": {
+      "name": "_snoozed",
+      "bridgedName": "_snoozed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_displayStyle:": {
+      "name": "set_displayStyle:",
+      "bridgedName": "set_displayStyle",
+      "args": [
+        {
+          "name": "set_displayStyle",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayStyle": {
+      "name": "_displayStyle",
+      "bridgedName": "_displayStyle",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_style:": {
+      "name": "set_style:",
+      "bridgedName": "set_style",
+      "args": [
+        {
+          "name": "set_style",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_style": {
+      "name": "_style",
+      "bridgedName": "_style",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRemote": {
+      "name": "isRemote",
+      "bridgedName": "isRemote",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_clearable:": {
+      "name": "set_clearable:",
+      "bridgedName": "set_clearable",
+      "args": [
+        {
+          "name": "set_clearable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearable": {
+      "name": "_clearable",
+      "bridgedName": "_clearable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_storageID:": {
+      "name": "set_storageID:",
+      "bridgedName": "set_storageID",
+      "args": [
+        {
+          "name": "set_storageID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storageID": {
+      "name": "_storageID",
+      "bridgedName": "_storageID",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDuration:": {
+      "name": "setDuration:",
+      "bridgedName": "setDuration",
+      "args": [
+        {
+          "name": "setDuration",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "duration": {
+      "name": "duration",
+      "bridgedName": "duration",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "activationType": {
+      "name": "activationType",
+      "bridgedName": "activationType",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPresented": {
+      "name": "isPresented",
+      "bridgedName": "isPresented",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actualDeliveryDate": {
+      "name": "actualDeliveryDate",
+      "bridgedName": "actualDeliveryDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deliveryRepeatInterval": {
+      "name": "deliveryRepeatInterval",
+      "bridgedName": "deliveryRepeatInterval",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDeliveryTimeZone:": {
+      "name": "setDeliveryTimeZone:",
+      "bridgedName": "setDeliveryTimeZone",
+      "args": [
+        {
+          "name": "setDeliveryTimeZone",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deliveryTimeZone": {
+      "name": "deliveryTimeZone",
+      "bridgedName": "deliveryTimeZone",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDeliveryDate:": {
+      "name": "setDeliveryDate:",
+      "bridgedName": "setDeliveryDate",
+      "args": [
+        {
+          "name": "setDeliveryDate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deliveryDate": {
+      "name": "deliveryDate",
+      "bridgedName": "deliveryDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageURL": {
+      "name": "_imageURL",
+      "bridgedName": "_imageURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_proxyIdentifier:": {
+      "name": "set_proxyIdentifier:",
+      "bridgedName": "set_proxyIdentifier",
+      "args": [
+        {
+          "name": "set_proxyIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_proxyIdentifier": {
+      "name": "_proxyIdentifier",
+      "bridgedName": "_proxyIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIdentifier:": {
+      "name": "setIdentifier:",
+      "bridgedName": "setIdentifier",
+      "args": [
+        {
+          "name": "setIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "identifier": {
+      "name": "identifier",
+      "bridgedName": "identifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSoundName:": {
+      "name": "setSoundName:",
+      "bridgedName": "setSoundName",
+      "args": [
+        {
+          "name": "setSoundName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "soundName": {
+      "name": "soundName",
+      "bridgedName": "soundName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHasReplyButton:": {
+      "name": "setHasReplyButton:",
+      "bridgedName": "setHasReplyButton",
+      "args": [
+        {
+          "name": "setHasReplyButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasReplyButton": {
+      "name": "hasReplyButton",
+      "bridgedName": "hasReplyButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHasActionButton:": {
+      "name": "setHasActionButton:",
+      "bridgedName": "setHasActionButton",
+      "args": [
+        {
+          "name": "setHasActionButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasActionButton": {
+      "name": "hasActionButton",
+      "bridgedName": "hasActionButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "informativeText": {
+      "name": "informativeText",
+      "bridgedName": "informativeText",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subtitle": {
+      "name": "subtitle",
+      "bridgedName": "subtitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "title": {
+      "name": "title",
+      "bridgedName": "title",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextFireDate": {
+      "name": "_nextFireDate",
+      "bridgedName": "_nextFireDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPeopleIdentifiers:": {
+      "name": "setPeopleIdentifiers:",
+      "bridgedName": "setPeopleIdentifiers",
+      "args": [
+        {
+          "name": "setPeopleIdentifiers",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAdditionalActions:": {
+      "name": "setAdditionalActions:",
+      "bridgedName": "setAdditionalActions",
+      "args": [
+        {
+          "name": "setAdditionalActions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAdditionalActivationAction:": {
+      "name": "_setAdditionalActivationAction:",
+      "bridgedName": "_setAdditionalActivationAction",
+      "args": [
+        {
+          "name": "_setAdditionalActivationAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAlternateActionIndex:": {
+      "name": "_setAlternateActionIndex:",
+      "bridgedName": "_setAlternateActionIndex",
+      "args": [
+        {
+          "name": "_setAlternateActionIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_areIdentifiersEqual:": {
+      "name": "_areIdentifiersEqual:",
+      "bridgedName": "_areIdentifiersEqual",
+      "args": [
+        {
+          "name": "_areIdentifiersEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_contentImageData:": {
+      "name": "set_contentImageData:",
+      "bridgedName": "set_contentImageData",
+      "args": [
+        {
+          "name": "set_contentImageData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentImageData": {
+      "name": "_contentImageData",
+      "bridgedName": "_contentImageData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasContentImage": {
+      "name": "_hasContentImage",
+      "bridgedName": "_hasContentImage",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contentImage": {
+      "name": "contentImage",
+      "bridgedName": "contentImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContentImage:": {
+      "name": "setContentImage:",
+      "bridgedName": "setContentImage",
+      "args": [
+        {
+          "name": "setContentImage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_identityImageHasBorder": {
+      "name": "_identityImageHasBorder",
+      "bridgedName": "_identityImageHasBorder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_identityImageHasBorder:": {
+      "name": "set_identityImageHasBorder:",
+      "bridgedName": "set_identityImageHasBorder",
+      "args": [
+        {
+          "name": "set_identityImageHasBorder",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setActivationType:": {
+      "name": "_setActivationType:",
+      "bridgedName": "_setActivationType",
+      "args": [
+        {
+          "name": "_setActivationType",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSnoozedDate:": {
+      "name": "_setSnoozedDate:",
+      "bridgedName": "_setSnoozedDate",
+      "args": [
+        {
+          "name": "_setSnoozedDate",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSnoozeInterval:": {
+      "name": "_setSnoozeInterval:",
+      "bridgedName": "_setSnoozeInterval",
+      "args": [
+        {
+          "name": "_setSnoozeInterval",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSnoozed:": {
+      "name": "_setSnoozed:",
+      "bridgedName": "_setSnoozed",
+      "args": [
+        {
+          "name": "_setSnoozed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRemote:": {
+      "name": "setRemote:",
+      "bridgedName": "setRemote",
+      "args": [
+        {
+          "name": "setRemote",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPresented:": {
+      "name": "_setPresented:",
+      "bridgedName": "_setPresented",
+      "args": [
+        {
+          "name": "_setPresented",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setActualDeliveryDate:": {
+      "name": "_setActualDeliveryDate:",
+      "bridgedName": "_setActualDeliveryDate",
+      "args": [
+        {
+          "name": "_setActualDeliveryDate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDeliveryRepeatInterval:": {
+      "name": "setDeliveryRepeatInterval:",
+      "bridgedName": "setDeliveryRepeatInterval",
+      "args": [
+        {
+          "name": "setDeliveryRepeatInterval",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setResponse:": {
+      "name": "_setResponse:",
+      "bridgedName": "_setResponse",
+      "args": [
+        {
+          "name": "_setResponse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "response": {
+      "name": "response",
+      "bridgedName": "response",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_identityImageData:": {
+      "name": "set_identityImageData:",
+      "bridgedName": "set_identityImageData",
+      "args": [
+        {
+          "name": "set_identityImageData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_identityImageData": {
+      "name": "_identityImageData",
+      "bridgedName": "_identityImageData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_identityImage": {
+      "name": "_identityImage",
+      "bridgedName": "_identityImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_identityImage:": {
+      "name": "set_identityImage:",
+      "bridgedName": "set_identityImage",
+      "args": [
+        {
+          "name": "set_identityImage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIdentityImage:withIdentifier:": {
+      "name": "_setIdentityImage:withIdentifier:",
+      "bridgedName": "_setIdentityImage_withIdentifier",
+      "args": [
+        {
+          "name": "_setIdentityImage",
+          "type": "id"
+        },
+        {
+          "name": "withIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_secureEncodedUserInfo": {
+      "name": "_secureEncodedUserInfo",
+      "bridgedName": "_secureEncodedUserInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setEncodedUserInfo:": {
+      "name": "_setEncodedUserInfo:",
+      "bridgedName": "_setEncodedUserInfo",
+      "args": [
+        {
+          "name": "_setEncodedUserInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUserInfo:": {
+      "name": "setUserInfo:",
+      "bridgedName": "setUserInfo",
+      "args": [
+        {
+          "name": "setUserInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userInfo": {
+      "name": "userInfo",
+      "bridgedName": "userInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_imageURL:": {
+      "name": "set_imageURL:",
+      "bridgedName": "set_imageURL",
+      "args": [
+        {
+          "name": "set_imageURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOtherButtonTitle:": {
+      "name": "setOtherButtonTitle:",
+      "bridgedName": "setOtherButtonTitle",
+      "args": [
+        {
+          "name": "setOtherButtonTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherButtonTitle": {
+      "name": "otherButtonTitle",
+      "bridgedName": "otherButtonTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setActionButtonTitle:": {
+      "name": "setActionButtonTitle:",
+      "bridgedName": "setActionButtonTitle",
+      "args": [
+        {
+          "name": "setActionButtonTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionButtonTitle": {
+      "name": "actionButtonTitle",
+      "bridgedName": "actionButtonTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInformativeText:": {
+      "name": "setInformativeText:",
+      "bridgedName": "setInformativeText",
+      "args": [
+        {
+          "name": "setInformativeText",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSubtitle:": {
+      "name": "setSubtitle:",
+      "bridgedName": "setSubtitle",
+      "args": [
+        {
+          "name": "setSubtitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitle:": {
+      "name": "setTitle:",
+      "bridgedName": "setTitle",
+      "args": [
+        {
+          "name": "setTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_subtitle:": {
+      "name": "set_subtitle:",
+      "bridgedName": "set_subtitle",
+      "args": [
+        {
+          "name": "set_subtitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isRemote": {
+      "name": "_isRemote",
+      "bridgedName": "_isRemote",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subtitle": {
+      "name": "_subtitle",
+      "bridgedName": "_subtitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

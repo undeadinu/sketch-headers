@@ -1,0 +1,443 @@
+{
+  "imports": [
+    "CALayer.h"
+  ],
+  "classes": [
+    "NSPointerArray",
+    "NSTileScrollingInfoLayer"
+  ],
+  "protocol": false,
+  "className": "_NSTiledLayer",
+  "extends": "CALayer",
+  "interfaces": [],
+  "methods": {
+    "needsDisplayForKey:": {
+      "name": "needsDisplayForKey:",
+      "bridgedName": "needsDisplayForKey",
+      "args": [
+        {
+          "name": "needsDisplayForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultValueForKey:": {
+      "name": "defaultValueForKey:",
+      "bridgedName": "defaultValueForKey",
+      "args": [
+        {
+          "name": "defaultValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "addSublayer:": {
+      "name": "addSublayer:",
+      "bridgedName": "addSublayer",
+      "args": [
+        {
+          "name": "addSublayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_prepareContentRect:": {
+      "name": "NS_prepareContentRect:",
+      "bridgedName": "NS_prepareContentRect",
+      "args": [
+        {
+          "name": "NS_prepareContentRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_invalidatePreparedContentRect": {
+      "name": "NS_invalidatePreparedContentRect",
+      "bridgedName": "NS_invalidatePreparedContentRect",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_hasPartialPrefetchedContentsForRect:": {
+      "name": "NS_hasPartialPrefetchedContentsForRect:",
+      "bridgedName": "NS_hasPartialPrefetchedContentsForRect",
+      "args": [
+        {
+          "name": "NS_hasPartialPrefetchedContentsForRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_hasPrefetchedContentsForRect:": {
+      "name": "NS_hasPrefetchedContentsForRect:",
+      "bridgedName": "NS_hasPrefetchedContentsForRect",
+      "args": [
+        {
+          "name": "NS_hasPrefetchedContentsForRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_renderedRectInRect:scrollVelocity:": {
+      "name": "NS_renderedRectInRect:scrollVelocity:",
+      "bridgedName": "NS_renderedRectInRect_scrollVelocity",
+      "args": [
+        {
+          "name": "NS_renderedRectInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "scrollVelocity",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_prefetchContentsInRect:scrollVelocity:": {
+      "name": "NS_prefetchContentsInRect:scrollVelocity:",
+      "bridgedName": "NS_prefetchContentsInRect_scrollVelocity",
+      "args": [
+        {
+          "name": "NS_prefetchContentsInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "scrollVelocity",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_setPreparedContentRect:": {
+      "name": "NS_setPreparedContentRect:",
+      "bridgedName": "NS_setPreparedContentRect",
+      "args": [
+        {
+          "name": "NS_setPreparedContentRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_activeVisibleRect": {
+      "name": "NS_activeVisibleRect",
+      "bridgedName": "NS_activeVisibleRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_showPrefetchedContentsIfNecessaryInRect:": {
+      "name": "NS_showPrefetchedContentsIfNecessaryInRect:",
+      "bridgedName": "NS_showPrefetchedContentsIfNecessaryInRect",
+      "args": [
+        {
+          "name": "NS_showPrefetchedContentsIfNecessaryInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_wantsToPrefetchTiles": {
+      "name": "NS_wantsToPrefetchTiles",
+      "bridgedName": "NS_wantsToPrefetchTiles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_purgeExcessTileContents": {
+      "name": "_purgeExcessTileContents",
+      "bridgedName": "_purgeExcessTileContents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawTile:inContext:": {
+      "name": "drawTile:inContext:",
+      "bridgedName": "drawTile_inContext",
+      "args": [
+        {
+          "name": "drawTile",
+          "type": "id"
+        },
+        {
+          "name": "inContext",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canDrawTile:": {
+      "name": "canDrawTile:",
+      "bridgedName": "canDrawTile",
+      "args": [
+        {
+          "name": "canDrawTile",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContents:": {
+      "name": "setContents:",
+      "bridgedName": "setContents",
+      "args": [
+        {
+          "name": "setContents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_setContentsScaleSize:": {
+      "name": "NS_setContentsScaleSize:",
+      "bridgedName": "NS_setContentsScaleSize",
+      "args": [
+        {
+          "name": "NS_setContentsScaleSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContentsScale:": {
+      "name": "setContentsScale:",
+      "bridgedName": "setContentsScale",
+      "args": [
+        {
+          "name": "setContentsScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "display": {
+      "name": "display",
+      "bridgedName": "display",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplayInRect:": {
+      "name": "setNeedsDisplayInRect:",
+      "bridgedName": "setNeedsDisplayInRect",
+      "args": [
+        {
+          "name": "setNeedsDisplayInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsLayout": {
+      "name": "setNeedsLayout",
+      "bridgedName": "setNeedsLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didChangeValueForKey:": {
+      "name": "didChangeValueForKey:",
+      "bridgedName": "didChangeValueForKey",
+      "args": [
+        {
+          "name": "didChangeValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visibleRectDidChange": {
+      "name": "visibleRectDidChange",
+      "bridgedName": "visibleRectDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidBecomeVisible:": {
+      "name": "layerDidBecomeVisible:",
+      "bridgedName": "layerDidBecomeVisible",
+      "args": [
+        {
+          "name": "layerDidBecomeVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_contentsAligningEnabled": {
+      "name": "NS_contentsAligningEnabled",
+      "bridgedName": "NS_contentsAligningEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_isScrolling": {
+      "name": "NS_isScrolling",
+      "bridgedName": "NS_isScrolling",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setBounds:": {
+      "name": "setBounds:",
+      "bridgedName": "setBounds",
+      "args": [
+        {
+          "name": "setBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileScrollingInfoLayer": {
+      "name": "updateTileScrollingInfoLayer",
+      "bridgedName": "updateTileScrollingInfoLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTileScrollingInfoLayerFrame": {
+      "name": "_updateTileScrollingInfoLayerFrame",
+      "bridgedName": "_updateTileScrollingInfoLayerFrame",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_setPresentationRect:": {
+      "name": "NS_setPresentationRect:",
+      "bridgedName": "NS_setPresentationRect",
+      "args": [
+        {
+          "name": "NS_setPresentationRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_setIsScrolling:": {
+      "name": "NS_setIsScrolling:",
+      "bridgedName": "NS_setIsScrolling",
+      "args": [
+        {
+          "name": "NS_setIsScrolling",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addAllTilesWithNonPurgedContents": {
+      "name": "_addAllTilesWithNonPurgedContents",
+      "bridgedName": "_addAllTilesWithNonPurgedContents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderInContext:": {
+      "name": "renderInContext:",
+      "bridgedName": "renderInContext",
+      "args": [
+        {
+          "name": "renderInContext",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "tileClass": {
+      "name": "tileClass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

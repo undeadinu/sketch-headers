@@ -1,0 +1,1360 @@
+{
+  "imports": [
+    "NSTouchBarColorPickerViewControllerDelegate.h"
+  ],
+  "classes": [
+    "NSColor",
+    "NSMutableArray",
+    "NSString",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSColorPanel",
+  "extends": "NSPanel",
+  "interfaces": [
+    "NSTouchBarColorPickerViewControllerDelegate"
+  ],
+  "methods": {
+    "_dragColor:withEvent:fromView:source:": {
+      "name": "_dragColor:withEvent:fromView:source:",
+      "bridgedName": "_dragColor_withEvent_fromView_source",
+      "args": [
+        {
+          "name": "_dragColor",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        },
+        {
+          "name": "fromView",
+          "type": "id"
+        },
+        {
+          "name": "source",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "dragColor:withEvent:fromView:": {
+      "name": "dragColor:withEvent:fromView:",
+      "bridgedName": "dragColor_withEvent_fromView",
+      "args": [
+        {
+          "name": "dragColor",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        },
+        {
+          "name": "fromView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "ignoreModifierKeysWhileDragging": {
+      "name": "ignoreModifierKeysWhileDragging",
+      "bridgedName": "ignoreModifierKeysWhileDragging",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "draggingSourceOperationMaskForLocal:": {
+      "name": "draggingSourceOperationMaskForLocal:",
+      "bridgedName": "draggingSourceOperationMaskForLocal",
+      "args": [
+        {
+          "name": "draggingSourceOperationMaskForLocal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "loadsExternalColorPickers": {
+      "name": "loadsExternalColorPickers",
+      "bridgedName": "loadsExternalColorPickers",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setLoadsExternalColorPickers:": {
+      "name": "setLoadsExternalColorPickers:",
+      "bridgedName": "setLoadsExternalColorPickers",
+      "args": [
+        {
+          "name": "setLoadsExternalColorPickers",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setPickerMode:": {
+      "name": "setPickerMode:",
+      "bridgedName": "setPickerMode",
+      "args": [
+        {
+          "name": "setPickerMode",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setPickerMask:": {
+      "name": "setPickerMask:",
+      "bridgedName": "setPickerMask",
+      "args": [
+        {
+          "name": "setPickerMask",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "restoreWindowWithIdentifier:state:completionHandler:": {
+      "name": "restoreWindowWithIdentifier:state:completionHandler:",
+      "bridgedName": "restoreWindowWithIdentifier_state_completionHandler",
+      "args": [
+        {
+          "name": "restoreWindowWithIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "state",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedColorPanelExists": {
+      "name": "sharedColorPanelExists",
+      "bridgedName": "sharedColorPanelExists",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedColorPanel": {
+      "name": "sharedColorPanel",
+      "bridgedName": "sharedColorPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "warmupExternalColorPickersIfNecessary": {
+      "name": "warmupExternalColorPickersIfNecessary",
+      "bridgedName": "warmupExternalColorPickersIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingTouchBar": {
+      "name": "keyPathsForValuesAffectingTouchBar",
+      "bridgedName": "keyPathsForValuesAffectingTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_middleViewFrameChanged:": {
+      "name": "_middleViewFrameChanged:",
+      "bridgedName": "_middleViewFrameChanged",
+      "args": [
+        {
+          "name": "_middleViewFrameChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "conformsToProtocol:": {
+      "name": "conformsToProtocol:",
+      "bridgedName": "conformsToProtocol",
+      "args": [
+        {
+          "name": "conformsToProtocol",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorWellAcceptedColor:": {
+      "name": "_colorWellAcceptedColor:",
+      "bridgedName": "_colorWellAcceptedColor",
+      "args": [
+        {
+          "name": "_colorWellAcceptedColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_set:": {
+      "name": "_set:",
+      "bridgedName": "_set",
+      "args": [
+        {
+          "name": "_set",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forceSetColor:": {
+      "name": "_forceSetColor:",
+      "bridgedName": "_forceSetColor",
+      "args": [
+        {
+          "name": "_forceSetColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchToAppropriateModeForColorIfNecessary:": {
+      "name": "_switchToAppropriateModeForColorIfNecessary:",
+      "bridgedName": "_switchToAppropriateModeForColorIfNecessary",
+      "args": [
+        {
+          "name": "_switchToAppropriateModeForColorIfNecessary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendActionAndNotification": {
+      "name": "_sendActionAndNotification",
+      "bridgedName": "_sendActionAndNotification",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forceSendAction:notification:firstResponder:": {
+      "name": "_forceSendAction:notification:firstResponder:",
+      "bridgedName": "_forceSendAction_notification_firstResponder",
+      "args": [
+        {
+          "name": "_forceSendAction",
+          "type": "BOOL"
+        },
+        {
+          "name": "notification",
+          "type": "BOOL"
+        },
+        {
+          "name": "firstResponder",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_withColorSettingDisabled:": {
+      "name": "_withColorSettingDisabled:",
+      "bridgedName": "_withColorSettingDisabled",
+      "args": [
+        {
+          "name": "_withColorSettingDisabled",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsColorSetting": {
+      "name": "_allowsColorSetting",
+      "bridgedName": "_allowsColorSetting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startingWindowForSendAction:": {
+      "name": "_startingWindowForSendAction:",
+      "bridgedName": "_startingWindowForSendAction",
+      "args": [
+        {
+          "name": "_startingWindowForSendAction",
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detachColorList:": {
+      "name": "detachColorList:",
+      "bridgedName": "detachColorList",
+      "args": [
+        {
+          "name": "detachColorList",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attachColorList:": {
+      "name": "attachColorList:",
+      "bridgedName": "attachColorList",
+      "args": [
+        {
+          "name": "attachColorList",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magnifierDidFailToSelectColor:": {
+      "name": "magnifierDidFailToSelectColor:",
+      "bridgedName": "magnifierDidFailToSelectColor",
+      "args": [
+        {
+          "name": "magnifierDidFailToSelectColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magnifier:didSelectColor:": {
+      "name": "magnifier:didSelectColor:",
+      "bridgedName": "magnifier_didSelectColor",
+      "args": [
+        {
+          "name": "magnifier",
+          "type": "id"
+        },
+        {
+          "name": "didSelectColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_magnify:": {
+      "name": "_magnify:",
+      "bridgedName": "_magnify",
+      "args": [
+        {
+          "name": "_magnify",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isCurrentColorPicker:": {
+      "name": "_isCurrentColorPicker:",
+      "bridgedName": "_isCurrentColorPicker",
+      "args": [
+        {
+          "name": "_isCurrentColorPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchToPicker:": {
+      "name": "_switchToPicker:",
+      "bridgedName": "_switchToPicker",
+      "args": [
+        {
+          "name": "_switchToPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sizeWindowForPicker:": {
+      "name": "_sizeWindowForPicker:",
+      "bridgedName": "_sizeWindowForPicker",
+      "args": [
+        {
+          "name": "_sizeWindowForPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMinPickerContentSize:": {
+      "name": "_setMinPickerContentSize:",
+      "bridgedName": "_setMinPickerContentSize",
+      "args": [
+        {
+          "name": "_setMinPickerContentSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_panelSizeExcludingToolbar": {
+      "name": "_panelSizeExcludingToolbar",
+      "bridgedName": "_panelSizeExcludingToolbar",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchViewForToolbarItem:": {
+      "name": "_switchViewForToolbarItem:",
+      "bridgedName": "_switchViewForToolbarItem",
+      "args": [
+        {
+          "name": "_switchViewForToolbarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_saveMode": {
+      "name": "_saveMode",
+      "bridgedName": "_saveMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newLegalSizeFromSize:force:roundDirection:": {
+      "name": "_newLegalSizeFromSize:force:roundDirection:",
+      "bridgedName": "_newLegalSizeFromSize_force_roundDirection",
+      "args": [
+        {
+          "name": "_newLegalSizeFromSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "force",
+          "type": "BOOL"
+        },
+        {
+          "name": "roundDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_syncSwatchSizeToSavedNumVisibleRows": {
+      "name": "_syncSwatchSizeToSavedNumVisibleRows",
+      "bridgedName": "_syncSwatchSizeToSavedNumVisibleRows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNumVisibleSwatchRows:": {
+      "name": "_setNumVisibleSwatchRows:",
+      "bridgedName": "_setNumVisibleSwatchRows",
+      "args": [
+        {
+          "name": "_setNumVisibleSwatchRows",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_arrayForPartialPinningFromArray:": {
+      "name": "_arrayForPartialPinningFromArray:",
+      "bridgedName": "_arrayForPartialPinningFromArray",
+      "args": [
+        {
+          "name": "_arrayForPartialPinningFromArray",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unpinViews:resizeMasks:": {
+      "name": "_unpinViews:resizeMasks:",
+      "bridgedName": "_unpinViews_resizeMasks",
+      "args": [
+        {
+          "name": "_unpinViews",
+          "type": "id"
+        },
+        {
+          "name": "resizeMasks",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pinViews:resizeFlagsToLeaveAlone:": {
+      "name": "_pinViews:resizeFlagsToLeaveAlone:",
+      "bridgedName": "_pinViews_resizeFlagsToLeaveAlone",
+      "args": [
+        {
+          "name": "_pinViews",
+          "type": "id"
+        },
+        {
+          "name": "resizeFlagsToLeaveAlone",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unpinViews:": {
+      "name": "_unpinViews:",
+      "bridgedName": "_unpinViews",
+      "args": [
+        {
+          "name": "_unpinViews",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pinViews:": {
+      "name": "_pinViews:",
+      "bridgedName": "_pinViews",
+      "args": [
+        {
+          "name": "_pinViews",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endLiveResize": {
+      "name": "_endLiveResize",
+      "bridgedName": "_endLiveResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_savedMode": {
+      "name": "_savedMode",
+      "bridgedName": "_savedMode",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupButtonImageAndToolTips": {
+      "name": "_setupButtonImageAndToolTips",
+      "bridgedName": "_setupButtonImageAndToolTips",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeColorPicker:": {
+      "name": "_removeColorPicker:",
+      "bridgedName": "_removeColorPicker",
+      "args": [
+        {
+          "name": "_removeColorPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolTipForColorPicker:": {
+      "name": "_toolTipForColorPicker:",
+      "bridgedName": "_toolTipForColorPicker",
+      "args": [
+        {
+          "name": "_toolTipForColorPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendColorPicker:": {
+      "name": "_appendColorPicker:",
+      "bridgedName": "_appendColorPicker",
+      "args": [
+        {
+          "name": "_appendColorPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertionOrderForPicker:": {
+      "name": "_insertionOrderForPicker:",
+      "bridgedName": "_insertionOrderForPicker",
+      "args": [
+        {
+          "name": "_insertionOrderForPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorPickers": {
+      "name": "_colorPickers",
+      "bridgedName": "_colorPickers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadColorPickers": {
+      "name": "_loadColorPickers",
+      "bridgedName": "_loadColorPickers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_timedAdjustTextControl:": {
+      "name": "_timedAdjustTextControl:",
+      "bridgedName": "_timedAdjustTextControl",
+      "args": [
+        {
+          "name": "_timedAdjustTextControl",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShowAlpha:andForce:": {
+      "name": "_setShowAlpha:andForce:",
+      "bridgedName": "_setShowAlpha_andForce",
+      "args": [
+        {
+          "name": "_setShowAlpha",
+          "type": "BOOL"
+        },
+        {
+          "name": "andForce",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertNewline:": {
+      "name": "insertNewline:",
+      "bridgedName": "insertNewline",
+      "args": [
+        {
+          "name": "insertNewline",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelKey:": {
+      "name": "_cancelKey:",
+      "bridgedName": "_cancelKey",
+      "args": [
+        {
+          "name": "_cancelKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopModal:": {
+      "name": "_stopModal:",
+      "bridgedName": "_stopModal",
+      "args": [
+        {
+          "name": "_stopModal",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustedFrameForSaving:": {
+      "name": "_adjustedFrameForSaving:",
+      "bridgedName": "_adjustedFrameForSaving",
+      "args": [
+        {
+          "name": "_adjustedFrameForSaving",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustedFrameFromDefaults:": {
+      "name": "_adjustedFrameFromDefaults:",
+      "bridgedName": "_adjustedFrameFromDefaults",
+      "args": [
+        {
+          "name": "_adjustedFrameFromDefaults",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUtilityWindow:": {
+      "name": "_setUtilityWindow:",
+      "bridgedName": "_setUtilityWindow",
+      "args": [
+        {
+          "name": "_setUtilityWindow",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUseModalAppearance:": {
+      "name": "_setUseModalAppearance:",
+      "bridgedName": "_setUseModalAppearance",
+      "args": [
+        {
+          "name": "_setUseModalAppearance",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeMinColorPanelSizeByDelta:setWindowFrame:": {
+      "name": "_changeMinColorPanelSizeByDelta:setWindowFrame:",
+      "bridgedName": "_changeMinColorPanelSizeByDelta_setWindowFrame",
+      "args": [
+        {
+          "name": "_changeMinColorPanelSizeByDelta",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "setWindowFrame",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeMinColorPanelSizeByDelta:compareWithOldMinSize:oldMinSize:setWindowFrame:": {
+      "name": "_changeMinColorPanelSizeByDelta:compareWithOldMinSize:oldMinSize:setWindowFrame:",
+      "bridgedName": "_changeMinColorPanelSizeByDelta_compareWithOldMinSize_oldMinSize_setWindowFrame",
+      "args": [
+        {
+          "name": "_changeMinColorPanelSizeByDelta",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "compareWithOldMinSize",
+          "type": "BOOL"
+        },
+        {
+          "name": "oldMinSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "setWindowFrame",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetOpacity:": {
+      "name": "_resetOpacity:",
+      "bridgedName": "_resetOpacity",
+      "args": [
+        {
+          "name": "_resetOpacity",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetOpacity:andForceSetColor:": {
+      "name": "_resetOpacity:andForceSetColor:",
+      "bridgedName": "_resetOpacity_andForceSetColor",
+      "args": [
+        {
+          "name": "_resetOpacity",
+          "type": "id"
+        },
+        {
+          "name": "andForceSetColor",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_provideNewViewFor:initialViewRequest:": {
+      "name": "_provideNewViewFor:initialViewRequest:",
+      "bridgedName": "_provideNewViewFor_initialViewRequest",
+      "args": [
+        {
+          "name": "_provideNewViewFor",
+          "type": "id"
+        },
+        {
+          "name": "initialViewRequest",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_determinesMinSizeFromAccessoryView:": {
+      "name": "_determinesMinSizeFromAccessoryView:",
+      "bridgedName": "_determinesMinSizeFromAccessoryView",
+      "args": [
+        {
+          "name": "_determinesMinSizeFromAccessoryView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColorMask:": {
+      "name": "setColorMask:",
+      "bridgedName": "setColorMask",
+      "args": [
+        {
+          "name": "setColorMask",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorMask": {
+      "name": "colorMask",
+      "bridgedName": "colorMask",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeNewColorInColorWell:": {
+      "name": "_storeNewColorInColorWell:",
+      "bridgedName": "_storeNewColorInColorWell",
+      "args": [
+        {
+          "name": "_storeNewColorInColorWell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateOpacitySlider": {
+      "name": "_validateOpacitySlider",
+      "bridgedName": "_validateOpacitySlider",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isViewOfPickerLoaded:": {
+      "name": "isViewOfPickerLoaded:",
+      "bridgedName": "isViewOfPickerLoaded",
+      "args": [
+        {
+          "name": "isViewOfPickerLoaded",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setViewOfPickerIsLoaded:": {
+      "name": "setViewOfPickerIsLoaded:",
+      "bridgedName": "setViewOfPickerIsLoaded",
+      "args": [
+        {
+          "name": "setViewOfPickerIsLoaded",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applicationDidBecomeActive:": {
+      "name": "applicationDidBecomeActive:",
+      "bridgedName": "applicationDidBecomeActive",
+      "args": [
+        {
+          "name": "applicationDidBecomeActive",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewFollowingModalButtons": {
+      "name": "_keyViewFollowingModalButtons",
+      "bridgedName": "_keyViewFollowingModalButtons",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewPrecedingModalButtons": {
+      "name": "_keyViewPrecedingModalButtons",
+      "bridgedName": "_keyViewPrecedingModalButtons",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewFollowingOpacityViews": {
+      "name": "_keyViewFollowingOpacityViews",
+      "bridgedName": "_keyViewFollowingOpacityViews",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewFollowingAccessoryView": {
+      "name": "_keyViewFollowingAccessoryView",
+      "bridgedName": "_keyViewFollowingAccessoryView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorSwatch": {
+      "name": "_colorSwatch",
+      "bridgedName": "_colorSwatch",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewPrecedingAccesoryView": {
+      "name": "_keyViewPrecedingAccesoryView",
+      "bridgedName": "_keyViewPrecedingAccesoryView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewFollowingPickerViews": {
+      "name": "_keyViewFollowingPickerViews",
+      "bridgedName": "_keyViewFollowingPickerViews",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyViewPrecedingPickerViews": {
+      "name": "_keyViewPrecedingPickerViews",
+      "bridgedName": "_keyViewPrecedingPickerViews",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pickerView": {
+      "name": "_pickerView",
+      "bridgedName": "_pickerView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectFirstKeyView": {
+      "name": "_selectFirstKeyView",
+      "bridgedName": "_selectFirstKeyView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "becomeKeyWindow": {
+      "name": "becomeKeyWindow",
+      "bridgedName": "becomeKeyWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resignKeyWindow": {
+      "name": "resignKeyWindow",
+      "bridgedName": "resignKeyWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeWindowFrameSizeByDelta:display:animate:": {
+      "name": "changeWindowFrameSizeByDelta:display:animate:",
+      "bridgedName": "changeWindowFrameSizeByDelta_display_animate",
+      "args": [
+        {
+          "name": "changeWindowFrameSizeByDelta",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "display",
+          "type": "BOOL"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTitleFixedPointWindowFrame:display:animate:": {
+      "name": "_setTitleFixedPointWindowFrame:display:animate:",
+      "bridgedName": "_setTitleFixedPointWindowFrame_display_animate",
+      "args": [
+        {
+          "name": "_setTitleFixedPointWindowFrame",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "display",
+          "type": "BOOL"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidesOnDeactivate:": {
+      "name": "setHidesOnDeactivate:",
+      "bridgedName": "setHidesOnDeactivate",
+      "args": [
+        {
+          "name": "setHidesOnDeactivate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorPanelDidLoad": {
+      "name": "_colorPanelDidLoad",
+      "bridgedName": "_colorPanelDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentRect:styleMask:backing:defer:": {
+      "name": "initWithContentRect:styleMask:backing:defer:",
+      "bridgedName": "initWithContentRect_styleMask_backing_defer",
+      "args": [
+        {
+          "name": "initWithContentRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "styleMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "backing",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "defer",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__setNumberOfRowsToToggleVisibleInColorSwatch:": {
+      "name": "__setNumberOfRowsToToggleVisibleInColorSwatch:",
+      "bridgedName": "__setNumberOfRowsToToggleVisibleInColorSwatch",
+      "args": [
+        {
+          "name": "__setNumberOfRowsToToggleVisibleInColorSwatch",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__numberOfRowsToToggleVisibleInColorSwatch": {
+      "name": "__numberOfRowsToToggleVisibleInColorSwatch",
+      "bridgedName": "__numberOfRowsToToggleVisibleInColorSwatch",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__numberOfVisibleRowsInColorSwatch": {
+      "name": "__numberOfVisibleRowsInColorSwatch",
+      "bridgedName": "__numberOfVisibleRowsInColorSwatch",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__action": {
+      "name": "__action",
+      "bridgedName": "__action",
+      "args": [],
+      "returns": "SEL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__target": {
+      "name": "__target",
+      "bridgedName": "__target",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorPickerViewController:didSelectColor:": {
+      "name": "colorPickerViewController:didSelectColor:",
+      "bridgedName": "colorPickerViewController_didSelectColor",
+      "args": [
+        {
+          "name": "colorPickerViewController",
+          "type": "id"
+        },
+        {
+          "name": "didSelectColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "color": {
+      "name": "color",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "alpha": {
+      "name": "alpha",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "usingModalAppearance": {
+      "name": "usingModalAppearance",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isUsingModalAppearance"
+      ]
+    },
+    "continuous": {
+      "name": "continuous",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isContinuous"
+      ]
+    },
+    "accessoryView": {
+      "name": "accessoryView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

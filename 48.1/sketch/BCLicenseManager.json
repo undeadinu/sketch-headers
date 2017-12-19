@@ -1,0 +1,522 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "BCLicense",
+    "NSDate",
+    "NSString",
+    "NSURL",
+    "NSURLSession"
+  ],
+  "protocol": false,
+  "className": "BCLicenseManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "apiURLForMethod:queryItems:": {
+      "name": "apiURLForMethod:queryItems:",
+      "bridgedName": "apiURLForMethod_queryItems",
+      "args": [
+        {
+          "name": "apiURLForMethod",
+          "type": "id"
+        },
+        {
+          "name": "queryItems",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "apiURL": {
+      "name": "apiURL",
+      "bridgedName": "apiURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetchLicenseMetadata:": {
+      "name": "fetchLicenseMetadata:",
+      "bridgedName": "fetchLicenseMetadata",
+      "args": [
+        {
+          "name": "fetchLicenseMetadata",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataAPIURL": {
+      "name": "metadataAPIURL",
+      "bridgedName": "metadataAPIURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "websiteAvailableVersionsURL": {
+      "name": "websiteAvailableVersionsURL",
+      "bridgedName": "websiteAvailableVersionsURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "websiteRenewalURLForLicenseKey:": {
+      "name": "websiteRenewalURLForLicenseKey:",
+      "bridgedName": "websiteRenewalURLForLicenseKey",
+      "args": [
+        {
+          "name": "websiteRenewalURLForLicenseKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "websiteRenewalURL": {
+      "name": "websiteRenewalURL",
+      "bridgedName": "websiteRenewalURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentVersion": {
+      "name": "currentVersion",
+      "bridgedName": "currentVersion",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "processURL:handler:": {
+      "name": "processURL:handler:",
+      "bridgedName": "processURL_handler",
+      "args": [
+        {
+          "name": "processURL",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performUnregisterCall:": {
+      "name": "performUnregisterCall:",
+      "bridgedName": "performUnregisterCall",
+      "args": [
+        {
+          "name": "performUnregisterCall",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unregister": {
+      "name": "unregister",
+      "bridgedName": "unregister",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unregisterWithPrompt": {
+      "name": "unregisterWithPrompt",
+      "bridgedName": "unregisterWithPrompt",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "licenseStateChanged": {
+      "name": "licenseStateChanged",
+      "bridgedName": "licenseStateChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "completeUpdateWithHandler:status:info:error:": {
+      "name": "completeUpdateWithHandler:status:info:error:",
+      "bridgedName": "completeUpdateWithHandler_status_info_error",
+      "args": [
+        {
+          "name": "completeUpdateWithHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "status",
+          "type": "long long"
+        },
+        {
+          "name": "info",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkForDeploymentKeyWithPath:removeFile:completionHandler:": {
+      "name": "checkForDeploymentKeyWithPath:removeFile:completionHandler:",
+      "bridgedName": "checkForDeploymentKeyWithPath_removeFile_completionHandler",
+      "args": [
+        {
+          "name": "checkForDeploymentKeyWithPath",
+          "type": "id"
+        },
+        {
+          "name": "removeFile",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestTrialLicenseWithHandler:": {
+      "name": "requestTrialLicenseWithHandler:",
+      "bridgedName": "requestTrialLicenseWithHandler",
+      "args": [
+        {
+          "name": "requestTrialLicenseWithHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fallbackToTrial:completionHandler:": {
+      "name": "fallbackToTrial:completionHandler:",
+      "bridgedName": "fallbackToTrial_completionHandler",
+      "args": [
+        {
+          "name": "fallbackToTrial",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "processLicenseRefreshResult:error:completionHandler:": {
+      "name": "processLicenseRefreshResult:error:completionHandler:",
+      "bridgedName": "processLicenseRefreshResult_error_completionHandler",
+      "args": [
+        {
+          "name": "processLicenseRefreshResult",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToRefreshLicense:completionHandler:": {
+      "name": "tryToRefreshLicense:completionHandler:",
+      "bridgedName": "tryToRefreshLicense_completionHandler",
+      "args": [
+        {
+          "name": "tryToRefreshLicense",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "processDataOfRegistration:handler:": {
+      "name": "processDataOfRegistration:handler:",
+      "bridgedName": "processDataOfRegistration_handler",
+      "args": [
+        {
+          "name": "processDataOfRegistration",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerWithLicenseKey:handler:": {
+      "name": "registerWithLicenseKey:handler:",
+      "bridgedName": "registerWithLicenseKey_handler",
+      "args": [
+        {
+          "name": "registerWithLicenseKey",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfDaysLeftInTrialMode": {
+      "name": "numberOfDaysLeftInTrialMode",
+      "bridgedName": "numberOfDaysLeftInTrialMode",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canRenewLicense": {
+      "name": "canRenewLicense",
+      "bridgedName": "canRenewLicense",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canInstallUpdates": {
+      "name": "canInstallUpdates",
+      "bridgedName": "canInstallUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateExpirationDate": {
+      "name": "updateExpirationDate",
+      "bridgedName": "updateExpirationDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registeredEmailAddress": {
+      "name": "registeredEmailAddress",
+      "bridgedName": "registeredEmailAddress",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentLicenseType": {
+      "name": "currentLicenseType",
+      "bridgedName": "currentLicenseType",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "licenseVersionIsSupported:": {
+      "name": "licenseVersionIsSupported:",
+      "bridgedName": "licenseVersionIsSupported",
+      "args": [
+        {
+          "name": "licenseVersionIsSupported",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateLicenseWithCompletionHandler:": {
+      "name": "validateLicenseWithCompletionHandler:",
+      "bridgedName": "validateLicenseWithCompletionHandler",
+      "args": [
+        {
+          "name": "validateLicenseWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshLicenseIfNeededWithCompletionHandler:": {
+      "name": "refreshLicenseIfNeededWithCompletionHandler:",
+      "bridgedName": "refreshLicenseIfNeededWithCompletionHandler",
+      "args": [
+        {
+          "name": "refreshLicenseIfNeededWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshLicenseWithCompletionHandler:": {
+      "name": "refreshLicenseWithCompletionHandler:",
+      "bridgedName": "refreshLicenseWithCompletionHandler",
+      "args": [
+        {
+          "name": "refreshLicenseWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLicenseWithCompletionHandler:": {
+      "name": "updateLicenseWithCompletionHandler:",
+      "bridgedName": "updateLicenseWithCompletionHandler",
+      "args": [
+        {
+          "name": "updateLicenseWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:": {
+      "name": "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:",
+      "bridgedName": "initWithApplicationID_publicCertificate_licenseURL_applicationBuildDate",
+      "args": [
+        {
+          "name": "initWithApplicationID",
+          "type": "id"
+        },
+        {
+          "name": "publicCertificate",
+          "type": "id"
+        },
+        {
+          "name": "licenseURL",
+          "type": "id"
+        },
+        {
+          "name": "applicationBuildDate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "applicationBuildDate": {
+      "name": "applicationBuildDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "completedLoadingLicense": {
+      "name": "completedLoadingLicense",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "urlSession": {
+      "name": "urlSession",
+      "pointer": true,
+      "type": "NSURLSession",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "licenseURL": {
+      "name": "licenseURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "publicCertificate": {
+      "name": "publicCertificate",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "applicationID": {
+      "name": "applicationID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "license": {
+      "name": "license",
+      "pointer": true,
+      "type": "BCLicense",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "canUseCloud": {
+      "name": "canUseCloud",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

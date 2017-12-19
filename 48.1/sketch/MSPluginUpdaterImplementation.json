@@ -1,0 +1,188 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "BCDownloadManager"
+  ],
+  "protocol": false,
+  "className": "MSPluginUpdaterImplementation",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDecompressError:withDescription:": {
+      "name": "makeDecompressError:withDescription:",
+      "bridgedName": "makeDecompressError_withDescription",
+      "args": [
+        {
+          "name": "makeDecompressError",
+          "type": "id *"
+        },
+        {
+          "name": "withDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decompressCurrentFile:toURL:error:": {
+      "name": "decompressCurrentFile:toURL:error:",
+      "bridgedName": "decompressCurrentFile_toURL_error",
+      "args": [
+        {
+          "name": "decompressCurrentFile",
+          "type": "void *"
+        },
+        {
+          "name": "toURL",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decompressPluginZip:toFolder:error:": {
+      "name": "decompressPluginZip:toFolder:error:",
+      "bridgedName": "decompressPluginZip_toFolder_error",
+      "args": [
+        {
+          "name": "decompressPluginZip",
+          "type": "id"
+        },
+        {
+          "name": "toFolder",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "versionsDictionaryFromAppcast:": {
+      "name": "versionsDictionaryFromAppcast:",
+      "bridgedName": "versionsDictionaryFromAppcast",
+      "args": [
+        {
+          "name": "versionsDictionaryFromAppcast",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelDownloadingPluginVersions": {
+      "name": "cancelDownloadingPluginVersions",
+      "bridgedName": "cancelDownloadingPluginVersions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadPlugins:downloadPluginHandler:completionHandler:": {
+      "name": "downloadPlugins:downloadPluginHandler:completionHandler:",
+      "bridgedName": "downloadPlugins_downloadPluginHandler_completionHandler",
+      "args": [
+        {
+          "name": "downloadPlugins",
+          "type": "id"
+        },
+        {
+          "name": "downloadPluginHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadPluginFromURL:completionHandler:": {
+      "name": "downloadPluginFromURL:completionHandler:",
+      "bridgedName": "downloadPluginFromURL_completionHandler",
+      "args": [
+        {
+          "name": "downloadPluginFromURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadPluginAppcasts:downloadAppcastHandler:completionHandler:": {
+      "name": "downloadPluginAppcasts:downloadAppcastHandler:completionHandler:",
+      "bridgedName": "downloadPluginAppcasts_downloadAppcastHandler_completionHandler",
+      "args": [
+        {
+          "name": "downloadPluginAppcasts",
+          "type": "id"
+        },
+        {
+          "name": "downloadAppcastHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "pluginDownloader": {
+      "name": "pluginDownloader",
+      "pointer": true,
+      "type": "BCDownloadManager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "downloadingPluginVersionsStatus": {
+      "name": "downloadingPluginVersionsStatus",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "downloadingAppcastsStatus": {
+      "name": "downloadingAppcastsStatus",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

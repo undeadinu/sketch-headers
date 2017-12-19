@@ -1,0 +1,515 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSAppleEventDescriptor",
+    "NSDictionary",
+    "NSMutableDictionary",
+    "NSScriptCommandDescription",
+    "NSScriptObjectSpecifier",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSScriptCommand",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    "currentCommand": {
+      "name": "currentCommand",
+      "bridgedName": "currentCommand",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_commandFromEvent:": {
+      "name": "_commandFromEvent:",
+      "bridgedName": "_commandFromEvent",
+      "args": [
+        {
+          "name": "_commandFromEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getArguments:withParameters:": {
+      "name": "_getArguments:withParameters:",
+      "bridgedName": "_getArguments_withParameters",
+      "args": [
+        {
+          "name": "_getArguments",
+          "type": "id"
+        },
+        {
+          "name": "withParameters",
+          "type": "CDStruct_89ddc8e1"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_argumentValueFromParameterDescriptor:usingTypeDescription:": {
+      "name": "_argumentValueFromParameterDescriptor:usingTypeDescription:",
+      "bridgedName": "_argumentValueFromParameterDescriptor_usingTypeDescription",
+      "args": [
+        {
+          "name": "_argumentValueFromParameterDescriptor",
+          "type": "id"
+        },
+        {
+          "name": "usingTypeDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getReceiversSpecifierOrUnnamedArgument:fromEvent:usingDescription:": {
+      "name": "_getReceiversSpecifierOrUnnamedArgument:fromEvent:usingDescription:",
+      "bridgedName": "_getReceiversSpecifierOrUnnamedArgument_fromEvent_usingDescription",
+      "args": [
+        {
+          "name": "_getReceiversSpecifierOrUnnamedArgument",
+          "type": "id *"
+        },
+        {
+          "name": "fromEvent",
+          "type": "id"
+        },
+        {
+          "name": "usingDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_commandFromEvent:inConstructionContext:": {
+      "name": "_commandFromEvent:inConstructionContext:",
+      "bridgedName": "_commandFromEvent_inConstructionContext",
+      "args": [
+        {
+          "name": "_commandFromEvent",
+          "type": "id"
+        },
+        {
+          "name": "inConstructionContext",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForPortCoder:": {
+      "name": "replacementObjectForPortCoder:",
+      "bridgedName": "replacementObjectForPortCoder",
+      "args": [
+        {
+          "name": "replacementObjectForPortCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resumeExecutionWithResult:": {
+      "name": "resumeExecutionWithResult:",
+      "bridgedName": "resumeExecutionWithResult",
+      "args": [
+        {
+          "name": "resumeExecutionWithResult",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suspendExecution": {
+      "name": "suspendExecution",
+      "bridgedName": "suspendExecution",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "executeCommand": {
+      "name": "executeCommand",
+      "bridgedName": "executeCommand",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendToRemainingReceivers": {
+      "name": "_sendToRemainingReceivers",
+      "bridgedName": "_sendToRemainingReceivers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDefaultImplementation": {
+      "name": "performDefaultImplementation",
+      "bridgedName": "performDefaultImplementation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "evaluatedValueForArgumentValue:": {
+      "name": "evaluatedValueForArgumentValue:",
+      "bridgedName": "evaluatedValueForArgumentValue",
+      "args": [
+        {
+          "name": "evaluatedValueForArgumentValue",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCommandDescription:": {
+      "name": "initWithCommandDescription:",
+      "bridgedName": "initWithCommandDescription",
+      "args": [
+        {
+          "name": "initWithCommandDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsAccessForEvent:": {
+      "name": "_allowsAccessForEvent:",
+      "bridgedName": "_allowsAccessForEvent",
+      "args": [
+        {
+          "name": "_allowsAccessForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsAccessForEventParameters:givenSenderAccessGroups:": {
+      "name": "_allowsAccessForEventParameters:givenSenderAccessGroups:",
+      "bridgedName": "_allowsAccessForEventParameters_givenSenderAccessGroups",
+      "args": [
+        {
+          "name": "_allowsAccessForEventParameters",
+          "type": "id"
+        },
+        {
+          "name": "givenSenderAccessGroups",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsAccessToSpecifier:writable:givenAccessGroups:": {
+      "name": "_allowsAccessToSpecifier:writable:givenAccessGroups:",
+      "bridgedName": "_allowsAccessToSpecifier_writable_givenAccessGroups",
+      "args": [
+        {
+          "name": "_allowsAccessToSpecifier",
+          "type": "id"
+        },
+        {
+          "name": "writable",
+          "type": "BOOL"
+        },
+        {
+          "name": "givenAccessGroups",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setScriptErrorExpectedType:": {
+      "name": "_setScriptErrorExpectedType:",
+      "bridgedName": "_setScriptErrorExpectedType",
+      "args": [
+        {
+          "name": "_setScriptErrorExpectedType",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_populateReplyAppleEventWithResult:": {
+      "name": "_populateReplyAppleEventWithResult:",
+      "bridgedName": "_populateReplyAppleEventWithResult",
+      "args": [
+        {
+          "name": "_populateReplyAppleEventWithResult",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resumeExecutionWithResult:": {
+      "name": "_resumeExecutionWithResult:",
+      "bridgedName": "_resumeExecutionWithResult",
+      "args": [
+        {
+          "name": "_resumeExecutionWithResult",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAppleEventHandling:": {
+      "name": "_setAppleEventHandling:",
+      "bridgedName": "_setAppleEventHandling",
+      "args": [
+        {
+          "name": "_setAppleEventHandling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAdditionalThingsFromEvent:": {
+      "name": "_setAdditionalThingsFromEvent:",
+      "bridgedName": "_setAdditionalThingsFromEvent",
+      "args": [
+        {
+          "name": "_setAdditionalThingsFromEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scriptErrorExpectedTypeDescriptor": {
+      "name": "_scriptErrorExpectedTypeDescriptor",
+      "bridgedName": "_scriptErrorExpectedTypeDescriptor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scriptErrorOffendingObjectDescriptor": {
+      "name": "_scriptErrorOffendingObjectDescriptor",
+      "bridgedName": "_scriptErrorOffendingObjectDescriptor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setScriptErrorExpectedTypeDescriptor:": {
+      "name": "_setScriptErrorExpectedTypeDescriptor:",
+      "bridgedName": "_setScriptErrorExpectedTypeDescriptor",
+      "args": [
+        {
+          "name": "_setScriptErrorExpectedTypeDescriptor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setScriptErrorOffendingObjectDescriptor:": {
+      "name": "_setScriptErrorOffendingObjectDescriptor:",
+      "bridgedName": "_setScriptErrorOffendingObjectDescriptor",
+      "args": [
+        {
+          "name": "_setScriptErrorOffendingObjectDescriptor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setScriptErrorFromKVCException:": {
+      "name": "_setScriptErrorFromKVCException:",
+      "bridgedName": "_setScriptErrorFromKVCException",
+      "args": [
+        {
+          "name": "_setScriptErrorFromKVCException",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "appleEvent": {
+      "name": "appleEvent",
+      "pointer": true,
+      "type": "NSAppleEventDescriptor",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "scriptErrorString": {
+      "name": "scriptErrorString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "scriptErrorExpectedTypeDescriptor": {
+      "name": "scriptErrorExpectedTypeDescriptor",
+      "pointer": true,
+      "type": "NSAppleEventDescriptor",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "scriptErrorOffendingObjectDescriptor": {
+      "name": "scriptErrorOffendingObjectDescriptor",
+      "pointer": true,
+      "type": "NSAppleEventDescriptor",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "wellFormed": {
+      "name": "wellFormed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isWellFormed"
+      ]
+    },
+    "evaluatedArguments": {
+      "name": "evaluatedArguments",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "arguments": {
+      "name": "arguments",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "evaluatedReceivers": {
+      "name": "evaluatedReceivers",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "receiversSpecifier": {
+      "name": "receiversSpecifier",
+      "pointer": true,
+      "type": "NSScriptObjectSpecifier",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "directParameter": {
+      "name": "directParameter",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "commandDescription": {
+      "name": "commandDescription",
+      "pointer": true,
+      "type": "NSScriptCommandDescription",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    }
+  }
+}

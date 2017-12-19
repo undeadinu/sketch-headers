@@ -1,0 +1,403 @@
+{
+  "imports": [
+    "MSRenderingCALayer.h",
+    "CALayerDelegate.h",
+    "MSTileRenderOperationDelegate.h"
+  ],
+  "classes": [
+    "CALayer",
+    "CATextLayer",
+    "MSContentCALayer",
+    "MSOverlayCALayer",
+    "MSRenderingDriver",
+    "MSTileRenderOperation",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSTile",
+  "extends": "MSRenderingCALayer",
+  "interfaces": [
+    "MSTileRenderOperationDelegate",
+    "CALayerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveToPosition:": {
+      "name": "moveToPosition:",
+      "bridgedName": "moveToPosition",
+      "args": [
+        {
+          "name": "moveToPosition",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pixelGridDidChange": {
+      "name": "pixelGridDidChange",
+      "bridgedName": "pixelGridDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawPixelated": {
+      "name": "shouldDrawPixelated",
+      "bridgedName": "shouldDrawPixelated",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scaleForContentLayer": {
+      "name": "scaleForContentLayer",
+      "bridgedName": "scaleForContentLayer",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOverlayInViewRect:page:": {
+      "name": "refreshOverlayInViewRect:page:",
+      "bridgedName": "refreshOverlayInViewRect_page",
+      "args": [
+        {
+          "name": "refreshOverlayInViewRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelDrawing": {
+      "name": "cancelDrawing",
+      "bridgedName": "cancelDrawing",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileRenderOperationDidFinishRendering:": {
+      "name": "tileRenderOperationDidFinishRendering:",
+      "bridgedName": "tileRenderOperationDidFinishRendering",
+      "args": [
+        {
+          "name": "tileRenderOperationDidFinishRendering",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "normalizeRect:origin:": {
+      "name": "normalizeRect:origin:",
+      "bridgedName": "normalizeRect_origin",
+      "args": [
+        {
+          "name": "normalizeRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "origin",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderOperationForContentRect:page:document:contextPool:": {
+      "name": "renderOperationForContentRect:page:document:contextPool:",
+      "bridgedName": "renderOperationForContentRect_page_document_contextPool",
+      "args": [
+        {
+          "name": "renderOperationForContentRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "contextPool",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateDebugLabel": {
+      "name": "updateDebugLabel",
+      "bridgedName": "updateDebugLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupDebugLabel": {
+      "name": "setupDebugLabel",
+      "bridgedName": "setupDebugLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupDebugDrawingArea": {
+      "name": "setupDebugDrawingArea",
+      "bridgedName": "setupDebugDrawingArea",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDebugOptionsToDrawInner:outer:dirty:": {
+      "name": "setDebugOptionsToDrawInner:outer:dirty:",
+      "bridgedName": "setDebugOptionsToDrawInner_outer_dirty",
+      "args": [
+        {
+          "name": "setDebugOptionsToDrawInner",
+          "type": "BOOL"
+        },
+        {
+          "name": "outer",
+          "type": "BOOL"
+        },
+        {
+          "name": "dirty",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFromSuperlayer": {
+      "name": "removeFromSuperlayer",
+      "bridgedName": "removeFromSuperlayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTiledLayer:size:colorSpace:": {
+      "name": "initWithTiledLayer:size:colorSpace:",
+      "bridgedName": "initWithTiledLayer_size_colorSpace",
+      "args": [
+        {
+          "name": "initWithTiledLayer",
+          "type": "id"
+        },
+        {
+          "name": "size",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "colorSpace",
+          "type": "struct CGColorSpace *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "currentRenderOperation": {
+      "name": "currentRenderOperation",
+      "pointer": true,
+      "type": "__weak MSTileRenderOperation",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDrawingAreaLayer": {
+      "name": "debugDrawingAreaLayer",
+      "pointer": true,
+      "type": "CALayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugLabelLayer": {
+      "name": "debugLabelLayer",
+      "pointer": true,
+      "type": "CATextLayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contentLayer": {
+      "name": "contentLayer",
+      "pointer": true,
+      "type": "MSContentCALayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "overlayLayer": {
+      "name": "overlayLayer",
+      "pointer": true,
+      "type": "MSOverlayCALayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "completedFirstRenderOrWasCancelled": {
+      "name": "completedFirstRenderOrWasCancelled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "renderingCacheProvider": {
+      "name": "renderingCacheProvider",
+      "pointer": false,
+      "type": "id <MSRenderingContextCacheProvider>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "index": {
+      "name": "index",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "drawingIsCancelled": {
+      "name": "drawingIsCancelled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldHideOverlayControls": {
+      "name": "shouldHideOverlayControls",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "distanceFromScrollOrigin": {
+      "name": "distanceFromScrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "scrollOrigin": {
+      "name": "scrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "struct CGColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

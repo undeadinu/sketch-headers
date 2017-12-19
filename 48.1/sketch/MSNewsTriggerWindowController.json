@@ -1,0 +1,244 @@
+{
+  "imports": [
+    "CHWindowController.h",
+    "WebFrameLoadDelegate.h",
+    "WebPolicyDelegate.h",
+    "WebResourceLoadDelegate.h"
+  ],
+  "classes": [
+    "NSButton",
+    "NSString",
+    "NSURL",
+    "WebView"
+  ],
+  "protocol": false,
+  "className": "MSNewsTriggerWindowController",
+  "extends": "CHWindowController",
+  "interfaces": [
+    "WebFrameLoadDelegate",
+    "WebPolicyDelegate",
+    "WebResourceLoadDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:resource:willSendRequest:redirectResponse:fromDataSource:": {
+      "name": "webView:resource:willSendRequest:redirectResponse:fromDataSource:",
+      "bridgedName": "webView_resource_willSendRequest_redirectResponse_fromDataSource",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "resource",
+          "type": "id"
+        },
+        {
+          "name": "willSendRequest",
+          "type": "id"
+        },
+        {
+          "name": "redirectResponse",
+          "type": "id"
+        },
+        {
+          "name": "fromDataSource",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:decidePolicyForNavigationAction:request:frame:decisionListener:": {
+      "name": "webView:decidePolicyForNavigationAction:request:frame:decisionListener:",
+      "bridgedName": "webView_decidePolicyForNavigationAction_request_frame_decisionListener",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "decidePolicyForNavigationAction",
+          "type": "id"
+        },
+        {
+          "name": "request",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "id"
+        },
+        {
+          "name": "decisionListener",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:didFinishLoadForFrame:": {
+      "name": "webView:didFinishLoadForFrame:",
+      "bridgedName": "webView_didFinishLoadForFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "didFinishLoadForFrame",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dontShowNewsWithIDAnymore:": {
+      "name": "dontShowNewsWithIDAnymore:",
+      "bridgedName": "dontShowNewsWithIDAnymore",
+      "args": [
+        {
+          "name": "dontShowNewsWithIDAnymore",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close:": {
+      "name": "close:",
+      "bridgedName": "close",
+      "args": [
+        {
+          "name": "close",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidLoad": {
+      "name": "windowDidLoad",
+      "bridgedName": "windowDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithURL:newsID:": {
+      "name": "initWithURL:newsID:",
+      "bridgedName": "initWithURL_newsID",
+      "args": [
+        {
+          "name": "initWithURL",
+          "type": "id"
+        },
+        {
+          "name": "newsID",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "finishedLoadingData": {
+      "name": "finishedLoadingData",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "dontShowAgainButton": {
+      "name": "dontShowAgainButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "webView": {
+      "name": "webView",
+      "pointer": true,
+      "type": "WebView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "newsID": {
+      "name": "newsID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "url": {
+      "name": "url",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,708 @@
+{
+  "imports": [],
+  "classes": [
+    "NSMapTable",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "NSGridView",
+  "extends": "NSView",
+  "interfaces": [],
+  "methods": {
+    "requiresConstraintBasedLayout": {
+      "name": "requiresConstraintBasedLayout",
+      "bridgedName": "requiresConstraintBasedLayout",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "gridViewWithViews:": {
+      "name": "gridViewWithViews:",
+      "bridgedName": "gridViewWithViews",
+      "args": [
+        {
+          "name": "gridViewWithViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "gridViewWithNumberOfColumns:rows:": {
+      "name": "gridViewWithNumberOfColumns:rows:",
+      "bridgedName": "gridViewWithNumberOfColumns_rows",
+      "args": [
+        {
+          "name": "gridViewWithNumberOfColumns",
+          "type": "long long"
+        },
+        {
+          "name": "rows",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_mergeCellsInRect:": {
+      "name": "_mergeCellsInRect:",
+      "bridgedName": "_mergeCellsInRect",
+      "args": [
+        {
+          "name": "_mergeCellsInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_expandMergeBoundsIfNeeded:": {
+      "name": "_expandMergeBoundsIfNeeded:",
+      "bridgedName": "_expandMergeBoundsIfNeeded",
+      "args": [
+        {
+          "name": "_expandMergeBoundsIfNeeded",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_expandMergeBounds:ifNeededForColumnAtIndex:": {
+      "name": "_expandMergeBounds:ifNeededForColumnAtIndex:",
+      "bridgedName": "_expandMergeBounds_ifNeededForColumnAtIndex",
+      "args": [
+        {
+          "name": "_expandMergeBounds",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "ifNeededForColumnAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_expandMergeBounds:ifNeededForRow:": {
+      "name": "_expandMergeBounds:ifNeededForRow:",
+      "bridgedName": "_expandMergeBounds_ifNeededForRow",
+      "args": [
+        {
+          "name": "_expandMergeBounds",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "ifNeededForRow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_expandMergeBounds:ifNeededForCell:": {
+      "name": "_expandMergeBounds:ifNeededForCell:",
+      "bridgedName": "_expandMergeBounds_ifNeededForCell",
+      "args": [
+        {
+          "name": "_expandMergeBounds",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "ifNeededForCell",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unmergeCellsInRect:": {
+      "name": "_unmergeCellsInRect:",
+      "bridgedName": "_unmergeCellsInRect",
+      "args": [
+        {
+          "name": "_unmergeCellsInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mergeCellsInHorizontalRange:verticalRange:": {
+      "name": "mergeCellsInHorizontalRange:verticalRange:",
+      "bridgedName": "mergeCellsInHorizontalRange_verticalRange",
+      "args": [
+        {
+          "name": "mergeCellsInHorizontalRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "verticalRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteColumn:": {
+      "name": "deleteColumn:",
+      "bridgedName": "deleteColumn",
+      "args": [
+        {
+          "name": "deleteColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteRow:": {
+      "name": "deleteRow:",
+      "bridgedName": "deleteRow",
+      "args": [
+        {
+          "name": "deleteRow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertColumnAtIndex:withViews:": {
+      "name": "_insertColumnAtIndex:withViews:",
+      "bridgedName": "_insertColumnAtIndex_withViews",
+      "args": [
+        {
+          "name": "_insertColumnAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "withViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertRowAtIndex:withViews:": {
+      "name": "_insertRowAtIndex:withViews:",
+      "bridgedName": "_insertRowAtIndex_withViews",
+      "args": [
+        {
+          "name": "_insertRowAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "withViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeColumnAtIndex:": {
+      "name": "removeColumnAtIndex:",
+      "bridgedName": "removeColumnAtIndex",
+      "args": [
+        {
+          "name": "removeColumnAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertColumnCells:atIndex:": {
+      "name": "_insertColumnCells:atIndex:",
+      "bridgedName": "_insertColumnCells_atIndex",
+      "args": [
+        {
+          "name": "_insertColumnCells",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeColumnCellsAtIndex:": {
+      "name": "_removeColumnCellsAtIndex:",
+      "bridgedName": "_removeColumnCellsAtIndex",
+      "args": [
+        {
+          "name": "_removeColumnCellsAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveColumnAtIndex:toIndex:": {
+      "name": "moveColumnAtIndex:toIndex:",
+      "bridgedName": "moveColumnAtIndex_toIndex",
+      "args": [
+        {
+          "name": "moveColumnAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_verifyInsertionOfColumnAtIndex:": {
+      "name": "_verifyInsertionOfColumnAtIndex:",
+      "bridgedName": "_verifyInsertionOfColumnAtIndex",
+      "args": [
+        {
+          "name": "_verifyInsertionOfColumnAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_verifyInsertionOfRowAtIndex:": {
+      "name": "_verifyInsertionOfRowAtIndex:",
+      "bridgedName": "_verifyInsertionOfRowAtIndex",
+      "args": [
+        {
+          "name": "_verifyInsertionOfRowAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_verifyRemovalOfRowColumn:": {
+      "name": "_verifyRemovalOfRowColumn:",
+      "bridgedName": "_verifyRemovalOfRowColumn",
+      "args": [
+        {
+          "name": "_verifyRemovalOfRowColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertColumnAtIndex:withViews:": {
+      "name": "insertColumnAtIndex:withViews:",
+      "bridgedName": "insertColumnAtIndex_withViews",
+      "args": [
+        {
+          "name": "insertColumnAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "withViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addColumnWithViews:": {
+      "name": "addColumnWithViews:",
+      "bridgedName": "addColumnWithViews",
+      "args": [
+        {
+          "name": "addColumnWithViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeRowAtIndex:": {
+      "name": "removeRowAtIndex:",
+      "bridgedName": "removeRowAtIndex",
+      "args": [
+        {
+          "name": "removeRowAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveRowAtIndex:toIndex:": {
+      "name": "moveRowAtIndex:toIndex:",
+      "bridgedName": "moveRowAtIndex_toIndex",
+      "args": [
+        {
+          "name": "moveRowAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertRowAtIndex:withViews:": {
+      "name": "insertRowAtIndex:withViews:",
+      "bridgedName": "insertRowAtIndex_withViews",
+      "args": [
+        {
+          "name": "insertRowAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "withViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRowWithViews:": {
+      "name": "addRowWithViews:",
+      "bridgedName": "addRowWithViews",
+      "args": [
+        {
+          "name": "addRowWithViews",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellForView:": {
+      "name": "cellForView:",
+      "bridgedName": "cellForView",
+      "args": [
+        {
+          "name": "cellForView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCell:forContentView:": {
+      "name": "_setCell:forContentView:",
+      "bridgedName": "_setCell_forContentView",
+      "args": [
+        {
+          "name": "_setCell",
+          "type": "id"
+        },
+        {
+          "name": "forContentView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexOfRow:": {
+      "name": "indexOfRow:",
+      "bridgedName": "indexOfRow",
+      "args": [
+        {
+          "name": "indexOfRow",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexOfColumn:": {
+      "name": "indexOfColumn:",
+      "bridgedName": "indexOfColumn",
+      "args": [
+        {
+          "name": "indexOfColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rawCellAtColumnIndex:rowIndex:allocatingIfNeeded:": {
+      "name": "_rawCellAtColumnIndex:rowIndex:allocatingIfNeeded:",
+      "bridgedName": "_rawCellAtColumnIndex_rowIndex_allocatingIfNeeded",
+      "args": [
+        {
+          "name": "_rawCellAtColumnIndex",
+          "type": "long long"
+        },
+        {
+          "name": "rowIndex",
+          "type": "long long"
+        },
+        {
+          "name": "allocatingIfNeeded",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellAtColumnIndex:rowIndex:": {
+      "name": "cellAtColumnIndex:rowIndex:",
+      "bridgedName": "cellAtColumnIndex_rowIndex",
+      "args": [
+        {
+          "name": "cellAtColumnIndex",
+          "type": "long long"
+        },
+        {
+          "name": "rowIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnAtIndex:": {
+      "name": "columnAtIndex:",
+      "bridgedName": "columnAtIndex",
+      "args": [
+        {
+          "name": "columnAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rowAtIndex:": {
+      "name": "rowAtIndex:",
+      "bridgedName": "rowAtIndex",
+      "args": [
+        {
+          "name": "rowAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "declaredLayoutConstraints": {
+      "name": "declaredLayoutConstraints",
+      "bridgedName": "declaredLayoutConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findVisibleThingNear:after:searchRows:": {
+      "name": "_findVisibleThingNear:after:searchRows:",
+      "bridgedName": "_findVisibleThingNear_after_searchRows",
+      "args": [
+        {
+          "name": "_findVisibleThingNear",
+          "type": "id"
+        },
+        {
+          "name": "after",
+          "type": "BOOL"
+        },
+        {
+          "name": "searchRows",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willRemoveSubview:": {
+      "name": "willRemoveSubview:",
+      "bridgedName": "willRemoveSubview",
+      "args": [
+        {
+          "name": "willRemoveSubview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sanityCheck": {
+      "name": "_sanityCheck",
+      "bridgedName": "_sanityCheck",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_verifyMergedRegionWithHead:": {
+      "name": "_verifyMergedRegionWithHead:",
+      "bridgedName": "_verifyMergedRegionWithHead",
+      "args": [
+        {
+          "name": "_verifyMergedRegionWithHead",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cellTableContainsCell:": {
+      "name": "_cellTableContainsCell:",
+      "bridgedName": "_cellTableContainsCell",
+      "args": [
+        {
+          "name": "_cellTableContainsCell",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultContentCompressionResistancePriorities": {
+      "name": "_defaultContentCompressionResistancePriorities",
+      "bridgedName": "_defaultContentCompressionResistancePriorities",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultContentHuggingPriorities": {
+      "name": "_defaultContentHuggingPriorities",
+      "bridgedName": "_defaultContentHuggingPriorities",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonPostInit": {
+      "name": "_commonPostInit",
+      "bridgedName": "_commonPostInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonPreInit": {
+      "name": "_commonPreInit",
+      "bridgedName": "_commonPreInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "numberOfRows": {
+      "name": "numberOfRows",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "numberOfColumns": {
+      "name": "numberOfColumns",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

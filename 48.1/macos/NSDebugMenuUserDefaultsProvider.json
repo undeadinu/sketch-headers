@@ -1,0 +1,187 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSDebugMenuItemProvider.h",
+    "NSMenuDelegate.h"
+  ],
+  "classes": [
+    "NSMenu",
+    "NSMenuItem",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSDebugMenuUserDefaultsProvider",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSMenuDelegate",
+    "NSDebugMenuItemProvider"
+  ],
+  "methods": {
+    "registerUserDefaultController:": {
+      "name": "registerUserDefaultController:",
+      "bridgedName": "registerUserDefaultController",
+      "args": [
+        {
+          "name": "registerUserDefaultController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_userDefaultControllers": {
+      "name": "_userDefaultControllers",
+      "bridgedName": "_userDefaultControllers",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "menuHasKeyEquivalent:forEvent:target:action:": {
+      "name": "menuHasKeyEquivalent:forEvent:target:action:",
+      "bridgedName": "menuHasKeyEquivalent_forEvent_target_action",
+      "args": [
+        {
+          "name": "menuHasKeyEquivalent",
+          "type": "id"
+        },
+        {
+          "name": "forEvent",
+          "type": "id"
+        },
+        {
+          "name": "target",
+          "type": "id *"
+        },
+        {
+          "name": "action",
+          "type": "SEL *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menu:updateItem:atIndex:shouldCancel:": {
+      "name": "menu:updateItem:atIndex:shouldCancel:",
+      "bridgedName": "menu_updateItem_atIndex_shouldCancel",
+      "args": [
+        {
+          "name": "menu",
+          "type": "id"
+        },
+        {
+          "name": "updateItem",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "long long"
+        },
+        {
+          "name": "shouldCancel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfItemsInMenu:": {
+      "name": "numberOfItemsInMenu:",
+      "bridgedName": "numberOfItemsInMenu",
+      "args": [
+        {
+          "name": "numberOfItemsInMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultControllersDidChange:": {
+      "name": "_defaultControllersDidChange:",
+      "bridgedName": "_defaultControllersDidChange",
+      "args": [
+        {
+          "name": "_defaultControllersDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultsMenuCreateIfNecessary": {
+      "name": "defaultsMenuCreateIfNecessary",
+      "bridgedName": "defaultsMenuCreateIfNecessary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "menuItem": {
+      "name": "menuItem",
+      "pointer": true,
+      "type": "NSMenuItem",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

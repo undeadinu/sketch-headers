@@ -1,0 +1,348 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSCloudShareUploadControllerDelegate.h"
+  ],
+  "classes": [
+    "MSCloudShareUploadController",
+    "MSDocument",
+    "NSProgress",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSCloudController",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSCloudShareUploadControllerDelegate"
+  ],
+  "methods": {
+    "openRemoteEndpoint:parameters:": {
+      "name": "openRemoteEndpoint:parameters:",
+      "bridgedName": "openRemoteEndpoint_parameters",
+      "args": [
+        {
+          "name": "openRemoteEndpoint",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "openRemoteSignUp": {
+      "name": "openRemoteSignUp",
+      "bridgedName": "openRemoteSignUp",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "openRemoteSignIn": {
+      "name": "openRemoteSignIn",
+      "bridgedName": "openRemoteSignIn",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "remoteAuthenticationURLParameters": {
+      "name": "remoteAuthenticationURLParameters",
+      "bridgedName": "remoteAuthenticationURLParameters",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "openRemoteFileOverview": {
+      "name": "openRemoteFileOverview",
+      "bridgedName": "openRemoteFileOverview",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "openRemoteAccountSettings": {
+      "name": "openRemoteAccountSettings",
+      "bridgedName": "openRemoteAccountSettings",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "showPreferences": {
+      "name": "showPreferences",
+      "bridgedName": "showPreferences",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openRemoteShareSettings": {
+      "name": "openRemoteShareSettings",
+      "bridgedName": "openRemoteShareSettings",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:willUploadShareAsNew:": {
+      "name": "cloudShareController:willUploadShareAsNew:",
+      "bridgedName": "cloudShareController_willUploadShareAsNew",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "willUploadShareAsNew",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:didChangeProgress:": {
+      "name": "cloudShareController:didChangeProgress:",
+      "bridgedName": "cloudShareController_didChangeProgress",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "didChangeProgress",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:uploadDidFailWithError:": {
+      "name": "cloudShareController:uploadDidFailWithError:",
+      "bridgedName": "cloudShareController_uploadDidFailWithError",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "uploadDidFailWithError",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:didUploadShare:": {
+      "name": "cloudShareController:didUploadShare:",
+      "bridgedName": "cloudShareController_didUploadShare",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "didUploadShare",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelUpload": {
+      "name": "cancelUpload",
+      "bridgedName": "cancelUpload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startUploadUpdating:": {
+      "name": "startUploadUpdating:",
+      "bridgedName": "startUploadUpdating",
+      "args": [
+        {
+          "name": "startUploadUpdating",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadIncludesDocumentData": {
+      "name": "uploadIncludesDocumentData",
+      "bridgedName": "uploadIncludesDocumentData",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateShareWithHandler:": {
+      "name": "updateShareWithHandler:",
+      "bridgedName": "updateShareWithHandler",
+      "args": [
+        {
+          "name": "updateShareWithHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCloudShare": {
+      "name": "resetCloudShare",
+      "bridgedName": "resetCloudShare",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "currentUploadController": {
+      "name": "currentUploadController",
+      "pointer": true,
+      "type": "MSCloudShareUploadController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "uploadStartTime": {
+      "name": "uploadStartTime",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "uploadProgress": {
+      "name": "uploadProgress",
+      "pointer": true,
+      "type": "NSProgress",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "uploadCancelled": {
+      "name": "uploadCancelled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isUploadCancelled"
+      ]
+    },
+    "uploading": {
+      "name": "uploading",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isUploading"
+      ]
+    },
+    "uploadedByCurrentUser": {
+      "name": "uploadedByCurrentUser",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "uploaded": {
+      "name": "uploaded",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canUpload": {
+      "name": "canUpload",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

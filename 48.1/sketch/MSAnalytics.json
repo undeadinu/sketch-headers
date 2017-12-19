@@ -1,0 +1,380 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSActionObserver.h",
+    "WebFrameLoadDelegate.h",
+    "WebResourceLoadDelegate.h",
+    "WebUIDelegate.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSString",
+    "WebView"
+  ],
+  "protocol": false,
+  "className": "MSAnalytics",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSActionObserver",
+    "WebFrameLoadDelegate",
+    "WebResourceLoadDelegate",
+    "WebUIDelegate"
+  ],
+  "methods": {
+    "sharedInstance": {
+      "name": "sharedInstance",
+      "bridgedName": "sharedInstance",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:didInstantActionWithID:context:": {
+      "name": "actionController:didInstantActionWithID:context:",
+      "bridgedName": "actionController_didInstantActionWithID_context",
+      "args": [
+        {
+          "name": "actionController",
+          "type": "id"
+        },
+        {
+          "name": "didInstantActionWithID",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:didFinishActionWithID:context:": {
+      "name": "actionController:didFinishActionWithID:context:",
+      "bridgedName": "actionController_didFinishActionWithID_context",
+      "args": [
+        {
+          "name": "actionController",
+          "type": "id"
+        },
+        {
+          "name": "didFinishActionWithID",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionController:willBeginActionWithID:context:": {
+      "name": "actionController:willBeginActionWithID:context:",
+      "bridgedName": "actionController_willBeginActionWithID_context",
+      "args": [
+        {
+          "name": "actionController",
+          "type": "id"
+        },
+        {
+          "name": "willBeginActionWithID",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackEvent:withInterval:checkInterval:conditional:": {
+      "name": "trackEvent:withInterval:checkInterval:conditional:",
+      "bridgedName": "trackEvent_withInterval_checkInterval_conditional",
+      "args": [
+        {
+          "name": "trackEvent",
+          "type": "id"
+        },
+        {
+          "name": "withInterval",
+          "type": "long long"
+        },
+        {
+          "name": "checkInterval",
+          "type": "long long"
+        },
+        {
+          "name": "conditional",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackEvent:withValue:": {
+      "name": "trackEvent:withValue:",
+      "bridgedName": "trackEvent_withValue",
+      "args": [
+        {
+          "name": "trackEvent",
+          "type": "id"
+        },
+        {
+          "name": "withValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackScreenWithName:": {
+      "name": "trackScreenWithName:",
+      "bridgedName": "trackScreenWithName",
+      "args": [
+        {
+          "name": "trackScreenWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:resource:willSendRequest:redirectResponse:fromDataSource:": {
+      "name": "webView:resource:willSendRequest:redirectResponse:fromDataSource:",
+      "bridgedName": "webView_resource_willSendRequest_redirectResponse_fromDataSource",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "resource",
+          "type": "id"
+        },
+        {
+          "name": "willSendRequest",
+          "type": "id"
+        },
+        {
+          "name": "redirectResponse",
+          "type": "id"
+        },
+        {
+          "name": "fromDataSource",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:addMessageToConsole:": {
+      "name": "webView:addMessageToConsole:",
+      "bridgedName": "webView_addMessageToConsole",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "addMessageToConsole",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:didFinishLoadForFrame:": {
+      "name": "webView:didFinishLoadForFrame:",
+      "bridgedName": "webView_didFinishLoadForFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "id"
+        },
+        {
+          "name": "didFinishLoadForFrame",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendAppInfo": {
+      "name": "sendAppInfo",
+      "bridgedName": "sendAppInfo",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendAction:arguments:": {
+      "name": "sendAction:arguments:",
+      "bridgedName": "sendAction_arguments",
+      "args": [
+        {
+          "name": "sendAction",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "callMethod:arguments:": {
+      "name": "callMethod:arguments:",
+      "bridgedName": "callMethod_arguments",
+      "args": [
+        {
+          "name": "callMethod",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reload": {
+      "name": "reload",
+      "bridgedName": "reload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setup": {
+      "name": "setup",
+      "bridgedName": "setup",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "configureWithID:": {
+      "name": "configureWithID:",
+      "bridgedName": "configureWithID",
+      "args": [
+        {
+          "name": "configureWithID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "webViewReady": {
+      "name": "webViewReady",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "queue": {
+      "name": "queue",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "siteID": {
+      "name": "siteID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "webView": {
+      "name": "webView",
+      "pointer": true,
+      "type": "WebView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debug": {
+      "name": "debug",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "FMDatabase",
+    "NSObject<OS_dispatch_queue>",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "FMDatabaseQueue",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "databaseClass": {
+      "name": "databaseClass",
+      "bridgedName": "databaseClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "databaseQueueWithPath:flags:": {
+      "name": "databaseQueueWithPath:flags:",
+      "bridgedName": "databaseQueueWithPath_flags",
+      "args": [
+        {
+          "name": "databaseQueueWithPath",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "databaseQueueWithPath:": {
+      "name": "databaseQueueWithPath:",
+      "bridgedName": "databaseQueueWithPath",
+      "args": [
+        {
+          "name": "databaseQueueWithPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "inSavePoint:": {
+      "name": "inSavePoint:",
+      "bridgedName": "inSavePoint",
+      "args": [
+        {
+          "name": "inSavePoint",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inTransaction:": {
+      "name": "inTransaction:",
+      "bridgedName": "inTransaction",
+      "args": [
+        {
+          "name": "inTransaction",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inDeferredTransaction:": {
+      "name": "inDeferredTransaction:",
+      "bridgedName": "inDeferredTransaction",
+      "args": [
+        {
+          "name": "inDeferredTransaction",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginTransaction:withBlock:": {
+      "name": "beginTransaction:withBlock:",
+      "bridgedName": "beginTransaction_withBlock",
+      "args": [
+        {
+          "name": "beginTransaction",
+          "type": "BOOL"
+        },
+        {
+          "name": "withBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inDatabase:": {
+      "name": "inDatabase:",
+      "bridgedName": "inDatabase",
+      "args": [
+        {
+          "name": "inDatabase",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "database": {
+      "name": "database",
+      "bridgedName": "database",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close": {
+      "name": "close",
+      "bridgedName": "close",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:": {
+      "name": "initWithPath:",
+      "bridgedName": "initWithPath",
+      "args": [
+        {
+          "name": "initWithPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:flags:": {
+      "name": "initWithPath:flags:",
+      "bridgedName": "initWithPath_flags",
+      "args": [
+        {
+          "name": "initWithPath",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPath:flags:vfs:": {
+      "name": "initWithPath:flags:vfs:",
+      "bridgedName": "initWithPath_flags_vfs",
+      "args": [
+        {
+          "name": "initWithPath",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "int"
+        },
+        {
+          "name": "vfs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "openFlags": {
+      "name": "openFlags",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "path": {
+      "name": "path",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

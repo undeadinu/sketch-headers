@@ -1,0 +1,211 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSRenderingDriver"
+  ],
+  "protocol": false,
+  "className": "MSHighLevelExporter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "exporterWithDelgate:": {
+      "name": "exporterWithDelgate:",
+      "bridgedName": "exporterWithDelgate",
+      "args": [
+        {
+          "name": "exporterWithDelgate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "export:layer:": {
+      "name": "export:layer:",
+      "bridgedName": "export_layer",
+      "args": [
+        {
+          "name": "export",
+          "type": "id"
+        },
+        {
+          "name": "layer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportRequestsForLayer:inRect:exportFormats:": {
+      "name": "exportRequestsForLayer:inRect:exportFormats:",
+      "bridgedName": "exportRequestsForLayer_inRect_exportFormats",
+      "args": [
+        {
+          "name": "exportRequestsForLayer",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "exportFormats",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportLayers:": {
+      "name": "exportLayers:",
+      "bridgedName": "exportLayers",
+      "args": [
+        {
+          "name": "exportLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportPage:": {
+      "name": "exportPage:",
+      "bridgedName": "exportPage",
+      "args": [
+        {
+          "name": "exportPage",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "formatsToExport": {
+      "name": "formatsToExport",
+      "bridgedName": "formatsToExport",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suffixForScale:": {
+      "name": "suffixForScale:",
+      "bridgedName": "suffixForScale",
+      "args": [
+        {
+          "name": "suffixForScale",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectToExportForPage:": {
+      "name": "rectToExportForPage:",
+      "bridgedName": "rectToExportForPage",
+      "args": [
+        {
+          "name": "rectToExportForPage",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outputFileWithName:URL:existing:": {
+      "name": "outputFileWithName:URL:existing:",
+      "bridgedName": "outputFileWithName_URL_existing",
+      "args": [
+        {
+          "name": "outputFileWithName",
+          "type": "id"
+        },
+        {
+          "name": "URL",
+          "type": "id *"
+        },
+        {
+          "name": "existing",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDelegate:driver:": {
+      "name": "initWithDelegate:driver:",
+      "bridgedName": "initWithDelegate_driver",
+      "args": [
+        {
+          "name": "initWithDelegate",
+          "type": "id"
+        },
+        {
+          "name": "driver",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDelegate:": {
+      "name": "initWithDelegate:",
+      "bridgedName": "initWithDelegate",
+      "args": [
+        {
+          "name": "initWithDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSHighLevelExportDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

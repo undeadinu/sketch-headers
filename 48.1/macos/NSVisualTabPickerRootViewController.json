@@ -1,0 +1,593 @@
+{
+  "imports": [
+    "NSVisualTabPickerGridViewDataSource.h",
+    "NSVisualTabPickerGridViewDelegate.h",
+    "NSVisualTabPickerSearchFieldDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSImage",
+    "NSOperationQueue",
+    "NSString",
+    "NSVisualTabPickerRootView"
+  ],
+  "protocol": false,
+  "className": "NSVisualTabPickerRootViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSVisualTabPickerSearchFieldDelegate",
+    "NSVisualTabPickerGridViewDataSource",
+    "NSVisualTabPickerGridViewDelegate"
+  ],
+  "methods": {
+    "springAnimationForVisualTabPicker": {
+      "name": "springAnimationForVisualTabPicker",
+      "bridgedName": "springAnimationForVisualTabPicker",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTabsShouldBeClosable": {
+      "name": "_updateTabsShouldBeClosable",
+      "bridgedName": "_updateTabsShouldBeClosable",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerItemsDidChange": {
+      "name": "tabPickerItemsDidChange",
+      "bridgedName": "tabPickerItemsDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabFilterInfoForOrderedTabs": {
+      "name": "_tabFilterInfoForOrderedTabs",
+      "bridgedName": "_tabFilterInfoForOrderedTabs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetFilterState": {
+      "name": "_resetFilterState",
+      "bridgedName": "_resetFilterState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doesSearchResultsContainSelectedTab": {
+      "name": "_doesSearchResultsContainSelectedTab",
+      "bridgedName": "_doesSearchResultsContainSelectedTab",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performAsynchronousFilter": {
+      "name": "_performAsynchronousFilter",
+      "bridgedName": "_performAsynchronousFilter",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadGridView": {
+      "name": "_reloadGridView",
+      "bridgedName": "_reloadGridView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadLocalTabData": {
+      "name": "_reloadLocalTabData",
+      "bridgedName": "_reloadLocalTabData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filterObjectsInArray:usingBlock:": {
+      "name": "_filterObjectsInArray:usingBlock:",
+      "bridgedName": "_filterObjectsInArray_usingBlock",
+      "args": [
+        {
+          "name": "_filterObjectsInArray",
+          "type": "id"
+        },
+        {
+          "name": "usingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerSearchFieldTextDidChange:": {
+      "name": "visualTabPickerSearchFieldTextDidChange:",
+      "bridgedName": "visualTabPickerSearchFieldTextDidChange",
+      "args": [
+        {
+          "name": "visualTabPickerSearchFieldTextDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSearchTextWithValue:": {
+      "name": "_updateSearchTextWithValue:",
+      "bridgedName": "_updateSearchTextWithValue",
+      "args": [
+        {
+          "name": "_updateSearchTextWithValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetSearch": {
+      "name": "_resetSearch",
+      "bridgedName": "_resetSearch",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:doCommandBySelector:": {
+      "name": "control:textView:doCommandBySelector:",
+      "bridgedName": "control_textView_doCommandBySelector",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerGridViewCloseTabViewItem:": {
+      "name": "visualTabPickerGridViewCloseTabViewItem:",
+      "bridgedName": "visualTabPickerGridViewCloseTabViewItem",
+      "args": [
+        {
+          "name": "visualTabPickerGridViewCloseTabViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerGridView:selectTab:": {
+      "name": "visualTabPickerGridView:selectTab:",
+      "bridgedName": "visualTabPickerGridView_selectTab",
+      "args": [
+        {
+          "name": "visualTabPickerGridView",
+          "type": "id"
+        },
+        {
+          "name": "selectTab",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createNewTabForVisualTabPickerGridView:": {
+      "name": "createNewTabForVisualTabPickerGridView:",
+      "bridgedName": "createNewTabForVisualTabPickerGridView",
+      "args": [
+        {
+          "name": "createNewTabForVisualTabPickerGridView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canCloseTabsInVisualTabPickerGridView:": {
+      "name": "canCloseTabsInVisualTabPickerGridView:",
+      "bridgedName": "canCloseTabsInVisualTabPickerGridView",
+      "args": [
+        {
+          "name": "canCloseTabsInVisualTabPickerGridView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerGridView:thumbnailViewForTabItem:": {
+      "name": "visualTabPickerGridView:thumbnailViewForTabItem:",
+      "bridgedName": "visualTabPickerGridView_thumbnailViewForTabItem",
+      "args": [
+        {
+          "name": "visualTabPickerGridView",
+          "type": "id"
+        },
+        {
+          "name": "thumbnailViewForTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tilesHeightToWidthRatioInVisualTabPickerGridView:": {
+      "name": "tilesHeightToWidthRatioInVisualTabPickerGridView:",
+      "bridgedName": "tilesHeightToWidthRatioInVisualTabPickerGridView",
+      "args": [
+        {
+          "name": "tilesHeightToWidthRatioInVisualTabPickerGridView",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedTabItemInVisualTabPickerGridView:": {
+      "name": "selectedTabItemInVisualTabPickerGridView:",
+      "bridgedName": "selectedTabItemInVisualTabPickerGridView",
+      "args": [
+        {
+          "name": "selectedTabItemInVisualTabPickerGridView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderedTabItemsInVisualTabPickerGridView:": {
+      "name": "orderedTabItemsInVisualTabPickerGridView:",
+      "bridgedName": "orderedTabItemsInVisualTabPickerGridView",
+      "args": [
+        {
+          "name": "orderedTabItemsInVisualTabPickerGridView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isSearching": {
+      "name": "isSearching",
+      "bridgedName": "isSearching",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "focusSearchField": {
+      "name": "focusSearchField",
+      "bridgedName": "focusSearchField",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contentLayoutRect": {
+      "name": "contentLayoutRect",
+      "bridgedName": "contentLayoutRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectTabBarItem:": {
+      "name": "selectTabBarItem:",
+      "bridgedName": "selectTabBarItem",
+      "args": [
+        {
+          "name": "selectTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadTabBarItem:": {
+      "name": "reloadTabBarItem:",
+      "bridgedName": "reloadTabBarItem",
+      "args": [
+        {
+          "name": "reloadTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didInsertTabBarItem:": {
+      "name": "didInsertTabBarItem:",
+      "bridgedName": "didInsertTabBarItem",
+      "args": [
+        {
+          "name": "didInsertTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willInsertTabBarItem": {
+      "name": "willInsertTabBarItem",
+      "bridgedName": "willInsertTabBarItem",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "postponeClosingVisualTabPickerWhenNewTabIsInserted": {
+      "name": "postponeClosingVisualTabPickerWhenNewTabIsInserted",
+      "bridgedName": "postponeClosingVisualTabPickerWhenNewTabIsInserted",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexOfSelectedTab": {
+      "name": "indexOfSelectedTab",
+      "bridgedName": "indexOfSelectedTab",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldStackMultipleThumbnailsInOneContainerIfPossible": {
+      "name": "shouldStackMultipleThumbnailsInOneContainerIfPossible",
+      "bridgedName": "shouldStackMultipleThumbnailsInOneContainerIfPossible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDisplayRealWebViews": {
+      "name": "shouldDisplayRealWebViews",
+      "bridgedName": "shouldDisplayRealWebViews",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "entryOrExitAnimationInProgress": {
+      "name": "entryOrExitAnimationInProgress",
+      "bridgedName": "entryOrExitAnimationInProgress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startEntryAnimation": {
+      "name": "startEntryAnimation",
+      "bridgedName": "startEntryAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeVisualTabPickerFromViewHierarchy": {
+      "name": "removeVisualTabPickerFromViewHierarchy",
+      "bridgedName": "removeVisualTabPickerFromViewHierarchy",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closeVisualTabPickerAnimated:": {
+      "name": "closeVisualTabPickerAnimated:",
+      "bridgedName": "closeVisualTabPickerAnimated",
+      "args": [
+        {
+          "name": "closeVisualTabPickerAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closeVisualTabPicker": {
+      "name": "closeVisualTabPicker",
+      "bridgedName": "closeVisualTabPicker",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelSearchAndCloseAfterDelay": {
+      "name": "_cancelSearchAndCloseAfterDelay",
+      "bridgedName": "_cancelSearchAndCloseAfterDelay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerAnimationDuration": {
+      "name": "tabPickerAnimationDuration",
+      "bridgedName": "tabPickerAnimationDuration",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabPickerBackdropVisualEffectViewWithFrame:": {
+      "name": "_makeTabPickerBackdropVisualEffectViewWithFrame:",
+      "bridgedName": "_makeTabPickerBackdropVisualEffectViewWithFrame",
+      "args": [
+        {
+          "name": "_makeTabPickerBackdropVisualEffectViewWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "shouldShowCloseButtons": {
+      "name": "shouldShowCloseButtons",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldHighlightTiles": {
+      "name": "shouldHighlightTiles",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldShowNewTabButton": {
+      "name": "shouldShowNewTabButton",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "sidebarSnapshot": {
+      "name": "sidebarSnapshot",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "tabBarSnapshot": {
+      "name": "tabBarSnapshot",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "addingNewTab": {
+      "name": "addingNewTab",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isAddingNewTab"
+      ]
+    },
+    "tabsShouldBeClosable": {
+      "name": "tabsShouldBeClosable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldStackThumbnails": {
+      "name": "shouldStackThumbnails",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <NSVisualTabPickerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
