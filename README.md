@@ -6,6 +6,7 @@
 
 | Version        | Compare           | Patch  |
 | -------------- | ----------------- | ------ |
+| [48.1](https://github.com/skpm/sketch-headers/tree/48.1) | [48...48.1](https://github.com/skpm/sketch-headers/compare/48...48.1) | [48...48.1](https://github.com/skpm/sketch-headers/compare/48...48.1.diff) |
 | [48](https://github.com/skpm/sketch-headers/tree/48) | [48-beta4...48](https://github.com/skpm/sketch-headers/compare/48-beta4...48) | [48-beta4...48](https://github.com/skpm/sketch-headers/compare/48-beta4...48.diff) |
 | [48-beta4](https://github.com/skpm/sketch-headers/tree/48-beta4) | [48-beta...48-beta4](https://github.com/skpm/sketch-headers/compare/48-beta...48-beta4) | [48-beta...48-beta4](https://github.com/skpm/sketch-headers/compare/48-beta...48-beta4.diff) |
 | [48-beta](https://github.com/skpm/sketch-headers/tree/48-beta) | [47.1...48-beta](https://github.com/skpm/sketch-headers/compare/47.1...48-beta) | [47.1...48-beta](https://github.com/skpm/sketch-headers/compare/47.1...48-beta.diff) |
