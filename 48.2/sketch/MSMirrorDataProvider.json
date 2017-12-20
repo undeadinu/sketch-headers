@@ -1,0 +1,303 @@
+{
+  "imports": [
+    "NSObject.h",
+    "SMKMirrorDataSource.h"
+  ],
+  "classes": [
+    "MSDocument",
+    "MSImmutableDocumentData",
+    "NSDictionary",
+    "NSObject<OS_dispatch_queue>",
+    "NSString",
+    "SMKMirrorController"
+  ],
+  "protocol": false,
+  "className": "MSMirrorDataProvider",
+  "extends": "NSObject",
+  "interfaces": [
+    "SMKMirrorDataSource"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentArtboard": {
+      "name": "currentArtboard",
+      "bridgedName": "currentArtboard",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasDocumentStructureChangedWithCompletionBlock:": {
+      "name": "hasDocumentStructureChangedWithCompletionBlock:",
+      "bridgedName": "hasDocumentStructureChangedWithCompletionBlock",
+      "args": [
+        {
+          "name": "hasDocumentStructureChangedWithCompletionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendUpdateFromOldArtboard:toNewArtboard:": {
+      "name": "sendUpdateFromOldArtboard:toNewArtboard:",
+      "bridgedName": "sendUpdateFromOldArtboard_toNewArtboard",
+      "args": [
+        {
+          "name": "sendUpdateFromOldArtboard",
+          "type": "id"
+        },
+        {
+          "name": "toNewArtboard",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendPartialUpdateForNewDocument:": {
+      "name": "sendPartialUpdateForNewDocument:",
+      "bridgedName": "sendPartialUpdateForNewDocument",
+      "args": [
+        {
+          "name": "sendPartialUpdateForNewDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendUpdate": {
+      "name": "sendUpdate",
+      "bridgedName": "sendUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidResignMainNotification:": {
+      "name": "windowDidResignMainNotification:",
+      "bridgedName": "windowDidResignMainNotification",
+      "args": [
+        {
+          "name": "windowDidResignMainNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeMainNotification:": {
+      "name": "windowDidBecomeMainNotification:",
+      "bridgedName": "windowDidBecomeMainNotification",
+      "args": [
+        {
+          "name": "windowDidBecomeMainNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDocumentNameDidChange": {
+      "name": "currentDocumentNameDidChange",
+      "bridgedName": "currentDocumentNameDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDocumentDidChange": {
+      "name": "currentDocumentDidChange",
+      "bridgedName": "currentDocumentDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentArtboardDidChange": {
+      "name": "currentArtboardDidChange",
+      "bridgedName": "currentArtboardDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageData:dataByInsertingBackgroundColor:": {
+      "name": "imageData:dataByInsertingBackgroundColor:",
+      "bridgedName": "imageData_dataByInsertingBackgroundColor",
+      "args": [
+        {
+          "name": "imageData",
+          "type": "id"
+        },
+        {
+          "name": "dataByInsertingBackgroundColor",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderExportForRequest:handler:": {
+      "name": "renderExportForRequest:handler:",
+      "bridgedName": "renderExportForRequest_handler",
+      "args": [
+        {
+          "name": "renderExportForRequest",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "isAlreadyComparing": {
+      "name": "isAlreadyComparing",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mirrorQueue": {
+      "name": "mirrorQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "lastImmutableDoc": {
+      "name": "lastImmutableDoc",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentDocumentID": {
+      "name": "currentDocumentID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "connectionController": {
+      "name": "connectionController",
+      "pointer": true,
+      "type": "__weak SMKMirrorController",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentArtboardID": {
+      "name": "currentArtboardID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "shouldScrollToSelectedArtboard": {
+      "name": "shouldScrollToSelectedArtboard",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "manifestContent": {
+      "name": "manifestContent",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,696 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "MSInspectorSection.h",
+    "NSMenuDelegate.h"
+  ],
+  "classes": [
+    "MSSharedStylesInspectorSection",
+    "NSArray",
+    "NSButton",
+    "NSNumberFormatter",
+    "NSSegmentedControl",
+    "NSString",
+    "NSTextField",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSLayerInspectorViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "MSInspectorSection",
+    "NSMenuDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorMagnifierAction:": {
+      "name": "colorMagnifierAction:",
+      "bridgedName": "colorMagnifierAction",
+      "args": [
+        {
+          "name": "colorMagnifierAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canHandleColorMagnifierAction": {
+      "name": "canHandleColorMagnifierAction",
+      "bridgedName": "canHandleColorMagnifierAction",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasLineShapeLayer": {
+      "name": "hasLineShapeLayer",
+      "bridgedName": "hasLineShapeLayer",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerIsGroup": {
+      "name": "layerIsGroup",
+      "bridgedName": "layerIsGroup",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "views": {
+      "name": "views",
+      "bridgedName": "views",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForUndefinedKey:": {
+      "name": "valueForUndefinedKey:",
+      "bridgedName": "valueForUndefinedKey",
+      "args": [
+        {
+          "name": "valueForUndefinedKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "document": {
+      "name": "document",
+      "bridgedName": "document",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshAction:": {
+      "name": "refreshAction:",
+      "bridgedName": "refreshAction",
+      "args": [
+        {
+          "name": "refreshAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorsWithProperContent": {
+      "name": "inspectorsWithProperContent",
+      "bridgedName": "inspectorsWithProperContent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerOrContentsOfLayer:ifKindOfClass:": {
+      "name": "layerOrContentsOfLayer:ifKindOfClass:",
+      "bridgedName": "layerOrContentsOfLayer_ifKindOfClass",
+      "args": [
+        {
+          "name": "layerOrContentsOfLayer",
+          "type": "id"
+        },
+        {
+          "name": "ifKindOfClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sharedObjectsSection": {
+      "name": "sharedObjectsSection",
+      "bridgedName": "sharedObjectsSection",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerWithSharedStyleDidChange": {
+      "name": "layerWithSharedStyleDidChange",
+      "bridgedName": "layerWithSharedStyleDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginRenameSharedObject:completionBlock:": {
+      "name": "beginRenameSharedObject:completionBlock:",
+      "bridgedName": "beginRenameSharedObject_completionBlock",
+      "args": [
+        {
+          "name": "beginRenameSharedObject",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resizeConstraintsAction:": {
+      "name": "resizeConstraintsAction:",
+      "bridgedName": "resizeConstraintsAction",
+      "args": [
+        {
+          "name": "resizeConstraintsAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeTextLayerFont:": {
+      "name": "changeTextLayerFont:",
+      "bridgedName": "changeTextLayerFont",
+      "args": [
+        {
+          "name": "changeTextLayerFont",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotateAction:": {
+      "name": "rotateAction:",
+      "bridgedName": "rotateAction",
+      "args": [
+        {
+          "name": "rotateAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boundsForParentOf:": {
+      "name": "boundsForParentOf:",
+      "bridgedName": "boundsForParentOf",
+      "args": [
+        {
+          "name": "boundsForParentOf",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "anchorFromString:axis:": {
+      "name": "anchorFromString:axis:",
+      "bridgedName": "anchorFromString_axis",
+      "args": [
+        {
+          "name": "anchorFromString",
+          "type": "id"
+        },
+        {
+          "name": "axis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLayerSizeFromString:onAxis:": {
+      "name": "setLayerSizeFromString:onAxis:",
+      "bridgedName": "setLayerSizeFromString_onAxis",
+      "args": [
+        {
+          "name": "setLayerSizeFromString",
+          "type": "id"
+        },
+        {
+          "name": "onAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHeightAction:": {
+      "name": "setHeightAction:",
+      "bridgedName": "setHeightAction",
+      "args": [
+        {
+          "name": "setHeightAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setWidthAction:": {
+      "name": "setWidthAction:",
+      "bridgedName": "setWidthAction",
+      "args": [
+        {
+          "name": "setWidthAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setYAction:": {
+      "name": "setYAction:",
+      "bridgedName": "setYAction",
+      "args": [
+        {
+          "name": "setYAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setXAction:": {
+      "name": "setXAction:",
+      "bridgedName": "setXAction",
+      "args": [
+        {
+          "name": "setXAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "areAllLayersFlippedVertically": {
+      "name": "areAllLayersFlippedVertically",
+      "bridgedName": "areAllLayersFlippedVertically",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "areAllLayersFlippedHorizontally": {
+      "name": "areAllLayersFlippedHorizontally",
+      "bridgedName": "areAllLayersFlippedHorizontally",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerSizeOnAxis:": {
+      "name": "layerSizeOnAxis:",
+      "bridgedName": "layerSizeOnAxis",
+      "args": [
+        {
+          "name": "layerSizeOnAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerOriginXForLayer:": {
+      "name": "rulerOriginXForLayer:",
+      "bridgedName": "rulerOriginXForLayer",
+      "args": [
+        {
+          "name": "rulerOriginXForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerOriginYForLayer:": {
+      "name": "rulerOriginYForLayer:",
+      "bridgedName": "rulerOriginYForLayer",
+      "args": [
+        {
+          "name": "rulerOriginYForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteYForLayers": {
+      "name": "absoluteYForLayers",
+      "bridgedName": "absoluteYForLayers",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteXForLayers": {
+      "name": "absoluteXForLayers",
+      "bridgedName": "absoluteXForLayers",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forField:": {
+      "name": "setValue:forField:",
+      "bridgedName": "setValue_forField",
+      "args": [
+        {
+          "name": "setValue",
+          "type": "double"
+        },
+        {
+          "name": "forField",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshBindingsOnShape:": {
+      "name": "refreshBindingsOnShape:",
+      "bridgedName": "refreshBindingsOnShape",
+      "args": [
+        {
+          "name": "refreshBindingsOnShape",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearFlipSegmentedControl:": {
+      "name": "clearFlipSegmentedControl:",
+      "bridgedName": "clearFlipSegmentedControl",
+      "args": [
+        {
+          "name": "clearFlipSegmentedControl",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearPositionAndSizeFields": {
+      "name": "clearPositionAndSizeFields",
+      "bridgedName": "clearPositionAndSizeFields",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateFlipSegmentedControl:": {
+      "name": "updateFlipSegmentedControl:",
+      "bridgedName": "updateFlipSegmentedControl",
+      "args": [
+        {
+          "name": "updateFlipSegmentedControl",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updatePositionAndSizeFields": {
+      "name": "updatePositionAndSizeFields",
+      "bridgedName": "updatePositionAndSizeFields",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layerPositionPossiblyChanged": {
+      "name": "_layerPositionPossiblyChanged",
+      "bridgedName": "_layerPositionPossiblyChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerPositionPossiblyChanged": {
+      "name": "layerPositionPossiblyChanged",
+      "bridgedName": "layerPositionPossiblyChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsSeparatorBetweenView:andView:": {
+      "name": "wantsSeparatorBetweenView:andView:",
+      "bridgedName": "wantsSeparatorBetweenView_andView",
+      "args": [
+        {
+          "name": "wantsSeparatorBetweenView",
+          "type": "id"
+        },
+        {
+          "name": "andView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "hasScheduledLayerPositionPossiblyChanged": {
+      "name": "hasScheduledLayerPositionPossiblyChanged",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberFormatter": {
+      "name": "numberFormatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layerInspectorControllers": {
+      "name": "layerInspectorControllers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "sharedObjectsController": {
+      "name": "sharedObjectsController",
+      "pointer": true,
+      "type": "MSSharedStylesInspectorSection",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "shouldShowBlendingProperties": {
+      "name": "shouldShowBlendingProperties",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldShowLayerSpecificProperties": {
+      "name": "shouldShowLayerSpecificProperties",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldShowSharedStyles": {
+      "name": "shouldShowSharedStyles",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldShowPositions": {
+      "name": "shouldShowPositions",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lineFlipSegmentedControl": {
+      "name": "lineFlipSegmentedControl",
+      "pointer": true,
+      "type": "__weak NSSegmentedControl",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flipSegmentedControl": {
+      "name": "flipSegmentedControl",
+      "pointer": true,
+      "type": "__weak NSSegmentedControl",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lockProportionsButton": {
+      "name": "lockProportionsButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "heightTextField": {
+      "name": "heightTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "widthTextField": {
+      "name": "widthTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "yTextField": {
+      "name": "yTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "xTextField": {
+      "name": "xTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "resizingView": {
+      "name": "resizingView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "lineView": {
+      "name": "lineView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "positionView": {
+      "name": "positionView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layers": {
+      "name": "layers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

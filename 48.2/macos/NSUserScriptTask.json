@@ -1,0 +1,153 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSFileHandle",
+    "NSURL",
+    "NSXPCConnection"
+  ],
+  "protocol": false,
+  "className": "NSUserScriptTask",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "badFileError:": {
+      "name": "badFileError:",
+      "bridgedName": "badFileError",
+      "args": [
+        {
+          "name": "badFileError",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isValidScriptFile:error:": {
+      "name": "isValidScriptFile:error:",
+      "bridgedName": "isValidScriptFile_error",
+      "args": [
+        {
+          "name": "isValidScriptFile",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "executeWithInterpreter:arguments:": {
+      "name": "executeWithInterpreter:arguments:",
+      "bridgedName": "executeWithInterpreter_arguments",
+      "args": [
+        {
+          "name": "executeWithInterpreter",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interpretErrorStatus:withOutput:": {
+      "name": "interpretErrorStatus:withOutput:",
+      "bridgedName": "interpretErrorStatus_withOutput",
+      "args": [
+        {
+          "name": "interpretErrorStatus",
+          "type": "int"
+        },
+        {
+          "name": "withOutput",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "executeWithCompletionHandler:": {
+      "name": "executeWithCompletionHandler:",
+      "bridgedName": "executeWithCompletionHandler",
+      "args": [
+        {
+          "name": "executeWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithURL:error:": {
+      "name": "initWithURL:error:",
+      "bridgedName": "initWithURL_error",
+      "args": [
+        {
+          "name": "initWithURL",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "standardError": {
+      "name": "standardError",
+      "pointer": true,
+      "type": "NSFileHandle",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "standardOutput": {
+      "name": "standardOutput",
+      "pointer": true,
+      "type": "NSFileHandle",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "standardInput": {
+      "name": "standardInput",
+      "pointer": true,
+      "type": "NSFileHandle",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "scriptURL": {
+      "name": "scriptURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSDocumentData",
+    "NSObject<OS_dispatch_queue>",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSWebExporter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "fileURLWithHash:inDirectory:": {
+      "name": "fileURLWithHash:inDirectory:",
+      "bridgedName": "fileURLWithHash_inDirectory",
+      "args": [
+        {
+          "name": "fileURLWithHash",
+          "type": "id"
+        },
+        {
+          "name": "inDirectory",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "documentURLInDirectory:": {
+      "name": "documentURLInDirectory:",
+      "bridgedName": "documentURLInDirectory",
+      "args": [
+        {
+          "name": "documentURLInDirectory",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exportDocument:withName:includeDocument:toLocalURL:completionBlock:": {
+      "name": "exportDocument:withName:includeDocument:toLocalURL:completionBlock:",
+      "bridgedName": "exportDocument_withName_includeDocument_toLocalURL_completionBlock",
+      "args": [
+        {
+          "name": "exportDocument",
+          "type": "id"
+        },
+        {
+          "name": "withName",
+          "type": "id"
+        },
+        {
+          "name": "includeDocument",
+          "type": "BOOL"
+        },
+        {
+          "name": "toLocalURL",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:": {
+      "name": "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:",
+      "bridgedName": "exportSelectedArtboardsOfDocument_withName_includeDocument_toLocalURL_completionBlock",
+      "args": [
+        {
+          "name": "exportSelectedArtboardsOfDocument",
+          "type": "id"
+        },
+        {
+          "name": "withName",
+          "type": "id"
+        },
+        {
+          "name": "includeDocument",
+          "type": "BOOL"
+        },
+        {
+          "name": "toLocalURL",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveManifestFile:withError:": {
+      "name": "saveManifestFile:withError:",
+      "bridgedName": "saveManifestFile_withError",
+      "args": [
+        {
+          "name": "saveManifestFile",
+          "type": "id"
+        },
+        {
+          "name": "withError",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageRepresentationFromRootLayer:onPage:scale:": {
+      "name": "imageRepresentationFromRootLayer:onPage:scale:",
+      "bridgedName": "imageRepresentationFromRootLayer_onPage_scale",
+      "args": [
+        {
+          "name": "imageRepresentationFromRootLayer",
+          "type": "id"
+        },
+        {
+          "name": "onPage",
+          "type": "id"
+        },
+        {
+          "name": "scale",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportedImageDataForRoot:onPage:scale:": {
+      "name": "exportedImageDataForRoot:onPage:scale:",
+      "bridgedName": "exportedImageDataForRoot_onPage_scale",
+      "args": [
+        {
+          "name": "exportedImageDataForRoot",
+          "type": "id"
+        },
+        {
+          "name": "onPage",
+          "type": "id"
+        },
+        {
+          "name": "scale",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForDocument:": {
+      "name": "metadataForDocument:",
+      "bridgedName": "metadataForDocument",
+      "args": [
+        {
+          "name": "metadataForDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "callCompletionBlock:withDidExport:error:": {
+      "name": "callCompletionBlock:withDidExport:error:",
+      "bridgedName": "callCompletionBlock_withDidExport_error",
+      "args": [
+        {
+          "name": "callCompletionBlock",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "withDidExport",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportWithCompletionBlock:": {
+      "name": "exportWithCompletionBlock:",
+      "bridgedName": "exportWithCompletionBlock",
+      "args": [
+        {
+          "name": "exportWithCompletionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel": {
+      "name": "cancel",
+      "bridgedName": "cancel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:name:includeDocument:localURL:": {
+      "name": "initWithDocument:name:includeDocument:localURL:",
+      "bridgedName": "initWithDocument_name_includeDocument_localURL",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        },
+        {
+          "name": "includeDocument",
+          "type": "BOOL"
+        },
+        {
+          "name": "localURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "cancelled": {
+      "name": "cancelled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "exportingQueue": {
+      "name": "exportingQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "includeDocument": {
+      "name": "includeDocument",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectiveExport": {
+      "name": "selectiveExport",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "includeBackground": {
+      "name": "includeBackground",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "destinationURL": {
+      "name": "destinationURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "MSDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "documentFileSize": {
+      "name": "documentFileSize",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

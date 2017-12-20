@@ -1,0 +1,742 @@
+{
+  "imports": [
+    "NSView.h"
+  ],
+  "classes": [
+    "MSContentDrawView",
+    "MSDocument",
+    "MSRulerData",
+    "MSRulerViewLayer",
+    "NSNumberFormatter"
+  ],
+  "protocol": false,
+  "className": "MSRulerView",
+  "extends": "NSView",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerHeight": {
+      "name": "rulerHeight",
+      "bridgedName": "rulerHeight",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerLength": {
+      "name": "rulerLength",
+      "bridgedName": "rulerLength",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "bridgedName": "zoomValue",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollOrigin": {
+      "name": "scrollOrigin",
+      "bridgedName": "scrollOrigin",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "occupiedRegionForRect:withOffset:zoom:": {
+      "name": "occupiedRegionForRect:withOffset:zoom:",
+      "bridgedName": "occupiedRegionForRect_withOffset_zoom",
+      "args": [
+        {
+          "name": "occupiedRegionForRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "withOffset",
+          "type": "long long"
+        },
+        {
+          "name": "zoom",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierPathForLineAtPosition:inRect:": {
+      "name": "bezierPathForLineAtPosition:inRect:",
+      "bridgedName": "bezierPathForLineAtPosition_inRect",
+      "args": [
+        {
+          "name": "bezierPathForLineAtPosition",
+          "type": "double"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawGuide:onCanvasInRect:": {
+      "name": "drawGuide:onCanvasInRect:",
+      "bridgedName": "drawGuide_onCanvasInRect",
+      "args": [
+        {
+          "name": "drawGuide",
+          "type": "double"
+        },
+        {
+          "name": "onCanvasInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawGuidesOnCanvasInRect:": {
+      "name": "drawGuidesOnCanvasInRect:",
+      "bridgedName": "drawGuidesOnCanvasInRect",
+      "args": [
+        {
+          "name": "drawGuidesOnCanvasInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidden:": {
+      "name": "setHidden:",
+      "bridgedName": "setHidden",
+      "args": [
+        {
+          "name": "setHidden",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "baseLineIncludingScrollOrigin:": {
+      "name": "baseLineIncludingScrollOrigin:",
+      "bridgedName": "baseLineIncludingScrollOrigin",
+      "args": [
+        {
+          "name": "baseLineIncludingScrollOrigin",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "baseLine": {
+      "name": "baseLine",
+      "bridgedName": "baseLine",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapLineWithPosition:": {
+      "name": "snapLineWithPosition:",
+      "bridgedName": "snapLineWithPosition",
+      "args": [
+        {
+          "name": "snapLineWithPosition",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEventToPoint:": {
+      "name": "mouseEventToPoint:",
+      "bridgedName": "mouseEventToPoint",
+      "args": [
+        {
+          "name": "mouseEventToPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshGuidesForGrid:": {
+      "name": "refreshGuidesForGrid:",
+      "bridgedName": "refreshGuidesForGrid",
+      "args": [
+        {
+          "name": "refreshGuidesForGrid",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshAllGuidesInDrawView": {
+      "name": "refreshAllGuidesInDrawView",
+      "bridgedName": "refreshAllGuidesInDrawView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshGuideInDrawViewAtPosition:": {
+      "name": "refreshGuideInDrawViewAtPosition:",
+      "bridgedName": "refreshGuideInDrawViewAtPosition",
+      "args": [
+        {
+          "name": "refreshGuideInDrawViewAtPosition",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshGuideInDrawViewAtIndex:": {
+      "name": "refreshGuideInDrawViewAtIndex:",
+      "bridgedName": "refreshGuideInDrawViewAtIndex",
+      "args": [
+        {
+          "name": "refreshGuideInDrawViewAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "turnAlignmentGuidesBackOn": {
+      "name": "turnAlignmentGuidesBackOn",
+      "bridgedName": "turnAlignmentGuidesBackOn",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUp:": {
+      "name": "mouseUp:",
+      "bridgedName": "mouseUp",
+      "args": [
+        {
+          "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerBasedRectForLayer:": {
+      "name": "rulerBasedRectForLayer:",
+      "bridgedName": "rulerBasedRectForLayer",
+      "args": [
+        {
+          "name": "rulerBasedRectForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapGuideToSelectedLayers:": {
+      "name": "snapGuideToSelectedLayers:",
+      "bridgedName": "snapGuideToSelectedLayers",
+      "args": [
+        {
+          "name": "snapGuideToSelectedLayers",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "guidePositionForMouse:": {
+      "name": "guidePositionForMouse:",
+      "bridgedName": "guidePositionForMouse",
+      "args": [
+        {
+          "name": "guidePositionForMouse",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showAppropriateCursorForMouse:": {
+      "name": "showAppropriateCursorForMouse:",
+      "bridgedName": "showAppropriateCursorForMouse",
+      "args": [
+        {
+          "name": "showAppropriateCursorForMouse",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragSelectedGuideWithMouse:": {
+      "name": "dragSelectedGuideWithMouse:",
+      "bridgedName": "dragSelectedGuideWithMouse",
+      "args": [
+        {
+          "name": "dragSelectedGuideWithMouse",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateSelectedLayerOriginsInInspector": {
+      "name": "updateSelectedLayerOriginsInInspector",
+      "bridgedName": "updateSelectedLayerOriginsInInspector",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "distanceFromDragOrigin:": {
+      "name": "distanceFromDragOrigin:",
+      "bridgedName": "distanceFromDragOrigin",
+      "args": [
+        {
+          "name": "distanceFromDragOrigin",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragRulerBaseWithMouse:": {
+      "name": "dragRulerBaseWithMouse:",
+      "bridgedName": "dragRulerBaseWithMouse",
+      "args": [
+        {
+          "name": "dragRulerBaseWithMouse",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDraggedAtPoint:": {
+      "name": "mouseDraggedAtPoint:",
+      "bridgedName": "mouseDraggedAtPoint",
+      "args": [
+        {
+          "name": "mouseDraggedAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDragged:": {
+      "name": "mouseDragged:",
+      "bridgedName": "mouseDragged",
+      "args": [
+        {
+          "name": "mouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexOfGuideAtMousePoint:": {
+      "name": "indexOfGuideAtMousePoint:",
+      "bridgedName": "indexOfGuideAtMousePoint",
+      "args": [
+        {
+          "name": "indexOfGuideAtMousePoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addNewGuideAtMousePoint:": {
+      "name": "addNewGuideAtMousePoint:",
+      "bridgedName": "addNewGuideAtMousePoint",
+      "args": [
+        {
+          "name": "addNewGuideAtMousePoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDragCursor": {
+      "name": "setDragCursor",
+      "bridgedName": "setDragCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setResizeCursor": {
+      "name": "setResizeCursor",
+      "bridgedName": "setResizeCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherAxisForPoint:": {
+      "name": "otherAxisForPoint:",
+      "bridgedName": "otherAxisForPoint",
+      "args": [
+        {
+          "name": "otherAxisForPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "relevantAxisForPoint:": {
+      "name": "relevantAxisForPoint:",
+      "bridgedName": "relevantAxisForPoint",
+      "args": [
+        {
+          "name": "relevantAxisForPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshGuide:": {
+      "name": "refreshGuide:",
+      "bridgedName": "refreshGuide",
+      "args": [
+        {
+          "name": "refreshGuide",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshTemporaryRulerGuide": {
+      "name": "refreshTemporaryRulerGuide",
+      "bridgedName": "refreshTemporaryRulerGuide",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseMoved:": {
+      "name": "mouseMoved:",
+      "bridgedName": "mouseMoved",
+      "args": [
+        {
+          "name": "mouseMoved",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "eventInView:": {
+      "name": "eventInView:",
+      "bridgedName": "eventInView",
+      "args": [
+        {
+          "name": "eventInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstResponder": {
+      "name": "acceptsFirstResponder",
+      "bridgedName": "acceptsFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllGuides:": {
+      "name": "removeAllGuides:",
+      "bridgedName": "removeAllGuides",
+      "args": [
+        {
+          "name": "removeAllGuides",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeGuide:": {
+      "name": "removeGuide:",
+      "bridgedName": "removeGuide",
+      "args": [
+        {
+          "name": "removeGuide",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addAction:toMenu:": {
+      "name": "addAction:toMenu:",
+      "bridgedName": "addAction_toMenu",
+      "args": [
+        {
+          "name": "addAction",
+          "type": "id"
+        },
+        {
+          "name": "toMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "titleForRemoveAllGuidesMenuItem": {
+      "name": "titleForRemoveAllGuidesMenuItem",
+      "bridgedName": "titleForRemoveAllGuidesMenuItem",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuForEvent:": {
+      "name": "menuForEvent:",
+      "bridgedName": "menuForEvent",
+      "args": [
+        {
+          "name": "menuForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrame:": {
+      "name": "setFrame:",
+      "bridgedName": "setFrame",
+      "args": [
+        {
+          "name": "setFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "guides": {
+      "name": "guides",
+      "bridgedName": "guides",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "occupiedRegion": {
+      "name": "occupiedRegion",
+      "bridgedName": "occupiedRegion",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareRulerViewLayer:": {
+      "name": "prepareRulerViewLayer:",
+      "bridgedName": "prepareRulerViewLayer",
+      "args": [
+        {
+          "name": "prepareRulerViewLayer",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerViewLayerClass": {
+      "name": "rulerViewLayerClass",
+      "bridgedName": "rulerViewLayerClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeRulerViewLayer": {
+      "name": "makeRulerViewLayer",
+      "bridgedName": "makeRulerViewLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculateContentsScale": {
+      "name": "calculateContentsScale",
+      "bridgedName": "calculateContentsScale",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidChangeBackingProperties": {
+      "name": "viewDidChangeBackingProperties",
+      "bridgedName": "viewDidChangeBackingProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "rulerViewLayer": {
+      "name": "rulerViewLayer",
+      "pointer": true,
+      "type": "MSRulerViewLayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "temporaryRulerGuide": {
+      "name": "temporaryRulerGuide",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "axis": {
+      "name": "axis",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mouseDownPoint": {
+      "name": "mouseDownPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mouseDidDrag": {
+      "name": "mouseDidDrag",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "contentView": {
+      "name": "contentView",
+      "pointer": true,
+      "type": "__weak MSContentDrawView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rulerData": {
+      "name": "rulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "imports": [
+    "NSOperation.h",
+    "CALayerDelegate.h"
+  ],
+  "classes": [
+    "MSCGContextPool",
+    "MSContentCALayer",
+    "MSImmutableDocumentData",
+    "MSImmutablePage",
+    "MSRenderingContext",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSTileRenderOperation",
+  "extends": "NSOperation",
+  "interfaces": [
+    "CALayerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawBackgroundInContext:": {
+      "name": "drawBackgroundInContext:",
+      "bridgedName": "drawBackgroundInContext",
+      "args": [
+        {
+          "name": "drawBackgroundInContext",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeRenderingContextForPage:rect:scale:zoom:context:": {
+      "name": "makeRenderingContextForPage:rect:scale:zoom:context:",
+      "bridgedName": "makeRenderingContextForPage_rect_scale_zoom_context",
+      "args": [
+        {
+          "name": "makeRenderingContextForPage",
+          "type": "id"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "scale",
+          "type": "double"
+        },
+        {
+          "name": "zoom",
+          "type": "double"
+        },
+        {
+          "name": "context",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawContentInContext:clipRect:": {
+      "name": "drawContentInContext:clipRect:",
+      "bridgedName": "drawContentInContext_clipRect",
+      "args": [
+        {
+          "name": "drawContentInContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "clipRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "combineContent:withBackground:": {
+      "name": "combineContent:withBackground:",
+      "bridgedName": "combineContent_withBackground",
+      "args": [
+        {
+          "name": "combineContent",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "withBackground",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "main": {
+      "name": "main",
+      "bridgedName": "main",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelDrawing": {
+      "name": "cancelDrawing",
+      "bridgedName": "cancelDrawing",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContextPool:": {
+      "name": "initWithContextPool:",
+      "bridgedName": "initWithContextPool",
+      "args": [
+        {
+          "name": "initWithContextPool",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "context": {
+      "name": "context",
+      "pointer": true,
+      "type": "MSRenderingContext",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "contextPool": {
+      "name": "contextPool",
+      "pointer": true,
+      "type": "MSCGContextPool",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "renderingCacheProvider": {
+      "name": "renderingCacheProvider",
+      "pointer": false,
+      "type": "id <MSRenderingContextCacheProvider>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pageForContent": {
+      "name": "pageForContent",
+      "pointer": true,
+      "type": "MSImmutablePage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "distanceFromScrollOrigin": {
+      "name": "distanceFromScrollOrigin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "showDrawingArea": {
+      "name": "showDrawingArea",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldDrawPixelated": {
+      "name": "shouldDrawPixelated",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "contentRectNeedingRedraw": {
+      "name": "contentRectNeedingRedraw",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "struct CGImage",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "contentLayer": {
+      "name": "contentLayer",
+      "pointer": true,
+      "type": "MSContentCALayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSTileRenderOperationDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,829 @@
+{
+  "imports": [],
+  "classes": [
+    "NSArray",
+    "NSManagedObjectContext",
+    "NSPredicate",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSObjectController",
+  "extends": "NSController",
+  "interfaces": [],
+  "methods": {
+    "_modelAndProxyKeys": {
+      "name": "_modelAndProxyKeys",
+      "bridgedName": "_modelAndProxyKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_keyValueBindingAccessPoints": {
+      "name": "_keyValueBindingAccessPoints",
+      "bridgedName": "_keyValueBindingAccessPoints",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_defaultObjectClassName": {
+      "name": "_defaultObjectClassName",
+      "bridgedName": "_defaultObjectClassName",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_defaultObjectClass": {
+      "name": "_defaultObjectClass",
+      "bridgedName": "_defaultObjectClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_nonAutomaticObservingKeys": {
+      "name": "_nonAutomaticObservingKeys",
+      "bridgedName": "_nonAutomaticObservingKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_controllerKeys": {
+      "name": "_controllerKeys",
+      "bridgedName": "_controllerKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateSingleValue:forKeyPath:error:": {
+      "name": "_validateSingleValue:forKeyPath:error:",
+      "bridgedName": "_validateSingleValue_forKeyPath_error",
+      "args": [
+        {
+          "name": "_validateSingleValue",
+          "type": "id *"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateSingleValue:forKey:error:": {
+      "name": "_validateSingleValue:forKey:error:",
+      "bridgedName": "_validateSingleValue_forKey_error",
+      "args": [
+        {
+          "name": "_validateSingleValue",
+          "type": "id *"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invokeSingleSelector:withArguments:onKeyPath:": {
+      "name": "_invokeSingleSelector:withArguments:onKeyPath:",
+      "bridgedName": "_invokeSingleSelector_withArguments_onKeyPath",
+      "args": [
+        {
+          "name": "_invokeSingleSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withArguments",
+          "type": "id"
+        },
+        {
+          "name": "onKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSingleValue:forKeyPath:": {
+      "name": "_setSingleValue:forKeyPath:",
+      "bridgedName": "_setSingleValue_forKeyPath",
+      "args": [
+        {
+          "name": "_setSingleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSingleValue:forKey:": {
+      "name": "_setSingleValue:forKey:",
+      "bridgedName": "_setSingleValue_forKey",
+      "args": [
+        {
+          "name": "_setSingleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleMutableArrayValueForKeyPath:": {
+      "name": "_singleMutableArrayValueForKeyPath:",
+      "bridgedName": "_singleMutableArrayValueForKeyPath",
+      "args": [
+        {
+          "name": "_singleMutableArrayValueForKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleMutableArrayValueForKey:": {
+      "name": "_singleMutableArrayValueForKey:",
+      "bridgedName": "_singleMutableArrayValueForKey",
+      "args": [
+        {
+          "name": "_singleMutableArrayValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleValueForKeyPath:": {
+      "name": "_singleValueForKeyPath:",
+      "bridgedName": "_singleValueForKeyPath",
+      "args": [
+        {
+          "name": "_singleValueForKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleValueForKey:": {
+      "name": "_singleValueForKey:",
+      "bridgedName": "_singleValueForKey",
+      "args": [
+        {
+          "name": "_singleValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "name": "validateUserInterfaceItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_explicitlyCannotRemove": {
+      "name": "_explicitlyCannotRemove",
+      "bridgedName": "_explicitlyCannotRemove",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_explicitlyCannotAdd": {
+      "name": "_explicitlyCannotAdd",
+      "bridgedName": "_explicitlyCannotAdd",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setExplicitlyCannotAdd:remove:": {
+      "name": "_setExplicitlyCannotAdd:remove:",
+      "bridgedName": "_setExplicitlyCannotAdd_remove",
+      "args": [
+        {
+          "name": "_setExplicitlyCannotAdd",
+          "type": "BOOL"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remove:": {
+      "name": "remove:",
+      "bridgedName": "remove",
+      "args": [
+        {
+          "name": "remove",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "add:": {
+      "name": "add:",
+      "bridgedName": "add",
+      "args": [
+        {
+          "name": "add",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeAdd:didCommitSuccessfully:actionSender:": {
+      "name": "_executeAdd:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeAdd_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeAdd",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObject:": {
+      "name": "removeObject:",
+      "bridgedName": "removeObject",
+      "args": [
+        {
+          "name": "removeObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObject:": {
+      "name": "addObject:",
+      "bridgedName": "addObject",
+      "args": [
+        {
+          "name": "addObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareContent": {
+      "name": "prepareContent",
+      "bridgedName": "prepareContent",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareContentWithNewObject:": {
+      "name": "_prepareContentWithNewObject:",
+      "bridgedName": "_prepareContentWithNewObject",
+      "args": [
+        {
+          "name": "_prepareContentWithNewObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newObject": {
+      "name": "newObject",
+      "bridgedName": "newObject",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_objectClassName": {
+      "name": "_objectClassName",
+      "bridgedName": "_objectClassName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setObjectClassName:": {
+      "name": "_setObjectClassName:",
+      "bridgedName": "_setObjectClassName",
+      "args": [
+        {
+          "name": "_setObjectClassName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeEditable:": {
+      "name": "_changeEditable:",
+      "bridgedName": "_changeEditable",
+      "args": [
+        {
+          "name": "_changeEditable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_markHasLoadedData:": {
+      "name": "_markHasLoadedData:",
+      "bridgedName": "_markHasLoadedData",
+      "args": [
+        {
+          "name": "_markHasLoadedData",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notifyOfAnyContentChange": {
+      "name": "_notifyOfAnyContentChange",
+      "bridgedName": "_notifyOfAnyContentChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notifyEditorStateChanged:": {
+      "name": "_notifyEditorStateChanged:",
+      "bridgedName": "_notifyEditorStateChanged",
+      "args": [
+        {
+          "name": "_notifyEditorStateChanged",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setObjectHandler:": {
+      "name": "_setObjectHandler:",
+      "bridgedName": "_setObjectHandler",
+      "args": [
+        {
+          "name": "_setObjectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dealloc": {
+      "name": "_dealloc",
+      "bridgedName": "_dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContent:": {
+      "name": "initWithContent:",
+      "bridgedName": "initWithContent",
+      "args": [
+        {
+          "name": "initWithContent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_init": {
+      "name": "_init",
+      "bridgedName": "_init",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reactToMatchingInsertions:deletions:refreshed:": {
+      "name": "_reactToMatchingInsertions:deletions:refreshed:",
+      "bridgedName": "_reactToMatchingInsertions_deletions_refreshed",
+      "args": [
+        {
+          "name": "_reactToMatchingInsertions",
+          "type": "id"
+        },
+        {
+          "name": "deletions",
+          "type": "id"
+        },
+        {
+          "name": "refreshed",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needsLiveUpdates": {
+      "name": "_needsLiveUpdates",
+      "bridgedName": "_needsLiveUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetch:": {
+      "name": "fetch:",
+      "bridgedName": "fetch",
+      "args": [
+        {
+          "name": "fetch",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeFetch:didCommitSuccessfully:actionSender:": {
+      "name": "_executeFetch:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeFetch_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeFetch",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetchWithRequest:merge:error:": {
+      "name": "fetchWithRequest:merge:error:",
+      "bridgedName": "fetchWithRequest_merge_error",
+      "args": [
+        {
+          "name": "fetchWithRequest",
+          "type": "id"
+        },
+        {
+          "name": "merge",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lazyFetchResultProxyForObjects:": {
+      "name": "_lazyFetchResultProxyForObjects:",
+      "bridgedName": "_lazyFetchResultProxyForObjects",
+      "args": [
+        {
+          "name": "_lazyFetchResultProxyForObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_relationshipKeyPathsForPrefetching": {
+      "name": "_relationshipKeyPathsForPrefetching",
+      "bridgedName": "_relationshipKeyPathsForPrefetching",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performFetchWithRequest:merge:error:": {
+      "name": "_performFetchWithRequest:merge:error:",
+      "bridgedName": "_performFetchWithRequest_merge_error",
+      "args": [
+        {
+          "name": "_performFetchWithRequest",
+          "type": "id"
+        },
+        {
+          "name": "merge",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_objectIDsFromManagedObjects:": {
+      "name": "_objectIDsFromManagedObjects:",
+      "bridgedName": "_objectIDsFromManagedObjects",
+      "args": [
+        {
+          "name": "_objectIDsFromManagedObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchRequestForPerformingFetch": {
+      "name": "_fetchRequestForPerformingFetch",
+      "bridgedName": "_fetchRequestForPerformingFetch",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultFetchRequest": {
+      "name": "defaultFetchRequest",
+      "bridgedName": "defaultFetchRequest",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notifyManagedContextEditorStateChanged:": {
+      "name": "_notifyManagedContextEditorStateChanged:",
+      "bridgedName": "_notifyManagedContextEditorStateChanged",
+      "args": [
+        {
+          "name": "_notifyManagedContextEditorStateChanged",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canModifyManagedContent": {
+      "name": "_canModifyManagedContent",
+      "bridgedName": "_canModifyManagedContent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_managedProxy": {
+      "name": "_managedProxy",
+      "bridgedName": "_managedProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isUsingManagedProxy": {
+      "name": "_isUsingManagedProxy",
+      "bridgedName": "_isUsingManagedProxy",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUsingManagedProxy:": {
+      "name": "_setUsingManagedProxy:",
+      "bridgedName": "_setUsingManagedProxy",
+      "args": [
+        {
+          "name": "_setUsingManagedProxy",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isManagedController": {
+      "name": "_isManagedController",
+      "bridgedName": "_isManagedController",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "selection": {
+      "name": "selection",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "selectedObjects": {
+      "name": "selectedObjects",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "canRemove": {
+      "name": "canRemove",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "canAdd": {
+      "name": "canAdd",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "editable": {
+      "name": "editable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEditable"
+      ]
+    },
+    "content": {
+      "name": "content",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "fetchPredicate": {
+      "name": "fetchPredicate",
+      "pointer": true,
+      "type": "NSPredicate",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "entityName": {
+      "name": "entityName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "managedObjectContext": {
+      "name": "managedObjectContext",
+      "pointer": true,
+      "type": "NSManagedObjectContext",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

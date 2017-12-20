@@ -1,0 +1,6529 @@
+{
+  "imports": [
+    "NSTouchBarDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSBox",
+    "NSButton",
+    "NSControl",
+    "NSProgressIndicator",
+    "NSSavePanelAuxiliary",
+    "NSString",
+    "NSTextField",
+    "NSURL",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSSavePanel",
+  "extends": "NSPanel",
+  "interfaces": [
+    "NSTouchBarDelegate"
+  ],
+  "methods": {
+    "_waitForURL:useSecurityScopedURL:withNameFieldString:thenSetTags:": {
+      "name": "_waitForURL:useSecurityScopedURL:withNameFieldString:thenSetTags:",
+      "bridgedName": "_waitForURL_useSecurityScopedURL_withNameFieldString_thenSetTags",
+      "args": [
+        {
+          "name": "_waitForURL",
+          "type": "id"
+        },
+        {
+          "name": "useSecurityScopedURL",
+          "type": "BOOL"
+        },
+        {
+          "name": "withNameFieldString",
+          "type": "id"
+        },
+        {
+          "name": "thenSetTags",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_waitForURL:thenSetTags:": {
+      "name": "_waitForURL:thenSetTags:",
+      "bridgedName": "_waitForURL_thenSetTags",
+      "args": [
+        {
+          "name": "_waitForURL",
+          "type": "id"
+        },
+        {
+          "name": "thenSetTags",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingTags": {
+      "name": "keyPathsForValuesAffectingTags",
+      "bridgedName": "keyPathsForValuesAffectingTags",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tagNamesForTags:": {
+      "name": "_tagNamesForTags:",
+      "bridgedName": "_tagNamesForTags",
+      "args": [
+        {
+          "name": "_tagNamesForTags",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tagsForTagNames:": {
+      "name": "_tagsForTagNames:",
+      "bridgedName": "_tagsForTagNames",
+      "args": [
+        {
+          "name": "_tagsForTagNames",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_allowTagsFieldInPanel": {
+      "name": "_allowTagsFieldInPanel",
+      "bridgedName": "_allowTagsFieldInPanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "directoryPathAdjustedForSecurity:": {
+      "name": "directoryPathAdjustedForSecurity:",
+      "bridgedName": "directoryPathAdjustedForSecurity",
+      "args": [
+        {
+          "name": "directoryPathAdjustedForSecurity",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_consumeSandboxExtensions:": {
+      "name": "_consumeSandboxExtensions:",
+      "bridgedName": "_consumeSandboxExtensions",
+      "args": [
+        {
+          "name": "_consumeSandboxExtensions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_generateFileInfoForPaths:sandboxPermissions:": {
+      "name": "_generateFileInfoForPaths:sandboxPermissions:",
+      "bridgedName": "_generateFileInfoForPaths_sandboxPermissions",
+      "args": [
+        {
+          "name": "_generateFileInfoForPaths",
+          "type": "id"
+        },
+        {
+          "name": "sandboxPermissions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_shouldCallDelegateMethodShouldShowFileNameForURL:path:": {
+      "name": "_shouldCallDelegateMethodShouldShowFileNameForURL:path:",
+      "bridgedName": "_shouldCallDelegateMethodShouldShowFileNameForURL_path",
+      "args": [
+        {
+          "name": "_shouldCallDelegateMethodShouldShowFileNameForURL",
+          "type": "id"
+        },
+        {
+          "name": "path",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "newDocumentAfterDelay": {
+      "name": "newDocumentAfterDelay",
+      "bridgedName": "newDocumentAfterDelay",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "newDocument:": {
+      "name": "newDocument:",
+      "bridgedName": "newDocument",
+      "args": [
+        {
+          "name": "newDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_defaultSettingForUbiquitousBehaviors": {
+      "name": "_defaultSettingForUbiquitousBehaviors",
+      "bridgedName": "_defaultSettingForUbiquitousBehaviors",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeAccessoryViewLayoutInfo:saveSizeNoMatterWhat:onPanel:": {
+      "name": "_storeAccessoryViewLayoutInfo:saveSizeNoMatterWhat:onPanel:",
+      "bridgedName": "_storeAccessoryViewLayoutInfo_saveSizeNoMatterWhat_onPanel",
+      "args": [
+        {
+          "name": "_storeAccessoryViewLayoutInfo",
+          "type": "id"
+        },
+        {
+          "name": "saveSizeNoMatterWhat",
+          "type": "BOOL"
+        },
+        {
+          "name": "onPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_accessoryViewWantsCentering:": {
+      "name": "_accessoryViewWantsCentering:",
+      "bridgedName": "_accessoryViewWantsCentering",
+      "args": [
+        {
+          "name": "_accessoryViewWantsCentering",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "checkAllowedSize:atPriority:ofView:": {
+      "name": "checkAllowedSize:atPriority:ofView:",
+      "bridgedName": "checkAllowedSize_atPriority_ofView",
+      "args": [
+        {
+          "name": "checkAllowedSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "atPriority",
+          "type": "float"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_accessoryViewIsOldSchool:": {
+      "name": "_accessoryViewIsOldSchool:",
+      "bridgedName": "_accessoryViewIsOldSchool",
+      "args": [
+        {
+          "name": "_accessoryViewIsOldSchool",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getMinSizeForAccessoryView:": {
+      "name": "_getMinSizeForAccessoryView:",
+      "bridgedName": "_getMinSizeForAccessoryView",
+      "args": [
+        {
+          "name": "_getMinSizeForAccessoryView",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_shouldDiscloseAccessoryViewByDefaultForPanelThatIsSheet:": {
+      "name": "_shouldDiscloseAccessoryViewByDefaultForPanelThatIsSheet:",
+      "bridgedName": "_shouldDiscloseAccessoryViewByDefaultForPanelThatIsSheet",
+      "args": [
+        {
+          "name": "_shouldDiscloseAccessoryViewByDefaultForPanelThatIsSheet",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_hideWindowForTimeMachineMode:onPanel:": {
+      "name": "_hideWindowForTimeMachineMode:onPanel:",
+      "bridgedName": "_hideWindowForTimeMachineMode_onPanel",
+      "args": [
+        {
+          "name": "_hideWindowForTimeMachineMode",
+          "type": "BOOL"
+        },
+        {
+          "name": "onPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_arrayOfFilePathsFromArrayOfURLs:": {
+      "name": "_arrayOfFilePathsFromArrayOfURLs:",
+      "bridgedName": "_arrayOfFilePathsFromArrayOfURLs",
+      "args": [
+        {
+          "name": "_arrayOfFilePathsFromArrayOfURLs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeRootDirectoryURL:forSaveMode:": {
+      "name": "_storeRootDirectoryURL:forSaveMode:",
+      "bridgedName": "_storeRootDirectoryURL_forSaveMode",
+      "args": [
+        {
+          "name": "_storeRootDirectoryURL",
+          "type": "id"
+        },
+        {
+          "name": "forSaveMode",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_lastSavedRootDirectoryForSaveMode:": {
+      "name": "_lastSavedRootDirectoryForSaveMode:",
+      "bridgedName": "_lastSavedRootDirectoryForSaveMode",
+      "args": [
+        {
+          "name": "_lastSavedRootDirectoryForSaveMode",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_applyOpenStylesToWindow:": {
+      "name": "_applyOpenStylesToWindow:",
+      "bridgedName": "_applyOpenStylesToWindow",
+      "args": [
+        {
+          "name": "_applyOpenStylesToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_orderRemoteWindow:toPlace:sender:": {
+      "name": "_orderRemoteWindow:toPlace:sender:",
+      "bridgedName": "_orderRemoteWindow_toPlace_sender",
+      "args": [
+        {
+          "name": "_orderRemoteWindow",
+          "type": "id"
+        },
+        {
+          "name": "toPlace",
+          "type": "long long"
+        },
+        {
+          "name": "sender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_showExistingOpenPanel:": {
+      "name": "_showExistingOpenPanel:",
+      "bridgedName": "_showExistingOpenPanel",
+      "args": [
+        {
+          "name": "_showExistingOpenPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setLevelForiCloudOpenPanel:": {
+      "name": "_setLevelForiCloudOpenPanel:",
+      "bridgedName": "_setLevelForiCloudOpenPanel",
+      "args": [
+        {
+          "name": "_setLevelForiCloudOpenPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_shouldCreateAppCentricOpenPanel": {
+      "name": "_shouldCreateAppCentricOpenPanel",
+      "bridgedName": "_shouldCreateAppCentricOpenPanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_shouldCreateiCloudOpenPanel": {
+      "name": "_shouldCreateiCloudOpenPanel",
+      "bridgedName": "_shouldCreateiCloudOpenPanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setShouldCreateAppCentricOpenPanel:": {
+      "name": "_setShouldCreateAppCentricOpenPanel:",
+      "bridgedName": "_setShouldCreateAppCentricOpenPanel",
+      "args": [
+        {
+          "name": "_setShouldCreateAppCentricOpenPanel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_supportsAppCentricBrowsing": {
+      "name": "_supportsAppCentricBrowsing",
+      "bridgedName": "_supportsAppCentricBrowsing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "savePanel": {
+      "name": "savePanel",
+      "bridgedName": "savePanel",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_crunchyRawUnbonedPanel": {
+      "name": "_crunchyRawUnbonedPanel",
+      "bridgedName": "_crunchyRawUnbonedPanel",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "newRemotePanel": {
+      "name": "newRemotePanel",
+      "bridgedName": "newRemotePanel",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_warmUp": {
+      "name": "_warmUp",
+      "bridgedName": "_warmUp",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_applicationContextHasEntitlement:": {
+      "name": "_applicationContextHasEntitlement:",
+      "bridgedName": "_applicationContextHasEntitlement",
+      "args": [
+        {
+          "name": "_applicationContextHasEntitlement",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_clientWithSecurityTaskRef:hasEntitlement:sandboxPermissions:": {
+      "name": "_clientWithSecurityTaskRef:hasEntitlement:sandboxPermissions:",
+      "bridgedName": "_clientWithSecurityTaskRef_hasEntitlement_sandboxPermissions",
+      "args": [
+        {
+          "name": "_clientWithSecurityTaskRef",
+          "type": "struct __SecTask *"
+        },
+        {
+          "name": "hasEntitlement",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "sandboxPermissions",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tracksDirtyRegions": {
+      "name": "_tracksDirtyRegions",
+      "bridgedName": "_tracksDirtyRegions",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_resolvedSymLinkedURL:": {
+      "name": "_resolvedSymLinkedURL:",
+      "bridgedName": "_resolvedSymLinkedURL",
+      "args": [
+        {
+          "name": "_resolvedSymLinkedURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_filenameHasAcceptableFileType:allowedFileTypes:allowsOtherFileTypes:": {
+      "name": "_filenameHasAcceptableFileType:allowedFileTypes:allowsOtherFileTypes:",
+      "bridgedName": "_filenameHasAcceptableFileType_allowedFileTypes_allowsOtherFileTypes",
+      "args": [
+        {
+          "name": "_filenameHasAcceptableFileType",
+          "type": "id"
+        },
+        {
+          "name": "allowedFileTypes",
+          "type": "id"
+        },
+        {
+          "name": "allowsOtherFileTypes",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_filenameHasNonEmptyAcceptableFileType:allowedFileTypes:allowsOtherFileTypes:": {
+      "name": "_filenameHasNonEmptyAcceptableFileType:allowedFileTypes:allowsOtherFileTypes:",
+      "bridgedName": "_filenameHasNonEmptyAcceptableFileType_allowedFileTypes_allowsOtherFileTypes",
+      "args": [
+        {
+          "name": "_filenameHasNonEmptyAcceptableFileType",
+          "type": "id"
+        },
+        {
+          "name": "allowedFileTypes",
+          "type": "id"
+        },
+        {
+          "name": "allowsOtherFileTypes",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isDirectoryURL:treatFilePackagesAsDirectories:fauxFilePackageTypes:enabledFileTypes:": {
+      "name": "_isDirectoryURL:treatFilePackagesAsDirectories:fauxFilePackageTypes:enabledFileTypes:",
+      "bridgedName": "_isDirectoryURL_treatFilePackagesAsDirectories_fauxFilePackageTypes_enabledFileTypes",
+      "args": [
+        {
+          "name": "_isDirectoryURL",
+          "type": "id"
+        },
+        {
+          "name": "treatFilePackagesAsDirectories",
+          "type": "BOOL"
+        },
+        {
+          "name": "fauxFilePackageTypes",
+          "type": "id"
+        },
+        {
+          "name": "enabledFileTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isFauxFilePackageURL:fauxFilePackageTypes:enabledFileTypes:": {
+      "name": "_isFauxFilePackageURL:fauxFilePackageTypes:enabledFileTypes:",
+      "bridgedName": "_isFauxFilePackageURL_fauxFilePackageTypes_enabledFileTypes",
+      "args": [
+        {
+          "name": "_isFauxFilePackageURL",
+          "type": "id"
+        },
+        {
+          "name": "fauxFilePackageTypes",
+          "type": "id"
+        },
+        {
+          "name": "enabledFileTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_nameWithStrictRequiredExtensionCheck:andPreferredFileExtension:": {
+      "name": "_nameWithStrictRequiredExtensionCheck:andPreferredFileExtension:",
+      "bridgedName": "_nameWithStrictRequiredExtensionCheck_andPreferredFileExtension",
+      "args": [
+        {
+          "name": "_nameWithStrictRequiredExtensionCheck",
+          "type": "id"
+        },
+        {
+          "name": "andPreferredFileExtension",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_nameWithLooseRequiredExtensionCheck:andPreferredFileExtension:": {
+      "name": "_nameWithLooseRequiredExtensionCheck:andPreferredFileExtension:",
+      "bridgedName": "_nameWithLooseRequiredExtensionCheck_andPreferredFileExtension",
+      "args": [
+        {
+          "name": "_nameWithLooseRequiredExtensionCheck",
+          "type": "id"
+        },
+        {
+          "name": "andPreferredFileExtension",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_itemIdentifiers": {
+      "name": "keyPathsForValuesAffecting_itemIdentifiers",
+      "bridgedName": "keyPathsForValuesAffecting_itemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_cachedAuditTokenForMovePanel": {
+      "name": "_cachedAuditTokenForMovePanel",
+      "bridgedName": "_cachedAuditTokenForMovePanel",
+      "args": [],
+      "returns": "CDStruct_4c969caf *",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_containerURLsForRemoteProcessWithAuditToken:": {
+      "name": "_containerURLsForRemoteProcessWithAuditToken:",
+      "bridgedName": "_containerURLsForRemoteProcessWithAuditToken",
+      "args": [
+        {
+          "name": "_containerURLsForRemoteProcessWithAuditToken",
+          "type": "CDStruct_4c969caf *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_minContentRectSize": {
+      "name": "_minContentRectSize",
+      "bridgedName": "_minContentRectSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setValue:forUndefinedKey:onObject:": {
+      "name": "setValue:forUndefinedKey:onObject:",
+      "bridgedName": "setValue_forUndefinedKey_onObject",
+      "args": [
+        {
+          "name": "setValue",
+          "type": "id"
+        },
+        {
+          "name": "forUndefinedKey",
+          "type": "id"
+        },
+        {
+          "name": "onObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_spiPropertySelectorForKey:withClass:isSetter:outSelector:": {
+      "name": "_spiPropertySelectorForKey:withClass:isSetter:outSelector:",
+      "bridgedName": "_spiPropertySelectorForKey_withClass_isSetter_outSelector",
+      "args": [
+        {
+          "name": "_spiPropertySelectorForKey",
+          "type": "id"
+        },
+        {
+          "name": "withClass",
+          "type": "Class"
+        },
+        {
+          "name": "isSetter",
+          "type": "BOOL"
+        },
+        {
+          "name": "outSelector",
+          "type": "SEL *"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "kvoKeysForType:": {
+      "name": "kvoKeysForType:",
+      "bridgedName": "kvoKeysForType",
+      "args": [
+        {
+          "name": "kvoKeysForType",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingValueForKey:": {
+      "name": "keyPathsForValuesAffectingValueForKey:",
+      "bridgedName": "keyPathsForValuesAffectingValueForKey",
+      "args": [
+        {
+          "name": "keyPathsForValuesAffectingValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_fileBrowserKVOKeys": {
+      "name": "_fileBrowserKVOKeys",
+      "bridgedName": "_fileBrowserKVOKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversForKey:": {
+      "name": "automaticallyNotifiesObserversForKey:",
+      "bridgedName": "automaticallyNotifiesObserversForKey",
+      "args": [
+        {
+          "name": "automaticallyNotifiesObserversForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_supportedDelegateMethodsFromDelegate:": {
+      "name": "_supportedDelegateMethodsFromDelegate:",
+      "bridgedName": "_supportedDelegateMethodsFromDelegate",
+      "args": [
+        {
+          "name": "_supportedDelegateMethodsFromDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_addToDefaultsCurrentDirectoryToRecentPlaces:": {
+      "name": "_addToDefaultsCurrentDirectoryToRecentPlaces:",
+      "bridgedName": "_addToDefaultsCurrentDirectoryToRecentPlaces",
+      "args": [
+        {
+          "name": "_addToDefaultsCurrentDirectoryToRecentPlaces",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeUserSetHideExtensionButtonState:toDefaultsUsingKey:forPanelType:": {
+      "name": "_storeUserSetHideExtensionButtonState:toDefaultsUsingKey:forPanelType:",
+      "bridgedName": "_storeUserSetHideExtensionButtonState_toDefaultsUsingKey_forPanelType",
+      "args": [
+        {
+          "name": "_storeUserSetHideExtensionButtonState",
+          "type": "BOOL"
+        },
+        {
+          "name": "toDefaultsUsingKey",
+          "type": "id"
+        },
+        {
+          "name": "forPanelType",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_userSetHideExtensionButtonStateFromDefaultsUsingKey:forPanelType:": {
+      "name": "_userSetHideExtensionButtonStateFromDefaultsUsingKey:forPanelType:",
+      "bridgedName": "_userSetHideExtensionButtonStateFromDefaultsUsingKey_forPanelType",
+      "args": [
+        {
+          "name": "_userSetHideExtensionButtonStateFromDefaultsUsingKey",
+          "type": "id"
+        },
+        {
+          "name": "forPanelType",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeRootDirectoryUsingKey:rootURL:directoryPath:": {
+      "name": "_storeRootDirectoryUsingKey:rootURL:directoryPath:",
+      "bridgedName": "_storeRootDirectoryUsingKey_rootURL_directoryPath",
+      "args": [
+        {
+          "name": "_storeRootDirectoryUsingKey",
+          "type": "id"
+        },
+        {
+          "name": "rootURL",
+          "type": "id"
+        },
+        {
+          "name": "directoryPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeCurrentDirectoryUsingKey:directoryURL:rootURL:": {
+      "name": "_storeCurrentDirectoryUsingKey:directoryURL:rootURL:",
+      "bridgedName": "_storeCurrentDirectoryUsingKey_directoryURL_rootURL",
+      "args": [
+        {
+          "name": "_storeCurrentDirectoryUsingKey",
+          "type": "id"
+        },
+        {
+          "name": "directoryURL",
+          "type": "id"
+        },
+        {
+          "name": "rootURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_directoryForKey:": {
+      "name": "_directoryForKey:",
+      "bridgedName": "_directoryForKey",
+      "args": [
+        {
+          "name": "_directoryForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_expandedFrameSizeForKey:minSize:": {
+      "name": "_expandedFrameSizeForKey:minSize:",
+      "bridgedName": "_expandedFrameSizeForKey_minSize",
+      "args": [
+        {
+          "name": "_expandedFrameSizeForKey",
+          "type": "id"
+        },
+        {
+          "name": "minSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeToDefaultsExpandedState:forPanelType:": {
+      "name": "_storeToDefaultsExpandedState:forPanelType:",
+      "bridgedName": "_storeToDefaultsExpandedState_forPanelType",
+      "args": [
+        {
+          "name": "_storeToDefaultsExpandedState",
+          "type": "BOOL"
+        },
+        {
+          "name": "forPanelType",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_expandedStateFromDefaultsForPanelType:": {
+      "name": "_expandedStateFromDefaultsForPanelType:",
+      "bridgedName": "_expandedStateFromDefaultsForPanelType",
+      "args": [
+        {
+          "name": "_expandedStateFromDefaultsForPanelType",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_storeFrameSize:withKey:": {
+      "name": "_storeFrameSize:withKey:",
+      "bridgedName": "_storeFrameSize_withKey",
+      "args": [
+        {
+          "name": "_storeFrameSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "withKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_shouldShowHiddenFiles": {
+      "name": "_shouldShowHiddenFiles",
+      "bridgedName": "_shouldShowHiddenFiles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_writeToDefaultsFileListMode:forPanelType:": {
+      "name": "_writeToDefaultsFileListMode:forPanelType:",
+      "bridgedName": "_writeToDefaultsFileListMode_forPanelType",
+      "args": [
+        {
+          "name": "_writeToDefaultsFileListMode",
+          "type": "int"
+        },
+        {
+          "name": "forPanelType",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_mapNSNavFileListModeFromFinderViewStyle:": {
+      "name": "_mapNSNavFileListModeFromFinderViewStyle:",
+      "bridgedName": "_mapNSNavFileListModeFromFinderViewStyle",
+      "args": [
+        {
+          "name": "_mapNSNavFileListModeFromFinderViewStyle",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_mapFinderViewStyleFromNSNavFileListMode:": {
+      "name": "_mapFinderViewStyleFromNSNavFileListMode:",
+      "bridgedName": "_mapFinderViewStyleFromNSNavFileListMode",
+      "args": [
+        {
+          "name": "_mapFinderViewStyleFromNSNavFileListMode",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fileListModeForPanelInSaveMode:inDirectory:lastListForMediaBrowserMode:": {
+      "name": "fileListModeForPanelInSaveMode:inDirectory:lastListForMediaBrowserMode:",
+      "bridgedName": "fileListModeForPanelInSaveMode_inDirectory_lastListForMediaBrowserMode",
+      "args": [
+        {
+          "name": "fileListModeForPanelInSaveMode",
+          "type": "BOOL"
+        },
+        {
+          "name": "inDirectory",
+          "type": "id"
+        },
+        {
+          "name": "lastListForMediaBrowserMode",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_synchronizeDefaults": {
+      "name": "_synchronizeDefaults",
+      "bridgedName": "_synchronizeDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_NSNavRecentPlacesFromDefaults": {
+      "name": "_NSNavRecentPlacesFromDefaults",
+      "bridgedName": "_NSNavRecentPlacesFromDefaults",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_NSNavMaxRecentPlacesFromDefaults": {
+      "name": "_NSNavMaxRecentPlacesFromDefaults",
+      "bridgedName": "_NSNavMaxRecentPlacesFromDefaults",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setTagsIfNecessary": {
+      "name": "_setTagsIfNecessary",
+      "bridgedName": "_setTagsIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerTagsWithFinder": {
+      "name": "_registerTagsWithFinder",
+      "bridgedName": "_registerTagsWithFinder",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commitPendingTags": {
+      "name": "_commitPendingTags",
+      "bridgedName": "_commitPendingTags",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tagsDidChange:": {
+      "name": "_tagsDidChange:",
+      "bridgedName": "_tagsDidChange",
+      "args": [
+        {
+          "name": "_tagsDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tags": {
+      "name": "_tags",
+      "bridgedName": "_tags",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTags:": {
+      "name": "_setTags:",
+      "bridgedName": "_setTags",
+      "args": [
+        {
+          "name": "_setTags",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showsTagField": {
+      "name": "_showsTagField",
+      "bridgedName": "_showsTagField",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShowsTagField:": {
+      "name": "_setShowsTagField:",
+      "bridgedName": "_setShowsTagField",
+      "args": [
+        {
+          "name": "_setShowsTagField",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldSetTagsForClient": {
+      "name": "_shouldSetTagsForClient",
+      "bridgedName": "_shouldSetTagsForClient",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldSetTagsForClient:": {
+      "name": "_setShouldSetTagsForClient:",
+      "bridgedName": "_setShouldSetTagsForClient",
+      "args": [
+        {
+          "name": "_setShouldSetTagsForClient",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_revertOriginalDocumentCheckBoxHit:": {
+      "name": "_revertOriginalDocumentCheckBoxHit:",
+      "bridgedName": "_revertOriginalDocumentCheckBoxHit",
+      "args": [
+        {
+          "name": "_revertOriginalDocumentCheckBoxHit",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldRevertOriginalDocument": {
+      "name": "_shouldRevertOriginalDocument",
+      "bridgedName": "_shouldRevertOriginalDocument",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldRevertOriginalDocument:": {
+      "name": "_setShouldRevertOriginalDocument:",
+      "bridgedName": "_setShouldRevertOriginalDocument",
+      "args": [
+        {
+          "name": "_setShouldRevertOriginalDocument",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showsRevertOriginalDocumentButton": {
+      "name": "_showsRevertOriginalDocumentButton",
+      "bridgedName": "_showsRevertOriginalDocumentButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShowsRevertOriginalDocumentButton:": {
+      "name": "_setShowsRevertOriginalDocumentButton:",
+      "bridgedName": "_setShowsRevertOriginalDocumentButton",
+      "args": [
+        {
+          "name": "_setShowsRevertOriginalDocumentButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overwritingAlertSuppressionURL": {
+      "name": "_overwritingAlertSuppressionURL",
+      "bridgedName": "_overwritingAlertSuppressionURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setOverwritingAlertSuppressionURL:": {
+      "name": "_setOverwritingAlertSuppressionURL:",
+      "bridgedName": "_setOverwritingAlertSuppressionURL",
+      "args": [
+        {
+          "name": "_setOverwritingAlertSuppressionURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dontSaveButtonTitle": {
+      "name": "_dontSaveButtonTitle",
+      "bridgedName": "_dontSaveButtonTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDontSaveButtonTitle:": {
+      "name": "_setDontSaveButtonTitle:",
+      "bridgedName": "_setDontSaveButtonTitle",
+      "args": [
+        {
+          "name": "_setDontSaveButtonTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dontSave:": {
+      "name": "dontSave:",
+      "bridgedName": "dontSave",
+      "args": [
+        {
+          "name": "dontSave",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAlertInformativeMessage:": {
+      "name": "_setAlertInformativeMessage:",
+      "bridgedName": "_setAlertInformativeMessage",
+      "args": [
+        {
+          "name": "_setAlertInformativeMessage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertInformativeMessage": {
+      "name": "_alertInformativeMessage",
+      "bridgedName": "_alertInformativeMessage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAlertMessage:": {
+      "name": "_setAlertMessage:",
+      "bridgedName": "_setAlertMessage",
+      "args": [
+        {
+          "name": "_setAlertMessage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertMessage": {
+      "name": "_alertMessage",
+      "bridgedName": "_alertMessage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_useAlertStyle": {
+      "name": "_useAlertStyle",
+      "bridgedName": "_useAlertStyle",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showNewDocumentButton": {
+      "name": "_showNewDocumentButton",
+      "bridgedName": "_showNewDocumentButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShowNewDocumentButtonShouldLayout:": {
+      "name": "_setShowNewDocumentButtonShouldLayout:",
+      "bridgedName": "_setShowNewDocumentButtonShouldLayout",
+      "args": [
+        {
+          "name": "_setShowNewDocumentButtonShouldLayout",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShowNewDocumentButton:": {
+      "name": "_setShowNewDocumentButton:",
+      "bridgedName": "_setShowNewDocumentButton",
+      "args": [
+        {
+          "name": "_setShowNewDocumentButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showNewFolderButton": {
+      "name": "_showNewFolderButton",
+      "bridgedName": "_showNewFolderButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCancelButtonTitle:": {
+      "name": "_setCancelButtonTitle:",
+      "bridgedName": "_setCancelButtonTitle",
+      "args": [
+        {
+          "name": "_setCancelButtonTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelButtonTitle": {
+      "name": "_cancelButtonTitle",
+      "bridgedName": "_cancelButtonTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_okButtonDisabled": {
+      "name": "_okButtonDisabled",
+      "bridgedName": "_okButtonDisabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setOkButtonDisabled:": {
+      "name": "_setOkButtonDisabled:",
+      "bridgedName": "_setOkButtonDisabled",
+      "args": [
+        {
+          "name": "_setOkButtonDisabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_bottomControlsDisabled": {
+      "name": "_bottomControlsDisabled",
+      "bridgedName": "_bottomControlsDisabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBottomControlsDisabled:": {
+      "name": "_setBottomControlsDisabled:",
+      "bridgedName": "_setBottomControlsDisabled",
+      "args": [
+        {
+          "name": "_setBottomControlsDisabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateControlStates": {
+      "name": "_updateControlStates",
+      "bridgedName": "_updateControlStates",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUseAlertStyle:": {
+      "name": "_setUseAlertStyle:",
+      "bridgedName": "_setUseAlertStyle",
+      "args": [
+        {
+          "name": "_setUseAlertStyle",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_accessoryViewForcedWidthConstraint:": {
+      "name": "set_accessoryViewForcedWidthConstraint:",
+      "bridgedName": "set_accessoryViewForcedWidthConstraint",
+      "args": [
+        {
+          "name": "set_accessoryViewForcedWidthConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewForcedWidthConstraint": {
+      "name": "_accessoryViewForcedWidthConstraint",
+      "bridgedName": "_accessoryViewForcedWidthConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_accessoryViewForcedHeightConstraint:": {
+      "name": "set_accessoryViewForcedHeightConstraint:",
+      "bridgedName": "set_accessoryViewForcedHeightConstraint",
+      "args": [
+        {
+          "name": "set_accessoryViewForcedHeightConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewForcedHeightConstraint": {
+      "name": "_accessoryViewForcedHeightConstraint",
+      "bridgedName": "_accessoryViewForcedHeightConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_collapsingFinderKitContainer:": {
+      "name": "set_collapsingFinderKitContainer:",
+      "bridgedName": "set_collapsingFinderKitContainer",
+      "args": [
+        {
+          "name": "set_collapsingFinderKitContainer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collapsingFinderKitContainer": {
+      "name": "_collapsingFinderKitContainer",
+      "bridgedName": "_collapsingFinderKitContainer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_navPanelWidthConstraint:": {
+      "name": "set_navPanelWidthConstraint:",
+      "bridgedName": "set_navPanelWidthConstraint",
+      "args": [
+        {
+          "name": "set_navPanelWidthConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navPanelWidthConstraint": {
+      "name": "_navPanelWidthConstraint",
+      "bridgedName": "_navPanelWidthConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_navPanelCollapsingConstraint:": {
+      "name": "set_navPanelCollapsingConstraint:",
+      "bridgedName": "set_navPanelCollapsingConstraint",
+      "args": [
+        {
+          "name": "set_navPanelCollapsingConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navPanelCollapsingConstraint": {
+      "name": "_navPanelCollapsingConstraint",
+      "bridgedName": "_navPanelCollapsingConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alertLeadingTextAlignmentConstraint:": {
+      "name": "set_alertLeadingTextAlignmentConstraint:",
+      "bridgedName": "set_alertLeadingTextAlignmentConstraint",
+      "args": [
+        {
+          "name": "set_alertLeadingTextAlignmentConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertLeadingTextAlignmentConstraint": {
+      "name": "_alertLeadingTextAlignmentConstraint",
+      "bridgedName": "_alertLeadingTextAlignmentConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alertLeadingAlignmentConstraint:": {
+      "name": "set_alertLeadingAlignmentConstraint:",
+      "bridgedName": "set_alertLeadingAlignmentConstraint",
+      "args": [
+        {
+          "name": "set_alertLeadingAlignmentConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertLeadingAlignmentConstraint": {
+      "name": "_alertLeadingAlignmentConstraint",
+      "bridgedName": "_alertLeadingAlignmentConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alertTrailingSpaceConstraint:": {
+      "name": "set_alertTrailingSpaceConstraint:",
+      "bridgedName": "set_alertTrailingSpaceConstraint",
+      "args": [
+        {
+          "name": "set_alertTrailingSpaceConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertTrailingSpaceConstraint": {
+      "name": "_alertTrailingSpaceConstraint",
+      "bridgedName": "_alertTrailingSpaceConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_alertStyleContentView:": {
+      "name": "set_alertStyleContentView:",
+      "bridgedName": "set_alertStyleContentView",
+      "args": [
+        {
+          "name": "set_alertStyleContentView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alertStyleContentView": {
+      "name": "_alertStyleContentView",
+      "bridgedName": "_alertStyleContentView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_widthCollapsingConstraint:": {
+      "name": "set_widthCollapsingConstraint:",
+      "bridgedName": "set_widthCollapsingConstraint",
+      "args": [
+        {
+          "name": "set_widthCollapsingConstraint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_widthCollapsingConstraint": {
+      "name": "_widthCollapsingConstraint",
+      "bridgedName": "_widthCollapsingConstraint",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_tagFieldLabel:": {
+      "name": "set_tagFieldLabel:",
+      "bridgedName": "set_tagFieldLabel",
+      "args": [
+        {
+          "name": "set_tagFieldLabel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tagFieldLabel": {
+      "name": "_tagFieldLabel",
+      "bridgedName": "_tagFieldLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_tagField:": {
+      "name": "set_tagField:",
+      "bridgedName": "set_tagField",
+      "args": [
+        {
+          "name": "set_tagField",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tagField": {
+      "name": "_tagField",
+      "bridgedName": "_tagField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_tagFieldProxy:": {
+      "name": "set_tagFieldProxy:",
+      "bridgedName": "set_tagFieldProxy",
+      "args": [
+        {
+          "name": "set_tagFieldProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tagFieldProxy": {
+      "name": "_tagFieldProxy",
+      "bridgedName": "_tagFieldProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_tagFieldContainer:": {
+      "name": "set_tagFieldContainer:",
+      "bridgedName": "set_tagFieldContainer",
+      "args": [
+        {
+          "name": "set_tagFieldContainer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tagFieldContainer": {
+      "name": "_tagFieldContainer",
+      "bridgedName": "_tagFieldContainer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_accessoryBottomSeparator:": {
+      "name": "set_accessoryBottomSeparator:",
+      "bridgedName": "set_accessoryBottomSeparator",
+      "args": [
+        {
+          "name": "set_accessoryBottomSeparator",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryBottomSeparator": {
+      "name": "_accessoryBottomSeparator",
+      "bridgedName": "_accessoryBottomSeparator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_navBottomSeparator:": {
+      "name": "set_navBottomSeparator:",
+      "bridgedName": "set_navBottomSeparator",
+      "args": [
+        {
+          "name": "set_navBottomSeparator",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navBottomSeparator": {
+      "name": "_navBottomSeparator",
+      "bridgedName": "_navBottomSeparator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_revertOriginalDocumentButton:": {
+      "name": "set_revertOriginalDocumentButton:",
+      "bridgedName": "set_revertOriginalDocumentButton",
+      "args": [
+        {
+          "name": "set_revertOriginalDocumentButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_revertOriginalDocumentButton": {
+      "name": "_revertOriginalDocumentButton",
+      "bridgedName": "_revertOriginalDocumentButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_optionsButton:": {
+      "name": "set_optionsButton:",
+      "bridgedName": "set_optionsButton",
+      "args": [
+        {
+          "name": "set_optionsButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_optionsButton": {
+      "name": "_optionsButton",
+      "bridgedName": "_optionsButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_newDocumentButton:": {
+      "name": "set_newDocumentButton:",
+      "bridgedName": "set_newDocumentButton",
+      "args": [
+        {
+          "name": "set_newDocumentButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newDocumentButton": {
+      "name": "_newDocumentButton",
+      "bridgedName": "_newDocumentButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_dontSaveButton:": {
+      "name": "set_dontSaveButton:",
+      "bridgedName": "set_dontSaveButton",
+      "args": [
+        {
+          "name": "set_dontSaveButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dontSaveButton": {
+      "name": "_dontSaveButton",
+      "bridgedName": "_dontSaveButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_newFolderButton:": {
+      "name": "set_newFolderButton:",
+      "bridgedName": "set_newFolderButton",
+      "args": [
+        {
+          "name": "set_newFolderButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newFolderButton": {
+      "name": "_newFolderButton",
+      "bridgedName": "_newFolderButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel:": {
+      "name": "cancel:",
+      "bridgedName": "cancel",
+      "args": [
+        {
+          "name": "cancel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overwriteAlertDidEnd:returnCode:contextInfo:": {
+      "name": "overwriteAlertDidEnd:returnCode:contextInfo:",
+      "bridgedName": "overwriteAlertDidEnd_returnCode_contextInfo",
+      "args": [
+        {
+          "name": "overwriteAlertDidEnd",
+          "type": "id"
+        },
+        {
+          "name": "returnCode",
+          "type": "long long"
+        },
+        {
+          "name": "contextInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ok:": {
+      "name": "ok:",
+      "bridgedName": "ok",
+      "args": [
+        {
+          "name": "ok",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareSeamlessOpening": {
+      "name": "_prepareSeamlessOpening",
+      "bridgedName": "_prepareSeamlessOpening",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enableSeamlessOpening": {
+      "name": "_enableSeamlessOpening",
+      "bridgedName": "_enableSeamlessOpening",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setClientPID:": {
+      "name": "_setClientPID:",
+      "bridgedName": "_setClientPID",
+      "args": [
+        {
+          "name": "_setClientPID",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clientPID": {
+      "name": "_clientPID",
+      "bridgedName": "_clientPID",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectionIsASingleFolder": {
+      "name": "_selectionIsASingleFolder",
+      "bridgedName": "_selectionIsASingleFolder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dismissWindow:": {
+      "name": "dismissWindow:",
+      "bridgedName": "dismissWindow",
+      "args": [
+        {
+          "name": "dismissWindow",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelAndClose": {
+      "name": "_cancelAndClose",
+      "bridgedName": "_cancelAndClose",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dismissWindowWithReturnCode:willRunSeamlessOpening:": {
+      "name": "_dismissWindowWithReturnCode:willRunSeamlessOpening:",
+      "bridgedName": "_dismissWindowWithReturnCode_willRunSeamlessOpening",
+      "args": [
+        {
+          "name": "_dismissWindowWithReturnCode",
+          "type": "long long"
+        },
+        {
+          "name": "willRunSeamlessOpening",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reactToPanelDismissalWithReturnCode:": {
+      "name": "_reactToPanelDismissalWithReturnCode:",
+      "bridgedName": "_reactToPanelDismissalWithReturnCode",
+      "args": [
+        {
+          "name": "_reactToPanelDismissalWithReturnCode",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hidePreviewPanelIfNecessary": {
+      "name": "_hidePreviewPanelIfNecessary",
+      "bridgedName": "_hidePreviewPanelIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "seamlessOpenerTransientWindow:level:": {
+      "name": "seamlessOpenerTransientWindow:level:",
+      "bridgedName": "seamlessOpenerTransientWindow_level",
+      "args": [
+        {
+          "name": "seamlessOpenerTransientWindow",
+          "type": "id"
+        },
+        {
+          "name": "level",
+          "type": "long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "seamlessOpener:transitionImageForPreviewItem:contentRect:": {
+      "name": "seamlessOpener:transitionImageForPreviewItem:contentRect:",
+      "bridgedName": "seamlessOpener_transitionImageForPreviewItem_contentRect",
+      "args": [
+        {
+          "name": "seamlessOpener",
+          "type": "id"
+        },
+        {
+          "name": "transitionImageForPreviewItem",
+          "type": "id"
+        },
+        {
+          "name": "contentRect",
+          "type": "struct CGRect *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "seamlessOpener:sourceFrameOnScreenForPreviewItem:": {
+      "name": "seamlessOpener:sourceFrameOnScreenForPreviewItem:",
+      "bridgedName": "seamlessOpener_sourceFrameOnScreenForPreviewItem",
+      "args": [
+        {
+          "name": "seamlessOpener",
+          "type": "id"
+        },
+        {
+          "name": "sourceFrameOnScreenForPreviewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isModal": {
+      "name": "_isModal",
+      "bridgedName": "_isModal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resolveUbiquitousConflictsForURLs:": {
+      "name": "_resolveUbiquitousConflictsForURLs:",
+      "bridgedName": "_resolveUbiquitousConflictsForURLs",
+      "args": [
+        {
+          "name": "_resolveUbiquitousConflictsForURLs",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_okForOpenMode": {
+      "name": "_okForOpenMode",
+      "bridgedName": "_okForOpenMode",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didPresentErrorWithRecovery:contextInfo:": {
+      "name": "_didPresentErrorWithRecovery:contextInfo:",
+      "bridgedName": "_didPresentErrorWithRecovery_contextInfo",
+      "args": [
+        {
+          "name": "_didPresentErrorWithRecovery",
+          "type": "BOOL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_okForSaveMode": {
+      "name": "_okForSaveMode",
+      "bridgedName": "_okForSaveMode",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendToDelegateValidateURLs:": {
+      "name": "_sendToDelegateValidateURLs:",
+      "bridgedName": "_sendToDelegateValidateURLs",
+      "args": [
+        {
+          "name": "_sendToDelegateValidateURLs",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendToDelegateValidateFilenameOrURL:error:": {
+      "name": "_sendToDelegateValidateFilenameOrURL:error:",
+      "bridgedName": "_sendToDelegateValidateFilenameOrURL_error",
+      "args": [
+        {
+          "name": "_sendToDelegateValidateFilenameOrURL",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendToDelegate:userEnteredFileName:confirmed:": {
+      "name": "sendToDelegate:userEnteredFileName:confirmed:",
+      "bridgedName": "sendToDelegate_userEnteredFileName_confirmed",
+      "args": [
+        {
+          "name": "sendToDelegate",
+          "type": "id"
+        },
+        {
+          "name": "userEnteredFileName",
+          "type": "id"
+        },
+        {
+          "name": "confirmed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overwriteExistingFileCheck:": {
+      "name": "_overwriteExistingFileCheck:",
+      "bridgedName": "_overwriteExistingFileCheck",
+      "args": [
+        {
+          "name": "_overwriteExistingFileCheck",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAlertForFileOverwrite:": {
+      "name": "_shouldAlertForFileOverwrite:",
+      "bridgedName": "_shouldAlertForFileOverwrite",
+      "args": [
+        {
+          "name": "_shouldAlertForFileOverwrite",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nameWithRequiredExtensionCheck:appendExtensionIfRequired:": {
+      "name": "_nameWithRequiredExtensionCheck:appendExtensionIfRequired:",
+      "bridgedName": "_nameWithRequiredExtensionCheck_appendExtensionIfRequired",
+      "args": [
+        {
+          "name": "_nameWithRequiredExtensionCheck",
+          "type": "id"
+        },
+        {
+          "name": "appendExtensionIfRequired",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nameWithStrictRequiredExtensionCheck:": {
+      "name": "_nameWithStrictRequiredExtensionCheck:",
+      "bridgedName": "_nameWithStrictRequiredExtensionCheck",
+      "args": [
+        {
+          "name": "_nameWithStrictRequiredExtensionCheck",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nameWithLooseRequiredExtensionCheck:": {
+      "name": "_nameWithLooseRequiredExtensionCheck:",
+      "bridgedName": "_nameWithLooseRequiredExtensionCheck",
+      "args": [
+        {
+          "name": "_nameWithLooseRequiredExtensionCheck",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForTypes:": {
+      "name": "runModalForTypes:",
+      "bridgedName": "runModalForTypes",
+      "args": [
+        {
+          "name": "runModalForTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetForDirectory:file:modalForWindow:modalDelegate:didEndSelector:contextInfo:": {
+      "name": "beginSheetForDirectory:file:modalForWindow:modalDelegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginSheetForDirectory_file_modalForWindow_modalDelegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "name": "beginSheetForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "modalForWindow",
+          "type": "id"
+        },
+        {
+          "name": "modalDelegate",
+          "type": "id"
+        },
+        {
+          "name": "didEndSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModal": {
+      "name": "runModal",
+      "bridgedName": "runModal",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nsSavePanel_SendFileSystemChangeNotification": {
+      "name": "_nsSavePanel_SendFileSystemChangeNotification",
+      "bridgedName": "_nsSavePanel_SendFileSystemChangeNotification",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForDirectory:file:": {
+      "name": "runModalForDirectory:file:",
+      "bridgedName": "runModalForDirectory_file",
+      "args": [
+        {
+          "name": "runModalForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dismissModeless:": {
+      "name": "_dismissModeless:",
+      "bridgedName": "_dismissModeless",
+      "args": [
+        {
+          "name": "_dismissModeless",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didEndSheet:returnCode:contextInfo:": {
+      "name": "_didEndSheet:returnCode:contextInfo:",
+      "bridgedName": "_didEndSheet_returnCode_contextInfo",
+      "args": [
+        {
+          "name": "_didEndSheet",
+          "type": "id"
+        },
+        {
+          "name": "returnCode",
+          "type": "long long"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeExtraRetainIfNeeded": {
+      "name": "_removeExtraRetainIfNeeded",
+      "bridgedName": "_removeExtraRetainIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginWithCompletionHandler:": {
+      "name": "beginWithCompletionHandler:",
+      "bridgedName": "beginWithCompletionHandler",
+      "args": [
+        {
+          "name": "beginWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetModalForWindow:completionHandler:": {
+      "name": "beginSheetModalForWindow:completionHandler:",
+      "bridgedName": "beginSheetModalForWindow_completionHandler",
+      "args": [
+        {
+          "name": "beginSheetModalForWindow",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doMakeKeyAndOrderFront": {
+      "name": "_doMakeKeyAndOrderFront",
+      "bridgedName": "_doMakeKeyAndOrderFront",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginForDirectory:file:types:modelessDelegate:didEndSelector:contextInfo:": {
+      "name": "beginForDirectory:file:types:modelessDelegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginForDirectory_file_types_modelessDelegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "name": "beginForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "types",
+          "type": "id"
+        },
+        {
+          "name": "modelessDelegate",
+          "type": "id"
+        },
+        {
+          "name": "didEndSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetForDirectory:file:types:modalForWindow:modalDelegate:didEndSelector:contextInfo:": {
+      "name": "beginSheetForDirectory:file:types:modalForWindow:modalDelegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginSheetForDirectory_file_types_modalForWindow_modalDelegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "name": "beginSheetForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "types",
+          "type": "id"
+        },
+        {
+          "name": "modalForWindow",
+          "type": "id"
+        },
+        {
+          "name": "modalDelegate",
+          "type": "id"
+        },
+        {
+          "name": "didEndSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderWindow:relativeTo:": {
+      "name": "orderWindow:relativeTo:",
+      "bridgedName": "orderWindow_relativeTo",
+      "args": [
+        {
+          "name": "orderWindow",
+          "type": "long long"
+        },
+        {
+          "name": "relativeTo",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForDirectory:file:types:": {
+      "name": "runModalForDirectory:file:types:",
+      "bridgedName": "runModalForDirectory_file_types",
+      "args": [
+        {
+          "name": "runModalForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "types",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectFilePath:": {
+      "name": "_selectFilePath:",
+      "bridgedName": "_selectFilePath",
+      "args": [
+        {
+          "name": "_selectFilePath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBeginWithFileNames:": {
+      "name": "_setBeginWithFileNames:",
+      "bridgedName": "_setBeginWithFileNames",
+      "args": [
+        {
+          "name": "_setBeginWithFileNames",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginWithFileNames": {
+      "name": "_beginWithFileNames",
+      "bridgedName": "_beginWithFileNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadPreviousModeAndLayout": {
+      "name": "_loadPreviousModeAndLayout",
+      "bridgedName": "_loadPreviousModeAndLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mediaBrowserShownTypes": {
+      "name": "_mediaBrowserShownTypes",
+      "bridgedName": "_mediaBrowserShownTypes",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showFilesForBrowserType:": {
+      "name": "_showFilesForBrowserType:",
+      "bridgedName": "_showFilesForBrowserType",
+      "args": [
+        {
+          "name": "_showFilesForBrowserType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureForDirectory:forceDefault:": {
+      "name": "_configureForDirectory:forceDefault:",
+      "bridgedName": "_configureForDirectory_forceDefault",
+      "args": [
+        {
+          "name": "_configureForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "forceDefault",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fileInfoForPaths:sandboxPermissions:": {
+      "name": "_fileInfoForPaths:sandboxPermissions:",
+      "bridgedName": "_fileInfoForPaths_sandboxPermissions",
+      "args": [
+        {
+          "name": "_fileInfoForPaths",
+          "type": "id"
+        },
+        {
+          "name": "sandboxPermissions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureForFilename:": {
+      "name": "_configureForFilename:",
+      "bridgedName": "_configureForFilename",
+      "args": [
+        {
+          "name": "_configureForFilename",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_saveCurrentPanelState:": {
+      "name": "_saveCurrentPanelState:",
+      "bridgedName": "_saveCurrentPanelState",
+      "args": [
+        {
+          "name": "_saveCurrentPanelState",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addCurrentDirectoryToRecentPlaces": {
+      "name": "_addCurrentDirectoryToRecentPlaces",
+      "bridgedName": "_addCurrentDirectoryToRecentPlaces",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserRequestRecentPlaces:": {
+      "name": "fileBrowserRequestRecentPlaces:",
+      "bridgedName": "fileBrowserRequestRecentPlaces",
+      "args": [
+        {
+          "name": "fileBrowserRequestRecentPlaces",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserDidFinishPopulation:": {
+      "name": "fileBrowserDidFinishPopulation:",
+      "bridgedName": "fileBrowserDidFinishPopulation",
+      "args": [
+        {
+          "name": "fileBrowserDidFinishPopulation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserDidStartPopulation:": {
+      "name": "fileBrowserDidStartPopulation:",
+      "bridgedName": "fileBrowserDidStartPopulation",
+      "args": [
+        {
+          "name": "fileBrowserDidStartPopulation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopOpenProgressIndicator": {
+      "name": "_stopOpenProgressIndicator",
+      "bridgedName": "_stopOpenProgressIndicator",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startOpenProgressIndicator": {
+      "name": "_startOpenProgressIndicator",
+      "bridgedName": "_startOpenProgressIndicator",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reallyStartOpenProgressIndicator": {
+      "name": "_reallyStartOpenProgressIndicator",
+      "bridgedName": "_reallyStartOpenProgressIndicator",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateCompareFilename:with:caseSensitive:": {
+      "name": "_delegateCompareFilename:with:caseSensitive:",
+      "bridgedName": "_delegateCompareFilename_with_caseSensitive",
+      "args": [
+        {
+          "name": "_delegateCompareFilename",
+          "type": "id"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        },
+        {
+          "name": "caseSensitive",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateRespondsToCompareFilename": {
+      "name": "_delegateRespondsToCompareFilename",
+      "bridgedName": "_delegateRespondsToCompareFilename",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:showAsPackageForURL:": {
+      "name": "fileBrowser:showAsPackageForURL:",
+      "bridgedName": "fileBrowser_showAsPackageForURL",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "showAsPackageForURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:selectedURLsForProposedSelection:": {
+      "name": "fileBrowser:selectedURLsForProposedSelection:",
+      "bridgedName": "fileBrowser_selectedURLsForProposedSelection",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "selectedURLsForProposedSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserQuerySearchUTIs:": {
+      "name": "fileBrowserQuerySearchUTIs:",
+      "bridgedName": "fileBrowserQuerySearchUTIs",
+      "args": [
+        {
+          "name": "fileBrowserQuerySearchUTIs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowSearchingForFolders": {
+      "name": "_allowSearchingForFolders",
+      "bridgedName": "_allowSearchingForFolders",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:canChooseURL:isDirectory:isPackage:": {
+      "name": "fileBrowser:canChooseURL:isDirectory:isPackage:",
+      "bridgedName": "fileBrowser_canChooseURL_isDirectory_isPackage",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "canChooseURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectory",
+          "type": "BOOL"
+        },
+        {
+          "name": "isPackage",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:canChooseURL:": {
+      "name": "fileBrowser:canChooseURL:",
+      "bridgedName": "fileBrowser_canChooseURL",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "canChooseURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finderView:shouldEnableItems:completionHandler:": {
+      "name": "finderView:shouldEnableItems:completionHandler:",
+      "bridgedName": "finderView_shouldEnableItems_completionHandler",
+      "args": [
+        {
+          "name": "finderView",
+          "type": "id"
+        },
+        {
+          "name": "shouldEnableItems",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleURLEnableTestForItems:callDelegate:completionHandler:": {
+      "name": "scheduleURLEnableTestForItems:callDelegate:completionHandler:",
+      "bridgedName": "scheduleURLEnableTestForItems_callDelegate_completionHandler",
+      "args": [
+        {
+          "name": "scheduleURLEnableTestForItems",
+          "type": "id"
+        },
+        {
+          "name": "callDelegate",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replyToFinderKitShouldEnableURL:isDirectory:isPackage:pathExtension:itemHFSType:typeIdentifier:delegateRepliedWith:": {
+      "name": "_replyToFinderKitShouldEnableURL:isDirectory:isPackage:pathExtension:itemHFSType:typeIdentifier:delegateRepliedWith:",
+      "bridgedName": "_replyToFinderKitShouldEnableURL_isDirectory_isPackage_pathExtension_itemHFSType_typeIdentifier_delegateRepliedWith",
+      "args": [
+        {
+          "name": "_replyToFinderKitShouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectory",
+          "type": "BOOL"
+        },
+        {
+          "name": "isPackage",
+          "type": "BOOL"
+        },
+        {
+          "name": "pathExtension",
+          "type": "id"
+        },
+        {
+          "name": "itemHFSType",
+          "type": "unsigned int"
+        },
+        {
+          "name": "typeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "delegateRepliedWith",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:shouldEnableURL:isDirectory:isPackage:pathExtension:itemHFSType:typeIdentifier:": {
+      "name": "fileBrowser:shouldEnableURL:isDirectory:isPackage:pathExtension:itemHFSType:typeIdentifier:",
+      "bridgedName": "fileBrowser_shouldEnableURL_isDirectory_isPackage_pathExtension_itemHFSType_typeIdentifier",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "shouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectory",
+          "type": "BOOL"
+        },
+        {
+          "name": "isPackage",
+          "type": "BOOL"
+        },
+        {
+          "name": "pathExtension",
+          "type": "id"
+        },
+        {
+          "name": "itemHFSType",
+          "type": "unsigned int"
+        },
+        {
+          "name": "typeIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:shouldEnableURL:isDirectory:isPackage:": {
+      "name": "fileBrowser:shouldEnableURL:isDirectory:isPackage:",
+      "bridgedName": "fileBrowser_shouldEnableURL_isDirectory_isPackage",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "shouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectory",
+          "type": "BOOL"
+        },
+        {
+          "name": "isPackage",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:shouldEnableURL:": {
+      "name": "fileBrowser:shouldEnableURL:",
+      "bridgedName": "fileBrowser_shouldEnableURL",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "shouldEnableURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldEnableURL:": {
+      "name": "_shouldEnableURL:",
+      "bridgedName": "_shouldEnableURL",
+      "args": [
+        {
+          "name": "_shouldEnableURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldEnableURL:isDirectoryURLHandler:": {
+      "name": "_shouldEnableURL:isDirectoryURLHandler:",
+      "bridgedName": "_shouldEnableURL_isDirectoryURLHandler",
+      "args": [
+        {
+          "name": "_shouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectoryURLHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canChooseURL:": {
+      "name": "_canChooseURL:",
+      "bridgedName": "_canChooseURL",
+      "args": [
+        {
+          "name": "_canChooseURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nonDelegateShouldEnableURL:isDirectory:": {
+      "name": "_nonDelegateShouldEnableURL:isDirectory:",
+      "bridgedName": "_nonDelegateShouldEnableURL_isDirectory",
+      "args": [
+        {
+          "name": "_nonDelegateShouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "isDirectory",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isFileTypeEnabledForURL:": {
+      "name": "_isFileTypeEnabledForURL:",
+      "bridgedName": "_isFileTypeEnabledForURL",
+      "args": [
+        {
+          "name": "_isFileTypeEnabledForURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isEnabledItemWithExtensionProvider:HFSTypeProvider:UTIProvider:": {
+      "name": "_isEnabledItemWithExtensionProvider:HFSTypeProvider:UTIProvider:",
+      "bridgedName": "_isEnabledItemWithExtensionProvider_HFSTypeProvider_UTIProvider",
+      "args": [
+        {
+          "name": "_isEnabledItemWithExtensionProvider",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "HFSTypeProvider",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "UTIProvider",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDirectoryURL:": {
+      "name": "_isDirectoryURL:",
+      "bridgedName": "_isDirectoryURL",
+      "args": [
+        {
+          "name": "_isDirectoryURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isFauxFilePackageURL:": {
+      "name": "_isFauxFilePackageURL:",
+      "bridgedName": "_isFauxFilePackageURL",
+      "args": [
+        {
+          "name": "_isFauxFilePackageURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateShouldEnableURL:": {
+      "name": "_delegateShouldEnableURL:",
+      "bridgedName": "_delegateShouldEnableURL",
+      "args": [
+        {
+          "name": "_delegateShouldEnableURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendShouldShowFileName:toDelegate:": {
+      "name": "_sendShouldShowFileName:toDelegate:",
+      "bridgedName": "_sendShouldShowFileName_toDelegate",
+      "args": [
+        {
+          "name": "_sendShouldShowFileName",
+          "type": "id"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendShouldShowFileName:fileSchemePath:toDelegate:": {
+      "name": "_sendShouldShowFileName:fileSchemePath:toDelegate:",
+      "bridgedName": "_sendShouldShowFileName_fileSchemePath_toDelegate",
+      "args": [
+        {
+          "name": "_sendShouldShowFileName",
+          "type": "id"
+        },
+        {
+          "name": "fileSchemePath",
+          "type": "id"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendShouldEnableURL:toDelegate:": {
+      "name": "_sendShouldEnableURL:toDelegate:",
+      "bridgedName": "_sendShouldEnableURL_toDelegate",
+      "args": [
+        {
+          "name": "_sendShouldEnableURL",
+          "type": "id"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hidesSharedSection": {
+      "name": "hidesSharedSection",
+      "bridgedName": "hidesSharedSection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHidesSharedSection:": {
+      "name": "setHidesSharedSection:",
+      "bridgedName": "setHidesSharedSection",
+      "args": [
+        {
+          "name": "setHidesSharedSection",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectKeyViewPrecedingView:": {
+      "name": "selectKeyViewPrecedingView:",
+      "bridgedName": "selectKeyViewPrecedingView",
+      "args": [
+        {
+          "name": "selectKeyViewPrecedingView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectKeyViewFollowingView:": {
+      "name": "selectKeyViewFollowingView:",
+      "bridgedName": "selectKeyViewFollowingView",
+      "args": [
+        {
+          "name": "selectKeyViewFollowingView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fieldEditor:forObject:": {
+      "name": "fieldEditor:forObject:",
+      "bridgedName": "fieldEditor_forObject",
+      "args": [
+        {
+          "name": "fieldEditor",
+          "type": "BOOL"
+        },
+        {
+          "name": "forObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDragOperation:": {
+      "name": "performDragOperation:",
+      "bridgedName": "performDragOperation",
+      "args": [
+        {
+          "name": "performDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectURL:": {
+      "name": "_selectURL:",
+      "bridgedName": "_selectURL",
+      "args": [
+        {
+          "name": "_selectURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForDragOperation:": {
+      "name": "prepareForDragOperation:",
+      "bridgedName": "prepareForDragOperation",
+      "args": [
+        {
+          "name": "prepareForDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingEntered:": {
+      "name": "draggingEntered:",
+      "bridgedName": "draggingEntered",
+      "args": [
+        {
+          "name": "draggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForDragTypes": {
+      "name": "_registerForDragTypes",
+      "bridgedName": "_registerForDragTypes",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:acceptsPreviewPanelControl:": {
+      "name": "fileBrowser:acceptsPreviewPanelControl:",
+      "bridgedName": "fileBrowser_acceptsPreviewPanelControl",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "acceptsPreviewPanelControl",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:configureForGotoWithFilename:": {
+      "name": "fileBrowser:configureForGotoWithFilename:",
+      "bridgedName": "fileBrowser_configureForGotoWithFilename",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "configureForGotoWithFilename",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:scopeChanged:": {
+      "name": "fileBrowser:scopeChanged:",
+      "bridgedName": "fileBrowser_scopeChanged",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "scopeChanged",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserFileListModeChanged:": {
+      "name": "fileBrowserFileListModeChanged:",
+      "bridgedName": "fileBrowserFileListModeChanged",
+      "args": [
+        {
+          "name": "fileBrowserFileListModeChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserPerformOpenAction:": {
+      "name": "fileBrowserPerformOpenAction:",
+      "bridgedName": "fileBrowserPerformOpenAction",
+      "args": [
+        {
+          "name": "fileBrowserPerformOpenAction",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserSelectionWillChange:": {
+      "name": "fileBrowserSelectionWillChange:",
+      "bridgedName": "fileBrowserSelectionWillChange",
+      "args": [
+        {
+          "name": "fileBrowserSelectionWillChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowserSelectionDidChange:": {
+      "name": "fileBrowserSelectionDidChange:",
+      "bridgedName": "fileBrowserSelectionDidChange",
+      "args": [
+        {
+          "name": "fileBrowserSelectionDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:didChangeToDirectoryURL:": {
+      "name": "fileBrowser:didChangeToDirectoryURL:",
+      "bridgedName": "fileBrowser_didChangeToDirectoryURL",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "didChangeToDirectoryURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileBrowser:clickedOnDisabledURL:": {
+      "name": "fileBrowser:clickedOnDisabledURL:",
+      "bridgedName": "fileBrowser_clickedOnDisabledURL",
+      "args": [
+        {
+          "name": "fileBrowser",
+          "type": "id"
+        },
+        {
+          "name": "clickedOnDisabledURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleFileListConfirmedSelection:": {
+      "name": "_handleFileListConfirmedSelection:",
+      "bridgedName": "_handleFileListConfirmedSelection",
+      "args": [
+        {
+          "name": "_handleFileListConfirmedSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleFileListSelectionChanged:": {
+      "name": "_handleFileListSelectionChanged:",
+      "bridgedName": "_handleFileListSelectionChanged",
+      "args": [
+        {
+          "name": "_handleFileListSelectionChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleFileListModeChanged:": {
+      "name": "_handleFileListModeChanged:",
+      "bridgedName": "_handleFileListModeChanged",
+      "args": [
+        {
+          "name": "_handleFileListModeChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleCurrentDirectoryChanged:": {
+      "name": "_handleCurrentDirectoryChanged:",
+      "bridgedName": "_handleCurrentDirectoryChanged",
+      "args": [
+        {
+          "name": "_handleCurrentDirectoryChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelectionDidChange": {
+      "name": "_sendSelectionDidChange",
+      "bridgedName": "_sendSelectionDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelectionDidChangeToDelegate:": {
+      "name": "_sendSelectionDidChangeToDelegate:",
+      "bridgedName": "_sendSelectionDidChangeToDelegate",
+      "args": [
+        {
+          "name": "_sendSelectionDidChangeToDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDirectoryDidChange": {
+      "name": "_sendDirectoryDidChange",
+      "bridgedName": "_sendDirectoryDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDirectoryDidChange:toDelegate:": {
+      "name": "_sendDirectoryDidChange:toDelegate:",
+      "bridgedName": "_sendDirectoryDidChange_toDelegate",
+      "args": [
+        {
+          "name": "_sendDirectoryDidChange",
+          "type": "id"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDidChangeToDirectoryURL:toDelegate:": {
+      "name": "_sendDidChangeToDirectoryURL:toDelegate:",
+      "bridgedName": "_sendDidChangeToDirectoryURL_toDelegate",
+      "args": [
+        {
+          "name": "_sendDidChangeToDirectoryURL",
+          "type": "id"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:doCommandBySelector:": {
+      "name": "control:textView:doCommandBySelector:",
+      "bridgedName": "control_textView_doCommandBySelector",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:completions:forPartialWordRange:indexOfSelectedItem:": {
+      "name": "control:textView:completions:forPartialWordRange:indexOfSelectedItem:",
+      "bridgedName": "control_textView_completions_forPartialWordRange_indexOfSelectedItem",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "completions",
+          "type": "id"
+        },
+        {
+          "name": "forPartialWordRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "indexOfSelectedItem",
+          "type": "long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidEndEditing:": {
+      "name": "controlTextDidEndEditing:",
+      "bridgedName": "controlTextDidEndEditing",
+      "args": [
+        {
+          "name": "controlTextDidEndEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidChange:": {
+      "name": "controlTextDidChange:",
+      "bridgedName": "controlTextDidChange",
+      "args": [
+        {
+          "name": "controlTextDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textShouldBeginEditing:": {
+      "name": "control:textShouldBeginEditing:",
+      "bridgedName": "control_textShouldBeginEditing",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textShouldBeginEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideExtensionButtonClick:": {
+      "name": "hideExtensionButtonClick:",
+      "bridgedName": "hideExtensionButtonClick",
+      "args": [
+        {
+          "name": "hideExtensionButtonClick",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectText:": {
+      "name": "selectText:",
+      "bridgedName": "selectText",
+      "args": [
+        {
+          "name": "selectText",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getOutOfTheWayAndPostNewDocumentAction:": {
+      "name": "_getOutOfTheWayAndPostNewDocumentAction:",
+      "bridgedName": "_getOutOfTheWayAndPostNewDocumentAction",
+      "args": [
+        {
+          "name": "_getOutOfTheWayAndPostNewDocumentAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newFolder:": {
+      "name": "newFolder:",
+      "bridgedName": "newFolder",
+      "args": [
+        {
+          "name": "newFolder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleNameFieldContentsChangedAsGoto": {
+      "name": "_handleNameFieldContentsChangedAsGoto",
+      "bridgedName": "_handleNameFieldContentsChangedAsGoto",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldHandleAsGotoForTypedString:": {
+      "name": "_shouldHandleAsGotoForTypedString:",
+      "bridgedName": "_shouldHandleAsGotoForTypedString",
+      "args": [
+        {
+          "name": "_shouldHandleAsGotoForTypedString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isModalWindowOrSheetRunning": {
+      "name": "_isModalWindowOrSheetRunning",
+      "bridgedName": "_isModalWindowOrSheetRunning",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performKeyEquivalent:": {
+      "name": "performKeyEquivalent:",
+      "bridgedName": "performKeyEquivalent",
+      "args": [
+        {
+          "name": "performKeyEquivalent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showGotoWithInitialFilename:": {
+      "name": "showGotoWithInitialFilename:",
+      "bridgedName": "showGotoWithInitialFilename",
+      "args": [
+        {
+          "name": "showGotoWithInitialFilename",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filepathInputControllerClass": {
+      "name": "filepathInputControllerClass",
+      "bridgedName": "filepathInputControllerClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_perDialogPrefString:": {
+      "name": "_perDialogPrefString:",
+      "bridgedName": "_perDialogPrefString",
+      "args": [
+        {
+          "name": "_perDialogPrefString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeUserSetHideExtensionButtonState": {
+      "name": "_storeUserSetHideExtensionButtonState",
+      "bridgedName": "_storeUserSetHideExtensionButtonState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchUserSetHideExtensionButtonState": {
+      "name": "_fetchUserSetHideExtensionButtonState",
+      "bridgedName": "_fetchUserSetHideExtensionButtonState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeExpandedFrameSize": {
+      "name": "_storeExpandedFrameSize",
+      "bridgedName": "_storeExpandedFrameSize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeExpandedFrameSizeValue:": {
+      "name": "_storeExpandedFrameSizeValue:",
+      "bridgedName": "_storeExpandedFrameSizeValue",
+      "args": [
+        {
+          "name": "_storeExpandedFrameSizeValue",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "center": {
+      "name": "center",
+      "bridgedName": "center",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchExpandedFrameSize:": {
+      "name": "_fetchExpandedFrameSize:",
+      "bridgedName": "_fetchExpandedFrameSize",
+      "args": [
+        {
+          "name": "_fetchExpandedFrameSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeExpandedState": {
+      "name": "_storeExpandedState",
+      "bridgedName": "_storeExpandedState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fetchExpandedState": {
+      "name": "_fetchExpandedState",
+      "bridgedName": "_fetchExpandedState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writeFileListMode": {
+      "name": "_writeFileListMode",
+      "bridgedName": "_writeFileListMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_readFileListMode": {
+      "name": "_readFileListMode",
+      "bridgedName": "_readFileListMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMessageTextFieldValueNoLayout:": {
+      "name": "_setMessageTextFieldValueNoLayout:",
+      "bridgedName": "_setMessageTextFieldValueNoLayout",
+      "args": [
+        {
+          "name": "_setMessageTextFieldValueNoLayout",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultMessageAttributes": {
+      "name": "_defaultMessageAttributes",
+      "bridgedName": "_defaultMessageAttributes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commitPendingEditsIn_nameField": {
+      "name": "_commitPendingEditsIn_nameField",
+      "bridgedName": "_commitPendingEditsIn_nameField",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNameFieldValueLastSet:": {
+      "name": "_setNameFieldValueLastSet:",
+      "bridgedName": "_setNameFieldValueLastSet",
+      "args": [
+        {
+          "name": "_setNameFieldValueLastSet",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAllowsMultipleSelection:": {
+      "name": "setAllowsMultipleSelection:",
+      "bridgedName": "setAllowsMultipleSelection",
+      "args": [
+        {
+          "name": "setAllowsMultipleSelection",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsMultipleSelection": {
+      "name": "allowsMultipleSelection",
+      "bridgedName": "allowsMultipleSelection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCanDownloadUbiquitousContents:": {
+      "name": "setCanDownloadUbiquitousContents:",
+      "bridgedName": "setCanDownloadUbiquitousContents",
+      "args": [
+        {
+          "name": "setCanDownloadUbiquitousContents",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canDownloadUbiquitousContents": {
+      "name": "canDownloadUbiquitousContents",
+      "bridgedName": "canDownloadUbiquitousContents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCanResolveUbiquitousConflicts:": {
+      "name": "setCanResolveUbiquitousConflicts:",
+      "bridgedName": "setCanResolveUbiquitousConflicts",
+      "args": [
+        {
+          "name": "setCanResolveUbiquitousConflicts",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canResolveUbiquitousConflicts": {
+      "name": "canResolveUbiquitousConflicts",
+      "bridgedName": "canResolveUbiquitousConflicts",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCanChooseFiles:": {
+      "name": "setCanChooseFiles:",
+      "bridgedName": "setCanChooseFiles",
+      "args": [
+        {
+          "name": "setCanChooseFiles",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canChooseFiles": {
+      "name": "canChooseFiles",
+      "bridgedName": "canChooseFiles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCanChooseDirectories:": {
+      "name": "setCanChooseDirectories:",
+      "bridgedName": "setCanChooseDirectories",
+      "args": [
+        {
+          "name": "setCanChooseDirectories",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canChooseDirectories": {
+      "name": "canChooseDirectories",
+      "bridgedName": "canChooseDirectories",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIsExtensionHidden:": {
+      "name": "setIsExtensionHidden:",
+      "bridgedName": "setIsExtensionHidden",
+      "args": [
+        {
+          "name": "setIsExtensionHidden",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleShowAllExtensionsPrefChanged:": {
+      "name": "_handleShowAllExtensionsPrefChanged:",
+      "bridgedName": "_handleShowAllExtensionsPrefChanged",
+      "args": [
+        {
+          "name": "_handleShowAllExtensionsPrefChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setResolvesAliases:": {
+      "name": "setResolvesAliases:",
+      "bridgedName": "setResolvesAliases",
+      "args": [
+        {
+          "name": "setResolvesAliases",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resolvesAliases": {
+      "name": "resolvesAliases",
+      "bridgedName": "resolvesAliases",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsExpandedAndStoreStateDictionaryMessage:": {
+      "name": "_setIsExpandedAndStoreStateDictionaryMessage:",
+      "bridgedName": "_setIsExpandedAndStoreStateDictionaryMessage",
+      "args": [
+        {
+          "name": "_setIsExpandedAndStoreStateDictionaryMessage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isExpandedAndStoreStateDictionaryMessage": {
+      "name": "_isExpandedAndStoreStateDictionaryMessage",
+      "bridgedName": "_isExpandedAndStoreStateDictionaryMessage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleIsExpanded:": {
+      "name": "toggleIsExpanded:",
+      "bridgedName": "toggleIsExpanded",
+      "args": [
+        {
+          "name": "toggleIsExpanded",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldForceSize:andRunBlock:": {
+      "name": "shouldForceSize:andRunBlock:",
+      "bridgedName": "shouldForceSize_andRunBlock",
+      "args": [
+        {
+          "name": "shouldForceSize",
+          "type": "BOOL"
+        },
+        {
+          "name": "andRunBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createFakeConstraintsForStoredExpandedSize": {
+      "name": "createFakeConstraintsForStoredExpandedSize",
+      "bridgedName": "createFakeConstraintsForStoredExpandedSize",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preserveAnimatingFrames": {
+      "name": "_preserveAnimatingFrames",
+      "bridgedName": "_preserveAnimatingFrames",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsExpanded:andStoreState:": {
+      "name": "_setIsExpanded:andStoreState:",
+      "bridgedName": "_setIsExpanded_andStoreState",
+      "args": [
+        {
+          "name": "_setIsExpanded",
+          "type": "BOOL"
+        },
+        {
+          "name": "andStoreState",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureAll": {
+      "name": "_configureAll",
+      "bridgedName": "_configureAll",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsExpanded:": {
+      "name": "_setIsExpanded:",
+      "bridgedName": "_setIsExpanded",
+      "args": [
+        {
+          "name": "_setIsExpanded",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDelegateWillExpand:": {
+      "name": "_sendDelegateWillExpand:",
+      "bridgedName": "_sendDelegateWillExpand",
+      "args": [
+        {
+          "name": "_sendDelegateWillExpand",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendPanelWillExpand:toDelegate:": {
+      "name": "_sendPanelWillExpand:toDelegate:",
+      "bridgedName": "_sendPanelWillExpand_toDelegate",
+      "args": [
+        {
+          "name": "_sendPanelWillExpand",
+          "type": "BOOL"
+        },
+        {
+          "name": "toDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isExpanded": {
+      "name": "_isExpanded",
+      "bridgedName": "_isExpanded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reloadDisplayState": {
+      "name": "_reloadDisplayState",
+      "bridgedName": "_reloadDisplayState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateVisibleColumns": {
+      "name": "validateVisibleColumns",
+      "bridgedName": "validateVisibleColumns",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshDelegateOptions": {
+      "name": "_refreshDelegateOptions",
+      "bridgedName": "_refreshDelegateOptions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSupportedDelegateMethodsWithDelegate:overrides:": {
+      "name": "_setSupportedDelegateMethodsWithDelegate:overrides:",
+      "bridgedName": "_setSupportedDelegateMethodsWithDelegate_overrides",
+      "args": [
+        {
+          "name": "_setSupportedDelegateMethodsWithDelegate",
+          "type": "id"
+        },
+        {
+          "name": "overrides",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearDelegateOptions": {
+      "name": "_clearDelegateOptions",
+      "bridgedName": "_clearDelegateOptions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewFrameDidChange:": {
+      "name": "_accessoryViewFrameDidChange:",
+      "bridgedName": "_accessoryViewFrameDidChange",
+      "args": [
+        {
+          "name": "_accessoryViewFrameDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAutosizeBasedOnAccessoryViewChanges": {
+      "name": "_shouldAutosizeBasedOnAccessoryViewChanges",
+      "bridgedName": "_shouldAutosizeBasedOnAccessoryViewChanges",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isUserAccessoryViewFrameChange": {
+      "name": "_isUserAccessoryViewFrameChange",
+      "bridgedName": "_isUserAccessoryViewFrameChange",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessoryViewMinSize:wantsToCenter:": {
+      "name": "setAccessoryViewMinSize:wantsToCenter:",
+      "bridgedName": "setAccessoryViewMinSize_wantsToCenter",
+      "args": [
+        {
+          "name": "setAccessoryViewMinSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "wantsToCenter",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enforceAccessoryViewHeight:": {
+      "name": "enforceAccessoryViewHeight:",
+      "bridgedName": "enforceAccessoryViewHeight",
+      "args": [
+        {
+          "name": "enforceAccessoryViewHeight",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshAccessoryViewPlacement": {
+      "name": "_refreshAccessoryViewPlacement",
+      "bridgedName": "_refreshAccessoryViewPlacement",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_placeAccessoryViewInContainer:": {
+      "name": "_placeAccessoryViewInContainer:",
+      "bridgedName": "_placeAccessoryViewInContainer",
+      "args": [
+        {
+          "name": "_placeAccessoryViewInContainer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_discloseAccessoryView:animate:accessoryViewChanged:": {
+      "name": "_discloseAccessoryView:animate:accessoryViewChanged:",
+      "bridgedName": "_discloseAccessoryView_animate_accessoryViewChanged",
+      "args": [
+        {
+          "name": "_discloseAccessoryView",
+          "type": "BOOL"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        },
+        {
+          "name": "accessoryViewChanged",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hideAccessoryViewAnimated:navViewMinSize:": {
+      "name": "_hideAccessoryViewAnimated:navViewMinSize:",
+      "bridgedName": "_hideAccessoryViewAnimated_navViewMinSize",
+      "args": [
+        {
+          "name": "_hideAccessoryViewAnimated",
+          "type": "BOOL"
+        },
+        {
+          "name": "navViewMinSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showAccessoryViewAnimated:navViewMinSize:": {
+      "name": "_showAccessoryViewAnimated:navViewMinSize:",
+      "bridgedName": "_showAccessoryViewAnimated_navViewMinSize",
+      "args": [
+        {
+          "name": "_showAccessoryViewAnimated",
+          "type": "BOOL"
+        },
+        {
+          "name": "navViewMinSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAnimateAccessoryViewByResizingWindow": {
+      "name": "_shouldAnimateAccessoryViewByResizingWindow",
+      "bridgedName": "_shouldAnimateAccessoryViewByResizingWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_discloseAccessoryViewShowingView:isBeginning:animate:navViewMinSize:": {
+      "name": "_discloseAccessoryViewShowingView:isBeginning:animate:navViewMinSize:",
+      "bridgedName": "_discloseAccessoryViewShowingView_isBeginning_animate_navViewMinSize",
+      "args": [
+        {
+          "name": "_discloseAccessoryViewShowingView",
+          "type": "BOOL"
+        },
+        {
+          "name": "isBeginning",
+          "type": "BOOL"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        },
+        {
+          "name": "navViewMinSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAnimateAccessoryView": {
+      "name": "_shouldAnimateAccessoryView",
+      "bridgedName": "_shouldAnimateAccessoryView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_swapImageViewWithAccessoryViewAndShow:": {
+      "name": "_swapImageViewWithAccessoryViewAndShow:",
+      "bridgedName": "_swapImageViewWithAccessoryViewAndShow",
+      "args": [
+        {
+          "name": "_swapImageViewWithAccessoryViewAndShow",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_swapAccessoryViewWithImageViewAndDisplay:": {
+      "name": "_swapAccessoryViewWithImageViewAndDisplay:",
+      "bridgedName": "_swapAccessoryViewWithImageViewAndDisplay",
+      "args": [
+        {
+          "name": "_swapAccessoryViewWithImageViewAndDisplay",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewImageView": {
+      "name": "_accessoryViewImageView",
+      "bridgedName": "_accessoryViewImageView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAccessoryViewImageView:": {
+      "name": "_setAccessoryViewImageView:",
+      "bridgedName": "_setAccessoryViewImageView",
+      "args": [
+        {
+          "name": "_setAccessoryViewImageView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getAccessoryViewScreenShot": {
+      "name": "_getAccessoryViewScreenShot",
+      "bridgedName": "_getAccessoryViewScreenShot",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldShowOptionsButton:": {
+      "name": "_setShouldShowOptionsButton:",
+      "bridgedName": "_setShouldShowOptionsButton",
+      "args": [
+        {
+          "name": "_setShouldShowOptionsButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowOptionsButton": {
+      "name": "_shouldShowOptionsButton",
+      "bridgedName": "_shouldShowOptionsButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeOptionsButtonTitleIfNecessary": {
+      "name": "_changeOptionsButtonTitleIfNecessary",
+      "bridgedName": "_changeOptionsButtonTitleIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_durationMultiplier": {
+      "name": "_durationMultiplier",
+      "bridgedName": "_durationMultiplier",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRemoteAccessoryViewAvailable:": {
+      "name": "_setRemoteAccessoryViewAvailable:",
+      "bridgedName": "_setRemoteAccessoryViewAvailable",
+      "args": [
+        {
+          "name": "_setRemoteAccessoryViewAvailable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_remoteAccessoryViewAvailable": {
+      "name": "_remoteAccessoryViewAvailable",
+      "bridgedName": "_remoteAccessoryViewAvailable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureAccessoryView": {
+      "name": "_configureAccessoryView",
+      "bridgedName": "_configureAccessoryView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowAccessoryView": {
+      "name": "_shouldShowAccessoryView",
+      "bridgedName": "_shouldShowAccessoryView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessoryViewDisclosed:": {
+      "name": "setAccessoryViewDisclosed:",
+      "bridgedName": "setAccessoryViewDisclosed",
+      "args": [
+        {
+          "name": "setAccessoryViewDisclosed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessoryViewDisclosed": {
+      "name": "isAccessoryViewDisclosed",
+      "bridgedName": "isAccessoryViewDisclosed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAccessoryViewDisclosedVBKVO:": {
+      "name": "_setAccessoryViewDisclosedVBKVO:",
+      "bridgedName": "_setAccessoryViewDisclosedVBKVO",
+      "args": [
+        {
+          "name": "_setAccessoryViewDisclosedVBKVO",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAccessoryViewDisclosed:": {
+      "name": "_setAccessoryViewDisclosed:",
+      "bridgedName": "_setAccessoryViewDisclosed",
+      "args": [
+        {
+          "name": "_setAccessoryViewDisclosed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewDisclosedVBKVO": {
+      "name": "_accessoryViewDisclosedVBKVO",
+      "bridgedName": "_accessoryViewDisclosedVBKVO",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewDisclosed": {
+      "name": "_accessoryViewDisclosed",
+      "bridgedName": "_accessoryViewDisclosed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleOptionsView:": {
+      "name": "toggleOptionsView:",
+      "bridgedName": "toggleOptionsView",
+      "args": [
+        {
+          "name": "toggleOptionsView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAlwaysDislcoseAccessoryView": {
+      "name": "_shouldAlwaysDislcoseAccessoryView",
+      "bridgedName": "_shouldAlwaysDislcoseAccessoryView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessoryViewDisclosureIsSupported": {
+      "name": "_accessoryViewDisclosureIsSupported",
+      "bridgedName": "_accessoryViewDisclosureIsSupported",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFrameForTimeMachineMode:animate:": {
+      "name": "_setFrameForTimeMachineMode:animate:",
+      "bridgedName": "_setFrameForTimeMachineMode_animate",
+      "args": [
+        {
+          "name": "_setFrameForTimeMachineMode",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hideWindowForTimeMachineMode:": {
+      "name": "_hideWindowForTimeMachineMode:",
+      "bridgedName": "_hideWindowForTimeMachineMode",
+      "args": [
+        {
+          "name": "_hideWindowForTimeMachineMode",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFauxFilePackageTypes:": {
+      "name": "_setFauxFilePackageTypes:",
+      "bridgedName": "_setFauxFilePackageTypes",
+      "args": [
+        {
+          "name": "_setFauxFilePackageTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fauxFilePackageTypes": {
+      "name": "_fauxFilePackageTypes",
+      "bridgedName": "_fauxFilePackageTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setEnabledFileTypes:": {
+      "name": "_setEnabledFileTypes:",
+      "bridgedName": "_setEnabledFileTypes",
+      "args": [
+        {
+          "name": "_setEnabledFileTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enabledFileTypes": {
+      "name": "_enabledFileTypes",
+      "bridgedName": "_enabledFileTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredFileNameExtension": {
+      "name": "_preferredFileNameExtension",
+      "bridgedName": "_preferredFileNameExtension",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAllowedFileNameExtension:": {
+      "name": "_isAllowedFileNameExtension:",
+      "bridgedName": "_isAllowedFileNameExtension",
+      "args": [
+        {
+          "name": "_isAllowedFileNameExtension",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filenameHasAcceptableFileType:": {
+      "name": "_filenameHasAcceptableFileType:",
+      "bridgedName": "_filenameHasAcceptableFileType",
+      "args": [
+        {
+          "name": "_filenameHasAcceptableFileType",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filenameHasNonEmptyAcceptableFileType:": {
+      "name": "_filenameHasNonEmptyAcceptableFileType:",
+      "bridgedName": "_filenameHasNonEmptyAcceptableFileType",
+      "args": [
+        {
+          "name": "_filenameHasNonEmptyAcceptableFileType",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateForAllowedFileTypesChangedWithPreviousName:previousAllowedTypes:newAllowedFileTypes:": {
+      "name": "_updateForAllowedFileTypesChangedWithPreviousName:previousAllowedTypes:newAllowedFileTypes:",
+      "bridgedName": "_updateForAllowedFileTypesChangedWithPreviousName_previousAllowedTypes_newAllowedFileTypes",
+      "args": [
+        {
+          "name": "_updateForAllowedFileTypesChangedWithPreviousName",
+          "type": "id"
+        },
+        {
+          "name": "previousAllowedTypes",
+          "type": "id"
+        },
+        {
+          "name": "newAllowedFileTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRequiredFileType:": {
+      "name": "setRequiredFileType:",
+      "bridgedName": "setRequiredFileType",
+      "args": [
+        {
+          "name": "setRequiredFileType",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requiredFileType": {
+      "name": "requiredFileType",
+      "bridgedName": "requiredFileType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_saveMode": {
+      "name": "_saveMode",
+      "bridgedName": "_saveMode",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDirectory:": {
+      "name": "setDirectory:",
+      "bridgedName": "setDirectory",
+      "args": [
+        {
+          "name": "setDirectory",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "directory": {
+      "name": "directory",
+      "bridgedName": "directory",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_directoryPreferringURL:": {
+      "name": "_directoryPreferringURL:",
+      "bridgedName": "_directoryPreferringURL",
+      "args": [
+        {
+          "name": "_directoryPreferringURL",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isSaveFilenameLengthLegal": {
+      "name": "_isSaveFilenameLengthLegal",
+      "bridgedName": "_isSaveFilenameLengthLegal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDoLayerPerformanceUpdates": {
+      "name": "_shouldDoLayerPerformanceUpdates",
+      "bridgedName": "_shouldDoLayerPerformanceUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filenamesAlwaysIncludingDirectories": {
+      "name": "_filenamesAlwaysIncludingDirectories",
+      "bridgedName": "_filenamesAlwaysIncludingDirectories",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filenames": {
+      "name": "filenames",
+      "bridgedName": "filenames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filenamesWithAlwaysIncludingDirectories:wantRawURLs:": {
+      "name": "_filenamesWithAlwaysIncludingDirectories:wantRawURLs:",
+      "bridgedName": "_filenamesWithAlwaysIncludingDirectories_wantRawURLs",
+      "args": [
+        {
+          "name": "_filenamesWithAlwaysIncludingDirectories",
+          "type": "BOOL"
+        },
+        {
+          "name": "wantRawURLs",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectedURLsWithAlwaysIncludingDirectories:wantRawURLs:": {
+      "name": "_selectedURLsWithAlwaysIncludingDirectories:wantRawURLs:",
+      "bridgedName": "_selectedURLsWithAlwaysIncludingDirectories_wantRawURLs",
+      "args": [
+        {
+          "name": "_selectedURLsWithAlwaysIncludingDirectories",
+          "type": "BOOL"
+        },
+        {
+          "name": "wantRawURLs",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectNameFieldContentsExcludingExtension": {
+      "name": "_selectNameFieldContentsExcludingExtension",
+      "bridgedName": "_selectNameFieldContentsExcludingExtension",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setInitialNameFieldContentsFromPosixName:": {
+      "name": "_setInitialNameFieldContentsFromPosixName:",
+      "bridgedName": "_setInitialNameFieldContentsFromPosixName",
+      "args": [
+        {
+          "name": "_setInitialNameFieldContentsFromPosixName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNameFieldContentsFromPosixName:addToUndo:": {
+      "name": "_setNameFieldContentsFromPosixName:addToUndo:",
+      "bridgedName": "_setNameFieldContentsFromPosixName_addToUndo",
+      "args": [
+        {
+          "name": "_setNameFieldContentsFromPosixName",
+          "type": "id"
+        },
+        {
+          "name": "addToUndo",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUndoableNameFieldString:": {
+      "name": "_setUndoableNameFieldString:",
+      "bridgedName": "_setUndoableNameFieldString",
+      "args": [
+        {
+          "name": "_setUndoableNameFieldString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nameFieldContentsAsPosixName": {
+      "name": "_nameFieldContentsAsPosixName",
+      "bridgedName": "_nameFieldContentsAsPosixName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setHiddenExtension:": {
+      "name": "_setHiddenExtension:",
+      "bridgedName": "_setHiddenExtension",
+      "args": [
+        {
+          "name": "_setHiddenExtension",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hiddenExtension": {
+      "name": "_hiddenExtension",
+      "bridgedName": "_hiddenExtension",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setValidatedPosixName:": {
+      "name": "_setValidatedPosixName:",
+      "bridgedName": "_setValidatedPosixName",
+      "args": [
+        {
+          "name": "_setValidatedPosixName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validatedPosixName": {
+      "name": "_validatedPosixName",
+      "bridgedName": "_validatedPosixName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLs": {
+      "name": "URLs",
+      "bridgedName": "URLs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_securityScopedURLs": {
+      "name": "_securityScopedURLs",
+      "bridgedName": "_securityScopedURLs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sandboxExtensions": {
+      "name": "_sandboxExtensions",
+      "bridgedName": "_sandboxExtensions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSandboxExtensions:": {
+      "name": "_setSandboxExtensions:",
+      "bridgedName": "_setSandboxExtensions",
+      "args": [
+        {
+          "name": "_setSandboxExtensions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sandboxPermissions": {
+      "name": "_sandboxPermissions",
+      "bridgedName": "_sandboxPermissions",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSandboxPermissions:": {
+      "name": "_setSandboxPermissions:",
+      "bridgedName": "_setSandboxPermissions",
+      "args": [
+        {
+          "name": "_setSandboxPermissions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_securityScopedURL": {
+      "name": "_securityScopedURL",
+      "bridgedName": "_securityScopedURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filename": {
+      "name": "filename",
+      "bridgedName": "filename",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleNameFieldContentsChanged:": {
+      "name": "_handleNameFieldContentsChanged:",
+      "bridgedName": "_handleNameFieldContentsChanged",
+      "args": [
+        {
+          "name": "_handleNameFieldContentsChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateNameFieldContentsFromHideExtensionButtonState": {
+      "name": "_updateNameFieldContentsFromHideExtensionButtonState",
+      "bridgedName": "_updateNameFieldContentsFromHideExtensionButtonState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateHideExtensionButtonStateFromNameFieldContents": {
+      "name": "_updateHideExtensionButtonStateFromNameFieldContents",
+      "bridgedName": "_updateHideExtensionButtonStateFromNameFieldContents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateAccessibilityLabelOfExpansionButton": {
+      "name": "_updateAccessibilityLabelOfExpansionButton",
+      "bridgedName": "_updateAccessibilityLabelOfExpansionButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateExpansionButtonEnabledState": {
+      "name": "_updateExpansionButtonEnabledState",
+      "bridgedName": "_updateExpansionButtonEnabledState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateNewFolderButtonEnabledState": {
+      "name": "_updateNewFolderButtonEnabledState",
+      "bridgedName": "_updateNewFolderButtonEnabledState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateNewDocumentButtonEnabledState": {
+      "name": "_updateNewDocumentButtonEnabledState",
+      "bridgedName": "_updateNewDocumentButtonEnabledState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getNewFolderOrDocumentButtonOrNil": {
+      "name": "_getNewFolderOrDocumentButtonOrNil",
+      "bridgedName": "_getNewFolderOrDocumentButtonOrNil",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateRevertOriginalDocumentChangesButtonState": {
+      "name": "_updateRevertOriginalDocumentChangesButtonState",
+      "bridgedName": "_updateRevertOriginalDocumentChangesButtonState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateOptionsButtonState": {
+      "name": "_updateOptionsButtonState",
+      "bridgedName": "_updateOptionsButtonState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSpaceBetweenExtensionCheckAndNewButton": {
+      "name": "_updateSpaceBetweenExtensionCheckAndNewButton",
+      "bridgedName": "_updateSpaceBetweenExtensionCheckAndNewButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rootDirectoryURLDefault": {
+      "name": "_rootDirectoryURLDefault",
+      "bridgedName": "_rootDirectoryURLDefault",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_directoryURLDefault": {
+      "name": "_directoryURLDefault",
+      "bridgedName": "_directoryURLDefault",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultDocumentsDirectoryURL": {
+      "name": "_defaultDocumentsDirectoryURL",
+      "bridgedName": "_defaultDocumentsDirectoryURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeRootDirectory": {
+      "name": "_storeRootDirectory",
+      "bridgedName": "_storeRootDirectory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_storeCurrentDirectory": {
+      "name": "_storeCurrentDirectory",
+      "bridgedName": "_storeCurrentDirectory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lastSavedRootDirectoryFromDefaults": {
+      "name": "_lastSavedRootDirectoryFromDefaults",
+      "bridgedName": "_lastSavedRootDirectoryFromDefaults",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lastSavedDirectoryFromDefaults": {
+      "name": "_lastSavedDirectoryFromDefaults",
+      "bridgedName": "_lastSavedDirectoryFromDefaults",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_customizedPrefKey:": {
+      "name": "_customizedPrefKey:",
+      "bridgedName": "_customizedPrefKey",
+      "args": [
+        {
+          "name": "_customizedPrefKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateOkButtonEnabledState": {
+      "name": "_updateOkButtonEnabledState",
+      "bridgedName": "_updateOkButtonEnabledState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldEnableShareButton": {
+      "name": "_shouldEnableShareButton",
+      "bridgedName": "_shouldEnableShareButton",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleGoIntoSelectedDirectory": {
+      "name": "_handleGoIntoSelectedDirectory",
+      "bridgedName": "_handleGoIntoSelectedDirectory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canGoIntoSelectedDirectory": {
+      "name": "_canGoIntoSelectedDirectory",
+      "bridgedName": "_canGoIntoSelectedDirectory",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initPanelCommon": {
+      "name": "_initPanelCommon",
+      "bridgedName": "_initPanelCommon",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreDefaultSettingsForOpenMode": {
+      "name": "_restoreDefaultSettingsForOpenMode",
+      "bridgedName": "_restoreDefaultSettingsForOpenMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreDefaultSettingsForSaveMode": {
+      "name": "_restoreDefaultSettingsForSaveMode",
+      "bridgedName": "_restoreDefaultSettingsForSaveMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreDefaultSettingsCommon": {
+      "name": "_restoreDefaultSettingsCommon",
+      "bridgedName": "_restoreDefaultSettingsCommon",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orderRemoteWindow:sender:": {
+      "name": "_orderRemoteWindow:sender:",
+      "bridgedName": "_orderRemoteWindow_sender",
+      "args": [
+        {
+          "name": "_orderRemoteWindow",
+          "type": "long long"
+        },
+        {
+          "name": "sender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderOut:": {
+      "name": "orderOut:",
+      "bridgedName": "orderOut",
+      "args": [
+        {
+          "name": "orderOut",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navViewWindowOrderedOut": {
+      "name": "_navViewWindowOrderedOut",
+      "bridgedName": "_navViewWindowOrderedOut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navViewWindowOrderedIn": {
+      "name": "_navViewWindowOrderedIn",
+      "bridgedName": "_navViewWindowOrderedIn",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBecomeMainWindow": {
+      "name": "canBecomeMainWindow",
+      "bridgedName": "canBecomeMainWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newFolderControllerClass": {
+      "name": "newFolderControllerClass",
+      "bridgedName": "newFolderControllerClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectFirstKeyView": {
+      "name": "_selectFirstKeyView",
+      "bridgedName": "_selectFirstKeyView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isTitleHidden": {
+      "name": "_isTitleHidden",
+      "bridgedName": "_isTitleHidden",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentRect:styleMask:backing:defer:": {
+      "name": "initWithContentRect:styleMask:backing:defer:",
+      "bridgedName": "initWithContentRect_styleMask_backing_defer",
+      "args": [
+        {
+          "name": "initWithContentRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "styleMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "backing",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "defer",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithOptions:": {
+      "name": "initWithOptions:",
+      "bridgedName": "initWithOptions",
+      "args": [
+        {
+          "name": "initWithOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldUseTexturedAppearanceForSegmentedCellInView:": {
+      "name": "_shouldUseTexturedAppearanceForSegmentedCellInView:",
+      "bridgedName": "_shouldUseTexturedAppearanceForSegmentedCellInView",
+      "args": [
+        {
+          "name": "_shouldUseTexturedAppearanceForSegmentedCellInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startRectForSheet:": {
+      "name": "startRectForSheet:",
+      "bridgedName": "startRectForSheet",
+      "args": [
+        {
+          "name": "startRectForSheet",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startRectForSheetHeightOffset": {
+      "name": "_startRectForSheetHeightOffset",
+      "bridgedName": "_startRectForSheetHeightOffset",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navView": {
+      "name": "_navView",
+      "bridgedName": "_navView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initializeiCloudOpenPanelBehavior": {
+      "name": "_initializeiCloudOpenPanelBehavior",
+      "bridgedName": "_initializeiCloudOpenPanelBehavior",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "panel": {
+      "name": "panel",
+      "bridgedName": "panel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_iCloudOpenPanel": {
+      "name": "_iCloudOpenPanel",
+      "bridgedName": "_iCloudOpenPanel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_init_iCloudOpenPanel:": {
+      "name": "_init_iCloudOpenPanel:",
+      "bridgedName": "_init_iCloudOpenPanel",
+      "args": [
+        {
+          "name": "_init_iCloudOpenPanel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initAppCentric:": {
+      "name": "_initAppCentric:",
+      "bridgedName": "_initAppCentric",
+      "args": [
+        {
+          "name": "_initAppCentric",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initSaveMode": {
+      "name": "_initSaveMode",
+      "bridgedName": "_initSaveMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "warmUpPowerbox": {
+      "name": "warmUpPowerbox",
+      "bridgedName": "warmUpPowerbox",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRunningAsASheet:": {
+      "name": "_setRunningAsASheet:",
+      "bridgedName": "_setRunningAsASheet",
+      "args": [
+        {
+          "name": "_setRunningAsASheet",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_runningAsASheet": {
+      "name": "_runningAsASheet",
+      "bridgedName": "_runningAsASheet",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_runningAsAService": {
+      "name": "_runningAsAService",
+      "bridgedName": "_runningAsAService",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRunningAsAService:": {
+      "name": "_setRunningAsAService:",
+      "bridgedName": "_setRunningAsAService",
+      "args": [
+        {
+          "name": "_setRunningAsAService",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrame:display:": {
+      "name": "setFrame:display:",
+      "bridgedName": "setFrame_display",
+      "args": [
+        {
+          "name": "setFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "display",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemFromButton:withIdentifier:alsoBindHidden:": {
+      "name": "_itemFromButton:withIdentifier:alsoBindHidden:",
+      "bridgedName": "_itemFromButton_withIdentifier_alsoBindHidden",
+      "args": [
+        {
+          "name": "_itemFromButton",
+          "type": "id"
+        },
+        {
+          "name": "withIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "alsoBindHidden",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemFromButton:withIdentifier:": {
+      "name": "_itemFromButton:withIdentifier:",
+      "bridgedName": "_itemFromButton_withIdentifier",
+      "args": [
+        {
+          "name": "_itemFromButton",
+          "type": "id"
+        },
+        {
+          "name": "withIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBar:makeItemForIdentifier:": {
+      "name": "touchBar:makeItemForIdentifier:",
+      "bridgedName": "touchBar_makeItemForIdentifier",
+      "args": [
+        {
+          "name": "touchBar",
+          "type": "id"
+        },
+        {
+          "name": "makeItemForIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeBaseTouchBarWithIdentifier:": {
+      "name": "_makeBaseTouchBarWithIdentifier:",
+      "bridgedName": "_makeBaseTouchBarWithIdentifier",
+      "args": [
+        {
+          "name": "_makeBaseTouchBarWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForDirectory:file:relativeToWindow:": {
+      "name": "runModalForDirectory:file:relativeToWindow:",
+      "bridgedName": "runModalForDirectory_file_relativeToWindow",
+      "args": [
+        {
+          "name": "runModalForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "relativeToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForDirectory:file:types:relativeToWindow:": {
+      "name": "runModalForDirectory:file:types:relativeToWindow:",
+      "bridgedName": "runModalForDirectory_file_types_relativeToWindow",
+      "args": [
+        {
+          "name": "runModalForDirectory",
+          "type": "id"
+        },
+        {
+          "name": "file",
+          "type": "id"
+        },
+        {
+          "name": "types",
+          "type": "id"
+        },
+        {
+          "name": "relativeToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIncludeNewFolderButton:": {
+      "name": "_setIncludeNewFolderButton:",
+      "bridgedName": "_setIncludeNewFolderButton",
+      "args": [
+        {
+          "name": "_setIncludeNewFolderButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_centerOnScreen": {
+      "name": "_centerOnScreen",
+      "bridgedName": "_centerOnScreen",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize:accessoryViewHeight:documentWindow:navViewMinSize:": {
+      "name": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize:accessoryViewHeight:documentWindow:navViewMinSize:",
+      "bridgedName": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize_accessoryViewHeight_documentWindow_navViewMinSize",
+      "args": [
+        {
+          "name": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize",
+          "type": "BOOL"
+        },
+        {
+          "name": "accessoryViewHeight",
+          "type": "double"
+        },
+        {
+          "name": "documentWindow",
+          "type": "id"
+        },
+        {
+          "name": "navViewMinSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize:": {
+      "name": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize:",
+      "bridgedName": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize",
+      "args": [
+        {
+          "name": "_layoutViewsVerticallyAndResizeWindowToLastExpandedSize",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutViewsVerticallyAndResize": {
+      "name": "_layoutViewsVerticallyAndResize",
+      "bridgedName": "_layoutViewsVerticallyAndResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canSendSynchronousMessagesToRemote": {
+      "name": "_canSendSynchronousMessagesToRemote",
+      "bridgedName": "_canSendSynchronousMessagesToRemote",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCanSendSynchronousMessagesToRemote:": {
+      "name": "_setCanSendSynchronousMessagesToRemote:",
+      "bridgedName": "_setCanSendSynchronousMessagesToRemote",
+      "args": [
+        {
+          "name": "_setCanSendSynchronousMessagesToRemote",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessoryViewContainerContentFrameDidChange:": {
+      "name": "accessoryViewContainerContentFrameDidChange:",
+      "bridgedName": "accessoryViewContainerContentFrameDidChange",
+      "args": [
+        {
+          "name": "accessoryViewContainerContentFrameDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visibleFrameAvailableForPanelWithDocumentWindow:": {
+      "name": "_visibleFrameAvailableForPanelWithDocumentWindow:",
+      "bridgedName": "_visibleFrameAvailableForPanelWithDocumentWindow",
+      "args": [
+        {
+          "name": "_visibleFrameAvailableForPanelWithDocumentWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visibleFrameAvailableForScreen": {
+      "name": "_visibleFrameAvailableForScreen",
+      "bridgedName": "_visibleFrameAvailableForScreen",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visibleFrameAvailableForScreenOfWindow:": {
+      "name": "_visibleFrameAvailableForScreenOfWindow:",
+      "bridgedName": "_visibleFrameAvailableForScreenOfWindow",
+      "args": [
+        {
+          "name": "_visibleFrameAvailableForScreenOfWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentWindowFrameForPanelRunningAsASheet:": {
+      "name": "_documentWindowFrameForPanelRunningAsASheet:",
+      "bridgedName": "_documentWindowFrameForPanelRunningAsASheet",
+      "args": [
+        {
+          "name": "_documentWindowFrameForPanelRunningAsASheet",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixFetchExpandedFrameSizeForVisibleFrameWithDocumentWindow:navViewMinSize:visibleFrameAvailable:": {
+      "name": "_fixFetchExpandedFrameSizeForVisibleFrameWithDocumentWindow:navViewMinSize:visibleFrameAvailable:",
+      "bridgedName": "_fixFetchExpandedFrameSizeForVisibleFrameWithDocumentWindow_navViewMinSize_visibleFrameAvailable",
+      "args": [
+        {
+          "name": "_fixFetchExpandedFrameSizeForVisibleFrameWithDocumentWindow",
+          "type": "id"
+        },
+        {
+          "name": "navViewMinSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "visibleFrameAvailable",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixupKeyboardLoop": {
+      "name": "_fixupKeyboardLoop",
+      "bridgedName": "_fixupKeyboardLoop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureBottomControls": {
+      "name": "_configureBottomControls",
+      "bridgedName": "_configureBottomControls",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appCentricSidebarWidth": {
+      "name": "_appCentricSidebarWidth",
+      "bridgedName": "_appCentricSidebarWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureExtraControls": {
+      "name": "_configureExtraControls",
+      "bridgedName": "_configureExtraControls",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureDirectoryPopup": {
+      "name": "_configureDirectoryPopup",
+      "bridgedName": "_configureDirectoryPopup",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureSavePane": {
+      "name": "_configureSavePane",
+      "bridgedName": "_configureSavePane",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_actuallyDiscloseAccessoryView:": {
+      "name": "_actuallyDiscloseAccessoryView:",
+      "bridgedName": "_actuallyDiscloseAccessoryView",
+      "args": [
+        {
+          "name": "_actuallyDiscloseAccessoryView",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureAlertContentView": {
+      "name": "_configureAlertContentView",
+      "bridgedName": "_configureAlertContentView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_configureMessageView": {
+      "name": "_configureMessageView",
+      "bridgedName": "_configureMessageView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_messageContainer": {
+      "name": "_messageContainer",
+      "bridgedName": "_messageContainer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initContentView": {
+      "name": "_initContentView",
+      "bridgedName": "_initContentView",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupFileBrowserView": {
+      "name": "_setupFileBrowserView",
+      "bridgedName": "_setupFileBrowserView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContentView:": {
+      "name": "setContentView:",
+      "bridgedName": "setContentView",
+      "args": [
+        {
+          "name": "setContentView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveFrameUsingName:": {
+      "name": "saveFrameUsingName:",
+      "bridgedName": "saveFrameUsingName",
+      "args": [
+        {
+          "name": "saveFrameUsingName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titlebarAuxiliaryHeight": {
+      "name": "_titlebarAuxiliaryHeight",
+      "bridgedName": "_titlebarAuxiliaryHeight",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMinSize:": {
+      "name": "setMinSize:",
+      "bridgedName": "setMinSize",
+      "args": [
+        {
+          "name": "setMinSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsDescriptionAttributeSettable": {
+      "name": "accessibilityIsDescriptionAttributeSettable",
+      "bridgedName": "accessibilityIsDescriptionAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDescriptionAttribute": {
+      "name": "accessibilityDescriptionAttribute",
+      "bridgedName": "accessibilityDescriptionAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeFileBrowserView": {
+      "name": "_makeFileBrowserView",
+      "bridgedName": "_makeFileBrowserView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeFinderKitBasedFileBrowser": {
+      "name": "_makeFinderKitBasedFileBrowser",
+      "bridgedName": "_makeFinderKitBasedFileBrowser",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unregisterKey:withViewBridgeService:onBridge:shouldRemoveObserversFromBridge:shouldRemoveObserversFromPanel:": {
+      "name": "_unregisterKey:withViewBridgeService:onBridge:shouldRemoveObserversFromBridge:shouldRemoveObserversFromPanel:",
+      "bridgedName": "_unregisterKey_withViewBridgeService_onBridge_shouldRemoveObserversFromBridge_shouldRemoveObserversFromPanel",
+      "args": [
+        {
+          "name": "_unregisterKey",
+          "type": "id"
+        },
+        {
+          "name": "withViewBridgeService",
+          "type": "id"
+        },
+        {
+          "name": "onBridge",
+          "type": "id"
+        },
+        {
+          "name": "shouldRemoveObserversFromBridge",
+          "type": "BOOL"
+        },
+        {
+          "name": "shouldRemoveObserversFromPanel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerKey:withViewBridgeService:onBridge:defaultObject:owner:assertOnNULLForKeys:shouldObserveBridge:bridgeShouldObservePanel:": {
+      "name": "_registerKey:withViewBridgeService:onBridge:defaultObject:owner:assertOnNULLForKeys:shouldObserveBridge:bridgeShouldObservePanel:",
+      "bridgedName": "_registerKey_withViewBridgeService_onBridge_defaultObject_owner_assertOnNULLForKeys_shouldObserveBridge_bridgeShouldObservePanel",
+      "args": [
+        {
+          "name": "_registerKey",
+          "type": "id"
+        },
+        {
+          "name": "withViewBridgeService",
+          "type": "id"
+        },
+        {
+          "name": "onBridge",
+          "type": "id"
+        },
+        {
+          "name": "defaultObject",
+          "type": "id"
+        },
+        {
+          "name": "owner",
+          "type": "unsigned char"
+        },
+        {
+          "name": "assertOnNULLForKeys",
+          "type": "id"
+        },
+        {
+          "name": "shouldObserveBridge",
+          "type": "BOOL"
+        },
+        {
+          "name": "bridgeShouldObservePanel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueforUndefinedKey:": {
+      "name": "valueforUndefinedKey:",
+      "bridgedName": "valueforUndefinedKey",
+      "args": [
+        {
+          "name": "valueforUndefinedKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setValue:forUndefinedKey:": {
+      "name": "setValue:forUndefinedKey:",
+      "bridgedName": "setValue_forUndefinedKey",
+      "args": [
+        {
+          "name": "setValue",
+          "type": "id"
+        },
+        {
+          "name": "forUndefinedKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackObservedByVBKey:remove:": {
+      "name": "_trackObservedByVBKey:remove:",
+      "bridgedName": "_trackObservedByVBKey_remove",
+      "args": [
+        {
+          "name": "_trackObservedByVBKey",
+          "type": "id"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackObservingVBKey:remove:": {
+      "name": "_trackObservingVBKey:remove:",
+      "bridgedName": "_trackObservingVBKey_remove",
+      "args": [
+        {
+          "name": "_trackObservingVBKey",
+          "type": "id"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackRegisteredVBKey:remove:": {
+      "name": "_trackRegisteredVBKey:remove:",
+      "bridgedName": "_trackRegisteredVBKey_remove",
+      "args": [
+        {
+          "name": "_trackRegisteredVBKey",
+          "type": "id"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSupportedDelegateMethods:": {
+      "name": "_setSupportedDelegateMethods:",
+      "bridgedName": "_setSupportedDelegateMethods",
+      "args": [
+        {
+          "name": "_setSupportedDelegateMethods",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_supportedDelegateMethods": {
+      "name": "_supportedDelegateMethods",
+      "bridgedName": "_supportedDelegateMethods",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unregisterKVOWithViewBridgeService:onBridge:": {
+      "name": "_unregisterKVOWithViewBridgeService:onBridge:",
+      "bridgedName": "_unregisterKVOWithViewBridgeService_onBridge",
+      "args": [
+        {
+          "name": "_unregisterKVOWithViewBridgeService",
+          "type": "id"
+        },
+        {
+          "name": "onBridge",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerKVOWithViewBridgeService:onBridge:": {
+      "name": "_registerKVOWithViewBridgeService:onBridge:",
+      "bridgedName": "_registerKVOWithViewBridgeService_onBridge",
+      "args": [
+        {
+          "name": "_registerKVOWithViewBridgeService",
+          "type": "id"
+        },
+        {
+          "name": "onBridge",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultNSNumberBOOLObjectForKey:": {
+      "name": "defaultNSNumberBOOLObjectForKey:",
+      "bridgedName": "defaultNSNumberBOOLObjectForKey",
+      "args": [
+        {
+          "name": "defaultNSNumberBOOLObjectForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultObjectForKey:": {
+      "name": "defaultObjectForKey:",
+      "bridgedName": "defaultObjectForKey",
+      "args": [
+        {
+          "name": "defaultObjectForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "tagNames": {
+      "name": "tagNames",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "message": {
+      "name": "message",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "nameFieldStringValue": {
+      "name": "nameFieldStringValue",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "nameFieldLabel": {
+      "name": "nameFieldLabel",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "title": {
+      "name": "title",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "prompt": {
+      "name": "prompt",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "extensionHidden": {
+      "name": "extensionHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isExtensionHidden"
+      ]
+    },
+    "expanded": {
+      "name": "expanded",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isExpanded"
+      ]
+    },
+    "accessoryView": {
+      "name": "accessoryView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "allowedFileTypes": {
+      "name": "allowedFileTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "directoryURL": {
+      "name": "directoryURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "URL": {
+      "name": "URL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "_itemIdentifiers": {
+      "name": "_itemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

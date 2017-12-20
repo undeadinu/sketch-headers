@@ -1,0 +1,901 @@
+{
+  "imports": [],
+  "classes": [
+    "CALayer",
+    "NSArray",
+    "NSButton",
+    "NSDocumentRevisionsAuxiliaryWindow",
+    "NSDocumentRevisionsController",
+    "NSMapTable",
+    "NSMutableArray",
+    "NSTextField"
+  ],
+  "protocol": false,
+  "className": "NSDocumentRevisionsView",
+  "extends": "NSView",
+  "interfaces": [],
+  "methods": {
+    "_remoteViewClass": {
+      "name": "_remoteViewClass",
+      "bridgedName": "_remoteViewClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "accessibilityChildrenAttribute": {
+      "name": "accessibilityChildrenAttribute",
+      "bridgedName": "accessibilityChildrenAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateControls": {
+      "name": "updateControls",
+      "bridgedName": "updateControls",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDelayWindowOrderingForEvent:": {
+      "name": "shouldDelayWindowOrderingForEvent:",
+      "bridgedName": "shouldDelayWindowOrderingForEvent",
+      "args": [
+        {
+          "name": "shouldDelayWindowOrderingForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldUnfocusWindowWithMouseDownAtWindowPoint:": {
+      "name": "shouldUnfocusWindowWithMouseDownAtWindowPoint:",
+      "bridgedName": "shouldUnfocusWindowWithMouseDownAtWindowPoint",
+      "args": [
+        {
+          "name": "shouldUnfocusWindowWithMouseDownAtWindowPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_controlsEnabled": {
+      "name": "_controlsEnabled",
+      "bridgedName": "_controlsEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleInsertionOfStackItems:atIndexes:": {
+      "name": "_handleInsertionOfStackItems:atIndexes:",
+      "bridgedName": "_handleInsertionOfStackItems_atIndexes",
+      "args": [
+        {
+          "name": "_handleInsertionOfStackItems",
+          "type": "id"
+        },
+        {
+          "name": "atIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleRemovalOfStackItemsAtIndexes:": {
+      "name": "_handleRemovalOfStackItemsAtIndexes:",
+      "bridgedName": "_handleRemovalOfStackItemsAtIndexes",
+      "args": [
+        {
+          "name": "_handleRemovalOfStackItemsAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationToIndexCompleted:": {
+      "name": "_animationToIndexCompleted:",
+      "bridgedName": "_animationToIndexCompleted",
+      "args": [
+        {
+          "name": "_animationToIndexCompleted",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_goToRevisionWithIdentifier:": {
+      "name": "_goToRevisionWithIdentifier:",
+      "bridgedName": "_goToRevisionWithIdentifier",
+      "args": [
+        {
+          "name": "_goToRevisionWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "goToStackItemAtIndex:thenContinue:": {
+      "name": "goToStackItemAtIndex:thenContinue:",
+      "bridgedName": "goToStackItemAtIndex_thenContinue",
+      "args": [
+        {
+          "name": "goToStackItemAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_goToStackItemAtIndex:continuingPreviousAnimation:thenContinue:": {
+      "name": "_goToStackItemAtIndex:continuingPreviousAnimation:thenContinue:",
+      "bridgedName": "_goToStackItemAtIndex_continuingPreviousAnimation_thenContinue",
+      "args": [
+        {
+          "name": "_goToStackItemAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "continuingPreviousAnimation",
+          "type": "BOOL"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_perStepAnimationDurationForDistance:": {
+      "name": "_perStepAnimationDurationForDistance:",
+      "bridgedName": "_perStepAnimationDurationForDistance",
+      "args": [
+        {
+          "name": "_perStepAnimationDurationForDistance",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transitionAnimationCompleted": {
+      "name": "transitionAnimationCompleted",
+      "bridgedName": "transitionAnimationCompleted",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performTransitionAnimation": {
+      "name": "performTransitionAnimation",
+      "bridgedName": "performTransitionAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelRevertAnimation": {
+      "name": "cancelRevertAnimation",
+      "bridgedName": "cancelRevertAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetTransitoryState": {
+      "name": "_resetTransitoryState",
+      "bridgedName": "_resetTransitoryState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForFinishAnimationWithOutcome:": {
+      "name": "prepareForFinishAnimationWithOutcome:",
+      "bridgedName": "prepareForFinishAnimationWithOutcome",
+      "args": [
+        {
+          "name": "prepareForFinishAnimationWithOutcome",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForStartAnimation": {
+      "name": "prepareForStartAnimation",
+      "bridgedName": "prepareForStartAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareRevisionLayers": {
+      "name": "_prepareRevisionLayers",
+      "bridgedName": "_prepareRevisionLayers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFullScreenShot:": {
+      "name": "setFullScreenShot:",
+      "bridgedName": "setFullScreenShot",
+      "args": [
+        {
+          "name": "setFullScreenShot",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupFullScreenShot": {
+      "name": "_setupFullScreenShot",
+      "bridgedName": "_setupFullScreenShot",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commitTransitoryAnimations": {
+      "name": "_commitTransitoryAnimations",
+      "bridgedName": "_commitTransitoryAnimations",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideTransitoryLayers": {
+      "name": "hideTransitoryLayers",
+      "bridgedName": "hideTransitoryLayers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showTransitoryLayers": {
+      "name": "showTransitoryLayers",
+      "bridgedName": "showTransitoryLayers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_whenRevisionUpdatesAreAllowedDo:": {
+      "name": "_whenRevisionUpdatesAreAllowedDo:",
+      "bridgedName": "_whenRevisionUpdatesAreAllowedDo",
+      "args": [
+        {
+          "name": "_whenRevisionUpdatesAreAllowedDo",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationDidEnd": {
+      "name": "_animationDidEnd",
+      "bridgedName": "_animationDidEnd",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationWillStart": {
+      "name": "_animationWillStart",
+      "bridgedName": "_animationWillStart",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unfocusedFrameForOriginalDocumentWindow:state:": {
+      "name": "_unfocusedFrameForOriginalDocumentWindow:state:",
+      "bridgedName": "_unfocusedFrameForOriginalDocumentWindow_state",
+      "args": [
+        {
+          "name": "_unfocusedFrameForOriginalDocumentWindow",
+          "type": "BOOL"
+        },
+        {
+          "name": "state",
+          "type": "int"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layoutWithOriginalDocumentWindow:originalVisibleFrame:": {
+      "name": "layoutWithOriginalDocumentWindow:originalVisibleFrame:",
+      "bridgedName": "layoutWithOriginalDocumentWindow_originalVisibleFrame",
+      "args": [
+        {
+          "name": "layoutWithOriginalDocumentWindow",
+          "type": "id"
+        },
+        {
+          "name": "originalVisibleFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateControlsForWindowFocusState:": {
+      "name": "_animateControlsForWindowFocusState:",
+      "bridgedName": "_animateControlsForWindowFocusState",
+      "args": [
+        {
+          "name": "_animateControlsForWindowFocusState",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutUI": {
+      "name": "_layoutUI",
+      "bridgedName": "_layoutUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateLabelsForStackItem:": {
+      "name": "_updateLabelsForStackItem:",
+      "bridgedName": "_updateLabelsForStackItem",
+      "args": [
+        {
+          "name": "_updateLabelsForStackItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createUI": {
+      "name": "_createUI",
+      "bridgedName": "_createUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateReplaceButtonWithAlternate:": {
+      "name": "_updateReplaceButtonWithAlternate:",
+      "bridgedName": "_updateReplaceButtonWithAlternate",
+      "args": [
+        {
+          "name": "_updateReplaceButtonWithAlternate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeVibrantButton": {
+      "name": "_makeVibrantButton",
+      "bridgedName": "_makeVibrantButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeLabelField": {
+      "name": "_makeLabelField",
+      "bridgedName": "_makeLabelField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_takeDownTimelineWindow": {
+      "name": "_takeDownTimelineWindow",
+      "bridgedName": "_takeDownTimelineWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isTimelineHidden": {
+      "name": "_isTimelineHidden",
+      "bridgedName": "_isTimelineHidden",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scheduleTimelineTransitionAnimationForEntering:": {
+      "name": "_scheduleTimelineTransitionAnimationForEntering:",
+      "bridgedName": "_scheduleTimelineTransitionAnimationForEntering",
+      "args": [
+        {
+          "name": "_scheduleTimelineTransitionAnimationForEntering",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTimelineHidden:": {
+      "name": "_setTimelineHidden:",
+      "bridgedName": "_setTimelineHidden",
+      "args": [
+        {
+          "name": "_setTimelineHidden",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTimelineEventsEnabled:": {
+      "name": "_setTimelineEventsEnabled:",
+      "bridgedName": "_setTimelineEventsEnabled",
+      "args": [
+        {
+          "name": "_setTimelineEventsEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTimelineSelectedItemWithVersionID:": {
+      "name": "_setTimelineSelectedItemWithVersionID:",
+      "bridgedName": "_setTimelineSelectedItemWithVersionID",
+      "args": [
+        {
+          "name": "_setTimelineSelectedItemWithVersionID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTimeline": {
+      "name": "_updateTimeline",
+      "bridgedName": "_updateTimeline",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createTimelineWindow": {
+      "name": "_createTimelineWindow",
+      "bridgedName": "_createTimelineWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshSnapshotForStackItem:": {
+      "name": "refreshSnapshotForStackItem:",
+      "bridgedName": "refreshSnapshotForStackItem",
+      "args": [
+        {
+          "name": "refreshSnapshotForStackItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayWindowForCurrentStackItem": {
+      "name": "_displayWindowForCurrentStackItem",
+      "bridgedName": "_displayWindowForCurrentStackItem",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchPlaceholderToSnapshotForItem:": {
+      "name": "_switchPlaceholderToSnapshotForItem:",
+      "bridgedName": "_switchPlaceholderToSnapshotForItem",
+      "args": [
+        {
+          "name": "_switchPlaceholderToSnapshotForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replaceLiveWindowWithLayer": {
+      "name": "_replaceLiveWindowWithLayer",
+      "bridgedName": "_replaceLiveWindowWithLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replaceTopLayerWithLiveWindow": {
+      "name": "_replaceTopLayerWithLiveWindow",
+      "bridgedName": "_replaceTopLayerWithLiveWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ensureSnapshotForStackItem:forceNew:wait:": {
+      "name": "ensureSnapshotForStackItem:forceNew:wait:",
+      "bridgedName": "ensureSnapshotForStackItem_forceNew_wait",
+      "args": [
+        {
+          "name": "ensureSnapshotForStackItem",
+          "type": "id"
+        },
+        {
+          "name": "forceNew",
+          "type": "BOOL"
+        },
+        {
+          "name": "wait",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validSnapshotClosestToIndex:": {
+      "name": "_validSnapshotClosestToIndex:",
+      "bridgedName": "_validSnapshotClosestToIndex",
+      "args": [
+        {
+          "name": "_validSnapshotClosestToIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "spreadSnapshotOfStackItem:": {
+      "name": "spreadSnapshotOfStackItem:",
+      "bridgedName": "spreadSnapshotOfStackItem",
+      "args": [
+        {
+          "name": "spreadSnapshotOfStackItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateLayerAtIndex:fromPosition:toPosition:duration:completionHandler:": {
+      "name": "_animateLayerAtIndex:fromPosition:toPosition:duration:completionHandler:",
+      "bridgedName": "_animateLayerAtIndex_fromPosition_toPosition_duration_completionHandler",
+      "args": [
+        {
+          "name": "_animateLayerAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromPosition",
+          "type": "long long"
+        },
+        {
+          "name": "toPosition",
+          "type": "long long"
+        },
+        {
+          "name": "duration",
+          "type": "double"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commitAnimation:toLayer:": {
+      "name": "_commitAnimation:toLayer:",
+      "bridgedName": "_commitAnimation_toLayer",
+      "args": [
+        {
+          "name": "_commitAnimation",
+          "type": "id"
+        },
+        {
+          "name": "toLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_computeRevisionLayerFrames": {
+      "name": "_computeRevisionLayerFrames",
+      "bridgedName": "_computeRevisionLayerFrames",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calculateLayerBoundsWithBaseBounds:": {
+      "name": "_calculateLayerBoundsWithBaseBounds:",
+      "bridgedName": "_calculateLayerBoundsWithBaseBounds",
+      "args": [
+        {
+          "name": "_calculateLayerBoundsWithBaseBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calculateLayerBoundsAtZ:withBaseBounds:": {
+      "name": "_calculateLayerBoundsAtZ:withBaseBounds:",
+      "bridgedName": "_calculateLayerBoundsAtZ_withBaseBounds",
+      "args": [
+        {
+          "name": "_calculateLayerBoundsAtZ",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "withBaseBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stackOffsetAtZ:": {
+      "name": "_stackOffsetAtZ:",
+      "bridgedName": "_stackOffsetAtZ",
+      "args": [
+        {
+          "name": "_stackOffsetAtZ",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationParametersFromIndex:toIndex:": {
+      "name": "_animationParametersFromIndex:toIndex:",
+      "bridgedName": "_animationParametersFromIndex_toIndex",
+      "args": [
+        {
+          "name": "_animationParametersFromIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animationParametersAtIndex:": {
+      "name": "_animationParametersAtIndex:",
+      "bridgedName": "_animationParametersAtIndex",
+      "args": [
+        {
+          "name": "_animationParametersAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shadingFilterColorForLayerAtIndex:": {
+      "name": "_shadingFilterColorForLayerAtIndex:",
+      "bridgedName": "_shadingFilterColorForLayerAtIndex",
+      "args": [
+        {
+          "name": "_shadingFilterColorForLayerAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_backgroundOpacityForLayerAtIndex:": {
+      "name": "_backgroundOpacityForLayerAtIndex:",
+      "bridgedName": "_backgroundOpacityForLayerAtIndex",
+      "args": [
+        {
+          "name": "_backgroundOpacityForLayerAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alphaValueAtIndex:": {
+      "name": "_alphaValueAtIndex:",
+      "bridgedName": "_alphaValueAtIndex",
+      "args": [
+        {
+          "name": "_alphaValueAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layerBoundsAtPosition:": {
+      "name": "_layerBoundsAtPosition:",
+      "bridgedName": "_layerBoundsAtPosition",
+      "args": [
+        {
+          "name": "_layerBoundsAtPosition",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithController:": {
+      "name": "initWithController:",
+      "bridgedName": "initWithController",
+      "args": [
+        {
+          "name": "initWithController",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_CAViewFlags": {
+      "name": "_CAViewFlags",
+      "bridgedName": "_CAViewFlags",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "stackView": {
+      "name": "stackView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "focusedRevisionFrame": {
+      "name": "focusedRevisionFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "focusedOriginalFrame": {
+      "name": "focusedOriginalFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "fullTwoUpLayout": {
+      "name": "fullTwoUpLayout",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "originalFrame": {
+      "name": "originalFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "revisionFrame": {
+      "name": "revisionFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

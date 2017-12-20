@@ -1,0 +1,540 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSPasteboardLayers",
+    "NSMutableArray",
+    "NSMutableDictionary"
+  ],
+  "protocol": false,
+  "className": "MSLayerPaster",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "parentForData:hint:page:": {
+      "name": "parentForData:hint:page:",
+      "bridgedName": "parentForData_hint_page",
+      "args": [
+        {
+          "name": "parentForData",
+          "type": "id"
+        },
+        {
+          "name": "hint",
+          "type": "id"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "parentForData:hint:page:viewPort:": {
+      "name": "parentForData:hint:page:viewPort:",
+      "bridgedName": "parentForData_hint_page_viewPort",
+      "args": [
+        {
+          "name": "parentForData",
+          "type": "id"
+        },
+        {
+          "name": "hint",
+          "type": "id"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        },
+        {
+          "name": "viewPort",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "insertPasteboardData:intoParent:atPosition:afterLayer:": {
+      "name": "insertPasteboardData:intoParent:atPosition:afterLayer:",
+      "bridgedName": "insertPasteboardData_intoParent_atPosition_afterLayer",
+      "args": [
+        {
+          "name": "insertPasteboardData",
+          "type": "id"
+        },
+        {
+          "name": "intoParent",
+          "type": "id"
+        },
+        {
+          "name": "atPosition",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "afterLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "insertPasteboardData:onPage:withHint:viewPort:": {
+      "name": "insertPasteboardData:onPage:withHint:viewPort:",
+      "bridgedName": "insertPasteboardData_onPage_withHint_viewPort",
+      "args": [
+        {
+          "name": "insertPasteboardData",
+          "type": "id"
+        },
+        {
+          "name": "onPage",
+          "type": "id"
+        },
+        {
+          "name": "withHint",
+          "type": "id"
+        },
+        {
+          "name": "viewPort",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertiesAreEqualBetweenSymbol:andSymbol:": {
+      "name": "propertiesAreEqualBetweenSymbol:andSymbol:",
+      "bridgedName": "propertiesAreEqualBetweenSymbol_andSymbol",
+      "args": [
+        {
+          "name": "propertiesAreEqualBetweenSymbol",
+          "type": "id"
+        },
+        {
+          "name": "andSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignSymbolsInOocument:": {
+      "name": "addForeignSymbolsInOocument:",
+      "bridgedName": "addForeignSymbolsInOocument",
+      "args": [
+        {
+          "name": "addForeignSymbolsInOocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchingForeignSymbol:inDocument:": {
+      "name": "matchingForeignSymbol:inDocument:",
+      "bridgedName": "matchingForeignSymbol_inDocument",
+      "args": [
+        {
+          "name": "matchingForeignSymbol",
+          "type": "id"
+        },
+        {
+          "name": "inDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteSymbol:fromInstanceReferenceToDocument:": {
+      "name": "pasteSymbol:fromInstanceReferenceToDocument:",
+      "bridgedName": "pasteSymbol_fromInstanceReferenceToDocument",
+      "args": [
+        {
+          "name": "pasteSymbol",
+          "type": "id"
+        },
+        {
+          "name": "fromInstanceReferenceToDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSymbolMastersInDocument:": {
+      "name": "addSymbolMastersInDocument:",
+      "bridgedName": "addSymbolMastersInDocument",
+      "args": [
+        {
+          "name": "addSymbolMastersInDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateOverrides": {
+      "name": "updateOverrides",
+      "bridgedName": "updateOverrides",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ensureSymbolMastersIn:haveUniqueIDInDocument:": {
+      "name": "ensureSymbolMastersIn:haveUniqueIDInDocument:",
+      "bridgedName": "ensureSymbolMastersIn_haveUniqueIDInDocument",
+      "args": [
+        {
+          "name": "ensureSymbolMastersIn",
+          "type": "id"
+        },
+        {
+          "name": "haveUniqueIDInDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSharedObjectsInDocument:": {
+      "name": "addSharedObjectsInDocument:",
+      "bridgedName": "addSharedObjectsInDocument",
+      "args": [
+        {
+          "name": "addSharedObjectsInDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightmostArtboardOnPage:intersectingRect:": {
+      "name": "rightmostArtboardOnPage:intersectingRect:",
+      "bridgedName": "rightmostArtboardOnPage_intersectingRect",
+      "args": [
+        {
+          "name": "rightmostArtboardOnPage",
+          "type": "id"
+        },
+        {
+          "name": "intersectingRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "findFirstAvailablePositionForSize:nextToArtboardsOnPage:inAllowedRect:": {
+      "name": "findFirstAvailablePositionForSize:nextToArtboardsOnPage:inAllowedRect:",
+      "bridgedName": "findFirstAvailablePositionForSize_nextToArtboardsOnPage_inAllowedRect",
+      "args": [
+        {
+          "name": "findFirstAvailablePositionForSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "nextToArtboardsOnPage",
+          "type": "id"
+        },
+        {
+          "name": "inAllowedRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wouldArtboardWithRect:intersectOtherArtboardsOnPage:": {
+      "name": "wouldArtboardWithRect:intersectOtherArtboardsOnPage:",
+      "bridgedName": "wouldArtboardWithRect_intersectOtherArtboardsOnPage",
+      "args": [
+        {
+          "name": "wouldArtboardWithRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "intersectOtherArtboardsOnPage",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layersFromLayersWithPathsWrapped:forParent:": {
+      "name": "layersFromLayersWithPathsWrapped:forParent:",
+      "bridgedName": "layersFromLayersWithPathsWrapped_forParent",
+      "args": [
+        {
+          "name": "layersFromLayersWithPathsWrapped",
+          "type": "id"
+        },
+        {
+          "name": "forParent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathsExtractedFromLayers:": {
+      "name": "pathsExtractedFromLayers:",
+      "bridgedName": "pathsExtractedFromLayers",
+      "args": [
+        {
+          "name": "pathsExtractedFromLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layersFromPasteboardSuitedForParent:": {
+      "name": "layersFromPasteboardSuitedForParent:",
+      "bridgedName": "layersFromPasteboardSuitedForParent",
+      "args": [
+        {
+          "name": "layersFromPasteboardSuitedForParent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCombinedOrigin:forLayers:": {
+      "name": "setCombinedOrigin:forLayers:",
+      "bridgedName": "setCombinedOrigin_forLayers",
+      "args": [
+        {
+          "name": "setCombinedOrigin",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "forLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPasteboardDataIntoParent:atPosition:afterLayer:": {
+      "name": "insertPasteboardDataIntoParent:atPosition:afterLayer:",
+      "bridgedName": "insertPasteboardDataIntoParent_atPosition_afterLayer",
+      "args": [
+        {
+          "name": "insertPasteboardDataIntoParent",
+          "type": "id"
+        },
+        {
+          "name": "atPosition",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "afterLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "centerSize:inAllowedRect:": {
+      "name": "centerSize:inAllowedRect:",
+      "bridgedName": "centerSize_inAllowedRect",
+      "args": [
+        {
+          "name": "centerSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "inAllowedRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowedRectForViewport:root:": {
+      "name": "allowedRectForViewport:root:",
+      "bridgedName": "allowedRectForViewport_root",
+      "args": [
+        {
+          "name": "allowedRectForViewport",
+          "type": "id"
+        },
+        {
+          "name": "root",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectByMaintainingOriginalPositionInRoot:": {
+      "name": "rectByMaintainingOriginalPositionInRoot:",
+      "bridgedName": "rectByMaintainingOriginalPositionInRoot",
+      "args": [
+        {
+          "name": "rectByMaintainingOriginalPositionInRoot",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetRectForPasteboardDataInViewPort:root:canMoveViewport:": {
+      "name": "targetRectForPasteboardDataInViewPort:root:canMoveViewport:",
+      "bridgedName": "targetRectForPasteboardDataInViewPort_root_canMoveViewport",
+      "args": [
+        {
+          "name": "targetRectForPasteboardDataInViewPort",
+          "type": "id"
+        },
+        {
+          "name": "root",
+          "type": "id"
+        },
+        {
+          "name": "canMoveViewport",
+          "type": "char *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentForDataWithHint:page:": {
+      "name": "parentForDataWithHint:page:",
+      "bridgedName": "parentForDataWithHint_page",
+      "args": [
+        {
+          "name": "parentForDataWithHint",
+          "type": "id"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentForDataWithHint:page:viewPort:": {
+      "name": "parentForDataWithHint:page:viewPort:",
+      "bridgedName": "parentForDataWithHint_page_viewPort",
+      "args": [
+        {
+          "name": "parentForDataWithHint",
+          "type": "id"
+        },
+        {
+          "name": "page",
+          "type": "id"
+        },
+        {
+          "name": "viewPort",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPasteboardDataOnPage:withHint:viewPort:": {
+      "name": "insertPasteboardDataOnPage:withHint:viewPort:",
+      "bridgedName": "insertPasteboardDataOnPage_withHint_viewPort",
+      "args": [
+        {
+          "name": "insertPasteboardDataOnPage",
+          "type": "id"
+        },
+        {
+          "name": "withHint",
+          "type": "id"
+        },
+        {
+          "name": "viewPort",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboardLayers:": {
+      "name": "initWithPasteboardLayers:",
+      "bridgedName": "initWithPasteboardLayers",
+      "args": [
+        {
+          "name": "initWithPasteboardLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "pasteboardLayers": {
+      "name": "pasteboardLayers",
+      "pointer": true,
+      "type": "MSPasteboardLayers",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "insertedSymbolMasters": {
+      "name": "insertedSymbolMasters",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "objectIDMap": {
+      "name": "objectIDMap",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

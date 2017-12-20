@@ -1,0 +1,926 @@
+{
+  "imports": [
+    "NSChangeSpelling.h",
+    "NSIgnoreMisspelledWords.h"
+  ],
+  "classes": [
+    "NSColor",
+    "NSFont",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSText",
+  "extends": "NSView",
+  "interfaces": [
+    "NSChangeSpelling",
+    "NSIgnoreMisspelledWords"
+  ],
+  "methods": {
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "name": "allocWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "ignoreSpelling:": {
+      "name": "ignoreSpelling:",
+      "bridgedName": "ignoreSpelling",
+      "args": [
+        {
+          "name": "ignoreSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeSpelling:": {
+      "name": "changeSpelling:",
+      "bridgedName": "changeSpelling",
+      "args": [
+        {
+          "name": "changeSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollRangeToVisible:": {
+      "name": "scrollRangeToVisible:",
+      "bridgedName": "scrollRangeToVisible",
+      "args": [
+        {
+          "name": "scrollRangeToVisible",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleRuler:": {
+      "name": "toggleRuler:",
+      "bridgedName": "toggleRuler",
+      "args": [
+        {
+          "name": "toggleRuler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkSpelling:": {
+      "name": "checkSpelling:",
+      "bridgedName": "checkSpelling",
+      "args": [
+        {
+          "name": "checkSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showGuessPanel:": {
+      "name": "showGuessPanel:",
+      "bridgedName": "showGuessPanel",
+      "args": [
+        {
+          "name": "showGuessPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unscript:": {
+      "name": "unscript:",
+      "bridgedName": "unscript",
+      "args": [
+        {
+          "name": "unscript",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "underline:": {
+      "name": "underline:",
+      "bridgedName": "underline",
+      "args": [
+        {
+          "name": "underline",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "superscript:": {
+      "name": "superscript:",
+      "bridgedName": "superscript",
+      "args": [
+        {
+          "name": "superscript",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subscript:": {
+      "name": "subscript:",
+      "bridgedName": "subscript",
+      "args": [
+        {
+          "name": "subscript",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignCenter:": {
+      "name": "alignCenter:",
+      "bridgedName": "alignCenter",
+      "args": [
+        {
+          "name": "alignCenter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignRight:": {
+      "name": "alignRight:",
+      "bridgedName": "alignRight",
+      "args": [
+        {
+          "name": "alignRight",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignLeft:": {
+      "name": "alignLeft:",
+      "bridgedName": "alignLeft",
+      "args": [
+        {
+          "name": "alignLeft",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeFont:": {
+      "name": "changeFont:",
+      "bridgedName": "changeFont",
+      "args": [
+        {
+          "name": "changeFont",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectAll:": {
+      "name": "selectAll:",
+      "bridgedName": "selectAll",
+      "args": [
+        {
+          "name": "selectAll",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteRuler:": {
+      "name": "pasteRuler:",
+      "bridgedName": "pasteRuler",
+      "args": [
+        {
+          "name": "pasteRuler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteFont:": {
+      "name": "pasteFont:",
+      "bridgedName": "pasteFont",
+      "args": [
+        {
+          "name": "pasteFont",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paste:": {
+      "name": "paste:",
+      "bridgedName": "paste",
+      "args": [
+        {
+          "name": "paste",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delete:": {
+      "name": "delete:",
+      "bridgedName": "delete",
+      "args": [
+        {
+          "name": "delete",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cut:": {
+      "name": "cut:",
+      "bridgedName": "cut",
+      "args": [
+        {
+          "name": "cut",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyRuler:": {
+      "name": "copyRuler:",
+      "bridgedName": "copyRuler",
+      "args": [
+        {
+          "name": "copyRuler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyFont:": {
+      "name": "copyFont:",
+      "bridgedName": "copyFont",
+      "args": [
+        {
+          "name": "copyFont",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy:": {
+      "name": "copy:",
+      "bridgedName": "copy",
+      "args": [
+        {
+          "name": "copy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sizeToFit": {
+      "name": "sizeToFit",
+      "bridgedName": "sizeToFit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFont:range:": {
+      "name": "setFont:range:",
+      "bridgedName": "setFont_range",
+      "args": [
+        {
+          "name": "setFont",
+          "type": "id"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextColor:range:": {
+      "name": "setTextColor:range:",
+      "bridgedName": "setTextColor_range",
+      "args": [
+        {
+          "name": "setTextColor",
+          "type": "id"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readRTFDFromFile:": {
+      "name": "readRTFDFromFile:",
+      "bridgedName": "readRTFDFromFile",
+      "args": [
+        {
+          "name": "readRTFDFromFile",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeRTFDToFile:atomically:": {
+      "name": "writeRTFDToFile:atomically:",
+      "bridgedName": "writeRTFDToFile_atomically",
+      "args": [
+        {
+          "name": "writeRTFDToFile",
+          "type": "id"
+        },
+        {
+          "name": "atomically",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceCharactersInRange:withRTFD:": {
+      "name": "replaceCharactersInRange:withRTFD:",
+      "bridgedName": "replaceCharactersInRange_withRTFD",
+      "args": [
+        {
+          "name": "replaceCharactersInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withRTFD",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceCharactersInRange:withRTF:": {
+      "name": "replaceCharactersInRange:withRTF:",
+      "bridgedName": "replaceCharactersInRange_withRTF",
+      "args": [
+        {
+          "name": "replaceCharactersInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withRTF",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "RTFDFromRange:": {
+      "name": "RTFDFromRange:",
+      "bridgedName": "RTFDFromRange",
+      "args": [
+        {
+          "name": "RTFDFromRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "RTFFromRange:": {
+      "name": "RTFFromRange:",
+      "bridgedName": "RTFFromRange",
+      "args": [
+        {
+          "name": "RTFFromRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceCharactersInRange:withString:": {
+      "name": "replaceCharactersInRange:withString:",
+      "bridgedName": "replaceCharactersInRange_withString",
+      "args": [
+        {
+          "name": "replaceCharactersInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTextLinkAtIndex:": {
+      "name": "accessibilityTextLinkAtIndex:",
+      "bridgedName": "accessibilityTextLinkAtIndex",
+      "args": [
+        {
+          "name": "accessibilityTextLinkAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTextLinks": {
+      "name": "accessibilityTextLinks",
+      "bridgedName": "accessibilityTextLinks",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttachmentAtIndex:": {
+      "name": "accessibilityAttachmentAtIndex:",
+      "bridgedName": "accessibilityAttachmentAtIndex",
+      "args": [
+        {
+          "name": "accessibilityAttachmentAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIndexForAttachment:": {
+      "name": "accessibilityIndexForAttachment:",
+      "bridgedName": "accessibilityIndexForAttachment",
+      "args": [
+        {
+          "name": "accessibilityIndexForAttachment",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttachments": {
+      "name": "accessibilityAttachments",
+      "bridgedName": "accessibilityAttachments",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedCharacterRange": {
+      "name": "accessibilitySharedCharacterRange",
+      "bridgedName": "accessibilitySharedCharacterRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedViewForIndex:": {
+      "name": "accessibilitySharedViewForIndex:",
+      "bridgedName": "accessibilitySharedViewForIndex",
+      "args": [
+        {
+          "name": "accessibilitySharedViewForIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedTextViews": {
+      "name": "accessibilitySharedTextViews",
+      "bridgedName": "accessibilitySharedTextViews",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityStyleRangeForCharacterIndex:": {
+      "name": "accessibilityStyleRangeForCharacterIndex:",
+      "bridgedName": "accessibilityStyleRangeForCharacterIndex",
+      "args": [
+        {
+          "name": "accessibilityStyleRangeForCharacterIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAXAttributedStringForCharacterRange:parent:": {
+      "name": "accessibilityAXAttributedStringForCharacterRange:parent:",
+      "bridgedName": "accessibilityAXAttributedStringForCharacterRange_parent",
+      "args": [
+        {
+          "name": "accessibilityAXAttributedStringForCharacterRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "parent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRTFForCharacterRange:": {
+      "name": "accessibilityRTFForCharacterRange:",
+      "bridgedName": "accessibilityRTFForCharacterRange",
+      "args": [
+        {
+          "name": "accessibilityRTFForCharacterRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityBoundsForCharacterRange:": {
+      "name": "accessibilityBoundsForCharacterRange:",
+      "bridgedName": "accessibilityBoundsForCharacterRange",
+      "args": [
+        {
+          "name": "accessibilityBoundsForCharacterRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCharacterRangeForPosition:": {
+      "name": "accessibilityCharacterRangeForPosition:",
+      "bridgedName": "accessibilityCharacterRangeForPosition",
+      "args": [
+        {
+          "name": "accessibilityCharacterRangeForPosition",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCharacterRangeForLineNumber:": {
+      "name": "accessibilityCharacterRangeForLineNumber:",
+      "bridgedName": "accessibilityCharacterRangeForLineNumber",
+      "args": [
+        {
+          "name": "accessibilityCharacterRangeForLineNumber",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLineNumberForCharacterIndex:": {
+      "name": "accessibilityLineNumberForCharacterIndex:",
+      "bridgedName": "accessibilityLineNumberForCharacterIndex",
+      "args": [
+        {
+          "name": "accessibilityLineNumberForCharacterIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityInsertionPointLineNumber": {
+      "name": "accessibilityInsertionPointLineNumber",
+      "bridgedName": "accessibilityInsertionPointLineNumber",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetVisibleCharacterRange:": {
+      "name": "accessibilitySetVisibleCharacterRange:",
+      "bridgedName": "accessibilitySetVisibleCharacterRange",
+      "args": [
+        {
+          "name": "accessibilitySetVisibleCharacterRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsVisibleCharacterRangeSettable": {
+      "name": "accessibilityIsVisibleCharacterRangeSettable",
+      "bridgedName": "accessibilityIsVisibleCharacterRangeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleCharacterRange": {
+      "name": "accessibilityVisibleCharacterRange",
+      "bridgedName": "accessibilityVisibleCharacterRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTextView": {
+      "name": "accessibilityTextView",
+      "bridgedName": "accessibilityTextView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetSelectedRange:": {
+      "name": "accessibilitySetSelectedRange:",
+      "bridgedName": "accessibilitySetSelectedRange",
+      "args": [
+        {
+          "name": "accessibilitySetSelectedRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsSelectedRangeSettable": {
+      "name": "accessibilityIsSelectedRangeSettable",
+      "bridgedName": "accessibilityIsSelectedRangeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedRange": {
+      "name": "accessibilitySelectedRange",
+      "bridgedName": "accessibilitySelectedRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetSelectedText:": {
+      "name": "accessibilitySetSelectedText:",
+      "bridgedName": "accessibilitySetSelectedText",
+      "args": [
+        {
+          "name": "accessibilitySetSelectedText",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsSelectedTextSettable": {
+      "name": "accessibilityIsSelectedTextSettable",
+      "bridgedName": "accessibilityIsSelectedTextSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedText": {
+      "name": "accessibilitySelectedText",
+      "bridgedName": "accessibilitySelectedText",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValueAttribute": {
+      "name": "accessibilityValueAttribute",
+      "bridgedName": "accessibilityValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPostNotification:": {
+      "name": "accessibilityPostNotification:",
+      "bridgedName": "accessibilityPostNotification",
+      "args": [
+        {
+          "name": "accessibilityPostNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPostNotification:withNotificationElement:": {
+      "name": "accessibilityPostNotification:withNotificationElement:",
+      "bridgedName": "accessibilityPostNotification_withNotificationElement",
+      "args": [
+        {
+          "name": "accessibilityPostNotification",
+          "type": "id"
+        },
+        {
+          "name": "withNotificationElement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "rulerVisible": {
+      "name": "rulerVisible",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isRulerVisible"
+      ]
+    },
+    "verticallyResizable": {
+      "name": "verticallyResizable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isVerticallyResizable"
+      ]
+    },
+    "horizontallyResizable": {
+      "name": "horizontallyResizable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isHorizontallyResizable"
+      ]
+    },
+    "fieldEditor": {
+      "name": "fieldEditor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isFieldEditor"
+      ]
+    },
+    "backgroundColor": {
+      "name": "backgroundColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textColor": {
+      "name": "textColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "font": {
+      "name": "font",
+      "pointer": true,
+      "type": "NSFont",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "richText": {
+      "name": "richText",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isRichText"
+      ]
+    },
+    "selectable": {
+      "name": "selectable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isSelectable"
+      ]
+    },
+    "editable": {
+      "name": "editable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEditable"
+      ]
+    },
+    "string": {
+      "name": "string",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

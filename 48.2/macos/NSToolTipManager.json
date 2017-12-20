@@ -1,0 +1,992 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDate",
+    "NSMapTable",
+    "NSTimer",
+    "NSToolTip",
+    "NSWindow"
+  ],
+  "protocol": false,
+  "className": "NSToolTipManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "isCurrentMouseLocationAboveWindow:": {
+      "name": "isCurrentMouseLocationAboveWindow:",
+      "bridgedName": "isCurrentMouseLocationAboveWindow",
+      "args": [
+        {
+          "name": "isCurrentMouseLocationAboveWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedToolTipManager": {
+      "name": "sharedToolTipManager",
+      "bridgedName": "sharedToolTipManager",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "orderOutOnlyExpansionToolTip": {
+      "name": "orderOutOnlyExpansionToolTip",
+      "bridgedName": "orderOutOnlyExpansionToolTip",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRegularToolTipVisible": {
+      "name": "isRegularToolTipVisible",
+      "bridgedName": "isRegularToolTipVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExpansionToolTipVisible": {
+      "name": "isExpansionToolTipVisible",
+      "bridgedName": "isExpansionToolTipVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolTipTimerFiredWithToolTip:": {
+      "name": "_toolTipTimerFiredWithToolTip:",
+      "bridgedName": "_toolTipTimerFiredWithToolTip",
+      "args": [
+        {
+          "name": "_toolTipTimerFiredWithToolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isToolTipAlive:": {
+      "name": "_isToolTipAlive:",
+      "bridgedName": "_isToolTipAlive",
+      "args": [
+        {
+          "name": "_isToolTipAlive",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEnteredToolTip:inWindow:withEvent:": {
+      "name": "mouseEnteredToolTip:inWindow:withEvent:",
+      "bridgedName": "mouseEnteredToolTip_inWindow_withEvent",
+      "args": [
+        {
+          "name": "mouseEnteredToolTip",
+          "type": "id"
+        },
+        {
+          "name": "inWindow",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_inQuickDisplayModeForWindow:": {
+      "name": "_inQuickDisplayModeForWindow:",
+      "bridgedName": "_inQuickDisplayModeForWindow",
+      "args": [
+        {
+          "name": "_inQuickDisplayModeForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "abortToolTip": {
+      "name": "abortToolTip",
+      "bridgedName": "abortToolTip",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderOutToolTipImmediately:": {
+      "name": "orderOutToolTipImmediately:",
+      "bridgedName": "orderOutToolTipImmediately",
+      "args": [
+        {
+          "name": "orderOutToolTipImmediately",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fadeToolTip:": {
+      "name": "fadeToolTip:",
+      "bridgedName": "fadeToolTip",
+      "args": [
+        {
+          "name": "fadeToolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopFadeTimer": {
+      "name": "_stopFadeTimer",
+      "bridgedName": "_stopFadeTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderOutToolTip": {
+      "name": "orderOutToolTip",
+      "bridgedName": "orderOutToolTip",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayToolTip:": {
+      "name": "displayToolTip:",
+      "bridgedName": "displayToolTip",
+      "args": [
+        {
+          "name": "displayToolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawToolTip:attributedString:inView:": {
+      "name": "drawToolTip:attributedString:inView:",
+      "bridgedName": "drawToolTip_attributedString_inView",
+      "args": [
+        {
+          "name": "drawToolTip",
+          "type": "id"
+        },
+        {
+          "name": "attributedString",
+          "type": "id"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawToolTipBackgroundInView:": {
+      "name": "_drawToolTipBackgroundInView:",
+      "bridgedName": "_drawToolTipBackgroundInView",
+      "args": [
+        {
+          "name": "_drawToolTipBackgroundInView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "installContentView:forToolTip:toolTipWindow:isNew:": {
+      "name": "installContentView:forToolTip:toolTipWindow:isNew:",
+      "bridgedName": "installContentView_forToolTip_toolTipWindow_isNew",
+      "args": [
+        {
+          "name": "installContentView",
+          "type": "id"
+        },
+        {
+          "name": "forToolTip",
+          "type": "id"
+        },
+        {
+          "name": "toolTipWindow",
+          "type": "id"
+        },
+        {
+          "name": "isNew",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "onScreenToolTipWindowFrameOriginForToolTip:windowFrame:where:location:": {
+      "name": "onScreenToolTipWindowFrameOriginForToolTip:windowFrame:where:location:",
+      "bridgedName": "onScreenToolTipWindowFrameOriginForToolTip_windowFrame_where_location",
+      "args": [
+        {
+          "name": "onScreenToolTipWindowFrameOriginForToolTip",
+          "type": "id"
+        },
+        {
+          "name": "windowFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "where",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "location",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipContentViewWithAttributedString:location:where:windowFrame:toolTip:": {
+      "name": "toolTipContentViewWithAttributedString:location:where:windowFrame:toolTip:",
+      "bridgedName": "toolTipContentViewWithAttributedString_location_where_windowFrame_toolTip",
+      "args": [
+        {
+          "name": "toolTipContentViewWithAttributedString",
+          "type": "id"
+        },
+        {
+          "name": "location",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "where",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "windowFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "toolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipAttributes": {
+      "name": "toolTipAttributes",
+      "bridgedName": "toolTipAttributes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipYOffset": {
+      "name": "toolTipYOffset",
+      "bridgedName": "toolTipYOffset",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipContentMargin": {
+      "name": "toolTipContentMargin",
+      "bridgedName": "toolTipContentMargin",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipBackgroundColor": {
+      "name": "toolTipBackgroundColor",
+      "bridgedName": "toolTipBackgroundColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipTextColor": {
+      "name": "toolTipTextColor",
+      "bridgedName": "toolTipTextColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newToolTipWindow": {
+      "name": "_newToolTipWindow",
+      "bridgedName": "_newToolTipWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopTimerIfRunningForToolTip:": {
+      "name": "_stopTimerIfRunningForToolTip:",
+      "bridgedName": "_stopTimerIfRunningForToolTip",
+      "args": [
+        {
+          "name": "_stopTimerIfRunningForToolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopTimer": {
+      "name": "stopTimer",
+      "bridgedName": "stopTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startTimer:userInfo:": {
+      "name": "startTimer:userInfo:",
+      "bridgedName": "startTimer_userInfo",
+      "args": [
+        {
+          "name": "startTimer",
+          "type": "double"
+        },
+        {
+          "name": "userInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recomputeToolTipsForView:remove:add:": {
+      "name": "recomputeToolTipsForView:remove:add:",
+      "bridgedName": "recomputeToolTipsForView_remove_add",
+      "args": [
+        {
+          "name": "recomputeToolTipsForView",
+          "type": "id"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        },
+        {
+          "name": "add",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderOutToolTipForView:": {
+      "name": "orderOutToolTipForView:",
+      "bridgedName": "orderOutToolTipForView",
+      "args": [
+        {
+          "name": "orderOutToolTipForView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidChangeGeometryInWindow:": {
+      "name": "viewDidChangeGeometryInWindow:",
+      "bridgedName": "viewDidChangeGeometryInWindow",
+      "args": [
+        {
+          "name": "viewDidChangeGeometryInWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolTipForView:cell:": {
+      "name": "toolTipForView:cell:",
+      "bridgedName": "toolTipForView_cell",
+      "args": [
+        {
+          "name": "toolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "cell",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findToolTipForView:passingTest:": {
+      "name": "_findToolTipForView:passingTest:",
+      "bridgedName": "_findToolTipForView_passingTest",
+      "args": [
+        {
+          "name": "_findToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "passingTest",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllToolTipsForView:withDisplayDelegate:": {
+      "name": "removeAllToolTipsForView:withDisplayDelegate:",
+      "bridgedName": "removeAllToolTipsForView_withDisplayDelegate",
+      "args": [
+        {
+          "name": "removeAllToolTipsForView",
+          "type": "id"
+        },
+        {
+          "name": "withDisplayDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllToolTipsForView:withOwner:": {
+      "name": "removeAllToolTipsForView:withOwner:",
+      "bridgedName": "removeAllToolTipsForView_withOwner",
+      "args": [
+        {
+          "name": "removeAllToolTipsForView",
+          "type": "id"
+        },
+        {
+          "name": "withOwner",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllToolTipsForView:": {
+      "name": "removeAllToolTipsForView:",
+      "bridgedName": "removeAllToolTipsForView",
+      "args": [
+        {
+          "name": "removeAllToolTipsForView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewHasToolTips:": {
+      "name": "viewHasToolTips:",
+      "bridgedName": "viewHasToolTips",
+      "args": [
+        {
+          "name": "viewHasToolTips",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeToolTipForView:tag:": {
+      "name": "removeToolTipForView:tag:",
+      "bridgedName": "removeToolTipForView_tag",
+      "args": [
+        {
+          "name": "removeToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "tag",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setToolTip:forView:cell:": {
+      "name": "setToolTip:forView:cell:",
+      "bridgedName": "setToolTip_forView_cell",
+      "args": [
+        {
+          "name": "setToolTip",
+          "type": "id"
+        },
+        {
+          "name": "forView",
+          "type": "id"
+        },
+        {
+          "name": "cell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setToolTipWithOwner:forView:cell:": {
+      "name": "setToolTipWithOwner:forView:cell:",
+      "bridgedName": "setToolTipWithOwner_forView_cell",
+      "args": [
+        {
+          "name": "setToolTipWithOwner",
+          "type": "id"
+        },
+        {
+          "name": "forView",
+          "type": "id"
+        },
+        {
+          "name": "cell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setToolTipForView:rect:owner:userData:": {
+      "name": "setToolTipForView:rect:owner:userData:",
+      "bridgedName": "setToolTipForView_rect_owner_userData",
+      "args": [
+        {
+          "name": "setToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "owner",
+          "type": "id"
+        },
+        {
+          "name": "userData",
+          "type": "void *"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setToolTipForView:rect:displayDelegate:displayInfo:": {
+      "name": "setToolTipForView:rect:displayDelegate:displayInfo:",
+      "bridgedName": "setToolTipForView_rect_displayDelegate_displayInfo",
+      "args": [
+        {
+          "name": "setToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "displayDelegate",
+          "type": "id"
+        },
+        {
+          "name": "displayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTrackingRectForToolTip:stopTimerIfNecessary:": {
+      "name": "_removeTrackingRectForToolTip:stopTimerIfNecessary:",
+      "bridgedName": "_removeTrackingRectForToolTip_stopTimerIfNecessary",
+      "args": [
+        {
+          "name": "_removeTrackingRectForToolTip",
+          "type": "id"
+        },
+        {
+          "name": "stopTimerIfNecessary",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTrackingRectsForView:stopTimerIfNecessary:": {
+      "name": "_removeTrackingRectsForView:stopTimerIfNecessary:",
+      "bridgedName": "_removeTrackingRectsForView_stopTimerIfNecessary",
+      "args": [
+        {
+          "name": "_removeTrackingRectsForView",
+          "type": "id"
+        },
+        {
+          "name": "stopTimerIfNecessary",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setToolTip:forView:cell:rect:owner:ownerIsDisplayDelegate:userData:": {
+      "name": "_setToolTip:forView:cell:rect:owner:ownerIsDisplayDelegate:userData:",
+      "bridgedName": "_setToolTip_forView_cell_rect_owner_ownerIsDisplayDelegate_userData",
+      "args": [
+        {
+          "name": "_setToolTip",
+          "type": "id"
+        },
+        {
+          "name": "forView",
+          "type": "id"
+        },
+        {
+          "name": "cell",
+          "type": "id"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "owner",
+          "type": "id"
+        },
+        {
+          "name": "ownerIsDisplayDelegate",
+          "type": "BOOL"
+        },
+        {
+          "name": "userData",
+          "type": "void *"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeToolTipsForView:passingTest:": {
+      "name": "_removeToolTipsForView:passingTest:",
+      "bridgedName": "_removeToolTipsForView_passingTest",
+      "args": [
+        {
+          "name": "_removeToolTipsForView",
+          "type": "id"
+        },
+        {
+          "name": "passingTest",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addTrackingRectsForView:": {
+      "name": "_addTrackingRectsForView:",
+      "bridgedName": "_addTrackingRectsForView",
+      "args": [
+        {
+          "name": "_addTrackingRectsForView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTrackingRectForToolTip:reuseExistingTrackingNum:": {
+      "name": "addTrackingRectForToolTip:reuseExistingTrackingNum:",
+      "bridgedName": "addTrackingRectForToolTip_reuseExistingTrackingNum",
+      "args": [
+        {
+          "name": "addTrackingRectForToolTip",
+          "type": "id"
+        },
+        {
+          "name": "reuseExistingTrackingNum",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addTrackingRect:andStartToolTipIfNecessary:view:owner:toolTip:reuseExistingTrackingNum:": {
+      "name": "_addTrackingRect:andStartToolTipIfNecessary:view:owner:toolTip:reuseExistingTrackingNum:",
+      "bridgedName": "_addTrackingRect_andStartToolTipIfNecessary_view_owner_toolTip_reuseExistingTrackingNum",
+      "args": [
+        {
+          "name": "_addTrackingRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "andStartToolTipIfNecessary",
+          "type": "BOOL"
+        },
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "owner",
+          "type": "id"
+        },
+        {
+          "name": "toolTip",
+          "type": "id"
+        },
+        {
+          "name": "reuseExistingTrackingNum",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_checkDisplayDelegate:": {
+      "name": "_checkDisplayDelegate:",
+      "bridgedName": "_checkDisplayDelegate",
+      "args": [
+        {
+          "name": "_checkDisplayDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getIsExpansionToolTip:": {
+      "name": "_getIsExpansionToolTip:",
+      "bridgedName": "_getIsExpansionToolTip",
+      "args": [
+        {
+          "name": "_getIsExpansionToolTip",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getDisplayDelegateFadesOutWhenInactive:": {
+      "name": "_getDisplayDelegateFadesOutWhenInactive:",
+      "bridgedName": "_getDisplayDelegateFadesOutWhenInactive",
+      "args": [
+        {
+          "name": "_getDisplayDelegateFadesOutWhenInactive",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldInstallToolTip:": {
+      "name": "_shouldInstallToolTip:",
+      "bridgedName": "_shouldInstallToolTip",
+      "args": [
+        {
+          "name": "_shouldInstallToolTip",
+          "type": "void *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeKeyNotification:": {
+      "name": "windowDidBecomeKeyNotification:",
+      "bridgedName": "windowDidBecomeKeyNotification",
+      "args": [
+        {
+          "name": "windowDidBecomeKeyNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInitialToolTipDelay:": {
+      "name": "setInitialToolTipDelay:",
+      "bridgedName": "setInitialToolTipDelay",
+      "args": [
+        {
+          "name": "setInitialToolTipDelay",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuDidBeginTracking:": {
+      "name": "_menuDidBeginTracking:",
+      "bridgedName": "_menuDidBeginTracking",
+      "args": [
+        {
+          "name": "_menuDidBeginTracking",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orderOutAllToolTipsImmediately:": {
+      "name": "_orderOutAllToolTipsImmediately:",
+      "bridgedName": "_orderOutAllToolTipsImmediately",
+      "args": [
+        {
+          "name": "_orderOutAllToolTipsImmediately",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getDisplayDelay:inQuickMode:forView:": {
+      "name": "_getDisplayDelay:inQuickMode:forView:",
+      "bridgedName": "_getDisplayDelay_inQuickMode_forView",
+      "args": [
+        {
+          "name": "_getDisplayDelay",
+          "type": "double *"
+        },
+        {
+          "name": "inQuickMode",
+          "type": "char *"
+        },
+        {
+          "name": "forView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayTemporaryToolTipForView:withDisplayDelegate:displayInfo:": {
+      "name": "_displayTemporaryToolTipForView:withDisplayDelegate:displayInfo:",
+      "bridgedName": "_displayTemporaryToolTipForView_withDisplayDelegate_displayInfo",
+      "args": [
+        {
+          "name": "_displayTemporaryToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "withDisplayDelegate",
+          "type": "id"
+        },
+        {
+          "name": "displayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayTemporaryToolTipForView:withString:": {
+      "name": "_displayTemporaryToolTipForView:withString:",
+      "bridgedName": "_displayTemporaryToolTipForView_withString",
+      "args": [
+        {
+          "name": "_displayTemporaryToolTipForView",
+          "type": "id"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,150 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "MSRenderMonitor",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "timeIntervalBetweenStartEvent:endEvent:": {
+      "name": "timeIntervalBetweenStartEvent:endEvent:",
+      "bridgedName": "timeIntervalBetweenStartEvent_endEvent",
+      "args": [
+        {
+          "name": "timeIntervalBetweenStartEvent",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "endEvent",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "timestampForEvent:": {
+      "name": "timestampForEvent:",
+      "bridgedName": "timestampForEvent",
+      "args": [
+        {
+          "name": "timestampForEvent",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerHook:forEvent:": {
+      "name": "registerHook:forEvent:",
+      "bridgedName": "registerHook_forEvent",
+      "args": [
+        {
+          "name": "registerHook",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "forEvent",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recordEvent:timestamp:": {
+      "name": "recordEvent:timestamp:",
+      "bridgedName": "recordEvent_timestamp",
+      "args": [
+        {
+          "name": "recordEvent",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "timestamp",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recordEvent:": {
+      "name": "recordEvent:",
+      "bridgedName": "recordEvent",
+      "args": [
+        {
+          "name": "recordEvent",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "hooks": {
+      "name": "hooks",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "timestamps": {
+      "name": "timestamps",
+      "pointer": false,
+      "type": "CDStruct_aac06691",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldForceFullRedraw": {
+      "name": "shouldForceFullRedraw",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldClearAllCaches": {
+      "name": "shouldClearAllCaches",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldRemoveWhenDone": {
+      "name": "shouldRemoveWhenDone",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

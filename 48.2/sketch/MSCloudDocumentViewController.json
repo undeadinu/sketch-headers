@@ -1,0 +1,327 @@
+{
+  "imports": [
+    "MSCloudViewController.h",
+    "MSClickableTextFieldDelegate.h"
+  ],
+  "classes": [
+    "NSButton",
+    "NSLayoutConstraint",
+    "NSProgressIndicator",
+    "NSString",
+    "NSTextField",
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "MSCloudDocumentViewController",
+  "extends": "MSCloudViewController",
+  "interfaces": [
+    "MSClickableTextFieldDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textFieldDidClick:": {
+      "name": "textFieldDidClick:",
+      "bridgedName": "textFieldDidClick",
+      "args": [
+        {
+          "name": "textFieldDidClick",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textFieldCanBeClicked:": {
+      "name": "textFieldCanBeClicked:",
+      "bridgedName": "textFieldCanBeClicked",
+      "args": [
+        {
+          "name": "textFieldCanBeClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelUpload:": {
+      "name": "cancelUpload:",
+      "bridgedName": "cancelUpload",
+      "args": [
+        {
+          "name": "cancelUpload",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateDescriptionLabel": {
+      "name": "updateDescriptionLabel",
+      "bridgedName": "updateDescriptionLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduledLabelUpdateFired:": {
+      "name": "scheduledLabelUpdateFired:",
+      "bridgedName": "scheduledLabelUpdateFired",
+      "args": [
+        {
+          "name": "scheduledLabelUpdateFired",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleLabelUpdate": {
+      "name": "scheduleLabelUpdate",
+      "bridgedName": "scheduleLabelUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateViewSize": {
+      "name": "updateViewSize",
+      "bridgedName": "updateViewSize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateUploadProgress": {
+      "name": "updateUploadProgress",
+      "bridgedName": "updateUploadProgress",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudControllerDidChangeUploadingNotification:": {
+      "name": "cloudControllerDidChangeUploadingNotification:",
+      "bridgedName": "cloudControllerDidChangeUploadingNotification",
+      "args": [
+        {
+          "name": "cloudControllerDidChangeUploadingNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uploadProgressDidChangeNotification:": {
+      "name": "uploadProgressDidChangeNotification:",
+      "bridgedName": "uploadProgressDidChangeNotification",
+      "args": [
+        {
+          "name": "uploadProgressDidChangeNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentCloudShareDidChangeNotification:": {
+      "name": "documentCloudShareDidChangeNotification:",
+      "bridgedName": "documentCloudShareDidChangeNotification",
+      "args": [
+        {
+          "name": "documentCloudShareDidChangeNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCloudController:": {
+      "name": "setCloudController:",
+      "bridgedName": "setCloudController",
+      "args": [
+        {
+          "name": "setCloudController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayoutConstraints": {
+      "name": "updateLayoutConstraints",
+      "bridgedName": "updateLayoutConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillAppear": {
+      "name": "viewWillAppear",
+      "bridgedName": "viewWillAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "labelUpdateTimer": {
+      "name": "labelUpdateTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cancelButton": {
+      "name": "cancelButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "uploadStatusLabel": {
+      "name": "uploadStatusLabel",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "uploadProgressIndicator": {
+      "name": "uploadProgressIndicator",
+      "pointer": true,
+      "type": "NSProgressIndicator",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "descriptionBottomSpacingConstraint": {
+      "name": "descriptionBottomSpacingConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "uploadDescriptionSpacingConstraint": {
+      "name": "uploadDescriptionSpacingConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "progressIndicator": {
+      "name": "progressIndicator",
+      "pointer": true,
+      "type": "NSProgressIndicator",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "descriptionLabel": {
+      "name": "descriptionLabel",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "isUploading": {
+      "name": "isUploading",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

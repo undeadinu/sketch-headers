@@ -1,0 +1,371 @@
+{
+  "imports": [
+    "CHSheetController.h",
+    "MSColorInspectorDelegate.h",
+    "NSMenuDelegate.h",
+    "NSWindowDelegate.h"
+  ],
+  "classes": [
+    "BCPopover",
+    "MSColorPreviewButton",
+    "MSPopoverDismisserView",
+    "NSButton",
+    "NSMenu",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSReplaceColorSheetController",
+  "extends": "CHSheetController",
+  "interfaces": [
+    "NSWindowDelegate",
+    "NSMenuDelegate",
+    "MSColorInspectorDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "confirm:": {
+      "name": "confirm:",
+      "bridgedName": "confirm",
+      "args": [
+        {
+          "name": "confirm",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disableUI": {
+      "name": "disableUI",
+      "bridgedName": "disableUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUI": {
+      "name": "validateUI",
+      "bridgedName": "validateUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeKey:": {
+      "name": "windowDidBecomeKey:",
+      "bridgedName": "windowDidBecomeKey",
+      "args": [
+        {
+          "name": "windowDidBecomeKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorInspectorShouldAdjustInspectorToPopover:": {
+      "name": "colorInspectorShouldAdjustInspectorToPopover:",
+      "bridgedName": "colorInspectorShouldAdjustInspectorToPopover",
+      "args": [
+        {
+          "name": "colorInspectorShouldAdjustInspectorToPopover",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateReplaceButton": {
+      "name": "validateReplaceButton",
+      "bridgedName": "validateReplaceButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorInspector:didChangeToColor:": {
+      "name": "colorInspector:didChangeToColor:",
+      "bridgedName": "colorInspector_didChangeToColor",
+      "args": [
+        {
+          "name": "colorInspector",
+          "type": "id"
+        },
+        {
+          "name": "didChangeToColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickReplacementColor:": {
+      "name": "pickReplacementColor:",
+      "bridgedName": "pickReplacementColor",
+      "args": [
+        {
+          "name": "pickReplacementColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dismissReplacementColorPopover": {
+      "name": "dismissReplacementColorPopover",
+      "bridgedName": "dismissReplacementColorPopover",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateReplacementColorButton": {
+      "name": "validateReplacementColorButton",
+      "bridgedName": "validateReplacementColorButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOriginalColor:": {
+      "name": "setOriginalColor:",
+      "bridgedName": "setOriginalColor",
+      "args": [
+        {
+          "name": "setOriginalColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commitOriginalColor:": {
+      "name": "commitOriginalColor:",
+      "bridgedName": "commitOriginalColor",
+      "args": [
+        {
+          "name": "commitOriginalColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickOriginalColor:": {
+      "name": "pickOriginalColor:",
+      "bridgedName": "pickOriginalColor",
+      "args": [
+        {
+          "name": "pickOriginalColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateOriginalColorButton": {
+      "name": "validateOriginalColorButton",
+      "bridgedName": "validateOriginalColorButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOriginalColorButtonFromSelection": {
+      "name": "refreshOriginalColorButtonFromSelection",
+      "bridgedName": "refreshOriginalColorButtonFromSelection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
+      "args": [
+        {
+          "name": "menuNeedsUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateFrequentColorsMenu": {
+      "name": "updateFrequentColorsMenu",
+      "bridgedName": "updateFrequentColorsMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleIgnoreAlpha:": {
+      "name": "toggleIgnoreAlpha:",
+      "bridgedName": "toggleIgnoreAlpha",
+      "args": [
+        {
+          "name": "toggleIgnoreAlpha",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDocument": {
+      "name": "currentDocument",
+      "bridgedName": "currentDocument",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidLoad": {
+      "name": "windowDidLoad",
+      "bridgedName": "windowDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "popover": {
+      "name": "popover",
+      "pointer": true,
+      "type": "BCPopover",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "frequentColorsMenu": {
+      "name": "frequentColorsMenu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "replaceButton": {
+      "name": "replaceButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "replacementColorPopoverDismissingView": {
+      "name": "replacementColorPopoverDismissingView",
+      "pointer": true,
+      "type": "__weak MSPopoverDismisserView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "keepAlphaOfOriginalColorButton": {
+      "name": "keepAlphaOfOriginalColorButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "replacementColorButton": {
+      "name": "replacementColorButton",
+      "pointer": true,
+      "type": "__weak MSColorPreviewButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "originalColorButton": {
+      "name": "originalColorButton",
+      "pointer": true,
+      "type": "__weak MSColorPreviewButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "ignoreAlphaWhenMatchingOriginalColorButton": {
+      "name": "ignoreAlphaWhenMatchingOriginalColorButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "cancelButton": {
+      "name": "cancelButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

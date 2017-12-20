@@ -1,0 +1,301 @@
+{
+  "imports": [
+    "MSOverrideViewController.h",
+    "MSAssetLibraryControllerDelegate.h"
+  ],
+  "classes": [
+    "MSDocument",
+    "MSDocumentData",
+    "MSForeignSymbolMenuBuilder",
+    "MSSymbolInstance",
+    "MSSymbolMaster",
+    "NSPopUpButton",
+    "NSString",
+    "NSTextField"
+  ],
+  "protocol": false,
+  "className": "MSSymbolInstanceOverrideViewController",
+  "extends": "MSOverrideViewController",
+  "interfaces": [
+    "MSAssetLibraryControllerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "assetLibraryController:libraryChanged:": {
+      "name": "assetLibraryController:libraryChanged:",
+      "bridgedName": "assetLibraryController_libraryChanged",
+      "args": [
+        {
+          "name": "assetLibraryController",
+          "type": "id"
+        },
+        {
+          "name": "libraryChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidDisappear": {
+      "name": "viewDidDisappear",
+      "bridgedName": "viewDidDisappear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillAppear": {
+      "name": "viewWillAppear",
+      "bridgedName": "viewWillAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyOverrideToSelectedLayers:": {
+      "name": "applyOverrideToSelectedLayers:",
+      "bridgedName": "applyOverrideToSelectedLayers",
+      "args": [
+        {
+          "name": "applyOverrideToSelectedLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueFromSymbolMasterReference:": {
+      "name": "valueFromSymbolMasterReference:",
+      "bridgedName": "valueFromSymbolMasterReference",
+      "args": [
+        {
+          "name": "valueFromSymbolMasterReference",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueFromControlView:": {
+      "name": "valueFromControlView:",
+      "bridgedName": "valueFromControlView",
+      "args": [
+        {
+          "name": "valueFromControlView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadMenu": {
+      "name": "reloadMenu",
+      "bridgedName": "reloadMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolMenuItems": {
+      "name": "symbolMenuItems",
+      "bridgedName": "symbolMenuItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuItemsForSymbolMasterRefs:": {
+      "name": "menuItemsForSymbolMasterRefs:",
+      "bridgedName": "menuItemsForSymbolMasterRefs",
+      "args": [
+        {
+          "name": "menuItemsForSymbolMasterRefs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overrideValueAction:": {
+      "name": "overrideValueAction:",
+      "bridgedName": "overrideValueAction",
+      "args": [
+        {
+          "name": "overrideValueAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nameOfCurrentNestedSymbol": {
+      "name": "nameOfCurrentNestedSymbol",
+      "bridgedName": "nameOfCurrentNestedSymbol",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlViewForEditingOverride": {
+      "name": "controlViewForEditingOverride",
+      "bridgedName": "controlViewForEditingOverride",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "menuBuilder": {
+      "name": "menuBuilder",
+      "pointer": true,
+      "type": "MSForeignSymbolMenuBuilder",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "popup": {
+      "name": "popup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "originalMaster": {
+      "name": "originalMaster",
+      "pointer": true,
+      "type": "MSSymbolMaster",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "popupButton": {
+      "name": "popupButton",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "labelField": {
+      "name": "labelField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "firstInstance": {
+      "name": "firstInstance",
+      "pointer": true,
+      "type": "MSSymbolInstance",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "originalMasterID": {
+      "name": "originalMasterID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentMasterID": {
+      "name": "currentMasterID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "MSDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
