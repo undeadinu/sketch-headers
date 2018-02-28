@@ -18,12 +18,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setState:": {
-      "name": "setState:",
-      "bridgedName": "setState",
+    "removeTrackingState:": {
+      "name": "removeTrackingState:",
+      "bridgedName": "removeTrackingState",
       "args": [
         {
-          "name": "setState",
+          "name": "removeTrackingState",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTrackingState:": {
+      "name": "addTrackingState:",
+      "bridgedName": "addTrackingState",
+      "args": [
+        {
+          "name": "addTrackingState",
           "type": "unsigned long long"
         }
       ],
@@ -50,6 +63,19 @@
       "args": [
         {
           "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDragged:": {
+      "name": "mouseDragged:",
+      "bridgedName": "mouseDragged",
+      "args": [
+        {
+          "name": "mouseDragged",
           "type": "id"
         }
       ],
@@ -106,6 +132,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateLocation": {
+      "name": "validateLocation",
+      "bridgedName": "validateLocation",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -171,6 +205,14 @@
         "nonatomic"
       ]
     },
+    "checksMouseHitTesting": {
+      "name": "checksMouseHitTesting",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "view": {
       "name": "view",
       "pointer": true,
@@ -179,8 +221,8 @@
         "nonatomic"
       ]
     },
-    "state": {
-      "name": "state",
+    "trackingState": {
+      "name": "trackingState",
       "pointer": false,
       "type": "unsigned long long",
       "attributes": [

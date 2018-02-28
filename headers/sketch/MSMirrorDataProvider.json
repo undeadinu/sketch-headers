@@ -9,6 +9,7 @@
     "NSDictionary",
     "NSObject<OS_dispatch_queue>",
     "NSString",
+    "NSTimer",
     "SMKMirrorController"
   ],
   "protocol": false,
@@ -34,12 +35,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasDocumentStructureChangedWithCompletionBlock:": {
-      "name": "hasDocumentStructureChangedWithCompletionBlock:",
-      "bridgedName": "hasDocumentStructureChangedWithCompletionBlock",
+    "lookupUpdateTypeWithHandler:": {
+      "name": "lookupUpdateTypeWithHandler:",
+      "bridgedName": "lookupUpdateTypeWithHandler",
       "args": [
         {
-          "name": "hasDocumentStructureChangedWithCompletionBlock",
+          "name": "lookupUpdateTypeWithHandler",
           "type": "CDUnknownBlockType"
         }
       ],
@@ -47,9 +48,26 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "sendUpdateFromOldArtboard:toNewArtboard:": {
-      "name": "sendUpdateFromOldArtboard:toNewArtboard:",
-      "bridgedName": "sendUpdateFromOldArtboard_toNewArtboard",
+    "treeDiff:containsFlowLayerChangesInNewDocument:": {
+      "name": "treeDiff:containsFlowLayerChangesInNewDocument:",
+      "bridgedName": "treeDiff_containsFlowLayerChangesInNewDocument",
+      "args": [
+        {
+          "name": "treeDiff",
+          "type": "id"
+        },
+        {
+          "name": "containsFlowLayerChangesInNewDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendUpdateFromOldArtboard:toNewArtboard:newDocument:diffRect:": {
+      "name": "sendUpdateFromOldArtboard:toNewArtboard:newDocument:diffRect:",
+      "bridgedName": "sendUpdateFromOldArtboard_toNewArtboard_newDocument_diffRect",
       "args": [
         {
           "name": "sendUpdateFromOldArtboard",
@@ -58,18 +76,26 @@
         {
           "name": "toNewArtboard",
           "type": "id"
+        },
+        {
+          "name": "newDocument",
+          "type": "id"
+        },
+        {
+          "name": "diffRect",
+          "type": "struct CGRect"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "sendPartialUpdateForNewDocument:": {
-      "name": "sendPartialUpdateForNewDocument:",
-      "bridgedName": "sendPartialUpdateForNewDocument",
+    "sendVisualUpdateForNewDocument:": {
+      "name": "sendVisualUpdateForNewDocument:",
+      "bridgedName": "sendVisualUpdateForNewDocument",
       "args": [
         {
-          "name": "sendPartialUpdateForNewDocument",
+          "name": "sendVisualUpdateForNewDocument",
           "type": "id"
         }
       ],
@@ -85,12 +111,44 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "windowDidResignMainNotification:": {
-      "name": "windowDidResignMainNotification:",
-      "bridgedName": "windowDidResignMainNotification",
+    "updateIfNeeded": {
+      "name": "updateIfNeeded",
+      "bridgedName": "updateIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsUpdateMetadata": {
+      "name": "setNeedsUpdateMetadata",
+      "bridgedName": "setNeedsUpdateMetadata",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsUpdate": {
+      "name": "setNeedsUpdate",
+      "bridgedName": "setNeedsUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createManifestContent": {
+      "name": "createManifestContent",
+      "bridgedName": "createManifestContent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentDidResignCurrentNotification:": {
+      "name": "documentDidResignCurrentNotification:",
+      "bridgedName": "documentDidResignCurrentNotification",
       "args": [
         {
-          "name": "windowDidResignMainNotification",
+          "name": "documentDidResignCurrentNotification",
           "type": "id"
         }
       ],
@@ -98,12 +156,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "windowDidBecomeMainNotification:": {
-      "name": "windowDidBecomeMainNotification:",
-      "bridgedName": "windowDidBecomeMainNotification",
+    "documentDidBecomeCurrentNotification:": {
+      "name": "documentDidBecomeCurrentNotification:",
+      "bridgedName": "documentDidBecomeCurrentNotification",
       "args": [
         {
-          "name": "windowDidBecomeMainNotification",
+          "name": "documentDidBecomeCurrentNotification",
           "type": "id"
         }
       ],
@@ -111,18 +169,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "currentDocumentNameDidChange": {
-      "name": "currentDocumentNameDidChange",
-      "bridgedName": "currentDocumentNameDidChange",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "currentDocumentDidChange": {
-      "name": "currentDocumentDidChange",
-      "bridgedName": "currentDocumentDidChange",
-      "args": [],
+    "mirrorConnectionsDidChangeNotification:": {
+      "name": "mirrorConnectionsDidChangeNotification:",
+      "bridgedName": "mirrorConnectionsDidChangeNotification",
+      "args": [
+        {
+          "name": "mirrorConnectionsDidChangeNotification",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -131,6 +186,44 @@
       "name": "currentArtboardDidChange",
       "bridgedName": "currentArtboardDidChange",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDocumentData:": {
+      "name": "setDocumentData:",
+      "bridgedName": "setDocumentData",
+      "args": [
+        {
+          "name": "setDocumentData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -187,6 +280,23 @@
     }
   },
   "properties": {
+    "needsUpdateMetadata": {
+      "name": "needsUpdateMetadata",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "updateTimer": {
+      "name": "updateTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "isAlreadyComparing": {
       "name": "isAlreadyComparing",
       "pointer": false,
@@ -204,21 +314,38 @@
         "nonatomic"
       ]
     },
-    "lastImmutableDoc": {
-      "name": "lastImmutableDoc",
+    "manifestContent": {
+      "name": "manifestContent",
       "pointer": true,
-      "type": "MSImmutableDocumentData",
+      "type": "NSDictionary",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "currentDocumentID": {
-      "name": "currentDocumentID",
-      "pointer": true,
-      "type": "NSString",
+    "requiresImmediateUpdate": {
+      "name": "requiresImmediateUpdate",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
-        "copy",
+        "nonatomic"
+      ]
+    },
+    "documentData": {
+      "name": "documentData",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSDocument",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -230,10 +357,10 @@
         "nonatomic"
       ]
     },
-    "document": {
-      "name": "document",
-      "pointer": true,
-      "type": "MSDocument",
+    "hasConnectedClients": {
+      "name": "hasConnectedClients",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -245,23 +372,6 @@
       "type": "NSString",
       "attributes": [
         "copy",
-        "nonatomic"
-      ]
-    },
-    "shouldScrollToSelectedArtboard": {
-      "name": "shouldScrollToSelectedArtboard",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "manifestContent": {
-      "name": "manifestContent",
-      "pointer": true,
-      "type": "NSDictionary",
-      "attributes": [
-        "readonly",
         "nonatomic"
       ]
     },

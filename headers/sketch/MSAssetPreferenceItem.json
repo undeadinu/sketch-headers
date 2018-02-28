@@ -42,6 +42,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updatingRelatedSecondaryTitle": {
+      "name": "updatingRelatedSecondaryTitle",
+      "bridgedName": "updatingRelatedSecondaryTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "secondaryTitleStringWhenUpdateAvailable": {
       "name": "secondaryTitleStringWhenUpdateAvailable",
       "bridgedName": "secondaryTitleStringWhenUpdateAvailable",
@@ -146,14 +154,6 @@
         "nonatomic"
       ]
     },
-    "currentlyDownloading": {
-      "name": "currentlyDownloading",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "secondaryTitle": {
       "name": "secondaryTitle",
       "pointer": true,
@@ -189,6 +189,14 @@
         "nonatomic"
       ]
     },
+    "updatingStatus": {
+      "name": "updatingStatus",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "remoteLibrary": {
       "name": "remoteLibrary",
       "pointer": true,
@@ -216,8 +224,17 @@
         "nonatomic"
       ]
     },
-    "downloadAvailable": {
-      "name": "downloadAvailable",
+    "validForSecondaryTextField": {
+      "name": "validForSecondaryTextField",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "downloadFailed": {
+      "name": "downloadFailed",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -227,15 +244,6 @@
     },
     "updateAvailable": {
       "name": "updateAvailable",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "validForSecondaryTextField": {
-      "name": "validForSecondaryTextField",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

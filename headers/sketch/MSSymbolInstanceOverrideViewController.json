@@ -1,12 +1,11 @@
 {
   "imports": [
-    "MSOverrideViewController.h",
-    "MSAssetLibraryControllerDelegate.h"
+    "MSOverrideViewController.h"
   ],
   "classes": [
     "MSDocument",
     "MSDocumentData",
-    "MSForeignSymbolMenuBuilder",
+    "MSForeignObjectMenuBuilder",
     "MSSymbolInstance",
     "MSSymbolMaster",
     "NSPopUpButton",
@@ -16,9 +15,7 @@
   "protocol": false,
   "className": "MSSymbolInstanceOverrideViewController",
   "extends": "MSOverrideViewController",
-  "interfaces": [
-    "MSAssetLibraryControllerDelegate"
-  ],
+  "interfaces": [],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -28,27 +25,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "assetLibraryController:libraryChanged:": {
-      "name": "assetLibraryController:libraryChanged:",
-      "bridgedName": "assetLibraryController_libraryChanged",
+    "libraryControllerDidChange:": {
+      "name": "libraryControllerDidChange:",
+      "bridgedName": "libraryControllerDidChange",
       "args": [
         {
-          "name": "assetLibraryController",
-          "type": "id"
-        },
-        {
-          "name": "libraryChanged",
+          "name": "libraryControllerDidChange",
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "viewDidDisappear": {
-      "name": "viewDidDisappear",
-      "bridgedName": "viewDidDisappear",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -142,19 +127,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "overrideValueAction:": {
-      "name": "overrideValueAction:",
-      "bridgedName": "overrideValueAction",
-      "args": [
-        {
-          "name": "overrideValueAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "nameOfCurrentNestedSymbol": {
       "name": "nameOfCurrentNestedSymbol",
       "bridgedName": "nameOfCurrentNestedSymbol",
@@ -176,7 +148,7 @@
     "menuBuilder": {
       "name": "menuBuilder",
       "pointer": true,
-      "type": "MSForeignSymbolMenuBuilder",
+      "type": "MSForeignObjectMenuBuilder",
       "attributes": [
         "retain",
         "nonatomic"
@@ -261,40 +233,6 @@
       "attributes": [
         "readonly",
         "nonatomic"
-      ]
-    },
-    "debugDescription": {
-      "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
       ]
     }
   }

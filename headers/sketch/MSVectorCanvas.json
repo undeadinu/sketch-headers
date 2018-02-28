@@ -7,8 +7,8 @@
     "MSClickGestureRecognizer",
     "MSContentDrawView",
     "MSDragHandleGestureRecognizer",
+    "MSDragSegmentGestureRecognizer",
     "MSDragToSelectGestureRecognizer",
-    "MSMouseTracker",
     "MSPathController",
     "MSPointSnapper",
     "MSPointSnappingResult",
@@ -100,23 +100,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setInsertionPoint:indexPath:": {
-      "name": "setInsertionPoint:indexPath:",
-      "bridgedName": "setInsertionPoint_indexPath",
-      "args": [
-        {
-          "name": "setInsertionPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "indexPath",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "trackMouse:": {
       "name": "trackMouse:",
       "bridgedName": "trackMouse",
@@ -143,9 +126,39 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "locationForAddingPoint:modifierFlags:sourceIndexPath:": {
-      "name": "locationForAddingPoint:modifierFlags:sourceIndexPath:",
-      "bridgedName": "locationForAddingPoint_modifierFlags_sourceIndexPath",
+    "dragSegment:": {
+      "name": "dragSegment:",
+      "bridgedName": "dragSegment",
+      "args": [
+        {
+          "name": "dragSegment",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToDragSegmentWithMouseLocation:modiferFlags:": {
+      "name": "prepareToDragSegmentWithMouseLocation:modiferFlags:",
+      "bridgedName": "prepareToDragSegmentWithMouseLocation_modiferFlags",
+      "args": [
+        {
+          "name": "prepareToDragSegmentWithMouseLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modiferFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "locationForAddingPoint:modifierFlags:": {
+      "name": "locationForAddingPoint:modifierFlags:",
+      "bridgedName": "locationForAddingPoint_modifierFlags",
       "args": [
         {
           "name": "locationForAddingPoint",
@@ -154,47 +167,18 @@
         {
           "name": "modifierFlags",
           "type": "unsigned long long"
-        },
-        {
-          "name": "sourceIndexPath",
-          "type": "id *"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "insertPointAtIndexPath:location:modifierFlags:": {
-      "name": "insertPointAtIndexPath:location:modifierFlags:",
-      "bridgedName": "insertPointAtIndexPath_location_modifierFlags",
+    "insertPointWithModifierFlags:": {
+      "name": "insertPointWithModifierFlags:",
+      "bridgedName": "insertPointWithModifierFlags",
       "args": [
         {
-          "name": "insertPointAtIndexPath",
-          "type": "id"
-        },
-        {
-          "name": "location",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "modifierFlags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addPointForMouseDown:modifierFlags:": {
-      "name": "addPointForMouseDown:modifierFlags:",
-      "bridgedName": "addPointForMouseDown_modifierFlags",
-      "args": [
-        {
-          "name": "addPointForMouseDown",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "modifierFlags",
+          "name": "insertPointWithModifierFlags",
           "type": "unsigned long long"
         }
       ],
@@ -324,6 +308,19 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "segmentAtIndexPath:": {
+      "name": "segmentAtIndexPath:",
+      "bridgedName": "segmentAtIndexPath",
+      "args": [
+        {
+          "name": "segmentAtIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -515,6 +512,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "drawingRectForInsertionAtPoint:": {
+      "name": "drawingRectForInsertionAtPoint:",
+      "bridgedName": "drawingRectForInsertionAtPoint",
+      "args": [
+        {
+          "name": "drawingRectForInsertionAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInsertionPoint": {
+      "name": "drawInsertionPoint",
+      "bridgedName": "drawInsertionPoint",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "drawHighlightedSegment": {
       "name": "drawHighlightedSegment",
       "bridgedName": "drawHighlightedSegment",
@@ -539,25 +557,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "wireBezierPathFromPoint:controlPoint:toPoint:forceStraight:": {
-      "name": "wireBezierPathFromPoint:controlPoint:toPoint:forceStraight:",
-      "bridgedName": "wireBezierPathFromPoint_controlPoint_toPoint_forceStraight",
+    "drawHairline": {
+      "name": "drawHairline",
+      "bridgedName": "drawHairline",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeWireBezierPathForClosingPath:indexPathForSelectedHandle:": {
+      "name": "makeWireBezierPathForClosingPath:indexPathForSelectedHandle:",
+      "bridgedName": "makeWireBezierPathForClosingPath_indexPathForSelectedHandle",
       "args": [
         {
-          "name": "wireBezierPathFromPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "controlPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "toPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "forceStraight",
+          "name": "makeWireBezierPathForClosingPath",
           "type": "BOOL"
+        },
+        {
+          "name": "indexPathForSelectedHandle",
+          "type": "id"
         }
       ],
       "returns": "id",
@@ -707,6 +725,44 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateToolStateWithMouseLocation:modifierFlags:": {
+      "name": "updateToolStateWithMouseLocation:modifierFlags:",
+      "bridgedName": "updateToolStateWithMouseLocation_modifierFlags",
+      "args": [
+        {
+          "name": "updateToolStateWithMouseLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setVectorTool:indexPath:insertionPoint:": {
+      "name": "setVectorTool:indexPath:insertionPoint:",
+      "bridgedName": "setVectorTool_indexPath_insertionPoint",
+      "args": [
+        {
+          "name": "setVectorTool",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "indexPath",
+          "type": "id"
+        },
+        {
+          "name": "insertionPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "selectLayers:extendSelection:": {
       "name": "selectLayers:extendSelection:",
       "bridgedName": "selectLayers_extendSelection",
@@ -821,10 +877,29 @@
         "nonatomic"
       ]
     },
-    "mouseTracker": {
-      "name": "mouseTracker",
+    "insertionPoint": {
+      "name": "insertionPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "activeIndexPath": {
+      "name": "activeIndexPath",
       "pointer": true,
-      "type": "MSMouseTracker",
+      "type": "NSIndexPath",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "vectorTool": {
+      "name": "vectorTool",
+      "pointer": false,
+      "type": "unsigned long long",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -834,6 +909,15 @@
       "name": "clickToEndEditingGestureRecognizer",
       "pointer": true,
       "type": "MSClickGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dragSegmentGestureRecognizer": {
+      "name": "dragSegmentGestureRecognizer",
+      "pointer": true,
+      "type": "MSDragSegmentGestureRecognizer",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -878,42 +962,6 @@
       "name": "snaps",
       "pointer": true,
       "type": "MSPointSnappingResult",
-      "attributes": [
-        "copy",
-        "nonatomic"
-      ]
-    },
-    "hoveringHandle": {
-      "name": "hoveringHandle",
-      "pointer": true,
-      "type": "NSIndexPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "insertionPoint": {
-      "name": "insertionPoint",
-      "pointer": false,
-      "type": "struct CGPoint",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "pointInsertionIndexPath": {
-      "name": "pointInsertionIndexPath",
-      "pointer": true,
-      "type": "NSIndexPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "activeHandle": {
-      "name": "activeHandle",
-      "pointer": true,
-      "type": "NSIndexPath",
       "attributes": [
         "copy",
         "nonatomic"
@@ -980,6 +1028,16 @@
         "readonly",
         "nonatomic",
         "getter=isInteractivelySelecting"
+      ]
+    },
+    "indexPathForHighlightedComponent": {
+      "name": "indexPathForHighlightedComponent",
+      "pointer": true,
+      "type": "NSIndexPath",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
       ]
     },
     "indexPathsForSelectedHandles": {

@@ -7,6 +7,7 @@
   ],
   "classes": [
     "NSMutableArray",
+    "NSMutableDictionary",
     "NSString",
     "NSURL"
   ],
@@ -45,6 +46,22 @@
       "bridgedName": "setup",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "environmentText": {
+      "name": "environmentText",
+      "bridgedName": "environmentText",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "logText": {
+      "name": "logText",
+      "bridgedName": "logText",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -111,6 +128,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "appSupportURL": {
+      "name": "appSupportURL",
+      "bridgedName": "appSupportURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEnvironmentValue:forKey:": {
+      "name": "setEnvironmentValue:forKey:",
+      "bridgedName": "setEnvironmentValue_forKey",
+      "args": [
+        {
+          "name": "setEnvironmentValue",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "log:": {
       "name": "log:",
       "bridgedName": "log",
@@ -126,10 +168,28 @@
     }
   },
   "properties": {
-    "url": {
-      "name": "url",
+    "environmentURL": {
+      "name": "environmentURL",
       "pointer": true,
       "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "logURL": {
+      "name": "logURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "environment": {
+      "name": "environment",
+      "pointer": true,
+      "type": "NSMutableDictionary",
       "attributes": [
         "retain",
         "nonatomic"

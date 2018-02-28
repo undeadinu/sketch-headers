@@ -75,16 +75,28 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithDownloadURL:newVersionNumber:downloadSize:": {
-      "name": "initWithDownloadURL:newVersionNumber:downloadSize:",
-      "bridgedName": "initWithDownloadURL_newVersionNumber_downloadSize",
+    "initWithDownloadURL:libraryName:imageURL:newVersionNumber:shareLink:downloadSize:": {
+      "name": "initWithDownloadURL:libraryName:imageURL:newVersionNumber:shareLink:downloadSize:",
+      "bridgedName": "initWithDownloadURL_libraryName_imageURL_newVersionNumber_shareLink_downloadSize",
       "args": [
         {
           "name": "initWithDownloadURL",
           "type": "id"
         },
         {
+          "name": "libraryName",
+          "type": "id"
+        },
+        {
+          "name": "imageURL",
+          "type": "id"
+        },
+        {
           "name": "newVersionNumber",
+          "type": "id"
+        },
+        {
+          "name": "shareLink",
           "type": "id"
         },
         {
@@ -98,12 +110,39 @@
     }
   },
   "properties": {
+    "shareLink": {
+      "name": "shareLink",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "folderMonitor": {
       "name": "folderMonitor",
       "pointer": true,
       "type": "MSFolderMonitor",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "imageURL": {
+      "name": "imageURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "libraryName": {
+      "name": "libraryName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

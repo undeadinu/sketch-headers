@@ -1,10 +1,12 @@
 {
   "imports": [
-    "NSView.h"
+    "NSView.h",
+    "MSInterfaceTheme.h"
   ],
   "classes": [
     "NSArray",
-    "NSObject<MSDropableViewDelegate>"
+    "NSObject<MSDropableViewDelegate>",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSView",
@@ -503,6 +505,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isMainWindow": {
+      "name": "isMainWindow",
+      "bridgedName": "isMainWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "clickShouldDismissPopover:": {
       "name": "clickShouldDismissPopover:",
       "bridgedName": "clickShouldDismissPopover",
@@ -512,6 +522,14 @@
           "type": "id"
         }
       ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsSeparator": {
+      "name": "wantsSeparator",
+      "bridgedName": "wantsSeparator",
+      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -546,6 +564,40 @@
       "type": "__weak NSObject<MSDropableViewDelegate>",
       "attributes": [
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     },
     "canBeKeyView": {

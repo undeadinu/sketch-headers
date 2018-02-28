@@ -24,6 +24,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "pasteboardWriterClass": {
+      "name": "pasteboardWriterClass",
+      "bridgedName": "pasteboardWriterClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "dataController:refreshPreviewsOnNodes:": {
       "name": "dataController:refreshPreviewsOnNodes:",
       "bridgedName": "dataController_refreshPreviewsOnNodes",
@@ -105,12 +113,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "copyNode:toParent:after:": {
-      "name": "copyNode:toParent:after:",
-      "bridgedName": "copyNode_toParent_after",
+    "dataController:copyFromPasteboard:toParent:after:": {
+      "name": "dataController:copyFromPasteboard:toParent:after:",
+      "bridgedName": "dataController_copyFromPasteboard_toParent_after",
       "args": [
         {
-          "name": "copyNode",
+          "name": "dataController",
+          "type": "id"
+        },
+        {
+          "name": "copyFromPasteboard",
           "type": "id"
         },
         {
@@ -126,16 +138,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dataController:moveNodes:toParent:after:": {
-      "name": "dataController:moveNodes:toParent:after:",
-      "bridgedName": "dataController_moveNodes_toParent_after",
+    "dataController:moveFromPasteboard:toParent:after:": {
+      "name": "dataController:moveFromPasteboard:toParent:after:",
+      "bridgedName": "dataController_moveFromPasteboard_toParent_after",
       "args": [
         {
           "name": "dataController",
           "type": "id"
         },
         {
-          "name": "moveNodes",
+          "name": "moveFromPasteboard",
           "type": "id"
         },
         {
@@ -172,9 +184,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addPage:after:copying:": {
-      "name": "addPage:after:copying:",
-      "bridgedName": "addPage_after_copying",
+    "addPage:after:": {
+      "name": "addPage:after:",
+      "bridgedName": "addPage_after",
       "args": [
         {
           "name": "addPage",
@@ -183,10 +195,6 @@
         {
           "name": "after",
           "type": "id"
-        },
-        {
-          "name": "copying",
-          "type": "BOOL"
         }
       ],
       "returns": "void",

@@ -1,19 +1,21 @@
 {
   "imports": [
-    "NSObject.h"
+    "NSObject.h",
+    "NSCopying.h"
   ],
   "classes": [
-    "MSImmutableArtboardGroup",
     "MSImmutableColor",
     "MSImmutableDocumentData",
-    "MSImmutablePage",
+    "MSImmutableLayer",
     "NSSet",
     "NSString"
   ],
   "protocol": false,
   "className": "MSExportRequest",
   "extends": "NSObject",
-  "interfaces": [],
+  "interfaces": [
+    "NSCopying"
+  ],
   "methods": {
     "exportRequestFromLayerAncestry:exportFormat:inRect:": {
       "name": "exportRequestFromLayerAncestry:exportFormat:inRect:",
@@ -234,6 +236,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -269,19 +284,6 @@
         },
         {
           "name": "includedIDs",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "configureForLayer:": {
-      "name": "configureForLayer:",
-      "bridgedName": "configureForLayer",
-      "args": [
-        {
-          "name": "configureForLayer",
           "type": "id"
         }
       ],
@@ -345,6 +347,14 @@
         "nonatomic"
       ]
     },
+    "interlaced": {
+      "name": "interlaced",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "progressive": {
       "name": "progressive",
       "pointer": false,
@@ -378,15 +388,6 @@
         "nonatomic"
       ]
     },
-    "artboard": {
-      "name": "artboard",
-      "pointer": true,
-      "type": "MSImmutableArtboardGroup",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "immutableDocument": {
       "name": "immutableDocument",
       "pointer": true,
@@ -396,10 +397,10 @@
         "nonatomic"
       ]
     },
-    "immutablePage": {
-      "name": "immutablePage",
+    "rootLayer": {
+      "name": "rootLayer",
       "pointer": true,
-      "type": "MSImmutablePage",
+      "type": "MSImmutableLayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -461,6 +462,15 @@
       "pointer": false,
       "type": "struct CGRect",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "pasteboardType": {
+      "name": "pasteboardType",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

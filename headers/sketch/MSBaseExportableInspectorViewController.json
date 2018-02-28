@@ -5,8 +5,8 @@
     "MSSliceLayerWatcher.h"
   ],
   "classes": [
-    "MSFlippedView",
     "MSInspectorStackView",
+    "MSSeparatorlessView",
     "NSArray",
     "NSMutableArray",
     "NSMutableSet",
@@ -26,6 +26,14 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsSeparatorAfterViews": {
+      "name": "wantsSeparatorAfterViews",
+      "bridgedName": "wantsSeparatorAfterViews",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -121,23 +129,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "wantsSeparatorBetweenView:andView:": {
-      "name": "wantsSeparatorBetweenView:andView:",
-      "bridgedName": "wantsSeparatorBetweenView_andView",
-      "args": [
-        {
-          "name": "wantsSeparatorBetweenView",
-          "type": "id"
-        },
-        {
-          "name": "andView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "layerPositionPossiblyChanged": {
       "name": "layerPositionPossiblyChanged",
       "bridgedName": "layerPositionPossiblyChanged",
@@ -217,7 +208,7 @@
     "sliceViewContainerView": {
       "name": "sliceViewContainerView",
       "pointer": true,
-      "type": "MSFlippedView",
+      "type": "MSSeparatorlessView",
       "attributes": [
         "retain",
         "nonatomic"

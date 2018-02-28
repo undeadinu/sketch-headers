@@ -2,12 +2,22 @@
   "imports": [
     "MSOverrideViewController.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSTextField"
+  ],
   "protocol": false,
   "className": "MSTextOverrideViewController",
   "extends": "MSOverrideViewController",
   "interfaces": [],
   "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "valueFromControlView:": {
       "name": "valueFromControlView:",
       "bridgedName": "valueFromControlView",
@@ -29,11 +39,28 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasStandardCellHeight": {
-      "name": "hasStandardCellHeight",
-      "bridgedName": "hasStandardCellHeight",
+    "dataMenuProvider:didChooseData:": {
+      "name": "dataMenuProvider:didChooseData:",
+      "bridgedName": "dataMenuProvider_didChooseData",
+      "args": [
+        {
+          "name": "dataMenuProvider",
+          "type": "id"
+        },
+        {
+          "name": "didChooseData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportedDataProviders": {
+      "name": "supportedDataProviders",
+      "bridgedName": "supportedDataProviders",
       "args": [],
-      "returns": "BOOL",
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -46,5 +73,15 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "overrideTextField": {
+      "name": "overrideTextField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
 }

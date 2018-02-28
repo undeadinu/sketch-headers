@@ -7,7 +7,8 @@
   "classes": [
     "MSImmutablePage",
     "NSArray",
-    "NSDictionary"
+    "NSDictionary",
+    "NSSet"
   ],
   "protocol": false,
   "className": "MSImmutableDocumentData",
@@ -121,6 +122,36 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "artboardWithID:page:": {
+      "name": "artboardWithID:page:",
+      "bridgedName": "artboardWithID_page",
+      "args": [
+        {
+          "name": "artboardWithID",
+          "type": "id"
+        },
+        {
+          "name": "page",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "artboardWithID:": {
+      "name": "artboardWithID:",
+      "bridgedName": "artboardWithID",
+      "args": [
+        {
+          "name": "artboardWithID",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -351,6 +382,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "symbolsChangedSincePreviousDocument:": {
+      "name": "symbolsChangedSincePreviousDocument:",
+      "bridgedName": "symbolsChangedSincePreviousDocument",
+      "args": [
+        {
+          "name": "symbolsChangedSincePreviousDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "enumerateLayersWithOptions:block:": {
       "name": "enumerateLayersWithOptions:block:",
       "bridgedName": "enumerateLayersWithOptions_block",
@@ -508,6 +552,44 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "overlayRectForAncestors:document:": {
+      "name": "overlayRectForAncestors:document:",
+      "bridgedName": "overlayRectForAncestors_document",
+      "args": [
+        {
+          "name": "overlayRectForAncestors",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForAncestors:document:cache:": {
+      "name": "influenceRectForAncestors:document:cache:",
+      "bridgedName": "influenceRectForAncestors_document_cache",
+      "args": [
+        {
+          "name": "influenceRectForAncestors",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "trackColors:withinHierarchyOf:excludeForeignSymbols:": {
       "name": "trackColors:withinHierarchyOf:excludeForeignSymbols:",
       "bridgedName": "trackColors_withinHierarchyOf_excludeForeignSymbols",
@@ -607,6 +689,33 @@
       "name": "currentPage",
       "pointer": true,
       "type": "MSImmutablePage",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "containsUnavailableFontNames": {
+      "name": "containsUnavailableFontNames",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "unavailableFontNames": {
+      "name": "unavailableFontNames",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "fontNames": {
+      "name": "fontNames",
+      "pointer": true,
+      "type": "NSSet",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -23,27 +23,6 @@
     "MSLibraryObject"
   ],
   "methods": {
-    "URLForApplicationSupportLibraryNamed:": {
-      "name": "URLForApplicationSupportLibraryNamed:",
-      "bridgedName": "URLForApplicationSupportLibraryNamed",
-      "args": [
-        {
-          "name": "URLForApplicationSupportLibraryNamed",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "assetLibraryFolder": {
-      "name": "assetLibraryFolder",
-      "bridgedName": "assetLibraryFolder",
-      "args": [],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "URLForTemplateLibraryNamed:": {
       "name": "URLForTemplateLibraryNamed:",
       "bridgedName": "URLForTemplateLibraryNamed",
@@ -62,6 +41,19 @@
       "bridgedName": "keyPathsForValuesAffectingValid",
       "args": [],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "assetLibraryStatusForDocumentErrorCode:": {
+      "name": "assetLibraryStatusForDocumentErrorCode:",
+      "bridgedName": "assetLibraryStatusForDocumentErrorCode",
+      "args": [
+        {
+          "name": "assetLibraryStatusForDocumentErrorCode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -166,19 +158,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setName:": {
-      "name": "setName:",
-      "bridgedName": "setName",
-      "args": [
-        {
-          "name": "setName",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "encodeWithCoder:": {
       "name": "encodeWithCoder:",
       "bridgedName": "encodeWithCoder",
@@ -273,7 +252,7 @@
       "pointer": true,
       "type": "NSString",
       "attributes": [
-        "readonly",
+        "retain",
         "nonatomic"
       ]
     },
@@ -284,14 +263,6 @@
       "attributes": [
         "retain",
         "nonatomic"
-      ]
-    },
-    "locationOnDisk": {
-      "name": "locationOnDisk",
-      "pointer": true,
-      "type": "NSURL",
-      "attributes": [
-        "retain"
       ]
     },
     "status": {
@@ -310,10 +281,36 @@
         "nonatomic"
       ]
     },
+    "previewURL": {
+      "name": "previewURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "dateLastModified": {
       "name": "dateLastModified",
       "pointer": true,
       "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "locationOnDisk": {
+      "name": "locationOnDisk",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "canLibraryBeRemoved": {
+      "name": "canLibraryBeRemoved",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

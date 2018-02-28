@@ -4,7 +4,7 @@
   ],
   "classes": [
     "MSTiledLayer",
-    "NSArray"
+    "NSMapTable"
   ],
   "protocol": false,
   "className": "MSTileUpdateOperation",
@@ -50,9 +50,56 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "addRenderOperation:forTile:": {
+      "name": "addRenderOperation:forTile:",
+      "bridgedName": "addRenderOperation_forTile",
+      "args": [
+        {
+          "name": "addRenderOperation",
+          "type": "id"
+        },
+        {
+          "name": "forTile",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTiledLayer:": {
+      "name": "initWithTiledLayer:",
+      "bridgedName": "initWithTiledLayer",
+      "args": [
+        {
+          "name": "initWithTiledLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "operationsToTilesMapTable": {
+      "name": "operationsToTilesMapTable",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "finishTime": {
       "name": "finishTime",
       "pointer": false,
@@ -64,18 +111,9 @@
     "tiledLayer": {
       "name": "tiledLayer",
       "pointer": true,
-      "type": "MSTiledLayer",
+      "type": "__weak MSTiledLayer",
       "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "renderOperations": {
-      "name": "renderOperations",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "retain",
+        "readonly",
         "nonatomic"
       ]
     }

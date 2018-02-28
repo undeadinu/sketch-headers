@@ -72,16 +72,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawInRect:cache:": {
-      "name": "drawInRect:cache:",
-      "bridgedName": "drawInRect_cache",
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
       "args": [
         {
           "name": "drawInRect",
           "type": "struct CGRect"
         },
         {
-          "name": "cache",
+          "name": "context",
           "type": "id"
         }
       ],
@@ -118,13 +118,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "performActionWithRect:constrainProportions:": {
-      "name": "performActionWithRect:constrainProportions:",
-      "bridgedName": "performActionWithRect_constrainProportions",
+    "performActionWithRect:fromLayer:constrainProportions:": {
+      "name": "performActionWithRect:fromLayer:constrainProportions:",
+      "bridgedName": "performActionWithRect_fromLayer_constrainProportions",
       "args": [
         {
           "name": "performActionWithRect",
           "type": "struct CGRect"
+        },
+        {
+          "name": "fromLayer",
+          "type": "id"
         },
         {
           "name": "constrainProportions",
@@ -132,6 +136,44 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerAtPoint:modifierFlags:": {
+      "name": "layerAtPoint:modifierFlags:",
+      "bridgedName": "layerAtPoint_modifierFlags",
+      "args": [
+        {
+          "name": "layerAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawLayerHighlight": {
+      "name": "shouldDrawLayerHighlight",
+      "bridgedName": "shouldDrawLayerHighlight",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -245,6 +287,31 @@
       "pointer": false,
       "type": "struct CGRect",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "layerSelectionOptionsForInsertingFromExistingLayer": {
+      "name": "layerSelectionOptionsForInsertingFromExistingLayer",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "allowsInsertLayerFromExistingLayer": {
+      "name": "allowsInsertLayerFromExistingLayer",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "cursorForInsertingFromExisting": {
+      "name": "cursorForInsertingFromExisting",
+      "pointer": true,
+      "type": "NSCursor",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

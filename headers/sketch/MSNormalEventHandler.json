@@ -7,7 +7,7 @@
     "MSDragToMoveOrCopyGestureRecognizer",
     "MSDragToSelectGestureRecognizer",
     "MSLayer",
-    "MSLayerPositionDrawing",
+    "MSLayerMeasurementRenderer",
     "MSNormalEventContextualMenuBuilder",
     "MSNormalEventData",
     "MSOpacityKeyboardShortcutRecognizer",
@@ -56,6 +56,19 @@
         {
           "name": "zoomValueWillChangeTo",
           "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "name": "selectionDidChangeTo",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -339,16 +352,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawInRect:cache:": {
-      "name": "drawInRect:cache:",
-      "bridgedName": "drawInRect_cache",
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
       "args": [
         {
           "name": "drawInRect",
           "type": "struct CGRect"
         },
         {
-          "name": "cache",
+          "name": "context",
           "type": "id"
         }
       ],
@@ -722,24 +735,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setHighlightedLayer:": {
-      "name": "setHighlightedLayer:",
-      "bridgedName": "setHighlightedLayer",
+    "canHighlightLayer:": {
+      "name": "canHighlightLayer:",
+      "bridgedName": "canHighlightLayer",
       "args": [
         {
-          "name": "setHighlightedLayer",
+          "name": "canHighlightLayer",
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "highlightedLayer": {
-      "name": "highlightedLayer",
-      "bridgedName": "highlightedLayer",
-      "args": [],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -844,19 +849,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshPositionDrawingIfApplicable:": {
-      "name": "refreshPositionDrawingIfApplicable:",
-      "bridgedName": "refreshPositionDrawingIfApplicable",
-      "args": [
-        {
-          "name": "refreshPositionDrawingIfApplicable",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "absoluteMouseDragged:flags:": {
       "name": "absoluteMouseDragged:flags:",
       "bridgedName": "absoluteMouseDragged_flags",
@@ -871,23 +863,6 @@
         }
       ],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "selectLayer:extendSelection:": {
-      "name": "selectLayer:extendSelection:",
-      "bridgedName": "selectLayer_extendSelection",
-      "args": [
-        {
-          "name": "selectLayer",
-          "type": "id"
-        },
-        {
-          "name": "extendSelection",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1150,14 +1125,6 @@
         "nonatomic"
       ]
     },
-    "nextModifierKeyChangeShouldRefreshView": {
-      "name": "nextModifierKeyChangeShouldRefreshView",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "eventData": {
       "name": "eventData",
       "pointer": true,
@@ -1176,10 +1143,19 @@
         "nonatomic"
       ]
     },
-    "positionDrawing": {
-      "name": "positionDrawing",
+    "hoveredLayer": {
+      "name": "hoveredLayer",
       "pointer": true,
-      "type": "MSLayerPositionDrawing",
+      "type": "MSLayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "measurementRenderer": {
+      "name": "measurementRenderer",
+      "pointer": true,
+      "type": "MSLayerMeasurementRenderer",
       "attributes": [
         "readonly",
         "nonatomic"

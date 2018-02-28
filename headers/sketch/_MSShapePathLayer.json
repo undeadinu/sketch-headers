@@ -3,7 +3,8 @@
     "MSLayer.h"
   ],
   "classes": [
-    "MSShapePath"
+    "NSArray",
+    "NSMutableArray"
   ],
   "protocol": false,
   "className": "_MSShapePathLayer",
@@ -85,6 +86,181 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "moveCurvePointIndex:toIndex:": {
+      "name": "moveCurvePointIndex:toIndex:",
+      "bridgedName": "moveCurvePointIndex_toIndex",
+      "args": [
+        {
+          "name": "moveCurvePointIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllCurvePoints": {
+      "name": "removeAllCurvePoints",
+      "bridgedName": "removeAllCurvePoints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeCurvePointsAtIndexes:": {
+      "name": "removeCurvePointsAtIndexes:",
+      "bridgedName": "removeCurvePointsAtIndexes",
+      "args": [
+        {
+          "name": "removeCurvePointsAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeCurvePointAtIndex:": {
+      "name": "removeCurvePointAtIndex:",
+      "bridgedName": "removeCurvePointAtIndex",
+      "args": [
+        {
+          "name": "removeCurvePointAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeCurvePoint:": {
+      "name": "removeCurvePoint:",
+      "bridgedName": "removeCurvePoint",
+      "args": [
+        {
+          "name": "removeCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCurvePoints:afterCurvePoint:": {
+      "name": "insertCurvePoints:afterCurvePoint:",
+      "bridgedName": "insertCurvePoints_afterCurvePoint",
+      "args": [
+        {
+          "name": "insertCurvePoints",
+          "type": "id"
+        },
+        {
+          "name": "afterCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCurvePoint:afterCurvePoint:": {
+      "name": "insertCurvePoint:afterCurvePoint:",
+      "bridgedName": "insertCurvePoint_afterCurvePoint",
+      "args": [
+        {
+          "name": "insertCurvePoint",
+          "type": "id"
+        },
+        {
+          "name": "afterCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCurvePoints:beforeCurvePoint:": {
+      "name": "insertCurvePoints:beforeCurvePoint:",
+      "bridgedName": "insertCurvePoints_beforeCurvePoint",
+      "args": [
+        {
+          "name": "insertCurvePoints",
+          "type": "id"
+        },
+        {
+          "name": "beforeCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCurvePoint:beforeCurvePoint:": {
+      "name": "insertCurvePoint:beforeCurvePoint:",
+      "bridgedName": "insertCurvePoint_beforeCurvePoint",
+      "args": [
+        {
+          "name": "insertCurvePoint",
+          "type": "id"
+        },
+        {
+          "name": "beforeCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertCurvePoint:atIndex:": {
+      "name": "insertCurvePoint:atIndex:",
+      "bridgedName": "insertCurvePoint_atIndex",
+      "args": [
+        {
+          "name": "insertCurvePoint",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addCurvePoints:": {
+      "name": "addCurvePoints:",
+      "bridgedName": "addCurvePoints",
+      "args": [
+        {
+          "name": "addCurvePoints",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addCurvePoint:": {
+      "name": "addCurvePoint:",
+      "bridgedName": "addCurvePoint",
+      "args": [
+        {
+          "name": "addCurvePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initializeUnsetObjectPropertiesWithDefaults": {
       "name": "initializeUnsetObjectPropertiesWithDefaults",
       "bridgedName": "initializeUnsetObjectPropertiesWithDefaults",
@@ -150,12 +326,28 @@
     }
   },
   "properties": {
-    "path": {
-      "name": "path",
+    "points": {
+      "name": "points",
       "pointer": true,
-      "type": "MSShapePath",
+      "type": "NSArray",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "pointRadiusBehaviour": {
+      "name": "pointRadiusBehaviour",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "isClosed": {
+      "name": "isClosed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
         "nonatomic"
       ]
     },

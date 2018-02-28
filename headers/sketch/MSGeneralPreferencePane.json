@@ -2,7 +2,10 @@
   "imports": [
     "MSPreferencePane.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSPopUpButton",
+    "NSTextField"
+  ],
   "protocol": false,
   "className": "MSGeneralPreferencePane",
   "extends": "MSPreferencePane",
@@ -31,7 +34,74 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickDefaultColorSpace:": {
+      "name": "pickDefaultColorSpace:",
+      "bridgedName": "pickDefaultColorSpace",
+      "args": [
+        {
+          "name": "pickDefaultColorSpace",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshColorSpaceDescription": {
+      "name": "refreshColorSpaceDescription",
+      "bridgedName": "refreshColorSpaceDescription",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "analyticsAction:": {
+      "name": "analyticsAction:",
+      "bridgedName": "analyticsAction",
+      "args": [
+        {
+          "name": "analyticsAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "defaultColorSpacePopUpButton": {
+      "name": "defaultColorSpacePopUpButton",
+      "pointer": true,
+      "type": "__weak NSPopUpButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "defaultColorSpaceDescriptionLabel": {
+      "name": "defaultColorSpaceDescriptionLabel",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
 }

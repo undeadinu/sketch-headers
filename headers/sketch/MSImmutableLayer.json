@@ -1,6 +1,7 @@
 {
   "imports": [
     "_MSImmutableLayer.h",
+    "MSFlowContainmentCheck.h",
     "MSLayer.h",
     "MSLayerContainment.h",
     "MSLayerTraits.h"
@@ -8,6 +9,8 @@
   "classes": [
     "MSImmutableStyle",
     "NSAffineTransform",
+    "NSArray",
+    "NSSet",
     "NSString"
   ],
   "protocol": false,
@@ -15,6 +18,7 @@
   "extends": "_MSImmutableLayer",
   "interfaces": [
     "MSLayerContainment",
+    "MSFlowContainmentCheck",
     "MSLayer",
     "MSLayerTraits"
   ],
@@ -64,27 +68,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "transformInfluenceRectToParent:": {
-      "name": "transformInfluenceRectToParent:",
-      "bridgedName": "transformInfluenceRectToParent",
-      "args": [
-        {
-          "name": "transformInfluenceRectToParent",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "calculateInfluenceRectForFrame": {
-      "name": "calculateInfluenceRectForFrame",
-      "bridgedName": "calculateInfluenceRectForFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "overlayInfluenceRectForBounds": {
       "name": "overlayInfluenceRectForBounds",
       "bridgedName": "overlayInfluenceRectForBounds",
@@ -93,10 +76,99 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "calculateInfluenceRectForBounds": {
-      "name": "calculateInfluenceRectForBounds",
-      "bridgedName": "calculateInfluenceRectForBounds",
-      "args": [],
+    "calculateInfluenceRectForBoundsInDocument:cache:visitedSymbols:": {
+      "name": "calculateInfluenceRectForBoundsInDocument:cache:visitedSymbols:",
+      "bridgedName": "calculateInfluenceRectForBoundsInDocument_cache_visitedSymbols",
+      "args": [
+        {
+          "name": "calculateInfluenceRectForBoundsInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        },
+        {
+          "name": "visitedSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForBoundsInDocument:cache:visitedSymbols:": {
+      "name": "influenceRectForBoundsInDocument:cache:visitedSymbols:",
+      "bridgedName": "influenceRectForBoundsInDocument_cache_visitedSymbols",
+      "args": [
+        {
+          "name": "influenceRectForBoundsInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        },
+        {
+          "name": "visitedSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForFrameInDocument:cache:visitedSymbols:": {
+      "name": "influenceRectForFrameInDocument:cache:visitedSymbols:",
+      "bridgedName": "influenceRectForFrameInDocument_cache_visitedSymbols",
+      "args": [
+        {
+          "name": "influenceRectForFrameInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        },
+        {
+          "name": "visitedSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForBoundsInDocument:cache:": {
+      "name": "influenceRectForBoundsInDocument:cache:",
+      "bridgedName": "influenceRectForBoundsInDocument_cache",
+      "args": [
+        {
+          "name": "influenceRectForBoundsInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForFrameInDocument:cache:": {
+      "name": "influenceRectForFrameInDocument:cache:",
+      "bridgedName": "influenceRectForFrameInDocument_cache",
+      "args": [
+        {
+          "name": "influenceRectForFrameInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        }
+      ],
       "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
@@ -157,12 +229,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteInfluenceRectForAncestorGroups:": {
-      "name": "absoluteInfluenceRectForAncestorGroups:",
-      "bridgedName": "absoluteInfluenceRectForAncestorGroups",
+    "absoluteInfluenceRectForAncestorGroups:document:cache:": {
+      "name": "absoluteInfluenceRectForAncestorGroups:document:cache:",
+      "bridgedName": "absoluteInfluenceRectForAncestorGroups_document_cache",
       "args": [
         {
           "name": "absoluteInfluenceRectForAncestorGroups",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "cache",
           "type": "id"
         }
       ],
@@ -209,6 +289,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "childrenIncludingSelf:": {
+      "name": "childrenIncludingSelf:",
+      "bridgedName": "childrenIncludingSelf",
+      "args": [
+        {
+          "name": "childrenIncludingSelf",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "children": {
       "name": "children",
       "bridgedName": "children",
@@ -233,11 +326,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasBitmapStylesEnabled": {
-      "name": "hasBitmapStylesEnabled",
-      "bridgedName": "hasBitmapStylesEnabled",
-      "args": [],
-      "returns": "BOOL",
+    "layerWithID:": {
+      "name": "layerWithID:",
+      "bridgedName": "layerWithID",
+      "args": [
+        {
+          "name": "layerWithID",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -275,16 +373,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addPreviewWithBezier:toCache:": {
-      "name": "addPreviewWithBezier:toCache:",
-      "bridgedName": "addPreviewWithBezier_toCache",
+    "addPreviewWithBezier:documentData:cache:": {
+      "name": "addPreviewWithBezier:documentData:cache:",
+      "bridgedName": "addPreviewWithBezier_documentData_cache",
       "args": [
         {
           "name": "addPreviewWithBezier",
           "type": "id"
         },
         {
-          "name": "toCache",
+          "name": "documentData",
+          "type": "id"
+        },
+        {
+          "name": "cache",
           "type": "id"
         }
       ],
@@ -292,12 +394,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "previewImageWithBezier:selected:": {
-      "name": "previewImageWithBezier:selected:",
-      "bridgedName": "previewImageWithBezier_selected",
+    "previewImageWithBezier:documentData:selected:": {
+      "name": "previewImageWithBezier:documentData:selected:",
+      "bridgedName": "previewImageWithBezier_documentData_selected",
       "args": [
         {
           "name": "previewImageWithBezier",
+          "type": "id"
+        },
+        {
+          "name": "documentData",
           "type": "id"
         },
         {
@@ -309,12 +415,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "previewFillColor:": {
-      "name": "previewFillColor:",
-      "bridgedName": "previewFillColor",
+    "previewFillColorForDocumentData:selected:": {
+      "name": "previewFillColorForDocumentData:selected:",
+      "bridgedName": "previewFillColorForDocumentData_selected",
       "args": [
         {
-          "name": "previewFillColor",
+          "name": "previewFillColorForDocumentData",
+          "type": "id"
+        },
+        {
+          "name": "selected",
           "type": "BOOL"
         }
       ],
@@ -322,12 +432,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "previewBorderColor:": {
-      "name": "previewBorderColor:",
-      "bridgedName": "previewBorderColor",
+    "previewBorderColorForDocumentData:selected:": {
+      "name": "previewBorderColorForDocumentData:selected:",
+      "bridgedName": "previewBorderColorForDocumentData_selected",
       "args": [
         {
-          "name": "previewBorderColor",
+          "name": "previewBorderColorForDocumentData",
+          "type": "id"
+        },
+        {
+          "name": "selected",
           "type": "BOOL"
         }
       ],
@@ -335,13 +449,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawPreviewInRect:selected:bezier:": {
-      "name": "drawPreviewInRect:selected:bezier:",
-      "bridgedName": "drawPreviewInRect_selected_bezier",
+    "drawPreviewInRect:documentData:selected:bezier:": {
+      "name": "drawPreviewInRect:documentData:selected:bezier:",
+      "bridgedName": "drawPreviewInRect_documentData_selected_bezier",
       "args": [
         {
           "name": "drawPreviewInRect",
           "type": "struct CGRect"
+        },
+        {
+          "name": "documentData",
+          "type": "id"
         },
         {
           "name": "selected",
@@ -356,12 +474,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshPreviewImagesWithCache:": {
-      "name": "refreshPreviewImagesWithCache:",
-      "bridgedName": "refreshPreviewImagesWithCache",
+    "refreshPreviewImagesWithDocumentData:cache:": {
+      "name": "refreshPreviewImagesWithDocumentData:cache:",
+      "bridgedName": "refreshPreviewImagesWithDocumentData_cache",
       "args": [
         {
-          "name": "refreshPreviewImagesWithCache",
+          "name": "refreshPreviewImagesWithDocumentData",
+          "type": "id"
+        },
+        {
+          "name": "cache",
           "type": "id"
         }
       ],
@@ -369,15 +491,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "previewImagesRequireRefreshWithCache:": {
-      "name": "previewImagesRequireRefreshWithCache:",
-      "bridgedName": "previewImagesRequireRefreshWithCache",
+    "previewImagesRequireRefreshWithDocumentData:cache:": {
+      "name": "previewImagesRequireRefreshWithDocumentData:cache:",
+      "bridgedName": "previewImagesRequireRefreshWithDocumentData_cache",
       "args": [
         {
-          "name": "previewImagesRequireRefreshWithCache",
+          "name": "previewImagesRequireRefreshWithDocumentData",
+          "type": "id"
+        },
+        {
+          "name": "cache",
           "type": "id"
         }
       ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includeInManifest": {
+      "name": "includeInManifest",
+      "bridgedName": "includeInManifest",
+      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -577,6 +711,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "containsFlowWithSymbolsFromDocument:visited:": {
+      "name": "containsFlowWithSymbolsFromDocument:visited:",
+      "bridgedName": "containsFlowWithSymbolsFromDocument_visited",
+      "args": [
+        {
+          "name": "containsFlowWithSymbolsFromDocument",
+          "type": "id"
+        },
+        {
+          "name": "visited",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsFlowWithSymbolsFromDocument:": {
+      "name": "containsFlowWithSymbolsFromDocument:",
+      "bridgedName": "containsFlowWithSymbolsFromDocument",
+      "args": [
+        {
+          "name": "containsFlowWithSymbolsFromDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "overridePointsWithParent:": {
       "name": "overridePointsWithParent:",
       "bridgedName": "overridePointsWithParent",
@@ -600,6 +764,57 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canOverridePoint:": {
+      "name": "canOverridePoint:",
+      "bridgedName": "canOverridePoint",
+      "args": [
+        {
+          "name": "canOverridePoint",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayRectForAncestors:document:": {
+      "name": "overlayRectForAncestors:document:",
+      "bridgedName": "overlayRectForAncestors_document",
+      "args": [
+        {
+          "name": "overlayRectForAncestors",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForAncestors:document:cache:": {
+      "name": "influenceRectForAncestors:document:cache:",
+      "bridgedName": "influenceRectForAncestors_document_cache",
+      "args": [
+        {
+          "name": "influenceRectForAncestors",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -916,24 +1131,6 @@
     }
   },
   "properties": {
-    "influenceRectForFrame": {
-      "name": "influenceRectForFrame",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "influenceRectForBounds": {
-      "name": "influenceRectForBounds",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "traits": {
       "name": "traits",
       "pointer": false,
@@ -956,6 +1153,24 @@
       "name": "influenceRectEdgePaddingsThatCascadeToContainedLayers",
       "pointer": false,
       "type": "struct BCEdgePaddings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "influenceRectForFrame": {
+      "name": "influenceRectForFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "influenceRectForBounds": {
+      "name": "influenceRectForBounds",
+      "pointer": false,
+      "type": "struct CGRect",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -1055,6 +1270,33 @@
       "name": "isLayerExportable",
       "pointer": false,
       "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "manifestLayers": {
+      "name": "manifestLayers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "unavailableFontNames": {
+      "name": "unavailableFontNames",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "fontNames": {
+      "name": "fontNames",
+      "pointer": true,
+      "type": "NSSet",
       "attributes": [
         "readonly",
         "nonatomic"

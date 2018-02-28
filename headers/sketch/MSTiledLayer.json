@@ -124,14 +124,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawPixelated": {
-      "name": "shouldDrawPixelated",
-      "bridgedName": "shouldDrawPixelated",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "clear": {
       "name": "clear",
       "bridgedName": "clear",
@@ -245,6 +237,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "tileContentLayerScale": {
+      "name": "tileContentLayerScale",
+      "bridgedName": "tileContentLayerScale",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "removeOffscreenTiles": {
       "name": "removeOffscreenTiles",
       "bridgedName": "removeOffscreenTiles",
@@ -266,6 +266,14 @@
       "bridgedName": "adaptToPixelGridChange",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawPixelated": {
+      "name": "shouldDrawPixelated",
+      "bridgedName": "shouldDrawPixelated",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -299,9 +307,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshContentForPage:document:": {
-      "name": "refreshContentForPage:document:",
-      "bridgedName": "refreshContentForPage_document",
+    "refreshContentForPage:document:quality:": {
+      "name": "refreshContentForPage:document:quality:",
+      "bridgedName": "refreshContentForPage_document_quality",
       "args": [
         {
           "name": "refreshContentForPage",
@@ -310,6 +318,10 @@
         {
           "name": "document",
           "type": "id"
+        },
+        {
+          "name": "quality",
+          "type": "long long"
         }
       ],
       "returns": "void",
@@ -329,9 +341,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "refreshContentRect:forPage:document:": {
-      "name": "refreshContentRect:forPage:document:",
-      "bridgedName": "refreshContentRect_forPage_document",
+    "refreshContentRect:forPage:document:quality:": {
+      "name": "refreshContentRect:forPage:document:quality:",
+      "bridgedName": "refreshContentRect_forPage_document_quality",
       "args": [
         {
           "name": "refreshContentRect",
@@ -344,6 +356,10 @@
         {
           "name": "document",
           "type": "id"
+        },
+        {
+          "name": "quality",
+          "type": "long long"
         }
       ],
       "returns": "void",
@@ -552,6 +568,15 @@
       "pointer": false,
       "type": "double",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "renderingQuality": {
+      "name": "renderingQuality",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

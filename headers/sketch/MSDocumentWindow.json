@@ -1,15 +1,19 @@
 {
   "imports": [
-    "NSWindow.h"
+    "NSWindow.h",
+    "MSInterfaceTheme.h"
   ],
   "classes": [
-    "NSButton",
-    "NSEvent"
+    "BCWindowBadge",
+    "NSEvent",
+    "NSString"
   ],
   "protocol": false,
   "className": "MSDocumentWindow",
   "extends": "NSWindow",
-  "interfaces": [],
+  "interfaces": [
+    "MSInterfaceTheme"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -122,10 +126,44 @@
     "titleBarBadge": {
       "name": "titleBarBadge",
       "pointer": true,
-      "type": "NSButton",
+      "type": "BCWindowBadge",
       "attributes": [
         "retain",
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

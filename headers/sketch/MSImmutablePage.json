@@ -21,6 +21,19 @@
     "MSImmutableRootLayer"
   ],
   "methods": {
+    "traitsForPropertyName:": {
+      "name": "traitsForPropertyName:",
+      "bridgedName": "traitsForPropertyName",
+      "args": [
+        {
+          "name": "traitsForPropertyName",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "traits": {
       "name": "traits",
       "bridgedName": "traits",
@@ -134,6 +147,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "prepareDrawingInContext:inBlock:": {
+      "name": "prepareDrawingInContext:inBlock:",
+      "bridgedName": "prepareDrawingInContext_inBlock",
+      "args": [
+        {
+          "name": "prepareDrawingInContext",
+          "type": "id"
+        },
+        {
+          "name": "inBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "transparencyLayerUseRectCondition": {
       "name": "transparencyLayerUseRectCondition",
       "bridgedName": "transparencyLayerUseRectCondition",
@@ -160,23 +190,6 @@
       "bridgedName": "shouldRenderInTransparencyLayer",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "prepareDrawingInContext:inBlock:": {
-      "name": "prepareDrawingInContext:inBlock:",
-      "bridgedName": "prepareDrawingInContext_inBlock",
-      "args": [
-        {
-          "name": "prepareDrawingInContext",
-          "type": "id"
-        },
-        {
-          "name": "inBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -256,6 +269,15 @@
         "nonatomic"
       ]
     },
+    "hasArtboards": {
+      "name": "hasArtboards",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "artboards": {
       "name": "artboards",
       "pointer": true,
@@ -269,6 +291,24 @@
       "name": "contentBounds",
       "pointer": false,
       "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isFlowHome": {
+      "name": "isFlowHome",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "webExporterShouldIncludeBackgroundColor": {
+      "name": "webExporterShouldIncludeBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

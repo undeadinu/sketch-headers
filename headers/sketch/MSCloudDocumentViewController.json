@@ -1,22 +1,18 @@
 {
   "imports": [
-    "MSCloudViewController.h",
-    "MSClickableTextFieldDelegate.h"
+    "MSCloudBaseViewController.h"
   ],
   "classes": [
+    "MSCursorButton",
     "NSButton",
-    "NSLayoutConstraint",
-    "NSProgressIndicator",
-    "NSString",
-    "NSTextField",
-    "NSTimer"
+    "NSStackView",
+    "NSTimer",
+    "SCKShare"
   ],
   "protocol": false,
   "className": "MSCloudDocumentViewController",
-  "extends": "MSCloudViewController",
-  "interfaces": [
-    "MSClickableTextFieldDelegate"
-  ],
+  "extends": "MSCloudBaseViewController",
+  "interfaces": [],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -26,12 +22,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "textFieldDidClick:": {
-      "name": "textFieldDidClick:",
-      "bridgedName": "textFieldDidClick",
+    "openShareSettings:": {
+      "name": "openShareSettings:",
+      "bridgedName": "openShareSettings",
       "args": [
         {
-          "name": "textFieldDidClick",
+          "name": "openShareSettings",
           "type": "id"
         }
       ],
@@ -39,25 +35,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "textFieldCanBeClicked:": {
-      "name": "textFieldCanBeClicked:",
-      "bridgedName": "textFieldCanBeClicked",
+    "openPublicURL:": {
+      "name": "openPublicURL:",
+      "bridgedName": "openPublicURL",
       "args": [
         {
-          "name": "textFieldCanBeClicked",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "cancelUpload:": {
-      "name": "cancelUpload:",
-      "bridgedName": "cancelUpload",
-      "args": [
-        {
-          "name": "cancelUpload",
+          "name": "openPublicURL",
           "type": "id"
         }
       ],
@@ -65,20 +48,46 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateDescriptionLabel": {
-      "name": "updateDescriptionLabel",
-      "bridgedName": "updateDescriptionLabel",
+    "update:": {
+      "name": "update:",
+      "bridgedName": "update",
+      "args": [
+        {
+          "name": "update",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "upload:": {
+      "name": "upload:",
+      "bridgedName": "upload",
+      "args": [
+        {
+          "name": "upload",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadTitleLabel": {
+      "name": "reloadTitleLabel",
+      "bridgedName": "reloadTitleLabel",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "scheduledLabelUpdateFired:": {
-      "name": "scheduledLabelUpdateFired:",
-      "bridgedName": "scheduledLabelUpdateFired",
+    "scheduledTimeLabelUpdateFired:": {
+      "name": "scheduledTimeLabelUpdateFired:",
+      "bridgedName": "scheduledTimeLabelUpdateFired",
       "args": [
         {
-          "name": "scheduledLabelUpdateFired",
+          "name": "scheduledTimeLabelUpdateFired",
           "type": "id"
         }
       ],
@@ -86,85 +95,33 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "scheduleLabelUpdate": {
-      "name": "scheduleLabelUpdate",
-      "bridgedName": "scheduleLabelUpdate",
+    "scheduleTimeLabelUpdate": {
+      "name": "scheduleTimeLabelUpdate",
+      "bridgedName": "scheduleTimeLabelUpdate",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateViewSize": {
-      "name": "updateViewSize",
-      "bridgedName": "updateViewSize",
+    "reloadTimeLabel": {
+      "name": "reloadTimeLabel",
+      "bridgedName": "reloadTimeLabel",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateUploadProgress": {
-      "name": "updateUploadProgress",
-      "bridgedName": "updateUploadProgress",
+    "reloadData": {
+      "name": "reloadData",
+      "bridgedName": "reloadData",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "cloudControllerDidChangeUploadingNotification:": {
-      "name": "cloudControllerDidChangeUploadingNotification:",
-      "bridgedName": "cloudControllerDidChangeUploadingNotification",
-      "args": [
-        {
-          "name": "cloudControllerDidChangeUploadingNotification",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "uploadProgressDidChangeNotification:": {
-      "name": "uploadProgressDidChangeNotification:",
-      "bridgedName": "uploadProgressDidChangeNotification",
-      "args": [
-        {
-          "name": "uploadProgressDidChangeNotification",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "documentCloudShareDidChangeNotification:": {
-      "name": "documentCloudShareDidChangeNotification:",
-      "bridgedName": "documentCloudShareDidChangeNotification",
-      "args": [
-        {
-          "name": "documentCloudShareDidChangeNotification",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setCloudController:": {
-      "name": "setCloudController:",
-      "bridgedName": "setCloudController",
-      "args": [
-        {
-          "name": "setCloudController",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateLayoutConstraints": {
-      "name": "updateLayoutConstraints",
-      "bridgedName": "updateLayoutConstraints",
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -186,31 +143,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
+    "edgeInsets": {
+      "name": "edgeInsets",
+      "bridgedName": "edgeInsets",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "initWithCoder:": {
-      "name": "initWithCoder:",
-      "bridgedName": "initWithCoder",
-      "args": [
-        {
-          "name": "initWithCoder",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
+      "returns": "struct NSEdgeInsets",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
-    "labelUpdateTimer": {
-      "name": "labelUpdateTimer",
+    "timeLabelUpdateTimer": {
+      "name": "timeLabelUpdateTimer",
       "pointer": true,
       "type": "NSTimer",
       "attributes": [
@@ -218,8 +162,8 @@
         "nonatomic"
       ]
     },
-    "cancelButton": {
-      "name": "cancelButton",
+    "settingsButton": {
+      "name": "settingsButton",
       "pointer": true,
       "type": "NSButton",
       "attributes": [
@@ -227,100 +171,49 @@
         "nonatomic"
       ]
     },
-    "uploadStatusLabel": {
-      "name": "uploadStatusLabel",
+    "linkButton": {
+      "name": "linkButton",
       "pointer": true,
-      "type": "NSTextField",
+      "type": "MSCursorButton",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "uploadProgressIndicator": {
-      "name": "uploadProgressIndicator",
+    "updateButton": {
+      "name": "updateButton",
       "pointer": true,
-      "type": "NSProgressIndicator",
+      "type": "NSButton",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "descriptionBottomSpacingConstraint": {
-      "name": "descriptionBottomSpacingConstraint",
+    "uploadButton": {
+      "name": "uploadButton",
       "pointer": true,
-      "type": "NSLayoutConstraint",
+      "type": "NSButton",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "uploadDescriptionSpacingConstraint": {
-      "name": "uploadDescriptionSpacingConstraint",
+    "buttonStackView": {
+      "name": "buttonStackView",
       "pointer": true,
-      "type": "NSLayoutConstraint",
+      "type": "NSStackView",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "progressIndicator": {
-      "name": "progressIndicator",
+    "share": {
+      "name": "share",
       "pointer": true,
-      "type": "NSProgressIndicator",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "descriptionLabel": {
-      "name": "descriptionLabel",
-      "pointer": true,
-      "type": "NSTextField",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "isUploading": {
-      "name": "isUploading",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "debugDescription": {
-      "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
+      "type": "SCKShare",
       "attributes": [
         "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
+        "nonatomic"
       ]
     }
   }

@@ -1,28 +1,32 @@
 {
   "imports": [
-    "MSPopoverAction.h"
+    "MSDocumentAction.h",
+    "MSWindowBadgeAction.h"
   ],
   "classes": [
-    "NSStoryboard",
+    "NSAttributedString",
+    "NSColor",
     "NSString",
     "SMKMirrorController"
   ],
   "protocol": false,
   "className": "MSMirrorAction",
-  "extends": "MSPopoverAction",
-  "interfaces": [],
+  "extends": "MSDocumentAction",
+  "interfaces": [
+    "MSWindowBadgeAction"
+  ],
   "methods": {
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
+    "availableClients": {
+      "name": "availableClients",
+      "bridgedName": "availableClients",
       "args": [],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tooltip": {
-      "name": "tooltip",
-      "bridgedName": "tooltip",
+    "menuItems": {
+      "name": "menuItems",
+      "bridgedName": "menuItems",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -36,41 +40,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "showInToolbar": {
-      "name": "showInToolbar",
-      "bridgedName": "showInToolbar",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "popoverViewController": {
-      "name": "popoverViewController",
-      "bridgedName": "popoverViewController",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "validateToolbarItem:": {
-      "name": "validateToolbarItem:",
-      "bridgedName": "validateToolbarItem",
+    "doPerformAction:": {
+      "name": "doPerformAction:",
+      "bridgedName": "doPerformAction",
       "args": [
         {
-          "name": "validateToolbarItem",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "connectionControllerDidChangeConnectionsNotification:": {
-      "name": "connectionControllerDidChangeConnectionsNotification:",
-      "bridgedName": "connectionControllerDidChangeConnectionsNotification",
-      "args": [
-        {
-          "name": "connectionControllerDidChangeConnectionsNotification",
+          "name": "doPerformAction",
           "type": "id"
         }
       ],
@@ -78,23 +53,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "showMirrorPopover:": {
-      "name": "showMirrorPopover:",
-      "bridgedName": "showMirrorPopover",
+    "mirrorClientsDidChangeNotification:": {
+      "name": "mirrorClientsDidChangeNotification:",
+      "bridgedName": "mirrorClientsDidChangeNotification",
       "args": [
         {
-          "name": "showMirrorPopover",
+          "name": "mirrorClientsDidChangeNotification",
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -114,24 +81,6 @@
     }
   },
   "properties": {
-    "storyboard": {
-      "name": "storyboard",
-      "pointer": true,
-      "type": "NSStoryboard",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "imageName": {
-      "name": "imageName",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "mirrorController": {
       "name": "mirrorController",
       "pointer": true,
@@ -139,6 +88,67 @@
       "attributes": [
         "readonly",
         "nonatomic"
+      ]
+    },
+    "badgeTint": {
+      "name": "badgeTint",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "numberOfBadges": {
+      "name": "numberOfBadges",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "badgeTitle": {
+      "name": "badgeTitle",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

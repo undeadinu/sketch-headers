@@ -67,11 +67,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "createAssetLibraryFolder": {
+      "name": "createAssetLibraryFolder",
+      "bridgedName": "createAssetLibraryFolder",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "librariesWithUpdates": {
       "name": "librariesWithUpdates",
       "bridgedName": "librariesWithUpdates",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRemoteLibraryFromAppcastURL:withCompletionHandler:": {
+      "name": "addRemoteLibraryFromAppcastURL:withCompletionHandler:",
+      "bridgedName": "addRemoteLibraryFromAppcastURL_withCompletionHandler",
+      "args": [
+        {
+          "name": "addRemoteLibraryFromAppcastURL",
+          "type": "id"
+        },
+        {
+          "name": "withCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -92,9 +117,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "startDownloadingAssetLibrary:progressHandler:completionHandler:": {
-      "name": "startDownloadingAssetLibrary:progressHandler:completionHandler:",
-      "bridgedName": "startDownloadingAssetLibrary_progressHandler_completionHandler",
+    "startDownloadingAssetLibrary:progressHandler:downloadCompletionHandler:completionHandler:": {
+      "name": "startDownloadingAssetLibrary:progressHandler:downloadCompletionHandler:completionHandler:",
+      "bridgedName": "startDownloadingAssetLibrary_progressHandler_downloadCompletionHandler_completionHandler",
       "args": [
         {
           "name": "startDownloadingAssetLibrary",
@@ -102,6 +127,10 @@
         },
         {
           "name": "progressHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "downloadCompletionHandler",
           "type": "CDUnknownBlockType"
         },
         {
@@ -130,12 +159,29 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "libraryForSymbol:": {
-      "name": "libraryForSymbol:",
-      "bridgedName": "libraryForSymbol",
+    "generatePreviewImageForLibrary:completionHandler:": {
+      "name": "generatePreviewImageForLibrary:completionHandler:",
+      "bridgedName": "generatePreviewImageForLibrary_completionHandler",
       "args": [
         {
-          "name": "libraryForSymbol",
+          "name": "generatePreviewImageForLibrary",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "libraryForShareableObject:": {
+      "name": "libraryForShareableObject:",
+      "bridgedName": "libraryForShareableObject",
+      "args": [
+        {
+          "name": "libraryForShareableObject",
           "type": "id"
         }
       ],
@@ -410,12 +456,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeDelegate:": {
-      "name": "removeDelegate:",
-      "bridgedName": "removeDelegate",
+    "removeRemoteAssetLibrary:": {
+      "name": "removeRemoteAssetLibrary:",
+      "bridgedName": "removeRemoteAssetLibrary",
       "args": [
         {
-          "name": "removeDelegate",
+          "name": "removeRemoteAssetLibrary",
           "type": "id"
         }
       ],
@@ -423,12 +469,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addDelegate:": {
-      "name": "addDelegate:",
-      "bridgedName": "addDelegate",
+    "removeUserAssetLibrary:": {
+      "name": "removeUserAssetLibrary:",
+      "bridgedName": "removeUserAssetLibrary",
       "args": [
         {
-          "name": "addDelegate",
+          "name": "removeUserAssetLibrary",
           "type": "id"
         }
       ],

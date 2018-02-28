@@ -3,7 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
-    "MSImmutableModelObject",
+    "MSImmutableDocumentData",
     "NSMutableArray"
   ],
   "protocol": false,
@@ -82,10 +82,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "contentDirtyDiffRect": {
-      "name": "contentDirtyDiffRect",
-      "bridgedName": "contentDirtyDiffRect",
-      "args": [],
+    "contentDirtyDiffRectWithCache:": {
+      "name": "contentDirtyDiffRectWithCache:",
+      "bridgedName": "contentDirtyDiffRectWithCache",
+      "args": [
+        {
+          "name": "contentDirtyDiffRectWithCache",
+          "type": "id"
+        }
+      ],
       "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
@@ -157,20 +162,41 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithFirstObject:secondObject:": {
-      "name": "initWithFirstObject:secondObject:",
-      "bridgedName": "initWithFirstObject_secondObject",
+    "initWithFirstDocument:secondDocument:": {
+      "name": "initWithFirstDocument:secondDocument:",
+      "bridgedName": "initWithFirstDocument_secondDocument",
       "args": [
         {
-          "name": "initWithFirstObject",
+          "name": "initWithFirstDocument",
           "type": "id"
         },
         {
-          "name": "secondObject",
+          "name": "secondDocument",
           "type": "id"
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subTreeRootContainsSymbolChange:": {
+      "name": "subTreeRootContainsSymbolChange:",
+      "bridgedName": "subTreeRootContainsSymbolChange",
+      "args": [
+        {
+          "name": "subTreeRootContainsSymbolChange",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolsChanged": {
+      "name": "symbolsChanged",
+      "bridgedName": "symbolsChanged",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     }
@@ -203,21 +229,21 @@
         "nonatomic"
       ]
     },
-    "secondObject": {
-      "name": "secondObject",
+    "secondDoc": {
+      "name": "secondDoc",
       "pointer": true,
-      "type": "MSImmutableModelObject",
+      "type": "MSImmutableDocumentData",
       "attributes": [
-        "readonly",
+        "retain",
         "nonatomic"
       ]
     },
-    "firstObject": {
-      "name": "firstObject",
+    "firstDoc": {
+      "name": "firstDoc",
       "pointer": true,
-      "type": "MSImmutableModelObject",
+      "type": "MSImmutableDocumentData",
       "attributes": [
-        "readonly",
+        "retain",
         "nonatomic"
       ]
     }

@@ -1,6 +1,7 @@
 {
   "imports": [
-    "_MSImmutableSymbolInstance.h"
+    "_MSImmutableSymbolInstance.h",
+    "MSFlowContainmentCheck.h"
   ],
   "classes": [
     "NSDictionary"
@@ -8,7 +9,9 @@
   "protocol": false,
   "className": "MSImmutableSymbolInstance",
   "extends": "_MSImmutableSymbolInstance",
-  "interfaces": [],
+  "interfaces": [
+    "MSFlowContainmentCheck"
+  ],
   "methods": {
     "defaultName": {
       "name": "defaultName",
@@ -26,14 +29,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "masterInfluenceEdgePadding": {
-      "name": "masterInfluenceEdgePadding",
-      "bridgedName": "masterInfluenceEdgePadding",
-      "args": [],
-      "returns": "struct BCEdgePaddings",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "scale": {
       "name": "scale",
       "bridgedName": "scale",
@@ -50,10 +45,56 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "calculateInfluenceRectForBounds": {
-      "name": "calculateInfluenceRectForBounds",
-      "bridgedName": "calculateInfluenceRectForBounds",
+    "influenceRectForBounds": {
+      "name": "influenceRectForBounds",
+      "bridgedName": "influenceRectForBounds",
       "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paddedInfluenceRect:withPaddingsFromMasterInDocument:cache:visitedSymbols:": {
+      "name": "paddedInfluenceRect:withPaddingsFromMasterInDocument:cache:visitedSymbols:",
+      "bridgedName": "paddedInfluenceRect_withPaddingsFromMasterInDocument_cache_visitedSymbols",
+      "args": [
+        {
+          "name": "paddedInfluenceRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "withPaddingsFromMasterInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        },
+        {
+          "name": "visitedSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForBoundsInDocument:cache:visitedSymbols:": {
+      "name": "influenceRectForBoundsInDocument:cache:visitedSymbols:",
+      "bridgedName": "influenceRectForBoundsInDocument_cache_visitedSymbols",
+      "args": [
+        {
+          "name": "influenceRectForBoundsInDocument",
+          "type": "id"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        },
+        {
+          "name": "visitedSymbols",
+          "type": "id"
+        }
+      ],
       "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
@@ -64,62 +105,6 @@
       "args": [
         {
           "name": "overridesFromGroupForMigration",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "calculateMasterInfluencePaddingsBetweenRect:andInfluenceRect:": {
-      "name": "calculateMasterInfluencePaddingsBetweenRect:andInfluenceRect:",
-      "bridgedName": "calculateMasterInfluencePaddingsBetweenRect_andInfluenceRect",
-      "args": [
-        {
-          "name": "calculateMasterInfluencePaddingsBetweenRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "andInfluenceRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isEqualForDiffToObject:": {
-      "name": "isEqualForDiffToObject:",
-      "bridgedName": "isEqualForDiffToObject",
-      "args": [
-        {
-          "name": "isEqualForDiffToObject",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "performInitWithMutableModelObject:": {
-      "name": "performInitWithMutableModelObject:",
-      "bridgedName": "performInitWithMutableModelObject",
-      "args": [
-        {
-          "name": "performInitWithMutableModelObject",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "keysDifferingFromObject:": {
-      "name": "keysDifferingFromObject:",
-      "bridgedName": "keysDifferingFromObject",
-      "args": [
-        {
-          "name": "keysDifferingFromObject",
           "type": "id"
         }
       ],
@@ -163,6 +148,31 @@
         }
       ],
       "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includeInManifest": {
+      "name": "includeInManifest",
+      "bridgedName": "includeInManifest",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsFlowWithSymbolsFromDocument:visited:": {
+      "name": "containsFlowWithSymbolsFromDocument:visited:",
+      "bridgedName": "containsFlowWithSymbolsFromDocument_visited",
+      "args": [
+        {
+          "name": "containsFlowWithSymbolsFromDocument",
+          "type": "id"
+        },
+        {
+          "name": "visited",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -286,19 +296,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "migratePropertiesFromV86OrEarlierWithUnarchiver:": {
-      "name": "migratePropertiesFromV86OrEarlierWithUnarchiver:",
-      "bridgedName": "migratePropertiesFromV86OrEarlierWithUnarchiver",
-      "args": [
-        {
-          "name": "migratePropertiesFromV86OrEarlierWithUnarchiver",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "migratePropertiesFromV84OrEarlierWithUnarchiver:": {
       "name": "migratePropertiesFromV84OrEarlierWithUnarchiver:",
       "bridgedName": "migratePropertiesFromV84OrEarlierWithUnarchiver",
@@ -325,6 +322,40 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "uncachedModifiedSymbolForMaster:context:": {
+      "name": "uncachedModifiedSymbolForMaster:context:",
+      "bridgedName": "uncachedModifiedSymbolForMaster_context",
+      "args": [
+        {
+          "name": "uncachedModifiedSymbolForMaster",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cachedModifiedSymbolForMaster:inContext:": {
+      "name": "cachedModifiedSymbolForMaster:inContext:",
+      "bridgedName": "cachedModifiedSymbolForMaster_inContext",
+      "args": [
+        {
+          "name": "cachedModifiedSymbolForMaster",
+          "type": "id"
+        },
+        {
+          "name": "inContext",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "writeSVGToElement:withExporter:": {
       "name": "writeSVGToElement:withExporter:",
       "bridgedName": "writeSVGToElement_withExporter",
@@ -344,10 +375,10 @@
     }
   },
   "properties": {
-    "masterRefreshCounter": {
-      "name": "masterRefreshCounter",
+    "modifiedMasterCacheKey": {
+      "name": "modifiedMasterCacheKey",
       "pointer": false,
-      "type": "unsigned long long",
+      "type": "id <NSCopying>",
       "attributes": [
         "readonly",
         "nonatomic"

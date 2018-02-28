@@ -5,7 +5,8 @@
   "classes": [
     "NSArray",
     "NSColor",
-    "NSNumberFormatter"
+    "NSNumberFormatter",
+    "NSView"
   ],
   "protocol": false,
   "className": "MSRulerViewLayer",
@@ -44,10 +45,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawAlignmentGuides": {
-      "name": "drawAlignmentGuides",
-      "bridgedName": "drawAlignmentGuides",
-      "args": [],
+    "drawAlignmentGuidesWithColor:": {
+      "name": "drawAlignmentGuidesWithColor:",
+      "bridgedName": "drawAlignmentGuidesWithColor",
+      "args": [
+        {
+          "name": "drawAlignmentGuidesWithColor",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -115,9 +121,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawLineAtPosition:withOptions:": {
-      "name": "drawLineAtPosition:withOptions:",
-      "bridgedName": "drawLineAtPosition_withOptions",
+    "drawLineAtPosition:withOptions:color:": {
+      "name": "drawLineAtPosition:withOptions:color:",
+      "bridgedName": "drawLineAtPosition_withOptions_color",
       "args": [
         {
           "name": "drawLineAtPosition",
@@ -126,29 +132,42 @@
         {
           "name": "withOptions",
           "type": "unsigned long long"
+        },
+        {
+          "name": "color",
+          "type": "id"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawMetricsWithOptions:": {
-      "name": "drawMetricsWithOptions:",
-      "bridgedName": "drawMetricsWithOptions",
+    "drawMetricsWithOptions:color:": {
+      "name": "drawMetricsWithOptions:color:",
+      "bridgedName": "drawMetricsWithOptions_color",
       "args": [
         {
           "name": "drawMetricsWithOptions",
           "type": "long long"
+        },
+        {
+          "name": "color",
+          "type": "id"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawMetrics": {
-      "name": "drawMetrics",
-      "bridgedName": "drawMetrics",
-      "args": [],
+    "drawMetricsWithColor:": {
+      "name": "drawMetricsWithColor:",
+      "bridgedName": "drawMetricsWithColor",
+      "args": [
+        {
+          "name": "drawMetricsWithColor",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -184,12 +203,11 @@
     }
   },
   "properties": {
-    "lineColor": {
-      "name": "lineColor",
+    "parentView": {
+      "name": "parentView",
       "pointer": true,
-      "type": "NSColor",
+      "type": "__weak NSView",
       "attributes": [
-        "retain",
         "nonatomic"
       ]
     },

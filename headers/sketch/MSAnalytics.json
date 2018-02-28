@@ -1,34 +1,20 @@
 {
   "imports": [
-    "NSObject.h",
-    "MSActionObserver.h",
-    "WebFrameLoadDelegate.h",
-    "WebResourceLoadDelegate.h",
-    "WebUIDelegate.h"
+    "BCSingleton.h",
+    "MSActionObserver.h"
   ],
   "classes": [
-    "NSMutableArray",
+    "MSGoogleAnalyticsWrapper",
     "NSString",
-    "WebView"
+    "NSTimer"
   ],
   "protocol": false,
   "className": "MSAnalytics",
-  "extends": "NSObject",
+  "extends": "BCSingleton",
   "interfaces": [
-    "MSActionObserver",
-    "WebFrameLoadDelegate",
-    "WebResourceLoadDelegate",
-    "WebUIDelegate"
+    "MSActionObserver"
   ],
   "methods": {
-    "sharedInstance": {
-      "name": "sharedInstance",
-      "bridgedName": "sharedInstance",
-      "args": [],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -100,9 +86,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "trackEvent:withInterval:checkInterval:conditional:": {
-      "name": "trackEvent:withInterval:checkInterval:conditional:",
-      "bridgedName": "trackEvent_withInterval_checkInterval_conditional",
+    "trackEvent:withInterval:conditional:": {
+      "name": "trackEvent:withInterval:conditional:",
+      "bridgedName": "trackEvent_withInterval_conditional",
       "args": [
         {
           "name": "trackEvent",
@@ -110,10 +96,6 @@
         },
         {
           "name": "withInterval",
-          "type": "long long"
-        },
-        {
-          "name": "checkInterval",
           "type": "long long"
         },
         {
@@ -155,65 +137,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "webView:resource:willSendRequest:redirectResponse:fromDataSource:": {
-      "name": "webView:resource:willSendRequest:redirectResponse:fromDataSource:",
-      "bridgedName": "webView_resource_willSendRequest_redirectResponse_fromDataSource",
-      "args": [
-        {
-          "name": "webView",
-          "type": "id"
-        },
-        {
-          "name": "resource",
-          "type": "id"
-        },
-        {
-          "name": "willSendRequest",
-          "type": "id"
-        },
-        {
-          "name": "redirectResponse",
-          "type": "id"
-        },
-        {
-          "name": "fromDataSource",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "webView:addMessageToConsole:": {
-      "name": "webView:addMessageToConsole:",
-      "bridgedName": "webView_addMessageToConsole",
-      "args": [
-        {
-          "name": "webView",
-          "type": "id"
-        },
-        {
-          "name": "addMessageToConsole",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "webView:didFinishLoadForFrame:": {
-      "name": "webView:didFinishLoadForFrame:",
-      "bridgedName": "webView_didFinishLoadForFrame",
-      "args": [
-        {
-          "name": "webView",
-          "type": "id"
-        },
-        {
-          "name": "didFinishLoadForFrame",
-          "type": "id"
-        }
-      ],
+    "stopTracking": {
+      "name": "stopTracking",
+      "bridgedName": "stopTracking",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -226,116 +153,63 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "sendAction:arguments:": {
-      "name": "sendAction:arguments:",
-      "bridgedName": "sendAction_arguments",
-      "args": [
-        {
-          "name": "sendAction",
-          "type": "id"
-        },
-        {
-          "name": "arguments",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "callMethod:arguments:": {
-      "name": "callMethod:arguments:",
-      "bridgedName": "callMethod_arguments",
-      "args": [
-        {
-          "name": "callMethod",
-          "type": "id"
-        },
-        {
-          "name": "arguments",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "reload": {
-      "name": "reload",
-      "bridgedName": "reload",
+    "startTracking": {
+      "name": "startTracking",
+      "bridgedName": "startTracking",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setup": {
-      "name": "setup",
-      "bridgedName": "setup",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "configureWithID:": {
-      "name": "configureWithID:",
-      "bridgedName": "configureWithID",
-      "args": [
-        {
-          "name": "configureWithID",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
-    "webViewReady": {
-      "name": "webViewReady",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "queue": {
-      "name": "queue",
+    "googleAnalytics": {
+      "name": "googleAnalytics",
       "pointer": true,
-      "type": "NSMutableArray",
+      "type": "MSGoogleAnalyticsWrapper",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "siteID": {
-      "name": "siteID",
+    "monthlyTimer": {
+      "name": "monthlyTimer",
       "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "copy",
-        "nonatomic"
-      ]
-    },
-    "webView": {
-      "name": "webView",
-      "pointer": true,
-      "type": "WebView",
+      "type": "NSTimer",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "debug": {
-      "name": "debug",
+    "weeklyTimer": {
+      "name": "weeklyTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "dailyTimer": {
+      "name": "dailyTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "hourlyTimer": {
+      "name": "hourlyTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "isEnabled": {
+      "name": "isEnabled",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

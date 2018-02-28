@@ -256,6 +256,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "logs": {
+      "name": "logs",
+      "bridgedName": "logs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "metadata": {
       "name": "metadata",
       "bridgedName": "metadata",
@@ -415,6 +423,77 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "runHandler:context:manager:onComplete:": {
+      "name": "runHandler:context:manager:onComplete:",
+      "bridgedName": "runHandler_context_manager_onComplete",
+      "args": [
+        {
+          "name": "runHandler",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "manager",
+          "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runHandler:context:manager:": {
+      "name": "runHandler:context:manager:",
+      "bridgedName": "runHandler_context_manager",
+      "args": [
+        {
+          "name": "runHandler",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "manager",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runHandlerWithKey:context:manager:onComplete:": {
+      "name": "runHandlerWithKey:context:manager:onComplete:",
+      "bridgedName": "runHandlerWithKey_context_manager_onComplete",
+      "args": [
+        {
+          "name": "runHandlerWithKey",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "manager",
+          "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "runHandlerWithKey:context:manager:": {
       "name": "runHandlerWithKey:context:manager:",
       "bridgedName": "runHandlerWithKey_context_manager",
@@ -430,6 +509,27 @@
         {
           "name": "manager",
           "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "run:manager:onComplete:": {
+      "name": "run:manager:onComplete:",
+      "bridgedName": "run_manager_onComplete",
+      "args": [
+        {
+          "name": "run",
+          "type": "id"
+        },
+        {
+          "name": "manager",
+          "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "id",
@@ -453,20 +553,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "runHandler:context:": {
-      "name": "runHandler:context:",
-      "bridgedName": "runHandler_context",
+    "runHandler:withOptionalKey:context:manager:onComplete:": {
+      "name": "runHandler:withOptionalKey:context:manager:onComplete:",
+      "bridgedName": "runHandler_withOptionalKey_context_manager_onComplete",
       "args": [
         {
           "name": "runHandler",
           "type": "id"
         },
         {
+          "name": "withOptionalKey",
+          "type": "id"
+        },
+        {
           "name": "context",
           "type": "id"
+        },
+        {
+          "name": "manager",
+          "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
         }
       ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -845,6 +957,15 @@
     }
   },
   "properties": {
+    "coreModuleMap": {
+      "name": "coreModuleMap",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "executingScript": {
       "name": "executingScript",
       "pointer": true,
@@ -870,12 +991,11 @@
         "nonatomic"
       ]
     },
-    "api": {
-      "name": "api",
+    "hasAPI": {
+      "name": "hasAPI",
       "pointer": false,
-      "type": "id",
+      "type": "BOOL",
       "attributes": [
-        "retain",
         "nonatomic"
       ]
     },
@@ -912,6 +1032,14 @@
       "type": "ECLogChannel",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "disableCocoaScriptPreprocessor": {
+      "name": "disableCocoaScriptPreprocessor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
         "nonatomic"
       ]
     },

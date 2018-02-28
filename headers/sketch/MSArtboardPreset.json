@@ -32,6 +32,48 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "resizeScaleFromArtboardSize:presetSize:offeringLandscapeVariant:": {
+      "name": "resizeScaleFromArtboardSize:presetSize:offeringLandscapeVariant:",
+      "bridgedName": "resizeScaleFromArtboardSize_presetSize_offeringLandscapeVariant",
+      "args": [
+        {
+          "name": "resizeScaleFromArtboardSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "presetSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "offeringLandscapeVariant",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "compareArtboardSize:withScaledPresetSize:offeringLandscapeVariant:": {
+      "name": "compareArtboardSize:withScaledPresetSize:offeringLandscapeVariant:",
+      "bridgedName": "compareArtboardSize_withScaledPresetSize_offeringLandscapeVariant",
+      "args": [
+        {
+          "name": "compareArtboardSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "withScaledPresetSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "offeringLandscapeVariant",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -131,6 +173,32 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "resizeScaleFromArtboardSize:": {
+      "name": "resizeScaleFromArtboardSize:",
+      "bridgedName": "resizeScaleFromArtboardSize",
+      "args": [
+        {
+          "name": "resizeScaleFromArtboardSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchWithArtboardSize:": {
+      "name": "matchWithArtboardSize:",
+      "bridgedName": "matchWithArtboardSize",
+      "args": [
+        {
+          "name": "matchWithArtboardSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -165,6 +233,15 @@
       "name": "imageName",
       "pointer": true,
       "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "allowResizedMatching": {
+      "name": "allowResizedMatching",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

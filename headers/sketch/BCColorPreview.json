@@ -1,23 +1,73 @@
 {
   "imports": [
-    "NSPopUpButton.h"
+    "NSPopUpButton.h",
+    "NSMenuDelegate.h"
   ],
   "classes": [
     "BCFlexibleColor",
     "NSArray",
-    "NSNumberFormatter"
+    "NSNumberFormatter",
+    "NSString"
   ],
   "protocol": false,
   "className": "BCColorPreview",
   "extends": "NSPopUpButton",
-  "interfaces": [],
+  "interfaces": [
+    "NSMenuDelegate"
+  ],
   "methods": {
-    "imageForColorTracker:documentColorSpace:": {
-      "name": "imageForColorTracker:documentColorSpace:",
-      "bridgedName": "imageForColorTracker_documentColorSpace",
+    "menuItemForColorCounter:target:action:documentColorSpace:useHSB:": {
+      "name": "menuItemForColorCounter:target:action:documentColorSpace:useHSB:",
+      "bridgedName": "menuItemForColorCounter_target_action_documentColorSpace_useHSB",
       "args": [
         {
-          "name": "imageForColorTracker",
+          "name": "menuItemForColorCounter",
+          "type": "id"
+        },
+        {
+          "name": "target",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        },
+        {
+          "name": "documentColorSpace",
+          "type": "id"
+        },
+        {
+          "name": "useHSB",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "menuItemAttributedTitleForColorCounter:useHSB:": {
+      "name": "menuItemAttributedTitleForColorCounter:useHSB:",
+      "bridgedName": "menuItemAttributedTitleForColorCounter_useHSB",
+      "args": [
+        {
+          "name": "menuItemAttributedTitleForColorCounter",
+          "type": "id"
+        },
+        {
+          "name": "useHSB",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "previewImageForColorCounter:documentColorSpace:": {
+      "name": "previewImageForColorCounter:documentColorSpace:",
+      "bridgedName": "previewImageForColorCounter_documentColorSpace",
+      "args": [
+        {
+          "name": "previewImageForColorCounter",
           "type": "id"
         },
         {
@@ -26,6 +76,14 @@
         }
       ],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "shouldUseHSBInColorDescriptions": {
+      "name": "shouldUseHSBInColorDescriptions",
+      "bridgedName": "shouldUseHSBInColorDescriptions",
+      "args": [],
+      "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -114,16 +172,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "toolTipForColorTracker:": {
-      "name": "toolTipForColorTracker:",
-      "bridgedName": "toolTipForColorTracker",
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
       "args": [
         {
-          "name": "toolTipForColorTracker",
+          "name": "menuNeedsUpdate",
           "type": "id"
         }
       ],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -183,6 +241,40 @@
       "attributes": [
         "retain",
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

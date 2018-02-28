@@ -11,6 +11,14 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
+    "downloadManagerSessionConfiguration": {
+      "name": "downloadManagerSessionConfiguration",
+      "bridgedName": "downloadManagerSessionConfiguration",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -83,9 +91,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "downloadManager:downloadTaskFinishedForIdentifier:downloadedURL:": {
-      "name": "downloadManager:downloadTaskFinishedForIdentifier:downloadedURL:",
-      "bridgedName": "downloadManager_downloadTaskFinishedForIdentifier_downloadedURL",
+    "downloadManager:downloadTaskFinishedForIdentifier:downloadedURL:httpStatusCode:": {
+      "name": "downloadManager:downloadTaskFinishedForIdentifier:downloadedURL:httpStatusCode:",
+      "bridgedName": "downloadManager_downloadTaskFinishedForIdentifier_downloadedURL_httpStatusCode",
       "args": [
         {
           "name": "downloadManager",
@@ -98,6 +106,10 @@
         {
           "name": "downloadedURL",
           "type": "id"
+        },
+        {
+          "name": "httpStatusCode",
+          "type": "long long"
         }
       ],
       "returns": "void",
@@ -146,6 +158,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "startFileDownload:completionHandler:": {
+      "name": "startFileDownload:completionHandler:",
+      "bridgedName": "startFileDownload_completionHandler",
+      "args": [
+        {
+          "name": "startFileDownload",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "startDownloadingAssetLibrary:progressHandler:completionHandler:": {
       "name": "startDownloadingAssetLibrary:progressHandler:completionHandler:",
       "bridgedName": "startDownloadingAssetLibrary_progressHandler_completionHandler",
@@ -177,6 +206,23 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadAppcastAtURL:withCompletionHandler:": {
+      "name": "downloadAppcastAtURL:withCompletionHandler:",
+      "bridgedName": "downloadAppcastAtURL_withCompletionHandler",
+      "args": [
+        {
+          "name": "downloadAppcastAtURL",
+          "type": "id"
+        },
+        {
+          "name": "withCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

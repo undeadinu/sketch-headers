@@ -9,8 +9,8 @@
     "MSCacheManager",
     "MSDocument",
     "MSEventHandlerManager",
-    "MSImmutablePage",
-    "MSLayer",
+    "MSImmutableDocumentData",
+    "MSMouseTracker",
     "MSRenderMonitor",
     "MSRenderingDriver",
     "MSRulerView",
@@ -741,6 +741,19 @@
         {
           "name": "centerRect",
           "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -1500,19 +1513,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canHighlightLayer:": {
-      "name": "canHighlightLayer:",
-      "bridgedName": "canHighlightLayer",
-      "args": [
-        {
-          "name": "canHighlightLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "canDrawConcurrently": {
       "name": "canDrawConcurrently",
       "bridgedName": "canDrawConcurrently",
@@ -1784,10 +1784,10 @@
         "nonatomic"
       ]
     },
-    "previouslyRenderedPage": {
-      "name": "previouslyRenderedPage",
+    "previouslyRenderedDoc": {
+      "name": "previouslyRenderedDoc",
       "pointer": true,
-      "type": "MSImmutablePage",
+      "type": "MSImmutableDocumentData",
       "attributes": [
         "retain",
         "nonatomic"
@@ -1824,6 +1824,15 @@
       "pointer": false,
       "type": "BOOL",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "mouseTracker": {
+      "name": "mouseTracker",
+      "pointer": true,
+      "type": "MSMouseTracker",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
@@ -1890,14 +1899,6 @@
       "name": "delegate",
       "pointer": false,
       "type": "__weak id <MSContentDrawViewDelegate>",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "hoveredLayer": {
-      "name": "hoveredLayer",
-      "pointer": true,
-      "type": "__weak MSLayer",
       "attributes": [
         "nonatomic"
       ]

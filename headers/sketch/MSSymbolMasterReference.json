@@ -1,56 +1,21 @@
 {
   "imports": [
-    "NSObject.h",
-    "BCSortable.h"
+    "MSShareableObjectReference.h"
   ],
   "classes": [
-    "MSAssetLibrary",
     "MSSymbolMaster",
-    "MSSymbolMasterReferenceDescriptor",
-    "NSString"
+    "MSSymbolMasterReferenceDescriptor"
   ],
   "protocol": false,
   "className": "MSSymbolMasterReference",
-  "extends": "NSObject",
-  "interfaces": [
-    "BCSortable"
-  ],
+  "extends": "MSShareableObjectReference",
+  "interfaces": [],
   "methods": {
-    "referenceForSymbolMaster:inLibrary:": {
-      "name": "referenceForSymbolMaster:inLibrary:",
-      "bridgedName": "referenceForSymbolMaster_inLibrary",
-      "args": [
-        {
-          "name": "referenceForSymbolMaster",
-          "type": "id"
-        },
-        {
-          "name": "inLibrary",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "referenceForSymbolMaster:": {
-      "name": "referenceForSymbolMaster:",
-      "bridgedName": "referenceForSymbolMaster",
-      "args": [
-        {
-          "name": "referenceForSymbolMaster",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
       "args": [],
-      "returns": "void",
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -69,24 +34,6 @@
     }
   },
   "properties": {
-    "symbolMaster": {
-      "name": "symbolMaster",
-      "pointer": true,
-      "type": "MSSymbolMaster",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "sourceLibrary": {
-      "name": "sourceLibrary",
-      "pointer": true,
-      "type": "MSAssetLibrary",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "descriptor": {
       "name": "descriptor",
       "pointer": true,
@@ -96,47 +43,13 @@
         "nonatomic"
       ]
     },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "name": {
-      "name": "name",
+    "symbolMaster": {
+      "name": "symbolMaster",
       "pointer": true,
-      "type": "NSString",
+      "type": "MSSymbolMaster",
       "attributes": [
         "readonly",
         "nonatomic"
-      ]
-    },
-    "debugDescription": {
-      "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
       ]
     }
   }

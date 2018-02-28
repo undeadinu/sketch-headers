@@ -5,10 +5,11 @@
   ],
   "classes": [
     "MSCGContextPool",
-    "MSContentCALayer",
-    "MSImmutableDocumentData",
     "MSImmutablePage",
     "MSRenderingContext",
+    "MSRenderingDriver",
+    "MSRenderingRequest",
+    "MSTile",
     "NSString"
   ],
   "protocol": false,
@@ -110,6 +111,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_tileIndex": {
+      "name": "_tileIndex",
+      "bridgedName": "_tileIndex",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "cancelDrawing": {
       "name": "cancelDrawing",
       "bridgedName": "cancelDrawing",
@@ -126,12 +135,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithContextPool:": {
-      "name": "initWithContextPool:",
-      "bridgedName": "initWithContextPool",
+    "initWithRenderingRequest:contextPool:driver:": {
+      "name": "initWithRenderingRequest:contextPool:driver:",
+      "bridgedName": "initWithRenderingRequest_contextPool_driver",
       "args": [
         {
-          "name": "initWithContextPool",
+          "name": "initWithRenderingRequest",
+          "type": "id"
+        },
+        {
+          "name": "contextPool",
+          "type": "id"
+        },
+        {
+          "name": "driver",
           "type": "id"
         }
       ],
@@ -166,24 +183,6 @@
         "nonatomic"
       ]
     },
-    "renderingCacheProvider": {
-      "name": "renderingCacheProvider",
-      "pointer": false,
-      "type": "id <MSRenderingContextCacheProvider>",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "document": {
-      "name": "document",
-      "pointer": true,
-      "type": "MSImmutableDocumentData",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "pageForContent": {
       "name": "pageForContent",
       "pointer": true,
@@ -193,34 +192,10 @@
         "nonatomic"
       ]
     },
-    "zoomValue": {
-      "name": "zoomValue",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "distanceFromScrollOrigin": {
       "name": "distanceFromScrollOrigin",
       "pointer": false,
       "type": "struct CGPoint",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "showDrawingArea": {
-      "name": "showDrawingArea",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "shouldDrawPixelated": {
-      "name": "shouldDrawPixelated",
-      "pointer": false,
-      "type": "BOOL",
       "attributes": [
         "nonatomic"
       ]
@@ -242,19 +217,36 @@
         "nonatomic"
       ]
     },
-    "contentLayer": {
-      "name": "contentLayer",
-      "pointer": true,
-      "type": "MSContentCALayer",
+    "contentBounds": {
+      "name": "contentBounds",
+      "pointer": false,
+      "type": "struct CGRect",
       "attributes": [
-        "retain",
         "nonatomic"
       ]
     },
-    "delegate": {
-      "name": "delegate",
-      "pointer": false,
-      "type": "__weak id <MSTileRenderOperationDelegate>",
+    "renderingRequest": {
+      "name": "renderingRequest",
+      "pointer": true,
+      "type": "MSRenderingRequest",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "tile": {
+      "name": "tile",
+      "pointer": true,
+      "type": "__weak MSTile",
       "attributes": [
         "nonatomic"
       ]

@@ -1,14 +1,15 @@
 {
   "imports": [
     "NSViewController.h",
+    "MSInspectorSection.h",
     "NSMenuDelegate.h"
   ],
   "classes": [
+    "MSForeignObjectMenuBuilder",
     "MSLayerArray",
+    "MSShareableObjectPopUpButton",
     "MSSharedObject",
-    "MSSortableObjectMenuBuilder",
     "NSButton",
-    "NSPopUpButton",
     "NSString",
     "NSTextField"
   ],
@@ -16,6 +17,7 @@
   "className": "MSSharedStylesInspectorSection",
   "extends": "NSViewController",
   "interfaces": [
+    "MSInspectorSection",
     "NSMenuDelegate"
   ],
   "methods": {
@@ -24,6 +26,14 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "views": {
+      "name": "views",
+      "bridgedName": "views",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -83,23 +93,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForMenuItem:completionBlock:": {
-      "name": "generatePreviewForMenuItem:completionBlock:",
-      "bridgedName": "generatePreviewForMenuItem_completionBlock",
-      "args": [
-        {
-          "name": "generatePreviewForMenuItem",
-          "type": "id"
-        },
-        {
-          "name": "completionBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "validateMenuItem:": {
       "name": "validateMenuItem:",
       "bridgedName": "validateMenuItem",
@@ -119,32 +112,6 @@
       "args": [
         {
           "name": "syncOrResetSharedStyleAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isolateSelectedObject:": {
-      "name": "isolateSelectedObject:",
-      "bridgedName": "isolateSelectedObject",
-      "args": [
-        {
-          "name": "isolateSelectedObject",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "applySharedObjectToSelection:": {
-      "name": "applySharedObjectToSelection:",
-      "bridgedName": "applySharedObjectToSelection",
-      "args": [
-        {
-          "name": "applySharedObjectToSelection",
           "type": "id"
         }
       ],
@@ -203,56 +170,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "showManageSymbolsSheet:": {
-      "name": "showManageSymbolsSheet:",
-      "bridgedName": "showManageSymbolsSheet",
-      "args": [
-        {
-          "name": "showManageSymbolsSheet",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "createSharedStyle:": {
-      "name": "createSharedStyle:",
-      "bridgedName": "createSharedStyle",
-      "args": [
-        {
-          "name": "createSharedStyle",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "sharedObjectDisplayName": {
-      "name": "sharedObjectDisplayName",
-      "bridgedName": "sharedObjectDisplayName",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "reloadMenu": {
-      "name": "reloadMenu",
-      "bridgedName": "reloadMenu",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "hasLayersWithMissingFonts": {
-      "name": "hasLayersWithMissingFonts",
-      "bridgedName": "hasLayersWithMissingFonts",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "hasLayersOutOfSyncWithSharedObject": {
       "name": "hasLayersOutOfSyncWithSharedObject",
       "bridgedName": "hasLayersOutOfSyncWithSharedObject",
@@ -290,7 +207,7 @@
     "menuBuilder": {
       "name": "menuBuilder",
       "pointer": true,
-      "type": "MSSortableObjectMenuBuilder",
+      "type": "MSForeignObjectMenuBuilder",
       "attributes": [
         "retain",
         "nonatomic"
@@ -335,7 +252,7 @@
     "sharedObjectsPopUpButton": {
       "name": "sharedObjectsPopUpButton",
       "pointer": true,
-      "type": "NSPopUpButton",
+      "type": "MSShareableObjectPopUpButton",
       "attributes": [
         "retain",
         "nonatomic"

@@ -1,18 +1,15 @@
 {
   "imports": [
-    "NSViewController.h",
-    "MSCloudViewControllerDelegate.h"
+    "NSViewController.h"
   ],
   "classes": [
-    "MSCloudController",
-    "NSString"
+    "MSCloudAction",
+    "MSCloudBaseViewController"
   ],
   "protocol": false,
   "className": "MSCloudViewController",
   "extends": "NSViewController",
-  "interfaces": [
-    "MSCloudViewControllerDelegate"
-  ],
+  "interfaces": [],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -22,12 +19,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "cloudViewControllerNeedsResizing:": {
-      "name": "cloudViewControllerNeedsResizing:",
-      "bridgedName": "cloudViewControllerNeedsResizing",
+    "refreshLicenseIfIneligible": {
+      "name": "refreshLicenseIfIneligible",
+      "bridgedName": "refreshLicenseIfIneligible",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetContentViewController:": {
+      "name": "resetContentViewController:",
+      "bridgedName": "resetContentViewController",
       "args": [
         {
-          "name": "cloudViewControllerNeedsResizing",
+          "name": "resetContentViewController",
           "type": "id"
         }
       ],
@@ -35,28 +40,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "viewDidTransition": {
-      "name": "viewDidTransition",
-      "bridgedName": "viewDidTransition",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "viewWillTransition": {
-      "name": "viewWillTransition",
-      "bridgedName": "viewWillTransition",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "parentViewControllerDidTransitionNotification:": {
-      "name": "parentViewControllerDidTransitionNotification:",
-      "bridgedName": "parentViewControllerDidTransitionNotification",
+    "licenseDidChangeNotification:": {
+      "name": "licenseDidChangeNotification:",
+      "bridgedName": "licenseDidChangeNotification",
       "args": [
         {
-          "name": "parentViewControllerDidTransitionNotification",
+          "name": "licenseDidChangeNotification",
           "type": "id"
         }
       ],
@@ -64,13 +53,141 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "parentViewControllerWillTransitionNotification:": {
-      "name": "parentViewControllerWillTransitionNotification:",
-      "bridgedName": "parentViewControllerWillTransitionNotification",
+    "shareUploadDidChangeNotification:": {
+      "name": "shareUploadDidChangeNotification:",
+      "bridgedName": "shareUploadDidChangeNotification",
       "args": [
         {
-          "name": "parentViewControllerWillTransitionNotification",
+          "name": "shareUploadDidChangeNotification",
           "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userDidUpdateNotification:": {
+      "name": "userDidUpdateNotification:",
+      "bridgedName": "userDidUpdateNotification",
+      "args": [
+        {
+          "name": "userDidUpdateNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userDidChangeNotification:": {
+      "name": "userDidChangeNotification:",
+      "bridgedName": "userDidChangeNotification",
+      "args": [
+        {
+          "name": "userDidChangeNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "environmentDidChangeNotification:": {
+      "name": "environmentDidChangeNotification:",
+      "bridgedName": "environmentDidChangeNotification",
+      "args": [
+        {
+          "name": "environmentDidChangeNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateFrame": {
+      "name": "updateFrame",
+      "bridgedName": "updateFrame",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animateFrameWithCompletionHandler:": {
+      "name": "animateFrameWithCompletionHandler:",
+      "bridgedName": "animateFrameWithCompletionHandler",
+      "args": [
+        {
+          "name": "animateFrameWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animateAlpha:completionHandler:": {
+      "name": "animateAlpha:completionHandler:",
+      "bridgedName": "animateAlpha_completionHandler",
+      "args": [
+        {
+          "name": "animateAlpha",
+          "type": "double"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultContentViewController": {
+      "name": "defaultContentViewController",
+      "bridgedName": "defaultContentViewController",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addContentViewController:": {
+      "name": "addContentViewController:",
+      "bridgedName": "addContentViewController",
+      "args": [
+        {
+          "name": "addContentViewController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeContentViewController:": {
+      "name": "removeContentViewController:",
+      "bridgedName": "removeContentViewController",
+      "args": [
+        {
+          "name": "removeContentViewController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContentViewController:animated:": {
+      "name": "setContentViewController:animated:",
+      "bridgedName": "setContentViewController_animated",
+      "args": [
+        {
+          "name": "setContentViewController",
+          "type": "id"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
         }
       ],
       "returns": "void",
@@ -92,66 +209,92 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "viewDidAppear": {
+      "name": "viewDidAppear",
+      "bridgedName": "viewDidAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillAppear": {
+      "name": "viewWillAppear",
+      "bridgedName": "viewWillAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithAction:": {
+      "name": "initWithAction:",
+      "bridgedName": "initWithAction",
+      "args": [
+        {
+          "name": "initWithAction",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "name": "initWithNibName",
+          "type": "id"
+        },
+        {
+          "name": "bundle",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
-    "isTransitioning": {
-      "name": "isTransitioning",
-      "pointer": false,
-      "type": "BOOL",
+    "action": {
+      "name": "action",
+      "pointer": true,
+      "type": "MSCloudAction",
       "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
-    "cloudController": {
-      "name": "cloudController",
+    "contentViewController": {
+      "name": "contentViewController",
       "pointer": true,
-      "type": "MSCloudController",
+      "type": "MSCloudBaseViewController",
       "attributes": [
         "retain",
         "nonatomic"
-      ]
-    },
-    "delegate": {
-      "name": "delegate",
-      "pointer": false,
-      "type": "__weak id <MSCloudViewControllerDelegate>",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "debugDescription": {
-      "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "hash": {
-      "name": "hash",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "superclass": {
-      "name": "superclass",
-      "pointer": false,
-      "type": "Class",
-      "attributes": [
-        "readonly"
       ]
     }
   }

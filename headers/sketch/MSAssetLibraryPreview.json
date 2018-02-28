@@ -3,7 +3,6 @@
     "NSView.h"
   ],
   "classes": [
-    "MSAssetLibrary",
     "NSBezierPath",
     "NSImage"
   ],
@@ -17,31 +16,6 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "generatePreview": {
-      "name": "generatePreview",
-      "bridgedName": "generatePreview",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "thumbFromImage:centeredInSize:": {
-      "name": "thumbFromImage:centeredInSize:",
-      "bridgedName": "thumbFromImage_centeredInSize",
-      "args": [
-        {
-          "name": "thumbFromImage",
-          "type": "id"
-        },
-        {
-          "name": "centeredInSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -87,6 +61,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "thumbFromImage:centeredInSize:": {
+      "name": "thumbFromImage:centeredInSize:",
+      "bridgedName": "thumbFromImage_centeredInSize",
+      "args": [
+        {
+          "name": "thumbFromImage",
+          "type": "id"
+        },
+        {
+          "name": "centeredInSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "centeredThumbFromImage:": {
+      "name": "centeredThumbFromImage:",
+      "bridgedName": "centeredThumbFromImage",
+      "args": [
+        {
+          "name": "centeredThumbFromImage",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "drawRect:": {
       "name": "drawRect:",
       "bridgedName": "drawRect",
@@ -111,10 +115,10 @@
         "nonatomic"
       ]
     },
-    "library": {
-      "name": "library",
+    "libraryPreview": {
+      "name": "libraryPreview",
       "pointer": true,
-      "type": "__weak MSAssetLibrary",
+      "type": "__weak NSImage",
       "attributes": [
         "nonatomic"
       ]

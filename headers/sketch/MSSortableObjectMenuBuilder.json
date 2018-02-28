@@ -4,6 +4,7 @@
     "NSMenuDelegate.h"
   ],
   "classes": [
+    "NSMutableDictionary",
     "NSString"
   ],
   "protocol": false,
@@ -13,6 +14,14 @@
     "NSMenuDelegate"
   ],
   "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "validateMenuItem:": {
       "name": "validateMenuItem:",
       "bridgedName": "validateMenuItem",
@@ -35,6 +44,14 @@
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateImages": {
+      "name": "updateImages",
+      "bridgedName": "updateImages",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -214,9 +231,40 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithDelegate:": {
+      "name": "initWithDelegate:",
+      "bridgedName": "initWithDelegate",
+      "args": [
+        {
+          "name": "initWithDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSMenuBuilderDelegate>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "collatedImages": {
+      "name": "collatedImages",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "debugDescription": {
       "name": "debugDescription",
       "pointer": true,

@@ -1,20 +1,50 @@
 {
   "imports": [
-    "MSOverrideViewController.h"
+    "MSOverrideViewController.h",
+    "MSDataMenuProviderDelegate.h"
   ],
   "classes": [
-    "NSImageView"
+    "MSImageOverrideView",
+    "NSPopUpButton",
+    "NSString"
   ],
   "protocol": false,
   "className": "MSBitmapOverrideViewController",
   "extends": "MSOverrideViewController",
-  "interfaces": [],
+  "interfaces": [
+    "MSDataMenuProviderDelegate"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProvider:didChooseData:": {
+      "name": "dataMenuProvider:didChooseData:",
+      "bridgedName": "dataMenuProvider_didChooseData",
+      "args": [
+        {
+          "name": "dataMenuProvider",
+          "type": "id"
+        },
+        {
+          "name": "didChooseData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportedDataProviders": {
+      "name": "supportedDataProviders",
+      "bridgedName": "supportedDataProviders",
+      "args": [],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -68,6 +98,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "imageViewAction:": {
+      "name": "imageViewAction:",
+      "bridgedName": "imageViewAction",
+      "args": [
+        {
+          "name": "imageViewAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "controlViewForEditingOverride": {
       "name": "controlViewForEditingOverride",
       "bridgedName": "controlViewForEditingOverride",
@@ -78,13 +121,65 @@
     }
   },
   "properties": {
-    "imageView": {
-      "name": "imageView",
+    "dataPopUpButton": {
+      "name": "dataPopUpButton",
       "pointer": true,
-      "type": "NSImageView",
+      "type": "NSPopUpButton",
       "attributes": [
         "retain",
         "nonatomic"
+      ]
+    },
+    "imageView": {
+      "name": "imageView",
+      "pointer": true,
+      "type": "MSImageOverrideView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "controlRect": {
+      "name": "controlRect",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

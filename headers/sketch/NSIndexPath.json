@@ -24,12 +24,12 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "indexPathForHandle:point:ofShape:": {
-      "name": "indexPathForHandle:point:ofShape:",
-      "bridgedName": "indexPathForHandle_point_ofShape",
+    "indexPathForComponent:point:ofShape:": {
+      "name": "indexPathForComponent:point:ofShape:",
+      "bridgedName": "indexPathForComponent_point_ofShape",
       "args": [
         {
-          "name": "indexPathForHandle",
+          "name": "indexPathForComponent",
           "type": "unsigned long long"
         },
         {
@@ -45,20 +45,25 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "checkIfHandleIndexPath": {
-      "name": "checkIfHandleIndexPath",
-      "bridgedName": "checkIfHandleIndexPath",
-      "args": [],
+    "checkIfComponentIndexPath:": {
+      "name": "checkIfComponentIndexPath:",
+      "bridgedName": "checkIfComponentIndexPath",
+      "args": [
+        {
+          "name": "checkIfComponentIndexPath",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "indexPathWithHandle:": {
-      "name": "indexPathWithHandle:",
-      "bridgedName": "indexPathWithHandle",
+    "indexPathWithComponent:": {
+      "name": "indexPathWithComponent:",
+      "bridgedName": "indexPathWithComponent",
       "args": [
         {
-          "name": "indexPathWithHandle",
+          "name": "indexPathWithComponent",
           "type": "unsigned long long"
         }
       ],
@@ -68,6 +73,16 @@
     }
   },
   "properties": {
+    "handle": {
+      "name": "handle",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=handle_ms"
+      ]
+    },
     "shape": {
       "name": "shape",
       "pointer": false,
@@ -88,14 +103,14 @@
         "getter=point_ms"
       ]
     },
-    "handle": {
-      "name": "handle",
+    "component": {
+      "name": "component",
       "pointer": false,
       "type": "unsigned long long",
       "attributes": [
         "readonly",
         "nonatomic",
-        "getter=handle_ms"
+        "getter=component_ms"
       ]
     }
   }

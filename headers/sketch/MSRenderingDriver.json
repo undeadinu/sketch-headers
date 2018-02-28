@@ -3,6 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
+    "MSRenderingDriverSettings",
     "NSMapTable"
   ],
   "protocol": false,
@@ -26,9 +27,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "contextWithName:forCGContext:": {
-      "name": "contextWithName:forCGContext:",
-      "bridgedName": "contextWithName_forCGContext",
+    "contextWithName:forCGContext:renderingRequest:": {
+      "name": "contextWithName:forCGContext:renderingRequest:",
+      "bridgedName": "contextWithName_forCGContext_renderingRequest",
       "args": [
         {
           "name": "contextWithName",
@@ -37,6 +38,10 @@
         {
           "name": "forCGContext",
           "type": "struct CGContext *"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
         }
       ],
       "returns": "id",
@@ -106,6 +111,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "initWithSettings:": {
+      "name": "initWithSettings:",
+      "bridgedName": "initWithSettings",
+      "args": [
+        {
+          "name": "initWithSettings",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorFromDefaultNamed:": {
+      "name": "colorFromDefaultNamed:",
+      "bridgedName": "colorFromDefaultNamed",
+      "args": [
+        {
+          "name": "colorFromDefaultNamed",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGColor *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -122,6 +153,15 @@
       "type": "NSMapTable",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "settings": {
+      "name": "settings",
+      "pointer": true,
+      "type": "MSRenderingDriverSettings",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

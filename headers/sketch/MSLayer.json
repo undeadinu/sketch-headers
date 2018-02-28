@@ -11,13 +11,13 @@
   ],
   "classes": [
     "NSAffineTransform",
+    "NSArray",
     "NSString",
     "MSAbsoluteRect",
+    "MSImmutableLayerAncestry",
     "MSStyledLayer",
-    "NSArray",
     "NSDictionary",
-    "NSMenu",
-    "NSSet"
+    "NSMenu"
   ],
   "protocol": true,
   "className": "MSLayer",
@@ -31,6 +31,40 @@
     "MSRectDelegate"
   ],
   "methods": {
+    "childrenIncludingSelf:": {
+      "name": "childrenIncludingSelf:",
+      "bridgedName": "childrenIncludingSelf",
+      "args": [
+        {
+          "name": "childrenIncludingSelf",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "children": {
+      "name": "children",
+      "bridgedName": "children",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerWithID:": {
+      "name": "layerWithID:",
+      "bridgedName": "layerWithID",
+      "args": [
+        {
+          "name": "layerWithID",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "overlayInfluenceRectForFrame": {
       "name": "overlayInfluenceRectForFrame",
       "bridgedName": "overlayInfluenceRectForFrame",
@@ -229,6 +263,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "resetFlow": {
+      "name": "resetFlow",
+      "bridgedName": "resetFlow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "rect:didChangeFromRect:": {
       "name": "rect:didChangeFromRect:",
       "bridgedName": "rect_didChangeFromRect",
@@ -267,9 +309,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canResize": {
-      "name": "canResize",
-      "bridgedName": "canResize",
+    "canLockProportions": {
+      "name": "canLockProportions",
+      "bridgedName": "canLockProportions",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -288,19 +330,6 @@
       "bridgedName": "canRotate",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layerWithID:": {
-      "name": "layerWithID:",
-      "bridgedName": "layerWithID",
-      "args": [
-        {
-          "name": "layerWithID",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -467,14 +496,6 @@
         }
       ],
       "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "children": {
-      "name": "children",
-      "bridgedName": "children",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -814,13 +835,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "containsPoint:zoomValue:": {
-      "name": "containsPoint:zoomValue:",
-      "bridgedName": "containsPoint_zoomValue",
+    "containsPoint:options:zoomValue:": {
+      "name": "containsPoint:options:zoomValue:",
+      "bridgedName": "containsPoint_options_zoomValue",
       "args": [
         {
           "name": "containsPoint",
           "type": "struct CGPoint"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
         },
         {
           "name": "zoomValue",
@@ -1139,12 +1164,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerPositionDrawingRectWithModifierFlags:": {
-      "name": "layerPositionDrawingRectWithModifierFlags:",
-      "bridgedName": "layerPositionDrawingRectWithModifierFlags",
+    "measurementRectWithOptions:": {
+      "name": "measurementRectWithOptions:",
+      "bridgedName": "measurementRectWithOptions",
       "args": [
         {
-          "name": "layerPositionDrawingRectWithModifierFlags",
+          "name": "measurementRectWithOptions",
           "type": "unsigned long long"
         }
       ],
@@ -1157,6 +1182,22 @@
       "bridgedName": "cornerRectType",
       "args": [],
       "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldRefreshOverlayForFlows": {
+      "name": "shouldRefreshOverlayForFlows",
+      "bridgedName": "shouldRefreshOverlayForFlows",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawSelectionStroke": {
+      "name": "shouldDrawSelectionStroke",
+      "bridgedName": "shouldDrawSelectionStroke",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1291,21 +1332,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "colorForHover": {
-      "name": "colorForHover",
-      "bridgedName": "colorForHover",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawHoverWithZoom:cache:": {
-      "name": "drawHoverWithZoom:cache:",
-      "bridgedName": "drawHoverWithZoom_cache",
+    "drawHoverWithZoom:color:cache:": {
+      "name": "drawHoverWithZoom:color:cache:",
+      "bridgedName": "drawHoverWithZoom_color_cache",
       "args": [
         {
           "name": "drawHoverWithZoom",
           "type": "double"
+        },
+        {
+          "name": "color",
+          "type": "id"
         },
         {
           "name": "cache",
@@ -1809,6 +1846,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setIsVisible:": {
+      "name": "setIsVisible:",
+      "bridgedName": "setIsVisible",
+      "args": [
+        {
+          "name": "setIsVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "followMaskChainForLayerAtIndex:usingBlock:": {
       "name": "followMaskChainForLayerAtIndex:usingBlock:",
       "bridgedName": "followMaskChainForLayerAtIndex_usingBlock",
@@ -2179,6 +2229,15 @@
         "nonatomic"
       ]
     },
+    "ancestry": {
+      "name": "ancestry",
+      "pointer": true,
+      "type": "MSImmutableLayerAncestry",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "absolutePosition": {
       "name": "absolutePosition",
       "pointer": false,
@@ -2274,10 +2333,10 @@
         "nonatomic"
       ]
     },
-    "hasSliceIcon": {
-      "name": "hasSliceIcon",
+    "badgeType": {
+      "name": "badgeType",
       "pointer": false,
-      "type": "BOOL",
+      "type": "unsigned long long",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2487,24 +2546,6 @@
       "name": "canFixLeft",
       "pointer": false,
       "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "unavailableFontNames": {
-      "name": "unavailableFontNames",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "fontNames": {
-      "name": "fontNames",
-      "pointer": true,
-      "type": "NSSet",
       "attributes": [
         "readonly",
         "nonatomic"

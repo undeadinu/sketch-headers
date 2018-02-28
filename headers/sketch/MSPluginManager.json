@@ -174,6 +174,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "resetAllPluginMetadataToBeDisabled": {
+      "name": "resetAllPluginMetadataToBeDisabled",
+      "bridgedName": "resetAllPluginMetadataToBeDisabled",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "isPluginUpdateDownloadedWithIdentifier:version:": {
       "name": "isPluginUpdateDownloadedWithIdentifier:version:",
       "bridgedName": "isPluginUpdateDownloadedWithIdentifier_version",
@@ -419,6 +427,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "disabledPlugins": {
+      "name": "disabledPlugins",
+      "bridgedName": "disabledPlugins",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enabledPlugins": {
+      "name": "enabledPlugins",
+      "bridgedName": "enabledPlugins",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "disablePlugin:": {
       "name": "disablePlugin:",
       "bridgedName": "disablePlugin",
@@ -504,6 +528,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "runHandlerWithKey:fromCommand:inPlugin:withContext:": {
+      "name": "runHandlerWithKey:fromCommand:inPlugin:withContext:",
+      "bridgedName": "runHandlerWithKey_fromCommand_inPlugin_withContext",
+      "args": [
+        {
+          "name": "runHandlerWithKey",
+          "type": "id"
+        },
+        {
+          "name": "fromCommand",
+          "type": "id"
+        },
+        {
+          "name": "inPlugin",
+          "type": "id"
+        },
+        {
+          "name": "withContext",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "editBundle:": {
       "name": "editBundle:",
       "bridgedName": "editBundle",
@@ -525,13 +574,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "trackLongRunningCommand:": {
-      "name": "trackLongRunningCommand:",
-      "bridgedName": "trackLongRunningCommand",
+    "trackLongRunningCommand:onComplete:": {
+      "name": "trackLongRunningCommand:onComplete:",
+      "bridgedName": "trackLongRunningCommand_onComplete",
       "args": [
         {
           "name": "trackLongRunningCommand",
           "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "void",
@@ -788,6 +841,15 @@
         "nonatomic"
       ]
     },
+    "runningCommandCallbacks": {
+      "name": "runningCommandCallbacks",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "runningCommands": {
       "name": "runningCommands",
       "pointer": true,
@@ -815,8 +877,8 @@
         "nonatomic"
       ]
     },
-    "doNotLoadPlugins": {
-      "name": "doNotLoadPlugins",
+    "disableAllPlugins": {
+      "name": "disableAllPlugins",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

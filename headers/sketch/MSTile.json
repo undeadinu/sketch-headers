@@ -1,8 +1,7 @@
 {
   "imports": [
     "MSRenderingCALayer.h",
-    "CALayerDelegate.h",
-    "MSTileRenderOperationDelegate.h"
+    "CALayerDelegate.h"
   ],
   "classes": [
     "CALayer",
@@ -10,6 +9,7 @@
     "MSContentCALayer",
     "MSOverlayCALayer",
     "MSRenderingDriver",
+    "MSRenderingRequest",
     "MSTileRenderOperation",
     "NSString"
   ],
@@ -17,13 +17,20 @@
   "className": "MSTile",
   "extends": "MSRenderingCALayer",
   "interfaces": [
-    "MSTileRenderOperationDelegate",
     "CALayerDelegate"
   ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileRenderingDidFinish": {
+      "name": "tileRenderingDidFinish",
+      "bridgedName": "tileRenderingDidFinish",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -39,30 +46,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pixelGridDidChange": {
-      "name": "pixelGridDidChange",
-      "bridgedName": "pixelGridDidChange",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shouldDrawPixelated": {
-      "name": "shouldDrawPixelated",
-      "bridgedName": "shouldDrawPixelated",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scaleForContentLayer": {
-      "name": "scaleForContentLayer",
-      "bridgedName": "scaleForContentLayer",
-      "args": [],
-      "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -91,19 +74,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tileRenderOperationDidFinishRendering:": {
-      "name": "tileRenderOperationDidFinishRendering:",
-      "bridgedName": "tileRenderOperationDidFinishRendering",
-      "args": [
-        {
-          "name": "tileRenderOperationDidFinishRendering",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "normalizeRect:origin:": {
       "name": "normalizeRect:origin:",
       "bridgedName": "normalizeRect_origin",
@@ -121,9 +91,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "renderOperationForContentRect:page:document:contextPool:": {
-      "name": "renderOperationForContentRect:page:document:contextPool:",
-      "bridgedName": "renderOperationForContentRect_page_document_contextPool",
+    "renderOperationForContentRect:page:renderingRequest:contextPool:": {
+      "name": "renderOperationForContentRect:page:renderingRequest:contextPool:",
+      "bridgedName": "renderOperationForContentRect_page_renderingRequest_contextPool",
       "args": [
         {
           "name": "renderOperationForContentRect",
@@ -134,7 +104,7 @@
           "type": "id"
         },
         {
-          "name": "document",
+          "name": "renderingRequest",
           "type": "id"
         },
         {
@@ -264,15 +234,6 @@
         "nonatomic"
       ]
     },
-    "contentLayer": {
-      "name": "contentLayer",
-      "pointer": true,
-      "type": "MSContentCALayer",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "overlayLayer": {
       "name": "overlayLayer",
       "pointer": true,
@@ -290,10 +251,18 @@
         "nonatomic"
       ]
     },
-    "renderingCacheProvider": {
-      "name": "renderingCacheProvider",
-      "pointer": false,
-      "type": "id <MSRenderingContextCacheProvider>",
+    "renderingRequest": {
+      "name": "renderingRequest",
+      "pointer": true,
+      "type": "MSRenderingRequest",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "contentLayer": {
+      "name": "contentLayer",
+      "pointer": true,
+      "type": "MSContentCALayer",
       "attributes": [
         "retain",
         "nonatomic"
@@ -316,26 +285,10 @@
         "nonatomic"
       ]
     },
-    "drawingIsCancelled": {
-      "name": "drawingIsCancelled",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "shouldHideOverlayControls": {
       "name": "shouldHideOverlayControls",
       "pointer": false,
       "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "zoomValue": {
-      "name": "zoomValue",
-      "pointer": false,
-      "type": "double",
       "attributes": [
         "nonatomic"
       ]
@@ -372,6 +325,14 @@
       "attributes": [
         "readonly",
         "copy"
+      ]
+    },
+    "contentLayerScale": {
+      "name": "contentLayerScale",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
       ]
     },
     "debugDescription": {

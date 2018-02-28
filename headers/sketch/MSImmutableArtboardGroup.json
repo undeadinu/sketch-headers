@@ -8,6 +8,7 @@
     "MSWebExportableRootLayer.h"
   ],
   "classes": [
+    "MSArtboardPreset",
     "MSImmutableColor",
     "MSImmutableLayoutGrid",
     "MSImmutableRulerData",
@@ -70,12 +71,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteInfluenceRectForAncestorGroups:": {
-      "name": "absoluteInfluenceRectForAncestorGroups:",
-      "bridgedName": "absoluteInfluenceRectForAncestorGroups",
+    "absoluteInfluenceRectForAncestorGroups:document:cache:": {
+      "name": "absoluteInfluenceRectForAncestorGroups:document:cache:",
+      "bridgedName": "absoluteInfluenceRectForAncestorGroups_document_cache",
       "args": [
         {
           "name": "absoluteInfluenceRectForAncestorGroups",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "cache",
           "type": "id"
         }
       ],
@@ -154,6 +163,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "migratePropertiesFromV100OrEarlierWithUnarchiver:": {
+      "name": "migratePropertiesFromV100OrEarlierWithUnarchiver:",
+      "bridgedName": "migratePropertiesFromV100OrEarlierWithUnarchiver",
+      "args": [
+        {
+          "name": "migratePropertiesFromV100OrEarlierWithUnarchiver",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "migratePropertiesFromV79OrEarlierWithUnarchiver:": {
       "name": "migratePropertiesFromV79OrEarlierWithUnarchiver:",
       "bridgedName": "migratePropertiesFromV79OrEarlierWithUnarchiver",
@@ -206,23 +228,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawBackgroundInContext:isDrawingAsSymbolInstance:": {
-      "name": "shouldDrawBackgroundInContext:isDrawingAsSymbolInstance:",
-      "bridgedName": "shouldDrawBackgroundInContext_isDrawingAsSymbolInstance",
-      "args": [
-        {
-          "name": "shouldDrawBackgroundInContext",
-          "type": "id"
-        },
-        {
-          "name": "isDrawingAsSymbolInstance",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "prepareDrawingInContext:inBlock:": {
       "name": "prepareDrawingInContext:inBlock:",
       "bridgedName": "prepareDrawingInContext_inBlock",
@@ -237,6 +242,23 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawBackgroundInContext:isDrawingAsSymbolInstance:": {
+      "name": "shouldDrawBackgroundInContext:isDrawingAsSymbolInstance:",
+      "bridgedName": "shouldDrawBackgroundInContext_isDrawingAsSymbolInstance",
+      "args": [
+        {
+          "name": "shouldDrawBackgroundInContext",
+          "type": "id"
+        },
+        {
+          "name": "isDrawingAsSymbolInstance",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -281,10 +303,28 @@
         "nonatomic"
       ]
     },
+    "preset": {
+      "name": "preset",
+      "pointer": true,
+      "type": "MSArtboardPreset",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "contentBounds": {
       "name": "contentBounds",
       "pointer": false,
       "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "webExporterShouldIncludeBackgroundColor": {
+      "name": "webExporterShouldIncludeBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -400,6 +440,15 @@
     },
     "isFlippedVertical": {
       "name": "isFlippedVertical",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isFlowHome": {
+      "name": "isFlowHome",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

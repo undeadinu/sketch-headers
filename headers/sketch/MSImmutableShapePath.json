@@ -1,49 +1,28 @@
 {
   "imports": [
-    "_MSImmutableShapePath.h",
-    "MSShapePath.h"
+    "_MSImmutableShapePath.h"
   ],
   "classes": [],
   "protocol": false,
   "className": "MSImmutableShapePath",
   "extends": "_MSImmutableShapePath",
-  "interfaces": [
-    "MSShapePath"
-  ],
+  "interfaces": [],
   "methods": {
-    "migratePropertiesFromV87OrEarlierWithCoder:": {
-      "name": "migratePropertiesFromV87OrEarlierWithCoder:",
-      "bridgedName": "migratePropertiesFromV87OrEarlierWithCoder",
+    "initWithPoints:pointRadiusBehaviour:isClosed:": {
+      "name": "initWithPoints:pointRadiusBehaviour:isClosed:",
+      "bridgedName": "initWithPoints_pointRadiusBehaviour_isClosed",
       "args": [
         {
-          "name": "migratePropertiesFromV87OrEarlierWithCoder",
+          "name": "initWithPoints",
           "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
+        },
         {
-          "name": "bezierPathInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathInRect:": {
-      "name": "pathInRect:",
-      "bridgedName": "pathInRect",
-      "args": [
+          "name": "pointRadiusBehaviour",
+          "type": "long long"
+        },
         {
-          "name": "pathInRect",
-          "type": "struct CGRect"
+          "name": "isClosed",
+          "type": "BOOL"
         }
       ],
       "returns": "id",
@@ -51,51 +30,5 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {
-    "numberOfPoints": {
-      "name": "numberOfPoints",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "isRectangle": {
-      "name": "isRectangle",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "isPolyline": {
-      "name": "isPolyline",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "isPolygon": {
-      "name": "isPolygon",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "isSVGRectangle": {
-      "name": "isSVGRectangle",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    }
-  }
+  "properties": {}
 }

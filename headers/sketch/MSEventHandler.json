@@ -7,7 +7,6 @@
   "classes": [
     "MSDuplicateOffsetTracker",
     "MSEventHandlerManager",
-    "MSMouseTracker",
     "NSArray",
     "NSEvent",
     "NSMutableArray",
@@ -41,6 +40,22 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentWindow": {
+      "name": "documentWindow",
+      "bridgedName": "documentWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mayShowResizingInspectorView": {
+      "name": "mayShowResizingInspectorView",
+      "bridgedName": "mayShowResizingInspectorView",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -246,33 +261,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "inspectorShouldShowBlendingProperties": {
-      "name": "inspectorShouldShowBlendingProperties",
-      "bridgedName": "inspectorShouldShowBlendingProperties",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "inspectorShouldShowLayerSpecificProperties": {
-      "name": "inspectorShouldShowLayerSpecificProperties",
-      "bridgedName": "inspectorShouldShowLayerSpecificProperties",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "inspectorShouldShowPositions": {
       "name": "inspectorShouldShowPositions",
       "bridgedName": "inspectorShouldShowPositions",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "inspectorShouldShowSharedStyles": {
-      "name": "inspectorShouldShowSharedStyles",
-      "bridgedName": "inspectorShouldShowSharedStyles",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -291,6 +282,22 @@
       "bridgedName": "inspectorLocation",
       "args": [],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowSharedStyles": {
+      "name": "shouldShowSharedStyles",
+      "bridgedName": "shouldShowSharedStyles",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowFlowView": {
+      "name": "shouldShowFlowView",
+      "bridgedName": "shouldShowFlowView",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -383,19 +390,6 @@
       "name": "mouseExited",
       "bridgedName": "mouseExited",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseEntered:": {
-      "name": "mouseEntered:",
-      "bridgedName": "mouseEntered",
-      "args": [
-        {
-          "name": "mouseEntered",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -661,6 +655,14 @@
       "bridgedName": "toolbarIdentifier",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawLayerHighlight": {
+      "name": "shouldDrawLayerHighlight",
+      "bridgedName": "shouldDrawLayerHighlight",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1352,16 +1354,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawInRect:cache:": {
-      "name": "drawInRect:cache:",
-      "bridgedName": "drawInRect_cache",
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
       "args": [
         {
           "name": "drawInRect",
           "type": "struct CGRect"
         },
         {
-          "name": "cache",
+          "name": "context",
           "type": "id"
         }
       ],
@@ -1538,6 +1540,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "mouseMovedEvent:": {
       "name": "mouseMovedEvent:",
       "bridgedName": "mouseMovedEvent",
@@ -1689,15 +1704,6 @@
       "type": "NSString",
       "attributes": [
         "copy",
-        "nonatomic"
-      ]
-    },
-    "mouseTracker": {
-      "name": "mouseTracker",
-      "pointer": true,
-      "type": "MSMouseTracker",
-      "attributes": [
-        "retain",
         "nonatomic"
       ]
     },

@@ -3,6 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
+    "MSCacheManager",
     "MSImmutableDocumentData",
     "NSString"
   ],
@@ -11,54 +12,16 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
-    "isArtboardEqual:toArtboard:": {
-      "name": "isArtboardEqual:toArtboard:",
-      "bridgedName": "isArtboardEqual_toArtboard",
+    "keyForFlowAnimationType:": {
+      "name": "keyForFlowAnimationType:",
+      "bridgedName": "keyForFlowAnimationType",
       "args": [
         {
-          "name": "isArtboardEqual",
-          "type": "id"
-        },
-        {
-          "name": "toArtboard",
-          "type": "id"
+          "name": "keyForFlowAnimationType",
+          "type": "long long"
         }
       ],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "isPageEqual:toPage:": {
-      "name": "isPageEqual:toPage:",
-      "bridgedName": "isPageEqual_toPage",
-      "args": [
-        {
-          "name": "isPageEqual",
-          "type": "id"
-        },
-        {
-          "name": "toPage",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "wouldManifestChangeBetweenOldDoc:andNewDoc:": {
-      "name": "wouldManifestChangeBetweenOldDoc:andNewDoc:",
-      "bridgedName": "wouldManifestChangeBetweenOldDoc_andNewDoc",
-      "args": [
-        {
-          "name": "wouldManifestChangeBetweenOldDoc",
-          "type": "id"
-        },
-        {
-          "name": "andNewDoc",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -80,6 +43,153 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForFlow:": {
+      "name": "metadataForFlow:",
+      "bridgedName": "metadataForFlow",
+      "args": [
+        {
+          "name": "metadataForFlow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dictForRect:inRootLayer:": {
+      "name": "dictForRect:inRootLayer:",
+      "bridgedName": "dictForRect_inRootLayer",
+      "args": [
+        {
+          "name": "dictForRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inRootLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForLayer:": {
+      "name": "metadataForLayer:",
+      "bridgedName": "metadataForLayer",
+      "args": [
+        {
+          "name": "metadataForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForChildLayersInSymbolInstance:inRootLayer:positionTransform:withAncestors:earlierSymbols:": {
+      "name": "metadataForChildLayersInSymbolInstance:inRootLayer:positionTransform:withAncestors:earlierSymbols:",
+      "bridgedName": "metadataForChildLayersInSymbolInstance_inRootLayer_positionTransform_withAncestors_earlierSymbols",
+      "args": [
+        {
+          "name": "metadataForChildLayersInSymbolInstance",
+          "type": "id"
+        },
+        {
+          "name": "inRootLayer",
+          "type": "id"
+        },
+        {
+          "name": "positionTransform",
+          "type": "struct CGAffineTransform"
+        },
+        {
+          "name": "withAncestors",
+          "type": "id"
+        },
+        {
+          "name": "earlierSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForChildLayersInLayer:inRootLayer:positionTransform:withAncestors:earlierSymbols:": {
+      "name": "metadataForChildLayersInLayer:inRootLayer:positionTransform:withAncestors:earlierSymbols:",
+      "bridgedName": "metadataForChildLayersInLayer_inRootLayer_positionTransform_withAncestors_earlierSymbols",
+      "args": [
+        {
+          "name": "metadataForChildLayersInLayer",
+          "type": "id"
+        },
+        {
+          "name": "inRootLayer",
+          "type": "id"
+        },
+        {
+          "name": "positionTransform",
+          "type": "struct CGAffineTransform"
+        },
+        {
+          "name": "withAncestors",
+          "type": "id"
+        },
+        {
+          "name": "earlierSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForLayer:inRootLayer:positionTransform:withAncestors:earlierSymbols:": {
+      "name": "metadataForLayer:inRootLayer:positionTransform:withAncestors:earlierSymbols:",
+      "bridgedName": "metadataForLayer_inRootLayer_positionTransform_withAncestors_earlierSymbols",
+      "args": [
+        {
+          "name": "metadataForLayer",
+          "type": "id"
+        },
+        {
+          "name": "inRootLayer",
+          "type": "id"
+        },
+        {
+          "name": "positionTransform",
+          "type": "struct CGAffineTransform"
+        },
+        {
+          "name": "withAncestors",
+          "type": "id"
+        },
+        {
+          "name": "earlierSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "metadataForLayersInRootLayer:ancestors:": {
+      "name": "metadataForLayersInRootLayer:ancestors:",
+      "bridgedName": "metadataForLayersInRootLayer_ancestors",
+      "args": [
+        {
+          "name": "metadataForLayersInRootLayer",
+          "type": "id"
+        },
+        {
+          "name": "ancestors",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -203,6 +313,15 @@
       "name": "name",
       "pointer": true,
       "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cacheManager": {
+      "name": "cacheManager",
+      "pointer": true,
+      "type": "MSCacheManager",
       "attributes": [
         "retain",
         "nonatomic"

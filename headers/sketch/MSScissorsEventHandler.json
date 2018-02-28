@@ -3,7 +3,7 @@
     "MSEventHandler.h"
   ],
   "classes": [
-    "MSShapeGroup"
+    "NSIndexPath"
   ],
   "protocol": false,
   "className": "MSScissorsEventHandler",
@@ -85,13 +85,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawThinStrokeBezierSegments:": {
-      "name": "drawThinStrokeBezierSegments:",
-      "bridgedName": "drawThinStrokeBezierSegments",
+    "drawThinStrokeBezierSegments:hoverIndex:": {
+      "name": "drawThinStrokeBezierSegments:hoverIndex:",
+      "bridgedName": "drawThinStrokeBezierSegments_hoverIndex",
       "args": [
         {
           "name": "drawThinStrokeBezierSegments",
           "type": "id"
+        },
+        {
+          "name": "hoverIndex",
+          "type": "unsigned long long"
         }
       ],
       "returns": "void",
@@ -111,16 +115,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawInRect:cache:": {
-      "name": "drawInRect:cache:",
-      "bridgedName": "drawInRect_cache",
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
       "args": [
         {
           "name": "drawInRect",
           "type": "struct CGRect"
         },
         {
-          "name": "cache",
+          "name": "context",
           "type": "id"
         }
       ],
@@ -128,16 +132,29 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hoverIndexForMouse:": {
-      "name": "hoverIndexForMouse:",
-      "bridgedName": "hoverIndexForMouse",
+    "hoverSegmentForMouse:": {
+      "name": "hoverSegmentForMouse:",
+      "bridgedName": "hoverSegmentForMouse",
       "args": [
         {
-          "name": "hoverIndexForMouse",
+          "name": "hoverSegmentForMouse",
           "type": "struct CGPoint"
         }
       ],
-      "returns": "unsigned long long",
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shapeForIndexPath:": {
+      "name": "shapeForIndexPath:",
+      "bridgedName": "shapeForIndexPath",
+      "args": [
+        {
+          "name": "shapeForIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -212,24 +229,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "canCutSegments": {
+      "name": "canCutSegments",
+      "bridgedName": "canCutSegments",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "handlerGotFocus": {
       "name": "handlerGotFocus",
       "bridgedName": "handlerGotFocus",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "initWithManager:": {
-      "name": "initWithManager:",
-      "bridgedName": "initWithManager",
-      "args": [
-        {
-          "name": "initWithManager",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
@@ -243,18 +255,10 @@
         "nonatomic"
       ]
     },
-    "hoverIndex": {
-      "name": "hoverIndex",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "shape": {
-      "name": "shape",
+    "hoveringSegment": {
+      "name": "hoveringSegment",
       "pointer": true,
-      "type": "MSShapeGroup",
+      "type": "NSIndexPath",
       "attributes": [
         "retain",
         "nonatomic"

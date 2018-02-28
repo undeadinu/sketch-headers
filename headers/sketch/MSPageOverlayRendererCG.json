@@ -23,12 +23,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "renderOverlayForPage:selectedArtboard:options:rect:context:": {
-      "name": "renderOverlayForPage:selectedArtboard:options:rect:context:",
-      "bridgedName": "renderOverlayForPage_selectedArtboard_options_rect_context",
+    "shouldDrawFlowsForSelectedLayers:options:context:": {
+      "name": "shouldDrawFlowsForSelectedLayers:options:context:",
+      "bridgedName": "shouldDrawFlowsForSelectedLayers_options_context",
+      "args": [
+        {
+          "name": "shouldDrawFlowsForSelectedLayers",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderOverlayForPage:selectedLayers:selectedArtboard:options:rect:context:": {
+      "name": "renderOverlayForPage:selectedLayers:selectedArtboard:options:rect:context:",
+      "bridgedName": "renderOverlayForPage_selectedLayers_selectedArtboard_options_rect_context",
       "args": [
         {
           "name": "renderOverlayForPage",
+          "type": "id"
+        },
+        {
+          "name": "selectedLayers",
           "type": "id"
         },
         {
@@ -75,6 +100,125 @@
         {
           "name": "context",
           "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFlowForLayer:inRect:isSelected:ancestors:artboardDict:options:mayDrawHotspotBounds:history:context:": {
+      "name": "drawFlowForLayer:inRect:isSelected:ancestors:artboardDict:options:mayDrawHotspotBounds:history:context:",
+      "bridgedName": "drawFlowForLayer_inRect_isSelected_ancestors_artboardDict_options_mayDrawHotspotBounds_history_context",
+      "args": [
+        {
+          "name": "drawFlowForLayer",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "isSelected",
+          "type": "BOOL"
+        },
+        {
+          "name": "ancestors",
+          "type": "id"
+        },
+        {
+          "name": "artboardDict",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "mayDrawHotspotBounds",
+          "type": "BOOL"
+        },
+        {
+          "name": "history",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recursivelyDrawFlowsForLayer:inRect:ancestors:allArtboards:selectedLayerIDs:options:mayDrawHotspotBounds:history:context:": {
+      "name": "recursivelyDrawFlowsForLayer:inRect:ancestors:allArtboards:selectedLayerIDs:options:mayDrawHotspotBounds:history:context:",
+      "bridgedName": "recursivelyDrawFlowsForLayer_inRect_ancestors_allArtboards_selectedLayerIDs_options_mayDrawHotspotBounds_history_context",
+      "args": [
+        {
+          "name": "recursivelyDrawFlowsForLayer",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ancestors",
+          "type": "id"
+        },
+        {
+          "name": "allArtboards",
+          "type": "id"
+        },
+        {
+          "name": "selectedLayerIDs",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "mayDrawHotspotBounds",
+          "type": "BOOL"
+        },
+        {
+          "name": "history",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFlowsForPage:selectedLayers:inRect:options:context:": {
+      "name": "drawFlowsForPage:selectedLayers:inRect:options:context:",
+      "bridgedName": "drawFlowsForPage_selectedLayers_inRect_options_context",
+      "args": [
+        {
+          "name": "drawFlowsForPage",
+          "type": "id"
+        },
+        {
+          "name": "selectedLayers",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "context",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -165,12 +309,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawSlicesOutlineForGroup:inRect:zoom:ancestors:context:": {
-      "name": "drawSlicesOutlineForGroup:inRect:zoom:ancestors:context:",
-      "bridgedName": "drawSlicesOutlineForGroup_inRect_zoom_ancestors_context",
+    "drawSlicesOutlineForGroup:selectedLayers:inRect:zoom:ancestors:options:context:": {
+      "name": "drawSlicesOutlineForGroup:selectedLayers:inRect:zoom:ancestors:options:context:",
+      "bridgedName": "drawSlicesOutlineForGroup_selectedLayers_inRect_zoom_ancestors_options_context",
       "args": [
         {
           "name": "drawSlicesOutlineForGroup",
+          "type": "id"
+        },
+        {
+          "name": "selectedLayers",
           "type": "id"
         },
         {
@@ -186,6 +334,10 @@
           "type": "id"
         },
         {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
           "name": "context",
           "type": "struct CGContext *"
         }
@@ -194,17 +346,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawSlicesOutlineForGroup:inRect:context:": {
-      "name": "drawSlicesOutlineForGroup:inRect:context:",
-      "bridgedName": "drawSlicesOutlineForGroup_inRect_context",
+    "drawSlicesOutlineForGroup:selectedLayers:inRect:options:context:": {
+      "name": "drawSlicesOutlineForGroup:selectedLayers:inRect:options:context:",
+      "bridgedName": "drawSlicesOutlineForGroup_selectedLayers_inRect_options_context",
       "args": [
         {
           "name": "drawSlicesOutlineForGroup",
           "type": "id"
         },
         {
+          "name": "selectedLayers",
+          "type": "id"
+        },
+        {
           "name": "inRect",
           "type": "struct CGRect"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
         },
         {
           "name": "context",

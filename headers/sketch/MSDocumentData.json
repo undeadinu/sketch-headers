@@ -9,8 +9,7 @@
     "BCCache",
     "MSFontList",
     "MSPage",
-    "NSDictionary",
-    "NSSet"
+    "NSDictionary"
   ],
   "protocol": true,
   "className": "MSDocumentData",
@@ -94,32 +93,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setEnableSliceInteraction:": {
-      "name": "setEnableSliceInteraction:",
-      "bridgedName": "setEnableSliceInteraction",
-      "args": [
-        {
-          "name": "setEnableSliceInteraction",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setEnableLayerInteraction:": {
-      "name": "setEnableLayerInteraction:",
-      "bridgedName": "setEnableLayerInteraction",
-      "args": [
-        {
-          "name": "setEnableLayerInteraction",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "images": {
       "name": "images",
       "bridgedName": "images",
@@ -141,6 +114,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "purgeForeignSymbols": {
+      "name": "purgeForeignSymbols",
+      "bridgedName": "purgeForeignSymbols",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "enumerateForeignSymbolsWithLibraries:block:": {
       "name": "enumerateForeignSymbolsWithLibraries:block:",
       "bridgedName": "enumerateForeignSymbolsWithLibraries_block",
@@ -158,12 +139,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "libraryForForeignSymbol:inLibraries:": {
-      "name": "libraryForForeignSymbol:inLibraries:",
-      "bridgedName": "libraryForForeignSymbol_inLibraries",
+    "libraryForForeignObject:inLibraries:": {
+      "name": "libraryForForeignObject:inLibraries:",
+      "bridgedName": "libraryForForeignObject_inLibraries",
       "args": [
         {
-          "name": "libraryForForeignSymbol",
+          "name": "libraryForForeignObject",
           "type": "id"
         },
         {
@@ -251,14 +232,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "symbolInstancesBySymbolID": {
-      "name": "symbolInstancesBySymbolID",
-      "bridgedName": "symbolInstancesBySymbolID",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "populateDictionary:withChildrenOf:": {
       "name": "populateDictionary:withChildrenOf:",
       "bridgedName": "populateDictionary_withChildrenOf",
@@ -280,6 +253,19 @@
       "name": "layersByObjectID",
       "bridgedName": "layersByObjectID",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "artboardWithID:": {
+      "name": "artboardWithID:",
+      "bridgedName": "artboardWithID",
+      "args": [
+        {
+          "name": "artboardWithID",
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -371,19 +357,6 @@
       "bridgedName": "addBlankPage",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addPage:": {
-      "name": "addPage:",
-      "bridgedName": "addPage",
-      "args": [
-        {
-          "name": "addPage",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -530,9 +503,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "replaceInstancesOfColor:withColor:ignoreAlphaWhenMatching:replaceAlpha:": {
-      "name": "replaceInstancesOfColor:withColor:ignoreAlphaWhenMatching:replaceAlpha:",
-      "bridgedName": "replaceInstancesOfColor_withColor_ignoreAlphaWhenMatching_replaceAlpha",
+    "replaceInstancesOfColor:withColor:ignoreAlphaWhenMatching:replaceAlphaOfOriginalColor:": {
+      "name": "replaceInstancesOfColor:withColor:ignoreAlphaWhenMatching:replaceAlphaOfOriginalColor:",
+      "bridgedName": "replaceInstancesOfColor_withColor_ignoreAlphaWhenMatching_replaceAlphaOfOriginalColor",
       "args": [
         {
           "name": "replaceInstancesOfColor",
@@ -547,7 +520,7 @@
           "type": "BOOL"
         },
         {
-          "name": "replaceAlpha",
+          "name": "replaceAlphaOfOriginalColor",
           "type": "BOOL"
         }
       ],
@@ -831,30 +804,21 @@
         "nonatomic"
       ]
     },
+    "symbolInstancesBySymbolID": {
+      "name": "symbolInstancesBySymbolID",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "currentPage": {
       "name": "currentPage",
       "pointer": true,
       "type": "MSPage",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "unavailableFontNames": {
-      "name": "unavailableFontNames",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "fontNames": {
-      "name": "fontNames",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
-        "readonly",
         "nonatomic"
       ]
     }

@@ -3,6 +3,7 @@
     "_MSShapePathLayer.h"
   ],
   "classes": [
+    "MSCurvePoint",
     "NSBezierPath"
   ],
   "protocol": false,
@@ -36,23 +37,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "shapeWithShapePath:inRect:": {
-      "name": "shapeWithShapePath:inRect:",
-      "bridgedName": "shapeWithShapePath_inRect",
-      "args": [
-        {
-          "name": "shapeWithShapePath",
-          "type": "id"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "keyPathsForValuesAffectingBadgeMap": {
       "name": "keyPathsForValuesAffectingBadgeMap",
       "bridgedName": "keyPathsForValuesAffectingBadgeMap",
@@ -68,6 +52,102 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "didChangeValueForKey:": {
+      "name": "didChangeValueForKey:",
+      "bridgedName": "didChangeValueForKey",
+      "args": [
+        {
+          "name": "didChangeValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willChangeValueForKey:": {
+      "name": "willChangeValueForKey:",
+      "bridgedName": "willChangeValueForKey",
+      "args": [
+        {
+          "name": "willChangeValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPolygon": {
+      "name": "isPolygon",
+      "bridgedName": "isPolygon",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRectangle": {
+      "name": "isRectangle",
+      "bridgedName": "isRectangle",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptToSimplifyBetweenPoint:andPoint:": {
+      "name": "attemptToSimplifyBetweenPoint:andPoint:",
+      "bridgedName": "attemptToSimplifyBetweenPoint_andPoint",
+      "args": [
+        {
+          "name": "attemptToSimplifyBetweenPoint",
+          "type": "id"
+        },
+        {
+          "name": "andPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "simplifyPathOnce": {
+      "name": "simplifyPathOnce",
+      "bridgedName": "simplifyPathOnce",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "simplify": {
+      "name": "simplify",
+      "bridgedName": "simplify",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointsAroundIndex:": {
+      "name": "pointsAroundIndex:",
+      "bridgedName": "pointsAroundIndex",
+      "args": [
+        {
+          "name": "pointsAroundIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLine": {
+      "name": "isLine",
+      "bridgedName": "isLine",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "shouldHitTestOnFill:": {
       "name": "shouldHitTestOnFill:",
@@ -98,19 +178,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setIsVisible:": {
-      "name": "setIsVisible:",
-      "bridgedName": "setIsVisible",
-      "args": [
-        {
-          "name": "setIsVisible",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "layerSuitableForInsertingIntoGroup:": {
       "name": "layerSuitableForInsertingIntoGroup:",
       "bridgedName": "layerSuitableForInsertingIntoGroup",
@@ -127,14 +194,6 @@
     "canBeContainedByGroup": {
       "name": "canBeContainedByGroup",
       "bridgedName": "canBeContainedByGroup",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isLine": {
-      "name": "isLine",
-      "bridgedName": "isLine",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -221,14 +280,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "allCurvePoints": {
-      "name": "allCurvePoints",
-      "bridgedName": "allCurvePoints",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "multiplyBy:": {
       "name": "multiplyBy:",
       "bridgedName": "multiplyBy",
@@ -305,14 +356,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "simplify": {
-      "name": "simplify",
-      "bridgedName": "simplify",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "pointCenteredAfterPointIndex:": {
       "name": "pointCenteredAfterPointIndex:",
       "bridgedName": "pointCenteredAfterPointIndex",
@@ -330,6 +373,19 @@
       "name": "bezierPathWithTransforms",
       "bridgedName": "bezierPathWithTransforms",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierPathWithoutTransformsInRect:": {
+      "name": "bezierPathWithoutTransformsInRect:",
+      "bridgedName": "bezierPathWithoutTransformsInRect",
+      "args": [
+        {
+          "name": "bezierPathWithoutTransformsInRect",
+          "type": "struct CGRect"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -395,14 +451,6 @@
           "type": "BOOL"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshOverlay": {
-      "name": "refreshOverlay",
-      "bridgedName": "refreshOverlay",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -491,6 +539,14 @@
       "bridgedName": "styledLayer",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawSelectionStroke": {
+      "name": "shouldDrawSelectionStroke",
+      "bridgedName": "shouldDrawSelectionStroke",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -723,20 +779,39 @@
         "nonatomic"
       ]
     },
+    "lastPoint": {
+      "name": "lastPoint",
+      "pointer": true,
+      "type": "MSCurvePoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "firstPoint": {
+      "name": "firstPoint",
+      "pointer": true,
+      "type": "MSCurvePoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "numberOfCurvePoints": {
+      "name": "numberOfCurvePoints",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "hasRoundedCorners": {
       "name": "hasRoundedCorners",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
         "readonly",
-        "nonatomic"
-      ]
-    },
-    "isClosed": {
-      "name": "isClosed",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
         "nonatomic"
       ]
     },

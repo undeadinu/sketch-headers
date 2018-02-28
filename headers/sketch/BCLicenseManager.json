@@ -355,6 +355,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "licenseVariantIsSupported:": {
+      "name": "licenseVariantIsSupported:",
+      "bridgedName": "licenseVariantIsSupported",
+      "args": [
+        {
+          "name": "licenseVariantIsSupported",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "licenseVersionIsSupported:": {
       "name": "licenseVersionIsSupported:",
       "bridgedName": "licenseVersionIsSupported",
@@ -420,9 +433,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:": {
-      "name": "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:",
-      "bridgedName": "initWithApplicationID_publicCertificate_licenseURL_applicationBuildDate",
+    "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:applicationVariant:": {
+      "name": "initWithApplicationID:publicCertificate:licenseURL:applicationBuildDate:applicationVariant:",
+      "bridgedName": "initWithApplicationID_publicCertificate_licenseURL_applicationBuildDate_applicationVariant",
       "args": [
         {
           "name": "initWithApplicationID",
@@ -439,6 +452,10 @@
         {
           "name": "applicationBuildDate",
           "type": "id"
+        },
+        {
+          "name": "applicationVariant",
+          "type": "id"
         }
       ],
       "returns": "id",
@@ -447,6 +464,15 @@
     }
   },
   "properties": {
+    "applicationVariant": {
+      "name": "applicationVariant",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "applicationBuildDate": {
       "name": "applicationBuildDate",
       "pointer": true,

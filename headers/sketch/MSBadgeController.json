@@ -3,7 +3,6 @@
     "NSObject.h"
   ],
   "classes": [
-    "BCWindowBadge",
     "MSDocument",
     "MSDocumentWindow",
     "NSArray"
@@ -29,16 +28,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateBadgeForAction:": {
-      "name": "updateBadgeForAction:",
-      "bridgedName": "updateBadgeForAction",
+    "updateBadge:forAction:": {
+      "name": "updateBadge:forAction:",
+      "bridgedName": "updateBadge_forAction",
       "args": [
         {
-          "name": "updateBadgeForAction",
+          "name": "updateBadge",
+          "type": "id"
+        },
+        {
+          "name": "forAction",
           "type": "id"
         }
       ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -70,15 +73,6 @@
     }
   },
   "properties": {
-    "badge": {
-      "name": "badge",
-      "pointer": true,
-      "type": "BCWindowBadge",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "activeActions": {
       "name": "activeActions",
       "pointer": true,

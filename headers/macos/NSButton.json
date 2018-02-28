@@ -15,10 +15,10 @@
   "className": "NSButton",
   "extends": "NSControl",
   "interfaces": [
-    "NSUserInterfaceCompression",
     "_NSAlertSensitiveView",
     "NSUserInterfaceValidations",
-    "NSAccessibilityButton"
+    "NSAccessibilityButton",
+    "NSUserInterfaceCompression"
   ],
   "methods": {
     "initialize": {
@@ -162,6 +162,45 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "minimumSizeWithPrioritizedCompressionOptions:": {
+      "name": "minimumSizeWithPrioritizedCompressionOptions:",
+      "bridgedName": "minimumSizeWithPrioritizedCompressionOptions",
+      "args": [
+        {
+          "name": "minimumSizeWithPrioritizedCompressionOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compressWithPrioritizedCompressionOptions:": {
+      "name": "compressWithPrioritizedCompressionOptions:",
+      "bridgedName": "compressWithPrioritizedCompressionOptions",
+      "args": [
+        {
+          "name": "compressWithPrioritizedCompressionOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_supportedOptionsFromPrioritizedOptions:": {
+      "name": "_supportedOptionsFromPrioritizedOptions:",
+      "bridgedName": "_supportedOptionsFromPrioritizedOptions",
+      "args": [
+        {
+          "name": "_supportedOptionsFromPrioritizedOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "touchBarHitTestInsets": {
       "name": "touchBarHitTestInsets",
@@ -855,45 +894,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "minimumSizeWithPrioritizedCompressionOptions:": {
-      "name": "minimumSizeWithPrioritizedCompressionOptions:",
-      "bridgedName": "minimumSizeWithPrioritizedCompressionOptions",
-      "args": [
-        {
-          "name": "minimumSizeWithPrioritizedCompressionOptions",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "compressWithPrioritizedCompressionOptions:": {
-      "name": "compressWithPrioritizedCompressionOptions:",
-      "bridgedName": "compressWithPrioritizedCompressionOptions",
-      "args": [
-        {
-          "name": "compressWithPrioritizedCompressionOptions",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_supportedOptionsFromPrioritizedOptions:": {
-      "name": "_supportedOptionsFromPrioritizedOptions:",
-      "bridgedName": "_supportedOptionsFromPrioritizedOptions",
-      "args": [
-        {
-          "name": "_supportedOptionsFromPrioritizedOptions",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setNextState": {
       "name": "setNextState",
       "bridgedName": "setNextState",
@@ -946,6 +946,15 @@
     }
   },
   "properties": {
+    "activeCompressionOptions": {
+      "name": "activeCompressionOptions",
+      "pointer": true,
+      "type": "NSUserInterfaceCompressionOptions",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
     "bezelColor": {
       "name": "bezelColor",
       "pointer": true,
@@ -1024,15 +1033,6 @@
       "type": "BOOL",
       "attributes": [
         "readonly"
-      ]
-    },
-    "activeCompressionOptions": {
-      "name": "activeCompressionOptions",
-      "pointer": true,
-      "type": "NSUserInterfaceCompressionOptions",
-      "attributes": [
-        "readonly",
-        "copy"
       ]
     },
     "debugDescription": {

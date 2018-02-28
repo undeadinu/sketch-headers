@@ -4,11 +4,9 @@
   ],
   "classes": [
     "MSCGContextPool",
-    "MSImmutableDocumentData",
-    "MSImmutableLayer",
+    "MSImmutableLayerGroup",
     "MSRenderingDriver",
-    "NSColor",
-    "NSColorSpace",
+    "MSRenderingRequest",
     "NSGraphicsContext",
     "NSMutableArray",
     "NSString"
@@ -183,6 +181,27 @@
       "name": "shouldDisableSubpixelQuantization",
       "bridgedName": "shouldDisableSubpixelQuantization",
       "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsSubpixelQuantization": {
+      "name": "allowsSubpixelQuantization",
+      "bridgedName": "allowsSubpixelQuantization",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsSubpixelQuantization:": {
+      "name": "allowsSubpixelQuantization:",
+      "bridgedName": "allowsSubpixelQuantization",
+      "args": [
+        {
+          "name": "allowsSubpixelQuantization",
+          "type": "id"
+        }
+      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -711,6 +730,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setupCGContext:withRenderingRequest:": {
+      "name": "setupCGContext:withRenderingRequest:",
+      "bridgedName": "setupCGContext_withRenderingRequest",
+      "args": [
+        {
+          "name": "setupCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "withRenderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "hasGraphicsContext": {
       "name": "hasGraphicsContext",
       "bridgedName": "hasGraphicsContext",
@@ -723,19 +759,6 @@
       "name": "setUp",
       "bridgedName": "setUp",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "renderSymbol:": {
-      "name": "renderSymbol:",
-      "bridgedName": "renderSymbol",
-      "args": [
-        {
-          "name": "renderSymbol",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -787,34 +810,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bitmapBackedSubContextWithCGContext:size:": {
-      "name": "bitmapBackedSubContextWithCGContext:size:",
-      "bridgedName": "bitmapBackedSubContextWithCGContext_size",
-      "args": [
-        {
-          "name": "bitmapBackedSubContextWithCGContext",
-          "type": "struct CGContext *"
-        },
-        {
-          "name": "size",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "blurSubContextWithCGContext:untilLayer:rect:": {
-      "name": "blurSubContextWithCGContext:untilLayer:rect:",
-      "bridgedName": "blurSubContextWithCGContext_untilLayer_rect",
+    "blurSubContextWithCGContext:backgroundBlurLayer:pointScale:rect:": {
+      "name": "blurSubContextWithCGContext:backgroundBlurLayer:pointScale:rect:",
+      "bridgedName": "blurSubContextWithCGContext_backgroundBlurLayer_pointScale_rect",
       "args": [
         {
           "name": "blurSubContextWithCGContext",
           "type": "struct CGContext *"
         },
         {
-          "name": "untilLayer",
+          "name": "backgroundBlurLayer",
           "type": "id"
+        },
+        {
+          "name": "pointScale",
+          "type": "double"
         },
         {
           "name": "rect",
@@ -825,9 +835,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "subContextWithCGContext:contextIsVectorBacked:atZoomLevel:": {
-      "name": "subContextWithCGContext:contextIsVectorBacked:atZoomLevel:",
-      "bridgedName": "subContextWithCGContext_contextIsVectorBacked_atZoomLevel",
+    "subContextWithCGContext:contextIsVectorBacked:pointScale:zoomLevel:options:": {
+      "name": "subContextWithCGContext:contextIsVectorBacked:pointScale:zoomLevel:options:",
+      "bridgedName": "subContextWithCGContext_contextIsVectorBacked_pointScale_zoomLevel_options",
       "args": [
         {
           "name": "subContextWithCGContext",
@@ -838,34 +848,67 @@
           "type": "BOOL"
         },
         {
-          "name": "atZoomLevel",
+          "name": "pointScale",
           "type": "double"
+        },
+        {
+          "name": "zoomLevel",
+          "type": "double"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "subContextWithDefaultSettingsForCGContext:atZoomLevel:": {
-      "name": "subContextWithDefaultSettingsForCGContext:atZoomLevel:",
-      "bridgedName": "subContextWithDefaultSettingsForCGContext_atZoomLevel",
+    "subContextWithCGContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "subContextWithCGContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "subContextWithCGContext_contextIsVectorBacked_renderingRequest",
+      "args": [
+        {
+          "name": "subContextWithCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subContextWithDefaultSettingsForCGContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "subContextWithDefaultSettingsForCGContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "subContextWithDefaultSettingsForCGContext_contextIsVectorBacked_renderingRequest",
       "args": [
         {
           "name": "subContextWithDefaultSettingsForCGContext",
           "type": "struct CGContext *"
         },
         {
-          "name": "atZoomLevel",
-          "type": "double"
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithName:driver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:": {
-      "name": "initWithName:driver:cgContext:contextIsVectorBacked:colorSpace:atZoomLevel:document:",
-      "bridgedName": "initWithName_driver_cgContext_contextIsVectorBacked_colorSpace_atZoomLevel_document",
+    "initWithName:driver:cgContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "initWithName:driver:cgContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "initWithName_driver_cgContext_contextIsVectorBacked_renderingRequest",
       "args": [
         {
           "name": "initWithName",
@@ -884,15 +927,7 @@
           "type": "BOOL"
         },
         {
-          "name": "colorSpace",
-          "type": "id"
-        },
-        {
-          "name": "atZoomLevel",
-          "type": "double"
-        },
-        {
-          "name": "document",
+          "name": "renderingRequest",
           "type": "id"
         }
       ],
@@ -900,9 +935,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithName:driver:context:colorSpace:zoom:": {
-      "name": "initWithName:driver:context:colorSpace:zoom:",
-      "bridgedName": "initWithName_driver_context_colorSpace_zoom",
+    "initWithName:driver:context:renderingRequest:": {
+      "name": "initWithName:driver:context:renderingRequest:",
+      "bridgedName": "initWithName_driver_context_renderingRequest",
       "args": [
         {
           "name": "initWithName",
@@ -917,12 +952,8 @@
           "type": "struct CGContext *"
         },
         {
-          "name": "colorSpace",
+          "name": "renderingRequest",
           "type": "id"
-        },
-        {
-          "name": "zoom",
-          "type": "double"
         }
       ],
       "returns": "id",
@@ -939,28 +970,26 @@
     }
   },
   "properties": {
+    "internalBlendMode": {
+      "name": "internalBlendMode",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "savedContextRef": {
+      "name": "savedContextRef",
+      "pointer": true,
+      "type": "struct CGContext",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "graphicsContext": {
       "name": "graphicsContext",
       "pointer": true,
       "type": "NSGraphicsContext",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "symbolMasterStack": {
-      "name": "symbolMasterStack",
-      "pointer": true,
-      "type": "NSMutableArray",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "parentGroupStack": {
-      "name": "parentGroupStack",
-      "pointer": true,
-      "type": "NSMutableArray",
       "attributes": [
         "retain",
         "nonatomic"
@@ -974,6 +1003,15 @@
         "nonatomic"
       ]
     },
+    "symbolMasterStack": {
+      "name": "symbolMasterStack",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "rotateFlipTransform": {
       "name": "rotateFlipTransform",
       "pointer": false,
@@ -982,191 +1020,12 @@
         "nonatomic"
       ]
     },
-    "alphaValue": {
-      "name": "alphaValue",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "internalBlendMode": {
-      "name": "internalBlendMode",
-      "pointer": false,
-      "type": "int",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "bitmapTransparencyLayerSavedStates": {
-      "name": "bitmapTransparencyLayerSavedStates",
+    "parentGroupStack": {
+      "name": "parentGroupStack",
       "pointer": true,
       "type": "NSMutableArray",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "savedContextRef": {
-      "name": "savedContextRef",
-      "pointer": true,
-      "type": "struct CGContext",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "name": {
-      "name": "name",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "contextPool": {
-      "name": "contextPool",
-      "pointer": true,
-      "type": "MSCGContextPool",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "cacheProvider": {
-      "name": "cacheProvider",
-      "pointer": false,
-      "type": "id <MSRenderingContextCacheProvider>",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "driver": {
-      "name": "driver",
-      "pointer": true,
-      "type": "MSRenderingDriver",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "initialTransform": {
-      "name": "initialTransform",
-      "pointer": false,
-      "type": "struct CGAffineTransform",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "untilLayer": {
-      "name": "untilLayer",
-      "pointer": true,
-      "type": "MSImmutableLayer",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "document": {
-      "name": "document",
-      "pointer": true,
-      "type": "MSImmutableDocumentData",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "cancelled": {
-      "name": "cancelled",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic",
-        "getter=isCancelled"
-      ]
-    },
-    "parentLayerOpacity": {
-      "name": "parentLayerOpacity",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "shouldFlipShadows": {
-      "name": "shouldFlipShadows",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "backingScale": {
-      "name": "backingScale",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "shadowScale": {
-      "name": "shadowScale",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "rootObject": {
-      "name": "rootObject",
-      "pointer": false,
-      "type": "id",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "backgroundColor": {
-      "name": "backgroundColor",
-      "pointer": true,
-      "type": "NSColor",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "contextIsVectorBacked": {
-      "name": "contextIsVectorBacked",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "contextRef": {
-      "name": "contextRef",
-      "pointer": true,
-      "type": "struct CGContext",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "colorSpace": {
-      "name": "colorSpace",
-      "pointer": true,
-      "type": "NSColorSpace",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "zoomLevel": {
-      "name": "zoomLevel",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
         "nonatomic"
       ]
     },
@@ -1186,59 +1045,64 @@
         "nonatomic"
       ]
     },
-    "includeArtboardBackground": {
-      "name": "includeArtboardBackground",
+    "bitmapTransparencyLayerSavedStates": {
+      "name": "bitmapTransparencyLayerSavedStates",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "alphaValue": {
+      "name": "alphaValue",
       "pointer": false,
-      "type": "BOOL",
+      "type": "double",
       "attributes": [
         "nonatomic"
       ]
     },
-    "isDrawingMask": {
-      "name": "isDrawingMask",
-      "pointer": false,
-      "type": "BOOL",
+    "contextPool": {
+      "name": "contextPool",
+      "pointer": true,
+      "type": "MSCGContextPool",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contextRef": {
+      "name": "contextRef",
+      "pointer": true,
+      "type": "struct CGContext",
       "attributes": [
         "nonatomic"
       ]
     },
-    "isDrawingPixelated": {
-      "name": "isDrawingPixelated",
+    "contextIsVectorBacked": {
+      "name": "contextIsVectorBacked",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
-    "isPrinting": {
-      "name": "isPrinting",
-      "pointer": false,
-      "type": "BOOL",
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
       "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
-    "isExporting": {
-      "name": "isExporting",
-      "pointer": false,
-      "type": "BOOL",
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
       "attributes": [
-        "nonatomic"
-      ]
-    },
-    "isBitmapBacked": {
-      "name": "isBitmapBacked",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "isDrawingBackgroundForBlur": {
-      "name": "isDrawingBackgroundForBlur",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
@@ -1250,10 +1114,37 @@
         "nonatomic"
       ]
     },
+    "cancelled": {
+      "name": "cancelled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic",
+        "getter=isCancelled"
+      ]
+    },
+    "renderingRequest": {
+      "name": "renderingRequest",
+      "pointer": true,
+      "type": "MSRenderingRequest",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "zoomLevelForShadows": {
       "name": "zoomLevelForShadows",
       "pointer": false,
       "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rootLayer": {
+      "name": "rootLayer",
+      "pointer": true,
+      "type": "MSImmutableLayerGroup",
       "attributes": [
         "readonly",
         "nonatomic"

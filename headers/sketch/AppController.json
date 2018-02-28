@@ -1,6 +1,8 @@
 {
   "imports": [
     "NSObject.h",
+    "MSDataMenuProviderDelegate.h",
+    "MSDataSupplierManagerDelegate.h",
     "NSApplicationDelegate.h",
     "NSMenuDelegate.h",
     "NSUserNotificationCenterDelegate.h",
@@ -13,6 +15,8 @@
     "MSAssetLibraryController",
     "MSComponentsPanelController",
     "MSCrashLogManager",
+    "MSDataMenuProvider",
+    "MSDataSupplierManager",
     "MSDocumentationSearcher",
     "MSHUDWindowController",
     "MSIOSConnectionController",
@@ -37,7 +41,9 @@
     "NSApplicationDelegate",
     "NSWindowDelegate",
     "NSMenuDelegate",
-    "NSUserNotificationCenterDelegate"
+    "NSUserNotificationCenterDelegate",
+    "MSDataMenuProviderDelegate",
+    "MSDataSupplierManagerDelegate"
   ],
   "methods": {
     "sharedInstance": {
@@ -131,6 +137,14 @@
     "refreshCurrentDocument": {
       "name": "refreshCurrentDocument",
       "bridgedName": "refreshCurrentDocument",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDocumentDidChange": {
+      "name": "currentDocumentDidChange",
+      "bridgedName": "currentDocumentDidChange",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -239,6 +253,83 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestDataFromPluginDataSupplier:pluginContext:": {
+      "name": "requestDataFromPluginDataSupplier:pluginContext:",
+      "bridgedName": "requestDataFromPluginDataSupplier_pluginContext",
+      "args": [
+        {
+          "name": "requestDataFromPluginDataSupplier",
+          "type": "id"
+        },
+        {
+          "name": "pluginContext",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProvider:didChooseData:": {
+      "name": "dataMenuProvider:didChooseData:",
+      "bridgedName": "dataMenuProvider_didChooseData",
+      "args": [
+        {
+          "name": "dataMenuProvider",
+          "type": "id"
+        },
+        {
+          "name": "didChooseData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProviderIsInspectorPopupMenu:": {
+      "name": "dataMenuProviderIsInspectorPopupMenu:",
+      "bridgedName": "dataMenuProviderIsInspectorPopupMenu",
+      "args": [
+        {
+          "name": "dataMenuProviderIsInspectorPopupMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProviderDataTypeForMenuBuilding:": {
+      "name": "dataMenuProviderDataTypeForMenuBuilding:",
+      "bridgedName": "dataMenuProviderDataTypeForMenuBuilding",
+      "args": [
+        {
+          "name": "dataMenuProviderDataTypeForMenuBuilding",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProvider:canChooseDataOfType:": {
+      "name": "dataMenuProvider:canChooseDataOfType:",
+      "bridgedName": "dataMenuProvider_canChooseDataOfType",
+      "args": [
+        {
+          "name": "dataMenuProvider",
+          "type": "id"
+        },
+        {
+          "name": "canChooseDataOfType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -406,14 +497,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setupMetrics": {
-      "name": "setupMetrics",
-      "bridgedName": "setupMetrics",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "applicationDidFinishLaunching:": {
       "name": "applicationDidFinishLaunching:",
       "bridgedName": "applicationDidFinishLaunching",
@@ -558,19 +641,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "toggleComponentsPanel": {
-      "name": "toggleComponentsPanel",
-      "bridgedName": "toggleComponentsPanel",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "isFirstLaunchOfNewVersion": {
       "name": "isFirstLaunchOfNewVersion",
       "bridgedName": "isFirstLaunchOfNewVersion",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "storePluginList:inCrashLogKey:": {
+      "name": "storePluginList:inCrashLogKey:",
+      "bridgedName": "storePluginList_inCrashLogKey",
+      "args": [
+        {
+          "name": "storePluginList",
+          "type": "id"
+        },
+        {
+          "name": "inCrashLogKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "storePluginsForCrashReport": {
+      "name": "storePluginsForCrashReport",
+      "bridgedName": "storePluginsForCrashReport",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -668,6 +768,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "selectInstalledLibrary:": {
+      "name": "selectInstalledLibrary:",
+      "bridgedName": "selectInstalledLibrary",
+      "args": [
+        {
+          "name": "selectInstalledLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startDownloadingLibrary:": {
+      "name": "startDownloadingLibrary:",
+      "bridgedName": "startDownloadingLibrary",
+      "args": [
+        {
+          "name": "startDownloadingLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "openCloudUploadURL:parameters:": {
       "name": "openCloudUploadURL:parameters:",
       "bridgedName": "openCloudUploadURL_parameters",
@@ -691,6 +817,23 @@
       "args": [
         {
           "name": "openCloudURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openAddLibraryURL:parameters:": {
+      "name": "openAddLibraryURL:parameters:",
+      "bridgedName": "openAddLibraryURL_parameters",
+      "args": [
+        {
+          "name": "openAddLibraryURL",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
           "type": "id"
         }
       ],
@@ -774,6 +917,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "runPluginScript:handler:name:withPreprocess:": {
+      "name": "runPluginScript:handler:name:withPreprocess:",
+      "bridgedName": "runPluginScript_handler_name_withPreprocess",
+      "args": [
+        {
+          "name": "runPluginScript",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        },
+        {
+          "name": "withPreprocess",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "runPluginScript:name:": {
       "name": "runPluginScript:name:",
       "bridgedName": "runPluginScript_name",
@@ -785,6 +953,31 @@
         {
           "name": "name",
           "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runPluginCommand:fromMenu:context:onComplete:": {
+      "name": "runPluginCommand:fromMenu:context:onComplete:",
+      "bridgedName": "runPluginCommand_fromMenu_context_onComplete",
+      "args": [
+        {
+          "name": "runPluginCommand",
+          "type": "id"
+        },
+        {
+          "name": "fromMenu",
+          "type": "BOOL"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "onComplete",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "id",
@@ -869,6 +1062,31 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runPluginCommandWithIdentifier:fromBundleAtURL:context:portToAsnwerTo:": {
+      "name": "runPluginCommandWithIdentifier:fromBundleAtURL:context:portToAsnwerTo:",
+      "bridgedName": "runPluginCommandWithIdentifier_fromBundleAtURL_context_portToAsnwerTo",
+      "args": [
+        {
+          "name": "runPluginCommandWithIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "fromBundleAtURL",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "portToAsnwerTo",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -964,6 +1182,15 @@
         "nonatomic"
       ]
     },
+    "componentsPanelController": {
+      "name": "componentsPanelController",
+      "pointer": true,
+      "type": "MSComponentsPanelController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "visualSettings": {
       "name": "visualSettings",
       "pointer": true,
@@ -1017,21 +1244,20 @@
         "nonatomic"
       ]
     },
+    "canCreateDocuments": {
+      "name": "canCreateDocuments",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "sketchSafeModeOn": {
       "name": "sketchSafeModeOn",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
         "readonly",
-        "nonatomic"
-      ]
-    },
-    "componentsPanelController": {
-      "name": "componentsPanelController",
-      "pointer": true,
-      "type": "MSComponentsPanelController",
-      "attributes": [
-        "retain",
         "nonatomic"
       ]
     },
@@ -1122,6 +1348,15 @@
         "nonatomic"
       ]
     },
+    "dataFeedProvider": {
+      "name": "dataFeedProvider",
+      "pointer": true,
+      "type": "MSDataMenuProvider",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "mirrorDataProvider": {
       "name": "mirrorDataProvider",
       "pointer": true,
@@ -1167,6 +1402,15 @@
         "nonatomic"
       ]
     },
+    "dataFeedMenuItem": {
+      "name": "dataFeedMenuItem",
+      "pointer": true,
+      "type": "NSMenuItem",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "insertSharedTextStyleMenuItem": {
       "name": "insertSharedTextStyleMenuItem",
       "pointer": true,
@@ -1196,6 +1440,14 @@
     },
     "debugMenuItem": {
       "name": "debugMenuItem",
+      "pointer": true,
+      "type": "__weak NSMenuItem",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "prototypingMenuItem": {
+      "name": "prototypingMenuItem",
       "pointer": true,
       "type": "__weak NSMenuItem",
       "attributes": [
@@ -1238,6 +1490,15 @@
       "name": "checkForUpdatesPeriod",
       "pointer": false,
       "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dataSupplierManager": {
+      "name": "dataSupplierManager",
+      "pointer": true,
+      "type": "MSDataSupplierManager",
       "attributes": [
         "readonly",
         "nonatomic"

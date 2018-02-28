@@ -2,10 +2,10 @@
   "imports": [
     "NSDocument.h",
     "BCSideBarViewControllerDelegate.h",
-    "MSAssetLibraryControllerDelegate.h",
     "MSCloudExportableDocument.h",
     "MSDocumentDataDelegate.h",
     "MSEventHandlerManagerDelegate.h",
+    "MSMenuBuilderDelegate.h",
     "MSSidebarControllerDelegate.h",
     "NSMenuDelegate.h",
     "NSToolbarDelegate.h",
@@ -49,7 +49,7 @@
     "NSWindowDelegate",
     "MSEventHandlerManagerDelegate",
     "MSDocumentDataDelegate",
-    "MSAssetLibraryControllerDelegate"
+    "MSMenuBuilderDelegate"
   ],
   "methods": {
     "openForeignSymbol:inLibrary:": {
@@ -127,6 +127,19 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewColorSpaceForItem:": {
+      "name": "previewColorSpaceForItem:",
+      "bridgedName": "previewColorSpaceForItem",
+      "args": [
+        {
+          "name": "previewColorSpaceForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -217,16 +230,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "assetLibraryController:libraryChanged:": {
-      "name": "assetLibraryController:libraryChanged:",
-      "bridgedName": "assetLibraryController_libraryChanged",
+    "libraryControllerDidChange:": {
+      "name": "libraryControllerDidChange:",
+      "bridgedName": "libraryControllerDidChange",
       "args": [
         {
-          "name": "assetLibraryController",
-          "type": "id"
-        },
-        {
-          "name": "libraryChanged",
+          "name": "libraryControllerDidChange",
           "type": "id"
         }
       ],
@@ -583,14 +592,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateSliceCount": {
-      "name": "updateSliceCount",
-      "bridgedName": "updateSliceCount",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "debugRunJSAPIUnitTests:": {
       "name": "debugRunJSAPIUnitTests:",
       "bridgedName": "debugRunJSAPIUnitTests",
@@ -678,19 +679,6 @@
       "name": "currentArtboardDidChange",
       "bridgedName": "currentArtboardDidChange",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "sliceDidChangeVisibility:": {
-      "name": "sliceDidChangeVisibility:",
-      "bridgedName": "sliceDidChangeVisibility",
-      "args": [
-        {
-          "name": "sliceDidChangeVisibility",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1532,22 +1520,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "unbindLayerSliceInteraction": {
-      "name": "unbindLayerSliceInteraction",
-      "bridgedName": "unbindLayerSliceInteraction",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bindLayerSliceInteraction": {
-      "name": "bindLayerSliceInteraction",
-      "bridgedName": "bindLayerSliceInteraction",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "loadInspectorPanel": {
       "name": "loadInspectorPanel",
       "bridgedName": "loadInspectorPanel",
@@ -1631,12 +1603,54 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "notifyIfDocumentResignedCurrent": {
+      "name": "notifyIfDocumentResignedCurrent",
+      "bridgedName": "notifyIfDocumentResignedCurrent",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "notifyIfDocumentBecameCurrent": {
+      "name": "notifyIfDocumentBecameCurrent",
+      "bridgedName": "notifyIfDocumentBecameCurrent",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "windowWillClose:": {
       "name": "windowWillClose:",
       "bridgedName": "windowWillClose",
       "args": [
         {
           "name": "windowWillClose",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidResignMain:": {
+      "name": "windowDidResignMain:",
+      "bridgedName": "windowDidResignMain",
+      "args": [
+        {
+          "name": "windowDidResignMain",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeMain:": {
+      "name": "windowDidBecomeMain:",
+      "bridgedName": "windowDidBecomeMain",
+      "args": [
+        {
+          "name": "windowDidBecomeMain",
           "type": "id"
         }
       ],
@@ -1745,6 +1759,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setViewsToNil": {
+      "name": "setViewsToNil",
+      "bridgedName": "setViewsToNil",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setViewControllersToNil": {
+      "name": "setViewControllersToNil",
+      "bridgedName": "setViewControllersToNil",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setDelegatesToNil": {
       "name": "setDelegatesToNil",
       "bridgedName": "setDelegatesToNil",
@@ -1816,36 +1846,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "stopAccessingFolderToken:": {
-      "name": "stopAccessingFolderToken:",
-      "bridgedName": "stopAccessingFolderToken",
-      "args": [
-        {
-          "name": "stopAccessingFolderToken",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "startAccessingFolder:tokenName:": {
-      "name": "startAccessingFolder:tokenName:",
-      "bridgedName": "startAccessingFolder_tokenName",
-      "args": [
-        {
-          "name": "startAccessingFolder",
-          "type": "id"
-        },
-        {
-          "name": "tokenName",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2115,6 +2115,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "restoreDocumentWindowWithIdentifier:state:completionHandler:": {
+      "name": "restoreDocumentWindowWithIdentifier:state:completionHandler:",
+      "bridgedName": "restoreDocumentWindowWithIdentifier_state_completionHandler",
+      "args": [
+        {
+          "name": "restoreDocumentWindowWithIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "state",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "migrateUIMetadataWithDocumentData:": {
       "name": "migrateUIMetadataWithDocumentData:",
       "bridgedName": "migrateUIMetadataWithDocumentData",
@@ -2301,57 +2322,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "findLibraryPreviewArtboardForDocument:outPage:": {
-      "name": "findLibraryPreviewArtboardForDocument:outPage:",
-      "bridgedName": "findLibraryPreviewArtboardForDocument_outPage",
-      "args": [
-        {
-          "name": "findLibraryPreviewArtboardForDocument",
-          "type": "id"
-        },
-        {
-          "name": "outPage",
-          "type": "id *"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "previewImageForDocument:page:rect:": {
-      "name": "previewImageForDocument:page:rect:",
-      "bridgedName": "previewImageForDocument_page_rect",
-      "args": [
-        {
-          "name": "previewImageForDocument",
-          "type": "id"
-        },
-        {
-          "name": "page",
-          "type": "id"
-        },
-        {
-          "name": "rect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "generatePreviewsForDocument:": {
-      "name": "generatePreviewsForDocument:",
-      "bridgedName": "generatePreviewsForDocument",
-      "args": [
-        {
-          "name": "generatePreviewsForDocument",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "writeToURL:ofType:forSaveOperation:originalContentsURL:error:": {
       "name": "writeToURL:ofType:forSaveOperation:originalContentsURL:error:",
       "bridgedName": "writeToURL_ofType_forSaveOperation_originalContentsURL_error",
@@ -2421,6 +2391,19 @@
         {
           "name": "completionHandler",
           "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForSaveOperation:": {
+      "name": "prepareForSaveOperation:",
+      "bridgedName": "prepareForSaveOperation",
+      "args": [
+        {
+          "name": "prepareForSaveOperation",
+          "type": "unsigned long long"
         }
       ],
       "returns": "void",
@@ -2738,6 +2721,15 @@
       "name": "immutableDocumentData",
       "pointer": true,
       "type": "MSImmutableDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isCurrent": {
+      "name": "isCurrent",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

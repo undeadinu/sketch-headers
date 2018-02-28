@@ -1,15 +1,13 @@
 {
   "imports": [
-    "MSCloudViewController.h"
+    "MSCloudBaseViewController.h"
   ],
   "classes": [
-    "NSButton",
-    "NSTextField",
-    "NSURL"
+    "NSButton"
   ],
   "protocol": false,
   "className": "MSCloudInvalidLicenseViewController",
-  "extends": "MSCloudViewController",
+  "extends": "MSCloudBaseViewController",
   "interfaces": [],
   "methods": {
     ".cxx_destruct": {
@@ -20,28 +18,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "presentCloudPopoverIfEligible": {
-      "name": "presentCloudPopoverIfEligible",
-      "bridgedName": "presentCloudPopoverIfEligible",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshLicense": {
-      "name": "refreshLicense",
-      "bridgedName": "refreshLicense",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "openURL:": {
-      "name": "openURL:",
-      "bridgedName": "openURL",
+    "learnMore:": {
+      "name": "learnMore:",
+      "bridgedName": "learnMore",
       "args": [
         {
-          "name": "openURL",
+          "name": "learnMore",
           "type": "id"
         }
       ],
@@ -49,48 +31,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "showMoreInfo:": {
-      "name": "showMoreInfo:",
-      "bridgedName": "showMoreInfo",
-      "args": [
-        {
-          "name": "showMoreInfo",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "renewLicense:": {
-      "name": "renewLicense:",
-      "bridgedName": "renewLicense",
-      "args": [
-        {
-          "name": "renewLicense",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "receiptLicenseDidChangeStateNotification:": {
-      "name": "receiptLicenseDidChangeStateNotification:",
-      "bridgedName": "receiptLicenseDidChangeStateNotification",
-      "args": [
-        {
-          "name": "receiptLicenseDidChangeStateNotification",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "localize": {
-      "name": "localize",
-      "bridgedName": "localize",
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -103,59 +46,15 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "viewDidLoad": {
-      "name": "viewDidLoad",
-      "bridgedName": "viewDidLoad",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
-    "renewButton": {
-      "name": "renewButton",
-      "pointer": true,
-      "type": "NSButton",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "learnMoreButton": {
       "name": "learnMoreButton",
       "pointer": true,
       "type": "NSButton",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "contentLabel": {
-      "name": "contentLabel",
-      "pointer": true,
-      "type": "NSTextField",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "infoURL": {
-      "name": "infoURL",
-      "pointer": true,
-      "type": "NSURL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "renewalURL": {
-      "name": "renewalURL",
-      "pointer": true,
-      "type": "NSURL",
-      "attributes": [
-        "readonly",
         "nonatomic"
       ]
     }
