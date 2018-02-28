@@ -1,0 +1,439 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "AFHTTPRequestSerializer<AFURLRequestSerialization>",
+    "AFHTTPResponseSerializer<AFURLResponseSerialization>",
+    "AFNetworkReachabilityManager",
+    "AFSecurityPolicy",
+    "NSObject<OS_dispatch_group>",
+    "NSObject<OS_dispatch_queue>",
+    "NSOperationQueue",
+    "NSURL",
+    "NSURLCredential"
+  ],
+  "protocol": false,
+  "className": "AFHTTPRequestOperationManager",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSSecureCoding",
+    "NSCopying"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "manager": {
+      "name": "manager",
+      "bridgedName": "manager",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "DELETE:parameters:success:failure:": {
+      "name": "DELETE:parameters:success:failure:",
+      "bridgedName": "DELETE_parameters_success_failure",
+      "args": [
+        {
+          "name": "DELETE",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "PATCH:parameters:success:failure:": {
+      "name": "PATCH:parameters:success:failure:",
+      "bridgedName": "PATCH_parameters_success_failure",
+      "args": [
+        {
+          "name": "PATCH",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "PUT:parameters:success:failure:": {
+      "name": "PUT:parameters:success:failure:",
+      "bridgedName": "PUT_parameters_success_failure",
+      "args": [
+        {
+          "name": "PUT",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "POST:parameters:constructingBodyWithBlock:success:failure:": {
+      "name": "POST:parameters:constructingBodyWithBlock:success:failure:",
+      "bridgedName": "POST_parameters_constructingBodyWithBlock_success_failure",
+      "args": [
+        {
+          "name": "POST",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "constructingBodyWithBlock",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "POST:parameters:success:failure:": {
+      "name": "POST:parameters:success:failure:",
+      "bridgedName": "POST_parameters_success_failure",
+      "args": [
+        {
+          "name": "POST",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "HEAD:parameters:success:failure:": {
+      "name": "HEAD:parameters:success:failure:",
+      "bridgedName": "HEAD_parameters_success_failure",
+      "args": [
+        {
+          "name": "HEAD",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "GET:parameters:success:failure:": {
+      "name": "GET:parameters:success:failure:",
+      "bridgedName": "GET_parameters_success_failure",
+      "args": [
+        {
+          "name": "GET",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "HTTPRequestOperationWithRequest:success:failure:": {
+      "name": "HTTPRequestOperationWithRequest:success:failure:",
+      "bridgedName": "HTTPRequestOperationWithRequest_success_failure",
+      "args": [
+        {
+          "name": "HTTPRequestOperationWithRequest",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "HTTPRequestOperationWithHTTPMethod:URLString:parameters:success:failure:": {
+      "name": "HTTPRequestOperationWithHTTPMethod:URLString:parameters:success:failure:",
+      "bridgedName": "HTTPRequestOperationWithHTTPMethod_URLString_parameters_success_failure",
+      "args": [
+        {
+          "name": "HTTPRequestOperationWithHTTPMethod",
+          "type": "id"
+        },
+        {
+          "name": "URLString",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        },
+        {
+          "name": "success",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithBaseURL:": {
+      "name": "initWithBaseURL:",
+      "bridgedName": "initWithBaseURL",
+      "args": [
+        {
+          "name": "initWithBaseURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "completionGroup": {
+      "name": "completionGroup",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_group>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "completionQueue": {
+      "name": "completionQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "reachabilityManager": {
+      "name": "reachabilityManager",
+      "pointer": true,
+      "type": "AFNetworkReachabilityManager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "securityPolicy": {
+      "name": "securityPolicy",
+      "pointer": true,
+      "type": "AFSecurityPolicy",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "credential": {
+      "name": "credential",
+      "pointer": true,
+      "type": "NSURLCredential",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "shouldUseCredentialStorage": {
+      "name": "shouldUseCredentialStorage",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "operationQueue": {
+      "name": "operationQueue",
+      "pointer": true,
+      "type": "NSOperationQueue",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "responseSerializer": {
+      "name": "responseSerializer",
+      "pointer": true,
+      "type": "AFHTTPResponseSerializer<AFURLResponseSerialization>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "requestSerializer": {
+      "name": "requestSerializer",
+      "pointer": true,
+      "type": "AFHTTPRequestSerializer<AFURLRequestSerialization>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "baseURL": {
+      "name": "baseURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

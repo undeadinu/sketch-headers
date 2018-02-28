@@ -1,0 +1,1450 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSISVariableDelegate.h"
+  ],
+  "classes": [
+    "NSHashTable",
+    "NSISVariable",
+    "NSMapTable",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableSet",
+    "NSObject<NSObservable>",
+    "NSString",
+    "NSThread",
+    "_NSISVariableObservable"
+  ],
+  "protocol": false,
+  "className": "NSISEngine",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSISVariableDelegate"
+  ],
+  "methods": {
+    "setLogOnInvalidUseFromBGThread:": {
+      "name": "setLogOnInvalidUseFromBGThread:",
+      "bridgedName": "setLogOnInvalidUseFromBGThread",
+      "args": [
+        {
+          "name": "setLogOnInvalidUseFromBGThread",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_dbg_anyEngineContainsVariable:": {
+      "name": "_dbg_anyEngineContainsVariable:",
+      "bridgedName": "_dbg_anyEngineContainsVariable",
+      "args": [
+        {
+          "name": "_dbg_anyEngineContainsVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exerciseAmbiguityInVariable:": {
+      "name": "exerciseAmbiguityInVariable:",
+      "bridgedName": "exerciseAmbiguityInVariable",
+      "args": [
+        {
+          "name": "exerciseAmbiguityInVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueOfVariableIsAmbiguous:": {
+      "name": "valueOfVariableIsAmbiguous:",
+      "bridgedName": "valueOfVariableIsAmbiguous",
+      "args": [
+        {
+          "name": "valueOfVariableIsAmbiguous",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "incoming:andOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:": {
+      "name": "incoming:andOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:",
+      "bridgedName": "incoming_andOutgoing_rowHeadsThatMakeValueAmbiguousForVariable",
+      "args": [
+        {
+          "name": "incoming",
+          "type": "id *"
+        },
+        {
+          "name": "andOutgoing",
+          "type": "id *"
+        },
+        {
+          "name": "rowHeadsThatMakeValueAmbiguousForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:": {
+      "name": "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:",
+      "bridgedName": "bodyVarIsAmbiguous_withPivotOfOutgoingRowHead",
+      "args": [
+        {
+          "name": "bodyVarIsAmbiguous",
+          "type": "id"
+        },
+        {
+          "name": "withPivotOfOutgoingRowHead",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "candidateRedundantConstraints": {
+      "name": "candidateRedundantConstraints",
+      "bridgedName": "candidateRedundantConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraintsAffectingValueOfVariable:": {
+      "name": "constraintsAffectingValueOfVariable:",
+      "bridgedName": "constraintsAffectingValueOfVariable",
+      "args": [
+        {
+          "name": "constraintsAffectingValueOfVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "verifyInternalIntegrity": {
+      "name": "verifyInternalIntegrity",
+      "bridgedName": "verifyInternalIntegrity",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pivotCount": {
+      "name": "pivotCount",
+      "bridgedName": "pivotCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraints": {
+      "name": "constraints",
+      "bridgedName": "constraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateOriginalConstraints:": {
+      "name": "enumerateOriginalConstraints:",
+      "bridgedName": "enumerateOriginalConstraints",
+      "args": [
+        {
+          "name": "enumerateOriginalConstraints",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "variableChangeTransactionSignal": {
+      "name": "variableChangeTransactionSignal",
+      "bridgedName": "variableChangeTransactionSignal",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasObservableForVariable:": {
+      "name": "hasObservableForVariable:",
+      "bridgedName": "hasObservableForVariable",
+      "args": [
+        {
+          "name": "hasObservableForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObservableForVariable:": {
+      "name": "removeObservableForVariable:",
+      "bridgedName": "removeObservableForVariable",
+      "args": [
+        {
+          "name": "removeObservableForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observableForVariable:": {
+      "name": "observableForVariable:",
+      "bridgedName": "observableForVariable",
+      "args": [
+        {
+          "name": "observableForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToChangeConstraintSuchThatMarker:isReplacedByMarkerPlusDelta:undoHandler:": {
+      "name": "tryToChangeConstraintSuchThatMarker:isReplacedByMarkerPlusDelta:undoHandler:",
+      "bridgedName": "tryToChangeConstraintSuchThatMarker_isReplacedByMarkerPlusDelta_undoHandler",
+      "args": [
+        {
+          "name": "tryToChangeConstraintSuchThatMarker",
+          "type": "id"
+        },
+        {
+          "name": "isReplacedByMarkerPlusDelta",
+          "type": "double"
+        },
+        {
+          "name": "undoHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraintDidChangeSuchThatMarker:shouldBeReplacedByMarkerPlusDelta:": {
+      "name": "constraintDidChangeSuchThatMarker:shouldBeReplacedByMarkerPlusDelta:",
+      "bridgedName": "constraintDidChangeSuchThatMarker_shouldBeReplacedByMarkerPlusDelta",
+      "args": [
+        {
+          "name": "constraintDidChangeSuchThatMarker",
+          "type": "id"
+        },
+        {
+          "name": "shouldBeReplacedByMarkerPlusDelta",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_coreReplaceMarker:withMarkerPlusDelta:": {
+      "name": "_coreReplaceMarker:withMarkerPlusDelta:",
+      "bridgedName": "_coreReplaceMarker_withMarkerPlusDelta",
+      "args": [
+        {
+          "name": "_coreReplaceMarker",
+          "type": "id"
+        },
+        {
+          "name": "withMarkerPlusDelta",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeConstraintWithMarker:": {
+      "name": "removeConstraintWithMarker:",
+      "bridgedName": "removeConstraintWithMarker",
+      "args": [
+        {
+          "name": "removeConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsConstraintWithMarker:": {
+      "name": "containsConstraintWithMarker:",
+      "bridgedName": "containsConstraintWithMarker",
+      "args": [
+        {
+          "name": "containsConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outgoingRowHeadForRemovingConstraintWithMarker:": {
+      "name": "outgoingRowHeadForRemovingConstraintWithMarker:",
+      "bridgedName": "outgoingRowHeadForRemovingConstraintWithMarker",
+      "args": [
+        {
+          "name": "outgoingRowHeadForRemovingConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeVariableToBeOptimized:fromPriority:toPriority:": {
+      "name": "changeVariableToBeOptimized:fromPriority:toPriority:",
+      "bridgedName": "changeVariableToBeOptimized_fromPriority_toPriority",
+      "args": [
+        {
+          "name": "changeVariableToBeOptimized",
+          "type": "id"
+        },
+        {
+          "name": "fromPriority",
+          "type": "double"
+        },
+        {
+          "name": "toPriority",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeVariableToBeOptimized:priority:": {
+      "name": "removeVariableToBeOptimized:priority:",
+      "bridgedName": "removeVariableToBeOptimized_priority",
+      "args": [
+        {
+          "name": "removeVariableToBeOptimized",
+          "type": "id"
+        },
+        {
+          "name": "priority",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addVariableToBeOptimized:priority:": {
+      "name": "addVariableToBeOptimized:priority:",
+      "bridgedName": "addVariableToBeOptimized_priority",
+      "args": [
+        {
+          "name": "addVariableToBeOptimized",
+          "type": "id"
+        },
+        {
+          "name": "priority",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToAddConstraintWithMarker:expression:integralizationAdjustment:mutuallyExclusiveConstraints:": {
+      "name": "tryToAddConstraintWithMarker:expression:integralizationAdjustment:mutuallyExclusiveConstraints:",
+      "bridgedName": "tryToAddConstraintWithMarker_expression_integralizationAdjustment_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "tryToAddConstraintWithMarker",
+          "type": "id"
+        },
+        {
+          "name": "expression",
+          "type": "id"
+        },
+        {
+          "name": "integralizationAdjustment",
+          "type": "double"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsVariable:": {
+      "name": "containsVariable:",
+      "bridgedName": "containsVariable",
+      "args": [
+        {
+          "name": "containsVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_variableIsAbsentExceptForObjectiveRow:": {
+      "name": "_variableIsAbsentExceptForObjectiveRow:",
+      "bridgedName": "_variableIsAbsentExceptForObjectiveRow",
+      "args": [
+        {
+          "name": "_variableIsAbsentExceptForObjectiveRow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasValue:forExpression:": {
+      "name": "hasValue:forExpression:",
+      "bridgedName": "hasValue_forExpression",
+      "args": [
+        {
+          "name": "hasValue",
+          "type": "double *"
+        },
+        {
+          "name": "forExpression",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForExpression:": {
+      "name": "valueForExpression:",
+      "bridgedName": "valueForExpression",
+      "args": [
+        {
+          "name": "valueForExpression",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasValueForPossiblyDeallocatedVariable:": {
+      "name": "hasValueForPossiblyDeallocatedVariable:",
+      "bridgedName": "hasValueForPossiblyDeallocatedVariable",
+      "args": [
+        {
+          "name": "hasValueForPossiblyDeallocatedVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasValue:forVariable:": {
+      "name": "hasValue:forVariable:",
+      "bridgedName": "hasValue_forVariable",
+      "args": [
+        {
+          "name": "hasValue",
+          "type": "double *"
+        },
+        {
+          "name": "forVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForVariable:": {
+      "name": "valueForVariable:",
+      "bridgedName": "valueForVariable",
+      "args": [
+        {
+          "name": "valueForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "withDelegateCallsDisabled:": {
+      "name": "withDelegateCallsDisabled:",
+      "bridgedName": "withDelegateCallsDisabled",
+      "args": [
+        {
+          "name": "withDelegateCallsDisabled",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "withoutOptimizingAtEndRunBlockWithAutomaticOptimizationDisabled:": {
+      "name": "withoutOptimizingAtEndRunBlockWithAutomaticOptimizationDisabled:",
+      "bridgedName": "withoutOptimizingAtEndRunBlockWithAutomaticOptimizationDisabled",
+      "args": [
+        {
+          "name": "withoutOptimizingAtEndRunBlockWithAutomaticOptimizationDisabled",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "withAutomaticOptimizationDisabled:": {
+      "name": "withAutomaticOptimizationDisabled:",
+      "bridgedName": "withAutomaticOptimizationDisabled",
+      "args": [
+        {
+          "name": "withAutomaticOptimizationDisabled",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_optimizeIfNotDisabled": {
+      "name": "_optimizeIfNotDisabled",
+      "bridgedName": "_optimizeIfNotDisabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "withBehaviors:performModifications:": {
+      "name": "withBehaviors:performModifications:",
+      "bridgedName": "withBehaviors_performModifications",
+      "args": [
+        {
+          "name": "withBehaviors",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "performModifications",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_flushPendingRemovals": {
+      "name": "_flushPendingRemovals",
+      "bridgedName": "_flushPendingRemovals",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rebuildFromConstraints": {
+      "name": "rebuildFromConstraints",
+      "bridgedName": "rebuildFromConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToOptimizeReturningMutuallyExclusiveConstraints": {
+      "name": "tryToOptimizeReturningMutuallyExclusiveConstraints",
+      "bridgedName": "tryToOptimizeReturningMutuallyExclusiveConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_optimizeWithoutRebuilding": {
+      "name": "_optimizeWithoutRebuilding",
+      "bridgedName": "_optimizeWithoutRebuilding",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "optimize": {
+      "name": "optimize",
+      "bridgedName": "optimize",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replayCommandsData:verifyingIntegrity:": {
+      "name": "replayCommandsData:verifyingIntegrity:",
+      "bridgedName": "replayCommandsData_verifyingIntegrity",
+      "args": [
+        {
+          "name": "replayCommandsData",
+          "type": "id"
+        },
+        {
+          "name": "verifyingIntegrity",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recordedCommandsData": {
+      "name": "recordedCommandsData",
+      "bridgedName": "recordedCommandsData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginRecording": {
+      "name": "beginRecording",
+      "bridgedName": "beginRecording",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryUsingArtificialVariableToAddConstraintWithMarker:rowBody:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:": {
+      "name": "tryUsingArtificialVariableToAddConstraintWithMarker:rowBody:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:",
+      "bridgedName": "tryUsingArtificialVariableToAddConstraintWithMarker_rowBody_usingInfeasibilityHandlingBehavior_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "tryUsingArtificialVariableToAddConstraintWithMarker",
+          "type": "id"
+        },
+        {
+          "name": "rowBody",
+          "type": "id"
+        },
+        {
+          "name": "usingInfeasibilityHandlingBehavior",
+          "type": "long long"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryAddingDirectly:": {
+      "name": "tryAddingDirectly:",
+      "bridgedName": "tryAddingDirectly",
+      "args": [
+        {
+          "name": "tryAddingDirectly",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "chooseHeadForRowBody:outNewToEngine:": {
+      "name": "chooseHeadForRowBody:outNewToEngine:",
+      "bridgedName": "chooseHeadForRowBody_outNewToEngine",
+      "args": [
+        {
+          "name": "chooseHeadForRowBody",
+          "type": "id"
+        },
+        {
+          "name": "outNewToEngine",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createExpressionBySubstitutingForRowHeadVariablesInExpression:": {
+      "name": "createExpressionBySubstitutingForRowHeadVariablesInExpression:",
+      "bridgedName": "createExpressionBySubstitutingForRowHeadVariablesInExpression",
+      "args": [
+        {
+          "name": "createExpressionBySubstitutingForRowHeadVariablesInExpression",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fixupIntegralizationViolations": {
+      "name": "fixupIntegralizationViolations",
+      "bridgedName": "fixupIntegralizationViolations",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses:varsAlreadyAdjusted:": {
+      "name": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses:varsAlreadyAdjusted:",
+      "bridgedName": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses_varsAlreadyAdjusted",
+      "args": [
+        {
+          "name": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses",
+          "type": "id"
+        },
+        {
+          "name": "varsAlreadyAdjusted",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable:ignoringConstraintsWithMarkers:": {
+      "name": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable:ignoringConstraintsWithMarkers:",
+      "bridgedName": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable_ignoringConstraintsWithMarkers",
+      "args": [
+        {
+          "name": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable",
+          "type": "id"
+        },
+        {
+          "name": "ignoringConstraintsWithMarkers",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForVariableWithoutIntegralizationAdjustments:": {
+      "name": "valueForVariableWithoutIntegralizationAdjustments:",
+      "bridgedName": "valueForVariableWithoutIntegralizationAdjustments",
+      "args": [
+        {
+          "name": "valueForVariableWithoutIntegralizationAdjustments",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performModifications:withUnsatisfiableConstraintsHandler:": {
+      "name": "performModifications:withUnsatisfiableConstraintsHandler:",
+      "bridgedName": "performModifications_withUnsatisfiableConstraintsHandler",
+      "args": [
+        {
+          "name": "performModifications",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "withUnsatisfiableConstraintsHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fixUpValueRestrictionViolationsWithInfeasibilityHandlingBehavior:": {
+      "name": "fixUpValueRestrictionViolationsWithInfeasibilityHandlingBehavior:",
+      "bridgedName": "fixUpValueRestrictionViolationsWithInfeasibilityHandlingBehavior",
+      "args": [
+        {
+          "name": "fixUpValueRestrictionViolationsWithInfeasibilityHandlingBehavior",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleUnsatisfiableRowWithHead:body:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:": {
+      "name": "handleUnsatisfiableRowWithHead:body:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:",
+      "bridgedName": "handleUnsatisfiableRowWithHead_body_usingInfeasibilityHandlingBehavior_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "handleUnsatisfiableRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        },
+        {
+          "name": "usingInfeasibilityHandlingBehavior",
+          "type": "long long"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fallbackMarkerForConstraintToBreakInRowWithHead:body:": {
+      "name": "fallbackMarkerForConstraintToBreakInRowWithHead:body:",
+      "bridgedName": "fallbackMarkerForConstraintToBreakInRowWithHead_body",
+      "args": [
+        {
+          "name": "fallbackMarkerForConstraintToBreakInRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "errorVariableIntroducedByBreakingConstraintWithMarker:errorIsPositive:": {
+      "name": "errorVariableIntroducedByBreakingConstraintWithMarker:errorIsPositive:",
+      "bridgedName": "errorVariableIntroducedByBreakingConstraintWithMarker_errorIsPositive",
+      "args": [
+        {
+          "name": "errorVariableIntroducedByBreakingConstraintWithMarker",
+          "type": "id"
+        },
+        {
+          "name": "errorIsPositive",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceMarker:withMarkerPlusCoefficient:timesVariable:": {
+      "name": "replaceMarker:withMarkerPlusCoefficient:timesVariable:",
+      "bridgedName": "replaceMarker_withMarkerPlusCoefficient_timesVariable",
+      "args": [
+        {
+          "name": "replaceMarker",
+          "type": "id"
+        },
+        {
+          "name": "withMarkerPlusCoefficient",
+          "type": "double"
+        },
+        {
+          "name": "timesVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performPendingChangeNotificationsForItem:": {
+      "name": "performPendingChangeNotificationsForItem:",
+      "bridgedName": "performPendingChangeNotificationsForItem",
+      "args": [
+        {
+          "name": "performPendingChangeNotificationsForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performPendingChangeNotifications": {
+      "name": "performPendingChangeNotifications",
+      "bridgedName": "performPendingChangeNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isTrackingVariableChanges": {
+      "name": "isTrackingVariableChanges",
+      "bridgedName": "isTrackingVariableChanges",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dirtyListRemoveObservable:": {
+      "name": "_dirtyListRemoveObservable:",
+      "bridgedName": "_dirtyListRemoveObservable",
+      "args": [
+        {
+          "name": "_dirtyListRemoveObservable",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dirtyListPrependObservable:": {
+      "name": "_dirtyListPrependObservable:",
+      "bridgedName": "_dirtyListPrependObservable",
+      "args": [
+        {
+          "name": "_dirtyListPrependObservable",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dirtyListContainsObservable:": {
+      "name": "_dirtyListContainsObservable:",
+      "bridgedName": "_dirtyListContainsObservable",
+      "args": [
+        {
+          "name": "_dirtyListContainsObservable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addExpression:times:toRowWithHead:body:": {
+      "name": "addExpression:times:toRowWithHead:body:",
+      "bridgedName": "addExpression_times_toRowWithHead_body",
+      "args": [
+        {
+          "name": "addExpression",
+          "type": "id"
+        },
+        {
+          "name": "times",
+          "type": "double"
+        },
+        {
+          "name": "toRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addExpression:priority:times:toObjectiveRowWithHead:body:": {
+      "name": "addExpression:priority:times:toObjectiveRowWithHead:body:",
+      "bridgedName": "addExpression_priority_times_toObjectiveRowWithHead_body",
+      "args": [
+        {
+          "name": "addExpression",
+          "type": "id"
+        },
+        {
+          "name": "priority",
+          "type": "double"
+        },
+        {
+          "name": "times",
+          "type": "double"
+        },
+        {
+          "name": "toObjectiveRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addVariable:coefficient:toRowWithHead:body:": {
+      "name": "addVariable:coefficient:toRowWithHead:body:",
+      "bridgedName": "addVariable_coefficient_toRowWithHead_body",
+      "args": [
+        {
+          "name": "addVariable",
+          "type": "id"
+        },
+        {
+          "name": "coefficient",
+          "type": "double"
+        },
+        {
+          "name": "toRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addVariable:priority:times:toObjectiveRowWithHead:body:": {
+      "name": "addVariable:priority:times:toObjectiveRowWithHead:body:",
+      "bridgedName": "addVariable_priority_times_toObjectiveRowWithHead_body",
+      "args": [
+        {
+          "name": "addVariable",
+          "type": "id"
+        },
+        {
+          "name": "priority",
+          "type": "double"
+        },
+        {
+          "name": "times",
+          "type": "double"
+        },
+        {
+          "name": "toObjectiveRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeBodyVarFromAllRows:": {
+      "name": "removeBodyVarFromAllRows:",
+      "bridgedName": "removeBodyVarFromAllRows",
+      "args": [
+        {
+          "name": "removeBodyVarFromAllRows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIntegralizationAdjustment:forMarker:": {
+      "name": "setIntegralizationAdjustment:forMarker:",
+      "bridgedName": "setIntegralizationAdjustment_forMarker",
+      "args": [
+        {
+          "name": "setIntegralizationAdjustment",
+          "type": "double"
+        },
+        {
+          "name": "forMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "integralizationAdjustmentForMarker:": {
+      "name": "integralizationAdjustmentForMarker:",
+      "bridgedName": "integralizationAdjustmentForMarker",
+      "args": [
+        {
+          "name": "integralizationAdjustmentForMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_descriptionOfVariable:": {
+      "name": "nsis_descriptionOfVariable:",
+      "bridgedName": "nsis_descriptionOfVariable",
+      "args": [
+        {
+          "name": "nsis_descriptionOfVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_valueOfVariableIsUserObservable:": {
+      "name": "nsis_valueOfVariableIsUserObservable:",
+      "bridgedName": "nsis_valueOfVariableIsUserObservable",
+      "args": [
+        {
+          "name": "nsis_valueOfVariableIsUserObservable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_shouldIntegralizeVariable:": {
+      "name": "nsis_shouldIntegralizeVariable:",
+      "bridgedName": "nsis_shouldIntegralizeVariable",
+      "args": [
+        {
+          "name": "nsis_shouldIntegralizeVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsis_valueOfVariable:didChangeInEngine:": {
+      "name": "nsis_valueOfVariable:didChangeInEngine:",
+      "bridgedName": "nsis_valueOfVariable_didChangeInEngine",
+      "args": [
+        {
+          "name": "nsis_valueOfVariable",
+          "type": "id"
+        },
+        {
+          "name": "didChangeInEngine",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "markerForBrokenConstraintWithNegativeErrorVar:": {
+      "name": "markerForBrokenConstraintWithNegativeErrorVar:",
+      "bridgedName": "markerForBrokenConstraintWithNegativeErrorVar",
+      "args": [
+        {
+          "name": "markerForBrokenConstraintWithNegativeErrorVar",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "markerForBrokenConstraintWithPositiveErrorVar:": {
+      "name": "markerForBrokenConstraintWithPositiveErrorVar:",
+      "bridgedName": "markerForBrokenConstraintWithPositiveErrorVar",
+      "args": [
+        {
+          "name": "markerForBrokenConstraintWithPositiveErrorVar",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNegativeErrorVar:forBrokenConstraintWithMarker:": {
+      "name": "setNegativeErrorVar:forBrokenConstraintWithMarker:",
+      "bridgedName": "setNegativeErrorVar_forBrokenConstraintWithMarker",
+      "args": [
+        {
+          "name": "setNegativeErrorVar",
+          "type": "id"
+        },
+        {
+          "name": "forBrokenConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "negativeErrorVarForBrokenConstraintWithMarker:": {
+      "name": "negativeErrorVarForBrokenConstraintWithMarker:",
+      "bridgedName": "negativeErrorVarForBrokenConstraintWithMarker",
+      "args": [
+        {
+          "name": "negativeErrorVarForBrokenConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_brokenConstraintNegativeErrorsIfAvailable": {
+      "name": "_brokenConstraintNegativeErrorsIfAvailable",
+      "bridgedName": "_brokenConstraintNegativeErrorsIfAvailable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_brokenConstraintNegativeErrors": {
+      "name": "_brokenConstraintNegativeErrors",
+      "bridgedName": "_brokenConstraintNegativeErrors",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPositiveErrorVar:forBrokenConstraintWithMarker:": {
+      "name": "setPositiveErrorVar:forBrokenConstraintWithMarker:",
+      "bridgedName": "setPositiveErrorVar_forBrokenConstraintWithMarker",
+      "args": [
+        {
+          "name": "setPositiveErrorVar",
+          "type": "id"
+        },
+        {
+          "name": "forBrokenConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "positiveErrorVarForBrokenConstraintWithMarker:": {
+      "name": "positiveErrorVarForBrokenConstraintWithMarker:",
+      "bridgedName": "positiveErrorVarForBrokenConstraintWithMarker",
+      "args": [
+        {
+          "name": "positiveErrorVarForBrokenConstraintWithMarker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_brokenConstraintPositiveErrorsIfAvailable": {
+      "name": "_brokenConstraintPositiveErrorsIfAvailable",
+      "bridgedName": "_brokenConstraintPositiveErrorsIfAvailable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_brokenConstraintPositiveErrors": {
+      "name": "_brokenConstraintPositiveErrors",
+      "bridgedName": "_brokenConstraintPositiveErrors",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateRowsCrossIndex:": {
+      "name": "enumerateRowsCrossIndex:",
+      "bridgedName": "enumerateRowsCrossIndex",
+      "args": [
+        {
+          "name": "enumerateRowsCrossIndex",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rawRemoveRowWithHead:": {
+      "name": "rawRemoveRowWithHead:",
+      "bridgedName": "rawRemoveRowWithHead",
+      "args": [
+        {
+          "name": "rawRemoveRowWithHead",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rawSetRowWithHead:body:": {
+      "name": "rawSetRowWithHead:body:",
+      "bridgedName": "rawSetRowWithHead_body",
+      "args": [
+        {
+          "name": "rawSetRowWithHead",
+          "type": "id"
+        },
+        {
+          "name": "body",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allRowHeads": {
+      "name": "allRowHeads",
+      "bridgedName": "allRowHeads",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateRows:": {
+      "name": "enumerateRows:",
+      "bridgedName": "enumerateRows",
+      "args": [
+        {
+          "name": "enumerateRows",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_disambiguateFrame:forAmbiguousItem:withOldFrame:": {
+      "name": "_disambiguateFrame:forAmbiguousItem:withOldFrame:",
+      "bridgedName": "_disambiguateFrame_forAmbiguousItem_withOldFrame",
+      "args": [
+        {
+          "name": "_disambiguateFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "forAmbiguousItem",
+          "type": "id"
+        },
+        {
+          "name": "withOldFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "engineScalingCoefficients": {
+      "name": "engineScalingCoefficients",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "variablesWithIntegralizationViolations": {
+      "name": "variablesWithIntegralizationViolations",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "variablesWithValueRestrictionViolations": {
+      "name": "variablesWithValueRestrictionViolations",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "headForObjectiveRow": {
+      "name": "headForObjectiveRow",
+      "pointer": true,
+      "type": "NSISVariable",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "rowsCrossIndex": {
+      "name": "rowsCrossIndex",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "rows": {
+      "name": "rows",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "variableChangeCount": {
+      "name": "variableChangeCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

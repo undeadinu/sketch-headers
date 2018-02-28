@@ -1,0 +1,1463 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSValidatedUserInterfaceItem.h"
+  ],
+  "classes": [
+    "NSImage",
+    "NSMenuItem",
+    "NSString",
+    "NSToolbar",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSToolbarItem",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSValidatedUserInterfaceItem"
+  ],
+  "methods": {
+    "allowsDuplicatesInToolbar": {
+      "name": "allowsDuplicatesInToolbar",
+      "bridgedName": "allowsDuplicatesInToolbar",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_resizeWeight": {
+      "name": "_resizeWeight",
+      "bridgedName": "_resizeWeight",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resizeWeightSharedWithDuplicateItems": {
+      "name": "_resizeWeightSharedWithDuplicateItems",
+      "bridgedName": "_resizeWeightSharedWithDuplicateItems",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageForDrawingInRectOfSize:fromImage:": {
+      "name": "_imageForDrawingInRectOfSize:fromImage:",
+      "bridgedName": "_imageForDrawingInRectOfSize_fromImage",
+      "args": [
+        {
+          "name": "_imageForDrawingInRectOfSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "fromImage",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "standardItemWithItemIdentifier:": {
+      "name": "standardItemWithItemIdentifier:",
+      "bridgedName": "standardItemWithItemIdentifier",
+      "args": [
+        {
+          "name": "standardItemWithItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "newStandardItemWithItemIdentifier:": {
+      "name": "newStandardItemWithItemIdentifier:",
+      "bridgedName": "newStandardItemWithItemIdentifier",
+      "args": [
+        {
+          "name": "newStandardItemWithItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newCloudSharingItem": {
+      "name": "_newCloudSharingItem",
+      "bridgedName": "_newCloudSharingItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newToggleSidebarItem": {
+      "name": "_newToggleSidebarItem",
+      "bridgedName": "_newToggleSidebarItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newPrintItem": {
+      "name": "_newPrintItem",
+      "bridgedName": "_newPrintItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newCustomizeToolbarItem": {
+      "name": "_newCustomizeToolbarItem",
+      "bridgedName": "_newCustomizeToolbarItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newShowFontsItem": {
+      "name": "_newShowFontsItem",
+      "bridgedName": "_newShowFontsItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newShowColorsItem": {
+      "name": "_newShowColorsItem",
+      "bridgedName": "_newShowColorsItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "spaceItemIdentifier": {
+      "name": "spaceItemIdentifier",
+      "bridgedName": "spaceItemIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "separatorItemIdentifier": {
+      "name": "separatorItemIdentifier",
+      "bridgedName": "separatorItemIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "newSeparatorItem": {
+      "name": "newSeparatorItem",
+      "bridgedName": "newSeparatorItem",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "extensionService": {
+      "name": "extensionService",
+      "bridgedName": "extensionService",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scalableMaxSize": {
+      "name": "_scalableMaxSize",
+      "bridgedName": "_scalableMaxSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scalableMinSize": {
+      "name": "_scalableMinSize",
+      "bridgedName": "_scalableMinSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textOrSearchFieldAdjustedMinOrMaxSize:": {
+      "name": "_textOrSearchFieldAdjustedMinOrMaxSize:",
+      "bridgedName": "_textOrSearchFieldAdjustedMinOrMaxSize",
+      "args": [
+        {
+          "name": "_textOrSearchFieldAdjustedMinOrMaxSize",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldApplyTextFieldAdjustment": {
+      "name": "_shouldApplyTextFieldAdjustment",
+      "bridgedName": "_shouldApplyTextFieldAdjustment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldApplySearchFieldAdjustment": {
+      "name": "_shouldApplySearchFieldAdjustment",
+      "bridgedName": "_shouldApplySearchFieldAdjustment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreferredWidthRatio:": {
+      "name": "setPreferredWidthRatio:",
+      "bridgedName": "setPreferredWidthRatio",
+      "args": [
+        {
+          "name": "setPreferredWidthRatio",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "preferredWidthRatio": {
+      "name": "preferredWidthRatio",
+      "bridgedName": "preferredWidthRatio",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canUserSetVisibilityPriority": {
+      "name": "_canUserSetVisibilityPriority",
+      "bridgedName": "_canUserSetVisibilityPriority",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forceSetView:": {
+      "name": "_forceSetView:",
+      "bridgedName": "_forceSetView",
+      "args": [
+        {
+          "name": "_forceSetView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSizesToFittingSizeIfBaseLocalized": {
+      "name": "_setSizesToFittingSizeIfBaseLocalized",
+      "bridgedName": "_setSizesToFittingSizeIfBaseLocalized",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autorecalculateSizesIfNotSetExplicitly": {
+      "name": "_autorecalculateSizesIfNotSetExplicitly",
+      "bridgedName": "_autorecalculateSizesIfNotSetExplicitly",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autorecalculateMinSize:maxSize:": {
+      "name": "_autorecalculateMinSize:maxSize:",
+      "bridgedName": "_autorecalculateMinSize_maxSize",
+      "args": [
+        {
+          "name": "_autorecalculateMinSize",
+          "type": "struct CGSize *"
+        },
+        {
+          "name": "maxSize",
+          "type": "struct CGSize *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isCustomItemType": {
+      "name": "_isCustomItemType",
+      "bridgedName": "_isCustomItemType",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interlabelPadding": {
+      "name": "_interlabelPadding",
+      "bridgedName": "_interlabelPadding",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interviewPadding": {
+      "name": "_interviewPadding",
+      "bridgedName": "_interviewPadding",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemAtViewIndex:": {
+      "name": "_itemAtViewIndex:",
+      "bridgedName": "_itemAtViewIndex",
+      "args": [
+        {
+          "name": "_itemAtViewIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemAtLabelIndex:": {
+      "name": "_itemAtLabelIndex:",
+      "bridgedName": "_itemAtLabelIndex",
+      "args": [
+        {
+          "name": "_itemAtLabelIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewIsEnabledAtIndex:": {
+      "name": "_viewIsEnabledAtIndex:",
+      "bridgedName": "_viewIsEnabledAtIndex",
+      "args": [
+        {
+          "name": "_viewIsEnabledAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applicableLabelIsEnabledAtIndex:forDisplayMode:isInPalette:": {
+      "name": "_applicableLabelIsEnabledAtIndex:forDisplayMode:isInPalette:",
+      "bridgedName": "_applicableLabelIsEnabledAtIndex_forDisplayMode_isInPalette",
+      "args": [
+        {
+          "name": "_applicableLabelIsEnabledAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "forDisplayMode",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "isInPalette",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isEnabledAndHasEnabledSubitem": {
+      "name": "_isEnabledAndHasEnabledSubitem",
+      "bridgedName": "_isEnabledAndHasEnabledSubitem",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_standardCustomMenuFormRepresentationClicked:": {
+      "name": "_standardCustomMenuFormRepresentationClicked:",
+      "bridgedName": "_standardCustomMenuFormRepresentationClicked",
+      "args": [
+        {
+          "name": "_standardCustomMenuFormRepresentationClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startingWindowForSendAction:": {
+      "name": "_startingWindowForSendAction:",
+      "bridgedName": "_startingWindowForSendAction",
+      "args": [
+        {
+          "name": "_startingWindowForSendAction",
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolbarItemPartitionAdapterDidChangeExcludedRect:": {
+      "name": "_toolbarItemPartitionAdapterDidChangeExcludedRect:",
+      "bridgedName": "_toolbarItemPartitionAdapterDidChangeExcludedRect",
+      "args": [
+        {
+          "name": "_toolbarItemPartitionAdapterDidChangeExcludedRect",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getPartitionRect:inWindowCoordinatesForWindow:": {
+      "name": "_getPartitionRect:inWindowCoordinatesForWindow:",
+      "bridgedName": "_getPartitionRect_inWindowCoordinatesForWindow",
+      "args": [
+        {
+          "name": "_getPartitionRect",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "inWindowCoordinatesForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isPartitionItem": {
+      "name": "_isPartitionItem",
+      "bridgedName": "_isPartitionItem",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPartitionAdapter:": {
+      "name": "_setPartitionAdapter:",
+      "bridgedName": "_setPartitionAdapter",
+      "args": [
+        {
+          "name": "_setPartitionAdapter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_partitionAdapter": {
+      "name": "_partitionAdapter",
+      "bridgedName": "_partitionAdapter",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setWantsToBeCentered:": {
+      "name": "setWantsToBeCentered:",
+      "bridgedName": "setWantsToBeCentered",
+      "args": [
+        {
+          "name": "setWantsToBeCentered",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsToBeCentered": {
+      "name": "wantsToBeCentered",
+      "bridgedName": "wantsToBeCentered",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mouseDownInSurroundingRegionShouldMoveWindow": {
+      "name": "_mouseDownInSurroundingRegionShouldMoveWindow",
+      "bridgedName": "_mouseDownInSurroundingRegionShouldMoveWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performMenuFormRepresentationClick": {
+      "name": "_performMenuFormRepresentationClick",
+      "bridgedName": "_performMenuFormRepresentationClick",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_standardCommonMenuFormRepresentationClicked:": {
+      "name": "_standardCommonMenuFormRepresentationClicked:",
+      "bridgedName": "_standardCommonMenuFormRepresentationClicked",
+      "args": [
+        {
+          "name": "_standardCommonMenuFormRepresentationClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performSwitchToIconMode": {
+      "name": "_performSwitchToIconMode",
+      "bridgedName": "_performSwitchToIconMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuFormRepresentationForOverflowMenu": {
+      "name": "_menuFormRepresentationForOverflowMenu",
+      "bridgedName": "_menuFormRepresentationForOverflowMenu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_computeDefaultMenuFormRepresentation": {
+      "name": "_computeDefaultMenuFormRepresentation",
+      "bridgedName": "_computeDefaultMenuFormRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRepresentationIsDefault": {
+      "name": "_menuRepresentationIsDefault",
+      "bridgedName": "_menuRepresentationIsDefault",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuRepresentationHasBeenSet": {
+      "name": "_menuRepresentationHasBeenSet",
+      "bridgedName": "_menuRepresentationHasBeenSet",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageForMenu": {
+      "name": "_imageForMenu",
+      "bridgedName": "_imageForMenu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemLayoutChanged": {
+      "name": "_itemLayoutChanged",
+      "bridgedName": "_itemLayoutChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteDefaultMenuAttributeChanged": {
+      "name": "_noteDefaultMenuAttributeChanged",
+      "bridgedName": "_noteDefaultMenuAttributeChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearDefaultMenuFormRepresentation": {
+      "name": "_clearDefaultMenuFormRepresentation",
+      "bridgedName": "_clearDefaultMenuFormRepresentation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPropertyListRepresentation:": {
+      "name": "setPropertyListRepresentation:",
+      "bridgedName": "setPropertyListRepresentation",
+      "args": [
+        {
+          "name": "setPropertyListRepresentation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertyListRepresentation": {
+      "name": "propertyListRepresentation",
+      "bridgedName": "propertyListRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collectItemRectsForViews:count:inBounds:controlBounds:": {
+      "name": "_collectItemRectsForViews:count:inBounds:controlBounds:",
+      "bridgedName": "_collectItemRectsForViews_count_inBounds_controlBounds",
+      "args": [
+        {
+          "name": "_collectItemRectsForViews",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "inBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "controlBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collectItemRectsForViews:count:inBounds:": {
+      "name": "_collectItemRectsForViews:count:inBounds:",
+      "bridgedName": "_collectItemRectsForViews_count_inBounds",
+      "args": [
+        {
+          "name": "_collectItemRectsForViews",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "inBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collectItemRectsForLabels:count:inBounds:controlBounds:": {
+      "name": "_collectItemRectsForLabels:count:inBounds:controlBounds:",
+      "bridgedName": "_collectItemRectsForLabels_count_inBounds_controlBounds",
+      "args": [
+        {
+          "name": "_collectItemRectsForLabels",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "inBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "controlBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_collectItemRectsForLabels:count:inBounds:": {
+      "name": "_collectItemRectsForLabels:count:inBounds:",
+      "bridgedName": "_collectItemRectsForLabels_count_inBounds",
+      "args": [
+        {
+          "name": "_collectItemRectsForLabels",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "inBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewsArray": {
+      "name": "_viewsArray",
+      "bridgedName": "_viewsArray",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applicableLabelsArrayForDisplayMode:isInPalette:": {
+      "name": "_applicableLabelsArrayForDisplayMode:isInPalette:",
+      "bridgedName": "_applicableLabelsArrayForDisplayMode_isInPalette",
+      "args": [
+        {
+          "name": "_applicableLabelsArrayForDisplayMode",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "isInPalette",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_paletteLabel": {
+      "name": "_paletteLabel",
+      "bridgedName": "_paletteLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_label": {
+      "name": "_label",
+      "bridgedName": "_label",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needsRedisplayWhenBeginningToolbarEditing": {
+      "name": "_needsRedisplayWhenBeginningToolbarEditing",
+      "bridgedName": "_needsRedisplayWhenBeginningToolbarEditing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_emptyContents": {
+      "name": "_emptyContents",
+      "bridgedName": "_emptyContents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allPossibleLabelsToFit": {
+      "name": "_allPossibleLabelsToFit",
+      "bridgedName": "_allPossibleLabelsToFit",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAllPossibleLabelsToFit:": {
+      "name": "_setAllPossibleLabelsToFit:",
+      "bridgedName": "_setAllPossibleLabelsToFit",
+      "args": [
+        {
+          "name": "_setAllPossibleLabelsToFit",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemType": {
+      "name": "itemType",
+      "bridgedName": "itemType",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreToolbarItemAfterSheet": {
+      "name": "_restoreToolbarItemAfterSheet",
+      "bridgedName": "_restoreToolbarItemAfterSheet",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareToolbarItemForSheet": {
+      "name": "_prepareToolbarItemForSheet",
+      "bridgedName": "_prepareToolbarItemForSheet",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateInPresenceOfSheet": {
+      "name": "_validateInPresenceOfSheet",
+      "bridgedName": "_validateInPresenceOfSheet",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validate": {
+      "name": "validate",
+      "bridgedName": "validate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateAsCustomItem:": {
+      "name": "_validateAsCustomItem:",
+      "bridgedName": "_validateAsCustomItem",
+      "args": [
+        {
+          "name": "_validateAsCustomItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateMenuFormRepresentation:": {
+      "name": "_validateMenuFormRepresentation:",
+      "bridgedName": "_validateMenuFormRepresentation",
+      "args": [
+        {
+          "name": "_validateMenuFormRepresentation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemMenuInPaletteForEvent:": {
+      "name": "_itemMenuInPaletteForEvent:",
+      "bridgedName": "_itemMenuInPaletteForEvent",
+      "args": [
+        {
+          "name": "_itemMenuInPaletteForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsCopyForInsertionIntoToolbar:isPalette:": {
+      "name": "_wantsCopyForInsertionIntoToolbar:isPalette:",
+      "bridgedName": "_wantsCopyForInsertionIntoToolbar_isPalette",
+      "args": [
+        {
+          "name": "_wantsCopyForInsertionIntoToolbar",
+          "type": "id"
+        },
+        {
+          "name": "isPalette",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsImageWrapperForInsertionIntoPaletteToolbar:": {
+      "name": "_wantsImageWrapperForInsertionIntoPaletteToolbar:",
+      "bridgedName": "_wantsImageWrapperForInsertionIntoPaletteToolbar",
+      "args": [
+        {
+          "name": "_wantsImageWrapperForInsertionIntoPaletteToolbar",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldValidateMenuFormRepresentation": {
+      "name": "_shouldValidateMenuFormRepresentation",
+      "bridgedName": "_shouldValidateMenuFormRepresentation",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateAsCommonItem:": {
+      "name": "_validateAsCommonItem:",
+      "bridgedName": "_validateAsCommonItem",
+      "args": [
+        {
+          "name": "_validateAsCommonItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_copyOfCustomView": {
+      "name": "_copyOfCustomView",
+      "bridgedName": "_copyOfCustomView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setItemIdentifier:": {
+      "name": "_setItemIdentifier:",
+      "bridgedName": "_setItemIdentifier",
+      "args": [
+        {
+          "name": "_setItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithItemIdentifier:": {
+      "name": "initWithItemIdentifier:",
+      "bridgedName": "initWithItemIdentifier",
+      "args": [
+        {
+          "name": "initWithItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithType:itemIdentifier:": {
+      "name": "initWithType:itemIdentifier:",
+      "bridgedName": "initWithType_itemIdentifier",
+      "args": [
+        {
+          "name": "initWithType",
+          "type": "int"
+        },
+        {
+          "name": "itemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolbarItemCommonInit": {
+      "name": "_toolbarItemCommonInit",
+      "bridgedName": "_toolbarItemCommonInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadViewIfNecessary": {
+      "name": "_loadViewIfNecessary",
+      "bridgedName": "_loadViewIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocDefaultView": {
+      "name": "_allocDefaultView",
+      "bridgedName": "_allocDefaultView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_buttonFrameSizeForSizeMode:": {
+      "name": "_buttonFrameSizeForSizeMode:",
+      "bridgedName": "_buttonFrameSizeForSizeMode",
+      "args": [
+        {
+          "name": "_buttonFrameSizeForSizeMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_participatesInDefiningMinimumGridWidthForCustomizationPalette": {
+      "name": "_participatesInDefiningMinimumGridWidthForCustomizationPalette",
+      "bridgedName": "_participatesInDefiningMinimumGridWidthForCustomizationPalette",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initialViewToSelectFromDirection:": {
+      "name": "_initialViewToSelectFromDirection:",
+      "bridgedName": "_initialViewToSelectFromDirection",
+      "args": [
+        {
+          "name": "_initialViewToSelectFromDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_buttonAtIndex:": {
+      "name": "_buttonAtIndex:",
+      "bridgedName": "_buttonAtIndex",
+      "args": [
+        {
+          "name": "_buttonAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_button": {
+      "name": "_button",
+      "bridgedName": "_button",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setItemViewer:": {
+      "name": "_setItemViewer:",
+      "bridgedName": "_setItemViewer",
+      "args": [
+        {
+          "name": "_setItemViewer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemViewer": {
+      "name": "_itemViewer",
+      "bridgedName": "_itemViewer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_labelAlignment": {
+      "name": "_labelAlignment",
+      "bridgedName": "_labelAlignment",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowToolbarToStealEvent:": {
+      "name": "_allowToolbarToStealEvent:",
+      "bridgedName": "_allowToolbarToStealEvent",
+      "args": [
+        {
+          "name": "_allowToolbarToStealEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsToDrawLabelInPalette": {
+      "name": "wantsToDrawLabelInPalette",
+      "bridgedName": "wantsToDrawLabelInPalette",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsToDrawIconIntoLabelAreaInDisplayMode:": {
+      "name": "wantsToDrawIconIntoLabelAreaInDisplayMode:",
+      "bridgedName": "wantsToDrawIconIntoLabelAreaInDisplayMode",
+      "args": [
+        {
+          "name": "wantsToDrawIconIntoLabelAreaInDisplayMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsToDrawLabelInDisplayMode:": {
+      "name": "wantsToDrawLabelInDisplayMode:",
+      "bridgedName": "wantsToDrawLabelInDisplayMode",
+      "args": [
+        {
+          "name": "wantsToDrawLabelInDisplayMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsToDrawIconInDisplayMode:": {
+      "name": "wantsToDrawIconInDisplayMode:",
+      "bridgedName": "wantsToDrawIconInDisplayMode",
+      "args": [
+        {
+          "name": "wantsToDrawIconInDisplayMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "usesMenuFormRepresentationInDisplayMode:": {
+      "name": "usesMenuFormRepresentationInDisplayMode:",
+      "bridgedName": "usesMenuFormRepresentationInDisplayMode",
+      "args": [
+        {
+          "name": "usesMenuFormRepresentationInDisplayMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "configureForDisplayMode:andSizeMode:": {
+      "name": "configureForDisplayMode:andSizeMode:",
+      "bridgedName": "configureForDisplayMode_andSizeMode",
+      "args": [
+        {
+          "name": "configureForDisplayMode",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "andSizeMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleSendControlSize:toCellOfView:": {
+      "name": "_handleSendControlSize:toCellOfView:",
+      "bridgedName": "_handleSendControlSize_toCellOfView",
+      "args": [
+        {
+          "name": "_handleSendControlSize",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toCellOfView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleSendControlSize:toView:": {
+      "name": "_handleSendControlSize:toView:",
+      "bridgedName": "_handleSendControlSize_toView",
+      "args": [
+        {
+          "name": "_handleSendControlSize",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolbar": {
+      "name": "_toolbar",
+      "bridgedName": "_toolbar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setToolbar:": {
+      "name": "_setToolbar:",
+      "bridgedName": "_setToolbar",
+      "args": [
+        {
+          "name": "_setToolbar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isUserRemovable": {
+      "name": "_isUserRemovable",
+      "bridgedName": "_isUserRemovable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsUserRemovable:": {
+      "name": "_setIsUserRemovable:",
+      "bridgedName": "_setIsUserRemovable",
+      "args": [
+        {
+          "name": "_setIsUserRemovable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuFormRepresentation": {
+      "name": "_menuFormRepresentation",
+      "bridgedName": "_menuFormRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_view": {
+      "name": "_view",
+      "bridgedName": "_view",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemType": {
+      "name": "_itemType",
+      "bridgedName": "_itemType",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isSeparatorItem": {
+      "name": "isSeparatorItem",
+      "bridgedName": "isSeparatorItem",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDrawingForDragImage": {
+      "name": "_isDrawingForDragImage",
+      "bridgedName": "_isDrawingForDragImage",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endDrawForDragging": {
+      "name": "_endDrawForDragging",
+      "bridgedName": "_endDrawForDragging",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginDrawForDragging": {
+      "name": "_beginDrawForDragging",
+      "bridgedName": "_beginDrawForDragging",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSizeHasBeenSet:": {
+      "name": "_setSizeHasBeenSet:",
+      "bridgedName": "_setSizeHasBeenSet",
+      "args": [
+        {
+          "name": "_setSizeHasBeenSet",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sizeHasBeenSet": {
+      "name": "_sizeHasBeenSet",
+      "bridgedName": "_sizeHasBeenSet",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "allowsDuplicatesInToolbar": {
+      "name": "allowsDuplicatesInToolbar",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "view": {
+      "name": "view",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEnabled"
+      ]
+    },
+    "menuFormRepresentation": {
+      "name": "menuFormRepresentation",
+      "pointer": true,
+      "type": "NSMenuItem",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "toolTip": {
+      "name": "toolTip",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "paletteLabel": {
+      "name": "paletteLabel",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "label": {
+      "name": "label",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "toolbar": {
+      "name": "toolbar",
+      "pointer": true,
+      "type": "__weak NSToolbar",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "itemIdentifier": {
+      "name": "itemIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

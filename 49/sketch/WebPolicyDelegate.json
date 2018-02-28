@@ -1,0 +1,127 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDictionary",
+    "NSError",
+    "NSString",
+    "NSURLRequest",
+    "WebFrame",
+    "WebView"
+  ],
+  "protocol": true,
+  "className": "WebPolicyDelegate",
+  "interfaces": [],
+  "methods": {
+    "webView:unableToImplementPolicyWithError:frame:": {
+      "name": "webView:unableToImplementPolicyWithError:frame:",
+      "bridgedName": "webView_unableToImplementPolicyWithError_frame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "unableToImplementPolicyWithError",
+          "type": "NSError *"
+        },
+        {
+          "name": "frame",
+          "type": "WebFrame *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:decidePolicyForMIMEType:request:frame:decisionListener:": {
+      "name": "webView:decidePolicyForMIMEType:request:frame:decisionListener:",
+      "bridgedName": "webView_decidePolicyForMIMEType_request_frame_decisionListener",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "decidePolicyForMIMEType",
+          "type": "NSString *"
+        },
+        {
+          "name": "request",
+          "type": "NSURLRequest *"
+        },
+        {
+          "name": "frame",
+          "type": "WebFrame *"
+        },
+        {
+          "name": "decisionListener",
+          "type": "id <WebPolicyDecisionListener>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:": {
+      "name": "webView:decidePolicyForNewWindowAction:request:newFrameName:decisionListener:",
+      "bridgedName": "webView_decidePolicyForNewWindowAction_request_newFrameName_decisionListener",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "decidePolicyForNewWindowAction",
+          "type": "NSDictionary *"
+        },
+        {
+          "name": "request",
+          "type": "NSURLRequest *"
+        },
+        {
+          "name": "newFrameName",
+          "type": "NSString *"
+        },
+        {
+          "name": "decisionListener",
+          "type": "id <WebPolicyDecisionListener>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:decidePolicyForNavigationAction:request:frame:decisionListener:": {
+      "name": "webView:decidePolicyForNavigationAction:request:frame:decisionListener:",
+      "bridgedName": "webView_decidePolicyForNavigationAction_request_frame_decisionListener",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "decidePolicyForNavigationAction",
+          "type": "NSDictionary *"
+        },
+        {
+          "name": "request",
+          "type": "NSURLRequest *"
+        },
+        {
+          "name": "frame",
+          "type": "WebFrame *"
+        },
+        {
+          "name": "decisionListener",
+          "type": "id <WebPolicyDecisionListener>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,304 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSImmutableDocumentData",
+    "MSImmutableLayer",
+    "NSColorSpace"
+  ],
+  "protocol": false,
+  "className": "MSRenderingRequest",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestWithBackgroundBlurLayer:": {
+      "name": "requestWithBackgroundBlurLayer:",
+      "bridgedName": "requestWithBackgroundBlurLayer",
+      "args": [
+        {
+          "name": "requestWithBackgroundBlurLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestWithPointScale:": {
+      "name": "requestWithPointScale:",
+      "bridgedName": "requestWithPointScale",
+      "args": [
+        {
+          "name": "requestWithPointScale",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestWithZoomLevel:": {
+      "name": "requestWithZoomLevel:",
+      "bridgedName": "requestWithZoomLevel",
+      "args": [
+        {
+          "name": "requestWithZoomLevel",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requestWithOptions:": {
+      "name": "requestWithOptions:",
+      "bridgedName": "requestWithOptions",
+      "args": [
+        {
+          "name": "requestWithOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:colorSpace:pointScale:zoomLevel:cacheProvider:options:": {
+      "name": "initWithDocument:colorSpace:pointScale:zoomLevel:cacheProvider:options:",
+      "bridgedName": "initWithDocument_colorSpace_pointScale_zoomLevel_cacheProvider_options",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "colorSpace",
+          "type": "id"
+        },
+        {
+          "name": "pointScale",
+          "type": "double"
+        },
+        {
+          "name": "zoomLevel",
+          "type": "double"
+        },
+        {
+          "name": "cacheProvider",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:colorSpace:pointScale:zoomLevel:cacheProvider:backgroundBlurLayer:options:": {
+      "name": "initWithDocument:colorSpace:pointScale:zoomLevel:cacheProvider:backgroundBlurLayer:options:",
+      "bridgedName": "initWithDocument_colorSpace_pointScale_zoomLevel_cacheProvider_backgroundBlurLayer_options",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "colorSpace",
+          "type": "id"
+        },
+        {
+          "name": "pointScale",
+          "type": "double"
+        },
+        {
+          "name": "zoomLevel",
+          "type": "double"
+        },
+        {
+          "name": "cacheProvider",
+          "type": "id"
+        },
+        {
+          "name": "backgroundBlurLayer",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "options": {
+      "name": "options",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "backgroundBlurLayer": {
+      "name": "backgroundBlurLayer",
+      "pointer": true,
+      "type": "MSImmutableLayer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "zoomLevel": {
+      "name": "zoomLevel",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pointScale": {
+      "name": "pointScale",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": true,
+      "type": "NSColorSpace",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "cacheProvider": {
+      "name": "cacheProvider",
+      "pointer": false,
+      "type": "id <MSRenderingContextCacheProvider>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "renderingQuality": {
+      "name": "renderingQuality",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "skipLayerInclusionTests": {
+      "name": "skipLayerInclusionTests",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "shouldFlipShadows": {
+      "name": "shouldFlipShadows",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "printing": {
+      "name": "printing",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isPrinting"
+      ]
+    },
+    "includeArtboardBackground": {
+      "name": "includeArtboardBackground",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "willDrawPixelated": {
+      "name": "willDrawPixelated",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "drawingPixelated": {
+      "name": "drawingPixelated",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isDrawingPixelated"
+      ]
+    },
+    "drawingMask": {
+      "name": "drawingMask",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isDrawingMask"
+      ]
+    },
+    "exporting": {
+      "name": "exporting",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isExporting"
+      ]
+    }
+  }
+}

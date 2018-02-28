@@ -1,0 +1,714 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSPrinter",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSCoding"
+  ],
+  "methods": {
+    "printerWithType:": {
+      "name": "printerWithType:",
+      "bridgedName": "printerWithType",
+      "args": [
+        {
+          "name": "printerWithType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "printerWithName:": {
+      "name": "printerWithName:",
+      "bridgedName": "printerWithName",
+      "args": [
+        {
+          "name": "printerWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "printerTypes": {
+      "name": "printerTypes",
+      "bridgedName": "printerTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "printerNames": {
+      "name": "printerNames",
+      "bridgedName": "printerNames",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_flushCachedCarbonPrintersByName": {
+      "name": "_flushCachedCarbonPrintersByName",
+      "bridgedName": "_flushCachedCarbonPrintersByName",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_printerForPrinter:": {
+      "name": "_printerForPrinter:",
+      "bridgedName": "_printerForPrinter",
+      "args": [
+        {
+          "name": "_printerForPrinter",
+          "type": "struct OpaquePMPrinter *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "printerWithName:domain:includeUnavailable:": {
+      "name": "printerWithName:domain:includeUnavailable:",
+      "bridgedName": "printerWithName_domain_includeUnavailable",
+      "args": [
+        {
+          "name": "printerWithName",
+          "type": "id"
+        },
+        {
+          "name": "domain",
+          "type": "id"
+        },
+        {
+          "name": "includeUnavailable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compatibility_initWithUnkeyedCoder:": {
+      "name": "_compatibility_initWithUnkeyedCoder:",
+      "bridgedName": "_compatibility_initWithUnkeyedCoder",
+      "args": [
+        {
+          "name": "_compatibility_initWithUnkeyedCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringListForKey:inTable:": {
+      "name": "stringListForKey:inTable:",
+      "bridgedName": "stringListForKey_inTable",
+      "args": [
+        {
+          "name": "stringListForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringForKey:inTable:": {
+      "name": "stringForKey:inTable:",
+      "bridgedName": "stringForKey_inTable",
+      "args": [
+        {
+          "name": "stringForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sizeForKey:inTable:": {
+      "name": "sizeForKey:inTable:",
+      "bridgedName": "sizeForKey_inTable",
+      "args": [
+        {
+          "name": "sizeForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectForKey:inTable:": {
+      "name": "rectForKey:inTable:",
+      "bridgedName": "rectForKey_inTable",
+      "args": [
+        {
+          "name": "rectForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intForKey:inTable:": {
+      "name": "intForKey:inTable:",
+      "bridgedName": "intForKey_inTable",
+      "args": [
+        {
+          "name": "intForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "floatForKey:inTable:": {
+      "name": "floatForKey:inTable:",
+      "bridgedName": "floatForKey_inTable",
+      "args": [
+        {
+          "name": "floatForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "booleanForKey:inTable:": {
+      "name": "booleanForKey:inTable:",
+      "bridgedName": "booleanForKey_inTable",
+      "args": [
+        {
+          "name": "booleanForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isKey:inTable:": {
+      "name": "isKey:inTable:",
+      "bridgedName": "isKey_inTable",
+      "args": [
+        {
+          "name": "isKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "statusForTable:": {
+      "name": "statusForTable:",
+      "bridgedName": "statusForTable",
+      "args": [
+        {
+          "name": "statusForTable",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pageSizeForPaper:": {
+      "name": "pageSizeForPaper:",
+      "bridgedName": "pageSizeForPaper",
+      "args": [
+        {
+          "name": "pageSizeForPaper",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithName:printer:": {
+      "name": "_initWithName:printer:",
+      "bridgedName": "_initWithName_printer",
+      "args": [
+        {
+          "name": "_initWithName",
+          "type": "id"
+        },
+        {
+          "name": "printer",
+          "type": "struct OpaquePMPrinter *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_printer": {
+      "name": "_printer",
+      "bridgedName": "_printer",
+      "args": [],
+      "returns": "struct OpaquePMPrinter *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "note": {
+      "name": "note",
+      "bridgedName": "note",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "host": {
+      "name": "host",
+      "bridgedName": "host",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "domain": {
+      "name": "domain",
+      "bridgedName": "domain",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOutputStackInReverseOrder": {
+      "name": "isOutputStackInReverseOrder",
+      "bridgedName": "isOutputStackInReverseOrder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFontAvailable:": {
+      "name": "isFontAvailable:",
+      "bridgedName": "isFontAvailable",
+      "args": [
+        {
+          "name": "isFontAvailable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isColor": {
+      "name": "isColor",
+      "bridgedName": "isColor",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsBinary": {
+      "name": "acceptsBinary",
+      "bridgedName": "acceptsBinary",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageRectForPaper:": {
+      "name": "imageRectForPaper:",
+      "bridgedName": "imageRectForPaper",
+      "args": [
+        {
+          "name": "imageRectForPaper",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deallocatePPDStuff": {
+      "name": "_deallocatePPDStuff",
+      "bridgedName": "_deallocatePPDStuff",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "processKeyword:option:keyTran:arg:argTran:": {
+      "name": "processKeyword:option:keyTran:arg:argTran:",
+      "bridgedName": "processKeyword_option_keyTran_arg_argTran",
+      "args": [
+        {
+          "name": "processKeyword",
+          "type": "char *"
+        },
+        {
+          "name": "option",
+          "type": "char *"
+        },
+        {
+          "name": "keyTran",
+          "type": "char *"
+        },
+        {
+          "name": "arg",
+          "type": "char *"
+        },
+        {
+          "name": "argTran",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUIConstraints:": {
+      "name": "_setUIConstraints:",
+      "bridgedName": "_setUIConstraints",
+      "args": [
+        {
+          "name": "_setUIConstraints",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setOrderDependency:": {
+      "name": "_setOrderDependency:",
+      "bridgedName": "_setOrderDependency",
+      "args": [
+        {
+          "name": "_setOrderDependency",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendKey:option:value:inKeyNode:": {
+      "name": "_appendKey:option:value:inKeyNode:",
+      "bridgedName": "_appendKey_option_value_inKeyNode",
+      "args": [
+        {
+          "name": "_appendKey",
+          "type": "const char *"
+        },
+        {
+          "name": "option",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "const char *"
+        },
+        {
+          "name": "inKeyNode",
+          "type": "CDStruct_d48118a8 *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeKeyNode:inKeyNode:": {
+      "name": "_makeKeyNode:inKeyNode:",
+      "bridgedName": "_makeKeyNode_inKeyNode",
+      "args": [
+        {
+          "name": "_makeKeyNode",
+          "type": "const char *"
+        },
+        {
+          "name": "inKeyNode",
+          "type": "CDStruct_d48118a8 *"
+        }
+      ],
+      "returns": "CDStruct_d48118a8 *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendStringInKeyNode:key:value:": {
+      "name": "_appendStringInKeyNode:key:value:",
+      "bridgedName": "_appendStringInKeyNode_key_value",
+      "args": [
+        {
+          "name": "_appendStringInKeyNode",
+          "type": "CDStruct_d48118a8 *"
+        },
+        {
+          "name": "key",
+          "type": "const char *"
+        },
+        {
+          "name": "value",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_keyListForKeyNode:": {
+      "name": "_keyListForKeyNode:",
+      "bridgedName": "_keyListForKeyNode",
+      "args": [
+        {
+          "name": "_keyListForKeyNode",
+          "type": "CDStruct_d48118a8 *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getNodeForKey:inTable:": {
+      "name": "_getNodeForKey:inTable:",
+      "bridgedName": "_getNodeForKey_inTable",
+      "args": [
+        {
+          "name": "_getNodeForKey",
+          "type": "id"
+        },
+        {
+          "name": "inTable",
+          "type": "id"
+        }
+      ],
+      "returns": "CDStruct_d48118a8 *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocatePPDStuffAndParse": {
+      "name": "_allocatePPDStuffAndParse",
+      "bridgedName": "_allocatePPDStuffAndParse",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_freeNodes": {
+      "name": "_freeNodes",
+      "bridgedName": "_freeNodes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTable:inNode:": {
+      "name": "_makeTable:inNode:",
+      "bridgedName": "_makeTable_inNode",
+      "args": [
+        {
+          "name": "_makeTable",
+          "type": "const char *"
+        },
+        {
+          "name": "inNode",
+          "type": "CDStruct_d48118a8 *"
+        }
+      ],
+      "returns": "CDStruct_d48118a8 *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocString:": {
+      "name": "_allocString:",
+      "bridgedName": "_allocString",
+      "args": [
+        {
+          "name": "_allocString",
+          "type": "const char *"
+        }
+      ],
+      "returns": "char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_freeNode:": {
+      "name": "_freeNode:",
+      "bridgedName": "_freeNode",
+      "args": [
+        {
+          "name": "_freeNode",
+          "type": "CDStruct_d48118a8 *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeRootNode": {
+      "name": "_makeRootNode",
+      "bridgedName": "_makeRootNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newNode:": {
+      "name": "_newNode:",
+      "bridgedName": "_newNode",
+      "args": [
+        {
+          "name": "_newNode",
+          "type": "long long"
+        }
+      ],
+      "returns": "CDStruct_d48118a8 *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "deviceDescription": {
+      "name": "deviceDescription",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "languageLevel": {
+      "name": "languageLevel",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "type": {
+      "name": "type",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

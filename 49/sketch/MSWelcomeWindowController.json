@@ -1,0 +1,601 @@
+{
+  "imports": [
+    "CHWindowController.h",
+    "MSWelcomeCollectionViewDelegate.h",
+    "NSMenuDelegate.h",
+    "NSWindowDelegate.h"
+  ],
+  "classes": [
+    "MSCallToActionButton",
+    "MSPreviewImageCache",
+    "NSArray",
+    "NSButton",
+    "NSCollectionView",
+    "NSMenu",
+    "NSScrollView",
+    "NSSegmentedControl",
+    "NSString",
+    "NSTextField",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSWelcomeWindowController",
+  "extends": "CHWindowController",
+  "interfaces": [
+    "NSMenuDelegate",
+    "NSWindowDelegate",
+    "MSWelcomeCollectionViewDelegate"
+  ],
+  "methods": {
+    "templateURLsAtDirectoryURL:": {
+      "name": "templateURLsAtDirectoryURL:",
+      "bridgedName": "templateURLsAtDirectoryURL",
+      "args": [
+        {
+          "name": "templateURLsAtDirectoryURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "hideWelcomeWindowIfNeeded": {
+      "name": "hideWelcomeWindowIfNeeded",
+      "bridgedName": "hideWelcomeWindowIfNeeded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "showWelcomeWindowIfAppropriate": {
+      "name": "showWelcomeWindowIfAppropriate",
+      "bridgedName": "showWelcomeWindowIfAppropriate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "showWelcomeWindowCollection:isLaunching:": {
+      "name": "showWelcomeWindowCollection:isLaunching:",
+      "bridgedName": "showWelcomeWindowCollection_isLaunching",
+      "args": [
+        {
+          "name": "showWelcomeWindowCollection",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "isLaunching",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:newItemForRepresentedObject:": {
+      "name": "collectionView:newItemForRepresentedObject:",
+      "bridgedName": "collectionView_newItemForRepresentedObject",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "newItemForRepresentedObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionItems": {
+      "name": "collectionItems",
+      "bridgedName": "collectionItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "templateItems": {
+      "name": "templateItems",
+      "bridgedName": "templateItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recentDocumentItems": {
+      "name": "recentDocumentItems",
+      "bridgedName": "recentDocumentItems",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearRecentDocuments:": {
+      "name": "clearRecentDocuments:",
+      "bridgedName": "clearRecentDocuments",
+      "args": [
+        {
+          "name": "clearRecentDocuments",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revealDocumentInFinder:": {
+      "name": "revealDocumentInFinder:",
+      "bridgedName": "revealDocumentInFinder",
+      "args": [
+        {
+          "name": "revealDocumentInFinder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
+      "args": [
+        {
+          "name": "menuNeedsUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openTemplateAtURL:": {
+      "name": "openTemplateAtURL:",
+      "bridgedName": "openTemplateAtURL",
+      "args": [
+        {
+          "name": "openTemplateAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocumentAtURL:": {
+      "name": "openDocumentAtURL:",
+      "bridgedName": "openDocumentAtURL",
+      "args": [
+        {
+          "name": "openDocumentAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "joinSketchCloud:": {
+      "name": "joinSketchCloud:",
+      "bridgedName": "joinSketchCloud",
+      "args": [
+        {
+          "name": "joinSketchCloud",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visitSketchMirrorPage:": {
+      "name": "visitSketchMirrorPage:",
+      "bridgedName": "visitSketchMirrorPage",
+      "args": [
+        {
+          "name": "visitSketchMirrorPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subscribeToNewsletter:": {
+      "name": "subscribeToNewsletter:",
+      "bridgedName": "subscribeToNewsletter",
+      "args": [
+        {
+          "name": "subscribeToNewsletter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visitPluginsPage:": {
+      "name": "visitPluginsPage:",
+      "bridgedName": "visitPluginsPage",
+      "args": [
+        {
+          "name": "visitPluginsPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visitLearnPage:": {
+      "name": "visitLearnPage:",
+      "bridgedName": "visitLearnPage",
+      "args": [
+        {
+          "name": "visitLearnPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close:": {
+      "name": "close:",
+      "bridgedName": "close",
+      "args": [
+        {
+          "name": "close",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "confirm:": {
+      "name": "confirm:",
+      "bridgedName": "confirm",
+      "args": [
+        {
+          "name": "confirm",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector:": {
+      "name": "doCommandBySelector:",
+      "bridgedName": "doCommandBySelector",
+      "args": [
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openDocument:": {
+      "name": "openDocument:",
+      "bridgedName": "openDocument",
+      "args": [
+        {
+          "name": "openDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshScrollability": {
+      "name": "refreshScrollability",
+      "bridgedName": "refreshScrollability",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldEnableCollectionViewScrolling": {
+      "name": "shouldEnableCollectionViewScrolling",
+      "bridgedName": "shouldEnableCollectionViewScrolling",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showCollection:": {
+      "name": "showCollection:",
+      "bridgedName": "showCollection",
+      "args": [
+        {
+          "name": "showCollection",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pickCollection:": {
+      "name": "pickCollection:",
+      "bridgedName": "pickCollection",
+      "args": [
+        {
+          "name": "pickCollection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "togglePluginsButton:": {
+      "name": "togglePluginsButton:",
+      "bridgedName": "togglePluginsButton",
+      "args": [
+        {
+          "name": "togglePluginsButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidResize:": {
+      "name": "windowDidResize:",
+      "bridgedName": "windowDidResize",
+      "args": [
+        {
+          "name": "windowDidResize",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowWillClose:": {
+      "name": "windowWillClose:",
+      "bridgedName": "windowWillClose",
+      "args": [
+        {
+          "name": "windowWillClose",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearCaches": {
+      "name": "clearCaches",
+      "bridgedName": "clearCaches",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "centerWindowIfAppropriate": {
+      "name": "centerWindowIfAppropriate",
+      "bridgedName": "centerWindowIfAppropriate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidLoad": {
+      "name": "windowDidLoad",
+      "bridgedName": "windowDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "cachedTemplateItems": {
+      "name": "cachedTemplateItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cachedRecentDocumentItems": {
+      "name": "cachedRecentDocumentItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "previewImageCache": {
+      "name": "previewImageCache",
+      "pointer": true,
+      "type": "MSPreviewImageCache",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "collectionToShow": {
+      "name": "collectionToShow",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "versionTextField": {
+      "name": "versionTextField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "templatesContextMenu": {
+      "name": "templatesContextMenu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "recentDocumentsContextMenu": {
+      "name": "recentDocumentsContextMenu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pluginsButton": {
+      "name": "pluginsButton",
+      "pointer": true,
+      "type": "MSCallToActionButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "newsletterButton": {
+      "name": "newsletterButton",
+      "pointer": true,
+      "type": "MSCallToActionButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "doNotShowAgainButton": {
+      "name": "doNotShowAgainButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "confirmButton": {
+      "name": "confirmButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "collectionsSegmentedControl": {
+      "name": "collectionsSegmentedControl",
+      "pointer": true,
+      "type": "NSSegmentedControl",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "collectionStaticContainerView": {
+      "name": "collectionStaticContainerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "collectionScrollView": {
+      "name": "collectionScrollView",
+      "pointer": true,
+      "type": "NSScrollView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "collectionView": {
+      "name": "collectionView",
+      "pointer": true,
+      "type": "NSCollectionView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "closeButton": {
+      "name": "closeButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "numberOfDocuments": {
+      "name": "numberOfDocuments",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

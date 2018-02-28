@@ -1,0 +1,263 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSContentDrawView",
+    "MSLayerArray",
+    "MSLayerMeasurementTarget",
+    "NSNumberFormatter"
+  ],
+  "protocol": false,
+  "className": "MSLayerMeasurementRenderer",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isMeasuringDistance": {
+      "name": "isMeasuringDistance",
+      "bridgedName": "isMeasuringDistance",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clear": {
+      "name": "clear",
+      "bridgedName": "clear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawDistanceFromRect:toLargerRect:zoomScale:": {
+      "name": "drawDistanceFromRect:toLargerRect:zoomScale:",
+      "bridgedName": "drawDistanceFromRect_toLargerRect_zoomScale",
+      "args": [
+        {
+          "name": "drawDistanceFromRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "toLargerRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawDashLinesBetweenRect:andRect:zoomScale:": {
+      "name": "drawDashLinesBetweenRect:andRect:zoomScale:",
+      "bridgedName": "drawDashLinesBetweenRect_andRect_zoomScale",
+      "args": [
+        {
+          "name": "drawDashLinesBetweenRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "andRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawDistanceFromRect:toRect:zoomScale:": {
+      "name": "drawDistanceFromRect:toRect:zoomScale:",
+      "bridgedName": "drawDistanceFromRect_toRect_zoomScale",
+      "args": [
+        {
+          "name": "drawDistanceFromRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "toRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawDistanceFromRect:toGuides:zoomScale:": {
+      "name": "drawDistanceFromRect:toGuides:zoomScale:",
+      "bridgedName": "drawDistanceFromRect_toGuides_zoomScale",
+      "args": [
+        {
+          "name": "drawDistanceFromRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "toGuides",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForGeometryChange": {
+      "name": "prepareForGeometryChange",
+      "bridgedName": "prepareForGeometryChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplayInRect:": {
+      "name": "setNeedsDisplayInRect:",
+      "bridgedName": "setNeedsDisplayInRect",
+      "args": [
+        {
+          "name": "setNeedsDisplayInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectForPositionDrawingForLayers:": {
+      "name": "rectForPositionDrawingForLayers:",
+      "bridgedName": "rectForPositionDrawingForLayers",
+      "args": [
+        {
+          "name": "rectForPositionDrawingForLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawOutlineForRect:zoomScale:": {
+      "name": "drawOutlineForRect:zoomScale:",
+      "bridgedName": "drawOutlineForRect_zoomScale",
+      "args": [
+        {
+          "name": "drawOutlineForRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawWithZoomScale:": {
+      "name": "drawWithZoomScale:",
+      "bridgedName": "drawWithZoomScale",
+      "args": [
+        {
+          "name": "drawWithZoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawingRectForData:": {
+      "name": "drawingRectForData:",
+      "bridgedName": "drawingRectForData",
+      "args": [
+        {
+          "name": "drawingRectForData",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "measurementData": {
+      "name": "measurementData",
+      "bridgedName": "measurementData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "view": {
+      "name": "view",
+      "pointer": true,
+      "type": "__weak MSContentDrawView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberFormatter": {
+      "name": "numberFormatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "measurementOptions": {
+      "name": "measurementOptions",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "measurementTarget": {
+      "name": "measurementTarget",
+      "pointer": true,
+      "type": "MSLayerMeasurementTarget",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "selectedLayers": {
+      "name": "selectedLayers",
+      "pointer": true,
+      "type": "MSLayerArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "isEnabled": {
+      "name": "isEnabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}
