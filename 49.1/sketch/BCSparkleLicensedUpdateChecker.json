@@ -1,0 +1,242 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDate",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "BCSparkleLicensedUpdateChecker",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "sparkleCheckerWithLicenseExpirationDate:buildNumber:appcastResults:": {
+      "name": "sparkleCheckerWithLicenseExpirationDate:buildNumber:appcastResults:",
+      "bridgedName": "sparkleCheckerWithLicenseExpirationDate_buildNumber_appcastResults",
+      "args": [
+        {
+          "name": "sparkleCheckerWithLicenseExpirationDate",
+          "type": "id"
+        },
+        {
+          "name": "buildNumber",
+          "type": "id"
+        },
+        {
+          "name": "appcastResults",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isUpdateInstalled:": {
+      "name": "isUpdateInstalled:",
+      "bridgedName": "isUpdateInstalled",
+      "args": [
+        {
+          "name": "isUpdateInstalled",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compareBuildNumber:to:": {
+      "name": "compareBuildNumber:to:",
+      "bridgedName": "compareBuildNumber_to",
+      "args": [
+        {
+          "name": "compareBuildNumber",
+          "type": "id"
+        },
+        {
+          "name": "to",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isUpdateItemInstallable:": {
+      "name": "isUpdateItemInstallable:",
+      "bridgedName": "isUpdateItemInstallable",
+      "args": [
+        {
+          "name": "isUpdateItemInstallable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sparkleShortVersionForItem:": {
+      "name": "sparkleShortVersionForItem:",
+      "bridgedName": "sparkleShortVersionForItem",
+      "args": [
+        {
+          "name": "sparkleShortVersionForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sparkleVersionForItem:": {
+      "name": "sparkleVersionForItem:",
+      "bridgedName": "sparkleVersionForItem",
+      "args": [
+        {
+          "name": "sparkleVersionForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportDateForItem:": {
+      "name": "supportDateForItem:",
+      "bridgedName": "supportDateForItem",
+      "args": [
+        {
+          "name": "supportDateForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportDateStringForItem:": {
+      "name": "supportDateStringForItem:",
+      "bridgedName": "supportDateStringForItem",
+      "args": [
+        {
+          "name": "supportDateStringForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parseAppcastResults:": {
+      "name": "parseAppcastResults:",
+      "bridgedName": "parseAppcastResults",
+      "args": [
+        {
+          "name": "parseAppcastResults",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithLicenseExpirationDate:buildNumber:": {
+      "name": "initWithLicenseExpirationDate:buildNumber:",
+      "bridgedName": "initWithLicenseExpirationDate_buildNumber",
+      "args": [
+        {
+          "name": "initWithLicenseExpirationDate",
+          "type": "id"
+        },
+        {
+          "name": "buildNumber",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "buildNumber": {
+      "name": "buildNumber",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "expiryDate": {
+      "name": "expiryDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "indexOfBestUpdate": {
+      "name": "indexOfBestUpdate",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableBuildNumber": {
+      "name": "latestUnavailableBuildNumber",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableVersion": {
+      "name": "latestUnavailableVersion",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasAvailableUpdates": {
+      "name": "hasAvailableUpdates",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "numberOfUnavailableReleases": {
+      "name": "numberOfUnavailableReleases",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "hasUnlicensedUpdatesOnly": {
+      "name": "hasUnlicensedUpdatesOnly",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

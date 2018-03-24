@@ -1,0 +1,453 @@
+{
+  "imports": [
+    "NSSliderAccessoryContainer.h",
+    "NSUserInterfaceCompression.h"
+  ],
+  "classes": [
+    "NSSlider",
+    "NSSliderAccessory",
+    "NSStackView",
+    "NSString",
+    "NSUserInterfaceCompressionOptions"
+  ],
+  "protocol": false,
+  "className": "_NSSliderTouchBarItemView",
+  "extends": "NSView",
+  "interfaces": [
+    "NSSliderAccessoryContainer",
+    "NSUserInterfaceCompression"
+  ],
+  "methods": {
+    "automaticallyNotifiesObserversOfCollapsed": {
+      "name": "automaticallyNotifiesObserversOfCollapsed",
+      "bridgedName": "automaticallyNotifiesObserversOfCollapsed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingCollapsed": {
+      "name": "keyPathsForValuesAffectingCollapsed",
+      "bridgedName": "keyPathsForValuesAffectingCollapsed",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_maxValueAccessoryIsHidden": {
+      "name": "keyPathsForValuesAffecting_maxValueAccessoryIsHidden",
+      "bridgedName": "keyPathsForValuesAffecting_maxValueAccessoryIsHidden",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_sliderIsHidden": {
+      "name": "keyPathsForValuesAffecting_sliderIsHidden",
+      "bridgedName": "keyPathsForValuesAffecting_sliderIsHidden",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_minValueAccessoryIsHidden": {
+      "name": "keyPathsForValuesAffecting_minValueAccessoryIsHidden",
+      "bridgedName": "keyPathsForValuesAffecting_minValueAccessoryIsHidden",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_labelIsHidden": {
+      "name": "keyPathsForValuesAffecting_labelIsHidden",
+      "bridgedName": "keyPathsForValuesAffecting_labelIsHidden",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_layoutEdgeInsets": {
+      "name": "keyPathsForValuesAffecting_layoutEdgeInsets",
+      "bridgedName": "keyPathsForValuesAffecting_layoutEdgeInsets",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffecting_hasStepBehaviorContext": {
+      "name": "keyPathsForValuesAffecting_hasStepBehaviorContext",
+      "bridgedName": "keyPathsForValuesAffecting_hasStepBehaviorContext",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minimumSizeWithPrioritizedCompressionOptions:": {
+      "name": "minimumSizeWithPrioritizedCompressionOptions:",
+      "bridgedName": "minimumSizeWithPrioritizedCompressionOptions",
+      "args": [
+        {
+          "name": "minimumSizeWithPrioritizedCompressionOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compressWithPrioritizedCompressionOptions:": {
+      "name": "compressWithPrioritizedCompressionOptions:",
+      "bridgedName": "compressWithPrioritizedCompressionOptions",
+      "args": [
+        {
+          "name": "compressWithPrioritizedCompressionOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sliderDidCancelTracking": {
+      "name": "_sliderDidCancelTracking",
+      "bridgedName": "_sliderDidCancelTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sliderDidEndTracking": {
+      "name": "_sliderDidEndTracking",
+      "bridgedName": "_sliderDidEndTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sliderWillBeginTracking": {
+      "name": "_sliderWillBeginTracking",
+      "bridgedName": "_sliderWillBeginTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animationForKey:": {
+      "name": "animationForKey:",
+      "bridgedName": "animationForKey",
+      "args": [
+        {
+          "name": "animationForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animatorClass": {
+      "name": "_animatorClass",
+      "bridgedName": "_animatorClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_maxValueAccessoryDidFire:": {
+      "name": "_maxValueAccessoryDidFire:",
+      "bridgedName": "_maxValueAccessoryDidFire",
+      "args": [
+        {
+          "name": "_maxValueAccessoryDidFire",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_minValueAccessoryDidFire:": {
+      "name": "_minValueAccessoryDidFire:",
+      "bridgedName": "_minValueAccessoryDidFire",
+      "args": [
+        {
+          "name": "_minValueAccessoryDidFire",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sliderDidChange:": {
+      "name": "_sliderDidChange:",
+      "bridgedName": "_sliderDidChange",
+      "args": [
+        {
+          "name": "_sliderDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadViewHierarchy": {
+      "name": "_loadViewHierarchy",
+      "bridgedName": "_loadViewHierarchy",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInit": {
+      "name": "_commonInit",
+      "bridgedName": "_commonInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDoLayerPerformanceUpdates": {
+      "name": "_shouldDoLayerPerformanceUpdates",
+      "bridgedName": "_shouldDoLayerPerformanceUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_incrementValue:": {
+      "name": "_incrementValue:",
+      "bridgedName": "_incrementValue",
+      "args": [
+        {
+          "name": "_incrementValue",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendAction": {
+      "name": "sendAction",
+      "bridgedName": "sendAction",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autounbinder": {
+      "name": "_autounbinder",
+      "bridgedName": "_autounbinder",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "release": {
+      "name": "release",
+      "bridgedName": "release",
+      "args": [],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "_layoutView": {
+      "name": "_layoutView",
+      "pointer": true,
+      "type": "NSStackView",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "label": {
+      "name": "label",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "activeCompressionOptions": {
+      "name": "activeCompressionOptions",
+      "pointer": true,
+      "type": "NSUserInterfaceCompressionOptions",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "collapsed": {
+      "name": "collapsed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isCollapsed"
+      ]
+    },
+    "slider": {
+      "name": "slider",
+      "pointer": true,
+      "type": "NSSlider",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "_maxValueAccessoryIsHidden": {
+      "name": "_maxValueAccessoryIsHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_sliderIsHidden": {
+      "name": "_sliderIsHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_minValueAccessoryIsHidden": {
+      "name": "_minValueAccessoryIsHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_labelIsHidden": {
+      "name": "_labelIsHidden",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_layoutEdgeInsets": {
+      "name": "_layoutEdgeInsets",
+      "pointer": false,
+      "type": "struct NSEdgeInsets",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "maximumValueAccessory": {
+      "name": "maximumValueAccessory",
+      "pointer": true,
+      "type": "NSSliderAccessory",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "minimumValueAccessory": {
+      "name": "minimumValueAccessory",
+      "pointer": true,
+      "type": "NSSliderAccessory",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "_hasStepBehaviorContext": {
+      "name": "_hasStepBehaviorContext",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

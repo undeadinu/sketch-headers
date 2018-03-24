@@ -1,0 +1,297 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "MSInspectorChildController.h",
+    "MSSliceLayerWatcher.h"
+  ],
+  "classes": [
+    "MSInspectorStackView",
+    "MSSeparatorlessView",
+    "NSArray",
+    "NSMutableArray",
+    "NSMutableSet",
+    "NSString",
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "MSBaseExportableInspectorViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "MSSliceLayerWatcher",
+    "MSInspectorChildController"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsSeparatorAfterViews": {
+      "name": "wantsSeparatorAfterViews",
+      "bridgedName": "wantsSeparatorAfterViews",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sizeSliceView": {
+      "name": "sizeSliceView",
+      "bridgedName": "sizeSliceView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadSlicesFromArray:": {
+      "name": "reloadSlicesFromArray:",
+      "bridgedName": "reloadSlicesFromArray",
+      "args": [
+        {
+          "name": "reloadSlicesFromArray",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sliceViewWithRect:": {
+      "name": "sliceViewWithRect:",
+      "bridgedName": "sliceViewWithRect",
+      "args": [
+        {
+          "name": "sliceViewWithRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllSliceViews": {
+      "name": "removeAllSliceViews",
+      "bridgedName": "removeAllSliceViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadSliceViews": {
+      "name": "loadSliceViews",
+      "bridgedName": "loadSliceViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshTimerFired:": {
+      "name": "refreshTimerFired:",
+      "bridgedName": "refreshTimerFired",
+      "args": [
+        {
+          "name": "refreshTimerFired",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleSliceViewReload": {
+      "name": "scheduleSliceViewReload",
+      "bridgedName": "scheduleSliceViewReload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshAction:": {
+      "name": "refreshAction:",
+      "bridgedName": "refreshAction",
+      "args": [
+        {
+          "name": "refreshAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "document": {
+      "name": "document",
+      "bridgedName": "document",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerPositionPossiblyChanged": {
+      "name": "layerPositionPossiblyChanged",
+      "bridgedName": "layerPositionPossiblyChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewContainerView": {
+      "name": "previewContainerView",
+      "bridgedName": "previewContainerView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "views": {
+      "name": "views",
+      "bridgedName": "views",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sliceLayerDidChange:": {
+      "name": "sliceLayerDidChange:",
+      "bridgedName": "sliceLayerDidChange",
+      "args": [
+        {
+          "name": "sliceLayerDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForDisplay": {
+      "name": "prepareForDisplay",
+      "bridgedName": "prepareForDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "name": "selectionDidChangeTo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "sliceViewContainerView": {
+      "name": "sliceViewContainerView",
+      "pointer": true,
+      "type": "MSSeparatorlessView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "sliceViewPool": {
+      "name": "sliceViewPool",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "sliceViews": {
+      "name": "sliceViews",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "refreshTimer": {
+      "name": "refreshTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layers": {
+      "name": "layers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "stackView": {
+      "name": "stackView",
+      "pointer": true,
+      "type": "MSInspectorStackView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

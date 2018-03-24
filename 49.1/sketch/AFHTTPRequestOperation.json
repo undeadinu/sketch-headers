@@ -1,0 +1,165 @@
+{
+  "imports": [
+    "AFURLConnectionOperation.h"
+  ],
+  "classes": [
+    "AFHTTPResponseSerializer<AFURLResponseSerialization>",
+    "NSError",
+    "NSHTTPURLResponse",
+    "NSRecursiveLock"
+  ],
+  "protocol": false,
+  "className": "AFHTTPRequestOperation",
+  "extends": "AFURLConnectionOperation",
+  "interfaces": [],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pause": {
+      "name": "pause",
+      "bridgedName": "pause",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCompletionBlockWithSuccess:failure:": {
+      "name": "setCompletionBlockWithSuccess:failure:",
+      "bridgedName": "setCompletionBlockWithSuccess_failure",
+      "args": [
+        {
+          "name": "setCompletionBlockWithSuccess",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "failure",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "error": {
+      "name": "error",
+      "bridgedName": "error",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithRequest:": {
+      "name": "initWithRequest:",
+      "bridgedName": "initWithRequest",
+      "args": [
+        {
+          "name": "initWithRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "responseSerializationError": {
+      "name": "responseSerializationError",
+      "pointer": true,
+      "type": "NSError",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "responseObject": {
+      "name": "responseObject",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "responseSerializer": {
+      "name": "responseSerializer",
+      "pointer": true,
+      "type": "AFHTTPResponseSerializer<AFURLResponseSerialization>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "lock": {
+      "name": "lock",
+      "pointer": true,
+      "type": "NSRecursiveLock",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "response": {
+      "name": "response",
+      "pointer": true,
+      "type": "NSHTTPURLResponse",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

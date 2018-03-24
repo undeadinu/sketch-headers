@@ -1,0 +1,718 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSBrowser",
+    "NSEvent",
+    "NSImage",
+    "NSIndexSet",
+    "NSMatrix",
+    "NSNotification",
+    "NSPasteboard",
+    "NSString",
+    "NSURL",
+    "NSViewController"
+  ],
+  "protocol": true,
+  "className": "NSBrowserDelegate",
+  "interfaces": [],
+  "methods": {
+    "browser:selectionIndexesForProposedSelection:inColumn:": {
+      "name": "browser:selectionIndexesForProposedSelection:inColumn:",
+      "bridgedName": "browser_selectionIndexesForProposedSelection_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "selectionIndexesForProposedSelection",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSIndexSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:didChangeLastColumn:toColumn:": {
+      "name": "browser:didChangeLastColumn:toColumn:",
+      "bridgedName": "browser_didChangeLastColumn_toColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "didChangeLastColumn",
+          "type": "long long"
+        },
+        {
+          "name": "toColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:headerViewControllerForItem:": {
+      "name": "browser:headerViewControllerForItem:",
+      "bridgedName": "browser_headerViewControllerForItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "headerViewControllerForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "NSViewController *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:previewViewControllerForLeafItem:": {
+      "name": "browser:previewViewControllerForLeafItem:",
+      "bridgedName": "browser_previewViewControllerForLeafItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "previewViewControllerForLeafItem",
+          "type": "id"
+        }
+      ],
+      "returns": "NSViewController *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:nextTypeSelectMatchFromRow:toRow:inColumn:forString:": {
+      "name": "browser:nextTypeSelectMatchFromRow:toRow:inColumn:forString:",
+      "bridgedName": "browser_nextTypeSelectMatchFromRow_toRow_inColumn_forString",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "nextTypeSelectMatchFromRow",
+          "type": "long long"
+        },
+        {
+          "name": "toRow",
+          "type": "long long"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        },
+        {
+          "name": "forString",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:shouldTypeSelectForEvent:withCurrentSearchString:": {
+      "name": "browser:shouldTypeSelectForEvent:withCurrentSearchString:",
+      "bridgedName": "browser_shouldTypeSelectForEvent_withCurrentSearchString",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "shouldTypeSelectForEvent",
+          "type": "NSEvent *"
+        },
+        {
+          "name": "withCurrentSearchString",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:typeSelectStringForRow:inColumn:": {
+      "name": "browser:typeSelectStringForRow:inColumn:",
+      "bridgedName": "browser_typeSelectStringForRow_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "typeSelectStringForRow",
+          "type": "long long"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:acceptDrop:atRow:column:dropOperation:": {
+      "name": "browser:acceptDrop:atRow:column:dropOperation:",
+      "bridgedName": "browser_acceptDrop_atRow_column_dropOperation",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "acceptDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "atRow",
+          "type": "long long"
+        },
+        {
+          "name": "column",
+          "type": "long long"
+        },
+        {
+          "name": "dropOperation",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:validateDrop:proposedRow:column:dropOperation:": {
+      "name": "browser:validateDrop:proposedRow:column:dropOperation:",
+      "bridgedName": "browser_validateDrop_proposedRow_column_dropOperation",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "validateDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "proposedRow",
+          "type": "long long *"
+        },
+        {
+          "name": "column",
+          "type": "long long *"
+        },
+        {
+          "name": "dropOperation",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:draggingImageForRowsWithIndexes:inColumn:withEvent:offset:": {
+      "name": "browser:draggingImageForRowsWithIndexes:inColumn:withEvent:offset:",
+      "bridgedName": "browser_draggingImageForRowsWithIndexes_inColumn_withEvent_offset",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "draggingImageForRowsWithIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        },
+        {
+          "name": "offset",
+          "type": "struct CGPoint *"
+        }
+      ],
+      "returns": "NSImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:canDragRowsWithIndexes:inColumn:withEvent:": {
+      "name": "browser:canDragRowsWithIndexes:inColumn:withEvent:",
+      "bridgedName": "browser_canDragRowsWithIndexes_inColumn_withEvent",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "canDragRowsWithIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:namesOfPromisedFilesDroppedAtDestination:forDraggedRowsWithIndexes:inColumn:": {
+      "name": "browser:namesOfPromisedFilesDroppedAtDestination:forDraggedRowsWithIndexes:inColumn:",
+      "bridgedName": "browser_namesOfPromisedFilesDroppedAtDestination_forDraggedRowsWithIndexes_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "namesOfPromisedFilesDroppedAtDestination",
+          "type": "NSURL *"
+        },
+        {
+          "name": "forDraggedRowsWithIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:writeRowsWithIndexes:inColumn:toPasteboard:": {
+      "name": "browser:writeRowsWithIndexes:inColumn:toPasteboard:",
+      "bridgedName": "browser_writeRowsWithIndexes_inColumn_toPasteboard",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "writeRowsWithIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        },
+        {
+          "name": "toPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:shouldShowCellExpansionForRow:column:": {
+      "name": "browser:shouldShowCellExpansionForRow:column:",
+      "bridgedName": "browser_shouldShowCellExpansionForRow_column",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "shouldShowCellExpansionForRow",
+          "type": "long long"
+        },
+        {
+          "name": "column",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browserColumnConfigurationDidChange:": {
+      "name": "browserColumnConfigurationDidChange:",
+      "bridgedName": "browserColumnConfigurationDidChange",
+      "args": [
+        {
+          "name": "browserColumnConfigurationDidChange",
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:sizeToFitWidthOfColumn:": {
+      "name": "browser:sizeToFitWidthOfColumn:",
+      "bridgedName": "browser_sizeToFitWidthOfColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "sizeToFitWidthOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:shouldSizeColumn:forUserResize:toWidth:": {
+      "name": "browser:shouldSizeColumn:forUserResize:toWidth:",
+      "bridgedName": "browser_shouldSizeColumn_forUserResize_toWidth",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "shouldSizeColumn",
+          "type": "long long"
+        },
+        {
+          "name": "forUserResize",
+          "type": "BOOL"
+        },
+        {
+          "name": "toWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browserDidScroll:": {
+      "name": "browserDidScroll:",
+      "bridgedName": "browserDidScroll",
+      "args": [
+        {
+          "name": "browserDidScroll",
+          "type": "NSBrowser *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browserWillScroll:": {
+      "name": "browserWillScroll:",
+      "bridgedName": "browserWillScroll",
+      "args": [
+        {
+          "name": "browserWillScroll",
+          "type": "NSBrowser *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:isColumnValid:": {
+      "name": "browser:isColumnValid:",
+      "bridgedName": "browser_isColumnValid",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "isColumnValid",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:selectRow:inColumn:": {
+      "name": "browser:selectRow:inColumn:",
+      "bridgedName": "browser_selectRow_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "selectRow",
+          "type": "long long"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:selectCellWithString:inColumn:": {
+      "name": "browser:selectCellWithString:inColumn:",
+      "bridgedName": "browser_selectCellWithString_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "selectCellWithString",
+          "type": "NSString *"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:titleOfColumn:": {
+      "name": "browser:titleOfColumn:",
+      "bridgedName": "browser_titleOfColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "titleOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:willDisplayCell:atRow:column:": {
+      "name": "browser:willDisplayCell:atRow:column:",
+      "bridgedName": "browser_willDisplayCell_atRow_column",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "willDisplayCell",
+          "type": "id"
+        },
+        {
+          "name": "atRow",
+          "type": "long long"
+        },
+        {
+          "name": "column",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:shouldEditItem:": {
+      "name": "browser:shouldEditItem:",
+      "bridgedName": "browser_shouldEditItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "shouldEditItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:setObjectValue:forItem:": {
+      "name": "browser:setObjectValue:forItem:",
+      "bridgedName": "browser_setObjectValue_forItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        },
+        {
+          "name": "forItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rootItemForBrowser:": {
+      "name": "rootItemForBrowser:",
+      "bridgedName": "rootItemForBrowser",
+      "args": [
+        {
+          "name": "rootItemForBrowser",
+          "type": "NSBrowser *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:heightOfRow:inColumn:": {
+      "name": "browser:heightOfRow:inColumn:",
+      "bridgedName": "browser_heightOfRow_inColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "heightOfRow",
+          "type": "long long"
+        },
+        {
+          "name": "inColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:objectValueForItem:": {
+      "name": "browser:objectValueForItem:",
+      "bridgedName": "browser_objectValueForItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "objectValueForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:isLeafItem:": {
+      "name": "browser:isLeafItem:",
+      "bridgedName": "browser_isLeafItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "isLeafItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:child:ofItem:": {
+      "name": "browser:child:ofItem:",
+      "bridgedName": "browser_child_ofItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "child",
+          "type": "long long"
+        },
+        {
+          "name": "ofItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:numberOfChildrenOfItem:": {
+      "name": "browser:numberOfChildrenOfItem:",
+      "bridgedName": "browser_numberOfChildrenOfItem",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "numberOfChildrenOfItem",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:createRowsForColumn:inMatrix:": {
+      "name": "browser:createRowsForColumn:inMatrix:",
+      "bridgedName": "browser_createRowsForColumn_inMatrix",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "createRowsForColumn",
+          "type": "long long"
+        },
+        {
+          "name": "inMatrix",
+          "type": "NSMatrix *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "browser:numberOfRowsInColumn:": {
+      "name": "browser:numberOfRowsInColumn:",
+      "bridgedName": "browser_numberOfRowsInColumn",
+      "args": [
+        {
+          "name": "browser",
+          "type": "NSBrowser *"
+        },
+        {
+          "name": "numberOfRowsInColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,171 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSForeignObjectProvider.h"
+  ],
+  "classes": [
+    "MSAssetLibrary",
+    "MSAssetLibraryController",
+    "MSDocumentData",
+    "MSModelObject",
+    "NSArray",
+    "MSDocument"
+  ],
+  "protocol": true,
+  "className": "MSForeignObjectProvider",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSForeignObjectProvider"
+  ],
+  "methods": {
+    "masterObjectForInstance:": {
+      "name": "masterObjectForInstance:",
+      "bridgedName": "masterObjectForInstance",
+      "args": [
+        {
+          "name": "masterObjectForInstance",
+          "type": "id"
+        }
+      ],
+      "returns": "struct MSModelObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDocumentIsLibrary:": {
+      "name": "currentDocumentIsLibrary:",
+      "bridgedName": "currentDocumentIsLibrary",
+      "args": [
+        {
+          "name": "currentDocumentIsLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localObjectsForDocument:": {
+      "name": "localObjectsForDocument:",
+      "bridgedName": "localObjectsForDocument",
+      "args": [
+        {
+          "name": "localObjectsForDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "providerForLayers:inDocument:": {
+      "name": "providerForLayers:inDocument:",
+      "bridgedName": "providerForLayers_inDocument",
+      "args": [
+        {
+          "name": "providerForLayers",
+          "type": "id"
+        },
+        {
+          "name": "inDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shareableObjectForInstance:inContainerOfType:": {
+      "name": "shareableObjectForInstance:inContainerOfType:",
+      "bridgedName": "shareableObjectForInstance_inContainerOfType",
+      "args": [
+        {
+          "name": "shareableObjectForInstance",
+          "type": "id"
+        },
+        {
+          "name": "inContainerOfType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct MSModelObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tempDocument": {
+      "name": "tempDocument",
+      "bridgedName": "tempDocument",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "objectType": {
+      "name": "objectType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "libraryController": {
+      "name": "libraryController",
+      "pointer": true,
+      "type": "MSAssetLibraryController",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentDocument": {
+      "name": "currentDocument",
+      "pointer": true,
+      "type": "MSDocumentData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "foreignObjects": {
+      "name": "foreignObjects",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

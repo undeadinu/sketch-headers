@@ -1,0 +1,273 @@
+{
+  "imports": [
+    "NSWindowController.h",
+    "NSToolbarDelegate.h",
+    "NSWindowDelegate.h"
+  ],
+  "classes": [
+    "MSPreferencePane",
+    "NSArray",
+    "NSCache",
+    "NSDictionary",
+    "NSString",
+    "NSToolbar"
+  ],
+  "protocol": false,
+  "className": "MSPreferencesController",
+  "extends": "NSWindowController",
+  "interfaces": [
+    "NSToolbarDelegate",
+    "NSWindowDelegate"
+  ],
+  "methods": {
+    "sharedController": {
+      "name": "sharedController",
+      "bridgedName": "sharedController",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateToolbarItem:": {
+      "name": "validateToolbarItem:",
+      "bridgedName": "validateToolbarItem",
+      "args": [
+        {
+          "name": "validateToolbarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:": {
+      "name": "toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:",
+      "bridgedName": "toolbar_itemForItemIdentifier_willBeInsertedIntoToolbar",
+      "args": [
+        {
+          "name": "toolbar",
+          "type": "id"
+        },
+        {
+          "name": "itemForItemIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "willBeInsertedIntoToolbar",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarSelectableItemIdentifiers:": {
+      "name": "toolbarSelectableItemIdentifiers:",
+      "bridgedName": "toolbarSelectableItemIdentifiers",
+      "args": [
+        {
+          "name": "toolbarSelectableItemIdentifiers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarDefaultItemIdentifiers:": {
+      "name": "toolbarDefaultItemIdentifiers:",
+      "bridgedName": "toolbarDefaultItemIdentifiers",
+      "args": [
+        {
+          "name": "toolbarDefaultItemIdentifiers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toolbarAllowedItemIdentifiers:": {
+      "name": "toolbarAllowedItemIdentifiers:",
+      "bridgedName": "toolbarAllowedItemIdentifiers",
+      "args": [
+        {
+          "name": "toolbarAllowedItemIdentifiers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowWillReturnFieldEditor:toObject:": {
+      "name": "windowWillReturnFieldEditor:toObject:",
+      "bridgedName": "windowWillReturnFieldEditor_toObject",
+      "args": [
+        {
+          "name": "windowWillReturnFieldEditor",
+          "type": "id"
+        },
+        {
+          "name": "toObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateWindowFrame": {
+      "name": "updateWindowFrame",
+      "bridgedName": "updateWindowFrame",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchToPaneWithIdentifier:": {
+      "name": "switchToPaneWithIdentifier:",
+      "bridgedName": "switchToPaneWithIdentifier",
+      "args": [
+        {
+          "name": "switchToPaneWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchPanes:": {
+      "name": "switchPanes:",
+      "bridgedName": "switchPanes",
+      "args": [
+        {
+          "name": "switchPanes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "adjustColorsAction:": {
+      "name": "adjustColorsAction:",
+      "bridgedName": "adjustColorsAction",
+      "args": [
+        {
+          "name": "adjustColorsAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "toolbar": {
+      "name": "toolbar",
+      "pointer": true,
+      "type": "__weak NSToolbar",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "preferencePanes": {
+      "name": "preferencePanes",
+      "pointer": true,
+      "type": "NSCache",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "preferencePaneClasses": {
+      "name": "preferencePaneClasses",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "toolbarItemIdentifiers": {
+      "name": "toolbarItemIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "currentPreferencePane": {
+      "name": "currentPreferencePane",
+      "pointer": true,
+      "type": "MSPreferencePane",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "selectedTabIndex": {
+      "name": "selectedTabIndex",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

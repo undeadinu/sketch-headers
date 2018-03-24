@@ -1,0 +1,653 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSCollectionView",
+    "NSCollectionViewItem",
+    "NSCollectionViewLayout",
+    "NSCollectionViewTransitionLayout",
+    "NSDraggingSession",
+    "NSEvent",
+    "NSImage",
+    "NSIndexPath",
+    "NSIndexSet",
+    "NSPasteboard",
+    "NSSet",
+    "NSString",
+    "NSURL",
+    "NSView"
+  ],
+  "protocol": true,
+  "className": "NSCollectionViewDelegate",
+  "interfaces": [],
+  "methods": {
+    "collectionView:transitionLayoutForOldLayout:newLayout:": {
+      "name": "collectionView:transitionLayoutForOldLayout:newLayout:",
+      "bridgedName": "collectionView_transitionLayoutForOldLayout_newLayout",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "transitionLayoutForOldLayout",
+          "type": "NSCollectionViewLayout *"
+        },
+        {
+          "name": "newLayout",
+          "type": "NSCollectionViewLayout *"
+        }
+      ],
+      "returns": "NSCollectionViewTransitionLayout *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didEndDisplayingSupplementaryView:forElementOfKind:atIndexPath:": {
+      "name": "collectionView:didEndDisplayingSupplementaryView:forElementOfKind:atIndexPath:",
+      "bridgedName": "collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "didEndDisplayingSupplementaryView",
+          "type": "NSView *"
+        },
+        {
+          "name": "forElementOfKind",
+          "type": "NSString *"
+        },
+        {
+          "name": "atIndexPath",
+          "type": "NSIndexPath *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didEndDisplayingItem:forRepresentedObjectAtIndexPath:": {
+      "name": "collectionView:didEndDisplayingItem:forRepresentedObjectAtIndexPath:",
+      "bridgedName": "collectionView_didEndDisplayingItem_forRepresentedObjectAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "didEndDisplayingItem",
+          "type": "NSCollectionViewItem *"
+        },
+        {
+          "name": "forRepresentedObjectAtIndexPath",
+          "type": "NSIndexPath *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:willDisplaySupplementaryView:forElementKind:atIndexPath:": {
+      "name": "collectionView:willDisplaySupplementaryView:forElementKind:atIndexPath:",
+      "bridgedName": "collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "willDisplaySupplementaryView",
+          "type": "NSView *"
+        },
+        {
+          "name": "forElementKind",
+          "type": "NSString *"
+        },
+        {
+          "name": "atIndexPath",
+          "type": "NSIndexPath *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:willDisplayItem:forRepresentedObjectAtIndexPath:": {
+      "name": "collectionView:willDisplayItem:forRepresentedObjectAtIndexPath:",
+      "bridgedName": "collectionView_willDisplayItem_forRepresentedObjectAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "willDisplayItem",
+          "type": "NSCollectionViewItem *"
+        },
+        {
+          "name": "forRepresentedObjectAtIndexPath",
+          "type": "NSIndexPath *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didDeselectItemsAtIndexPaths:": {
+      "name": "collectionView:didDeselectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_didDeselectItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "didDeselectItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didSelectItemsAtIndexPaths:": {
+      "name": "collectionView:didSelectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_didSelectItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "didSelectItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:shouldDeselectItemsAtIndexPaths:": {
+      "name": "collectionView:shouldDeselectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_shouldDeselectItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "shouldDeselectItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "NSSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:shouldSelectItemsAtIndexPaths:": {
+      "name": "collectionView:shouldSelectItemsAtIndexPaths:",
+      "bridgedName": "collectionView_shouldSelectItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "shouldSelectItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "NSSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:didChangeItemsAtIndexPaths:toHighlightState:": {
+      "name": "collectionView:didChangeItemsAtIndexPaths:toHighlightState:",
+      "bridgedName": "collectionView_didChangeItemsAtIndexPaths_toHighlightState",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "didChangeItemsAtIndexPaths",
+          "type": "NSSet *"
+        },
+        {
+          "name": "toHighlightState",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:shouldChangeItemsAtIndexPaths:toHighlightState:": {
+      "name": "collectionView:shouldChangeItemsAtIndexPaths:toHighlightState:",
+      "bridgedName": "collectionView_shouldChangeItemsAtIndexPaths_toHighlightState",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "shouldChangeItemsAtIndexPaths",
+          "type": "NSSet *"
+        },
+        {
+          "name": "toHighlightState",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:updateDraggingItemsForDrag:": {
+      "name": "collectionView:updateDraggingItemsForDrag:",
+      "bridgedName": "collectionView_updateDraggingItemsForDrag",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "updateDraggingItemsForDrag",
+          "type": "id <NSDraggingInfo>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingSession:endedAtPoint:dragOperation:": {
+      "name": "collectionView:draggingSession:endedAtPoint:dragOperation:",
+      "bridgedName": "collectionView_draggingSession_endedAtPoint_dragOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "draggingSession",
+          "type": "NSDraggingSession *"
+        },
+        {
+          "name": "endedAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "dragOperation",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexes:": {
+      "name": "collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexes:",
+      "bridgedName": "collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexes",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "draggingSession",
+          "type": "NSDraggingSession *"
+        },
+        {
+          "name": "willBeginAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "forItemsAtIndexes",
+          "type": "NSIndexSet *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexPaths:": {
+      "name": "collectionView:draggingSession:willBeginAtPoint:forItemsAtIndexPaths:",
+      "bridgedName": "collectionView_draggingSession_willBeginAtPoint_forItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "draggingSession",
+          "type": "NSDraggingSession *"
+        },
+        {
+          "name": "willBeginAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "forItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:pasteboardWriterForItemAtIndex:": {
+      "name": "collectionView:pasteboardWriterForItemAtIndex:",
+      "bridgedName": "collectionView_pasteboardWriterForItemAtIndex",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "pasteboardWriterForItemAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id <NSPasteboardWriting>",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:pasteboardWriterForItemAtIndexPath:": {
+      "name": "collectionView:pasteboardWriterForItemAtIndexPath:",
+      "bridgedName": "collectionView_pasteboardWriterForItemAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "pasteboardWriterForItemAtIndexPath",
+          "type": "NSIndexPath *"
+        }
+      ],
+      "returns": "id <NSPasteboardWriting>",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:acceptDrop:index:dropOperation:": {
+      "name": "collectionView:acceptDrop:index:dropOperation:",
+      "bridgedName": "collectionView_acceptDrop_index_dropOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "acceptDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "index",
+          "type": "long long"
+        },
+        {
+          "name": "dropOperation",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:acceptDrop:indexPath:dropOperation:": {
+      "name": "collectionView:acceptDrop:indexPath:dropOperation:",
+      "bridgedName": "collectionView_acceptDrop_indexPath_dropOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "acceptDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "indexPath",
+          "type": "NSIndexPath *"
+        },
+        {
+          "name": "dropOperation",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:validateDrop:proposedIndex:dropOperation:": {
+      "name": "collectionView:validateDrop:proposedIndex:dropOperation:",
+      "bridgedName": "collectionView_validateDrop_proposedIndex_dropOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "validateDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "proposedIndex",
+          "type": "long long *"
+        },
+        {
+          "name": "dropOperation",
+          "type": "long long *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:validateDrop:proposedIndexPath:dropOperation:": {
+      "name": "collectionView:validateDrop:proposedIndexPath:dropOperation:",
+      "bridgedName": "collectionView_validateDrop_proposedIndexPath_dropOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "validateDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "proposedIndexPath",
+          "type": "id *"
+        },
+        {
+          "name": "dropOperation",
+          "type": "long long *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingImageForItemsAtIndexes:withEvent:offset:": {
+      "name": "collectionView:draggingImageForItemsAtIndexes:withEvent:offset:",
+      "bridgedName": "collectionView_draggingImageForItemsAtIndexes_withEvent_offset",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "draggingImageForItemsAtIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        },
+        {
+          "name": "offset",
+          "type": "struct CGPoint *"
+        }
+      ],
+      "returns": "NSImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:draggingImageForItemsAtIndexPaths:withEvent:offset:": {
+      "name": "collectionView:draggingImageForItemsAtIndexPaths:withEvent:offset:",
+      "bridgedName": "collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "draggingImageForItemsAtIndexPaths",
+          "type": "NSSet *"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        },
+        {
+          "name": "offset",
+          "type": "struct CGPoint *"
+        }
+      ],
+      "returns": "NSImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:namesOfPromisedFilesDroppedAtDestination:forDraggedItemsAtIndexes:": {
+      "name": "collectionView:namesOfPromisedFilesDroppedAtDestination:forDraggedItemsAtIndexes:",
+      "bridgedName": "collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexes",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "namesOfPromisedFilesDroppedAtDestination",
+          "type": "NSURL *"
+        },
+        {
+          "name": "forDraggedItemsAtIndexes",
+          "type": "NSIndexSet *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:namesOfPromisedFilesDroppedAtDestination:forDraggedItemsAtIndexPaths:": {
+      "name": "collectionView:namesOfPromisedFilesDroppedAtDestination:forDraggedItemsAtIndexPaths:",
+      "bridgedName": "collectionView_namesOfPromisedFilesDroppedAtDestination_forDraggedItemsAtIndexPaths",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "namesOfPromisedFilesDroppedAtDestination",
+          "type": "NSURL *"
+        },
+        {
+          "name": "forDraggedItemsAtIndexPaths",
+          "type": "NSSet *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:writeItemsAtIndexes:toPasteboard:": {
+      "name": "collectionView:writeItemsAtIndexes:toPasteboard:",
+      "bridgedName": "collectionView_writeItemsAtIndexes_toPasteboard",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "writeItemsAtIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "toPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:writeItemsAtIndexPaths:toPasteboard:": {
+      "name": "collectionView:writeItemsAtIndexPaths:toPasteboard:",
+      "bridgedName": "collectionView_writeItemsAtIndexPaths_toPasteboard",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "writeItemsAtIndexPaths",
+          "type": "NSSet *"
+        },
+        {
+          "name": "toPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:canDragItemsAtIndexes:withEvent:": {
+      "name": "collectionView:canDragItemsAtIndexes:withEvent:",
+      "bridgedName": "collectionView_canDragItemsAtIndexes_withEvent",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "canDragItemsAtIndexes",
+          "type": "NSIndexSet *"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:canDragItemsAtIndexPaths:withEvent:": {
+      "name": "collectionView:canDragItemsAtIndexPaths:withEvent:",
+      "bridgedName": "collectionView_canDragItemsAtIndexPaths_withEvent",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "NSCollectionView *"
+        },
+        {
+          "name": "canDragItemsAtIndexPaths",
+          "type": "NSSet *"
+        },
+        {
+          "name": "withEvent",
+          "type": "NSEvent *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

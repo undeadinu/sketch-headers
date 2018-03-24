@@ -1,0 +1,192 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h"
+  ],
+  "classes": [],
+  "protocol": false,
+  "className": "NSColorGamut",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying"
+  ],
+  "methods": {
+    "gamutWithCGColorSpace:": {
+      "name": "gamutWithCGColorSpace:",
+      "bridgedName": "gamutWithCGColorSpace",
+      "args": [
+        {
+          "name": "gamutWithCGColorSpace",
+          "type": "struct CGColorSpace *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "emptyGamut": {
+      "name": "emptyGamut",
+      "bridgedName": "emptyGamut",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "infiniteGamut": {
+      "name": "infiniteGamut",
+      "bridgedName": "infiniteGamut",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "intersectionWithGamut:": {
+      "name": "intersectionWithGamut:",
+      "bridgedName": "intersectionWithGamut",
+      "args": [
+        {
+          "name": "intersectionWithGamut",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unionWithGamut:": {
+      "name": "unionWithGamut:",
+      "bridgedName": "unionWithGamut",
+      "args": [
+        {
+          "name": "unionWithGamut",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intersectsGamut:": {
+      "name": "intersectsGamut:",
+      "bridgedName": "intersectsGamut",
+      "args": [
+        {
+          "name": "intersectsGamut",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsGamut:": {
+      "name": "containsGamut:",
+      "bridgedName": "containsGamut",
+      "args": [
+        {
+          "name": "containsGamut",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualToGamut:": {
+      "name": "isEqualToGamut:",
+      "bridgedName": "isEqualToGamut",
+      "args": [
+        {
+          "name": "isEqualToGamut",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsCGColor:": {
+      "name": "containsCGColor:",
+      "bridgedName": "containsCGColor",
+      "args": [
+        {
+          "name": "containsCGColor",
+          "type": "struct CGColor *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "volume": {
+      "name": "volume",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "infinite": {
+      "name": "infinite",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isInfinite"
+      ]
+    },
+    "empty": {
+      "name": "empty",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isEmpty"
+      ]
+    }
+  }
+}

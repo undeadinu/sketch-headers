@@ -1,0 +1,242 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "BCCache",
+    "MSImmutableDocumentData",
+    "MSImmutablePage",
+    "NSDictionary",
+    "NSMutableArray",
+    "NSSet"
+  ],
+  "protocol": false,
+  "className": "MSFlowRendererCollector",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pushSymbolMaster:onStackInBlock:": {
+      "name": "pushSymbolMaster:onStackInBlock:",
+      "bridgedName": "pushSymbolMaster_onStackInBlock",
+      "args": [
+        {
+          "name": "pushSymbolMaster",
+          "type": "id"
+        },
+        {
+          "name": "onStackInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipPathForFlowFromLayer:toArtboard:path:": {
+      "name": "clipPathForFlowFromLayer:toArtboard:path:",
+      "bridgedName": "clipPathForFlowFromLayer_toArtboard_path",
+      "args": [
+        {
+          "name": "clipPathForFlowFromLayer",
+          "type": "id"
+        },
+        {
+          "name": "toArtboard",
+          "type": "id"
+        },
+        {
+          "name": "path",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectFlowForLayer:mayDrawHotspotBounds:": {
+      "name": "collectFlowForLayer:mayDrawHotspotBounds:",
+      "bridgedName": "collectFlowForLayer_mayDrawHotspotBounds",
+      "args": [
+        {
+          "name": "collectFlowForLayer",
+          "type": "id"
+        },
+        {
+          "name": "mayDrawHotspotBounds",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectFlowForLayer:ancestors:options:mayDrawHotspotBounds:": {
+      "name": "collectFlowForLayer:ancestors:options:mayDrawHotspotBounds:",
+      "bridgedName": "collectFlowForLayer_ancestors_options_mayDrawHotspotBounds",
+      "args": [
+        {
+          "name": "collectFlowForLayer",
+          "type": "id"
+        },
+        {
+          "name": "ancestors",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "mayDrawHotspotBounds",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recursivelyCollectFlowsForLayer:ancestors:options:mayDrawHotspotBounds:": {
+      "name": "recursivelyCollectFlowsForLayer:ancestors:options:mayDrawHotspotBounds:",
+      "bridgedName": "recursivelyCollectFlowsForLayer_ancestors_options_mayDrawHotspotBounds",
+      "args": [
+        {
+          "name": "recursivelyCollectFlowsForLayer",
+          "type": "id"
+        },
+        {
+          "name": "ancestors",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "mayDrawHotspotBounds",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collect": {
+      "name": "collect",
+      "bridgedName": "collect",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithLayers:onPage:document:zoomLevel:cache:": {
+      "name": "initWithLayers:onPage:document:zoomLevel:cache:",
+      "bridgedName": "initWithLayers_onPage_document_zoomLevel_cache",
+      "args": [
+        {
+          "name": "initWithLayers",
+          "type": "id"
+        },
+        {
+          "name": "onPage",
+          "type": "id"
+        },
+        {
+          "name": "document",
+          "type": "id"
+        },
+        {
+          "name": "zoomLevel",
+          "type": "double"
+        },
+        {
+          "name": "cache",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "zoomLevel": {
+      "name": "zoomLevel",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "symbolMasterStack": {
+      "name": "symbolMasterStack",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cache": {
+      "name": "cache",
+      "pointer": true,
+      "type": "BCCache",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "artboardsByID": {
+      "name": "artboardsByID",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "selectedLayerIDs": {
+      "name": "selectedLayerIDs",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "renderers": {
+      "name": "renderers",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "page": {
+      "name": "page",
+      "pointer": true,
+      "type": "MSImmutablePage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,714 @@
+{
+  "imports": [
+    "NSGestureRecognizerDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSAttributedString",
+    "NSColor",
+    "NSPanGestureRecognizer",
+    "NSString",
+    "NSTextField",
+    "NSTouchBarColorPickerSliderArtworkProvider",
+    "_NSTouchBarColorPickerSliderKnob",
+    "_NSTouchBarColorPickerSliderTrack"
+  ],
+  "protocol": false,
+  "className": "NSTouchBarColorPickerSlider",
+  "extends": "NSControl",
+  "interfaces": [
+    "NSGestureRecognizerDelegate"
+  ],
+  "methods": {
+    "keyPathsForValuesInvalidatingConstraints": {
+      "name": "keyPathsForValuesInvalidatingConstraints",
+      "bridgedName": "keyPathsForValuesInvalidatingConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "requiresConstraintBasedLayout": {
+      "name": "requiresConstraintBasedLayout",
+      "bridgedName": "requiresConstraintBasedLayout",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingKnobIsPressed": {
+      "name": "keyPathsForValuesAffectingKnobIsPressed",
+      "bridgedName": "keyPathsForValuesAffectingKnobIsPressed",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingLabelAlphaValue": {
+      "name": "keyPathsForValuesAffectingLabelAlphaValue",
+      "bridgedName": "keyPathsForValuesAffectingLabelAlphaValue",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingValueLabel": {
+      "name": "keyPathsForValuesAffectingValueLabel",
+      "bridgedName": "keyPathsForValuesAffectingValueLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "accessibilityIsSingleCelled": {
+      "name": "accessibilityIsSingleCelled",
+      "bridgedName": "accessibilityIsSingleCelled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setHighlighted:": {
+      "name": "setHighlighted:",
+      "bridgedName": "setHighlighted",
+      "args": [
+        {
+          "name": "setHighlighted",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isHighlighted": {
+      "name": "isHighlighted",
+      "bridgedName": "isHighlighted",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_valueAtLocation:": {
+      "name": "_valueAtLocation:",
+      "bridgedName": "_valueAtLocation",
+      "args": [
+        {
+          "name": "_valueAtLocation",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidMoveToWindow": {
+      "name": "viewDidMoveToWindow",
+      "bridgedName": "viewDidMoveToWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "declaredLayoutConstraints": {
+      "name": "declaredLayoutConstraints",
+      "bridgedName": "declaredLayoutConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doubleValue": {
+      "name": "doubleValue",
+      "bridgedName": "doubleValue",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDoubleValue:": {
+      "name": "setDoubleValue:",
+      "bridgedName": "setDoubleValue",
+      "args": [
+        {
+          "name": "setDoubleValue",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "floatValue": {
+      "name": "floatValue",
+      "bridgedName": "floatValue",
+      "args": [],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFloatValue:": {
+      "name": "setFloatValue:",
+      "bridgedName": "setFloatValue",
+      "args": [
+        {
+          "name": "setFloatValue",
+          "type": "float"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "integerValue": {
+      "name": "integerValue",
+      "bridgedName": "integerValue",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIntegerValue:": {
+      "name": "setIntegerValue:",
+      "bridgedName": "setIntegerValue",
+      "args": [
+        {
+          "name": "setIntegerValue",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intValue": {
+      "name": "intValue",
+      "bridgedName": "intValue",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIntValue:": {
+      "name": "setIntValue:",
+      "bridgedName": "setIntValue",
+      "args": [
+        {
+          "name": "setIntValue",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObjectValue:": {
+      "name": "setObjectValue:",
+      "bridgedName": "setObjectValue",
+      "args": [
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectValue": {
+      "name": "objectValue",
+      "bridgedName": "objectValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideLabel": {
+      "name": "hideLabel",
+      "bridgedName": "hideLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideLabelAnimated": {
+      "name": "hideLabelAnimated",
+      "bridgedName": "hideLabelAnimated",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setHideLabelTimer": {
+      "name": "setHideLabelTimer",
+      "bridgedName": "setHideLabelTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showLabel": {
+      "name": "showLabel",
+      "bridgedName": "showLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flashLabel": {
+      "name": "flashLabel",
+      "bridgedName": "flashLabel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endUnminimizeGesture": {
+      "name": "_endUnminimizeGesture",
+      "bridgedName": "_endUnminimizeGesture",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginUnminimizeGesture": {
+      "name": "_beginUnminimizeGesture",
+      "bridgedName": "_beginUnminimizeGesture",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handlePan:": {
+      "name": "_handlePan:",
+      "bridgedName": "_handlePan",
+      "args": [
+        {
+          "name": "_handlePan",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handlePress:": {
+      "name": "_handlePress:",
+      "bridgedName": "_handlePress",
+      "args": [
+        {
+          "name": "_handlePress",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:": {
+      "name": "gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:",
+      "bridgedName": "gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer",
+      "args": [
+        {
+          "name": "gestureRecognizer",
+          "type": "id"
+        },
+        {
+          "name": "shouldRecognizeSimultaneouslyWithGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autounbinder": {
+      "name": "_autounbinder",
+      "bridgedName": "_autounbinder",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "release": {
+      "name": "release",
+      "bridgedName": "release",
+      "args": [],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetFocus:forChild:": {
+      "name": "accessibilitySetFocus:forChild:",
+      "bridgedName": "accessibilitySetFocus_forChild",
+      "args": [
+        {
+          "name": "accessibilitySetFocus",
+          "type": "id"
+        },
+        {
+          "name": "forChild",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsChildFocusable:": {
+      "name": "accessibilityIsChildFocusable:",
+      "bridgedName": "accessibilityIsChildFocusable",
+      "args": [
+        {
+          "name": "accessibilityIsChildFocusable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHelpStringForChild:": {
+      "name": "accessibilityHelpStringForChild:",
+      "bridgedName": "accessibilityHelpStringForChild",
+      "args": [
+        {
+          "name": "accessibilityHelpStringForChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformAction:": {
+      "name": "accessibilityPerformAction:",
+      "bridgedName": "accessibilityPerformAction",
+      "args": [
+        {
+          "name": "accessibilityPerformAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityExpandedAttribute": {
+      "name": "accessibilityExpandedAttribute",
+      "bridgedName": "accessibilityExpandedAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsActivationPointAttributeSettable": {
+      "name": "accessibilityIsActivationPointAttributeSettable",
+      "bridgedName": "accessibilityIsActivationPointAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityActivationPointAttribute": {
+      "name": "accessibilityActivationPointAttribute",
+      "bridgedName": "accessibilityActivationPointAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityActionDescription:": {
+      "name": "accessibilityActionDescription:",
+      "bridgedName": "accessibilityActionDescription",
+      "args": [
+        {
+          "name": "accessibilityActionDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityActionNames": {
+      "name": "accessibilityActionNames",
+      "bridgedName": "accessibilityActionNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsOrientationAttributeSettable": {
+      "name": "accessibilityIsOrientationAttributeSettable",
+      "bridgedName": "accessibilityIsOrientationAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityOrientationAttribute": {
+      "name": "accessibilityOrientationAttribute",
+      "bridgedName": "accessibilityOrientationAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsAllowedValuesAttributeSettable": {
+      "name": "accessibilityIsAllowedValuesAttributeSettable",
+      "bridgedName": "accessibilityIsAllowedValuesAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsMaxValueAttributeSettable": {
+      "name": "accessibilityIsMaxValueAttributeSettable",
+      "bridgedName": "accessibilityIsMaxValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMaxValueAttribute": {
+      "name": "accessibilityMaxValueAttribute",
+      "bridgedName": "accessibilityMaxValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsMinValueAttributeSettable": {
+      "name": "accessibilityIsMinValueAttributeSettable",
+      "bridgedName": "accessibilityIsMinValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMinValueAttribute": {
+      "name": "accessibilityMinValueAttribute",
+      "bridgedName": "accessibilityMinValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsChildrenAttributeSettable": {
+      "name": "accessibilityIsChildrenAttributeSettable",
+      "bridgedName": "accessibilityIsChildrenAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildrenAttribute": {
+      "name": "accessibilityChildrenAttribute",
+      "bridgedName": "accessibilityChildrenAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsValueIndicatorAttributeSettable": {
+      "name": "accessibilityIsValueIndicatorAttributeSettable",
+      "bridgedName": "accessibilityIsValueIndicatorAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValueIndicatorAttribute": {
+      "name": "accessibilityValueIndicatorAttribute",
+      "bridgedName": "accessibilityValueIndicatorAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetValueAttribute:": {
+      "name": "accessibilitySetValueAttribute:",
+      "bridgedName": "accessibilitySetValueAttribute",
+      "args": [
+        {
+          "name": "accessibilitySetValueAttribute",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsValueAttributeSettable": {
+      "name": "accessibilityIsValueAttributeSettable",
+      "bridgedName": "accessibilityIsValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValueAttribute": {
+      "name": "accessibilityValueAttribute",
+      "bridgedName": "accessibilityValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySubroleAttribute": {
+      "name": "accessibilitySubroleAttribute",
+      "bridgedName": "accessibilitySubroleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRoleAttribute": {
+      "name": "accessibilityRoleAttribute",
+      "bridgedName": "accessibilityRoleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "allowedColorSpaces": {
+      "name": "allowedColorSpaces",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "active": {
+      "name": "active",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isActive"
+      ]
+    },
+    "minimized": {
+      "name": "minimized",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isMinimized"
+      ]
+    },
+    "artworkProvider": {
+      "name": "artworkProvider",
+      "pointer": true,
+      "type": "NSTouchBarColorPickerSliderArtworkProvider",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "displayedColor": {
+      "name": "displayedColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "knobIsPressed": {
+      "name": "knobIsPressed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "labelAlphaValue": {
+      "name": "labelAlphaValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "valueLabel": {
+      "name": "valueLabel",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
