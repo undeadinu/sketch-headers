@@ -7,7 +7,6 @@
     "CALayer",
     "CATextLayer",
     "MSContentCALayer",
-    "MSOverlayCALayer",
     "MSRenderingDriver",
     "MSRenderingRequest",
     "MSTileRenderOperation",
@@ -43,23 +42,6 @@
         {
           "name": "moveToPosition",
           "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshOverlayInViewRect:page:": {
-      "name": "refreshOverlayInViewRect:page:",
-      "bridgedName": "refreshOverlayInViewRect_page",
-      "args": [
-        {
-          "name": "refreshOverlayInViewRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "page",
-          "type": "id"
         }
       ],
       "returns": "void",
@@ -234,15 +216,6 @@
         "nonatomic"
       ]
     },
-    "overlayLayer": {
-      "name": "overlayLayer",
-      "pointer": true,
-      "type": "MSOverlayCALayer",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "completedFirstRenderOrWasCancelled": {
       "name": "completedFirstRenderOrWasCancelled",
       "pointer": false,
@@ -285,11 +258,12 @@
         "nonatomic"
       ]
     },
-    "shouldHideOverlayControls": {
-      "name": "shouldHideOverlayControls",
+    "drawingIsCancelled": {
+      "name": "drawingIsCancelled",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

@@ -4,6 +4,7 @@
     "BCPopoverDelegate.h",
     "MSArtboardPresetsViewControllerDelegate.h",
     "MSColorInspectorDelegate.h",
+    "MSEditArtboardPresetViewControllerDelegate.h",
     "MSStylePartPreviewButtonDelegate.h"
   ],
   "classes": [
@@ -22,6 +23,7 @@
   "extends": "MSBaseExportableInspectorViewController",
   "interfaces": [
     "MSArtboardPresetsViewControllerDelegate",
+    "MSEditArtboardPresetViewControllerDelegate",
     "MSColorInspectorDelegate",
     "BCPopoverDelegate",
     "MSStylePartPreviewButtonDelegate"
@@ -229,6 +231,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "editArtboardPresetViewController:savePreset:": {
+      "name": "editArtboardPresetViewController:savePreset:",
+      "bridgedName": "editArtboardPresetViewController_savePreset",
+      "args": [
+        {
+          "name": "editArtboardPresetViewController",
+          "type": "id"
+        },
+        {
+          "name": "savePreset",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showCustomPresetSheet:": {
+      "name": "showCustomPresetSheet:",
+      "bridgedName": "showCustomPresetSheet",
+      "args": [
+        {
+          "name": "showCustomPresetSheet",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "colorInspector:didChangeToColor:": {
       "name": "colorInspector:didChangeToColor:",
       "bridgedName": "colorInspector_didChangeToColor",
@@ -360,6 +392,19 @@
       "name": "refreshOrientationControl",
       "bridgedName": "refreshOrientationControl",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyPreset:": {
+      "name": "applyPreset:",
+      "bridgedName": "applyPreset",
+      "args": [
+        {
+          "name": "applyPreset",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"

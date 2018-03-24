@@ -2,7 +2,7 @@
   "imports": [
     "NSView.h",
     "MSEventHandlerManagerDelegate.h",
-    "MSOverlayRenderingDelegate.h",
+    "MSOverlayRendererDelegate.h",
     "MSTiledLayerPileHostView.h"
   ],
   "classes": [
@@ -11,12 +11,14 @@
     "MSEventHandlerManager",
     "MSImmutableDocumentData",
     "MSMouseTracker",
+    "MSOverlayView",
     "MSRenderMonitor",
     "MSRenderingDriver",
     "MSRulerView",
     "MSTiledLayerPile",
     "MSViewPort",
     "MSZoomTool",
+    "NSArray",
     "NSEvent",
     "NSNumberFormatter",
     "NSString"
@@ -27,7 +29,7 @@
   "interfaces": [
     "MSEventHandlerManagerDelegate",
     "MSTiledLayerPileHostView",
-    "MSOverlayRenderingDelegate"
+    "MSOverlayRendererDelegate"
   ],
   "methods": {
     "absoluteCoordinatesFromViewCoordinates:forViewPort:": {
@@ -1321,14 +1323,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tile:renderOverlayInRect:context:": {
-      "name": "tile:renderOverlayInRect:context:",
-      "bridgedName": "tile_renderOverlayInRect_context",
+    "renderOverlayInRect:context:": {
+      "name": "renderOverlayInRect:context:",
+      "bridgedName": "renderOverlayInRect_context",
       "args": [
-        {
-          "name": "tile",
-          "type": "id"
-        },
         {
           "name": "renderOverlayInRect",
           "type": "struct CGRect"
@@ -1360,14 +1358,6 @@
         }
       ],
       "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayRenderer": {
-      "name": "overlayRenderer",
-      "bridgedName": "overlayRenderer",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1692,6 +1682,15 @@
     }
   },
   "properties": {
+    "flowRenderers": {
+      "name": "flowRenderers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "debugDriver": {
       "name": "debugDriver",
       "pointer": true,
@@ -1866,6 +1865,14 @@
       "name": "document",
       "pointer": true,
       "type": "__weak MSDocument",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "overlayView": {
+      "name": "overlayView",
+      "pointer": true,
+      "type": "__weak MSOverlayView",
       "attributes": [
         "nonatomic"
       ]

@@ -1,7 +1,6 @@
 {
   "imports": [
     "NSView.h",
-    "MSOverlayRenderingDelegate.h",
     "MSTiledLayerPileHostView.h"
   ],
   "classes": [
@@ -13,8 +12,7 @@
   "className": "MSSynchronousTiledRendererView",
   "extends": "NSView",
   "interfaces": [
-    "MSTiledLayerPileHostView",
-    "MSOverlayRenderingDelegate"
+    "MSTiledLayerPileHostView"
   ],
   "methods": {
     ".cxx_destruct": {
@@ -42,27 +40,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tile:renderOverlayInRect:context:": {
-      "name": "tile:renderOverlayInRect:context:",
-      "bridgedName": "tile_renderOverlayInRect_context",
-      "args": [
-        {
-          "name": "tile",
-          "type": "id"
-        },
-        {
-          "name": "renderOverlayInRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "context",
-          "type": "struct CGContext *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "tiledLayerPile:requiresRedrawInRect:": {
       "name": "tiledLayerPile:requiresRedrawInRect:",
       "bridgedName": "tiledLayerPile_requiresRedrawInRect",
@@ -77,14 +54,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayRenderer": {
-      "name": "overlayRenderer",
-      "bridgedName": "overlayRenderer",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
