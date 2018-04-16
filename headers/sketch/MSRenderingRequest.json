@@ -4,8 +4,7 @@
   ],
   "classes": [
     "MSImmutableDocumentData",
-    "MSImmutableLayer",
-    "NSColorSpace"
+    "MSImmutableLayer"
   ],
   "protocol": false,
   "className": "MSRenderingRequest",
@@ -59,6 +58,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "requestWithOptions:": {
       "name": "requestWithOptions:",
       "bridgedName": "requestWithOptions",
@@ -82,7 +89,7 @@
         },
         {
           "name": "colorSpace",
-          "type": "id"
+          "type": "struct CGColorSpace *"
         },
         {
           "name": "pointScale",
@@ -115,7 +122,7 @@
         },
         {
           "name": "colorSpace",
-          "type": "id"
+          "type": "struct CGColorSpace *"
         },
         {
           "name": "pointScale",
@@ -200,7 +207,7 @@
     "colorSpace": {
       "name": "colorSpace",
       "pointer": true,
-      "type": "NSColorSpace",
+      "type": "struct CGColorSpace",
       "attributes": [
         "readonly",
         "nonatomic"

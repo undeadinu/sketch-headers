@@ -2,11 +2,11 @@
   "imports": [
     "NSViewController.h",
     "MSInspectorChildController.h",
-    "MSSliceLayerWatcher.h"
+    "MSLayerChangeObserver.h"
   ],
   "classes": [
     "MSInspectorStackView",
-    "MSSeparatorlessView",
+    "MSSeparatorlessFlippedView",
     "NSArray",
     "NSMutableArray",
     "NSMutableSet",
@@ -17,7 +17,7 @@
   "className": "MSBaseExportableInspectorViewController",
   "extends": "NSViewController",
   "interfaces": [
-    "MSSliceLayerWatcher",
+    "MSLayerChangeObserver",
     "MSInspectorChildController"
   ],
   "methods": {
@@ -153,12 +153,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "sliceLayerDidChange:": {
-      "name": "sliceLayerDidChange:",
-      "bridgedName": "sliceLayerDidChange",
+    "layerDidChange:": {
+      "name": "layerDidChange:",
+      "bridgedName": "layerDidChange",
       "args": [
         {
-          "name": "sliceLayerDidChange",
+          "name": "layerDidChange",
           "type": "id"
         }
       ],
@@ -208,7 +208,7 @@
     "sliceViewContainerView": {
       "name": "sliceViewContainerView",
       "pointer": true,
-      "type": "MSSeparatorlessView",
+      "type": "MSSeparatorlessFlippedView",
       "attributes": [
         "retain",
         "nonatomic"

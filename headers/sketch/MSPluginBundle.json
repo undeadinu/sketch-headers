@@ -3,7 +3,9 @@
     "NSObject.h"
   ],
   "classes": [
+    "MSPluginBundleIconInfo",
     "NSDictionary",
+    "NSImage",
     "NSString",
     "NSURL"
   ],
@@ -96,9 +98,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithName:identifier:commands:": {
-      "name": "initWithName:identifier:commands:",
-      "bridgedName": "initWithName_identifier_commands",
+    "initWithName:identifier:commands:icon:": {
+      "name": "initWithName:identifier:commands:icon:",
+      "bridgedName": "initWithName_identifier_commands_icon",
       "args": [
         {
           "name": "initWithName",
@@ -110,6 +112,10 @@
         },
         {
           "name": "commands",
+          "type": "id"
+        },
+        {
+          "name": "icon",
           "type": "id"
         }
       ],
@@ -132,6 +138,15 @@
     }
   },
   "properties": {
+    "iconInfo": {
+      "name": "iconInfo",
+      "pointer": true,
+      "type": "MSPluginBundleIconInfo",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "disableCocoaScriptPreprocessor": {
       "name": "disableCocoaScriptPreprocessor",
       "pointer": false,
@@ -285,6 +300,15 @@
       "attributes": [
         "readonly",
         "copy",
+        "nonatomic"
+      ]
+    },
+    "icon": {
+      "name": "icon",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

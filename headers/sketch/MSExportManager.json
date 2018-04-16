@@ -3,6 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
+    "MSRenderingDriver",
     "NSColorSpace"
   ],
   "protocol": false,
@@ -215,21 +216,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithColorSpace:": {
-      "name": "initWithColorSpace:",
-      "bridgedName": "initWithColorSpace",
-      "args": [
-        {
-          "name": "initWithColorSpace",
-          "type": "id"
-        }
-      ],
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
+    "driver": {
+      "name": "driver",
+      "pointer": true,
+      "type": "MSRenderingDriver",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "sliceCompletionBlock": {
       "name": "sliceCompletionBlock",
       "pointer": false,

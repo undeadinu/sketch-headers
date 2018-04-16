@@ -7,8 +7,7 @@
     "MSAssetLibraryPreview",
     "MSAssetPreferenceItem",
     "NSProgressIndicator",
-    "NSTextField",
-    "NSWindow"
+    "NSTextField"
   ],
   "protocol": false,
   "className": "MSAssetLibraryTableCellView",
@@ -132,10 +131,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dismissInstallerPanelWindow": {
-      "name": "dismissInstallerPanelWindow",
-      "bridgedName": "dismissInstallerPanelWindow",
-      "args": [],
+    "startDownloadWithEnable:": {
+      "name": "startDownloadWithEnable:",
+      "bridgedName": "startDownloadWithEnable",
+      "args": [
+        {
+          "name": "startDownloadWithEnable",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -192,14 +196,6 @@
     }
   },
   "properties": {
-    "libraryInstallerPanelWindow": {
-      "name": "libraryInstallerPanelWindow",
-      "pointer": true,
-      "type": "__weak NSWindow",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "downloadProgressHidden": {
       "name": "downloadProgressHidden",
       "pointer": false,
@@ -244,6 +240,14 @@
       "name": "libraryPreferencePane",
       "pointer": true,
       "type": "__weak MSAssetLibrariesPreferencePane",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "updateAvailableTextField": {
+      "name": "updateAvailableTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
       "attributes": [
         "nonatomic"
       ]

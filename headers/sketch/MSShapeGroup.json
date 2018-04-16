@@ -4,9 +4,7 @@
     "MSShapeGroup.h"
   ],
   "classes": [
-    "BCCache",
     "MSPath",
-    "MSShapePathLayer",
     "NSBezierPath"
   ],
   "protocol": true,
@@ -26,49 +24,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathWithTransformsUsingCache:": {
-      "name": "pathWithTransformsUsingCache:",
-      "bridgedName": "pathWithTransformsUsingCache",
-      "args": [
-        {
-          "name": "pathWithTransformsUsingCache",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathOfSubPath:inRect:": {
-      "name": "bezierPathOfSubPath:inRect:",
-      "bridgedName": "bezierPathOfSubPath_inRect",
-      "args": [
-        {
-          "name": "bezierPathOfSubPath",
-          "type": "id"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
-        {
-          "name": "bezierPathInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -194,19 +149,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "debugWritePaths:": {
-      "name": "debugWritePaths:",
-      "bridgedName": "debugWritePaths",
-      "args": [
-        {
-          "name": "debugWritePaths",
-          "type": "long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "isVerticalLine": {
       "name": "isVerticalLine",
       "bridgedName": "isVerticalLine",
@@ -318,29 +260,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_bezierPathInSize:": {
-      "name": "_bezierPathInSize:",
-      "bridgedName": "_bezierPathInSize",
-      "args": [
-        {
-          "name": "_bezierPathInSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "hitTestPoint:inBezier:zoomValue:": {
-      "name": "hitTestPoint:inBezier:zoomValue:",
-      "bridgedName": "hitTestPoint_inBezier_zoomValue",
+    "hitTestPoint:inPath:zoomValue:": {
+      "name": "hitTestPoint:inPath:zoomValue:",
+      "bridgedName": "hitTestPoint_inPath_zoomValue",
       "args": [
         {
           "name": "hitTestPoint",
           "type": "struct CGPoint"
         },
         {
-          "name": "inBezier",
+          "name": "inPath",
           "type": "id"
         },
         {
@@ -424,17 +353,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "selectionHandleAtPoint:zoom:": {
-      "name": "selectionHandleAtPoint:zoom:",
-      "bridgedName": "selectionHandleAtPoint_zoom",
+    "adjustmentHandleAtPoint:zoomScale:resizing:": {
+      "name": "adjustmentHandleAtPoint:zoomScale:resizing:",
+      "bridgedName": "adjustmentHandleAtPoint_zoomScale_resizing",
       "args": [
         {
-          "name": "selectionHandleAtPoint",
+          "name": "adjustmentHandleAtPoint",
           "type": "struct CGPoint"
         },
         {
-          "name": "zoom",
+          "name": "zoomScale",
           "type": "double"
+        },
+        {
+          "name": "resizing",
+          "type": "BOOL"
         }
       ],
       "returns": "long long",
@@ -602,23 +535,6 @@
         },
         {
           "name": "cache",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "copyToLayer:beforeLayer:": {
-      "name": "copyToLayer:beforeLayer:",
-      "bridgedName": "copyToLayer_beforeLayer",
-      "args": [
-        {
-          "name": "copyToLayer",
-          "type": "id"
-        },
-        {
-          "name": "beforeLayer",
           "type": "id"
         }
       ],
@@ -849,6 +765,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "hasBooleanOperations": {
+      "name": "hasBooleanOperations",
+      "bridgedName": "hasBooleanOperations",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "cutBezierSegmentAtIndex:": {
       "name": "cutBezierSegmentAtIndex:",
       "bridgedName": "cutBezierSegmentAtIndex",
@@ -895,14 +819,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierOperationChain": {
-      "name": "bezierOperationChain",
-      "bridgedName": "bezierOperationChain",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "CSSAttributes": {
       "name": "CSSAttributes",
       "bridgedName": "CSSAttributes",
@@ -942,33 +858,6 @@
     "decoratedBezierPathInBounds": {
       "name": "decoratedBezierPathInBounds",
       "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "bezierPathInBounds": {
-      "name": "bezierPathInBounds",
-      "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "bezierPath": {
-      "name": "bezierPath",
-      "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "pathInBounds": {
-      "name": "pathInBounds",
-      "pointer": true,
       "type": "MSPath",
       "attributes": [
         "readonly",
@@ -983,12 +872,12 @@
         "nonatomic"
       ]
     },
-    "bezierPathWithTransforms": {
-      "name": "bezierPathWithTransforms",
+    "pathInFrame": {
+      "name": "pathInFrame",
       "pointer": true,
-      "type": "NSBezierPath",
+      "type": "MSPath",
       "attributes": [
-        "readonly",
+        "copy",
         "nonatomic"
       ]
     },

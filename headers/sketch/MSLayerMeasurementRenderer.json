@@ -1,16 +1,16 @@
 {
   "imports": [
-    "NSObject.h"
+    "MSOverlayRenderer.h"
   ],
   "classes": [
-    "MSContentDrawView",
     "MSLayerArray",
     "MSLayerMeasurementTarget",
+    "MSMeasurementDrawing",
     "NSNumberFormatter"
   ],
   "protocol": false,
   "className": "MSLayerMeasurementRenderer",
-  "extends": "NSObject",
+  "extends": "MSOverlayRenderer",
   "interfaces": [],
   "methods": {
     ".cxx_destruct": {
@@ -129,19 +129,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setNeedsDisplayInRect:": {
-      "name": "setNeedsDisplayInRect:",
-      "bridgedName": "setNeedsDisplayInRect",
-      "args": [
-        {
-          "name": "setNeedsDisplayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "rectForPositionDrawingForLayers:": {
       "name": "rectForPositionDrawingForLayers:",
       "bridgedName": "rectForPositionDrawingForLayers",
@@ -152,6 +139,69 @@
         }
       ],
       "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawVerticalDistanceBetweenRect:andRect:zoomScale:": {
+      "name": "drawVerticalDistanceBetweenRect:andRect:zoomScale:",
+      "bridgedName": "drawVerticalDistanceBetweenRect_andRect_zoomScale",
+      "args": [
+        {
+          "name": "drawVerticalDistanceBetweenRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "andRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHorizontalDistanceBetweenRect:andRect:zoomScale:": {
+      "name": "drawHorizontalDistanceBetweenRect:andRect:zoomScale:",
+      "bridgedName": "drawHorizontalDistanceBetweenRect_andRect_zoomScale",
+      "args": [
+        {
+          "name": "drawHorizontalDistanceBetweenRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "andRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawMeasurement:ofRect:zoomScale:": {
+      "name": "drawMeasurement:ofRect:zoomScale:",
+      "bridgedName": "drawMeasurement_ofRect_zoomScale",
+      "args": [
+        {
+          "name": "drawMeasurement",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "ofRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -209,14 +259,28 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "setEnabled:": {
+      "name": "setEnabled:",
+      "bridgedName": "setEnabled",
+      "args": [
+        {
+          "name": "setEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
-    "view": {
-      "name": "view",
+    "measurementStamp": {
+      "name": "measurementStamp",
       "pointer": true,
-      "type": "__weak MSContentDrawView",
+      "type": "MSMeasurementDrawing",
       "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -252,14 +316,6 @@
       "type": "MSLayerArray",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "isEnabled": {
-      "name": "isEnabled",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
         "nonatomic"
       ]
     }

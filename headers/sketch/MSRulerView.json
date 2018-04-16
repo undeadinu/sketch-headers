@@ -14,6 +14,35 @@
   "extends": "NSView",
   "interfaces": [],
   "methods": {
+    "rulerDraggingLocked": {
+      "name": "rulerDraggingLocked",
+      "bridgedName": "rulerDraggingLocked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setRulerDraggingLocked:": {
+      "name": "setRulerDraggingLocked:",
+      "bridgedName": "setRulerDraggingLocked",
+      "args": [
+        {
+          "name": "setRulerDraggingLocked",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -289,13 +318,42 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "showAppropriateCursorForMouse:": {
-      "name": "showAppropriateCursorForMouse:",
-      "bridgedName": "showAppropriateCursorForMouse",
+    "setDragCursor": {
+      "name": "setDragCursor",
+      "bridgedName": "setDragCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setResizeCursor": {
+      "name": "setResizeCursor",
+      "bridgedName": "setResizeCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCursorForDragingGuideToPoint:": {
+      "name": "updateCursorForDragingGuideToPoint:",
+      "bridgedName": "updateCursorForDragingGuideToPoint",
       "args": [
         {
-          "name": "showAppropriateCursorForMouse",
+          "name": "updateCursorForDragingGuideToPoint",
           "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorUpdate:": {
+      "name": "cursorUpdate:",
+      "bridgedName": "cursorUpdate",
+      "args": [
+        {
+          "name": "cursorUpdate",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -336,26 +394,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dragRulerBaseWithMouse:": {
-      "name": "dragRulerBaseWithMouse:",
-      "bridgedName": "dragRulerBaseWithMouse",
+    "dragRulerBaseWithMouse:modifierFlags:": {
+      "name": "dragRulerBaseWithMouse:modifierFlags:",
+      "bridgedName": "dragRulerBaseWithMouse_modifierFlags",
       "args": [
         {
           "name": "dragRulerBaseWithMouse",
           "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseDraggedAtPoint:": {
-      "name": "mouseDraggedAtPoint:",
-      "bridgedName": "mouseDraggedAtPoint",
-      "args": [
+        },
         {
-          "name": "mouseDraggedAtPoint",
-          "type": "struct CGPoint"
+          "name": "modifierFlags",
+          "type": "unsigned long long"
         }
       ],
       "returns": "void",
@@ -427,22 +476,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setDragCursor": {
-      "name": "setDragCursor",
-      "bridgedName": "setDragCursor",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setResizeCursor": {
-      "name": "setResizeCursor",
-      "bridgedName": "setResizeCursor",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "otherAxisForPoint:": {
       "name": "otherAxisForPoint:",
       "bridgedName": "otherAxisForPoint",
@@ -503,23 +536,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "eventInView:": {
-      "name": "eventInView:",
-      "bridgedName": "eventInView",
+    "isEventInView:": {
+      "name": "isEventInView:",
+      "bridgedName": "isEventInView",
       "args": [
         {
-          "name": "eventInView",
+          "name": "isEventInView",
           "type": "id"
         }
       ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "acceptsFirstResponder": {
-      "name": "acceptsFirstResponder",
-      "bridgedName": "acceptsFirstResponder",
-      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"

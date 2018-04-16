@@ -2,7 +2,7 @@
   "imports": [
     "_MSSliceLayer.h",
     "MSColorConvertible.h",
-    "MSLayerWithBackgroundColor.h"
+    "MSLayerWithMutableBackgroundColor.h"
   ],
   "classes": [
     "NSString"
@@ -11,7 +11,7 @@
   "className": "MSSliceLayer",
   "extends": "_MSSliceLayer",
   "interfaces": [
-    "MSLayerWithBackgroundColor",
+    "MSLayerWithMutableBackgroundColor",
     "MSColorConvertible"
   ],
   "methods": {
@@ -35,14 +35,6 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
-    },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
     },
     "convertColorsUsing:": {
       "name": "convertColorsUsing:",
@@ -78,23 +70,6 @@
       "bridgedName": "canRotate",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "object:didChangeProperty:": {
-      "name": "object:didChangeProperty:",
-      "bridgedName": "object_didChangeProperty",
-      "args": [
-        {
-          "name": "object",
-          "type": "id"
-        },
-        {
-          "name": "didChangeProperty",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -161,14 +136,6 @@
     }
   },
   "properties": {
-    "sliceWatcher": {
-      "name": "sliceWatcher",
-      "pointer": false,
-      "type": "__weak id <MSSliceLayerWatcher>",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "debugDescription": {
       "name": "debugDescription",
       "pointer": true,

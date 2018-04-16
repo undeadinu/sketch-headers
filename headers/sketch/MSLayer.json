@@ -6,24 +6,29 @@
     "MSLayer.h",
     "MSLayerContainment.h",
     "MSRectDelegate.h",
-    "NSCopying.h",
-    "SnapItem.h"
+    "MSSnappable.h",
+    "NSCopying.h"
   ],
   "classes": [
+    "MSPath",
     "NSAffineTransform",
     "NSArray",
     "NSString",
     "MSAbsoluteRect",
     "MSImmutableLayerAncestry",
+    "MSModelObject<BCSortable><MSSharedObjectStyling>",
+    "MSSharedStyle",
+    "MSSnapLine",
     "MSStyledLayer",
     "NSDictionary",
+    "NSHashTable",
     "NSMenu"
   ],
   "protocol": true,
   "className": "MSLayer",
   "extends": "_MSLayer",
   "interfaces": [
-    "SnapItem",
+    "MSSnappable",
     "BCOutlineViewNode",
     "MSLayerContainment",
     "MSLayer",
@@ -62,38 +67,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayInfluenceRectForFrame": {
-      "name": "overlayInfluenceRectForFrame",
-      "bridgedName": "overlayInfluenceRectForFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayInfluenceRectForBounds": {
-      "name": "overlayInfluenceRectForBounds",
-      "bridgedName": "overlayInfluenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "influenceRectForFrame": {
-      "name": "influenceRectForFrame",
-      "bridgedName": "influenceRectForFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "influenceRectForBounds": {
-      "name": "influenceRectForBounds",
-      "bridgedName": "influenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -142,27 +115,6 @@
       "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "keyPathsForValuesAffectingUserVisibleRotation": {
-      "name": "keyPathsForValuesAffectingUserVisibleRotation",
-      "bridgedName": "keyPathsForValuesAffectingUserVisibleRotation",
-      "args": [],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "userVisibleRotationForRotation:": {
-      "name": "userVisibleRotationForRotation:",
-      "bridgedName": "userVisibleRotationForRotation",
-      "args": [
-        {
-          "name": "userVisibleRotationForRotation",
-          "type": "double"
-        }
-      ],
-      "returns": "double",
-      "kind": "class",
-      "kindIndicator": "+"
     },
     "alignLayers:toValue:forKey:": {
       "name": "alignLayers:toValue:forKey:",
@@ -255,10 +207,65 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "keyPathsForValuesAffectingUserVisibleRotation": {
+      "name": "keyPathsForValuesAffectingUserVisibleRotation",
+      "bridgedName": "keyPathsForValuesAffectingUserVisibleRotation",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "userVisibleRotationForRotation:": {
+      "name": "userVisibleRotationForRotation:",
+      "bridgedName": "userVisibleRotationForRotation",
+      "args": [
+        {
+          "name": "userVisibleRotationForRotation",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "notifyChangeObservers": {
+      "name": "notifyChangeObservers",
+      "bridgedName": "notifyChangeObservers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeChangeObserver:": {
+      "name": "removeChangeObserver:",
+      "bridgedName": "removeChangeObserver",
+      "args": [
+        {
+          "name": "removeChangeObserver",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addChangeObserver:": {
+      "name": "addChangeObserver:",
+      "bridgedName": "addChangeObserver",
+      "args": [
+        {
+          "name": "addChangeObserver",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -386,6 +393,40 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transformForConvertingFromParent": {
+      "name": "transformForConvertingFromParent",
+      "bridgedName": "transformForConvertingFromParent",
+      "args": [],
+      "returns": "struct CGAffineTransform",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transformForConvertingFromLayer:": {
+      "name": "transformForConvertingFromLayer:",
+      "bridgedName": "transformForConvertingFromLayer",
+      "args": [
+        {
+          "name": "transformForConvertingFromLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGAffineTransform",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transformForConvertingToLayer:": {
+      "name": "transformForConvertingToLayer:",
+      "bridgedName": "transformForConvertingToLayer",
+      "args": [
+        {
+          "name": "transformForConvertingToLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGAffineTransform",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -616,22 +657,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierPathWithTransforms": {
-      "name": "bezierPathWithTransforms",
-      "bridgedName": "bezierPathWithTransforms",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPath": {
-      "name": "bezierPath",
-      "bridgedName": "bezierPath",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "refreshOverlayInRect:": {
       "name": "refreshOverlayInRect:",
       "bridgedName": "refreshOverlayInRect",
@@ -771,34 +796,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasSelectionHandleAtPoint:zoomValue:": {
-      "name": "hasSelectionHandleAtPoint:zoomValue:",
-      "bridgedName": "hasSelectionHandleAtPoint_zoomValue",
+    "adjustmentHandleAtPoint:zoomScale:resizing:": {
+      "name": "adjustmentHandleAtPoint:zoomScale:resizing:",
+      "bridgedName": "adjustmentHandleAtPoint_zoomScale_resizing",
       "args": [
         {
-          "name": "hasSelectionHandleAtPoint",
+          "name": "adjustmentHandleAtPoint",
           "type": "struct CGPoint"
         },
         {
-          "name": "zoomValue",
+          "name": "zoomScale",
           "type": "double"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "selectionHandleAtPoint:zoom:": {
-      "name": "selectionHandleAtPoint:zoom:",
-      "bridgedName": "selectionHandleAtPoint_zoom",
-      "args": [
-        {
-          "name": "selectionHandleAtPoint",
-          "type": "struct CGPoint"
         },
         {
-          "name": "zoom",
-          "type": "double"
+          "name": "resizing",
+          "type": "BOOL"
         }
       ],
       "returns": "long long",
@@ -1287,6 +1299,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "boundsForParentInDocument:": {
+      "name": "boundsForParentInDocument:",
+      "bridgedName": "boundsForParentInDocument",
+      "args": [
+        {
+          "name": "boundsForParentInDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "layerDidResizeFromInspector:": {
       "name": "layerDidResizeFromInspector:",
       "bridgedName": "layerDidResizeFromInspector",
@@ -1366,6 +1391,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "applyScreenPickerColor:preferredStyleName:": {
+      "name": "applyScreenPickerColor:preferredStyleName:",
+      "bridgedName": "applyScreenPickerColor_preferredStyleName",
+      "args": [
+        {
+          "name": "applyScreenPickerColor",
+          "type": "id"
+        },
+        {
+          "name": "preferredStyleName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "parentForInsertingLayers": {
       "name": "parentForInsertingLayers",
       "bridgedName": "parentForInsertingLayers",
@@ -1392,6 +1434,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsMultipleShadows": {
+      "name": "supportsMultipleShadows",
+      "bridgedName": "supportsMultipleShadows",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1464,11 +1514,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerSnapperObjectClass": {
-      "name": "layerSnapperObjectClass",
-      "bridgedName": "layerSnapperObjectClass",
-      "args": [],
-      "returns": "Class",
+    "canSnap:toLayer:": {
+      "name": "canSnap:toLayer:",
+      "bridgedName": "canSnap_toLayer",
+      "args": [
+        {
+          "name": "canSnap",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1489,29 +1548,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canSnapSizeToLayer:": {
-      "name": "canSnapSizeToLayer:",
-      "bridgedName": "canSnapSizeToLayer",
-      "args": [
-        {
-          "name": "canSnapSizeToLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
+    "boundsRect": {
+      "name": "boundsRect",
+      "bridgedName": "boundsRect",
+      "args": [],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canSnapToLayer:": {
-      "name": "canSnapToLayer:",
-      "bridgedName": "canSnapToLayer",
-      "args": [
-        {
-          "name": "canSnapToLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
+    "textCorrectionTransform": {
+      "name": "textCorrectionTransform",
+      "bridgedName": "textCorrectionTransform",
+      "args": [],
+      "returns": "struct CGAffineTransform",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapItemClass": {
+      "name": "snapItemClass",
+      "bridgedName": "snapItemClass",
+      "args": [],
+      "returns": "Class",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1563,23 +1620,6 @@
       "args": [
         {
           "name": "addMastersForInstancesToDocument",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "copyToLayer:beforeLayer:": {
-      "name": "copyToLayer:beforeLayer:",
-      "bridgedName": "copyToLayer_beforeLayer",
-      "args": [
-        {
-          "name": "copyToLayer",
-          "type": "id"
-        },
-        {
-          "name": "beforeLayer",
           "type": "id"
         }
       ],
@@ -1908,6 +1948,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "foreignSharedStyles": {
+      "name": "foreignSharedStyles",
+      "bridgedName": "foreignSharedStyles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localSharedStyles": {
+      "name": "localSharedStyles",
+      "bridgedName": "localSharedStyles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateSharedStyleToMatchSelf": {
+      "name": "updateSharedStyleToMatchSelf",
+      "bridgedName": "updateSharedStyleToMatchSelf",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSharedStyle": {
+      "name": "resetSharedStyle",
+      "bridgedName": "resetSharedStyle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "resetConstraints": {
       "name": "resetConstraints",
       "bridgedName": "resetConstraints",
@@ -2160,6 +2232,33 @@
         "nonatomic"
       ]
     },
+    "pathInFrameWithTransforms": {
+      "name": "pathInFrameWithTransforms",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInFrame": {
+      "name": "pathInFrame",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInBounds": {
+      "name": "pathInBounds",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "objectID": {
       "name": "objectID",
       "pointer": true,
@@ -2193,6 +2292,15 @@
       "type": "BOOL",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "changeObservers": {
+      "name": "changeObservers",
+      "pointer": true,
+      "type": "NSHashTable",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -2289,11 +2397,21 @@
         "nonatomic"
       ]
     },
-    "userVisibleRotation": {
-      "name": "userVisibleRotation",
-      "pointer": false,
-      "type": "double",
+    "sharedMaster": {
+      "name": "sharedMaster",
+      "pointer": true,
+      "type": "MSModelObject<BCSortable><MSSharedObjectStyling>",
       "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "shareableObjectType": {
+      "name": "shareableObjectType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
@@ -2309,7 +2427,61 @@
     "snapItemForDrawing": {
       "name": "snapItemForDrawing",
       "pointer": false,
-      "type": "id <SnapItem>",
+      "type": "id <MSSnappable>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "centerYAnchor": {
+      "name": "centerYAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "centerXAnchor": {
+      "name": "centerXAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "bottomAnchor": {
+      "name": "bottomAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "topAnchor": {
+      "name": "topAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rightAnchor": {
+      "name": "rightAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "leftAnchor": {
+      "name": "leftAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2441,6 +2613,23 @@
         "nonatomic"
       ]
     },
+    "sharedStyle": {
+      "name": "sharedStyle",
+      "pointer": true,
+      "type": "__weak MSSharedStyle",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "isSharedStyleOutOfSync": {
+      "name": "isSharedStyleOutOfSync",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "hasFixedEdges": {
       "name": "hasFixedEdges",
       "pointer": false,
@@ -2548,6 +2737,14 @@
       "type": "BOOL",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "userVisibleRotation": {
+      "name": "userVisibleRotation",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
         "nonatomic"
       ]
     },

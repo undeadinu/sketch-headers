@@ -302,9 +302,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewWithImageSize:previewSize:colorSpace:completionBlock:": {
-      "name": "generatePreviewWithImageSize:previewSize:colorSpace:completionBlock:",
-      "bridgedName": "generatePreviewWithImageSize_previewSize_colorSpace_completionBlock",
+    "generatePreviewWithImageSize:previewSize:colorSpace:backingScale:completionBlock:": {
+      "name": "generatePreviewWithImageSize:previewSize:colorSpace:backingScale:completionBlock:",
+      "bridgedName": "generatePreviewWithImageSize_previewSize_colorSpace_backingScale_completionBlock",
       "args": [
         {
           "name": "generatePreviewWithImageSize",
@@ -317,6 +317,10 @@
         {
           "name": "colorSpace",
           "type": "id"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
         },
         {
           "name": "completionBlock",
@@ -351,25 +355,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canSnapSizeToLayer:": {
-      "name": "canSnapSizeToLayer:",
-      "bridgedName": "canSnapSizeToLayer",
+    "canSnap:toLayer:": {
+      "name": "canSnap:toLayer:",
+      "bridgedName": "canSnap_toLayer",
       "args": [
         {
-          "name": "canSnapSizeToLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "canSnapToLayer:": {
-      "name": "canSnapToLayer:",
-      "bridgedName": "canSnapToLayer",
-      "args": [
+          "name": "canSnap",
+          "type": "unsigned long long"
+        },
         {
-          "name": "canSnapToLayer",
+          "name": "toLayer",
           "type": "id"
         }
       ],
@@ -402,26 +397,75 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForManageSheetWithCompletionBlock:": {
-      "name": "generatePreviewForManageSheetWithCompletionBlock:",
-      "bridgedName": "generatePreviewForManageSheetWithCompletionBlock",
+    "generatePreviewWithImageSize:previewSize:backingScale:shadow:colorSpace:completionBlock:": {
+      "name": "generatePreviewWithImageSize:previewSize:backingScale:shadow:colorSpace:completionBlock:",
+      "bridgedName": "generatePreviewWithImageSize_previewSize_backingScale_shadow_colorSpace_completionBlock",
       "args": [
         {
-          "name": "generatePreviewForManageSheetWithCompletionBlock",
+          "name": "generatePreviewWithImageSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "previewSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
+          "name": "shadow",
+          "type": "BOOL"
+        },
+        {
+          "name": "colorSpace",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
           "type": "CDUnknownBlockType"
         }
       ],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForPopup:completionBlock:": {
-      "name": "generatePreviewForPopup:completionBlock:",
-      "bridgedName": "generatePreviewForPopup_completionBlock",
+    "generatePreviewForSyncSheetWithSize:backingScale:shadow:colorSpace:completionBlock:": {
+      "name": "generatePreviewForSyncSheetWithSize:backingScale:shadow:colorSpace:completionBlock:",
+      "bridgedName": "generatePreviewForSyncSheetWithSize_backingScale_shadow_colorSpace_completionBlock",
       "args": [
         {
-          "name": "generatePreviewForPopup",
+          "name": "generatePreviewForSyncSheetWithSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
+          "name": "shadow",
+          "type": "BOOL"
+        },
+        {
+          "name": "colorSpace",
           "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generatePreviewForManageSheetWithBackingScale:completionBlock:": {
+      "name": "generatePreviewForManageSheetWithBackingScale:completionBlock:",
+      "bridgedName": "generatePreviewForManageSheetWithBackingScale_completionBlock",
+      "args": [
+        {
+          "name": "generatePreviewForManageSheetWithBackingScale",
+          "type": "double"
         },
         {
           "name": "completionBlock",
@@ -432,9 +476,30 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForMenuItem:withColorSpace:completionBlock:": {
-      "name": "generatePreviewForMenuItem:withColorSpace:completionBlock:",
-      "bridgedName": "generatePreviewForMenuItem_withColorSpace_completionBlock",
+    "generatePreviewForPopup:backingScale:completionBlock:": {
+      "name": "generatePreviewForPopup:backingScale:completionBlock:",
+      "bridgedName": "generatePreviewForPopup_backingScale_completionBlock",
+      "args": [
+        {
+          "name": "generatePreviewForPopup",
+          "type": "id"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generatePreviewForMenuItem:withColorSpace:backingScale:completionBlock:": {
+      "name": "generatePreviewForMenuItem:withColorSpace:backingScale:completionBlock:",
+      "bridgedName": "generatePreviewForMenuItem_withColorSpace_backingScale_completionBlock",
       "args": [
         {
           "name": "generatePreviewForMenuItem",
@@ -445,36 +510,15 @@
           "type": "id"
         },
         {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
           "name": "completionBlock",
           "type": "CDUnknownBlockType"
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "generateShadowedPreviewWithImageSize:previewSize:withColorSpace:completionBlock:": {
-      "name": "generateShadowedPreviewWithImageSize:previewSize:withColorSpace:completionBlock:",
-      "bridgedName": "generateShadowedPreviewWithImageSize_previewSize_withColorSpace_completionBlock",
-      "args": [
-        {
-          "name": "generateShadowedPreviewWithImageSize",
-          "type": "struct CGSize"
-        },
-        {
-          "name": "previewSize",
-          "type": "struct CGSize"
-        },
-        {
-          "name": "withColorSpace",
-          "type": "id"
-        },
-        {
-          "name": "completionBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

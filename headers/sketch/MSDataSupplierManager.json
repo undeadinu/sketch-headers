@@ -29,6 +29,35 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "URLForBuiltinDataNamed:": {
+      "name": "URLForBuiltinDataNamed:",
+      "bridgedName": "URLForBuiltinDataNamed",
+      "args": [
+        {
+          "name": "URLForBuiltinDataNamed",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "builtinDataFolder": {
+      "name": "builtinDataFolder",
+      "bridgedName": "builtinDataFolder",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sketchBuiltinLocalData": {
+      "name": "sketchBuiltinLocalData",
+      "bridgedName": "sketchBuiltinLocalData",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "makeObjectID": {
       "name": "makeObjectID",
       "bridgedName": "makeObjectID",
@@ -45,11 +74,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "localDataForDefaultsKey:": {
+      "name": "localDataForDefaultsKey:",
+      "bridgedName": "localDataForDefaultsKey",
+      "args": [
+        {
+          "name": "localDataForDefaultsKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "postLocalDataSupplierChangeNotification": {
       "name": "postLocalDataSupplierChangeNotification",
       "bridgedName": "postLocalDataSupplierChangeNotification",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isBuiltinDataSupplier:": {
+      "name": "isBuiltinDataSupplier:",
+      "bridgedName": "isBuiltinDataSupplier",
+      "args": [
+        {
+          "name": "isBuiltinDataSupplier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -66,31 +121,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "removeDataSupplier:": {
+      "name": "removeDataSupplier:",
+      "bridgedName": "removeDataSupplier",
+      "args": [
+        {
+          "name": "removeDataSupplier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadBuiltinData": {
+      "name": "loadBuiltinData",
+      "bridgedName": "loadBuiltinData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "loadLocalData": {
       "name": "loadLocalData",
       "bridgedName": "loadLocalData",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "saveLocalData": {
-      "name": "saveLocalData",
-      "bridgedName": "saveLocalData",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeLocalData:": {
-      "name": "removeLocalData:",
-      "bridgedName": "removeLocalData",
-      "args": [
-        {
-          "name": "removeLocalData",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -104,6 +159,14 @@
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSketchBuiltinData": {
+      "name": "resetSketchBuiltinData",
+      "bridgedName": "resetSketchBuiltinData",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -224,6 +287,15 @@
       "name": "replyContexts",
       "pointer": true,
       "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "builtinData": {
+      "name": "builtinData",
+      "pointer": true,
+      "type": "NSMutableArray",
       "attributes": [
         "retain",
         "nonatomic"

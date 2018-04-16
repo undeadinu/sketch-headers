@@ -5,7 +5,9 @@
   "classes": [
     "MSCursorButton",
     "NSButton",
+    "NSLayoutConstraint",
     "NSStackView",
+    "NSTextField",
     "NSTimer",
     "SCKShare"
   ],
@@ -67,6 +69,19 @@
       "args": [
         {
           "name": "upload",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userDidChangeNotification:": {
+      "name": "userDidChangeNotification:",
+      "bridgedName": "userDidChangeNotification",
+      "args": [
+        {
+          "name": "userDidChangeNotification",
           "type": "id"
         }
       ],
@@ -150,6 +165,19 @@
       "returns": "struct NSEdgeInsets",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithAction:": {
+      "name": "initWithAction:",
+      "bridgedName": "initWithAction",
+      "args": [
+        {
+          "name": "initWithAction",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -157,6 +185,15 @@
       "name": "timeLabelUpdateTimer",
       "pointer": true,
       "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "permissionLabel": {
+      "name": "permissionLabel",
+      "pointer": true,
+      "type": "NSTextField",
       "attributes": [
         "retain",
         "nonatomic"
@@ -175,6 +212,15 @@
       "name": "linkButton",
       "pointer": true,
       "type": "MSCursorButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "uploadButtonWidthConstraint": {
+      "name": "uploadButtonWidthConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
       "attributes": [
         "retain",
         "nonatomic"
@@ -204,6 +250,15 @@
       "type": "NSStackView",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "canUpdateShare": {
+      "name": "canUpdateShare",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

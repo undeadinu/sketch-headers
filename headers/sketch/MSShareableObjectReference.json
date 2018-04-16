@@ -55,6 +55,35 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "generatePreviewForSyncSheetWithSize:backingScale:shadow:colorSpace:completionBlock:": {
+      "name": "generatePreviewForSyncSheetWithSize:backingScale:shadow:colorSpace:completionBlock:",
+      "bridgedName": "generatePreviewForSyncSheetWithSize_backingScale_shadow_colorSpace_completionBlock",
+      "args": [
+        {
+          "name": "generatePreviewForSyncSheetWithSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
+          "name": "shadow",
+          "type": "BOOL"
+        },
+        {
+          "name": "colorSpace",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "applyStyleToMenuItem:withColorSpace:": {
       "name": "applyStyleToMenuItem:withColorSpace:",
       "bridgedName": "applyStyleToMenuItem_withColorSpace",
@@ -72,26 +101,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForManageSheetWithCompletionBlock:": {
-      "name": "generatePreviewForManageSheetWithCompletionBlock:",
-      "bridgedName": "generatePreviewForManageSheetWithCompletionBlock",
+    "generatePreviewForManageSheetWithBackingScale:completionBlock:": {
+      "name": "generatePreviewForManageSheetWithBackingScale:completionBlock:",
+      "bridgedName": "generatePreviewForManageSheetWithBackingScale_completionBlock",
       "args": [
         {
-          "name": "generatePreviewForManageSheetWithCompletionBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "generatePreviewForPopup:completionBlock:": {
-      "name": "generatePreviewForPopup:completionBlock:",
-      "bridgedName": "generatePreviewForPopup_completionBlock",
-      "args": [
-        {
-          "name": "generatePreviewForPopup",
-          "type": "id"
+          "name": "generatePreviewForManageSheetWithBackingScale",
+          "type": "double"
         },
         {
           "name": "completionBlock",
@@ -102,9 +118,30 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "generatePreviewForMenuItem:withColorSpace:completionBlock:": {
-      "name": "generatePreviewForMenuItem:withColorSpace:completionBlock:",
-      "bridgedName": "generatePreviewForMenuItem_withColorSpace_completionBlock",
+    "generatePreviewForPopup:backingScale:completionBlock:": {
+      "name": "generatePreviewForPopup:backingScale:completionBlock:",
+      "bridgedName": "generatePreviewForPopup_backingScale_completionBlock",
+      "args": [
+        {
+          "name": "generatePreviewForPopup",
+          "type": "id"
+        },
+        {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generatePreviewForMenuItem:withColorSpace:backingScale:completionBlock:": {
+      "name": "generatePreviewForMenuItem:withColorSpace:backingScale:completionBlock:",
+      "bridgedName": "generatePreviewForMenuItem_withColorSpace_backingScale_completionBlock",
       "args": [
         {
           "name": "generatePreviewForMenuItem",
@@ -115,8 +152,25 @@
           "type": "id"
         },
         {
+          "name": "backingScale",
+          "type": "double"
+        },
+        {
           "name": "completionBlock",
           "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "foreignObjectCollectionInDocument:": {
+      "name": "foreignObjectCollectionInDocument:",
+      "bridgedName": "foreignObjectCollectionInDocument",
+      "args": [
+        {
+          "name": "foreignObjectCollectionInDocument",
+          "type": "id"
         }
       ],
       "returns": "id",
@@ -133,6 +187,23 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addToDocument:withAssetLibraryController:": {
+      "name": "addToDocument:withAssetLibraryController:",
+      "bridgedName": "addToDocument_withAssetLibraryController",
+      "args": [
+        {
+          "name": "addToDocument",
+          "type": "id"
+        },
+        {
+          "name": "withAssetLibraryController",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
@@ -167,6 +238,24 @@
     },
     "name": {
       "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "shareableObjectType": {
+      "name": "shareableObjectType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "sharedObjectID": {
+      "name": "sharedObjectID",
       "pointer": true,
       "type": "NSString",
       "attributes": [

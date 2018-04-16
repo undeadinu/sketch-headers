@@ -4,13 +4,11 @@
     "NSTouchBarDelegate.h"
   ],
   "classes": [
-    "MSArtboardInspectorViewController",
     "MSDocument",
     "MSExportInspectorViewController",
+    "MSLayerArray",
     "MSNormalInspector",
     "MSPersistentAssetCollection",
-    "MSSliceInspectorViewController",
-    "NSArray",
     "NSLayoutConstraint",
     "NSString",
     "NSView",
@@ -407,24 +405,6 @@
     }
   },
   "properties": {
-    "artboardInspector": {
-      "name": "artboardInspector",
-      "pointer": true,
-      "type": "MSArtboardInspectorViewController",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "slicesInspector": {
-      "name": "slicesInspector",
-      "pointer": true,
-      "type": "MSSliceInspectorViewController",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "normalInspector": {
       "name": "normalInspector",
       "pointer": true,
@@ -473,7 +453,7 @@
     "selectedLayers": {
       "name": "selectedLayers",
       "pointer": true,
-      "type": "NSArray",
+      "type": "MSLayerArray",
       "attributes": [
         "retain",
         "nonatomic"
@@ -527,6 +507,15 @@
       "type": "NSViewController<MSInspectorChildController>",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "sharedStyleInspectorVisible": {
+      "name": "sharedStyleInspectorVisible",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

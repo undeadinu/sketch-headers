@@ -3,7 +3,7 @@
     "NSObject.h"
   ],
   "classes": [
-    "NSMutableDictionary"
+    "MSSnappingAccumulator"
   ],
   "protocol": false,
   "className": "MSSnapperData",
@@ -14,6 +14,44 @@
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawAccumulator:zoomScale:": {
+      "name": "drawAccumulator:zoomScale:",
+      "bridgedName": "drawAccumulator_zoomScale",
+      "args": [
+        {
+          "name": "drawAccumulator",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -35,12 +73,59 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "enumerateInstructions:": {
-      "name": "enumerateInstructions:",
-      "bridgedName": "enumerateInstructions",
+    "resetSnappingForAxis:": {
+      "name": "resetSnappingForAxis:",
+      "bridgedName": "resetSnappingForAxis",
       "args": [
         {
-          "name": "enumerateInstructions",
+          "name": "resetSnappingForAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "extendGuideForAxis:toStartPosition:endPosition:": {
+      "name": "extendGuideForAxis:toStartPosition:endPosition:",
+      "bridgedName": "extendGuideForAxis_toStartPosition_endPosition",
+      "args": [
+        {
+          "name": "extendGuideForAxis",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toStartPosition",
+          "type": "double"
+        },
+        {
+          "name": "endPosition",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTarget:": {
+      "name": "addTarget:",
+      "bridgedName": "addTarget",
+      "args": [
+        {
+          "name": "addTarget",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateMeasurementsUsingBlock:": {
+      "name": "enumerateMeasurementsUsingBlock:",
+      "bridgedName": "enumerateMeasurementsUsingBlock",
+      "args": [
+        {
+          "name": "enumerateMeasurementsUsingBlock",
           "type": "CDUnknownBlockType"
         }
       ],
@@ -48,51 +133,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isEqual:": {
-      "name": "isEqual:",
-      "bridgedName": "isEqual",
+    "addDistanceMeasurement:": {
+      "name": "addDistanceMeasurement:",
+      "bridgedName": "addDistanceMeasurement",
       "args": [
         {
-          "name": "isEqual",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "linesForAxis:": {
-      "name": "linesForAxis:",
-      "bridgedName": "linesForAxis",
-      "args": [
-        {
-          "name": "linesForAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeAllDistanceInstructionsForAxis:": {
-      "name": "removeAllDistanceInstructionsForAxis:",
-      "bridgedName": "removeAllDistanceInstructionsForAxis",
-      "args": [
-        {
-          "name": "removeAllDistanceInstructionsForAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addDistanceInstruction:": {
-      "name": "addDistanceInstruction:",
-      "bridgedName": "addDistanceInstruction",
-      "args": [
-        {
-          "name": "addDistanceInstruction",
+          "name": "addDistanceMeasurement",
           "type": "id"
         }
       ],
@@ -100,12 +146,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "firstDistanceForAxis:": {
-      "name": "firstDistanceForAxis:",
-      "bridgedName": "firstDistanceForAxis",
+    "firstDistanceMeasurementForAxis:": {
+      "name": "firstDistanceMeasurementForAxis:",
+      "bridgedName": "firstDistanceMeasurementForAxis",
       "args": [
         {
-          "name": "firstDistanceForAxis",
+          "name": "firstDistanceMeasurementForAxis",
           "type": "unsigned long long"
         }
       ],
@@ -113,38 +159,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasDistanceInstructionsForAxis:": {
-      "name": "hasDistanceInstructionsForAxis:",
-      "bridgedName": "hasDistanceInstructionsForAxis",
+    "addDimensionMeasurement:": {
+      "name": "addDimensionMeasurement:",
+      "bridgedName": "addDimensionMeasurement",
       "args": [
         {
-          "name": "hasDistanceInstructionsForAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeAllSizeInstructionsForAxis:": {
-      "name": "removeAllSizeInstructionsForAxis:",
-      "bridgedName": "removeAllSizeInstructionsForAxis",
-      "args": [
-        {
-          "name": "removeAllSizeInstructionsForAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addSizeInstruction:": {
-      "name": "addSizeInstruction:",
-      "bridgedName": "addSizeInstruction",
-      "args": [
-        {
-          "name": "addSizeInstruction",
+          "name": "addDimensionMeasurement",
           "type": "id"
         }
       ],
@@ -152,12 +172,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "firstSizeForAxis:": {
-      "name": "firstSizeForAxis:",
-      "bridgedName": "firstSizeForAxis",
+    "firstDimensionMeasurementForAxis:": {
+      "name": "firstDimensionMeasurementForAxis:",
+      "bridgedName": "firstDimensionMeasurementForAxis",
       "args": [
         {
-          "name": "firstSizeForAxis",
+          "name": "firstDimensionMeasurementForAxis",
           "type": "unsigned long long"
         }
       ],
@@ -165,23 +185,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "hasSizeInstructionsForAxis:": {
-      "name": "hasSizeInstructionsForAxis:",
-      "bridgedName": "hasSizeInstructionsForAxis",
+    "accumulatorForAxis:": {
+      "name": "accumulatorForAxis:",
+      "bridgedName": "accumulatorForAxis",
       "args": [
         {
-          "name": "hasSizeInstructionsForAxis",
+          "name": "accumulatorForAxis",
           "type": "unsigned long long"
         }
       ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "axisDictionary": {
-      "name": "axisDictionary",
-      "bridgedName": "axisDictionary",
-      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -196,31 +208,30 @@
     }
   },
   "properties": {
-    "lines": {
-      "name": "lines",
+    "yAxisAccumulator": {
+      "name": "yAxisAccumulator",
       "pointer": true,
-      "type": "NSMutableDictionary",
+      "type": "MSSnappingAccumulator",
       "attributes": [
-        "retain",
+        "readonly",
         "nonatomic"
       ]
     },
-    "distanceItems": {
-      "name": "distanceItems",
+    "xAxisAccumulator": {
+      "name": "xAxisAccumulator",
       "pointer": true,
-      "type": "NSMutableDictionary",
+      "type": "MSSnappingAccumulator",
       "attributes": [
-        "retain",
+        "readonly",
         "nonatomic"
       ]
     },
-    "sizeItems": {
-      "name": "sizeItems",
-      "pointer": true,
-      "type": "NSMutableDictionary",
+    "measurementAxes": {
+      "name": "measurementAxes",
+      "pointer": false,
+      "type": "unsigned long long",
       "attributes": [
-        "retain",
-        "nonatomic"
+        "readonly"
       ]
     }
   }

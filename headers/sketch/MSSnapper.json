@@ -35,45 +35,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapItem:lines:visible:snap:resize:edgesMask:": {
-      "name": "snapItem:lines:visible:snap:resize:edgesMask:",
-      "bridgedName": "snapItem_lines_visible_snap_resize_edgesMask",
+    "_snapItem:attributes:toLines:visible:snap:resize:": {
+      "name": "_snapItem:attributes:toLines:visible:snap:resize:",
+      "bridgedName": "_snapItem_attributes_toLines_visible_snap_resize",
       "args": [
         {
-          "name": "snapItem",
+          "name": "_snapItem",
           "type": "id"
         },
         {
-          "name": "lines",
-          "type": "id"
-        },
-        {
-          "name": "visible",
-          "type": "BOOL"
-        },
-        {
-          "name": "snap",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "resize",
-          "type": "BOOL"
-        },
-        {
-          "name": "edgesMask",
-          "type": "long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "snapItem:toLines:visible:snap:resize:edges:": {
-      "name": "snapItem:toLines:visible:snap:resize:edges:",
-      "bridgedName": "snapItem_toLines_visible_snap_resize_edges",
-      "args": [
-        {
-          "name": "snapItem",
+          "name": "attributes",
           "type": "id"
         },
         {
@@ -91,23 +62,56 @@
         {
           "name": "resize",
           "type": "BOOL"
-        },
-        {
-          "name": "edges",
-          "type": "unsigned long long"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "changeSnapItem:forLine:visible:direction:snap:block:": {
-      "name": "changeSnapItem:forLine:visible:direction:snap:block:",
-      "bridgedName": "changeSnapItem_forLine_visible_direction_snap_block",
+    "snapItem:attributes:toLines:visible:snap:resize:": {
+      "name": "snapItem:attributes:toLines:visible:snap:resize:",
+      "bridgedName": "snapItem_attributes_toLines_visible_snap_resize",
+      "args": [
+        {
+          "name": "snapItem",
+          "type": "id"
+        },
+        {
+          "name": "attributes",
+          "type": "id"
+        },
+        {
+          "name": "toLines",
+          "type": "id"
+        },
+        {
+          "name": "visible",
+          "type": "BOOL"
+        },
+        {
+          "name": "snap",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "resize",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeSnapItem:toRect:forLine:visible:snap:": {
+      "name": "changeSnapItem:toRect:forLine:visible:snap:",
+      "bridgedName": "changeSnapItem_toRect_forLine_visible_snap",
       "args": [
         {
           "name": "changeSnapItem",
           "type": "id"
+        },
+        {
+          "name": "toRect",
+          "type": "struct CGRect"
         },
         {
           "name": "forLine",
@@ -118,28 +122,24 @@
           "type": "BOOL"
         },
         {
-          "name": "direction",
-          "type": "unsigned long long"
-        },
-        {
           "name": "snap",
           "type": "unsigned long long"
-        },
-        {
-          "name": "block",
-          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapItem:snap:resize:rulersVisible:edges:": {
-      "name": "snapItem:snap:resize:rulersVisible:edges:",
-      "bridgedName": "snapItem_snap_resize_rulersVisible_edges",
+    "snapItem:attributes:snap:resize:rulersVisible:": {
+      "name": "snapItem:attributes:snap:resize:rulersVisible:",
+      "bridgedName": "snapItem_attributes_snap_resize_rulersVisible",
       "args": [
         {
           "name": "snapItem",
+          "type": "id"
+        },
+        {
+          "name": "attributes",
           "type": "id"
         },
         {
@@ -153,10 +153,6 @@
         {
           "name": "rulersVisible",
           "type": "BOOL"
-        },
-        {
-          "name": "edges",
-          "type": "unsigned long long"
         }
       ],
       "returns": "void",

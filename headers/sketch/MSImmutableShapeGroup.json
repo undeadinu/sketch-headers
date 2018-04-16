@@ -4,9 +4,7 @@
     "MSShapeGroup.h"
   ],
   "classes": [
-    "MSPath",
-    "NSBezierPath",
-    "NSObject"
+    "MSPath"
   ],
   "protocol": false,
   "className": "MSImmutableShapeGroup",
@@ -110,14 +108,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "bezierPathForEndDecorationOnPath:": {
       "name": "bezierPathForEndDecorationOnPath:",
       "bridgedName": "bezierPathForEndDecorationOnPath",
@@ -144,71 +134,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierPathOfSubPath:inRect:": {
-      "name": "bezierPathOfSubPath:inRect:",
-      "bridgedName": "bezierPathOfSubPath_inRect",
-      "args": [
-        {
-          "name": "bezierPathOfSubPath",
-          "type": "id"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
-        {
-          "name": "bezierPathInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_bezierPathInSize:": {
-      "name": "_bezierPathInSize:",
-      "bridgedName": "_bezierPathInSize",
-      "args": [
-        {
-          "name": "_bezierPathInSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_pathInSize:": {
-      "name": "_pathInSize:",
-      "bridgedName": "_pathInSize",
-      "args": [
-        {
-          "name": "_pathInSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathInBoundsWithCache:": {
-      "name": "pathInBoundsWithCache:",
-      "bridgedName": "pathInBoundsWithCache",
-      "args": [
-        {
-          "name": "pathInBoundsWithCache",
-          "type": "id"
-        }
-      ],
+    "calculatePathInBounds": {
+      "name": "calculatePathInBounds",
+      "bridgedName": "calculatePathInBounds",
+      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -226,19 +155,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "pathWithTransformsUsingCache:": {
-      "name": "pathWithTransformsUsingCache:",
-      "bridgedName": "pathWithTransformsUsingCache",
-      "args": [
-        {
-          "name": "pathWithTransformsUsingCache",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "includeChildrenInCalculatingStyleSize": {
       "name": "includeChildrenInCalculatingStyleSize",
       "bridgedName": "includeChildrenInCalculatingStyleSize",
@@ -250,14 +166,6 @@
     "calculateInfluenceRectForBounds": {
       "name": "calculateInfluenceRectForBounds",
       "bridgedName": "calculateInfluenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "influenceRectForBounds": {
-      "name": "influenceRectForBounds",
-      "bridgedName": "influenceRectForBounds",
       "args": [],
       "returns": "struct CGRect",
       "kind": "instance",
@@ -279,36 +187,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "allowsBlur": {
+      "name": "allowsBlur",
+      "bridgedName": "allowsBlur",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "objectDidInit": {
       "name": "objectDidInit",
       "bridgedName": "objectDidInit",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "performInitWithUnarchiver:": {
-      "name": "performInitWithUnarchiver:",
-      "bridgedName": "performInitWithUnarchiver",
-      "args": [
-        {
-          "name": "performInitWithUnarchiver",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "performInitWithMutableModelObject:": {
-      "name": "performInitWithMutableModelObject:",
-      "bridgedName": "performInitWithMutableModelObject",
-      "args": [
-        {
-          "name": "performInitWithMutableModelObject",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -608,34 +498,7 @@
     "decoratedBezierPathInBounds": {
       "name": "decoratedBezierPathInBounds",
       "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "bezierPathInBounds": {
-      "name": "bezierPathInBounds",
-      "pointer": true,
-      "type": "NSBezierPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "pathInBounds": {
-      "name": "pathInBounds",
-      "pointer": true,
       "type": "MSPath",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "bezierPath": {
-      "name": "bezierPath",
-      "pointer": true,
-      "type": "NSBezierPath",
       "attributes": [
         "readonly",
         "nonatomic"

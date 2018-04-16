@@ -4,6 +4,8 @@
   ],
   "classes": [
     "MSDragGestureRecognizer",
+    "MSPointSnapper",
+    "MSPointSnappingResult",
     "NSCursor"
   ],
   "protocol": false,
@@ -27,32 +29,62 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "cursorUpdate:": {
-      "name": "cursorUpdate:",
-      "bridgedName": "cursorUpdate",
+    "enumeratePossibleSnapTargetLayersInGroup:usingBlock:": {
+      "name": "enumeratePossibleSnapTargetLayersInGroup:usingBlock:",
+      "bridgedName": "enumeratePossibleSnapTargetLayersInGroup_usingBlock",
       "args": [
         {
-          "name": "cursorUpdate",
+          "name": "enumeratePossibleSnapTargetLayersInGroup",
           "type": "id"
+        },
+        {
+          "name": "usingBlock",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerSnapper": {
-      "name": "layerSnapper",
-      "bridgedName": "layerSnapper",
+    "cacheSnapTargets": {
+      "name": "cacheSnapTargets",
+      "bridgedName": "cacheSnapTargets",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapMouseToEdges:modifierFlags:": {
+      "name": "snapMouseToEdges:modifierFlags:",
+      "bridgedName": "snapMouseToEdges_modifierFlags",
+      "args": [
+        {
+          "name": "snapMouseToEdges",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawLayerSelection": {
-      "name": "shouldDrawLayerSelection",
-      "bridgedName": "shouldDrawLayerSelection",
-      "args": [],
-      "returns": "BOOL",
+    "snapMouseAndShowSnapLines:modifierFlags:": {
+      "name": "snapMouseAndShowSnapLines:modifierFlags:",
+      "bridgedName": "snapMouseAndShowSnapLines_modifierFlags",
+      "args": [
+        {
+          "name": "snapMouseAndShowSnapLines",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -156,9 +188,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawLayerHighlight": {
-      "name": "shouldDrawLayerHighlight",
-      "bridgedName": "shouldDrawLayerHighlight",
+    "wantsLayerHighlight": {
+      "name": "wantsLayerHighlight",
+      "bridgedName": "wantsLayerHighlight",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -174,6 +206,78 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "name": "absoluteMouseUp",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDragged:flags:": {
+      "name": "absoluteMouseDragged:flags:",
+      "bridgedName": "absoluteMouseDragged_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDragged",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseMoved:flags:": {
+      "name": "absoluteMouseMoved:flags:",
+      "bridgedName": "absoluteMouseMoved_flags",
+      "args": [
+        {
+          "name": "absoluteMouseMoved",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -233,14 +337,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "handlerWillLoseFocus": {
-      "name": "handlerWillLoseFocus",
-      "bridgedName": "handlerWillLoseFocus",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "handlerGotFocus": {
       "name": "handlerGotFocus",
       "bridgedName": "handlerGotFocus",
@@ -264,12 +360,30 @@
     }
   },
   "properties": {
-    "cursor": {
-      "name": "cursor",
+    "insertionCursor": {
+      "name": "insertionCursor",
       "pointer": true,
       "type": "NSCursor",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "snappingResult": {
+      "name": "snappingResult",
+      "pointer": true,
+      "type": "MSPointSnappingResult",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "snapper": {
+      "name": "snapper",
+      "pointer": true,
+      "type": "MSPointSnapper",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

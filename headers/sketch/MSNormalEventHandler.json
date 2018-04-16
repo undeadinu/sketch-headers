@@ -156,12 +156,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tabInDirection:": {
-      "name": "tabInDirection:",
-      "bridgedName": "tabInDirection",
+    "tabInForwardDirection:": {
+      "name": "tabInForwardDirection:",
+      "bridgedName": "tabInForwardDirection",
       "args": [
         {
-          "name": "tabInDirection",
+          "name": "tabInForwardDirection",
           "type": "BOOL"
         }
       ],
@@ -735,6 +735,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "draggingUpdated:": {
+      "name": "draggingUpdated:",
+      "bridgedName": "draggingUpdated",
+      "args": [
+        {
+          "name": "draggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "canHighlightLayer:": {
       "name": "canHighlightLayer:",
       "bridgedName": "canHighlightLayer",
@@ -748,10 +761,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isMouseHoveringMultipleSelectedLayerCorner": {
-      "name": "isMouseHoveringMultipleSelectedLayerCorner",
+    "isMouseHoveringMultipleSelectedLayerCorner:": {
+      "name": "isMouseHoveringMultipleSelectedLayerCorner:",
       "bridgedName": "isMouseHoveringMultipleSelectedLayerCorner",
-      "args": [],
+      "args": [
+        {
+          "name": "isMouseHoveringMultipleSelectedLayerCorner",
+          "type": "struct CGPoint"
+        }
+      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -790,10 +808,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isMouseHoveringLayerCorner": {
-      "name": "isMouseHoveringLayerCorner",
+    "isMouseHoveringLayerCorner:": {
+      "name": "isMouseHoveringLayerCorner:",
       "bridgedName": "isMouseHoveringLayerCorner",
-      "args": [],
+      "args": [
+        {
+          "name": "isMouseHoveringLayerCorner",
+          "type": "struct CGPoint"
+        }
+      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -866,41 +889,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "mouseDownOnLayer:atPoint:clickCount:flags:": {
-      "name": "mouseDownOnLayer:atPoint:clickCount:flags:",
-      "bridgedName": "mouseDownOnLayer_atPoint_clickCount_flags",
+    "layerDoubleClicked:": {
+      "name": "layerDoubleClicked:",
+      "bridgedName": "layerDoubleClicked",
       "args": [
         {
-          "name": "mouseDownOnLayer",
-          "type": "id"
-        },
-        {
-          "name": "atPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "clickCount",
-          "type": "long long"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseDownDoubleClick:onLayer:": {
-      "name": "mouseDownDoubleClick:onLayer:",
-      "bridgedName": "mouseDownDoubleClick_onLayer",
-      "args": [
-        {
-          "name": "mouseDownDoubleClick",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "onLayer",
+          "name": "layerDoubleClicked",
           "type": "id"
         }
       ],

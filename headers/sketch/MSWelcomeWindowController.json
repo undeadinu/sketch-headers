@@ -11,6 +11,7 @@
     "NSArray",
     "NSButton",
     "NSCollectionView",
+    "NSLayoutConstraint",
     "NSMenu",
     "NSScrollView",
     "NSSegmentedControl",
@@ -187,6 +188,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "requestCloudItems": {
+      "name": "requestCloudItems",
+      "bridgedName": "requestCloudItems",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "joinSketchCloud:": {
       "name": "joinSketchCloud:",
       "bridgedName": "joinSketchCloud",
@@ -359,6 +368,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "cloudUserDidChange:": {
+      "name": "cloudUserDidChange:",
+      "bridgedName": "cloudUserDidChange",
+      "args": [
+        {
+          "name": "cloudUserDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "windowDidResize:": {
       "name": "windowDidResize:",
       "bridgedName": "windowDidResize",
@@ -401,6 +423,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateCollectionSegments": {
+      "name": "updateCollectionSegments",
+      "bridgedName": "updateCollectionSegments",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "windowDidLoad": {
       "name": "windowDidLoad",
       "bridgedName": "windowDidLoad",
@@ -408,9 +438,26 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "cachedCloudItems": {
+      "name": "cachedCloudItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "cachedTemplateItems": {
       "name": "cachedTemplateItems",
       "pointer": true,
@@ -504,6 +551,15 @@
       "name": "confirmButton",
       "pointer": true,
       "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "collectionsWidthConstraint": {
+      "name": "collectionsWidthConstraint",
+      "pointer": true,
+      "type": "NSLayoutConstraint",
       "attributes": [
         "retain",
         "nonatomic"

@@ -52,23 +52,6 @@
     "MSMenuBuilderDelegate"
   ],
   "methods": {
-    "openForeignSymbol:inLibrary:": {
-      "name": "openForeignSymbol:inLibrary:",
-      "bridgedName": "openForeignSymbol_inLibrary",
-      "args": [
-        {
-          "name": "openForeignSymbol",
-          "type": "id"
-        },
-        {
-          "name": "inLibrary",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "currentDocument": {
       "name": "currentDocument",
       "bridgedName": "currentDocument",
@@ -130,6 +113,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "installedFontsDidChange": {
+      "name": "installedFontsDidChange",
+      "bridgedName": "installedFontsDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "previewColorSpaceForItem:": {
       "name": "previewColorSpaceForItem:",
       "bridgedName": "previewColorSpaceForItem",
@@ -180,16 +171,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "localSymbolForSymbol:inLibrary:": {
-      "name": "localSymbolForSymbol:inLibrary:",
-      "bridgedName": "localSymbolForSymbol_inLibrary",
+    "localObjectForObjectReference:": {
+      "name": "localObjectForObjectReference:",
+      "bridgedName": "localObjectForObjectReference",
       "args": [
         {
-          "name": "localSymbolForSymbol",
-          "type": "id"
-        },
-        {
-          "name": "inLibrary",
+          "name": "localObjectForObjectReference",
           "type": "id"
         }
       ],
@@ -315,6 +302,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "openLibrariesForForeignObjects:": {
+      "name": "openLibrariesForForeignObjects:",
+      "bridgedName": "openLibrariesForForeignObjects",
+      "args": [
+        {
+          "name": "openLibrariesForForeignObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "visitArtboardForInstance:": {
       "name": "visitArtboardForInstance:",
       "bridgedName": "visitArtboardForInstance",
@@ -385,6 +385,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isShowingMeasurements": {
+      "name": "isShowingMeasurements",
+      "bridgedName": "isShowingMeasurements",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -635,25 +643,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "logBuggyBezierPaths": {
-      "name": "logBuggyBezierPaths",
-      "bridgedName": "logBuggyBezierPaths",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "determineCurrentArtboard": {
       "name": "determineCurrentArtboard",
       "bridgedName": "determineCurrentArtboard",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layerSelectionMightHaveChanged": {
-      "name": "layerSelectionMightHaveChanged",
-      "bridgedName": "layerSelectionMightHaveChanged",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -1383,6 +1375,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "layerSelectionDidChange": {
+      "name": "layerSelectionDidChange",
+      "bridgedName": "layerSelectionDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedLayers": {
+      "name": "selectedLayers",
+      "bridgedName": "selectedLayers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "coalescedSelectionDidChangeNotification:": {
       "name": "coalescedSelectionDidChangeNotification:",
       "bridgedName": "coalescedSelectionDidChangeNotification",
@@ -1392,6 +1400,14 @@
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerSelectionMightHaveChanged": {
+      "name": "layerSelectionMightHaveChanged",
+      "bridgedName": "layerSelectionMightHaveChanged",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -2420,8 +2436,8 @@
     }
   },
   "properties": {
-    "selectedLayers": {
-      "name": "selectedLayers",
+    "previousSelectedLayers": {
+      "name": "previousSelectedLayers",
       "pointer": true,
       "type": "MSLayerArray",
       "attributes": [

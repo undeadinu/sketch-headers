@@ -9,7 +9,8 @@
     "MSTextLayout",
     "NSAttributedString",
     "NSObject",
-    "NSString"
+    "NSString",
+    "NSValue"
   ],
   "protocol": false,
   "className": "MSImmutableTextLayer",
@@ -54,6 +55,14 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculatePathInBounds": {
+      "name": "calculatePathInBounds",
+      "bridgedName": "calculatePathInBounds",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -179,16 +188,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "firstUnderlyingShapePathWithParentGroup:usingCache:": {
-      "name": "firstUnderlyingShapePathWithParentGroup:usingCache:",
-      "bridgedName": "firstUnderlyingShapePathWithParentGroup_usingCache",
+    "firstUnderlyingShapePathWithParentGroup:": {
+      "name": "firstUnderlyingShapePathWithParentGroup:",
+      "bridgedName": "firstUnderlyingShapePathWithParentGroup",
       "args": [
         {
           "name": "firstUnderlyingShapePathWithParentGroup",
-          "type": "id"
-        },
-        {
-          "name": "usingCache",
           "type": "id"
         }
       ],
@@ -233,14 +238,6 @@
     "calculateInfluenceRectForBounds": {
       "name": "calculateInfluenceRectForBounds",
       "bridgedName": "calculateInfluenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "influenceRectForBounds": {
-      "name": "influenceRectForBounds",
-      "bridgedName": "influenceRectForBounds",
       "args": [],
       "returns": "struct CGRect",
       "kind": "instance",
@@ -625,6 +622,15 @@
       "type": "BOOL",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "transientGlyphBoundsValue": {
+      "name": "transientGlyphBoundsValue",
+      "pointer": true,
+      "type": "NSValue",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },

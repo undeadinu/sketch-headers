@@ -13,7 +13,8 @@
     "NSArray",
     "NSMenu",
     "NSString",
-    "NSTableView"
+    "NSTableView",
+    "NSWindow"
   ],
   "protocol": false,
   "className": "MSAssetLibrariesPreferencePane",
@@ -55,6 +56,19 @@
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "libraryControllerDidChange:": {
+      "name": "libraryControllerDidChange:",
+      "bridgedName": "libraryControllerDidChange",
+      "args": [
+        {
+          "name": "libraryControllerDidChange",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -509,6 +523,60 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dismissAlertSheet": {
+      "name": "dismissAlertSheet",
+      "bridgedName": "dismissAlertSheet",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayDuplicateAlertSheetForRemoteAssetLibrary:": {
+      "name": "displayDuplicateAlertSheetForRemoteAssetLibrary:",
+      "bridgedName": "displayDuplicateAlertSheetForRemoteAssetLibrary",
+      "args": [
+        {
+          "name": "displayDuplicateAlertSheetForRemoteAssetLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayInstallerAlertSheetForRemoteAssetLibrary": {
+      "name": "displayInstallerAlertSheetForRemoteAssetLibrary",
+      "bridgedName": "displayInstallerAlertSheetForRemoteAssetLibrary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayAlertSheetWithMessageText:informativeText:buttonTitle:completionHandler:": {
+      "name": "displayAlertSheetWithMessageText:informativeText:buttonTitle:completionHandler:",
+      "bridgedName": "displayAlertSheetWithMessageText_informativeText_buttonTitle_completionHandler",
+      "args": [
+        {
+          "name": "displayAlertSheetWithMessageText",
+          "type": "id"
+        },
+        {
+          "name": "informativeText",
+          "type": "id"
+        },
+        {
+          "name": "buttonTitle",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "tableCellForRemoteLibrary:": {
       "name": "tableCellForRemoteLibrary:",
       "bridgedName": "tableCellForRemoteLibrary",
@@ -528,6 +596,19 @@
       "args": [
         {
           "name": "startDownloadForRemoteLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateAvailableForRemoteLibrary:": {
+      "name": "updateAvailableForRemoteLibrary:",
+      "bridgedName": "updateAvailableForRemoteLibrary",
+      "args": [
+        {
+          "name": "updateAvailableForRemoteLibrary",
           "type": "id"
         }
       ],
@@ -707,6 +788,30 @@
     }
   },
   "properties": {
+    "chooseLibraryPanelWindow": {
+      "name": "chooseLibraryPanelWindow",
+      "pointer": true,
+      "type": "__weak NSWindow",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "duplicateLibraryAlertWindow": {
+      "name": "duplicateLibraryAlertWindow",
+      "pointer": true,
+      "type": "__weak NSWindow",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "libraryInstallerAlertWindow": {
+      "name": "libraryInstallerAlertWindow",
+      "pointer": true,
+      "type": "__weak NSWindow",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "shouldEnableCogMenu": {
       "name": "shouldEnableCogMenu",
       "pointer": false,

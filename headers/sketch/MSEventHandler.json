@@ -8,7 +8,7 @@
     "MSDuplicateOffsetTracker",
     "MSEventHandlerManager",
     "NSArray",
-    "NSEvent",
+    "NSCursor",
     "NSMutableArray",
     "NSString",
     "NSTouchBar",
@@ -658,22 +658,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldDrawLayerHighlight": {
-      "name": "shouldDrawLayerHighlight",
-      "bridgedName": "shouldDrawLayerHighlight",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shouldDrawLayerSelection": {
-      "name": "shouldDrawLayerSelection",
-      "bridgedName": "shouldDrawLayerSelection",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "selectLayer:extendSelection:": {
       "name": "selectLayer:extendSelection:",
       "bridgedName": "selectLayer_extendSelection",
@@ -709,27 +693,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "cursorUpdate:": {
-      "name": "cursorUpdate:",
-      "bridgedName": "cursorUpdate",
-      "args": [
-        {
-          "name": "cursorUpdate",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "defaultCursor": {
-      "name": "defaultCursor",
-      "bridgedName": "defaultCursor",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1157,6 +1120,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "zoomToArtboard": {
+      "name": "zoomToArtboard",
+      "bridgedName": "zoomToArtboard",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "zoomToSelection": {
       "name": "zoomToSelection",
       "bridgedName": "zoomToSelection",
@@ -1371,6 +1342,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "addOverlayRenderer:": {
+      "name": "addOverlayRenderer:",
+      "bridgedName": "addOverlayRenderer",
+      "args": [
+        {
+          "name": "addOverlayRenderer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setMeasurementLabelNeedsDisplay": {
       "name": "setMeasurementLabelNeedsDisplay",
       "bridgedName": "setMeasurementLabelNeedsDisplay",
@@ -1540,6 +1524,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setNeedsUpdateCursor": {
+      "name": "setNeedsUpdateCursor",
+      "bridgedName": "setNeedsUpdateCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCursor": {
+      "name": "updateCursor",
+      "bridgedName": "updateCursor",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "trackMouse:": {
       "name": "trackMouse:",
       "bridgedName": "trackMouse",
@@ -1698,12 +1698,30 @@
         "nonatomic"
       ]
     },
+    "overlayRenderers": {
+      "name": "overlayRenderers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "measurementText": {
       "name": "measurementText",
       "pointer": true,
       "type": "NSString",
       "attributes": [
         "copy",
+        "nonatomic"
+      ]
+    },
+    "cursor": {
+      "name": "cursor",
+      "pointer": true,
+      "type": "NSCursor",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -1759,13 +1777,20 @@
         "nonatomic"
       ]
     },
-    "lastEvent": {
-      "name": "lastEvent",
-      "pointer": true,
-      "type": "NSEvent",
+    "wantsLayerHighlight": {
+      "name": "wantsLayerHighlight",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
-        "readonly",
-        "nonatomic"
+        "readonly"
+      ]
+    },
+    "wantsStandardSelectionControls": {
+      "name": "wantsStandardSelectionControls",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
       ]
     },
     "applicableActionItemIdentifier": {

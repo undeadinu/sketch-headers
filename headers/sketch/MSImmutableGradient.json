@@ -72,6 +72,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "newCGGradientForColorSpace:colorConverter:": {
+      "name": "newCGGradientForColorSpace:colorConverter:",
+      "bridgedName": "newCGGradientForColorSpace_colorConverter",
+      "args": [
+        {
+          "name": "newCGGradientForColorSpace",
+          "type": "struct CGColorSpace *"
+        },
+        {
+          "name": "colorConverter",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "struct CGGradient *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "conditionedEllipseLength": {
       "name": "conditionedEllipseLength",
       "bridgedName": "conditionedEllipseLength",
@@ -122,19 +139,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "NSGradientForContext:": {
-      "name": "NSGradientForContext:",
-      "bridgedName": "NSGradientForContext",
-      "args": [
-        {
-          "name": "NSGradientForContext",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "drawAngularGradientInRect:context:cacheKey:": {
       "name": "drawAngularGradientInRect:context:cacheKey:",
       "bridgedName": "drawAngularGradientInRect_context_cacheKey",
@@ -177,6 +181,39 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "drawRadialGradientInRect:gradient:firstPoint:length:ellipseTransform:context:": {
+      "name": "drawRadialGradientInRect:gradient:firstPoint:length:ellipseTransform:context:",
+      "bridgedName": "drawRadialGradientInRect_gradient_firstPoint_length_ellipseTransform_context",
+      "args": [
+        {
+          "name": "drawRadialGradientInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "gradient",
+          "type": "struct CGGradient *"
+        },
+        {
+          "name": "firstPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "length",
+          "type": "double"
+        },
+        {
+          "name": "ellipseTransform",
+          "type": "struct CGAffineTransform"
+        },
+        {
+          "name": "context",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "drawLinearFillInRect:gradient:context:": {
       "name": "drawLinearFillInRect:gradient:context:",
       "bridgedName": "drawLinearFillInRect_gradient_context",
@@ -195,6 +232,44 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawGradientWithTransparentStopsInRect:gradient:context:gradientDrawingBlock:": {
+      "name": "drawGradientWithTransparentStopsInRect:gradient:context:gradientDrawingBlock:",
+      "bridgedName": "drawGradientWithTransparentStopsInRect_gradient_context_gradientDrawingBlock",
+      "args": [
+        {
+          "name": "drawGradientWithTransparentStopsInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "gradient",
+          "type": "struct CGGradient *"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        },
+        {
+          "name": "gradientDrawingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createMaskGradientWithContext:": {
+      "name": "createMaskGradientWithContext:",
+      "bridgedName": "createMaskGradientWithContext",
+      "args": [
+        {
+          "name": "createMaskGradientWithContext",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGGradient *",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -248,16 +323,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "interpolatedStartAndStopColorForStops:colorSpace:": {
-      "name": "interpolatedStartAndStopColorForStops:colorSpace:",
-      "bridgedName": "interpolatedStartAndStopColorForStops_colorSpace",
+    "interpolatedStartAndStopColorForStops:": {
+      "name": "interpolatedStartAndStopColorForStops:",
+      "bridgedName": "interpolatedStartAndStopColorForStops",
       "args": [
         {
           "name": "interpolatedStartAndStopColorForStops",
-          "type": "id"
-        },
-        {
-          "name": "colorSpace",
           "type": "id"
         }
       ],

@@ -1,10 +1,11 @@
 {
   "imports": [
     "NSObject.h",
-    "SnapItem.h"
+    "MSSnappable.h"
   ],
   "classes": [
     "MSLayer",
+    "MSSnapLine",
     "NSArray",
     "NSString"
   ],
@@ -12,28 +13,15 @@
   "className": "MSSnapItem",
   "extends": "NSObject",
   "interfaces": [
-    "SnapItem"
+    "MSSnappable"
   ],
   "methods": {
-    "snapLinesForLayer:": {
-      "name": "snapLinesForLayer:",
-      "bridgedName": "snapLinesForLayer",
+    "snapItemWithLayers:": {
+      "name": "snapItemWithLayers:",
+      "bridgedName": "snapItemWithLayers",
       "args": [
         {
-          "name": "snapLinesForLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "snapperObjectWithLayers:": {
-      "name": "snapperObjectWithLayers:",
-      "bridgedName": "snapperObjectWithLayers",
-      "args": [
-        {
-          "name": "snapperObjectWithLayers",
+          "name": "snapItemWithLayers",
           "type": "id"
         }
       ],
@@ -55,6 +43,48 @@
       "args": [
         {
           "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textCorrectionTransform": {
+      "name": "textCorrectionTransform",
+      "bridgedName": "textCorrectionTransform",
+      "args": [],
+      "returns": "struct CGAffineTransform",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "concatAncestorsAndSelfTransforms": {
+      "name": "concatAncestorsAndSelfTransforms",
+      "bridgedName": "concatAncestorsAndSelfTransforms",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOverlayWithAbsoluteMargins:": {
+      "name": "refreshOverlayWithAbsoluteMargins:",
+      "bridgedName": "refreshOverlayWithAbsoluteMargins",
+      "args": [
+        {
+          "name": "refreshOverlayWithAbsoluteMargins",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawDistanceOnSnapTo:": {
+      "name": "shouldDrawDistanceOnSnapTo:",
+      "bridgedName": "shouldDrawDistanceOnSnapTo",
+      "args": [
+        {
+          "name": "shouldDrawDistanceOnSnapTo",
           "type": "id"
         }
       ],
@@ -87,35 +117,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "concatAncestorsAndSelfTransforms": {
-      "name": "concatAncestorsAndSelfTransforms",
-      "bridgedName": "concatAncestorsAndSelfTransforms",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "preDrawingTransform": {
-      "name": "preDrawingTransform",
-      "bridgedName": "preDrawingTransform",
-      "args": [],
-      "returns": "struct CGAffineTransform",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshOverlayWithAbsoluteMargins:": {
-      "name": "refreshOverlayWithAbsoluteMargins:",
-      "bridgedName": "refreshOverlayWithAbsoluteMargins",
-      "args": [
-        {
-          "name": "refreshOverlayWithAbsoluteMargins",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "rotation": {
       "name": "rotation",
       "bridgedName": "rotation",
@@ -124,63 +125,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "shouldConstrainProportions": {
-      "name": "shouldConstrainProportions",
-      "bridgedName": "shouldConstrainProportions",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "supportsResizingForSnapping": {
-      "name": "supportsResizingForSnapping",
-      "bridgedName": "supportsResizingForSnapping",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "originalRect": {
-      "name": "originalRect",
-      "bridgedName": "originalRect",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shouldDrawDistanceOnSnapTo:": {
-      "name": "shouldDrawDistanceOnSnapTo:",
-      "bridgedName": "shouldDrawDistanceOnSnapTo",
-      "args": [
-        {
-          "name": "shouldDrawDistanceOnSnapTo",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "otherLayersForSnapping": {
-      "name": "otherLayersForSnapping",
-      "bridgedName": "otherLayersForSnapping",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "otherLayersForSizeSnapping": {
-      "name": "otherLayersForSizeSnapping",
-      "bridgedName": "otherLayersForSizeSnapping",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "artboardForSnapping": {
       "name": "artboardForSnapping",
       "bridgedName": "artboardForSnapping",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "candidateLayersForSnapping:": {
+      "name": "candidateLayersForSnapping:",
+      "bridgedName": "candidateLayersForSnapping",
+      "args": [
+        {
+          "name": "candidateLayersForSnapping",
+          "type": "unsigned long long"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -198,12 +159,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithLayer:": {
-      "name": "initWithLayer:",
-      "bridgedName": "initWithLayer",
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithLayers:": {
+      "name": "initWithLayers:",
+      "bridgedName": "initWithLayers",
       "args": [
         {
-          "name": "initWithLayer",
+          "name": "initWithLayers",
           "type": "id"
         }
       ],
@@ -221,21 +190,13 @@
         "nonatomic"
       ]
     },
-    "layer": {
-      "name": "layer",
+    "layers": {
+      "name": "layers",
       "pointer": true,
-      "type": "MSLayer",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "snapItemForDrawing": {
-      "name": "snapItemForDrawing",
-      "pointer": false,
-      "type": "id <SnapItem>",
+      "type": "NSArray",
       "attributes": [
         "readonly",
+        "copy",
         "nonatomic"
       ]
     },
@@ -248,11 +209,101 @@
         "copy"
       ]
     },
+    "snapItemForDrawing": {
+      "name": "snapItemForDrawing",
+      "pointer": false,
+      "type": "id <MSSnappable>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "rectForSnapping": {
       "name": "rectForSnapping",
       "pointer": false,
       "type": "struct CGRect",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldConstrainProportions": {
+      "name": "shouldConstrainProportions",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "supportsResizingForSnapping": {
+      "name": "supportsResizingForSnapping",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "layer": {
+      "name": "layer",
+      "pointer": true,
+      "type": "MSLayer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "centerYAnchor": {
+      "name": "centerYAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "centerXAnchor": {
+      "name": "centerXAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "bottomAnchor": {
+      "name": "bottomAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "topAnchor": {
+      "name": "topAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rightAnchor": {
+      "name": "rightAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "leftAnchor": {
+      "name": "leftAnchor",
+      "pointer": true,
+      "type": "MSSnapLine",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

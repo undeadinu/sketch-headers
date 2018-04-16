@@ -1,6 +1,7 @@
 {
   "imports": [
-    "NSObject.h"
+    "NSObject.h",
+    "NSCopying.h"
   ],
   "classes": [
     "NSArray"
@@ -8,8 +9,99 @@
   "protocol": false,
   "className": "MSPath",
   "extends": "NSObject",
-  "interfaces": [],
+  "interfaces": [
+    "NSCopying"
+  ],
   "methods": {
+    "pathWithPoints:pointCount:close:": {
+      "name": "pathWithPoints:pointCount:close:",
+      "bridgedName": "pathWithPoints_pointCount_close",
+      "args": [
+        {
+          "name": "pathWithPoints",
+          "type": "const struct CGPoint *"
+        },
+        {
+          "name": "pointCount",
+          "type": "int"
+        },
+        {
+          "name": "close",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithCurveFromPoint:to:controlPoint1:controlPoint2:": {
+      "name": "pathWithCurveFromPoint:to:controlPoint1:controlPoint2:",
+      "bridgedName": "pathWithCurveFromPoint_to_controlPoint1_controlPoint2",
+      "args": [
+        {
+          "name": "pathWithCurveFromPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "to",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "controlPoint1",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "controlPoint2",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithLineFrom:to:": {
+      "name": "pathWithLineFrom:to:",
+      "bridgedName": "pathWithLineFrom_to",
+      "args": [
+        {
+          "name": "pathWithLineFrom",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "to",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithBezierPath:": {
+      "name": "pathWithBezierPath:",
+      "bridgedName": "pathWithBezierPath",
+      "args": [
+        {
+          "name": "pathWithBezierPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithCGPath:": {
+      "name": "pathWithCGPath:",
+      "bridgedName": "pathWithCGPath",
+      "args": [
+        {
+          "name": "pathWithCGPath",
+          "type": "struct CGPath *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "pathWithEllipseInRect:": {
       "name": "pathWithEllipseInRect:",
       "bridgedName": "pathWithEllipseInRect",
@@ -57,6 +149,375 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isEqualToPath:epsilon:": {
+      "name": "isEqualToPath:epsilon:",
+      "bridgedName": "isEqualToPath_epsilon",
+      "args": [
+        {
+          "name": "isEqualToPath",
+          "type": "id"
+        },
+        {
+          "name": "epsilon",
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualToPath:": {
+      "name": "isEqualToPath:",
+      "bridgedName": "isEqualToPath",
+      "args": [
+        {
+          "name": "isEqualToPath",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "elementAtIndex:": {
+      "name": "elementAtIndex:",
+      "bridgedName": "elementAtIndex",
+      "args": [
+        {
+          "name": "elementAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "CDStruct_ab7f5933",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByRearrangingSubPathsIfNecessary": {
+      "name": "pathByRearrangingSubPathsIfNecessary",
+      "bridgedName": "pathByRearrangingSubPathsIfNecessary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByReplacingMoveToByLineToComponents": {
+      "name": "pathByReplacingMoveToByLineToComponents",
+      "bridgedName": "pathByReplacingMoveToByLineToComponents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointsInRect:": {
+      "name": "pointsInRect:",
+      "bridgedName": "pointsInRect",
+      "args": [
+        {
+          "name": "pointsInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByApplyingModifierBlock:": {
+      "name": "pathByApplyingModifierBlock:",
+      "bridgedName": "pathByApplyingModifierBlock",
+      "args": [
+        {
+          "name": "pathByApplyingModifierBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initCachedProperties": {
+      "name": "_initCachedProperties",
+      "bridgedName": "_initCachedProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierIndexForPoint:": {
+      "name": "bezierIndexForPoint:",
+      "bridgedName": "bezierIndexForPoint",
+      "args": [
+        {
+          "name": "bezierIndexForPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathFromIndex:toIndex:": {
+      "name": "pathFromIndex:toIndex:",
+      "bridgedName": "pathFromIndex_toIndex",
+      "args": [
+        {
+          "name": "pathFromIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endPoint": {
+      "name": "endPoint",
+      "bridgedName": "endPoint",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startPoint": {
+      "name": "startPoint",
+      "bridgedName": "startPoint",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByTrimmingToLength:withMaximumError:": {
+      "name": "pathByTrimmingToLength:withMaximumError:",
+      "bridgedName": "pathByTrimmingToLength_withMaximumError",
+      "args": [
+        {
+          "name": "pathByTrimmingToLength",
+          "type": "double"
+        },
+        {
+          "name": "withMaximumError",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "length": {
+      "name": "length",
+      "bridgedName": "length",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lengthWithMaximumError:": {
+      "name": "lengthWithMaximumError:",
+      "bridgedName": "lengthWithMaximumError",
+      "args": [
+        {
+          "name": "lengthWithMaximumError",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByTrimmingToLength:": {
+      "name": "pathByTrimmingToLength:",
+      "bridgedName": "pathByTrimmingToLength",
+      "args": [
+        {
+          "name": "pathByTrimmingToLength",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointOnPathAtLength:": {
+      "name": "pointOnPathAtLength:",
+      "bridgedName": "pointOnPathAtLength",
+      "args": [
+        {
+          "name": "pointOnPathAtLength",
+          "type": "double"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "slopeAtLength:": {
+      "name": "slopeAtLength:",
+      "bridgedName": "slopeAtLength",
+      "args": [
+        {
+          "name": "slopeAtLength",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isClosed": {
+      "name": "isClosed",
+      "bridgedName": "isClosed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointAtIndex:": {
+      "name": "pointAtIndex:",
+      "bridgedName": "pointAtIndex",
+      "args": [
+        {
+          "name": "pointAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsPoint:": {
+      "name": "containsPoint:",
+      "bridgedName": "containsPoint",
+      "args": [
+        {
+          "name": "containsPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subPaths": {
+      "name": "subPaths",
+      "bridgedName": "subPaths",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlinePathWithWidth:": {
+      "name": "outlinePathWithWidth:",
+      "bridgedName": "outlinePathWithWidth",
+      "args": [
+        {
+          "name": "outlinePathWithWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pathByScalingToBounds:": {
+      "name": "_pathByScalingToBounds:",
+      "bridgedName": "_pathByScalingToBounds",
+      "args": [
+        {
+          "name": "_pathByScalingToBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByScalingToBounds:": {
+      "name": "pathByScalingToBounds:",
+      "bridgedName": "pathByScalingToBounds",
+      "args": [
+        {
+          "name": "pathByScalingToBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByCuttingBeforeIndex:": {
+      "name": "pathByCuttingBeforeIndex:",
+      "bridgedName": "pathByCuttingBeforeIndex",
+      "args": [
+        {
+          "name": "pathByCuttingBeforeIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByJoiningWithPath:": {
+      "name": "pathByJoiningWithPath:",
+      "bridgedName": "pathByJoiningWithPath",
+      "args": [
+        {
+          "name": "pathByJoiningWithPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByReplacingElementAtIndexWithMoveTo:": {
+      "name": "pathByReplacingElementAtIndexWithMoveTo:",
+      "bridgedName": "pathByReplacingElementAtIndexWithMoveTo",
+      "args": [
+        {
+          "name": "pathByReplacingElementAtIndexWithMoveTo",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByReplacingClosePathByLineToComponents": {
+      "name": "pathByReplacingClosePathByLineToComponents",
+      "bridgedName": "pathByReplacingClosePathByLineToComponents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathByRemovingSubsequentMoveToComponents": {
+      "name": "pathByRemovingSubsequentMoveToComponents",
+      "bridgedName": "pathByRemovingSubsequentMoveToComponents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathWithInset:joinStrategy:": {
+      "name": "pathWithInset:joinStrategy:",
+      "bridgedName": "pathWithInset_joinStrategy",
+      "args": [
+        {
+          "name": "pathWithInset",
+          "type": "double"
+        },
+        {
+          "name": "joinStrategy",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "pathWithInset:": {
       "name": "pathWithInset:",
       "bridgedName": "pathWithInset",
@@ -86,6 +547,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "transformedPathUsingMapBlock:": {
+      "name": "transformedPathUsingMapBlock:",
+      "bridgedName": "transformedPathUsingMapBlock",
+      "args": [
+        {
+          "name": "transformedPathUsingMapBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "transformedPathUsingAffineTransform:": {
       "name": "transformedPathUsingAffineTransform:",
       "bridgedName": "transformedPathUsingAffineTransform",
@@ -103,6 +577,69 @@
       "name": "init",
       "bridgedName": "init",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPoints:pointCount:close:": {
+      "name": "initWithPoints:pointCount:close:",
+      "bridgedName": "initWithPoints_pointCount_close",
+      "args": [
+        {
+          "name": "initWithPoints",
+          "type": "const struct CGPoint *"
+        },
+        {
+          "name": "pointCount",
+          "type": "int"
+        },
+        {
+          "name": "close",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCurveFromPoint:to:controlPoint1:controlPoint2:": {
+      "name": "initWithCurveFromPoint:to:controlPoint1:controlPoint2:",
+      "bridgedName": "initWithCurveFromPoint_to_controlPoint1_controlPoint2",
+      "args": [
+        {
+          "name": "initWithCurveFromPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "to",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "controlPoint1",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "controlPoint2",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithLineFrom:to:": {
+      "name": "initWithLineFrom:to:",
+      "bridgedName": "initWithLineFrom_to",
+      "args": [
+        {
+          "name": "initWithLineFrom",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "to",
+          "type": "struct CGPoint"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -195,6 +732,19 @@
         {
           "name": "initWithCGPath",
           "type": "struct CGPath *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
         }
       ],
       "returns": "id",
@@ -412,12 +962,44 @@
     }
   },
   "properties": {
+    "cachedIsClosed": {
+      "name": "cachedIsClosed",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "cachedEndPoint": {
+      "name": "cachedEndPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "cachedStartPoint": {
+      "name": "cachedStartPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "contours": {
       "name": "contours",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
         "copy",
+        "nonatomic"
+      ]
+    },
+    "cachedPropertiesInitialized": {
+      "name": "cachedPropertiesInitialized",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
         "nonatomic"
       ]
     },

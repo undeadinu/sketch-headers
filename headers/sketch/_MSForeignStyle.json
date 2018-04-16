@@ -1,13 +1,14 @@
 {
   "imports": [
-    "MSModelObject.h"
+    "MSForeignObject.h"
   ],
   "classes": [
-    "MSSharedStyle"
+    "MSSharedStyle",
+    "NSString"
   ],
   "protocol": false,
   "className": "_MSForeignStyle",
-  "extends": "MSModelObject",
+  "extends": "MSForeignObject",
   "interfaces": [],
   "methods": {
     "allowsFaulting": {
@@ -150,8 +151,8 @@
     }
   },
   "properties": {
-    "style": {
-      "name": "style",
+    "localSharedStyle": {
+      "name": "localSharedStyle",
       "pointer": true,
       "type": "MSSharedStyle",
       "attributes": [
@@ -159,10 +160,10 @@
         "nonatomic"
       ]
     },
-    "originalStyle": {
-      "name": "originalStyle",
+    "remoteStyleID": {
+      "name": "remoteStyleID",
       "pointer": true,
-      "type": "MSSharedStyle",
+      "type": "NSString",
       "attributes": [
         "retain",
         "nonatomic"

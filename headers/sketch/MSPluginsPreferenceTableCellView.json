@@ -3,10 +3,12 @@
     "NSTableCellView.h"
   ],
   "classes": [
+    "MSPluginsPreferenceIconView",
     "MSPluginsPreferencesUpdateButton",
     "NSButton",
     "NSLayoutConstraint",
     "NSProgressIndicator",
+    "NSTextField",
     "NSView"
   ],
   "protocol": false,
@@ -21,6 +23,19 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "setObjectValue:": {
+      "name": "setObjectValue:",
+      "bridgedName": "setObjectValue",
+      "args": [
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -28,6 +43,24 @@
       "name": "tableCellWidthConstraint",
       "pointer": true,
       "type": "NSLayoutConstraint",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "iconView": {
+      "name": "iconView",
+      "pointer": true,
+      "type": "MSPluginsPreferenceIconView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "descriptionField": {
+      "name": "descriptionField",
+      "pointer": true,
+      "type": "NSTextField",
       "attributes": [
         "retain",
         "nonatomic"

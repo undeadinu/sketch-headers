@@ -4,7 +4,7 @@
   ],
   "classes": [
     "MSCurvePoint",
-    "NSBezierPath"
+    "MSPath"
   ],
   "protocol": false,
   "className": "MSShapePathLayer",
@@ -24,12 +24,12 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "shapeWithBezierPath:": {
-      "name": "shapeWithBezierPath:",
-      "bridgedName": "shapeWithBezierPath",
+    "shapeWithPath:": {
+      "name": "shapeWithPath:",
+      "bridgedName": "shapeWithPath",
       "args": [
         {
-          "name": "shapeWithBezierPath",
+          "name": "shapeWithPath",
           "type": "id"
         }
       ],
@@ -369,53 +369,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierPathWithTransforms": {
-      "name": "bezierPathWithTransforms",
-      "bridgedName": "bezierPathWithTransforms",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathWithoutTransformsInRect:": {
-      "name": "bezierPathWithoutTransformsInRect:",
-      "bridgedName": "bezierPathWithoutTransformsInRect",
-      "args": [
-        {
-          "name": "bezierPathWithoutTransformsInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathInRect:": {
-      "name": "bezierPathInRect:",
-      "bridgedName": "bezierPathInRect",
-      "args": [
-        {
-          "name": "bezierPathInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pathInRect:": {
-      "name": "pathInRect:",
-      "bridgedName": "pathInRect",
-      "args": [
-        {
-          "name": "pathInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "adjustGeometryToBoundsRect:": {
       "name": "adjustGeometryToBoundsRect:",
       "bridgedName": "adjustGeometryToBoundsRect",
@@ -643,23 +596,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "copyToLayer:beforeLayer:": {
-      "name": "copyToLayer:beforeLayer:",
-      "bridgedName": "copyToLayer_beforeLayer",
-      "args": [
-        {
-          "name": "copyToLayer",
-          "type": "id"
-        },
-        {
-          "name": "beforeLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "moveToLayer:beforeLayer:": {
       "name": "moveToLayer:beforeLayer:",
       "bridgedName": "moveToLayer_beforeLayer",
@@ -728,6 +664,14 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shareableObjectType": {
+      "name": "shareableObjectType",
+      "bridgedName": "shareableObjectType",
+      "args": [],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -815,12 +759,12 @@
         "nonatomic"
       ]
     },
-    "bezierPath": {
-      "name": "bezierPath",
+    "pathInFrame": {
+      "name": "pathInFrame",
       "pointer": true,
-      "type": "NSBezierPath",
+      "type": "MSPath",
       "attributes": [
-        "retain",
+        "copy",
         "nonatomic"
       ]
     }

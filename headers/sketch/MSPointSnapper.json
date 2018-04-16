@@ -4,7 +4,8 @@
   ],
   "classes": [
     "MSPointSnapperWorkings",
-    "NSArray"
+    "NSArray",
+    "NSMutableArray"
   ],
   "protocol": false,
   "className": "MSPointSnapper",
@@ -16,6 +17,23 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignResult:toPoint:": {
+      "name": "alignResult:toPoint:",
+      "bridgedName": "alignResult_toPoint",
+      "args": [
+        {
+          "name": "alignResult",
+          "type": "id"
+        },
+        {
+          "name": "toPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -49,6 +67,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "addTargetAtPoint:": {
+      "name": "addTargetAtPoint:",
+      "bridgedName": "addTargetAtPoint",
+      "args": [
+        {
+          "name": "addTargetAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTarget:": {
+      "name": "addTarget:",
+      "bridgedName": "addTarget",
+      "args": [
+        {
+          "name": "addTarget",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -70,41 +114,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "targetForSnappingToHandleAtIndexPath:location:shape:excluding:": {
-      "name": "targetForSnappingToHandleAtIndexPath:location:shape:excluding:",
-      "bridgedName": "targetForSnappingToHandleAtIndexPath_location_shape_excluding",
+    "addTargetsForSnappingToMidpointOfLayer:": {
+      "name": "addTargetsForSnappingToMidpointOfLayer:",
+      "bridgedName": "addTargetsForSnappingToMidpointOfLayer",
       "args": [
         {
-          "name": "targetForSnappingToHandleAtIndexPath",
-          "type": "id"
-        },
-        {
-          "name": "location",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "shape",
-          "type": "id"
-        },
-        {
-          "name": "excluding",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "populateArray:withTargetsForSnappingToMidpointOfLayer:": {
-      "name": "populateArray:withTargetsForSnappingToMidpointOfLayer:",
-      "bridgedName": "populateArray_withTargetsForSnappingToMidpointOfLayer",
-      "args": [
-        {
-          "name": "populateArray",
-          "type": "id"
-        },
-        {
-          "name": "withTargetsForSnappingToMidpointOfLayer",
+          "name": "addTargetsForSnappingToMidpointOfLayer",
           "type": "id"
         }
       ],
@@ -112,33 +127,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "targetsForMidpointsOfLayers:": {
-      "name": "targetsForMidpointsOfLayers:",
-      "bridgedName": "targetsForMidpointsOfLayers",
+    "addTargetsForMidpointsOfLayers:": {
+      "name": "addTargetsForMidpointsOfLayers:",
+      "bridgedName": "addTargetsForMidpointsOfLayers",
       "args": [
         {
-          "name": "targetsForMidpointsOfLayers",
+          "name": "addTargetsForMidpointsOfLayers",
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shapePointTargetsWithContext:excludingPointsAtIndexPaths:": {
-      "name": "shapePointTargetsWithContext:excludingPointsAtIndexPaths:",
-      "bridgedName": "shapePointTargetsWithContext_excludingPointsAtIndexPaths",
-      "args": [
-        {
-          "name": "shapePointTargetsWithContext",
-          "type": "id"
-        },
-        {
-          "name": "excludingPointsAtIndexPaths",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     }
@@ -179,15 +177,6 @@
         "nonatomic"
       ]
     },
-    "snapTargets": {
-      "name": "snapTargets",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "copy",
-        "nonatomic"
-      ]
-    },
     "allowedAxes": {
       "name": "allowedAxes",
       "pointer": false,
@@ -196,11 +185,20 @@
         "nonatomic"
       ]
     },
-    "snapThreshold": {
-      "name": "snapThreshold",
+    "snapDistance": {
+      "name": "snapDistance",
       "pointer": false,
       "type": "double",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "snapTargets": {
+      "name": "snapTargets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
         "nonatomic"
       ]
     }

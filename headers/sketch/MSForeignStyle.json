@@ -1,13 +1,31 @@
 {
   "imports": [
-    "_MSForeignStyle.h"
+    "_MSForeignStyle.h",
+    "MSSharedStylePasting.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSString"
+  ],
   "protocol": false,
   "className": "MSForeignStyle",
   "extends": "_MSForeignStyle",
-  "interfaces": [],
+  "interfaces": [
+    "MSSharedStylePasting"
+  ],
   "methods": {
+    "syncWithRemote:": {
+      "name": "syncWithRemote:",
+      "bridgedName": "syncWithRemote",
+      "args": [
+        {
+          "name": "syncWithRemote",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "unlinkFromRemote": {
       "name": "unlinkFromRemote",
       "bridgedName": "unlinkFromRemote",
@@ -16,16 +34,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "masterFromLibrary:": {
-      "name": "masterFromLibrary:",
-      "bridgedName": "masterFromLibrary",
+    "isOutOfDateWithLibrary:": {
+      "name": "isOutOfDateWithLibrary:",
+      "bridgedName": "isOutOfDateWithLibrary",
       "args": [
         {
-          "name": "masterFromLibrary",
+          "name": "isOutOfDateWithLibrary",
           "type": "id"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -58,27 +76,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setOriginalObject:": {
-      "name": "setOriginalObject:",
-      "bridgedName": "setOriginalObject",
-      "args": [
-        {
-          "name": "setOriginalObject",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "originalObject": {
-      "name": "originalObject",
-      "bridgedName": "originalObject",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setLocalObject:": {
       "name": "setLocalObject:",
       "bridgedName": "setLocalObject",
@@ -99,7 +96,47 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithOriginalObject:inLibrary:": {
+      "name": "initWithOriginalObject:inLibrary:",
+      "bridgedName": "initWithOriginalObject_inLibrary",
+      "args": [
+        {
+          "name": "initWithOriginalObject",
+          "type": "id"
+        },
+        {
+          "name": "inLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlePasteIntoDocument:": {
+      "name": "handlePasteIntoDocument:",
+      "bridgedName": "handlePasteIntoDocument",
+      "args": [
+        {
+          "name": "handlePasteIntoDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "currentObjectID_MSSharedStylePasting": {
+      "name": "currentObjectID_MSSharedStylePasting",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
 }

@@ -7,6 +7,7 @@
     "ECLogChannel",
     "MSPluginBundle",
     "MSPluginCommandSpecifier",
+    "MSPluginManager",
     "MSPluginScript",
     "NSDictionary",
     "NSMutableDictionary",
@@ -348,6 +349,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "log:atLevel:": {
+      "name": "log:atLevel:",
+      "bridgedName": "log_atLevel",
+      "args": [
+        {
+          "name": "log",
+          "type": "id"
+        },
+        {
+          "name": "atLevel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "resetLogger": {
       "name": "resetLogger",
       "bridgedName": "resetLogger",
@@ -387,19 +405,6 @@
       "args": [
         {
           "name": "executeScript",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "executeScriptAtURL:": {
-      "name": "executeScriptAtURL:",
-      "bridgedName": "executeScriptAtURL",
-      "args": [
-        {
-          "name": "executeScriptAtURL",
           "type": "id"
         }
       ],
@@ -957,10 +962,18 @@
     }
   },
   "properties": {
+    "manager": {
+      "name": "manager",
+      "pointer": true,
+      "type": "__weak MSPluginManager",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "coreModuleMap": {
       "name": "coreModuleMap",
       "pointer": true,
-      "type": "NSDictionary",
+      "type": "NSMutableDictionary",
       "attributes": [
         "retain",
         "nonatomic"

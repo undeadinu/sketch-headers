@@ -1,11 +1,11 @@
 {
   "imports": [
-    "MSBaseSharedStyleAction.h"
+    "MSBaseSharedObjectAction.h"
   ],
   "classes": [],
   "protocol": false,
   "className": "MSCreateSharedStyleAction",
-  "extends": "MSBaseSharedStyleAction",
+  "extends": "MSBaseSharedObjectAction",
   "interfaces": [],
   "methods": {
     "label": {
@@ -16,15 +16,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "doPerformAction:": {
-      "name": "doPerformAction:",
-      "bridgedName": "doPerformAction",
-      "args": [
-        {
-          "name": "doPerformAction",
-          "type": "id"
-        }
-      ],
+    "needsRenameAfterAction": {
+      "name": "needsRenameAfterAction",
+      "bridgedName": "needsRenameAfterAction",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performSharedObjectAction": {
+      "name": "performSharedObjectAction",
+      "bridgedName": "performSharedObjectAction",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"

@@ -2,36 +2,59 @@
   "imports": [
     "MSSnapItem.h"
   ],
-  "classes": [
-    "NSArray"
-  ],
+  "classes": [],
   "protocol": false,
   "className": "MSRectSnapItem",
   "extends": "MSSnapItem",
   "interfaces": [],
   "methods": {
-    "snapperObjectWithRect:layer:": {
-      "name": "snapperObjectWithRect:layer:",
-      "bridgedName": "snapperObjectWithRect_layer",
+    "snapItemWithRect:layer:constrainProportions:": {
+      "name": "snapItemWithRect:layer:constrainProportions:",
+      "bridgedName": "snapItemWithRect_layer_constrainProportions",
       "args": [
         {
-          "name": "snapperObjectWithRect",
+          "name": "snapItemWithRect",
           "type": "struct CGRect"
         },
         {
           "name": "layer",
           "type": "id"
+        },
+        {
+          "name": "constrainProportions",
+          "type": "BOOL"
         }
       ],
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
+    "concatAncestorsAndSelfTransforms": {
+      "name": "concatAncestorsAndSelfTransforms",
+      "bridgedName": "concatAncestorsAndSelfTransforms",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOverlayWithAbsoluteMargins:": {
+      "name": "refreshOverlayWithAbsoluteMargins:",
+      "bridgedName": "refreshOverlayWithAbsoluteMargins",
+      "args": [
+        {
+          "name": "refreshOverlayWithAbsoluteMargins",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldConstrainProportions": {
+      "name": "shouldConstrainProportions",
+      "bridgedName": "shouldConstrainProportions",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -64,35 +87,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "concatAncestorsAndSelfTransforms": {
-      "name": "concatAncestorsAndSelfTransforms",
-      "bridgedName": "concatAncestorsAndSelfTransforms",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "preDrawingTransform": {
-      "name": "preDrawingTransform",
-      "bridgedName": "preDrawingTransform",
-      "args": [],
-      "returns": "struct CGAffineTransform",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshOverlayWithAbsoluteMargins:": {
-      "name": "refreshOverlayWithAbsoluteMargins:",
-      "bridgedName": "refreshOverlayWithAbsoluteMargins",
-      "args": [
-        {
-          "name": "refreshOverlayWithAbsoluteMargins",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "rotation": {
       "name": "rotation",
       "bridgedName": "rotation",
@@ -106,22 +100,6 @@
       "bridgedName": "supportsResizingForSnapping",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "originalRect": {
-      "name": "originalRect",
-      "bridgedName": "originalRect",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "artboardForSnapping": {
-      "name": "artboardForSnapping",
-      "bridgedName": "artboardForSnapping",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -153,22 +131,6 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "otherLayersForSnapping": {
-      "name": "otherLayersForSnapping",
-      "bridgedName": "otherLayersForSnapping",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "otherLayersForSizeSnapping": {
-      "name": "otherLayersForSizeSnapping",
-      "bridgedName": "otherLayersForSizeSnapping",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -176,23 +138,6 @@
       "name": "storedRect",
       "pointer": false,
       "type": "struct CGRect",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "layersForSnapping": {
-      "name": "layersForSnapping",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "shouldConstrainProportions": {
-      "name": "shouldConstrainProportions",
-      "pointer": false,
-      "type": "BOOL",
       "attributes": [
         "nonatomic"
       ]

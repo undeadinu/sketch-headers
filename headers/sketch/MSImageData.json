@@ -8,6 +8,7 @@
   "classes": [
     "NSData",
     "NSImage",
+    "NSObject<OS_dispatch_semaphore>",
     "NSString"
   ],
   "protocol": false,
@@ -222,6 +223,40 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setSha1:": {
+      "name": "setSha1:",
+      "bridgedName": "setSha1",
+      "args": [
+        {
+          "name": "setSha1",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setData:": {
+      "name": "setData:",
+      "bridgedName": "setData",
+      "args": [
+        {
+          "name": "setData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "waitForDataLock": {
+      "name": "waitForDataLock",
+      "bridgedName": "waitForDataLock",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithLegacyHash:": {
       "name": "initWithLegacyHash:",
       "bridgedName": "initWithLegacyHash",
@@ -275,28 +310,19 @@
     }
   },
   "properties": {
+    "dataLock": {
+      "name": "dataLock",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_semaphore>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "image": {
       "name": "image",
       "pointer": true,
       "type": "NSImage",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "sha1": {
-      "name": "sha1",
-      "pointer": true,
-      "type": "NSData",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "data": {
-      "name": "data",
-      "pointer": true,
-      "type": "NSData",
       "attributes": [
         "retain",
         "nonatomic"
@@ -314,6 +340,24 @@
       "name": "archiveReferenceIdentifier_bc",
       "pointer": true,
       "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "sha1": {
+      "name": "sha1",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "data": {
+      "name": "data",
+      "pointer": true,
+      "type": "NSData",
       "attributes": [
         "readonly",
         "nonatomic"

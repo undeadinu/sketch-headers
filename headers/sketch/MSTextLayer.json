@@ -8,10 +8,10 @@
     "MSColor",
     "NSArray",
     "NSAttributedString",
-    "NSBezierPath",
     "NSDictionary",
     "NSNumber",
-    "NSString"
+    "NSString",
+    "NSValue"
   ],
   "protocol": false,
   "className": "MSTextLayer",
@@ -132,23 +132,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "maintainTextLayerBaselinesForLayers:inBlock:": {
-      "name": "maintainTextLayerBaselinesForLayers:inBlock:",
-      "bridgedName": "maintainTextLayerBaselinesForLayers_inBlock",
-      "args": [
-        {
-          "name": "maintainTextLayerBaselinesForLayers",
-          "type": "id"
-        },
-        {
-          "name": "inBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "keyPathsForValuesAffectingTextBehaviourSegmentIndex": {
       "name": "keyPathsForValuesAffectingTextBehaviourSegmentIndex",
       "bridgedName": "keyPathsForValuesAffectingTextBehaviourSegmentIndex",
@@ -178,6 +161,23 @@
       "bridgedName": "keyPathsForValuesAffectingCanFixHeight",
       "args": [],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "maintainTextLayerBaselinesForLayers:inBlock:": {
+      "name": "maintainTextLayerBaselinesForLayers:inBlock:",
+      "bridgedName": "maintainTextLayerBaselinesForLayers_inBlock",
+      "args": [
+        {
+          "name": "maintainTextLayerBaselinesForLayers",
+          "type": "id"
+        },
+        {
+          "name": "inBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -461,6 +461,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setGlyphBounds:": {
+      "name": "setGlyphBounds:",
+      "bridgedName": "setGlyphBounds",
+      "args": [
+        {
+          "name": "setGlyphBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setAttributedString:": {
       "name": "setAttributedString:",
       "bridgedName": "setAttributedString",
@@ -577,27 +590,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierPathFromGlyphsInFrame": {
-      "name": "bezierPathFromGlyphsInFrame",
-      "bridgedName": "bezierPathFromGlyphsInFrame",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "drawingPointForText": {
       "name": "drawingPointForText",
       "bridgedName": "drawingPointForText",
       "args": [],
       "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bezierPathWithTransforms": {
-      "name": "bezierPathWithTransforms",
-      "bridgedName": "bezierPathWithTransforms",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1029,6 +1026,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "applyScreenPickerColor:preferredStyleName:": {
+      "name": "applyScreenPickerColor:preferredStyleName:",
+      "bridgedName": "applyScreenPickerColor_preferredStyleName",
+      "args": [
+        {
+          "name": "applyScreenPickerColor",
+          "type": "id"
+        },
+        {
+          "name": "preferredStyleName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "copyStylePropertiesToShape:": {
       "name": "copyStylePropertiesToShape:",
       "bridgedName": "copyStylePropertiesToShape",
@@ -1039,19 +1053,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rawCopyOfStyle:": {
-      "name": "rawCopyOfStyle:",
-      "bridgedName": "rawCopyOfStyle",
-      "args": [
-        {
-          "name": "rawCopyOfStyle",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1084,27 +1085,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerSnapperObjectClass": {
-      "name": "layerSnapperObjectClass",
-      "bridgedName": "layerSnapperObjectClass",
+    "shareableObjectType": {
+      "name": "shareableObjectType",
+      "bridgedName": "shareableObjectType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapLines": {
+      "name": "snapLines",
+      "bridgedName": "snapLines",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapItemClass": {
+      "name": "snapItemClass",
+      "bridgedName": "snapItemClass",
       "args": [],
       "returns": "Class",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "embedInRotatedGroup": {
-      "name": "embedInRotatedGroup",
-      "bridgedName": "embedInRotatedGroup",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "cornerForBaselineMaintaining": {
-      "name": "cornerForBaselineMaintaining",
-      "bridgedName": "cornerForBaselineMaintaining",
-      "args": [],
-      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1171,19 +1172,48 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "supportsVerticalAlignment": {
-      "name": "supportsVerticalAlignment",
-      "bridgedName": "supportsVerticalAlignment",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "supportsInnerOuterBorders": {
       "name": "supportsInnerOuterBorders",
       "bridgedName": "supportsInnerOuterBorders",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSharedStyle": {
+      "name": "resetSharedStyle",
+      "bridgedName": "resetSharedStyle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSharedStyle:": {
+      "name": "setSharedStyle:",
+      "bridgedName": "setSharedStyle",
+      "args": [
+        {
+          "name": "setSharedStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "foreignSharedStyles": {
+      "name": "foreignSharedStyles",
+      "bridgedName": "foreignSharedStyles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localSharedStyles": {
+      "name": "localSharedStyles",
+      "bridgedName": "localSharedStyles",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1233,6 +1263,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "invalidateFonts": {
+      "name": "invalidateFonts",
+      "bridgedName": "invalidateFonts",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "replaceFonts:": {
       "name": "replaceFonts:",
       "bridgedName": "replaceFonts",
@@ -1243,6 +1281,22 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "embedInRotatedGroup": {
+      "name": "embedInRotatedGroup",
+      "bridgedName": "embedInRotatedGroup",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cornerForBaselineMaintaining": {
+      "name": "cornerForBaselineMaintaining",
+      "bridgedName": "cornerForBaselineMaintaining",
+      "args": [],
+      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1313,6 +1367,15 @@
       "pointer": false,
       "type": "__weak id <MSTextLayerEditingDelegate>",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "transientGlyphBoundsValue": {
+      "name": "transientGlyphBoundsValue",
+      "pointer": true,
+      "type": "NSValue",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },
@@ -1418,10 +1481,10 @@
         "nonatomic"
       ]
     },
-    "bezierPath": {
-      "name": "bezierPath",
-      "pointer": true,
-      "type": "NSBezierPath",
+    "supportsVerticalAlignment": {
+      "name": "supportsVerticalAlignment",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -19,7 +19,6 @@
     "MSViewPort",
     "MSZoomTool",
     "NSArray",
-    "NSEvent",
     "NSNumberFormatter",
     "NSString"
   ],
@@ -357,6 +356,30 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateCursorIfNeeded": {
+      "name": "updateCursorIfNeeded",
+      "bridgedName": "updateCursorIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsUpdateCursor": {
+      "name": "setNeedsUpdateCursor",
+      "bridgedName": "setNeedsUpdateCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCursor": {
+      "name": "updateCursor",
+      "bridgedName": "updateCursor",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "changeFont:": {
       "name": "changeFont:",
       "bridgedName": "changeFont",
@@ -498,14 +521,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "becomeFirstResponder": {
-      "name": "becomeFirstResponder",
-      "bridgedName": "becomeFirstResponder",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "acceptsFirstResponder": {
       "name": "acceptsFirstResponder",
       "bridgedName": "acceptsFirstResponder",
@@ -625,6 +640,40 @@
         {
           "name": "doCommandBySelector",
           "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handToolMouseUp": {
+      "name": "handToolMouseUp",
+      "bridgedName": "handToolMouseUp",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handToolMouseDragged:": {
+      "name": "handToolMouseDragged:",
+      "bridgedName": "handToolMouseDragged",
+      "args": [
+        {
+          "name": "handToolMouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handToolMouseDown:": {
+      "name": "handToolMouseDown:",
+      "bridgedName": "handToolMouseDown",
+      "args": [
+        {
+          "name": "handToolMouseDown",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -1617,56 +1666,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "handToolMouseUp": {
-      "name": "handToolMouseUp",
-      "bridgedName": "handToolMouseUp",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "handToolMouseDragged:": {
-      "name": "handToolMouseDragged:",
-      "bridgedName": "handToolMouseDragged",
-      "args": [
-        {
-          "name": "handToolMouseDragged",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "handToolMouseDown:": {
-      "name": "handToolMouseDown:",
-      "bridgedName": "handToolMouseDown",
-      "args": [
-        {
-          "name": "handToolMouseDown",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "endHandToolMode": {
-      "name": "endHandToolMode",
-      "bridgedName": "endHandToolMode",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "beginHandToolMode": {
-      "name": "beginHandToolMode",
-      "bridgedName": "beginHandToolMode",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "clickShouldDismissPopover:": {
       "name": "clickShouldDismissPopover:",
       "bridgedName": "clickShouldDismissPopover",
@@ -1800,21 +1799,29 @@
         "nonatomic"
       ]
     },
-    "lastEvent": {
-      "name": "lastEvent",
-      "pointer": true,
-      "type": "NSEvent",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "zoomTool": {
       "name": "zoomTool",
       "pointer": true,
       "type": "MSZoomTool",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "needsUpdateCursor": {
+      "name": "needsUpdateCursor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "handToolState": {
+      "name": "handToolState",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
         "nonatomic"
       ]
     },

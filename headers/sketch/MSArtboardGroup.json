@@ -4,12 +4,13 @@
     "_MSArtboardGroup.h",
     "MSArtboardGroup.h",
     "MSColorConvertible.h",
-    "MSLayerWithBackgroundColor.h",
+    "MSLayerWithMutableBackgroundColor.h",
     "MSRootLayer.h"
   ],
   "classes": [
     "MSArtboardPreset",
     "MSLayoutGrid",
+    "MSPath",
     "MSRulerData",
     "MSSimpleGrid",
     "NSString"
@@ -20,7 +21,7 @@
   "interfaces": [
     "MSArtboardGroup",
     "MSRootLayer",
-    "MSLayerWithBackgroundColor",
+    "MSLayerWithMutableBackgroundColor",
     "MSColorConvertible"
   ],
   "methods": {
@@ -44,14 +45,6 @@
       "returns": "struct CGRect",
       "kind": "class",
       "kindIndicator": "+"
-    },
-    ".cxx_destruct": {
-      "name": ".cxx_destruct",
-      "bridgedName": ".cxx_destruct",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
     },
     "setShouldBreakMaskChain:": {
       "name": "setShouldBreakMaskChain:",
@@ -386,23 +379,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "object:didChangeProperty:": {
-      "name": "object:didChangeProperty:",
-      "bridgedName": "object_didChangeProperty",
-      "args": [
-        {
-          "name": "object",
-          "type": "id"
-        },
-        {
-          "name": "didChangeProperty",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "objectDidInit": {
       "name": "objectDidInit",
       "bridgedName": "objectDidInit",
@@ -432,6 +408,14 @@
       "bridgedName": "shouldRefreshOverlayForFlows",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorViewControllerNames": {
+      "name": "inspectorViewControllerNames",
+      "bridgedName": "inspectorViewControllerNames",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -539,14 +523,6 @@
     }
   },
   "properties": {
-    "sliceWatcher": {
-      "name": "sliceWatcher",
-      "pointer": false,
-      "type": "__weak id <MSSliceLayerWatcher>",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "contentBounds": {
       "name": "contentBounds",
       "pointer": false,
@@ -719,6 +695,33 @@
       "name": "origin",
       "pointer": false,
       "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInBounds": {
+      "name": "pathInBounds",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInFrame": {
+      "name": "pathInFrame",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInFrameWithTransforms": {
+      "name": "pathInFrameWithTransforms",
+      "pointer": true,
+      "type": "MSPath",
       "attributes": [
         "readonly",
         "nonatomic"
