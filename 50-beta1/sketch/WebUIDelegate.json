@@ -1,0 +1,753 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSPasteboard",
+    "NSResponder",
+    "NSString",
+    "NSURLRequest",
+    "WebFrame",
+    "WebFrameView",
+    "WebView"
+  ],
+  "protocol": true,
+  "className": "WebUIDelegate",
+  "interfaces": [],
+  "methods": {
+    "webViewContentRect:": {
+      "name": "webViewContentRect:",
+      "bridgedName": "webViewContentRect",
+      "args": [
+        {
+          "name": "webViewContentRect",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setContentRect:": {
+      "name": "webView:setContentRect:",
+      "bridgedName": "webView_setContentRect",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setContentRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptTextInputPanelWithPrompt:defaultText:": {
+      "name": "webView:runJavaScriptTextInputPanelWithPrompt:defaultText:",
+      "bridgedName": "webView_runJavaScriptTextInputPanelWithPrompt_defaultText",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptTextInputPanelWithPrompt",
+          "type": "NSString *"
+        },
+        {
+          "name": "defaultText",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptConfirmPanelWithMessage:": {
+      "name": "webView:runJavaScriptConfirmPanelWithMessage:",
+      "bridgedName": "webView_runJavaScriptConfirmPanelWithMessage",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptConfirmPanelWithMessage",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptAlertPanelWithMessage:": {
+      "name": "webView:runJavaScriptAlertPanelWithMessage:",
+      "bridgedName": "webView_runJavaScriptAlertPanelWithMessage",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptAlertPanelWithMessage",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:drawFooterInRect:": {
+      "name": "webView:drawFooterInRect:",
+      "bridgedName": "webView_drawFooterInRect",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "drawFooterInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:drawHeaderInRect:": {
+      "name": "webView:drawHeaderInRect:",
+      "bridgedName": "webView_drawHeaderInRect",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "drawHeaderInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewFooterHeight:": {
+      "name": "webViewFooterHeight:",
+      "bridgedName": "webViewFooterHeight",
+      "args": [
+        {
+          "name": "webViewFooterHeight",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewHeaderHeight:": {
+      "name": "webViewHeaderHeight:",
+      "bridgedName": "webViewHeaderHeight",
+      "args": [
+        {
+          "name": "webViewHeaderHeight",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:printFrameView:": {
+      "name": "webView:printFrameView:",
+      "bridgedName": "webView_printFrameView",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "printFrameView",
+          "type": "WebFrameView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:willPerformDragSourceAction:fromPoint:withPasteboard:": {
+      "name": "webView:willPerformDragSourceAction:fromPoint:withPasteboard:",
+      "bridgedName": "webView_willPerformDragSourceAction_fromPoint_withPasteboard",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "willPerformDragSourceAction",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "withPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:dragSourceActionMaskForPoint:": {
+      "name": "webView:dragSourceActionMaskForPoint:",
+      "bridgedName": "webView_dragSourceActionMaskForPoint",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "dragSourceActionMaskForPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:willPerformDragDestinationAction:forDraggingInfo:": {
+      "name": "webView:willPerformDragDestinationAction:forDraggingInfo:",
+      "bridgedName": "webView_willPerformDragDestinationAction_forDraggingInfo",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "willPerformDragDestinationAction",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "forDraggingInfo",
+          "type": "id <NSDraggingInfo>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:dragDestinationActionMaskForDraggingInfo:": {
+      "name": "webView:dragDestinationActionMaskForDraggingInfo:",
+      "bridgedName": "webView_dragDestinationActionMaskForDraggingInfo",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "dragDestinationActionMaskForDraggingInfo",
+          "type": "id <NSDraggingInfo>"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:shouldPerformAction:fromSender:": {
+      "name": "webView:shouldPerformAction:fromSender:",
+      "bridgedName": "webView_shouldPerformAction_fromSender",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "shouldPerformAction",
+          "type": "SEL"
+        },
+        {
+          "name": "fromSender",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:validateUserInterfaceItem:defaultValidation:": {
+      "name": "webView:validateUserInterfaceItem:defaultValidation:",
+      "bridgedName": "webView_validateUserInterfaceItem_defaultValidation",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "validateUserInterfaceItem",
+          "type": "id <NSValidatedUserInterfaceItem>"
+        },
+        {
+          "name": "defaultValidation",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:contextMenuItemsForElement:defaultMenuItems:": {
+      "name": "webView:contextMenuItemsForElement:defaultMenuItems:",
+      "bridgedName": "webView_contextMenuItemsForElement_defaultMenuItems",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "contextMenuItemsForElement",
+          "type": "NSDictionary *"
+        },
+        {
+          "name": "defaultMenuItems",
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:mouseDidMoveOverElement:modifierFlags:": {
+      "name": "webView:mouseDidMoveOverElement:modifierFlags:",
+      "bridgedName": "webView_mouseDidMoveOverElement_modifierFlags",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "mouseDidMoveOverElement",
+          "type": "NSDictionary *"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:": {
+      "name": "webView:runOpenPanelForFileButtonWithResultListener:allowMultipleFiles:",
+      "bridgedName": "webView_runOpenPanelForFileButtonWithResultListener_allowMultipleFiles",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runOpenPanelForFileButtonWithResultListener",
+          "type": "id <WebOpenPanelResultListener>"
+        },
+        {
+          "name": "allowMultipleFiles",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runOpenPanelForFileButtonWithResultListener:": {
+      "name": "webView:runOpenPanelForFileButtonWithResultListener:",
+      "bridgedName": "webView_runOpenPanelForFileButtonWithResultListener",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runOpenPanelForFileButtonWithResultListener",
+          "type": "id <WebOpenPanelResultListener>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:": {
+      "name": "webView:runBeforeUnloadConfirmPanelWithMessage:initiatedByFrame:",
+      "bridgedName": "webView_runBeforeUnloadConfirmPanelWithMessage_initiatedByFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runBeforeUnloadConfirmPanelWithMessage",
+          "type": "NSString *"
+        },
+        {
+          "name": "initiatedByFrame",
+          "type": "WebFrame *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:": {
+      "name": "webView:runJavaScriptTextInputPanelWithPrompt:defaultText:initiatedByFrame:",
+      "bridgedName": "webView_runJavaScriptTextInputPanelWithPrompt_defaultText_initiatedByFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptTextInputPanelWithPrompt",
+          "type": "NSString *"
+        },
+        {
+          "name": "defaultText",
+          "type": "NSString *"
+        },
+        {
+          "name": "initiatedByFrame",
+          "type": "WebFrame *"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:": {
+      "name": "webView:runJavaScriptConfirmPanelWithMessage:initiatedByFrame:",
+      "bridgedName": "webView_runJavaScriptConfirmPanelWithMessage_initiatedByFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptConfirmPanelWithMessage",
+          "type": "NSString *"
+        },
+        {
+          "name": "initiatedByFrame",
+          "type": "WebFrame *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:": {
+      "name": "webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:",
+      "bridgedName": "webView_runJavaScriptAlertPanelWithMessage_initiatedByFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "runJavaScriptAlertPanelWithMessage",
+          "type": "NSString *"
+        },
+        {
+          "name": "initiatedByFrame",
+          "type": "WebFrame *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewFrame:": {
+      "name": "webViewFrame:",
+      "bridgedName": "webViewFrame",
+      "args": [
+        {
+          "name": "webViewFrame",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setFrame:": {
+      "name": "webView:setFrame:",
+      "bridgedName": "webView_setFrame",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setResizable:": {
+      "name": "webView:setResizable:",
+      "bridgedName": "webView_setResizable",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setResizable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewIsResizable:": {
+      "name": "webViewIsResizable:",
+      "bridgedName": "webViewIsResizable",
+      "args": [
+        {
+          "name": "webViewIsResizable",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setStatusBarVisible:": {
+      "name": "webView:setStatusBarVisible:",
+      "bridgedName": "webView_setStatusBarVisible",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setStatusBarVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewIsStatusBarVisible:": {
+      "name": "webViewIsStatusBarVisible:",
+      "bridgedName": "webViewIsStatusBarVisible",
+      "args": [
+        {
+          "name": "webViewIsStatusBarVisible",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setToolbarsVisible:": {
+      "name": "webView:setToolbarsVisible:",
+      "bridgedName": "webView_setToolbarsVisible",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setToolbarsVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewAreToolbarsVisible:": {
+      "name": "webViewAreToolbarsVisible:",
+      "bridgedName": "webViewAreToolbarsVisible",
+      "args": [
+        {
+          "name": "webViewAreToolbarsVisible",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewStatusText:": {
+      "name": "webViewStatusText:",
+      "bridgedName": "webViewStatusText",
+      "args": [
+        {
+          "name": "webViewStatusText",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:setStatusText:": {
+      "name": "webView:setStatusText:",
+      "bridgedName": "webView_setStatusText",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "setStatusText",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:makeFirstResponder:": {
+      "name": "webView:makeFirstResponder:",
+      "bridgedName": "webView_makeFirstResponder",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "makeFirstResponder",
+          "type": "NSResponder *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewFirstResponder:": {
+      "name": "webViewFirstResponder:",
+      "bridgedName": "webViewFirstResponder",
+      "args": [
+        {
+          "name": "webViewFirstResponder",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "NSResponder *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewUnfocus:": {
+      "name": "webViewUnfocus:",
+      "bridgedName": "webViewUnfocus",
+      "args": [
+        {
+          "name": "webViewUnfocus",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewFocus:": {
+      "name": "webViewFocus:",
+      "bridgedName": "webViewFocus",
+      "args": [
+        {
+          "name": "webViewFocus",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewClose:": {
+      "name": "webViewClose:",
+      "bridgedName": "webViewClose",
+      "args": [
+        {
+          "name": "webViewClose",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewRunModal:": {
+      "name": "webViewRunModal:",
+      "bridgedName": "webViewRunModal",
+      "args": [
+        {
+          "name": "webViewRunModal",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:createWebViewModalDialogWithRequest:": {
+      "name": "webView:createWebViewModalDialogWithRequest:",
+      "bridgedName": "webView_createWebViewModalDialogWithRequest",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "createWebViewModalDialogWithRequest",
+          "type": "NSURLRequest *"
+        }
+      ],
+      "returns": "WebView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webViewShow:": {
+      "name": "webViewShow:",
+      "bridgedName": "webViewShow",
+      "args": [
+        {
+          "name": "webViewShow",
+          "type": "WebView *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webView:createWebViewWithRequest:": {
+      "name": "webView:createWebViewWithRequest:",
+      "bridgedName": "webView_createWebViewWithRequest",
+      "args": [
+        {
+          "name": "webView",
+          "type": "WebView *"
+        },
+        {
+          "name": "createWebViewWithRequest",
+          "type": "NSURLRequest *"
+        }
+      ],
+      "returns": "WebView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

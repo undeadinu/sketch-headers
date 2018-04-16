@@ -1,0 +1,87 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSExportRequest",
+    "NSData",
+    "NSOperationQueue"
+  ],
+  "protocol": false,
+  "className": "MSPasteboardImageProvider",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "preparePasteboard:withExportRequest:": {
+      "name": "preparePasteboard:withExportRequest:",
+      "bridgedName": "preparePasteboard_withExportRequest",
+      "args": [
+        {
+          "name": "preparePasteboard",
+          "type": "id"
+        },
+        {
+          "name": "withExportRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteboard:provideDataForType:": {
+      "name": "pasteboard:provideDataForType:",
+      "bridgedName": "pasteboard_provideDataForType",
+      "args": [
+        {
+          "name": "pasteboard",
+          "type": "id"
+        },
+        {
+          "name": "provideDataForType",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "data": {
+      "name": "data",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "request": {
+      "name": "request",
+      "pointer": true,
+      "type": "MSExportRequest",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "queue": {
+      "name": "queue",
+      "pointer": true,
+      "type": "NSOperationQueue",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

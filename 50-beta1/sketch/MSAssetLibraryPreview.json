@@ -1,0 +1,145 @@
+{
+  "imports": [
+    "NSView.h"
+  ],
+  "classes": [
+    "NSBezierPath",
+    "NSImage"
+  ],
+  "protocol": false,
+  "className": "MSAssetLibraryPreview",
+  "extends": "NSView",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "thumbFromImage:centerTopInSize:": {
+      "name": "thumbFromImage:centerTopInSize:",
+      "bridgedName": "thumbFromImage_centerTopInSize",
+      "args": [
+        {
+          "name": "thumbFromImage",
+          "type": "id"
+        },
+        {
+          "name": "centerTopInSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "thumbWithSize:byDrawingImage:inRect:fromRect:": {
+      "name": "thumbWithSize:byDrawingImage:inRect:fromRect:",
+      "bridgedName": "thumbWithSize_byDrawingImage_inRect_fromRect",
+      "args": [
+        {
+          "name": "thumbWithSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "byDrawingImage",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "fromRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "thumbFromImage:centeredInSize:": {
+      "name": "thumbFromImage:centeredInSize:",
+      "bridgedName": "thumbFromImage_centeredInSize",
+      "args": [
+        {
+          "name": "thumbFromImage",
+          "type": "id"
+        },
+        {
+          "name": "centeredInSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "centeredThumbFromImage:": {
+      "name": "centeredThumbFromImage:",
+      "bridgedName": "centeredThumbFromImage",
+      "args": [
+        {
+          "name": "centeredThumbFromImage",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "preview": {
+      "name": "preview",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "libraryPreview": {
+      "name": "libraryPreview",
+      "pointer": true,
+      "type": "__weak NSImage",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "contentPath": {
+      "name": "contentPath",
+      "pointer": true,
+      "type": "NSBezierPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "previewFrame": {
+      "name": "previewFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

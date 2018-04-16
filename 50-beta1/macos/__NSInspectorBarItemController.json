@@ -1,0 +1,624 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSComboBoxCellDataSource.h",
+    "NSInspectorBarItemController.h",
+    "NSMenuDelegate.h"
+  ],
+  "classes": [
+    "NSColorWell",
+    "NSComboBox",
+    "NSInspectorBar",
+    "NSPopUpButton",
+    "NSSegmentedControl",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "__NSInspectorBarItemController",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSInspectorBarItemController",
+    "NSMenuDelegate",
+    "NSComboBoxCellDataSource"
+  ],
+  "methods": {
+    "favoriteFontSizes": {
+      "name": "favoriteFontSizes",
+      "bridgedName": "favoriteFontSizes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "recentsFontFamilyNames": {
+      "name": "recentsFontFamilyNames",
+      "bridgedName": "recentsFontFamilyNames",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "loadedNib": {
+      "name": "loadedNib",
+      "bridgedName": "loadedNib",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "nibBundle": {
+      "name": "nibBundle",
+      "bridgedName": "nibBundle",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "nibName": {
+      "name": "nibName",
+      "bridgedName": "nibName",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyForItemIdentifier:": {
+      "name": "keyForItemIdentifier:",
+      "bridgedName": "keyForItemIdentifier",
+      "args": [
+        {
+          "name": "keyForItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportedInspectorItemIdentifiers": {
+      "name": "supportedInspectorItemIdentifiers",
+      "bridgedName": "supportedInspectorItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultLineHeightForFont:": {
+      "name": "defaultLineHeightForFont:",
+      "bridgedName": "defaultLineHeightForFont",
+      "args": [
+        {
+          "name": "defaultLineHeightForFont",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doUserParagraphStyleLineHeightMultiple:min:max:lineSpacing:paragraphSpacingBefore:after:isFinal:": {
+      "name": "_doUserParagraphStyleLineHeightMultiple:min:max:lineSpacing:paragraphSpacingBefore:after:isFinal:",
+      "bridgedName": "_doUserParagraphStyleLineHeightMultiple_min_max_lineSpacing_paragraphSpacingBefore_after_isFinal",
+      "args": [
+        {
+          "name": "_doUserParagraphStyleLineHeightMultiple",
+          "type": "double"
+        },
+        {
+          "name": "min",
+          "type": "double"
+        },
+        {
+          "name": "max",
+          "type": "double"
+        },
+        {
+          "name": "lineSpacing",
+          "type": "double"
+        },
+        {
+          "name": "paragraphSpacingBefore",
+          "type": "double"
+        },
+        {
+          "name": "after",
+          "type": "double"
+        },
+        {
+          "name": "isFinal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateInspectorItemViewsWithIdentifiers:fontFamilyName:fontFaceName:fontPointSize:foregroundColor:backgroundColor:boldTrait:italicTrait:underlineStyle:strikeThrough:alignment:lineSpacingStyle:textList:": {
+      "name": "updateInspectorItemViewsWithIdentifiers:fontFamilyName:fontFaceName:fontPointSize:foregroundColor:backgroundColor:boldTrait:italicTrait:underlineStyle:strikeThrough:alignment:lineSpacingStyle:textList:",
+      "bridgedName": "updateInspectorItemViewsWithIdentifiers_fontFamilyName_fontFaceName_fontPointSize_foregroundColor_backgroundColor_boldTrait_italicTrait_underlineStyle_strikeThrough_alignment_lineSpacingStyle_textList",
+      "args": [
+        {
+          "name": "updateInspectorItemViewsWithIdentifiers",
+          "type": "id"
+        },
+        {
+          "name": "fontFamilyName",
+          "type": "id"
+        },
+        {
+          "name": "fontFaceName",
+          "type": "id"
+        },
+        {
+          "name": "fontPointSize",
+          "type": "double"
+        },
+        {
+          "name": "foregroundColor",
+          "type": "id"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "id"
+        },
+        {
+          "name": "boldTrait",
+          "type": "BOOL"
+        },
+        {
+          "name": "italicTrait",
+          "type": "BOOL"
+        },
+        {
+          "name": "underlineStyle",
+          "type": "id"
+        },
+        {
+          "name": "strikeThrough",
+          "type": "id"
+        },
+        {
+          "name": "alignment",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "lineSpacingStyle",
+          "type": "id"
+        },
+        {
+          "name": "textList",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateSelectedAttributes": {
+      "name": "updateSelectedAttributes",
+      "bridgedName": "updateSelectedAttributes",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorBarItemCanBeDetached:": {
+      "name": "inspectorBarItemCanBeDetached:",
+      "bridgedName": "inspectorBarItemCanBeDetached",
+      "args": [
+        {
+          "name": "inspectorBarItemCanBeDetached",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewForInspectorBarItem:": {
+      "name": "viewForInspectorBarItem:",
+      "bridgedName": "viewForInspectorBarItem",
+      "args": [
+        {
+          "name": "viewForInspectorBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
+      "args": [
+        {
+          "name": "menuNeedsUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportedInspectorItemViewsDidLoad": {
+      "name": "supportedInspectorItemViewsDidLoad",
+      "bridgedName": "supportedInspectorItemViewsDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadNib": {
+      "name": "_loadNib",
+      "bridgedName": "_loadNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_colorAction:": {
+      "name": "_colorAction:",
+      "bridgedName": "_colorAction",
+      "args": [
+        {
+          "name": "_colorAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_listAction:": {
+      "name": "_listAction:",
+      "bridgedName": "_listAction",
+      "args": [
+        {
+          "name": "_listAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lineSpacingAction:": {
+      "name": "_lineSpacingAction:",
+      "bridgedName": "_lineSpacingAction",
+      "args": [
+        {
+          "name": "_lineSpacingAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alignmentAction:": {
+      "name": "_alignmentAction:",
+      "bridgedName": "_alignmentAction",
+      "args": [
+        {
+          "name": "_alignmentAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fontStyleAction:": {
+      "name": "_fontStyleAction:",
+      "bridgedName": "_fontStyleAction",
+      "args": [
+        {
+          "name": "_fontStyleAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "comboBox:objectValueForItemAtIndex:": {
+      "name": "comboBox:objectValueForItemAtIndex:",
+      "bridgedName": "comboBox_objectValueForItemAtIndex",
+      "args": [
+        {
+          "name": "comboBox",
+          "type": "id"
+        },
+        {
+          "name": "objectValueForItemAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfItemsInComboBox:": {
+      "name": "numberOfItemsInComboBox:",
+      "bridgedName": "numberOfItemsInComboBox",
+      "args": [
+        {
+          "name": "numberOfItemsInComboBox",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateMainFontSection": {
+      "name": "_updateMainFontSection",
+      "bridgedName": "_updateMainFontSection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateUserFontSection": {
+      "name": "_updateUserFontSection",
+      "bridgedName": "_updateUserFontSection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateRecentsFontSection": {
+      "name": "_updateRecentsFontSection",
+      "bridgedName": "_updateRecentsFontSection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fontSizeItemWasClicked:": {
+      "name": "fontSizeItemWasClicked:",
+      "bridgedName": "fontSizeItemWasClicked",
+      "args": [
+        {
+          "name": "fontSizeItemWasClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fontSizeAction:": {
+      "name": "_fontSizeAction:",
+      "bridgedName": "_fontSizeAction",
+      "args": [
+        {
+          "name": "_fontSizeAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fontPopupAction:": {
+      "name": "_fontPopupAction:",
+      "bridgedName": "_fontPopupAction",
+      "args": [
+        {
+          "name": "_fontPopupAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateStylePopup": {
+      "name": "_updateStylePopup",
+      "bridgedName": "_updateStylePopup",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stylePopupAction:": {
+      "name": "_stylePopupAction:",
+      "bridgedName": "_stylePopupAction",
+      "args": [
+        {
+          "name": "_stylePopupAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertAttributes:": {
+      "name": "convertAttributes:",
+      "bridgedName": "convertAttributes",
+      "args": [
+        {
+          "name": "convertAttributes",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertFont:": {
+      "name": "convertFont:",
+      "bridgedName": "convertFont",
+      "args": [
+        {
+          "name": "convertFont",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidationNotification:": {
+      "name": "_invalidationNotification:",
+      "bridgedName": "_invalidationNotification",
+      "args": [
+        {
+          "name": "_invalidationNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithInspectorBar:": {
+      "name": "initWithInspectorBar:",
+      "bridgedName": "initWithInspectorBar",
+      "args": [
+        {
+          "name": "initWithInspectorBar",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "listPopup": {
+      "name": "listPopup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "lineSpacingPopup": {
+      "name": "lineSpacingPopup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "alignmentSwitches": {
+      "name": "alignmentSwitches",
+      "pointer": true,
+      "type": "NSSegmentedControl",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "textStyleSwitches": {
+      "name": "textStyleSwitches",
+      "pointer": true,
+      "type": "NSSegmentedControl",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "backgroundColorWell": {
+      "name": "backgroundColorWell",
+      "pointer": true,
+      "type": "NSColorWell",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "foregroundColorWell": {
+      "name": "foregroundColorWell",
+      "pointer": true,
+      "type": "NSColorWell",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "fontSizeComboBox": {
+      "name": "fontSizeComboBox",
+      "pointer": true,
+      "type": "NSComboBox",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "fontFacePopup": {
+      "name": "fontFacePopup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "fontFamilyPopup": {
+      "name": "fontFamilyPopup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "stylePopup": {
+      "name": "stylePopup",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "client": {
+      "name": "client",
+      "pointer": false,
+      "type": "id <NSInspectorBarClient><NSTextInputClient>",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

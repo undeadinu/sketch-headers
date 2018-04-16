@@ -1,0 +1,287 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSAlignmentFeedbackFilter",
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "_NSAlignmentFeedbackFilterImpl",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "inputEventMask": {
+      "name": "inputEventMask",
+      "bridgedName": "inputEventMask",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "performFeedback:performanceTime:": {
+      "name": "performFeedback:performanceTime:",
+      "bridgedName": "performFeedback_performanceTime",
+      "args": [
+        {
+          "name": "performFeedback",
+          "type": "id"
+        },
+        {
+          "name": "performanceTime",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentFeedbackTokenForVerticalMovementInView:previousY:alignedY:defaultY:": {
+      "name": "alignmentFeedbackTokenForVerticalMovementInView:previousY:alignedY:defaultY:",
+      "bridgedName": "alignmentFeedbackTokenForVerticalMovementInView_previousY_alignedY_defaultY",
+      "args": [
+        {
+          "name": "alignmentFeedbackTokenForVerticalMovementInView",
+          "type": "id"
+        },
+        {
+          "name": "previousY",
+          "type": "double"
+        },
+        {
+          "name": "alignedY",
+          "type": "double"
+        },
+        {
+          "name": "defaultY",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentFeedbackTokenForHorizontalMovementInView:previousX:alignedX:defaultX:": {
+      "name": "alignmentFeedbackTokenForHorizontalMovementInView:previousX:alignedX:defaultX:",
+      "bridgedName": "alignmentFeedbackTokenForHorizontalMovementInView_previousX_alignedX_defaultX",
+      "args": [
+        {
+          "name": "alignmentFeedbackTokenForHorizontalMovementInView",
+          "type": "id"
+        },
+        {
+          "name": "previousX",
+          "type": "double"
+        },
+        {
+          "name": "alignedX",
+          "type": "double"
+        },
+        {
+          "name": "defaultX",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentFeedbackTokenForMovementInView:previousPoint:alignedPoint:defaultPoint:": {
+      "name": "alignmentFeedbackTokenForMovementInView:previousPoint:alignedPoint:defaultPoint:",
+      "bridgedName": "alignmentFeedbackTokenForMovementInView_previousPoint_alignedPoint_defaultPoint",
+      "args": [
+        {
+          "name": "alignmentFeedbackTokenForMovementInView",
+          "type": "id"
+        },
+        {
+          "name": "previousPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "alignedPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "defaultPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateWithPanRecognizer:": {
+      "name": "updateWithPanRecognizer:",
+      "bridgedName": "updateWithPanRecognizer",
+      "args": [
+        {
+          "name": "updateWithPanRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateWithEvent:": {
+      "name": "updateWithEvent:",
+      "bridgedName": "updateWithEvent",
+      "args": [
+        {
+          "name": "updateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isVerticalVelocityAlignable": {
+      "name": "_isVerticalVelocityAlignable",
+      "bridgedName": "_isVerticalVelocityAlignable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isHorizontalVelocityAlignable": {
+      "name": "_isHorizontalVelocityAlignable",
+      "bridgedName": "_isHorizontalVelocityAlignable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSnapDistance:": {
+      "name": "_setSnapDistance:",
+      "bridgedName": "_setSnapDistance",
+      "args": [
+        {
+          "name": "_setSnapDistance",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setActuationBlock:coalesce:": {
+      "name": "_setActuationBlock:coalesce:",
+      "bridgedName": "_setActuationBlock_coalesce",
+      "args": [
+        {
+          "name": "_setActuationBlock",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "coalesce",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_actuationBlock": {
+      "name": "_actuationBlock",
+      "bridgedName": "_actuationBlock",
+      "args": [],
+      "returns": "CDUnknownBlockType",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDragOnLocation:timestamp:modifierFlags:recognizer:": {
+      "name": "_updateDragOnLocation:timestamp:modifierFlags:recognizer:",
+      "bridgedName": "_updateDragOnLocation_timestamp_modifierFlags_recognizer",
+      "args": [
+        {
+          "name": "_updateDragOnLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "timestamp",
+          "type": "double"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "recognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearPeriodicTimer": {
+      "name": "_clearPeriodicTimer",
+      "bridgedName": "_clearPeriodicTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_schedulePeriodicUpdateWithRecognizer:": {
+      "name": "_schedulePeriodicUpdateWithRecognizer:",
+      "bridgedName": "_schedulePeriodicUpdateWithRecognizer",
+      "args": [
+        {
+          "name": "_schedulePeriodicUpdateWithRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_requestPeriodicUpdate": {
+      "name": "_requestPeriodicUpdate",
+      "bridgedName": "_requestPeriodicUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_modifierFlagsAllowAlignment": {
+      "name": "_modifierFlagsAllowAlignment",
+      "bridgedName": "_modifierFlagsAllowAlignment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFilter:": {
+      "name": "initWithFilter:",
+      "bridgedName": "initWithFilter",
+      "args": [
+        {
+          "name": "initWithFilter",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reset": {
+      "name": "_reset",
+      "bridgedName": "_reset",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

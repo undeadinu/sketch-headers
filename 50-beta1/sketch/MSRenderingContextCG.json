@@ -1,0 +1,748 @@
+{
+  "imports": [
+    "MSRenderingContext.h"
+  ],
+  "classes": [
+    "MSCGContextPool",
+    "NSGraphicsContext",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "MSRenderingContextCG",
+  "extends": "MSRenderingContext",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDrawFills": {
+      "name": "shouldDrawFills",
+      "bridgedName": "shouldDrawFills",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ifCondition:skipDrawingFillsInBlock:": {
+      "name": "ifCondition:skipDrawingFillsInBlock:",
+      "bridgedName": "ifCondition_skipDrawingFillsInBlock",
+      "args": [
+        {
+          "name": "ifCondition",
+          "type": "BOOL"
+        },
+        {
+          "name": "skipDrawingFillsInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldClipFills": {
+      "name": "shouldClipFills",
+      "bridgedName": "shouldClipFills",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doNotClipFillsInBlock:": {
+      "name": "doNotClipFillsInBlock:",
+      "bridgedName": "doNotClipFillsInBlock",
+      "args": [
+        {
+          "name": "doNotClipFillsInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyStrokeColor:": {
+      "name": "applyStrokeColor:",
+      "bridgedName": "applyStrokeColor",
+      "args": [
+        {
+          "name": "applyStrokeColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyFillColor:": {
+      "name": "applyFillColor:",
+      "bridgedName": "applyFillColor",
+      "args": [
+        {
+          "name": "applyFillColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clipToRect:": {
+      "name": "clipToRect:",
+      "bridgedName": "clipToRect",
+      "args": [
+        {
+          "name": "clipToRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyShadow:withXOffset:respectFlipped:": {
+      "name": "applyShadow:withXOffset:respectFlipped:",
+      "bridgedName": "applyShadow_withXOffset_respectFlipped",
+      "args": [
+        {
+          "name": "applyShadow",
+          "type": "id"
+        },
+        {
+          "name": "withXOffset",
+          "type": "double"
+        },
+        {
+          "name": "respectFlipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyShadow:withXOffset:": {
+      "name": "applyShadow:withXOffset:",
+      "bridgedName": "applyShadow_withXOffset",
+      "args": [
+        {
+          "name": "applyShadow",
+          "type": "id"
+        },
+        {
+          "name": "withXOffset",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyShadow:respectFlipped:": {
+      "name": "applyShadow:respectFlipped:",
+      "bridgedName": "applyShadow_respectFlipped",
+      "args": [
+        {
+          "name": "applyShadow",
+          "type": "id"
+        },
+        {
+          "name": "respectFlipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyShadow:": {
+      "name": "applyShadow:",
+      "bridgedName": "applyShadow",
+      "args": [
+        {
+          "name": "applyShadow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldSkipDrawingShadow:": {
+      "name": "shouldSkipDrawingShadow:",
+      "bridgedName": "shouldSkipDrawingShadow",
+      "args": [
+        {
+          "name": "shouldSkipDrawingShadow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderRect:withStyle:": {
+      "name": "renderRect:withStyle:",
+      "bridgedName": "renderRect_withStyle",
+      "args": [
+        {
+          "name": "renderRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "withStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderLayer:ignoreCacheAndDrawingArea:": {
+      "name": "renderLayer:ignoreCacheAndDrawingArea:",
+      "bridgedName": "renderLayer_ignoreCacheAndDrawingArea",
+      "args": [
+        {
+          "name": "renderLayer",
+          "type": "id"
+        },
+        {
+          "name": "ignoreCacheAndDrawingArea",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tearDown": {
+      "name": "tearDown",
+      "bridgedName": "tearDown",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldDisableSubpixelQuantization": {
+      "name": "shouldDisableSubpixelQuantization",
+      "bridgedName": "shouldDisableSubpixelQuantization",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsSubpixelQuantization": {
+      "name": "allowsSubpixelQuantization",
+      "bridgedName": "allowsSubpixelQuantization",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsSubpixelQuantization:": {
+      "name": "allowsSubpixelQuantization:",
+      "bridgedName": "allowsSubpixelQuantization",
+      "args": [
+        {
+          "name": "allowsSubpixelQuantization",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupCGContext:withRenderingRequest:": {
+      "name": "setupCGContext:withRenderingRequest:",
+      "bridgedName": "setupCGContext_withRenderingRequest",
+      "args": [
+        {
+          "name": "setupCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "withRenderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasGraphicsContext": {
+      "name": "hasGraphicsContext",
+      "bridgedName": "hasGraphicsContext",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUp": {
+      "name": "setUp",
+      "bridgedName": "setUp",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "zoomLevelForShadows": {
+      "name": "zoomLevelForShadows",
+      "bridgedName": "zoomLevelForShadows",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endBitmapTransparencyLayer:": {
+      "name": "endBitmapTransparencyLayer:",
+      "bridgedName": "endBitmapTransparencyLayer",
+      "args": [
+        {
+          "name": "endBitmapTransparencyLayer",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endQuartzTransparencyLayer:": {
+      "name": "endQuartzTransparencyLayer:",
+      "bridgedName": "endQuartzTransparencyLayer",
+      "args": [
+        {
+          "name": "endQuartzTransparencyLayer",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endTransparencyLayer:": {
+      "name": "endTransparencyLayer:",
+      "bridgedName": "endTransparencyLayer",
+      "args": [
+        {
+          "name": "endTransparencyLayer",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginQuartzTransparencyLayerInRect:": {
+      "name": "beginQuartzTransparencyLayerInRect:",
+      "bridgedName": "beginQuartzTransparencyLayerInRect",
+      "args": [
+        {
+          "name": "beginQuartzTransparencyLayerInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginTransparencyLayerInRect:inheritClip:": {
+      "name": "beginTransparencyLayerInRect:inheritClip:",
+      "bridgedName": "beginTransparencyLayerInRect_inheritClip",
+      "args": [
+        {
+          "name": "beginTransparencyLayerInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inheritClip",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginBitmapTransparencyLayerInRect:inheritClip:": {
+      "name": "beginBitmapTransparencyLayerInRect:inheritClip:",
+      "bridgedName": "beginBitmapTransparencyLayerInRect_inheritClip",
+      "args": [
+        {
+          "name": "beginBitmapTransparencyLayerInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inheritClip",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginTransparencyLayer": {
+      "name": "beginTransparencyLayer",
+      "bridgedName": "beginTransparencyLayer",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "newTransparencyLayerContextForContext:size:": {
+      "name": "newTransparencyLayerContextForContext:size:",
+      "bridgedName": "newTransparencyLayerContextForContext_size",
+      "args": [
+        {
+          "name": "newTransparencyLayerContextForContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "size",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGContext *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setBlendMode:": {
+      "name": "setBlendMode:",
+      "bridgedName": "setBlendMode",
+      "args": [
+        {
+          "name": "setBlendMode",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAlpha:": {
+      "name": "setAlpha:",
+      "bridgedName": "setAlpha",
+      "args": [
+        {
+          "name": "setAlpha",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popGraphicsState": {
+      "name": "popGraphicsState",
+      "bridgedName": "popGraphicsState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pushGraphicsState": {
+      "name": "pushGraphicsState",
+      "bridgedName": "pushGraphicsState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "concatTransform:": {
+      "name": "concatTransform:",
+      "bridgedName": "concatTransform",
+      "args": [
+        {
+          "name": "concatTransform",
+          "type": "struct CGAffineTransform"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContextRef:": {
+      "name": "setContextRef:",
+      "bridgedName": "setContextRef",
+      "args": [
+        {
+          "name": "setContextRef",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bitmapBackedSubContextWithCGContext:size:": {
+      "name": "bitmapBackedSubContextWithCGContext:size:",
+      "bridgedName": "bitmapBackedSubContextWithCGContext_size",
+      "args": [
+        {
+          "name": "bitmapBackedSubContextWithCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "size",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "blurSubContextWithCGContext:backgroundBlurLayer:pointScale:rect:": {
+      "name": "blurSubContextWithCGContext:backgroundBlurLayer:pointScale:rect:",
+      "bridgedName": "blurSubContextWithCGContext_backgroundBlurLayer_pointScale_rect",
+      "args": [
+        {
+          "name": "blurSubContextWithCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "backgroundBlurLayer",
+          "type": "id"
+        },
+        {
+          "name": "pointScale",
+          "type": "double"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subContextWithCGContext:contextIsVectorBacked:pointScale:zoomLevel:options:": {
+      "name": "subContextWithCGContext:contextIsVectorBacked:pointScale:zoomLevel:options:",
+      "bridgedName": "subContextWithCGContext_contextIsVectorBacked_pointScale_zoomLevel_options",
+      "args": [
+        {
+          "name": "subContextWithCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "pointScale",
+          "type": "double"
+        },
+        {
+          "name": "zoomLevel",
+          "type": "double"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subContextWithCGContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "subContextWithCGContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "subContextWithCGContext_contextIsVectorBacked_renderingRequest",
+      "args": [
+        {
+          "name": "subContextWithCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "subContextWithDefaultSettingsForCGContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "subContextWithDefaultSettingsForCGContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "subContextWithDefaultSettingsForCGContext_contextIsVectorBacked_renderingRequest",
+      "args": [
+        {
+          "name": "subContextWithDefaultSettingsForCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:driver:cgContext:contextIsVectorBacked:renderingRequest:": {
+      "name": "initWithName:driver:cgContext:contextIsVectorBacked:renderingRequest:",
+      "bridgedName": "initWithName_driver_cgContext_contextIsVectorBacked_renderingRequest",
+      "args": [
+        {
+          "name": "initWithName",
+          "type": "id"
+        },
+        {
+          "name": "driver",
+          "type": "id"
+        },
+        {
+          "name": "cgContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "contextIsVectorBacked",
+          "type": "BOOL"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:driver:context:renderingRequest:": {
+      "name": "initWithName:driver:context:renderingRequest:",
+      "bridgedName": "initWithName_driver_context_renderingRequest",
+      "args": [
+        {
+          "name": "initWithName",
+          "type": "id"
+        },
+        {
+          "name": "driver",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:driver:renderingRequest:": {
+      "name": "initWithName:driver:renderingRequest:",
+      "bridgedName": "initWithName_driver_renderingRequest",
+      "args": [
+        {
+          "name": "initWithName",
+          "type": "id"
+        },
+        {
+          "name": "driver",
+          "type": "id"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "disableDrawingFillsCounter": {
+      "name": "disableDrawingFillsCounter",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "disableClippingFillsCounter": {
+      "name": "disableClippingFillsCounter",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "bitmapTransparencyLayerSavedStates": {
+      "name": "bitmapTransparencyLayerSavedStates",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "savedContextRef": {
+      "name": "savedContextRef",
+      "pointer": true,
+      "type": "struct CGContext",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "graphicsContext": {
+      "name": "graphicsContext",
+      "pointer": true,
+      "type": "NSGraphicsContext",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contextPool": {
+      "name": "contextPool",
+      "pointer": true,
+      "type": "MSCGContextPool",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "contextRef": {
+      "name": "contextRef",
+      "pointer": true,
+      "type": "struct CGContext",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "contextIsVectorBacked": {
+      "name": "contextIsVectorBacked",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

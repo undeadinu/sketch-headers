@@ -1,0 +1,250 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSData",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSVersionedArchive",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "versionedURLWithBase:extension:version:": {
+      "name": "versionedURLWithBase:extension:version:",
+      "bridgedName": "versionedURLWithBase_extension_version",
+      "args": [
+        {
+          "name": "versionedURLWithBase",
+          "type": "id"
+        },
+        {
+          "name": "extension",
+          "type": "id"
+        },
+        {
+          "name": "version",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "globalDirectory": {
+      "name": "globalDirectory",
+      "bridgedName": "globalDirectory",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "URLForArchiveWithName:extension:version:": {
+      "name": "URLForArchiveWithName:extension:version:",
+      "bridgedName": "URLForArchiveWithName_extension_version",
+      "args": [
+        {
+          "name": "URLForArchiveWithName",
+          "type": "id"
+        },
+        {
+          "name": "extension",
+          "type": "id"
+        },
+        {
+          "name": "version",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "globalArchiveWithName:extension:version:": {
+      "name": "globalArchiveWithName:extension:version:",
+      "bridgedName": "globalArchiveWithName_extension_version",
+      "args": [
+        {
+          "name": "globalArchiveWithName",
+          "type": "id"
+        },
+        {
+          "name": "extension",
+          "type": "id"
+        },
+        {
+          "name": "version",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cleanupAfterTesting": {
+      "name": "cleanupAfterTesting",
+      "bridgedName": "cleanupAfterTesting",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "archiveRootObject:error:": {
+      "name": "archiveRootObject:error:",
+      "bridgedName": "archiveRootObject_error",
+      "args": [
+        {
+          "name": "archiveRootObject",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unarchiveRootObjectVersion:error:": {
+      "name": "unarchiveRootObjectVersion:error:",
+      "bridgedName": "unarchiveRootObjectVersion_error",
+      "args": [
+        {
+          "name": "unarchiveRootObjectVersion",
+          "type": "long long *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exists": {
+      "name": "exists",
+      "bridgedName": "exists",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URLNeedingMigration": {
+      "name": "URLNeedingMigration",
+      "bridgedName": "URLNeedingMigration",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "existingURLFoundAtBaseURL:": {
+      "name": "existingURLFoundAtBaseURL:",
+      "bridgedName": "existingURLFoundAtBaseURL",
+      "args": [
+        {
+          "name": "existingURLFoundAtBaseURL",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "existingURL": {
+      "name": "existingURL",
+      "bridgedName": "existingURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "existingURLBasedOnFullURL:": {
+      "name": "existingURLBasedOnFullURL:",
+      "bridgedName": "existingURLBasedOnFullURL",
+      "args": [
+        {
+          "name": "existingURLBasedOnFullURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithURL:version:": {
+      "name": "initWithURL:version:",
+      "bridgedName": "initWithURL_version",
+      "args": [
+        {
+          "name": "initWithURL",
+          "type": "id"
+        },
+        {
+          "name": "version",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "alternateFolder": {
+      "name": "alternateFolder",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "version": {
+      "name": "version",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "data": {
+      "name": "data",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "baseURL": {
+      "name": "baseURL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "url": {
+      "name": "url",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}
