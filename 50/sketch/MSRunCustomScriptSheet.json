@@ -1,0 +1,276 @@
+{
+  "imports": [
+    "CHSheetController.h",
+    "NSTextViewDelegate.h"
+  ],
+  "classes": [
+    "JSTTextView",
+    "NSButton",
+    "NSString",
+    "NSTextField",
+    "NSTextView",
+    "NSUndoManager"
+  ],
+  "protocol": false,
+  "className": "MSRunCustomScriptSheet",
+  "extends": "CHSheetController",
+  "interfaces": [
+    "NSTextViewDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "redoAction:": {
+      "name": "redoAction:",
+      "bridgedName": "redoAction",
+      "args": [
+        {
+          "name": "redoAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoAction:": {
+      "name": "undoAction:",
+      "bridgedName": "undoAction",
+      "args": [
+        {
+          "name": "undoAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoManagerForTextView:": {
+      "name": "undoManagerForTextView:",
+      "bridgedName": "undoManagerForTextView",
+      "args": [
+        {
+          "name": "undoManagerForTextView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingMenuAction:": {
+      "name": "scriptingMenuAction:",
+      "bridgedName": "scriptingMenuAction",
+      "args": [
+        {
+          "name": "scriptingMenuAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commentSelection:": {
+      "name": "commentSelection:",
+      "bridgedName": "commentSelection",
+      "args": [
+        {
+          "name": "commentSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveAction:": {
+      "name": "saveAction:",
+      "bridgedName": "saveAction",
+      "args": [
+        {
+          "name": "saveAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showHelp:": {
+      "name": "showHelp:",
+      "bridgedName": "showHelp",
+      "args": [
+        {
+          "name": "showHelp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runScript:": {
+      "name": "runScript:",
+      "bridgedName": "runScript",
+      "args": [
+        {
+          "name": "runScript",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBar:makeItemForIdentifier:": {
+      "name": "touchBar:makeItemForIdentifier:",
+      "bridgedName": "touchBar_makeItemForIdentifier",
+      "args": [
+        {
+          "name": "touchBar",
+          "type": "id"
+        },
+        {
+          "name": "makeItemForIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectorForTouchbarItemIdentifier:": {
+      "name": "selectorForTouchbarItemIdentifier:",
+      "bridgedName": "selectorForTouchbarItemIdentifier",
+      "args": [
+        {
+          "name": "selectorForTouchbarItemIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "SEL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBarItemIdentifiers": {
+      "name": "touchBarItemIdentifiers",
+      "bridgedName": "touchBarItemIdentifiers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commandToRunWithName:": {
+      "name": "commandToRunWithName:",
+      "bridgedName": "commandToRunWithName",
+      "args": [
+        {
+          "name": "commandToRunWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "touchBarRun": {
+      "name": "touchBarRun",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "touchBarSave": {
+      "name": "touchBarSave",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "undoManager": {
+      "name": "undoManager",
+      "pointer": true,
+      "type": "NSUndoManager",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "logField": {
+      "name": "logField",
+      "pointer": true,
+      "type": "NSTextView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

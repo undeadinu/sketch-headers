@@ -1,0 +1,415 @@
+{
+  "imports": [
+    "NSColorPickingCustom.h"
+  ],
+  "classes": [
+    "NSMenuItem",
+    "NSMutableDictionary",
+    "NSPopUpButton",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSColorPickerUser",
+  "extends": "NSColorPicker",
+  "interfaces": [
+    "NSColorPickingCustom"
+  ],
+  "methods": {
+    "remove:": {
+      "name": "remove:",
+      "bridgedName": "remove",
+      "args": [
+        {
+          "name": "remove",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_remove:": {
+      "name": "_remove:",
+      "bridgedName": "_remove",
+      "args": [
+        {
+          "name": "_remove",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeOrRename:": {
+      "name": "_removeOrRename:",
+      "bridgedName": "_removeOrRename",
+      "args": [
+        {
+          "name": "_removeOrRename",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paste:": {
+      "name": "paste:",
+      "bridgedName": "paste",
+      "args": [
+        {
+          "name": "paste",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy:": {
+      "name": "copy:",
+      "bridgedName": "copy",
+      "args": [
+        {
+          "name": "copy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rename:": {
+      "name": "rename:",
+      "bridgedName": "rename",
+      "args": [
+        {
+          "name": "rename",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rename:": {
+      "name": "_rename:",
+      "bridgedName": "_rename",
+      "args": [
+        {
+          "name": "_rename",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateRename": {
+      "name": "validateRename",
+      "bridgedName": "validateRename",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_popUpButton": {
+      "name": "_popUpButton",
+      "bridgedName": "_popUpButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "open:": {
+      "name": "open:",
+      "bridgedName": "open",
+      "args": [
+        {
+          "name": "open",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_open:": {
+      "name": "_open:",
+      "bridgedName": "_open",
+      "args": [
+        {
+          "name": "_open",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_open:fromImage:withName:": {
+      "name": "_open:fromImage:withName:",
+      "bridgedName": "_open_fromImage_withName",
+      "args": [
+        {
+          "name": "_open",
+          "type": "id"
+        },
+        {
+          "name": "fromImage",
+          "type": "id"
+        },
+        {
+          "name": "withName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addImage:named:": {
+      "name": "_addImage:named:",
+      "bridgedName": "_addImage_named",
+      "args": [
+        {
+          "name": "_addImage",
+          "type": "id"
+        },
+        {
+          "name": "named",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newImageName:": {
+      "name": "_newImageName:",
+      "bridgedName": "_newImageName",
+      "args": [
+        {
+          "name": "_newImageName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchImage:": {
+      "name": "switchImage:",
+      "bridgedName": "switchImage",
+      "args": [
+        {
+          "name": "switchImage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchImage:andUpdateColor:": {
+      "name": "_switchImage:andUpdateColor:",
+      "bridgedName": "_switchImage_andUpdateColor",
+      "args": [
+        {
+          "name": "_switchImage",
+          "type": "id"
+        },
+        {
+          "name": "andUpdateColor",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "worksWhenModal": {
+      "name": "worksWhenModal",
+      "bridgedName": "worksWhenModal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restoreMode": {
+      "name": "_restoreMode",
+      "bridgedName": "_restoreMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_saveMode": {
+      "name": "_saveMode",
+      "bridgedName": "_saveMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setColor:": {
+      "name": "setColor:",
+      "bridgedName": "setColor",
+      "args": [
+        {
+          "name": "setColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentMode": {
+      "name": "currentMode",
+      "bridgedName": "currentMode",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsMode:": {
+      "name": "supportsMode:",
+      "bridgedName": "supportsMode",
+      "args": [
+        {
+          "name": "supportsMode",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buttonToolTip": {
+      "name": "buttonToolTip",
+      "bridgedName": "buttonToolTip",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertionOrder": {
+      "name": "_insertionOrder",
+      "bridgedName": "_insertionOrder",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteItemUpdate:": {
+      "name": "pasteItemUpdate:",
+      "bridgedName": "pasteItemUpdate",
+      "args": [
+        {
+          "name": "pasteItemUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideNewView:": {
+      "name": "provideNewView:",
+      "bridgedName": "provideNewView",
+      "args": [
+        {
+          "name": "provideNewView",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPickerMask:colorPanel:": {
+      "name": "initWithPickerMask:colorPanel:",
+      "bridgedName": "initWithPickerMask_colorPanel",
+      "args": [
+        {
+          "name": "initWithPickerMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "colorPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveImageNamed:andShowWarnings:": {
+      "name": "saveImageNamed:andShowWarnings:",
+      "bridgedName": "saveImageNamed_andShowWarnings",
+      "args": [
+        {
+          "name": "saveImageNamed",
+          "type": "id"
+        },
+        {
+          "name": "andShowWarnings",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shortNameFor:": {
+      "name": "_shortNameFor:",
+      "bridgedName": "_shortNameFor",
+      "args": [
+        {
+          "name": "_shortNameFor",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCurrImageName:": {
+      "name": "_setCurrImageName:",
+      "bridgedName": "_setCurrImageName",
+      "args": [
+        {
+          "name": "_setCurrImageName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageFromItemTitle:": {
+      "name": "_imageFromItemTitle:",
+      "bridgedName": "_imageFromItemTitle",
+      "args": [
+        {
+          "name": "_imageFromItemTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

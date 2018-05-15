@@ -1,0 +1,824 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [],
+  "protocol": false,
+  "className": "_NSPredicateUtilities",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "_constantValueClassesForSecureCoding": {
+      "name": "_constantValueClassesForSecureCoding",
+      "bridgedName": "_constantValueClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_operatorClassesForSecureCoding": {
+      "name": "_operatorClassesForSecureCoding",
+      "bridgedName": "_operatorClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_extendedExpressionClassesForSecureCoding": {
+      "name": "_extendedExpressionClassesForSecureCoding",
+      "bridgedName": "_extendedExpressionClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_expressionClassesForSecureCoding": {
+      "name": "_expressionClassesForSecureCoding",
+      "bridgedName": "_expressionClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_compoundPredicateClassesForSecureCoding": {
+      "name": "_compoundPredicateClassesForSecureCoding",
+      "bridgedName": "_compoundPredicateClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_predicateClassesForSecureCoding": {
+      "name": "_predicateClassesForSecureCoding",
+      "bridgedName": "_predicateClassesForSecureCoding",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_parserableCollectionDescription:": {
+      "name": "_parserableCollectionDescription:",
+      "bridgedName": "_parserableCollectionDescription",
+      "args": [
+        {
+          "name": "_parserableCollectionDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_parserableDateDescription:": {
+      "name": "_parserableDateDescription:",
+      "bridgedName": "_parserableDateDescription",
+      "args": [
+        {
+          "name": "_parserableDateDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_parserableStringDescription:": {
+      "name": "_parserableStringDescription:",
+      "bridgedName": "_parserableStringDescription",
+      "args": [
+        {
+          "name": "_parserableStringDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isReservedWordInParser:": {
+      "name": "_isReservedWordInParser:",
+      "bridgedName": "_isReservedWordInParser",
+      "args": [
+        {
+          "name": "_isReservedWordInParser",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "inverseOrderKey:": {
+      "name": "inverseOrderKey:",
+      "bridgedName": "inverseOrderKey",
+      "args": [
+        {
+          "name": "inverseOrderKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "distinct:": {
+      "name": "distinct:",
+      "bridgedName": "distinct",
+      "args": [
+        {
+          "name": "distinct",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "indexed:by:": {
+      "name": "indexed:by:",
+      "bridgedName": "indexed_by",
+      "args": [
+        {
+          "name": "indexed",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "noindex:": {
+      "name": "noindex:",
+      "bridgedName": "noindex",
+      "args": [
+        {
+          "name": "noindex",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "onesComplement:": {
+      "name": "onesComplement:",
+      "bridgedName": "onesComplement",
+      "args": [
+        {
+          "name": "onesComplement",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "rightshift:by:": {
+      "name": "rightshift:by:",
+      "bridgedName": "rightshift_by",
+      "args": [
+        {
+          "name": "rightshift",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "leftshift:by:": {
+      "name": "leftshift:by:",
+      "bridgedName": "leftshift_by",
+      "args": [
+        {
+          "name": "leftshift",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "bitwiseXor:with:": {
+      "name": "bitwiseXor:with:",
+      "bridgedName": "bitwiseXor_with",
+      "args": [
+        {
+          "name": "bitwiseXor",
+          "type": "id"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "bitwiseOr:with:": {
+      "name": "bitwiseOr:with:",
+      "bridgedName": "bitwiseOr_with",
+      "args": [
+        {
+          "name": "bitwiseOr",
+          "type": "id"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "bitwiseAnd:with:": {
+      "name": "bitwiseAnd:with:",
+      "bridgedName": "bitwiseAnd_with",
+      "args": [
+        {
+          "name": "bitwiseAnd",
+          "type": "id"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "distanceToLocation:fromLocation:": {
+      "name": "distanceToLocation:fromLocation:",
+      "bridgedName": "distanceToLocation_fromLocation",
+      "args": [
+        {
+          "name": "distanceToLocation",
+          "type": "id"
+        },
+        {
+          "name": "fromLocation",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "now": {
+      "name": "now",
+      "bridgedName": "now",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "objectFrom:withIndex:": {
+      "name": "objectFrom:withIndex:",
+      "bridgedName": "objectFrom_withIndex",
+      "args": [
+        {
+          "name": "objectFrom",
+          "type": "id"
+        },
+        {
+          "name": "withIndex",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "randomn:": {
+      "name": "randomn:",
+      "bridgedName": "randomn",
+      "args": [
+        {
+          "name": "randomn",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "random": {
+      "name": "random",
+      "bridgedName": "random",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "castObject:toType:": {
+      "name": "castObject:toType:",
+      "bridgedName": "castObject_toType",
+      "args": [
+        {
+          "name": "castObject",
+          "type": "id"
+        },
+        {
+          "name": "toType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_convertStringToNumber:": {
+      "name": "_convertStringToNumber:",
+      "bridgedName": "_convertStringToNumber",
+      "args": [
+        {
+          "name": "_convertStringToNumber",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "length:": {
+      "name": "length:",
+      "bridgedName": "length",
+      "args": [
+        {
+          "name": "length",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "lowercase:": {
+      "name": "lowercase:",
+      "bridgedName": "lowercase",
+      "args": [
+        {
+          "name": "lowercase",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "uppercase:": {
+      "name": "uppercase:",
+      "bridgedName": "uppercase",
+      "args": [
+        {
+          "name": "uppercase",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "tokenize:using:": {
+      "name": "tokenize:using:",
+      "bridgedName": "tokenize_using",
+      "args": [
+        {
+          "name": "tokenize",
+          "type": "id"
+        },
+        {
+          "name": "using",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_collapseAndTokenize:flags:locale:": {
+      "name": "_collapseAndTokenize:flags:locale:",
+      "bridgedName": "_collapseAndTokenize_flags_locale",
+      "args": [
+        {
+          "name": "_collapseAndTokenize",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_processAndTokenize:flags:locale:": {
+      "name": "_processAndTokenize:flags:locale:",
+      "bridgedName": "_processAndTokenize_flags_locale",
+      "args": [
+        {
+          "name": "_processAndTokenize",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_doTokenization:locale:": {
+      "name": "_doTokenization:locale:",
+      "bridgedName": "_doTokenization_locale",
+      "args": [
+        {
+          "name": "_doTokenization",
+          "type": "id"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "trunc:": {
+      "name": "trunc:",
+      "bridgedName": "trunc",
+      "args": [
+        {
+          "name": "trunc",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "abs:": {
+      "name": "abs:",
+      "bridgedName": "abs",
+      "args": [
+        {
+          "name": "abs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "ceiling:": {
+      "name": "ceiling:",
+      "bridgedName": "ceiling",
+      "args": [
+        {
+          "name": "ceiling",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "floor:": {
+      "name": "floor:",
+      "bridgedName": "floor",
+      "args": [
+        {
+          "name": "floor",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "exp:": {
+      "name": "exp:",
+      "bridgedName": "exp",
+      "args": [
+        {
+          "name": "exp",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "raise:toPower:": {
+      "name": "raise:toPower:",
+      "bridgedName": "raise_toPower",
+      "args": [
+        {
+          "name": "raise",
+          "type": "id"
+        },
+        {
+          "name": "toPower",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "ln:": {
+      "name": "ln:",
+      "bridgedName": "ln",
+      "args": [
+        {
+          "name": "ln",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "log:": {
+      "name": "log:",
+      "bridgedName": "log",
+      "args": [
+        {
+          "name": "log",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sqrt:": {
+      "name": "sqrt:",
+      "bridgedName": "sqrt",
+      "args": [
+        {
+          "name": "sqrt",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "modulus:by:": {
+      "name": "modulus:by:",
+      "bridgedName": "modulus_by",
+      "args": [
+        {
+          "name": "modulus",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "divide:by:": {
+      "name": "divide:by:",
+      "bridgedName": "divide_by",
+      "args": [
+        {
+          "name": "divide",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "multiply:by:": {
+      "name": "multiply:by:",
+      "bridgedName": "multiply_by",
+      "args": [
+        {
+          "name": "multiply",
+          "type": "id"
+        },
+        {
+          "name": "by",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "from:subtract:": {
+      "name": "from:subtract:",
+      "bridgedName": "from_subtract",
+      "args": [
+        {
+          "name": "from",
+          "type": "id"
+        },
+        {
+          "name": "subtract",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "add:to:": {
+      "name": "add:to:",
+      "bridgedName": "add_to",
+      "args": [
+        {
+          "name": "add",
+          "type": "id"
+        },
+        {
+          "name": "to",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stddev:": {
+      "name": "stddev:",
+      "bridgedName": "stddev",
+      "args": [
+        {
+          "name": "stddev",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mode:": {
+      "name": "mode:",
+      "bridgedName": "mode",
+      "args": [
+        {
+          "name": "mode",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "median:": {
+      "name": "median:",
+      "bridgedName": "median",
+      "args": [
+        {
+          "name": "median",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "average:": {
+      "name": "average:",
+      "bridgedName": "average",
+      "args": [
+        {
+          "name": "average",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "max:": {
+      "name": "max:",
+      "bridgedName": "max",
+      "args": [
+        {
+          "name": "max",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "min:": {
+      "name": "min:",
+      "bridgedName": "min",
+      "args": [
+        {
+          "name": "min",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "count:": {
+      "name": "count:",
+      "bridgedName": "count",
+      "args": [
+        {
+          "name": "count",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sum:": {
+      "name": "sum:",
+      "bridgedName": "sum",
+      "args": [
+        {
+          "name": "sum",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getCommonTypeFor:": {
+      "name": "_getCommonTypeFor:",
+      "bridgedName": "_getCommonTypeFor",
+      "args": [
+        {
+          "name": "_getCommonTypeFor",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getITypeFor:": {
+      "name": "_getITypeFor:",
+      "bridgedName": "_getITypeFor",
+      "args": [
+        {
+          "name": "_getITypeFor",
+          "type": "const char *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "distanceFromLocation:": {
+      "name": "distanceFromLocation:",
+      "bridgedName": "distanceFromLocation",
+      "args": [
+        {
+          "name": "distanceFromLocation",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

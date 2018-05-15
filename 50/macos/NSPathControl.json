@@ -1,0 +1,689 @@
+{
+  "imports": [],
+  "classes": [
+    "NSArray",
+    "NSAttributedString",
+    "NSColor",
+    "NSMenu",
+    "NSPathControlItem",
+    "NSString",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "NSPathControl",
+  "extends": "NSControl",
+  "interfaces": [],
+  "methods": {
+    "cellClass": {
+      "name": "cellClass",
+      "bridgedName": "cellClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "baselineOffsetFromBottom": {
+      "name": "baselineOffsetFromBottom",
+      "bridgedName": "baselineOffsetFromBottom",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentRectInsets": {
+      "name": "alignmentRectInsets",
+      "bridgedName": "alignmentRectInsets",
+      "args": [],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDragOperation:": {
+      "name": "performDragOperation:",
+      "bridgedName": "performDragOperation",
+      "args": [
+        {
+          "name": "performDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "concludeDragOperation:": {
+      "name": "concludeDragOperation:",
+      "bridgedName": "concludeDragOperation",
+      "args": [
+        {
+          "name": "concludeDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingExited:": {
+      "name": "draggingExited:",
+      "bridgedName": "draggingExited",
+      "args": [
+        {
+          "name": "draggingExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingUpdated:": {
+      "name": "draggingUpdated:",
+      "bridgedName": "draggingUpdated",
+      "args": [
+        {
+          "name": "draggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingEntered:": {
+      "name": "draggingEntered:",
+      "bridgedName": "draggingEntered",
+      "args": [
+        {
+          "name": "draggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDropTargetForDraggingInfo:": {
+      "name": "_updateDropTargetForDraggingInfo:",
+      "bridgedName": "_updateDropTargetForDraggingInfo",
+      "args": [
+        {
+          "name": "_updateDropTargetForDraggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDropTargetToCell:": {
+      "name": "_updateDropTargetToCell:",
+      "bridgedName": "_updateDropTargetToCell",
+      "args": [
+        {
+          "name": "_updateDropTargetToCell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureDragContext": {
+      "name": "_ensureDragContext",
+      "bridgedName": "_ensureDragContext",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggedURL:": {
+      "name": "_draggedURL:",
+      "bridgedName": "_draggedURL",
+      "args": [
+        {
+          "name": "_draggedURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ignoreModifierKeysWhileDragging": {
+      "name": "ignoreModifierKeysWhileDragging",
+      "bridgedName": "ignoreModifierKeysWhileDragging",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggedImage:endedAt:operation:": {
+      "name": "draggedImage:endedAt:operation:",
+      "bridgedName": "draggedImage_endedAt_operation",
+      "args": [
+        {
+          "name": "draggedImage",
+          "type": "id"
+        },
+        {
+          "name": "endedAt",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "operation",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggedImage:beganAt:": {
+      "name": "draggedImage:beganAt:",
+      "bridgedName": "draggedImage_beganAt",
+      "args": [
+        {
+          "name": "draggedImage",
+          "type": "id"
+        },
+        {
+          "name": "beganAt",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingSourceOperationMaskForLocal:": {
+      "name": "draggingSourceOperationMaskForLocal:",
+      "bridgedName": "draggingSourceOperationMaskForLocal",
+      "args": [
+        {
+          "name": "draggingSourceOperationMaskForLocal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDraggingSourceOperationMask:forLocal:": {
+      "name": "setDraggingSourceOperationMask:forLocal:",
+      "bridgedName": "setDraggingSourceOperationMask_forLocal",
+      "args": [
+        {
+          "name": "setDraggingSourceOperationMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "forLocal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performDragOfCell:fromMouseDown:": {
+      "name": "_performDragOfCell:fromMouseDown:",
+      "bridgedName": "_performDragOfCell_fromMouseDown",
+      "args": [
+        {
+          "name": "_performDragOfCell",
+          "type": "id"
+        },
+        {
+          "name": "fromMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragImageForCell:withEvent:offset:": {
+      "name": "_dragImageForCell:withEvent:offset:",
+      "bridgedName": "_dragImageForCell_withEvent_offset",
+      "args": [
+        {
+          "name": "_dragImageForCell",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        },
+        {
+          "name": "offset",
+          "type": "struct CGPoint *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragShouldBeginFromMouseDown:": {
+      "name": "_dragShouldBeginFromMouseDown:",
+      "bridgedName": "_dragShouldBeginFromMouseDown",
+      "args": [
+        {
+          "name": "_dragShouldBeginFromMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathCell:willPopUpMenu:": {
+      "name": "pathCell:willPopUpMenu:",
+      "bridgedName": "pathCell_willPopUpMenu",
+      "args": [
+        {
+          "name": "pathCell",
+          "type": "id"
+        },
+        {
+          "name": "willPopUpMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathCell:willDisplayOpenPanel:": {
+      "name": "pathCell:willDisplayOpenPanel:",
+      "bridgedName": "pathCell_willDisplayOpenPanel",
+      "args": [
+        {
+          "name": "pathCell",
+          "type": "id"
+        },
+        {
+          "name": "willDisplayOpenPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "arrayWithArray:transformedByBlock:": {
+      "name": "arrayWithArray:transformedByBlock:",
+      "bridgedName": "arrayWithArray_transformedByBlock",
+      "args": [
+        {
+          "name": "arrayWithArray",
+          "type": "id"
+        },
+        {
+          "name": "transformedByBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPathComponentCells:": {
+      "name": "setPathComponentCells:",
+      "bridgedName": "setPathComponentCells",
+      "args": [
+        {
+          "name": "setPathComponentCells",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathComponentCells": {
+      "name": "pathComponentCells",
+      "bridgedName": "pathComponentCells",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clickedPathComponentCell": {
+      "name": "clickedPathComponentCell",
+      "bridgedName": "clickedPathComponentCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resignFirstResponder": {
+      "name": "resignFirstResponder",
+      "bridgedName": "resignFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "needsPanelToBecomeKey": {
+      "name": "needsPanelToBecomeKey",
+      "bridgedName": "needsPanelToBecomeKey",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "becomeFirstResponder": {
+      "name": "becomeFirstResponder",
+      "bridgedName": "becomeFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstMouse:": {
+      "name": "acceptsFirstMouse:",
+      "bridgedName": "acceptsFirstMouse",
+      "args": [
+        {
+          "name": "acceptsFirstMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowChangedKeyState": {
+      "name": "_windowChangedKeyState",
+      "bridgedName": "_windowChangedKeyState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNeedsDisplay": {
+      "name": "_setNeedsDisplay",
+      "bridgedName": "_setNeedsDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "preservesContentDuringLiveResize": {
+      "name": "preservesContentDuringLiveResize",
+      "bridgedName": "preservesContentDuringLiveResize",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasRectangularFocusRingAroundFrame": {
+      "name": "_hasRectangularFocusRingAroundFrame",
+      "bridgedName": "_hasRectangularFocusRingAroundFrame",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrameSize:": {
+      "name": "setFrameSize:",
+      "bridgedName": "setFrameSize",
+      "args": [
+        {
+          "name": "setFrameSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mainContentBounds": {
+      "name": "_mainContentBounds",
+      "bridgedName": "_mainContentBounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isFirstResponder": {
+      "name": "_isFirstResponder",
+      "bridgedName": "_isFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTrackingAreas": {
+      "name": "updateTrackingAreas",
+      "bridgedName": "updateTrackingAreas",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTrackingRects": {
+      "name": "_removeTrackingRects",
+      "bridgedName": "_removeTrackingRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toolTipManagerWillRecomputeToolTipsByRemoving:adding:": {
+      "name": "_toolTipManagerWillRecomputeToolTipsByRemoving:adding:",
+      "bridgedName": "_toolTipManagerWillRecomputeToolTipsByRemoving_adding",
+      "args": [
+        {
+          "name": "_toolTipManagerWillRecomputeToolTipsByRemoving",
+          "type": "BOOL"
+        },
+        {
+          "name": "adding",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCell:": {
+      "name": "setCell:",
+      "bridgedName": "setCell",
+      "args": [
+        {
+          "name": "setCell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInit": {
+      "name": "_commonInit",
+      "bridgedName": "_commonInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ns_widgetType": {
+      "name": "ns_widgetType",
+      "bridgedName": "ns_widgetType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "menu": {
+      "name": "menu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "backgroundColor": {
+      "name": "backgroundColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "URL": {
+      "name": "URL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "pathItems": {
+      "name": "pathItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "clickedPathItem": {
+      "name": "clickedPathItem",
+      "pointer": true,
+      "type": "NSPathControlItem",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "placeholderAttributedString": {
+      "name": "placeholderAttributedString",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "placeholderString": {
+      "name": "placeholderString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "allowedTypes": {
+      "name": "allowedTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "editable": {
+      "name": "editable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEditable"
+      ]
+    }
+  }
+}

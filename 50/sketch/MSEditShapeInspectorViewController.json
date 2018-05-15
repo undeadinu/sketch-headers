@@ -1,0 +1,417 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "MSInspectorChildController.h"
+  ],
+  "classes": [
+    "MSPathController",
+    "MSShapeEventHandler",
+    "NSButton",
+    "NSPopUpButton",
+    "NSSlider",
+    "NSString",
+    "NSTextField",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSEditShapeInspectorViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "MSInspectorChildController"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "name": "selectionDidChangeTo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForDisplay": {
+      "name": "prepareForDisplay",
+      "bridgedName": "prepareForDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeTool:": {
+      "name": "changeTool:",
+      "bridgedName": "changeTool",
+      "args": [
+        {
+          "name": "changeTool",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
+      "args": [
+        {
+          "name": "menuNeedsUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "titleForRoundingPopUp": {
+      "name": "titleForRoundingPopUp",
+      "bridgedName": "titleForRoundingPopUp",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshRoundingPopUpTitle": {
+      "name": "refreshRoundingPopUpTitle",
+      "bridgedName": "refreshRoundingPopUpTitle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "roundingPopUpAction:": {
+      "name": "roundingPopUpAction:",
+      "bridgedName": "roundingPopUpAction",
+      "args": [
+        {
+          "name": "roundingPopUpAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cornerRadiusAction:": {
+      "name": "cornerRadiusAction:",
+      "bridgedName": "cornerRadiusAction",
+      "args": [
+        {
+          "name": "cornerRadiusAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshCornerRadiusButton": {
+      "name": "refreshCornerRadiusButton",
+      "bridgedName": "refreshCornerRadiusButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "vectorModeSegmentedButtonAction:": {
+      "name": "vectorModeSegmentedButtonAction:",
+      "bridgedName": "vectorModeSegmentedButtonAction",
+      "args": [
+        {
+          "name": "vectorModeSegmentedButtonAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshCurveModeControls": {
+      "name": "refreshCurveModeControls",
+      "bridgedName": "refreshCurveModeControls",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "takeHandleLocationOnAxis:fromTextField:": {
+      "name": "takeHandleLocationOnAxis:fromTextField:",
+      "bridgedName": "takeHandleLocationOnAxis_fromTextField",
+      "args": [
+        {
+          "name": "takeHandleLocationOnAxis",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromTextField",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeYPosition:": {
+      "name": "changeYPosition:",
+      "bridgedName": "changeYPosition",
+      "args": [
+        {
+          "name": "changeYPosition",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeXPosition:": {
+      "name": "changeXPosition:",
+      "bridgedName": "changeXPosition",
+      "args": [
+        {
+          "name": "changeXPosition",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCoordinateValueForField:onAxis:": {
+      "name": "updateCoordinateValueForField:onAxis:",
+      "bridgedName": "updateCoordinateValueForField_onAxis",
+      "args": [
+        {
+          "name": "updateCoordinateValueForField",
+          "type": "id"
+        },
+        {
+          "name": "onAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshXYFields": {
+      "name": "refreshXYFields",
+      "bridgedName": "refreshXYFields",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishEditingAction:": {
+      "name": "finishEditingAction:",
+      "bridgedName": "finishEditingAction",
+      "args": [
+        {
+          "name": "finishEditingAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closePathAction:": {
+      "name": "closePathAction:",
+      "bridgedName": "closePathAction",
+      "args": [
+        {
+          "name": "closePathAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshClosePathButton": {
+      "name": "refreshClosePathButton",
+      "bridgedName": "refreshClosePathButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "views": {
+      "name": "views",
+      "bridgedName": "views",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refresh": {
+      "name": "refresh",
+      "bridgedName": "refresh",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "cornerRadiusSlider": {
+      "name": "cornerRadiusSlider",
+      "pointer": true,
+      "type": "NSSlider",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "curvePointYField": {
+      "name": "curvePointYField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "curvePointXField": {
+      "name": "curvePointXField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "closePathButton": {
+      "name": "closePathButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "makeRectSelectionButton": {
+      "name": "makeRectSelectionButton",
+      "pointer": true,
+      "type": "NSButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "curveModeBackgroundView": {
+      "name": "curveModeBackgroundView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "roundingPopUpButton": {
+      "name": "roundingPopUpButton",
+      "pointer": true,
+      "type": "NSPopUpButton",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cornerRadiusField": {
+      "name": "cornerRadiusField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "isMakingRectSelection": {
+      "name": "isMakingRectSelection",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shapeEventHandler": {
+      "name": "shapeEventHandler",
+      "pointer": true,
+      "type": "MSShapeEventHandler",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "pathController": {
+      "name": "pathController",
+      "pointer": true,
+      "type": "MSPathController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

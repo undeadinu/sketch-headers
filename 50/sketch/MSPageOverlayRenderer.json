@@ -1,0 +1,79 @@
+{
+  "imports": [
+    "MSRenderer.h"
+  ],
+  "classes": [
+    "MSImmutableArtboardGroup",
+    "MSImmutablePage",
+    "MSLayerArray",
+    "MSRenderingContext"
+  ],
+  "protocol": true,
+  "className": "MSPageOverlayRenderer",
+  "interfaces": [],
+  "methods": {
+    "renderOverlayForPage:selectedLayers:selectedArtboard:options:rect:context:": {
+      "name": "renderOverlayForPage:selectedLayers:selectedArtboard:options:rect:context:",
+      "bridgedName": "renderOverlayForPage_selectedLayers_selectedArtboard_options_rect_context",
+      "args": [
+        {
+          "name": "renderOverlayForPage",
+          "type": "MSImmutablePage *"
+        },
+        {
+          "name": "selectedLayers",
+          "type": "MSLayerArray *"
+        },
+        {
+          "name": "selectedArtboard",
+          "type": "MSImmutableArtboardGroup *"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "context",
+          "type": "MSRenderingContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renderBackgroundForPage:rect:origin:zoom:context:": {
+      "name": "renderBackgroundForPage:rect:origin:zoom:context:",
+      "bridgedName": "renderBackgroundForPage_rect_origin_zoom_context",
+      "args": [
+        {
+          "name": "renderBackgroundForPage",
+          "type": "MSImmutablePage *"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "origin",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "zoom",
+          "type": "double"
+        },
+        {
+          "name": "context",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

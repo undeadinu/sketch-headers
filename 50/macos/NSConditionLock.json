@@ -1,0 +1,178 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSLocking.h"
+  ],
+  "classes": [
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSConditionLock",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSLocking"
+  ],
+  "methods": {
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "name": "allocWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unlockWithCondition:": {
+      "name": "unlockWithCondition:",
+      "bridgedName": "unlockWithCondition",
+      "args": [
+        {
+          "name": "unlockWithCondition",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unlock": {
+      "name": "unlock",
+      "bridgedName": "unlock",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryLockWhenCondition:": {
+      "name": "tryLockWhenCondition:",
+      "bridgedName": "tryLockWhenCondition",
+      "args": [
+        {
+          "name": "tryLockWhenCondition",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryLock": {
+      "name": "tryLock",
+      "bridgedName": "tryLock",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockWhenCondition:beforeDate:": {
+      "name": "lockWhenCondition:beforeDate:",
+      "bridgedName": "lockWhenCondition_beforeDate",
+      "args": [
+        {
+          "name": "lockWhenCondition",
+          "type": "long long"
+        },
+        {
+          "name": "beforeDate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockWhenCondition:": {
+      "name": "lockWhenCondition:",
+      "bridgedName": "lockWhenCondition",
+      "args": [
+        {
+          "name": "lockWhenCondition",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lockBeforeDate:": {
+      "name": "lockBeforeDate:",
+      "bridgedName": "lockBeforeDate",
+      "args": [
+        {
+          "name": "lockBeforeDate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lock": {
+      "name": "lock",
+      "bridgedName": "lock",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCondition:": {
+      "name": "initWithCondition:",
+      "bridgedName": "initWithCondition",
+      "args": [
+        {
+          "name": "initWithCondition",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "condition": {
+      "name": "condition",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

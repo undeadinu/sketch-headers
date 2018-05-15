@@ -1,0 +1,1774 @@
+{
+  "imports": [],
+  "classes": [
+    "NSArray",
+    "NSIndexSet",
+    "NSMutableArray",
+    "NSMutableIndexSet",
+    "NSPredicate"
+  ],
+  "protocol": false,
+  "className": "NSArrayController",
+  "extends": "NSObjectController",
+  "interfaces": [],
+  "methods": {
+    "_modelAndProxyKeys": {
+      "name": "_modelAndProxyKeys",
+      "bridgedName": "_modelAndProxyKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_keyValueBindingAccessPoints": {
+      "name": "_keyValueBindingAccessPoints",
+      "bridgedName": "_keyValueBindingAccessPoints",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_nonAutomaticObservingKeys": {
+      "name": "_nonAutomaticObservingKeys",
+      "bridgedName": "_nonAutomaticObservingKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_controllerKeys": {
+      "name": "_controllerKeys",
+      "bridgedName": "_controllerKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateSingleValue:forKeyPath:error:": {
+      "name": "_validateSingleValue:forKeyPath:error:",
+      "bridgedName": "_validateSingleValue_forKeyPath_error",
+      "args": [
+        {
+          "name": "_validateSingleValue",
+          "type": "id *"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateSingleValue:forKey:error:": {
+      "name": "_validateSingleValue:forKey:error:",
+      "bridgedName": "_validateSingleValue_forKey_error",
+      "args": [
+        {
+          "name": "_validateSingleValue",
+          "type": "id *"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invokeSingleSelector:withArguments:onKeyPath:": {
+      "name": "_invokeSingleSelector:withArguments:onKeyPath:",
+      "bridgedName": "_invokeSingleSelector_withArguments_onKeyPath",
+      "args": [
+        {
+          "name": "_invokeSingleSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withArguments",
+          "type": "id"
+        },
+        {
+          "name": "onKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSingleValue:forKeyPath:": {
+      "name": "_setSingleValue:forKeyPath:",
+      "bridgedName": "_setSingleValue_forKeyPath",
+      "args": [
+        {
+          "name": "_setSingleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSingleValue:forKey:": {
+      "name": "_setSingleValue:forKey:",
+      "bridgedName": "_setSingleValue_forKey",
+      "args": [
+        {
+          "name": "_setSingleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleValueForKeyPath:": {
+      "name": "_singleValueForKeyPath:",
+      "bridgedName": "_singleValueForKeyPath",
+      "args": [
+        {
+          "name": "_singleValueForKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleValueForKey:": {
+      "name": "_singleValueForKey:",
+      "bridgedName": "_singleValueForKey",
+      "args": [
+        {
+          "name": "_singleValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleMutableArrayValueForKeyPath:": {
+      "name": "_singleMutableArrayValueForKeyPath:",
+      "bridgedName": "_singleMutableArrayValueForKeyPath",
+      "args": [
+        {
+          "name": "_singleMutableArrayValueForKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleMutableArrayValueForKey:": {
+      "name": "_singleMutableArrayValueForKey:",
+      "bridgedName": "_singleMutableArrayValueForKey",
+      "args": [
+        {
+          "name": "_singleMutableArrayValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_singleValueForKeyPath:operationType:": {
+      "name": "_singleValueForKeyPath:operationType:",
+      "bridgedName": "_singleValueForKeyPath_operationType",
+      "args": [
+        {
+          "name": "_singleValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "operationType",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_validateMultipleValue:forKeyPath:atIndex:error:": {
+      "name": "_validateMultipleValue:forKeyPath:atIndex:error:",
+      "bridgedName": "_validateMultipleValue_forKeyPath_atIndex_error",
+      "args": [
+        {
+          "name": "_validateMultipleValue",
+          "type": "id *"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invokeMultipleSelector:withArguments:onKeyPath:atIndex:": {
+      "name": "_invokeMultipleSelector:withArguments:onKeyPath:atIndex:",
+      "bridgedName": "_invokeMultipleSelector_withArguments_onKeyPath_atIndex",
+      "args": [
+        {
+          "name": "_invokeMultipleSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withArguments",
+          "type": "id"
+        },
+        {
+          "name": "onKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMultipleValue:forKeyPath:atIndex:": {
+      "name": "_setMultipleValue:forKeyPath:atIndex:",
+      "bridgedName": "_setMultipleValue_forKeyPath_atIndex",
+      "args": [
+        {
+          "name": "_setMultipleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMultipleValue:forKey:atIndex:": {
+      "name": "_setMultipleValue:forKey:atIndex:",
+      "bridgedName": "_setMultipleValue_forKey_atIndex",
+      "args": [
+        {
+          "name": "_setMultipleValue",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleMutableArrayValueForKeyPath:atIndex:": {
+      "name": "_multipleMutableArrayValueForKeyPath:atIndex:",
+      "bridgedName": "_multipleMutableArrayValueForKeyPath_atIndex",
+      "args": [
+        {
+          "name": "_multipleMutableArrayValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleMutableArrayValueForKey:atIndex:": {
+      "name": "_multipleMutableArrayValueForKey:atIndex:",
+      "bridgedName": "_multipleMutableArrayValueForKey_atIndex",
+      "args": [
+        {
+          "name": "_multipleMutableArrayValueForKey",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleValueForKeyPath:atIndex:": {
+      "name": "_multipleValueForKeyPath:atIndex:",
+      "bridgedName": "_multipleValueForKeyPath_atIndex",
+      "args": [
+        {
+          "name": "_multipleValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleValueForKey:atIndex:": {
+      "name": "_multipleValueForKey:atIndex:",
+      "bridgedName": "_multipleValueForKey_atIndex",
+      "args": [
+        {
+          "name": "_multipleValueForKey",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleValuesObjectsAtIndexes:": {
+      "name": "_multipleValuesObjectsAtIndexes:",
+      "bridgedName": "_multipleValuesObjectsAtIndexes",
+      "args": [
+        {
+          "name": "_multipleValuesObjectsAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleValuesObjectAtIndex:": {
+      "name": "_multipleValuesObjectAtIndex:",
+      "bridgedName": "_multipleValuesObjectAtIndex",
+      "args": [
+        {
+          "name": "_multipleValuesObjectAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_multipleValuesObjectCount": {
+      "name": "_multipleValuesObjectCount",
+      "bridgedName": "_multipleValuesObjectCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "name": "validateUserInterfaceItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectPrevious:": {
+      "name": "selectPrevious:",
+      "bridgedName": "selectPrevious",
+      "args": [
+        {
+          "name": "selectPrevious",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeSelectPrevious:didCommitSuccessfully:actionSender:": {
+      "name": "_executeSelectPrevious:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeSelectPrevious_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeSelectPrevious",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectNext:": {
+      "name": "selectNext:",
+      "bridgedName": "selectNext",
+      "args": [
+        {
+          "name": "selectNext",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeSelectNext:didCommitSuccessfully:actionSender:": {
+      "name": "_executeSelectNext:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeSelectNext_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeSelectNext",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canRemove": {
+      "name": "canRemove",
+      "bridgedName": "canRemove",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canAdd": {
+      "name": "canAdd",
+      "bridgedName": "canAdd",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_explicitlyCannotInsert": {
+      "name": "_explicitlyCannotInsert",
+      "bridgedName": "_explicitlyCannotInsert",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setExplicitlyCannotAdd:insert:remove:": {
+      "name": "_setExplicitlyCannotAdd:insert:remove:",
+      "bridgedName": "_setExplicitlyCannotAdd_insert_remove",
+      "args": [
+        {
+          "name": "_setExplicitlyCannotAdd",
+          "type": "BOOL"
+        },
+        {
+          "name": "insert",
+          "type": "BOOL"
+        },
+        {
+          "name": "remove",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeEditable:": {
+      "name": "_changeEditable:",
+      "bridgedName": "_changeEditable",
+      "args": [
+        {
+          "name": "_changeEditable",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remove:": {
+      "name": "remove:",
+      "bridgedName": "remove",
+      "args": [
+        {
+          "name": "remove",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "add:": {
+      "name": "add:",
+      "bridgedName": "add",
+      "args": [
+        {
+          "name": "add",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeAdd:didCommitSuccessfully:actionSender:": {
+      "name": "_executeAdd:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeAdd_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeAdd",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insert:": {
+      "name": "insert:",
+      "bridgedName": "insert",
+      "args": [
+        {
+          "name": "insert",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_executeInsert:didCommitSuccessfully:actionSender:": {
+      "name": "_executeInsert:didCommitSuccessfully:actionSender:",
+      "bridgedName": "_executeInsert_didCommitSuccessfully_actionSender",
+      "args": [
+        {
+          "name": "_executeInsert",
+          "type": "id"
+        },
+        {
+          "name": "didCommitSuccessfully",
+          "type": "BOOL"
+        },
+        {
+          "name": "actionSender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObjects:": {
+      "name": "removeObjects:",
+      "bridgedName": "removeObjects",
+      "args": [
+        {
+          "name": "removeObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeObjects:objectHandler:": {
+      "name": "_removeObjects:objectHandler:",
+      "bridgedName": "_removeObjects_objectHandler",
+      "args": [
+        {
+          "name": "_removeObjects",
+          "type": "id"
+        },
+        {
+          "name": "objectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObject:": {
+      "name": "removeObject:",
+      "bridgedName": "removeObject",
+      "args": [
+        {
+          "name": "removeObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObjectsAtArrangedObjectIndexes:": {
+      "name": "removeObjectsAtArrangedObjectIndexes:",
+      "bridgedName": "removeObjectsAtArrangedObjectIndexes",
+      "args": [
+        {
+          "name": "removeObjectsAtArrangedObjectIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeObjectsAtArrangedObjectIndexes:contentIndexes:objectHandler:": {
+      "name": "_removeObjectsAtArrangedObjectIndexes:contentIndexes:objectHandler:",
+      "bridgedName": "_removeObjectsAtArrangedObjectIndexes_contentIndexes_objectHandler",
+      "args": [
+        {
+          "name": "_removeObjectsAtArrangedObjectIndexes",
+          "type": "id"
+        },
+        {
+          "name": "contentIndexes",
+          "type": "id"
+        },
+        {
+          "name": "objectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObjectAtArrangedObjectIndex:": {
+      "name": "removeObjectAtArrangedObjectIndex:",
+      "bridgedName": "removeObjectAtArrangedObjectIndex",
+      "args": [
+        {
+          "name": "removeObjectAtArrangedObjectIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeObjectAtArrangedObjectIndex:objectHandler:": {
+      "name": "_removeObjectAtArrangedObjectIndex:objectHandler:",
+      "bridgedName": "_removeObjectAtArrangedObjectIndex_objectHandler",
+      "args": [
+        {
+          "name": "_removeObjectAtArrangedObjectIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "objectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureSelectionAfterRemoveWithPreferredIndex:sendObserverNotifications:": {
+      "name": "_ensureSelectionAfterRemoveWithPreferredIndex:sendObserverNotifications:",
+      "bridgedName": "_ensureSelectionAfterRemoveWithPreferredIndex_sendObserverNotifications",
+      "args": [
+        {
+          "name": "_ensureSelectionAfterRemoveWithPreferredIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertObjects:atArrangedObjectIndexes:": {
+      "name": "insertObjects:atArrangedObjectIndexes:",
+      "bridgedName": "insertObjects_atArrangedObjectIndexes",
+      "args": [
+        {
+          "name": "insertObjects",
+          "type": "id"
+        },
+        {
+          "name": "atArrangedObjectIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertObjects:atArrangedObjectIndexes:objectHandler:": {
+      "name": "_insertObjects:atArrangedObjectIndexes:objectHandler:",
+      "bridgedName": "_insertObjects_atArrangedObjectIndexes_objectHandler",
+      "args": [
+        {
+          "name": "_insertObjects",
+          "type": "id"
+        },
+        {
+          "name": "atArrangedObjectIndexes",
+          "type": "id"
+        },
+        {
+          "name": "objectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertObject:atArrangedObjectIndex:": {
+      "name": "insertObject:atArrangedObjectIndex:",
+      "bridgedName": "insertObject_atArrangedObjectIndex",
+      "args": [
+        {
+          "name": "insertObject",
+          "type": "id"
+        },
+        {
+          "name": "atArrangedObjectIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertObject:atArrangedObjectIndex:objectHandler:": {
+      "name": "_insertObject:atArrangedObjectIndex:objectHandler:",
+      "bridgedName": "_insertObject_atArrangedObjectIndex_objectHandler",
+      "args": [
+        {
+          "name": "_insertObject",
+          "type": "id"
+        },
+        {
+          "name": "atArrangedObjectIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "objectHandler",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObjects:": {
+      "name": "addObjects:",
+      "bridgedName": "addObjects",
+      "args": [
+        {
+          "name": "addObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObject:": {
+      "name": "addObject:",
+      "bridgedName": "addObject",
+      "args": [
+        {
+          "name": "addObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_assertFilterRestrictsInsertionOfObjects:atArrangedObjectIndexes:": {
+      "name": "_assertFilterRestrictsInsertionOfObjects:atArrangedObjectIndexes:",
+      "bridgedName": "_assertFilterRestrictsInsertionOfObjects_atArrangedObjectIndexes",
+      "args": [
+        {
+          "name": "_assertFilterRestrictsInsertionOfObjects",
+          "type": "id"
+        },
+        {
+          "name": "atArrangedObjectIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filterRestrictsInsertion": {
+      "name": "_filterRestrictsInsertion",
+      "bridgedName": "_filterRestrictsInsertion",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFilterRestrictsInsertion:": {
+      "name": "_setFilterRestrictsInsertion:",
+      "bridgedName": "_setFilterRestrictsInsertion",
+      "args": [
+        {
+          "name": "_setFilterRestrictsInsertion",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeNumberOfIndexes:fromSelectionIndexesAtIndex:sendObserverNotifications:": {
+      "name": "_removeNumberOfIndexes:fromSelectionIndexesAtIndex:sendObserverNotifications:",
+      "bridgedName": "_removeNumberOfIndexes_fromSelectionIndexesAtIndex_sendObserverNotifications",
+      "args": [
+        {
+          "name": "_removeNumberOfIndexes",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromSelectionIndexesAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addNumberOfIndexes:toSelectionIndexesAtIndex:sendObserverNotifications:": {
+      "name": "_addNumberOfIndexes:toSelectionIndexesAtIndex:sendObserverNotifications:",
+      "bridgedName": "_addNumberOfIndexes_toSelectionIndexesAtIndex_sendObserverNotifications",
+      "args": [
+        {
+          "name": "_addNumberOfIndexes",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toSelectionIndexesAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_modifySelectionIndexes:atIndex:addOrRemove:sendObserverNotifications:": {
+      "name": "_modifySelectionIndexes:atIndex:addOrRemove:sendObserverNotifications:",
+      "bridgedName": "_modifySelectionIndexes_atIndex_addOrRemove_sendObserverNotifications",
+      "args": [
+        {
+          "name": "_modifySelectionIndexes",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "addOrRemove",
+          "type": "BOOL"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheSelectedObjectsIfNecessary": {
+      "name": "_cacheSelectedObjectsIfNecessary",
+      "bridgedName": "_cacheSelectedObjectsIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeSelectedObjects:": {
+      "name": "removeSelectedObjects:",
+      "bridgedName": "removeSelectedObjects",
+      "args": [
+        {
+          "name": "removeSelectedObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSelectedObjects:": {
+      "name": "addSelectedObjects:",
+      "bridgedName": "addSelectedObjects",
+      "args": [
+        {
+          "name": "addSelectedObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSelectedObjects:": {
+      "name": "setSelectedObjects:",
+      "bridgedName": "setSelectedObjects",
+      "args": [
+        {
+          "name": "setSelectedObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_modifySelectedObjects:useExistingIndexesAsStartingPoint:avoidsEmptySelection:addOrRemove:sendObserverNotifications:forceUpdate:": {
+      "name": "_modifySelectedObjects:useExistingIndexesAsStartingPoint:avoidsEmptySelection:addOrRemove:sendObserverNotifications:forceUpdate:",
+      "bridgedName": "_modifySelectedObjects_useExistingIndexesAsStartingPoint_avoidsEmptySelection_addOrRemove_sendObserverNotifications_forceUpdate",
+      "args": [
+        {
+          "name": "_modifySelectedObjects",
+          "type": "id"
+        },
+        {
+          "name": "useExistingIndexesAsStartingPoint",
+          "type": "BOOL"
+        },
+        {
+          "name": "avoidsEmptySelection",
+          "type": "BOOL"
+        },
+        {
+          "name": "addOrRemove",
+          "type": "BOOL"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        },
+        {
+          "name": "forceUpdate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeSelectionIndexes:": {
+      "name": "removeSelectionIndexes:",
+      "bridgedName": "removeSelectionIndexes",
+      "args": [
+        {
+          "name": "removeSelectionIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSelectionIndexes:": {
+      "name": "addSelectionIndexes:",
+      "bridgedName": "addSelectionIndexes",
+      "args": [
+        {
+          "name": "addSelectionIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSelectionIndex:": {
+      "name": "setSelectionIndex:",
+      "bridgedName": "setSelectionIndex",
+      "args": [
+        {
+          "name": "setSelectionIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSelectionIndexes:": {
+      "name": "setSelectionIndexes:",
+      "bridgedName": "setSelectionIndexes",
+      "args": [
+        {
+          "name": "setSelectionIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectObjectsAtIndexes:avoidsEmptySelection:sendObserverNotifications:forceUpdate:": {
+      "name": "_selectObjectsAtIndexes:avoidsEmptySelection:sendObserverNotifications:forceUpdate:",
+      "bridgedName": "_selectObjectsAtIndexes_avoidsEmptySelection_sendObserverNotifications_forceUpdate",
+      "args": [
+        {
+          "name": "_selectObjectsAtIndexes",
+          "type": "id"
+        },
+        {
+          "name": "avoidsEmptySelection",
+          "type": "BOOL"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        },
+        {
+          "name": "forceUpdate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectObjectsAtIndexesNoCopy:avoidsEmptySelection:sendObserverNotifications:forceUpdate:": {
+      "name": "_selectObjectsAtIndexesNoCopy:avoidsEmptySelection:sendObserverNotifications:forceUpdate:",
+      "bridgedName": "_selectObjectsAtIndexesNoCopy_avoidsEmptySelection_sendObserverNotifications_forceUpdate",
+      "args": [
+        {
+          "name": "_selectObjectsAtIndexesNoCopy",
+          "type": "id"
+        },
+        {
+          "name": "avoidsEmptySelection",
+          "type": "BOOL"
+        },
+        {
+          "name": "sendObserverNotifications",
+          "type": "BOOL"
+        },
+        {
+          "name": "forceUpdate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectionIndexesCount": {
+      "name": "_selectionIndexesCount",
+      "bridgedName": "_selectionIndexesCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rearrangeObjects": {
+      "name": "rearrangeObjects",
+      "bridgedName": "rearrangeObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareContentWithNewObject:": {
+      "name": "_prepareContentWithNewObject:",
+      "bridgedName": "_prepareContentWithNewObject",
+      "args": [
+        {
+          "name": "_prepareContentWithNewObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_arrayContent": {
+      "name": "_arrayContent",
+      "bridgedName": "_arrayContent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendsContentChangeNotifications": {
+      "name": "_sendsContentChangeNotifications",
+      "bridgedName": "_sendsContentChangeNotifications",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUsesLazyFetching:": {
+      "name": "setUsesLazyFetching:",
+      "bridgedName": "setUsesLazyFetching",
+      "args": [
+        {
+          "name": "setUsesLazyFetching",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "content": {
+      "name": "content",
+      "bridgedName": "content",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContent:": {
+      "name": "setContent:",
+      "bridgedName": "setContent",
+      "args": [
+        {
+          "name": "setContent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setContentInBackground:": {
+      "name": "_setContentInBackground:",
+      "bridgedName": "_setContentInBackground",
+      "args": [
+        {
+          "name": "_setContentInBackground",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didChangeArrangementCriteria": {
+      "name": "didChangeArrangementCriteria",
+      "bridgedName": "didChangeArrangementCriteria",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didChangeArrangementCriteriaWithOperationsMask:useBasis:": {
+      "name": "_didChangeArrangementCriteriaWithOperationsMask:useBasis:",
+      "bridgedName": "_didChangeArrangementCriteriaWithOperationsMask_useBasis",
+      "args": [
+        {
+          "name": "_didChangeArrangementCriteriaWithOperationsMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "useBasis",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addKeyPathsFromPredicate:toSet:": {
+      "name": "_addKeyPathsFromPredicate:toSet:",
+      "bridgedName": "_addKeyPathsFromPredicate_toSet",
+      "args": [
+        {
+          "name": "_addKeyPathsFromPredicate",
+          "type": "id"
+        },
+        {
+          "name": "toSet",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUpAutomaticRearrangingOfObjects": {
+      "name": "_setUpAutomaticRearrangingOfObjects",
+      "bridgedName": "_setUpAutomaticRearrangingOfObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateAutomaticRearrangementKeysPaths": {
+      "name": "_updateAutomaticRearrangementKeysPaths",
+      "bridgedName": "_updateAutomaticRearrangementKeysPaths",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_arrangeObjectsWithSelectedObjects:avoidsEmptySelection:operationsMask:useBasis:": {
+      "name": "_arrangeObjectsWithSelectedObjects:avoidsEmptySelection:operationsMask:useBasis:",
+      "bridgedName": "_arrangeObjectsWithSelectedObjects_avoidsEmptySelection_operationsMask_useBasis",
+      "args": [
+        {
+          "name": "_arrangeObjectsWithSelectedObjects",
+          "type": "id"
+        },
+        {
+          "name": "avoidsEmptySelection",
+          "type": "BOOL"
+        },
+        {
+          "name": "operationsMask",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "useBasis",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateObservingForAutomaticallyRearrangingObjects": {
+      "name": "_updateObservingForAutomaticallyRearrangingObjects",
+      "bridgedName": "_updateObservingForAutomaticallyRearrangingObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureObjectsAreMutable": {
+      "name": "_ensureObjectsAreMutable",
+      "bridgedName": "_ensureObjectsAreMutable",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setObjects:": {
+      "name": "_setObjects:",
+      "bridgedName": "_setObjects",
+      "args": [
+        {
+          "name": "_setObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "arrangeObjects:": {
+      "name": "arrangeObjects:",
+      "bridgedName": "arrangeObjects",
+      "args": [
+        {
+          "name": "arrangeObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sortObjects:": {
+      "name": "_sortObjects:",
+      "bridgedName": "_sortObjects",
+      "args": [
+        {
+          "name": "_sortObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_filterObjects:": {
+      "name": "_filterObjects:",
+      "bridgedName": "_filterObjects",
+      "args": [
+        {
+          "name": "_filterObjects",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didChangeValuesForArrangedKeys:objectKeys:indexKeys:": {
+      "name": "didChangeValuesForArrangedKeys:objectKeys:indexKeys:",
+      "bridgedName": "didChangeValuesForArrangedKeys_objectKeys_indexKeys",
+      "args": [
+        {
+          "name": "didChangeValuesForArrangedKeys",
+          "type": "BOOL"
+        },
+        {
+          "name": "objectKeys",
+          "type": "BOOL"
+        },
+        {
+          "name": "indexKeys",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willChangeValuesForArrangedKeys:objectKeys:indexKeys:": {
+      "name": "willChangeValuesForArrangedKeys:objectKeys:indexKeys:",
+      "bridgedName": "willChangeValuesForArrangedKeys_objectKeys_indexKeys",
+      "args": [
+        {
+          "name": "willChangeValuesForArrangedKeys",
+          "type": "BOOL"
+        },
+        {
+          "name": "objectKeys",
+          "type": "BOOL"
+        },
+        {
+          "name": "indexKeys",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldSendObserverNotificationForModelOrProxyKey:keyPath:ofObject:": {
+      "name": "_shouldSendObserverNotificationForModelOrProxyKey:keyPath:ofObject:",
+      "bridgedName": "_shouldSendObserverNotificationForModelOrProxyKey_keyPath_ofObject",
+      "args": [
+        {
+          "name": "_shouldSendObserverNotificationForModelOrProxyKey",
+          "type": "id"
+        },
+        {
+          "name": "keyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshesAllModelObjects": {
+      "name": "_refreshesAllModelObjects",
+      "bridgedName": "_refreshesAllModelObjects",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRefreshesAllModelObjects:": {
+      "name": "_setRefreshesAllModelObjects:",
+      "bridgedName": "_setRefreshesAllModelObjects",
+      "args": [
+        {
+          "name": "_setRefreshesAllModelObjects",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObserver:forKeyPath:options:context:": {
+      "name": "addObserver:forKeyPath:options:context:",
+      "bridgedName": "addObserver_forKeyPath_options_context",
+      "args": [
+        {
+          "name": "addObserver",
+          "type": "id"
+        },
+        {
+          "name": "forKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingSelectionIfNecessary": {
+      "name": "_stopObservingSelectionIfNecessary",
+      "bridgedName": "_stopObservingSelectionIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingSelectionIfNecessary": {
+      "name": "_startObservingSelectionIfNecessary",
+      "bridgedName": "_startObservingSelectionIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerObservingForAllModelObjects": {
+      "name": "_registerObservingForAllModelObjects",
+      "bridgedName": "_registerObservingForAllModelObjects",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dealloc": {
+      "name": "_dealloc",
+      "bridgedName": "_dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_init": {
+      "name": "_init",
+      "bridgedName": "_init",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rearrangementExtensions:": {
+      "name": "_rearrangementExtensions:",
+      "bridgedName": "_rearrangementExtensions",
+      "args": [
+        {
+          "name": "_rearrangementExtensions",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reactToMatchingInsertions:deletions:refreshed:": {
+      "name": "_reactToMatchingInsertions:deletions:refreshed:",
+      "bridgedName": "_reactToMatchingInsertions_deletions_refreshed",
+      "args": [
+        {
+          "name": "_reactToMatchingInsertions",
+          "type": "id"
+        },
+        {
+          "name": "deletions",
+          "type": "id"
+        },
+        {
+          "name": "refreshed",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRangeOfInterest:": {
+      "name": "addRangeOfInterest:",
+      "bridgedName": "addRangeOfInterest",
+      "args": [
+        {
+          "name": "addRangeOfInterest",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performFetchWithRequest:merge:error:": {
+      "name": "_performFetchWithRequest:merge:error:",
+      "bridgedName": "_performFetchWithRequest_merge_error",
+      "args": [
+        {
+          "name": "_performFetchWithRequest",
+          "type": "id"
+        },
+        {
+          "name": "merge",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultFetchRequest": {
+      "name": "defaultFetchRequest",
+      "bridgedName": "defaultFetchRequest",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setManagedObjectContext:": {
+      "name": "setManagedObjectContext:",
+      "bridgedName": "setManagedObjectContext",
+      "args": [
+        {
+          "name": "setManagedObjectContext",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "arrangedObjects": {
+      "name": "arrangedObjects",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "canSelectPrevious": {
+      "name": "canSelectPrevious",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "canSelectNext": {
+      "name": "canSelectNext",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "canInsert": {
+      "name": "canInsert",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "selectedObjects": {
+      "name": "selectedObjects",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "selectionIndex": {
+      "name": "selectionIndex",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "selectionIndexes": {
+      "name": "selectionIndexes",
+      "pointer": true,
+      "type": "NSIndexSet",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "automaticRearrangementKeyPaths": {
+      "name": "automaticRearrangementKeyPaths",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "sortDescriptors": {
+      "name": "sortDescriptors",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "filterPredicate": {
+      "name": "filterPredicate",
+      "pointer": true,
+      "type": "NSPredicate",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
+}

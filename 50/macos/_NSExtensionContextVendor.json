@@ -1,0 +1,261 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSXPCListenerDelegate.h",
+    "_NSExtensionContextVending.h"
+  ],
+  "classes": [
+    "NSMutableDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "_NSExtensionContextVendor",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSXPCListenerDelegate",
+    "_NSExtensionContextVending"
+  ],
+  "methods": {
+    "_expirationConcurrentQueue": {
+      "name": "_expirationConcurrentQueue",
+      "bridgedName": "_expirationConcurrentQueue",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_completionConcurrentQueue": {
+      "name": "_completionConcurrentQueue",
+      "bridgedName": "_completionConcurrentQueue",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_extensionContextClass": {
+      "name": "_extensionContextClass",
+      "bridgedName": "_extensionContextClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_extensionMainStoryboard": {
+      "name": "_extensionMainStoryboard",
+      "bridgedName": "_extensionMainStoryboard",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_extensionPrincipalClass": {
+      "name": "_extensionPrincipalClass",
+      "bridgedName": "_extensionPrincipalClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_extensionDictionary": {
+      "name": "_extensionDictionary",
+      "bridgedName": "_extensionDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_startListening": {
+      "name": "_startListening",
+      "bridgedName": "_startListening",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_startListening:": {
+      "name": "_startListening:",
+      "bridgedName": "_startListening",
+      "args": [
+        {
+          "name": "_startListening",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_sharedExtensionContextVendor": {
+      "name": "_sharedExtensionContextVendor",
+      "bridgedName": "_sharedExtensionContextVendor",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setPrincipalObject:forUUID:": {
+      "name": "_setPrincipalObject:forUUID:",
+      "bridgedName": "_setPrincipalObject_forUUID",
+      "args": [
+        {
+          "name": "_setPrincipalObject",
+          "type": "id"
+        },
+        {
+          "name": "forUUID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_extensionContextForUUID:": {
+      "name": "_extensionContextForUUID:",
+      "bridgedName": "_extensionContextForUUID",
+      "args": [
+        {
+          "name": "_extensionContextForUUID",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tearDownContextWithUUID:": {
+      "name": "_tearDownContextWithUUID:",
+      "bridgedName": "_tearDownContextWithUUID",
+      "args": [
+        {
+          "name": "_tearDownContextWithUUID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginRequestWithExtensionItems:listenerEndpoint:withContextUUID:completion:": {
+      "name": "_beginRequestWithExtensionItems:listenerEndpoint:withContextUUID:completion:",
+      "bridgedName": "_beginRequestWithExtensionItems_listenerEndpoint_withContextUUID_completion",
+      "args": [
+        {
+          "name": "_beginRequestWithExtensionItems",
+          "type": "id"
+        },
+        {
+          "name": "listenerEndpoint",
+          "type": "id"
+        },
+        {
+          "name": "withContextUUID",
+          "type": "id"
+        },
+        {
+          "name": "completion",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldCreatePrincipalObject": {
+      "name": "_shouldCreatePrincipalObject",
+      "bridgedName": "_shouldCreatePrincipalObject",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "listener:shouldAcceptNewConnection:": {
+      "name": "listener:shouldAcceptNewConnection:",
+      "bridgedName": "listener_shouldAcceptNewConnection",
+      "args": [
+        {
+          "name": "listener",
+          "type": "id"
+        },
+        {
+          "name": "shouldAcceptNewConnection",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "_extensionPrincipalObjects": {
+      "name": "_extensionPrincipalObjects",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "setter=_setExtensionPrincipalObjects:"
+      ]
+    },
+    "_extensionContexts": {
+      "name": "_extensionContexts",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "setter=_setExtensionContexts:"
+      ]
+    },
+    "_extensionServiceConnections": {
+      "name": "_extensionServiceConnections",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain",
+        "setter=_setExtensionServiceConnections:"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

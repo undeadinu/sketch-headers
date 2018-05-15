@@ -1,0 +1,518 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSViewDynamicToolTipManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "abortAllToolTips": {
+      "name": "abortAllToolTips",
+      "bridgedName": "abortAllToolTips",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_dynamicToolTipManagerInstances": {
+      "name": "_dynamicToolTipManagerInstances",
+      "bridgedName": "_dynamicToolTipManagerInstances",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_unregisterDynamicToolTipManagerInstance:": {
+      "name": "_unregisterDynamicToolTipManagerInstance:",
+      "bridgedName": "_unregisterDynamicToolTipManagerInstance",
+      "args": [
+        {
+          "name": "_unregisterDynamicToolTipManagerInstance",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_registerDynamicToolTipManagerInstance:": {
+      "name": "_registerDynamicToolTipManagerInstance:",
+      "bridgedName": "_registerDynamicToolTipManagerInstance",
+      "args": [
+        {
+          "name": "_registerDynamicToolTipManagerInstance",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_currentLocalMousePoint": {
+      "name": "_currentLocalMousePoint",
+      "bridgedName": "_currentLocalMousePoint",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restartMovementTracking": {
+      "name": "_restartMovementTracking",
+      "bridgedName": "_restartMovementTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_continueMovementTracking": {
+      "name": "_continueMovementTracking",
+      "bridgedName": "_continueMovementTracking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_disabledTrackingInNeighborhoodOfMouse": {
+      "name": "_disabledTrackingInNeighborhoodOfMouse",
+      "bridgedName": "_disabledTrackingInNeighborhoodOfMouse",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelMovementTrackingTimer": {
+      "name": "_cancelMovementTrackingTimer",
+      "bridgedName": "_cancelMovementTrackingTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowRegularToolTipOnExpansionToolTip": {
+      "name": "_shouldShowRegularToolTipOnExpansionToolTip",
+      "bridgedName": "_shouldShowRegularToolTipOnExpansionToolTip",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_markMovementTrackingInfo": {
+      "name": "_markMovementTrackingInfo",
+      "bridgedName": "_markMovementTrackingInfo",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldRestartMovementTracking": {
+      "name": "_shouldRestartMovementTracking",
+      "bridgedName": "_shouldRestartMovementTracking",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_displayToolTipIfNecessaryIgnoringTime:": {
+      "name": "_displayToolTipIfNecessaryIgnoringTime:",
+      "bridgedName": "_displayToolTipIfNecessaryIgnoringTime",
+      "args": [
+        {
+          "name": "_displayToolTipIfNecessaryIgnoringTime",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldTrack": {
+      "name": "_shouldTrack",
+      "bridgedName": "_shouldTrack",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canShowToolTip": {
+      "name": "_canShowToolTip",
+      "bridgedName": "_canShowToolTip",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelCurrentToolTipWindowImmediately:": {
+      "name": "_cancelCurrentToolTipWindowImmediately:",
+      "bridgedName": "_cancelCurrentToolTipWindowImmediately",
+      "args": [
+        {
+          "name": "_cancelCurrentToolTipWindowImmediately",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:customToolTip:fadeOutAllowedForToolTipWithDisplayInfo:": {
+      "name": "view:customToolTip:fadeOutAllowedForToolTipWithDisplayInfo:",
+      "bridgedName": "view_customToolTip_fadeOutAllowedForToolTipWithDisplayInfo",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "customToolTip",
+          "type": "long long"
+        },
+        {
+          "name": "fadeOutAllowedForToolTipWithDisplayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:customToolTip:frameForToolTipWithDisplayInfo:": {
+      "name": "view:customToolTip:frameForToolTipWithDisplayInfo:",
+      "bridgedName": "view_customToolTip_frameForToolTipWithDisplayInfo",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "customToolTip",
+          "type": "long long"
+        },
+        {
+          "name": "frameForToolTipWithDisplayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:customToolTip:drawInView:displayInfo:": {
+      "name": "view:customToolTip:drawInView:displayInfo:",
+      "bridgedName": "view_customToolTip_drawInView_displayInfo",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "customToolTip",
+          "type": "long long"
+        },
+        {
+          "name": "drawInView",
+          "type": "id"
+        },
+        {
+          "name": "displayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExpansionToolTipInView:withDisplayInfo:": {
+      "name": "isExpansionToolTipInView:withDisplayInfo:",
+      "bridgedName": "isExpansionToolTipInView_withDisplayInfo",
+      "args": [
+        {
+          "name": "isExpansionToolTipInView",
+          "type": "id"
+        },
+        {
+          "name": "withDisplayInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dynamicToolTipRevealoverInfoAtPoint:trackingRect:": {
+      "name": "dynamicToolTipRevealoverInfoAtPoint:trackingRect:",
+      "bridgedName": "dynamicToolTipRevealoverInfoAtPoint_trackingRect",
+      "args": [
+        {
+          "name": "dynamicToolTipRevealoverInfoAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "trackingRect",
+          "type": "struct CGRect *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dynamicToolTipStringAtPoint:trackingRect:": {
+      "name": "dynamicToolTipStringAtPoint:trackingRect:",
+      "bridgedName": "dynamicToolTipStringAtPoint_trackingRect",
+      "args": [
+        {
+          "name": "dynamicToolTipStringAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "trackingRect",
+          "type": "struct CGRect *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dynamicToolTipRectAtPoint:": {
+      "name": "dynamicToolTipRectAtPoint:",
+      "bridgedName": "dynamicToolTipRectAtPoint",
+      "args": [
+        {
+          "name": "dynamicToolTipRectAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowChangedKeyState": {
+      "name": "windowChangedKeyState",
+      "bridgedName": "windowChangedKeyState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowChangedKeyState": {
+      "name": "_windowChangedKeyState",
+      "bridgedName": "_windowChangedKeyState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidEnableToolTipCreationAndDisplay": {
+      "name": "windowDidEnableToolTipCreationAndDisplay",
+      "bridgedName": "windowDidEnableToolTipCreationAndDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowDidEnableToolTipCreationAndDisplay": {
+      "name": "_windowDidEnableToolTipCreationAndDisplay",
+      "bridgedName": "_windowDidEnableToolTipCreationAndDisplay",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appActivationChanged:": {
+      "name": "_appActivationChanged:",
+      "bridgedName": "_appActivationChanged",
+      "args": [
+        {
+          "name": "_appActivationChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidEndLiveResize": {
+      "name": "viewDidEndLiveResize",
+      "bridgedName": "viewDidEndLiveResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillResetCursorRects": {
+      "name": "viewWillResetCursorRects",
+      "bridgedName": "viewWillResetCursorRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidBecomeVisibleNotification:": {
+      "name": "windowDidBecomeVisibleNotification:",
+      "bridgedName": "windowDidBecomeVisibleNotification",
+      "args": [
+        {
+          "name": "windowDidBecomeVisibleNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidMoveToWindow": {
+      "name": "viewDidMoveToWindow",
+      "bridgedName": "viewDidMoveToWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupForWindow:": {
+      "name": "_setupForWindow:",
+      "bridgedName": "_setupForWindow",
+      "args": [
+        {
+          "name": "_setupForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_threadsafeViewVisibleBoundsChanged": {
+      "name": "_threadsafeViewVisibleBoundsChanged",
+      "bridgedName": "_threadsafeViewVisibleBoundsChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewVisibleBoundsChanged": {
+      "name": "_viewVisibleBoundsChanged",
+      "bridgedName": "_viewVisibleBoundsChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToWindow:": {
+      "name": "viewWillMoveToWindow:",
+      "bridgedName": "viewWillMoveToWindow",
+      "args": [
+        {
+          "name": "viewWillMoveToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detatchFromView": {
+      "name": "detatchFromView",
+      "bridgedName": "detatchFromView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeAllTrackingRects": {
+      "name": "_removeAllTrackingRects",
+      "bridgedName": "_removeAllTrackingRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithView:": {
+      "name": "initWithView:",
+      "bridgedName": "initWithView",
+      "args": [
+        {
+          "name": "initWithView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "abortToolTip": {
+      "name": "abortToolTip",
+      "bridgedName": "abortToolTip",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_abortAndRestartTracking:": {
+      "name": "_abortAndRestartTracking:",
+      "bridgedName": "_abortAndRestartTracking",
+      "args": [
+        {
+          "name": "_abortAndRestartTracking",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeVisibleViewTrackingRectIfNecessary": {
+      "name": "_removeVisibleViewTrackingRectIfNecessary",
+      "bridgedName": "_removeVisibleViewTrackingRectIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeToolTipTrackingRectIfNecessary": {
+      "name": "_removeToolTipTrackingRectIfNecessary",
+      "bridgedName": "_removeToolTipTrackingRectIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,238 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSSnappingAccumulator"
+  ],
+  "protocol": false,
+  "className": "MSSnapperData",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawAccumulator:zoomScale:": {
+      "name": "drawAccumulator:zoomScale:",
+      "bridgedName": "drawAccumulator_zoomScale",
+      "args": [
+        {
+          "name": "drawAccumulator",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawForGroup:zoom:": {
+      "name": "drawForGroup:zoom:",
+      "bridgedName": "drawForGroup_zoom",
+      "args": [
+        {
+          "name": "drawForGroup",
+          "type": "id"
+        },
+        {
+          "name": "zoom",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSnappingForAxis:": {
+      "name": "resetSnappingForAxis:",
+      "bridgedName": "resetSnappingForAxis",
+      "args": [
+        {
+          "name": "resetSnappingForAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "extendGuideForAxis:toStartPosition:endPosition:": {
+      "name": "extendGuideForAxis:toStartPosition:endPosition:",
+      "bridgedName": "extendGuideForAxis_toStartPosition_endPosition",
+      "args": [
+        {
+          "name": "extendGuideForAxis",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toStartPosition",
+          "type": "double"
+        },
+        {
+          "name": "endPosition",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTarget:": {
+      "name": "addTarget:",
+      "bridgedName": "addTarget",
+      "args": [
+        {
+          "name": "addTarget",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateMeasurementsUsingBlock:": {
+      "name": "enumerateMeasurementsUsingBlock:",
+      "bridgedName": "enumerateMeasurementsUsingBlock",
+      "args": [
+        {
+          "name": "enumerateMeasurementsUsingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDistanceMeasurement:": {
+      "name": "addDistanceMeasurement:",
+      "bridgedName": "addDistanceMeasurement",
+      "args": [
+        {
+          "name": "addDistanceMeasurement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstDistanceMeasurementForAxis:": {
+      "name": "firstDistanceMeasurementForAxis:",
+      "bridgedName": "firstDistanceMeasurementForAxis",
+      "args": [
+        {
+          "name": "firstDistanceMeasurementForAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDimensionMeasurement:": {
+      "name": "addDimensionMeasurement:",
+      "bridgedName": "addDimensionMeasurement",
+      "args": [
+        {
+          "name": "addDimensionMeasurement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstDimensionMeasurementForAxis:": {
+      "name": "firstDimensionMeasurementForAxis:",
+      "bridgedName": "firstDimensionMeasurementForAxis",
+      "args": [
+        {
+          "name": "firstDimensionMeasurementForAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accumulatorForAxis:": {
+      "name": "accumulatorForAxis:",
+      "bridgedName": "accumulatorForAxis",
+      "args": [
+        {
+          "name": "accumulatorForAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "yAxisAccumulator": {
+      "name": "yAxisAccumulator",
+      "pointer": true,
+      "type": "MSSnappingAccumulator",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "xAxisAccumulator": {
+      "name": "xAxisAccumulator",
+      "pointer": true,
+      "type": "MSSnappingAccumulator",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "measurementAxes": {
+      "name": "measurementAxes",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

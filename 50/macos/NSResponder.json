@@ -1,0 +1,4615 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h",
+    "NSFunctionBarProvider.h",
+    "NSTouchBarProvider.h",
+    "NSTouchBarProviderContainer.h",
+    "NSUIActivityProvider.h"
+  ],
+  "classes": [
+    "NSMenu",
+    "NSString",
+    "NSTouchBar",
+    "NSUserActivity"
+  ],
+  "protocol": false,
+  "className": "NSResponder",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSTouchBarProviderContainer",
+    "NSUIActivityProvider",
+    "NSTouchBarProvider",
+    "NSFunctionBarProvider",
+    "NSCoding"
+  ],
+  "methods": {
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "restorableStateKeyPaths": {
+      "name": "restorableStateKeyPaths",
+      "bridgedName": "restorableStateKeyPaths",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfTouchBar": {
+      "name": "automaticallyNotifiesObserversOfTouchBar",
+      "bridgedName": "automaticallyNotifiesObserversOfTouchBar",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_ignoreBadFirstResponders": {
+      "name": "_ignoreBadFirstResponders",
+      "bridgedName": "_ignoreBadFirstResponders",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformShowMenu": {
+      "name": "accessibilityPerformShowMenu",
+      "bridgedName": "accessibilityPerformShowMenu",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformShowDefaultUI": {
+      "name": "accessibilityPerformShowDefaultUI",
+      "bridgedName": "accessibilityPerformShowDefaultUI",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformShowAlternateUI": {
+      "name": "accessibilityPerformShowAlternateUI",
+      "bridgedName": "accessibilityPerformShowAlternateUI",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformRaise": {
+      "name": "accessibilityPerformRaise",
+      "bridgedName": "accessibilityPerformRaise",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformPress": {
+      "name": "accessibilityPerformPress",
+      "bridgedName": "accessibilityPerformPress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformPick": {
+      "name": "accessibilityPerformPick",
+      "bridgedName": "accessibilityPerformPick",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformIncrement": {
+      "name": "accessibilityPerformIncrement",
+      "bridgedName": "accessibilityPerformIncrement",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformDelete": {
+      "name": "accessibilityPerformDelete",
+      "bridgedName": "accessibilityPerformDelete",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformDecrement": {
+      "name": "accessibilityPerformDecrement",
+      "bridgedName": "accessibilityPerformDecrement",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformConfirm": {
+      "name": "accessibilityPerformConfirm",
+      "bridgedName": "accessibilityPerformConfirm",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPerformCancel": {
+      "name": "accessibilityPerformCancel",
+      "bridgedName": "accessibilityPerformCancel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityContentSiblingBelow:": {
+      "name": "setAccessibilityContentSiblingBelow:",
+      "bridgedName": "setAccessibilityContentSiblingBelow",
+      "args": [
+        {
+          "name": "setAccessibilityContentSiblingBelow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityContentSiblingBelow": {
+      "name": "accessibilityContentSiblingBelow",
+      "bridgedName": "accessibilityContentSiblingBelow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityContentSiblingAbove:": {
+      "name": "setAccessibilityContentSiblingAbove:",
+      "bridgedName": "setAccessibilityContentSiblingAbove",
+      "args": [
+        {
+          "name": "setAccessibilityContentSiblingAbove",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityContentSiblingAbove": {
+      "name": "accessibilityContentSiblingAbove",
+      "bridgedName": "accessibilityContentSiblingAbove",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNextContentSibling:": {
+      "name": "setNextContentSibling:",
+      "bridgedName": "setNextContentSibling",
+      "args": [
+        {
+          "name": "setNextContentSibling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityNextContentSibling": {
+      "name": "accessibilityNextContentSibling",
+      "bridgedName": "accessibilityNextContentSibling",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreviousContentSibling:": {
+      "name": "setPreviousContentSibling:",
+      "bridgedName": "setPreviousContentSibling",
+      "args": [
+        {
+          "name": "setPreviousContentSibling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPreviousContentSibling": {
+      "name": "accessibilityPreviousContentSibling",
+      "bridgedName": "accessibilityPreviousContentSibling",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityZoomButton:": {
+      "name": "setAccessibilityZoomButton:",
+      "bridgedName": "setAccessibilityZoomButton",
+      "args": [
+        {
+          "name": "setAccessibilityZoomButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityZoomButton": {
+      "name": "accessibilityZoomButton",
+      "bridgedName": "accessibilityZoomButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityWindows:": {
+      "name": "setAccessibilityWindows:",
+      "bridgedName": "setAccessibilityWindows",
+      "args": [
+        {
+          "name": "setAccessibilityWindows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityWindows": {
+      "name": "accessibilityWindows",
+      "bridgedName": "accessibilityWindows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityWindow:": {
+      "name": "setAccessibilityWindow:",
+      "bridgedName": "setAccessibilityWindow",
+      "args": [
+        {
+          "name": "setAccessibilityWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityWindow": {
+      "name": "accessibilityWindow",
+      "bridgedName": "accessibilityWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityWarningValue:": {
+      "name": "setAccessibilityWarningValue:",
+      "bridgedName": "setAccessibilityWarningValue",
+      "args": [
+        {
+          "name": "setAccessibilityWarningValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityWarningValue": {
+      "name": "accessibilityWarningValue",
+      "bridgedName": "accessibilityWarningValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVisibleRows:": {
+      "name": "setAccessibilityVisibleRows:",
+      "bridgedName": "setAccessibilityVisibleRows",
+      "args": [
+        {
+          "name": "setAccessibilityVisibleRows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleRows": {
+      "name": "accessibilityVisibleRows",
+      "bridgedName": "accessibilityVisibleRows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVisibleColumns:": {
+      "name": "setAccessibilityVisibleColumns:",
+      "bridgedName": "setAccessibilityVisibleColumns",
+      "args": [
+        {
+          "name": "setAccessibilityVisibleColumns",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleColumns": {
+      "name": "accessibilityVisibleColumns",
+      "bridgedName": "accessibilityVisibleColumns",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVisibleChildren:": {
+      "name": "setAccessibilityVisibleChildren:",
+      "bridgedName": "setAccessibilityVisibleChildren",
+      "args": [
+        {
+          "name": "setAccessibilityVisibleChildren",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleChildren": {
+      "name": "accessibilityVisibleChildren",
+      "bridgedName": "accessibilityVisibleChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVisibleCharacterRange:": {
+      "name": "setAccessibilityVisibleCharacterRange:",
+      "bridgedName": "setAccessibilityVisibleCharacterRange",
+      "args": [
+        {
+          "name": "setAccessibilityVisibleCharacterRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleCharacterRange": {
+      "name": "accessibilityVisibleCharacterRange",
+      "bridgedName": "accessibilityVisibleCharacterRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVisibleCells:": {
+      "name": "setAccessibilityVisibleCells:",
+      "bridgedName": "setAccessibilityVisibleCells",
+      "args": [
+        {
+          "name": "setAccessibilityVisibleCells",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVisibleCells": {
+      "name": "accessibilityVisibleCells",
+      "bridgedName": "accessibilityVisibleCells",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVerticalUnits:": {
+      "name": "setAccessibilityVerticalUnits:",
+      "bridgedName": "setAccessibilityVerticalUnits",
+      "args": [
+        {
+          "name": "setAccessibilityVerticalUnits",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVerticalUnits": {
+      "name": "accessibilityVerticalUnits",
+      "bridgedName": "accessibilityVerticalUnits",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVerticalUnitDescription:": {
+      "name": "setAccessibilityVerticalUnitDescription:",
+      "bridgedName": "setAccessibilityVerticalUnitDescription",
+      "args": [
+        {
+          "name": "setAccessibilityVerticalUnitDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVerticalUnitDescription": {
+      "name": "accessibilityVerticalUnitDescription",
+      "bridgedName": "accessibilityVerticalUnitDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityVerticalScrollBar:": {
+      "name": "setAccessibilityVerticalScrollBar:",
+      "bridgedName": "setAccessibilityVerticalScrollBar",
+      "args": [
+        {
+          "name": "setAccessibilityVerticalScrollBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityVerticalScrollBar": {
+      "name": "accessibilityVerticalScrollBar",
+      "bridgedName": "accessibilityVerticalScrollBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityValueDescription:": {
+      "name": "setAccessibilityValueDescription:",
+      "bridgedName": "setAccessibilityValueDescription",
+      "args": [
+        {
+          "name": "setAccessibilityValueDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValueDescription": {
+      "name": "accessibilityValueDescription",
+      "bridgedName": "accessibilityValueDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityValue:": {
+      "name": "setAccessibilityValue:",
+      "bridgedName": "setAccessibilityValue",
+      "args": [
+        {
+          "name": "setAccessibilityValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValue": {
+      "name": "accessibilityValue",
+      "bridgedName": "accessibilityValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityUnits:": {
+      "name": "setAccessibilityUnits:",
+      "bridgedName": "setAccessibilityUnits",
+      "args": [
+        {
+          "name": "setAccessibilityUnits",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityUnits": {
+      "name": "accessibilityUnits",
+      "bridgedName": "accessibilityUnits",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityUnitDescription:": {
+      "name": "setAccessibilityUnitDescription:",
+      "bridgedName": "setAccessibilityUnitDescription",
+      "args": [
+        {
+          "name": "setAccessibilityUnitDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityUnitDescription": {
+      "name": "accessibilityUnitDescription",
+      "bridgedName": "accessibilityUnitDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityURL:": {
+      "name": "setAccessibilityURL:",
+      "bridgedName": "setAccessibilityURL",
+      "args": [
+        {
+          "name": "setAccessibilityURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityURL": {
+      "name": "accessibilityURL",
+      "bridgedName": "accessibilityURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityTopLevelUIElement:": {
+      "name": "setAccessibilityTopLevelUIElement:",
+      "bridgedName": "setAccessibilityTopLevelUIElement",
+      "args": [
+        {
+          "name": "setAccessibilityTopLevelUIElement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTopLevelUIElement": {
+      "name": "accessibilityTopLevelUIElement",
+      "bridgedName": "accessibilityTopLevelUIElement",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityToolbarButton:": {
+      "name": "setAccessibilityToolbarButton:",
+      "bridgedName": "setAccessibilityToolbarButton",
+      "args": [
+        {
+          "name": "setAccessibilityToolbarButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityToolbarButton": {
+      "name": "accessibilityToolbarButton",
+      "bridgedName": "accessibilityToolbarButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityTitleUIElement:": {
+      "name": "setAccessibilityTitleUIElement:",
+      "bridgedName": "setAccessibilityTitleUIElement",
+      "args": [
+        {
+          "name": "setAccessibilityTitleUIElement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTitleUIElement": {
+      "name": "accessibilityTitleUIElement",
+      "bridgedName": "accessibilityTitleUIElement",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityTitle:": {
+      "name": "setAccessibilityTitle:",
+      "bridgedName": "setAccessibilityTitle",
+      "args": [
+        {
+          "name": "setAccessibilityTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTitle": {
+      "name": "accessibilityTitle",
+      "bridgedName": "accessibilityTitle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityTabs:": {
+      "name": "setAccessibilityTabs:",
+      "bridgedName": "setAccessibilityTabs",
+      "args": [
+        {
+          "name": "setAccessibilityTabs",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityTabs": {
+      "name": "accessibilityTabs",
+      "bridgedName": "accessibilityTabs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySubrole:": {
+      "name": "setAccessibilitySubrole:",
+      "bridgedName": "setAccessibilitySubrole",
+      "args": [
+        {
+          "name": "setAccessibilitySubrole",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySubrole": {
+      "name": "accessibilitySubrole",
+      "bridgedName": "accessibilitySubrole",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySplitters:": {
+      "name": "setAccessibilitySplitters:",
+      "bridgedName": "setAccessibilitySplitters",
+      "args": [
+        {
+          "name": "setAccessibilitySplitters",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySplitters": {
+      "name": "accessibilitySplitters",
+      "bridgedName": "accessibilitySplitters",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySortDirection:": {
+      "name": "setAccessibilitySortDirection:",
+      "bridgedName": "setAccessibilitySortDirection",
+      "args": [
+        {
+          "name": "setAccessibilitySortDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySortDirection": {
+      "name": "accessibilitySortDirection",
+      "bridgedName": "accessibilitySortDirection",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFrameInParentSpace:": {
+      "name": "setAccessibilityFrameInParentSpace:",
+      "bridgedName": "setAccessibilityFrameInParentSpace",
+      "args": [
+        {
+          "name": "setAccessibilityFrameInParentSpace",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFrameInParentSpace": {
+      "name": "accessibilityFrameInParentSpace",
+      "bridgedName": "accessibilityFrameInParentSpace",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFrame:": {
+      "name": "setAccessibilityFrame:",
+      "bridgedName": "setAccessibilityFrame",
+      "args": [
+        {
+          "name": "setAccessibilityFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFrame": {
+      "name": "accessibilityFrame",
+      "bridgedName": "accessibilityFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityShownMenu:": {
+      "name": "setAccessibilityShownMenu:",
+      "bridgedName": "setAccessibilityShownMenu",
+      "args": [
+        {
+          "name": "setAccessibilityShownMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityShownMenu": {
+      "name": "accessibilityShownMenu",
+      "bridgedName": "accessibilityShownMenu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySharedTextUIElements:": {
+      "name": "setAccessibilitySharedTextUIElements:",
+      "bridgedName": "setAccessibilitySharedTextUIElements",
+      "args": [
+        {
+          "name": "setAccessibilitySharedTextUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedTextUIElements": {
+      "name": "accessibilitySharedTextUIElements",
+      "bridgedName": "accessibilitySharedTextUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySharedFocusElements:": {
+      "name": "setAccessibilitySharedFocusElements:",
+      "bridgedName": "setAccessibilitySharedFocusElements",
+      "args": [
+        {
+          "name": "setAccessibilitySharedFocusElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedFocusElements": {
+      "name": "accessibilitySharedFocusElements",
+      "bridgedName": "accessibilitySharedFocusElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySharedCharacterRange:": {
+      "name": "setAccessibilitySharedCharacterRange:",
+      "bridgedName": "setAccessibilitySharedCharacterRange",
+      "args": [
+        {
+          "name": "setAccessibilitySharedCharacterRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySharedCharacterRange": {
+      "name": "accessibilitySharedCharacterRange",
+      "bridgedName": "accessibilitySharedCharacterRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityServesAsTitleForUIElements:": {
+      "name": "setAccessibilityServesAsTitleForUIElements:",
+      "bridgedName": "setAccessibilityServesAsTitleForUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityServesAsTitleForUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityServesAsTitleForUIElements": {
+      "name": "accessibilityServesAsTitleForUIElements",
+      "bridgedName": "accessibilityServesAsTitleForUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedTextRanges:": {
+      "name": "setAccessibilitySelectedTextRanges:",
+      "bridgedName": "setAccessibilitySelectedTextRanges",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedTextRanges",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedTextRanges": {
+      "name": "accessibilitySelectedTextRanges",
+      "bridgedName": "accessibilitySelectedTextRanges",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedTextRange:": {
+      "name": "setAccessibilitySelectedTextRange:",
+      "bridgedName": "setAccessibilitySelectedTextRange",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedTextRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedTextRange": {
+      "name": "accessibilitySelectedTextRange",
+      "bridgedName": "accessibilitySelectedTextRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedText:": {
+      "name": "setAccessibilitySelectedText:",
+      "bridgedName": "setAccessibilitySelectedText",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedText",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedText": {
+      "name": "accessibilitySelectedText",
+      "bridgedName": "accessibilitySelectedText",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedRows:": {
+      "name": "setAccessibilitySelectedRows:",
+      "bridgedName": "setAccessibilitySelectedRows",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedRows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedRows": {
+      "name": "accessibilitySelectedRows",
+      "bridgedName": "accessibilitySelectedRows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHeaderGroup:": {
+      "name": "setAccessibilityHeaderGroup:",
+      "bridgedName": "setAccessibilityHeaderGroup",
+      "args": [
+        {
+          "name": "setAccessibilityHeaderGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHeaderGroup": {
+      "name": "accessibilityHeaderGroup",
+      "bridgedName": "accessibilityHeaderGroup",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedColumns:": {
+      "name": "setAccessibilitySelectedColumns:",
+      "bridgedName": "setAccessibilitySelectedColumns",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedColumns",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedColumns": {
+      "name": "accessibilitySelectedColumns",
+      "bridgedName": "accessibilitySelectedColumns",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedChildren:": {
+      "name": "setAccessibilitySelectedChildren:",
+      "bridgedName": "setAccessibilitySelectedChildren",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedChildren",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedChildren": {
+      "name": "accessibilitySelectedChildren",
+      "bridgedName": "accessibilitySelectedChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelectedCells:": {
+      "name": "setAccessibilitySelectedCells:",
+      "bridgedName": "setAccessibilitySelectedCells",
+      "args": [
+        {
+          "name": "setAccessibilitySelectedCells",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySelectedCells": {
+      "name": "accessibilitySelectedCells",
+      "bridgedName": "accessibilitySelectedCells",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySelected:": {
+      "name": "setAccessibilitySelected:",
+      "bridgedName": "setAccessibilitySelected",
+      "args": [
+        {
+          "name": "setAccessibilitySelected",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilitySelected": {
+      "name": "isAccessibilitySelected",
+      "bridgedName": "isAccessibilitySelected",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySections:": {
+      "name": "setAccessibilitySections:",
+      "bridgedName": "setAccessibilitySections",
+      "args": [
+        {
+          "name": "setAccessibilitySections",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySections": {
+      "name": "accessibilitySections",
+      "bridgedName": "accessibilitySections",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySearchMenu:": {
+      "name": "setAccessibilitySearchMenu:",
+      "bridgedName": "setAccessibilitySearchMenu",
+      "args": [
+        {
+          "name": "setAccessibilitySearchMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySearchMenu": {
+      "name": "accessibilitySearchMenu",
+      "bridgedName": "accessibilitySearchMenu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilitySearchButton:": {
+      "name": "setAccessibilitySearchButton:",
+      "bridgedName": "setAccessibilitySearchButton",
+      "args": [
+        {
+          "name": "setAccessibilitySearchButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySearchButton": {
+      "name": "accessibilitySearchButton",
+      "bridgedName": "accessibilitySearchButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRows:": {
+      "name": "setAccessibilityRows:",
+      "bridgedName": "setAccessibilityRows",
+      "args": [
+        {
+          "name": "setAccessibilityRows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRows": {
+      "name": "accessibilityRows",
+      "bridgedName": "accessibilityRows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRowIndexRange:": {
+      "name": "setAccessibilityRowIndexRange:",
+      "bridgedName": "setAccessibilityRowIndexRange",
+      "args": [
+        {
+          "name": "setAccessibilityRowIndexRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRowIndexRange": {
+      "name": "accessibilityRowIndexRange",
+      "bridgedName": "accessibilityRowIndexRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRowHeaderUIElements:": {
+      "name": "setAccessibilityRowHeaderUIElements:",
+      "bridgedName": "setAccessibilityRowHeaderUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityRowHeaderUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRowHeaderUIElements": {
+      "name": "accessibilityRowHeaderUIElements",
+      "bridgedName": "accessibilityRowHeaderUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRowCount:": {
+      "name": "setAccessibilityRowCount:",
+      "bridgedName": "setAccessibilityRowCount",
+      "args": [
+        {
+          "name": "setAccessibilityRowCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRowCount": {
+      "name": "accessibilityRowCount",
+      "bridgedName": "accessibilityRowCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRoleDescription:": {
+      "name": "setAccessibilityRoleDescription:",
+      "bridgedName": "setAccessibilityRoleDescription",
+      "args": [
+        {
+          "name": "setAccessibilityRoleDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRoleDescription": {
+      "name": "accessibilityRoleDescription",
+      "bridgedName": "accessibilityRoleDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRole:": {
+      "name": "setAccessibilityRole:",
+      "bridgedName": "setAccessibilityRole",
+      "args": [
+        {
+          "name": "setAccessibilityRole",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRole": {
+      "name": "accessibilityRole",
+      "bridgedName": "accessibilityRole",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRequired:": {
+      "name": "setAccessibilityRequired:",
+      "bridgedName": "setAccessibilityRequired",
+      "args": [
+        {
+          "name": "setAccessibilityRequired",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityRequired": {
+      "name": "isAccessibilityRequired",
+      "bridgedName": "isAccessibilityRequired",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityProxy:": {
+      "name": "setAccessibilityProxy:",
+      "bridgedName": "setAccessibilityProxy",
+      "args": [
+        {
+          "name": "setAccessibilityProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityProxy": {
+      "name": "accessibilityProxy",
+      "bridgedName": "accessibilityProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityPreviousContents:": {
+      "name": "setAccessibilityPreviousContents:",
+      "bridgedName": "setAccessibilityPreviousContents",
+      "args": [
+        {
+          "name": "setAccessibilityPreviousContents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPreviousContents": {
+      "name": "accessibilityPreviousContents",
+      "bridgedName": "accessibilityPreviousContents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityPlaceholderValue:": {
+      "name": "setAccessibilityPlaceholderValue:",
+      "bridgedName": "setAccessibilityPlaceholderValue",
+      "args": [
+        {
+          "name": "setAccessibilityPlaceholderValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPlaceholderValue": {
+      "name": "accessibilityPlaceholderValue",
+      "bridgedName": "accessibilityPlaceholderValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityParent:": {
+      "name": "setAccessibilityParent:",
+      "bridgedName": "setAccessibilityParent",
+      "args": [
+        {
+          "name": "setAccessibilityParent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityParent": {
+      "name": "accessibilityParent",
+      "bridgedName": "accessibilityParent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityOverflowButton:": {
+      "name": "setAccessibilityOverflowButton:",
+      "bridgedName": "setAccessibilityOverflowButton",
+      "args": [
+        {
+          "name": "setAccessibilityOverflowButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityOverflowButton": {
+      "name": "accessibilityOverflowButton",
+      "bridgedName": "accessibilityOverflowButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityOrientation:": {
+      "name": "setAccessibilityOrientation:",
+      "bridgedName": "setAccessibilityOrientation",
+      "args": [
+        {
+          "name": "setAccessibilityOrientation",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityOrientation": {
+      "name": "accessibilityOrientation",
+      "bridgedName": "accessibilityOrientation",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityOrderedByRow:": {
+      "name": "setAccessibilityOrderedByRow:",
+      "bridgedName": "setAccessibilityOrderedByRow",
+      "args": [
+        {
+          "name": "setAccessibilityOrderedByRow",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityOrderedByRow": {
+      "name": "isAccessibilityOrderedByRow",
+      "bridgedName": "isAccessibilityOrderedByRow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityNumberOfCharacters:": {
+      "name": "setAccessibilityNumberOfCharacters:",
+      "bridgedName": "setAccessibilityNumberOfCharacters",
+      "args": [
+        {
+          "name": "setAccessibilityNumberOfCharacters",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityNumberOfCharacters": {
+      "name": "accessibilityNumberOfCharacters",
+      "bridgedName": "accessibilityNumberOfCharacters",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityNextContents:": {
+      "name": "setAccessibilityNextContents:",
+      "bridgedName": "setAccessibilityNextContents",
+      "args": [
+        {
+          "name": "setAccessibilityNextContents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityNextContents": {
+      "name": "accessibilityNextContents",
+      "bridgedName": "accessibilityNextContents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityModal:": {
+      "name": "setAccessibilityModal:",
+      "bridgedName": "setAccessibilityModal",
+      "args": [
+        {
+          "name": "setAccessibilityModal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityModal": {
+      "name": "isAccessibilityModal",
+      "bridgedName": "isAccessibilityModal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMinimized:": {
+      "name": "setAccessibilityMinimized:",
+      "bridgedName": "setAccessibilityMinimized",
+      "args": [
+        {
+          "name": "setAccessibilityMinimized",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityMinimized": {
+      "name": "isAccessibilityMinimized",
+      "bridgedName": "isAccessibilityMinimized",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMinimizeButton:": {
+      "name": "setAccessibilityMinimizeButton:",
+      "bridgedName": "setAccessibilityMinimizeButton",
+      "args": [
+        {
+          "name": "setAccessibilityMinimizeButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMinimizeButton": {
+      "name": "accessibilityMinimizeButton",
+      "bridgedName": "accessibilityMinimizeButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMinValue:": {
+      "name": "setAccessibilityMinValue:",
+      "bridgedName": "setAccessibilityMinValue",
+      "args": [
+        {
+          "name": "setAccessibilityMinValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMinValue": {
+      "name": "accessibilityMinValue",
+      "bridgedName": "accessibilityMinValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMimicNativeView:": {
+      "name": "setAccessibilityMimicNativeView:",
+      "bridgedName": "setAccessibilityMimicNativeView",
+      "args": [
+        {
+          "name": "setAccessibilityMimicNativeView",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityMimicNativeView": {
+      "name": "isAccessibilityMimicNativeView",
+      "bridgedName": "isAccessibilityMimicNativeView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMenuBar:": {
+      "name": "setAccessibilityMenuBar:",
+      "bridgedName": "setAccessibilityMenuBar",
+      "args": [
+        {
+          "name": "setAccessibilityMenuBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMenuBar": {
+      "name": "accessibilityMenuBar",
+      "bridgedName": "accessibilityMenuBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMaxValue:": {
+      "name": "setAccessibilityMaxValue:",
+      "bridgedName": "setAccessibilityMaxValue",
+      "args": [
+        {
+          "name": "setAccessibilityMaxValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMaxValue": {
+      "name": "accessibilityMaxValue",
+      "bridgedName": "accessibilityMaxValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMarkerValues:": {
+      "name": "setAccessibilityMarkerValues:",
+      "bridgedName": "setAccessibilityMarkerValues",
+      "args": [
+        {
+          "name": "setAccessibilityMarkerValues",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMarkerValues": {
+      "name": "accessibilityMarkerValues",
+      "bridgedName": "accessibilityMarkerValues",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMarkerUIElements:": {
+      "name": "setAccessibilityMarkerUIElements:",
+      "bridgedName": "setAccessibilityMarkerUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityMarkerUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMarkerUIElements": {
+      "name": "accessibilityMarkerUIElements",
+      "bridgedName": "accessibilityMarkerUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMarkerTypeDescription:": {
+      "name": "setAccessibilityMarkerTypeDescription:",
+      "bridgedName": "setAccessibilityMarkerTypeDescription",
+      "args": [
+        {
+          "name": "setAccessibilityMarkerTypeDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMarkerTypeDescription": {
+      "name": "accessibilityMarkerTypeDescription",
+      "bridgedName": "accessibilityMarkerTypeDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityRulerMarkerType:": {
+      "name": "setAccessibilityRulerMarkerType:",
+      "bridgedName": "setAccessibilityRulerMarkerType",
+      "args": [
+        {
+          "name": "setAccessibilityRulerMarkerType",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRulerMarkerType": {
+      "name": "accessibilityRulerMarkerType",
+      "bridgedName": "accessibilityRulerMarkerType",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMarkerGroupUIElement:": {
+      "name": "setAccessibilityMarkerGroupUIElement:",
+      "bridgedName": "setAccessibilityMarkerGroupUIElement",
+      "args": [
+        {
+          "name": "setAccessibilityMarkerGroupUIElement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMarkerGroupUIElement": {
+      "name": "accessibilityMarkerGroupUIElement",
+      "bridgedName": "accessibilityMarkerGroupUIElement",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMainWindow:": {
+      "name": "setAccessibilityMainWindow:",
+      "bridgedName": "setAccessibilityMainWindow",
+      "args": [
+        {
+          "name": "setAccessibilityMainWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMainWindow": {
+      "name": "accessibilityMainWindow",
+      "bridgedName": "accessibilityMainWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityMain:": {
+      "name": "setAccessibilityMain:",
+      "bridgedName": "setAccessibilityMain",
+      "args": [
+        {
+          "name": "setAccessibilityMain",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityMain": {
+      "name": "isAccessibilityMain",
+      "bridgedName": "isAccessibilityMain",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityLinkedUIElements:": {
+      "name": "setAccessibilityLinkedUIElements:",
+      "bridgedName": "setAccessibilityLinkedUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityLinkedUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLinkedUIElements": {
+      "name": "accessibilityLinkedUIElements",
+      "bridgedName": "accessibilityLinkedUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityLabelValue:": {
+      "name": "setAccessibilityLabelValue:",
+      "bridgedName": "setAccessibilityLabelValue",
+      "args": [
+        {
+          "name": "setAccessibilityLabelValue",
+          "type": "float"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLabelValue": {
+      "name": "accessibilityLabelValue",
+      "bridgedName": "accessibilityLabelValue",
+      "args": [],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityLabelUIElements:": {
+      "name": "setAccessibilityLabelUIElements:",
+      "bridgedName": "setAccessibilityLabelUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityLabelUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLabelUIElements": {
+      "name": "accessibilityLabelUIElements",
+      "bridgedName": "accessibilityLabelUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityInsertionPointLineNumber:": {
+      "name": "setAccessibilityInsertionPointLineNumber:",
+      "bridgedName": "setAccessibilityInsertionPointLineNumber",
+      "args": [
+        {
+          "name": "setAccessibilityInsertionPointLineNumber",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityInsertionPointLineNumber": {
+      "name": "accessibilityInsertionPointLineNumber",
+      "bridgedName": "accessibilityInsertionPointLineNumber",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityIndex:": {
+      "name": "setAccessibilityIndex:",
+      "bridgedName": "setAccessibilityIndex",
+      "args": [
+        {
+          "name": "setAccessibilityIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIndex": {
+      "name": "accessibilityIndex",
+      "bridgedName": "accessibilityIndex",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityIncrementButton:": {
+      "name": "setAccessibilityIncrementButton:",
+      "bridgedName": "setAccessibilityIncrementButton",
+      "args": [
+        {
+          "name": "setAccessibilityIncrementButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIncrementButton": {
+      "name": "accessibilityIncrementButton",
+      "bridgedName": "accessibilityIncrementButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityIdentifier:": {
+      "name": "setAccessibilityIdentifier:",
+      "bridgedName": "setAccessibilityIdentifier",
+      "args": [
+        {
+          "name": "setAccessibilityIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIdentifier": {
+      "name": "accessibilityIdentifier",
+      "bridgedName": "accessibilityIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHorizontalUnits:": {
+      "name": "setAccessibilityHorizontalUnits:",
+      "bridgedName": "setAccessibilityHorizontalUnits",
+      "args": [
+        {
+          "name": "setAccessibilityHorizontalUnits",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHorizontalUnits": {
+      "name": "accessibilityHorizontalUnits",
+      "bridgedName": "accessibilityHorizontalUnits",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHorizontalUnitDescription:": {
+      "name": "setAccessibilityHorizontalUnitDescription:",
+      "bridgedName": "setAccessibilityHorizontalUnitDescription",
+      "args": [
+        {
+          "name": "setAccessibilityHorizontalUnitDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHorizontalUnitDescription": {
+      "name": "accessibilityHorizontalUnitDescription",
+      "bridgedName": "accessibilityHorizontalUnitDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHorizontalScrollBar:": {
+      "name": "setAccessibilityHorizontalScrollBar:",
+      "bridgedName": "setAccessibilityHorizontalScrollBar",
+      "args": [
+        {
+          "name": "setAccessibilityHorizontalScrollBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHorizontalScrollBar": {
+      "name": "accessibilityHorizontalScrollBar",
+      "bridgedName": "accessibilityHorizontalScrollBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHidden:": {
+      "name": "setAccessibilityHidden:",
+      "bridgedName": "setAccessibilityHidden",
+      "args": [
+        {
+          "name": "setAccessibilityHidden",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityHidden": {
+      "name": "isAccessibilityHidden",
+      "bridgedName": "isAccessibilityHidden",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHelp:": {
+      "name": "setAccessibilityHelp:",
+      "bridgedName": "setAccessibilityHelp",
+      "args": [
+        {
+          "name": "setAccessibilityHelp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHelp": {
+      "name": "accessibilityHelp",
+      "bridgedName": "accessibilityHelp",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHeader:": {
+      "name": "setAccessibilityHeader:",
+      "bridgedName": "setAccessibilityHeader",
+      "args": [
+        {
+          "name": "setAccessibilityHeader",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHeader": {
+      "name": "accessibilityHeader",
+      "bridgedName": "accessibilityHeader",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityHandles:": {
+      "name": "setAccessibilityHandles:",
+      "bridgedName": "setAccessibilityHandles",
+      "args": [
+        {
+          "name": "setAccessibilityHandles",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHandles": {
+      "name": "accessibilityHandles",
+      "bridgedName": "accessibilityHandles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityGrowArea:": {
+      "name": "setAccessibilityGrowArea:",
+      "bridgedName": "setAccessibilityGrowArea",
+      "args": [
+        {
+          "name": "setAccessibilityGrowArea",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityGrowArea": {
+      "name": "accessibilityGrowArea",
+      "bridgedName": "accessibilityGrowArea",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFunctionRowTopLevelElements:": {
+      "name": "setAccessibilityFunctionRowTopLevelElements:",
+      "bridgedName": "setAccessibilityFunctionRowTopLevelElements",
+      "args": [
+        {
+          "name": "setAccessibilityFunctionRowTopLevelElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFunctionRowTopLevelElements": {
+      "name": "accessibilityFunctionRowTopLevelElements",
+      "bridgedName": "accessibilityFunctionRowTopLevelElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFullScreenButton:": {
+      "name": "setAccessibilityFullScreenButton:",
+      "bridgedName": "setAccessibilityFullScreenButton",
+      "args": [
+        {
+          "name": "setAccessibilityFullScreenButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFullScreenButton": {
+      "name": "accessibilityFullScreenButton",
+      "bridgedName": "accessibilityFullScreenButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFrontmost:": {
+      "name": "setAccessibilityFrontmost:",
+      "bridgedName": "setAccessibilityFrontmost",
+      "args": [
+        {
+          "name": "setAccessibilityFrontmost",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityFrontmost": {
+      "name": "isAccessibilityFrontmost",
+      "bridgedName": "isAccessibilityFrontmost",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFocusedWindow:": {
+      "name": "setAccessibilityFocusedWindow:",
+      "bridgedName": "setAccessibilityFocusedWindow",
+      "args": [
+        {
+          "name": "setAccessibilityFocusedWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFocusedWindow": {
+      "name": "accessibilityFocusedWindow",
+      "bridgedName": "accessibilityFocusedWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityApplicationFocusedUIElement:": {
+      "name": "setAccessibilityApplicationFocusedUIElement:",
+      "bridgedName": "setAccessibilityApplicationFocusedUIElement",
+      "args": [
+        {
+          "name": "setAccessibilityApplicationFocusedUIElement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityApplicationFocusedUIElement": {
+      "name": "accessibilityApplicationFocusedUIElement",
+      "bridgedName": "accessibilityApplicationFocusedUIElement",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFocused:": {
+      "name": "setAccessibilityFocused:",
+      "bridgedName": "setAccessibilityFocused",
+      "args": [
+        {
+          "name": "setAccessibilityFocused",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityFocused": {
+      "name": "isAccessibilityFocused",
+      "bridgedName": "isAccessibilityFocused",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityFilename:": {
+      "name": "setAccessibilityFilename:",
+      "bridgedName": "setAccessibilityFilename",
+      "args": [
+        {
+          "name": "setAccessibilityFilename",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFilename": {
+      "name": "accessibilityFilename",
+      "bridgedName": "accessibilityFilename",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityExtrasMenuBar:": {
+      "name": "setAccessibilityExtrasMenuBar:",
+      "bridgedName": "setAccessibilityExtrasMenuBar",
+      "args": [
+        {
+          "name": "setAccessibilityExtrasMenuBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityExtrasMenuBar": {
+      "name": "accessibilityExtrasMenuBar",
+      "bridgedName": "accessibilityExtrasMenuBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityExpanded:": {
+      "name": "setAccessibilityExpanded:",
+      "bridgedName": "setAccessibilityExpanded",
+      "args": [
+        {
+          "name": "setAccessibilityExpanded",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityExpanded": {
+      "name": "isAccessibilityExpanded",
+      "bridgedName": "isAccessibilityExpanded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityEnhancedUserInterface:": {
+      "name": "setAccessibilityEnhancedUserInterface:",
+      "bridgedName": "setAccessibilityEnhancedUserInterface",
+      "args": [
+        {
+          "name": "setAccessibilityEnhancedUserInterface",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityEnhancedUserInterface": {
+      "name": "isAccessibilityEnhancedUserInterface",
+      "bridgedName": "isAccessibilityEnhancedUserInterface",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityEnabled:": {
+      "name": "setAccessibilityEnabled:",
+      "bridgedName": "setAccessibilityEnabled",
+      "args": [
+        {
+          "name": "setAccessibilityEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityEnabled": {
+      "name": "isAccessibilityEnabled",
+      "bridgedName": "isAccessibilityEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityEdited:": {
+      "name": "setAccessibilityEdited:",
+      "bridgedName": "setAccessibilityEdited",
+      "args": [
+        {
+          "name": "setAccessibilityEdited",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityEdited": {
+      "name": "isAccessibilityEdited",
+      "bridgedName": "isAccessibilityEdited",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDocument:": {
+      "name": "setAccessibilityDocument:",
+      "bridgedName": "setAccessibilityDocument",
+      "args": [
+        {
+          "name": "setAccessibilityDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDocument": {
+      "name": "accessibilityDocument",
+      "bridgedName": "accessibilityDocument",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDisclosureLevel:": {
+      "name": "setAccessibilityDisclosureLevel:",
+      "bridgedName": "setAccessibilityDisclosureLevel",
+      "args": [
+        {
+          "name": "setAccessibilityDisclosureLevel",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDisclosureLevel": {
+      "name": "accessibilityDisclosureLevel",
+      "bridgedName": "accessibilityDisclosureLevel",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDisclosed:": {
+      "name": "setAccessibilityDisclosed:",
+      "bridgedName": "setAccessibilityDisclosed",
+      "args": [
+        {
+          "name": "setAccessibilityDisclosed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityDisclosed": {
+      "name": "isAccessibilityDisclosed",
+      "bridgedName": "isAccessibilityDisclosed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDisclosedRows:": {
+      "name": "setAccessibilityDisclosedRows:",
+      "bridgedName": "setAccessibilityDisclosedRows",
+      "args": [
+        {
+          "name": "setAccessibilityDisclosedRows",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDisclosedRows": {
+      "name": "accessibilityDisclosedRows",
+      "bridgedName": "accessibilityDisclosedRows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDisclosedByRow:": {
+      "name": "setAccessibilityDisclosedByRow:",
+      "bridgedName": "setAccessibilityDisclosedByRow",
+      "args": [
+        {
+          "name": "setAccessibilityDisclosedByRow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDisclosedByRow": {
+      "name": "accessibilityDisclosedByRow",
+      "bridgedName": "accessibilityDisclosedByRow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLabel": {
+      "name": "accessibilityLabel",
+      "bridgedName": "accessibilityLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityLabel:": {
+      "name": "setAccessibilityLabel:",
+      "bridgedName": "setAccessibilityLabel",
+      "args": [
+        {
+          "name": "setAccessibilityLabel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityLabel": {
+      "name": "_accessibilityLabel",
+      "bridgedName": "_accessibilityLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDefaultButton:": {
+      "name": "setAccessibilityDefaultButton:",
+      "bridgedName": "setAccessibilityDefaultButton",
+      "args": [
+        {
+          "name": "setAccessibilityDefaultButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDefaultButton": {
+      "name": "accessibilityDefaultButton",
+      "bridgedName": "accessibilityDefaultButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityDecrementButton:": {
+      "name": "setAccessibilityDecrementButton:",
+      "bridgedName": "setAccessibilityDecrementButton",
+      "args": [
+        {
+          "name": "setAccessibilityDecrementButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDecrementButton": {
+      "name": "accessibilityDecrementButton",
+      "bridgedName": "accessibilityDecrementButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCustomRotors:": {
+      "name": "setAccessibilityCustomRotors:",
+      "bridgedName": "setAccessibilityCustomRotors",
+      "args": [
+        {
+          "name": "setAccessibilityCustomRotors",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCustomRotors": {
+      "name": "accessibilityCustomRotors",
+      "bridgedName": "accessibilityCustomRotors",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCustomChoosers:": {
+      "name": "setAccessibilityCustomChoosers:",
+      "bridgedName": "setAccessibilityCustomChoosers",
+      "args": [
+        {
+          "name": "setAccessibilityCustomChoosers",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCustomChoosers": {
+      "name": "accessibilityCustomChoosers",
+      "bridgedName": "accessibilityCustomChoosers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCustomActions:": {
+      "name": "setAccessibilityCustomActions:",
+      "bridgedName": "setAccessibilityCustomActions",
+      "args": [
+        {
+          "name": "setAccessibilityCustomActions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCustomActions": {
+      "name": "accessibilityCustomActions",
+      "bridgedName": "accessibilityCustomActions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCriticalValue:": {
+      "name": "setAccessibilityCriticalValue:",
+      "bridgedName": "setAccessibilityCriticalValue",
+      "args": [
+        {
+          "name": "setAccessibilityCriticalValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCriticalValue": {
+      "name": "accessibilityCriticalValue",
+      "bridgedName": "accessibilityCriticalValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityContents:": {
+      "name": "setAccessibilityContents:",
+      "bridgedName": "setAccessibilityContents",
+      "args": [
+        {
+          "name": "setAccessibilityContents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityContents": {
+      "name": "accessibilityContents",
+      "bridgedName": "accessibilityContents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityProtectedContent:": {
+      "name": "setAccessibilityProtectedContent:",
+      "bridgedName": "setAccessibilityProtectedContent",
+      "args": [
+        {
+          "name": "setAccessibilityProtectedContent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityProtectedContent": {
+      "name": "isAccessibilityProtectedContent",
+      "bridgedName": "isAccessibilityProtectedContent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityColumns:": {
+      "name": "setAccessibilityColumns:",
+      "bridgedName": "setAccessibilityColumns",
+      "args": [
+        {
+          "name": "setAccessibilityColumns",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumns": {
+      "name": "accessibilityColumns",
+      "bridgedName": "accessibilityColumns",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityColumnTitles:": {
+      "name": "setAccessibilityColumnTitles:",
+      "bridgedName": "setAccessibilityColumnTitles",
+      "args": [
+        {
+          "name": "setAccessibilityColumnTitles",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumnTitles": {
+      "name": "accessibilityColumnTitles",
+      "bridgedName": "accessibilityColumnTitles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityColumnIndexRange:": {
+      "name": "setAccessibilityColumnIndexRange:",
+      "bridgedName": "setAccessibilityColumnIndexRange",
+      "args": [
+        {
+          "name": "setAccessibilityColumnIndexRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumnIndexRange": {
+      "name": "accessibilityColumnIndexRange",
+      "bridgedName": "accessibilityColumnIndexRange",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityColumnHeaderUIElements:": {
+      "name": "setAccessibilityColumnHeaderUIElements:",
+      "bridgedName": "setAccessibilityColumnHeaderUIElements",
+      "args": [
+        {
+          "name": "setAccessibilityColumnHeaderUIElements",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumnHeaderUIElements": {
+      "name": "accessibilityColumnHeaderUIElements",
+      "bridgedName": "accessibilityColumnHeaderUIElements",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityColumnCount:": {
+      "name": "setAccessibilityColumnCount:",
+      "bridgedName": "setAccessibilityColumnCount",
+      "args": [
+        {
+          "name": "setAccessibilityColumnCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumnCount": {
+      "name": "accessibilityColumnCount",
+      "bridgedName": "accessibilityColumnCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCloseButton:": {
+      "name": "setAccessibilityCloseButton:",
+      "bridgedName": "setAccessibilityCloseButton",
+      "args": [
+        {
+          "name": "setAccessibilityCloseButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCloseButton": {
+      "name": "accessibilityCloseButton",
+      "bridgedName": "accessibilityCloseButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityClearButton:": {
+      "name": "setAccessibilityClearButton:",
+      "bridgedName": "setAccessibilityClearButton",
+      "args": [
+        {
+          "name": "setAccessibilityClearButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityClearButton": {
+      "name": "accessibilityClearButton",
+      "bridgedName": "accessibilityClearButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityChildrenInNavigationOrder:": {
+      "name": "setAccessibilityChildrenInNavigationOrder:",
+      "bridgedName": "setAccessibilityChildrenInNavigationOrder",
+      "args": [
+        {
+          "name": "setAccessibilityChildrenInNavigationOrder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildrenInNavigationOrder": {
+      "name": "accessibilityChildrenInNavigationOrder",
+      "bridgedName": "accessibilityChildrenInNavigationOrder",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityChildren:": {
+      "name": "setAccessibilityChildren:",
+      "bridgedName": "setAccessibilityChildren",
+      "args": [
+        {
+          "name": "setAccessibilityChildren",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildren": {
+      "name": "accessibilityChildren",
+      "bridgedName": "accessibilityChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityCancelButton:": {
+      "name": "setAccessibilityCancelButton:",
+      "bridgedName": "setAccessibilityCancelButton",
+      "args": [
+        {
+          "name": "setAccessibilityCancelButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCancelButton": {
+      "name": "accessibilityCancelButton",
+      "bridgedName": "accessibilityCancelButton",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityAuditIssues:": {
+      "name": "setAccessibilityAuditIssues:",
+      "bridgedName": "setAccessibilityAuditIssues",
+      "args": [
+        {
+          "name": "setAccessibilityAuditIssues",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAuditIssues": {
+      "name": "accessibilityAuditIssues",
+      "bridgedName": "accessibilityAuditIssues",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityAlternateUIVisible:": {
+      "name": "setAccessibilityAlternateUIVisible:",
+      "bridgedName": "setAccessibilityAlternateUIVisible",
+      "args": [
+        {
+          "name": "setAccessibilityAlternateUIVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityAlternateUIVisible": {
+      "name": "isAccessibilityAlternateUIVisible",
+      "bridgedName": "isAccessibilityAlternateUIVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityAllowedValues:": {
+      "name": "setAccessibilityAllowedValues:",
+      "bridgedName": "setAccessibilityAllowedValues",
+      "args": [
+        {
+          "name": "setAccessibilityAllowedValues",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAllowedValues": {
+      "name": "accessibilityAllowedValues",
+      "bridgedName": "accessibilityAllowedValues",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityActivationPoint:": {
+      "name": "setAccessibilityActivationPoint:",
+      "bridgedName": "setAccessibilityActivationPoint",
+      "args": [
+        {
+          "name": "setAccessibilityActivationPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityActivationPoint": {
+      "name": "accessibilityActivationPoint",
+      "bridgedName": "accessibilityActivationPoint",
+      "args": [],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAccessibilityElement:": {
+      "name": "setAccessibilityElement:",
+      "bridgedName": "setAccessibilityElement",
+      "args": [
+        {
+          "name": "setAccessibilityElement",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityElement": {
+      "name": "isAccessibilityElement",
+      "bridgedName": "isAccessibilityElement",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributedStringForRange:": {
+      "name": "accessibilityAttributedStringForRange:",
+      "bridgedName": "accessibilityAttributedStringForRange",
+      "args": [
+        {
+          "name": "accessibilityAttributedStringForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityStringForRange:": {
+      "name": "accessibilityStringForRange:",
+      "bridgedName": "accessibilityStringForRange",
+      "args": [
+        {
+          "name": "accessibilityStringForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRTFForRange:": {
+      "name": "accessibilityRTFForRange:",
+      "bridgedName": "accessibilityRTFForRange",
+      "args": [
+        {
+          "name": "accessibilityRTFForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityStyleRangeForIndex:": {
+      "name": "accessibilityStyleRangeForIndex:",
+      "bridgedName": "accessibilityStyleRangeForIndex",
+      "args": [
+        {
+          "name": "accessibilityStyleRangeForIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityScreenSizeForLayoutSize:": {
+      "name": "accessibilityScreenSizeForLayoutSize:",
+      "bridgedName": "accessibilityScreenSizeForLayoutSize",
+      "args": [
+        {
+          "name": "accessibilityScreenSizeForLayoutSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityScreenPointForLayoutPoint:": {
+      "name": "accessibilityScreenPointForLayoutPoint:",
+      "bridgedName": "accessibilityScreenPointForLayoutPoint",
+      "args": [
+        {
+          "name": "accessibilityScreenPointForLayoutPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityResultsForSearchPredicate:": {
+      "name": "accessibilityResultsForSearchPredicate:",
+      "bridgedName": "accessibilityResultsForSearchPredicate",
+      "args": [
+        {
+          "name": "accessibilityResultsForSearchPredicate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRangeForPosition:": {
+      "name": "accessibilityRangeForPosition:",
+      "bridgedName": "accessibilityRangeForPosition",
+      "args": [
+        {
+          "name": "accessibilityRangeForPosition",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRangeForLine:": {
+      "name": "accessibilityRangeForLine:",
+      "bridgedName": "accessibilityRangeForLine",
+      "args": [
+        {
+          "name": "accessibilityRangeForLine",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRangeForIndex:": {
+      "name": "accessibilityRangeForIndex:",
+      "bridgedName": "accessibilityRangeForIndex",
+      "args": [
+        {
+          "name": "accessibilityRangeForIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLineForIndex:": {
+      "name": "accessibilityLineForIndex:",
+      "bridgedName": "accessibilityLineForIndex",
+      "args": [
+        {
+          "name": "accessibilityLineForIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLayoutSizeForScreenSize:": {
+      "name": "accessibilityLayoutSizeForScreenSize:",
+      "bridgedName": "accessibilityLayoutSizeForScreenSize",
+      "args": [
+        {
+          "name": "accessibilityLayoutSizeForScreenSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLayoutPointForScreenPoint:": {
+      "name": "accessibilityLayoutPointForScreenPoint:",
+      "bridgedName": "accessibilityLayoutPointForScreenPoint",
+      "args": [
+        {
+          "name": "accessibilityLayoutPointForScreenPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityFrameForRange:": {
+      "name": "accessibilityFrameForRange:",
+      "bridgedName": "accessibilityFrameForRange",
+      "args": [
+        {
+          "name": "accessibilityFrameForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityCellForColumn:row:": {
+      "name": "accessibilityCellForColumn:row:",
+      "bridgedName": "accessibilityCellForColumn_row",
+      "args": [
+        {
+          "name": "accessibilityCellForColumn",
+          "type": "long long"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilitySelectorAllowed:": {
+      "name": "isAccessibilitySelectorAllowed:",
+      "bridgedName": "isAccessibilitySelectorAllowed",
+      "args": [
+        {
+          "name": "isAccessibilitySelectorAllowed",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateProposedFirstResponder:forEvent:": {
+      "name": "validateProposedFirstResponder:forEvent:",
+      "bridgedName": "validateProposedFirstResponder_forEvent",
+      "args": [
+        {
+          "name": "validateProposedFirstResponder",
+          "type": "id"
+        },
+        {
+          "name": "forEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willPresentError:": {
+      "name": "willPresentError:",
+      "bridgedName": "willPresentError",
+      "args": [
+        {
+          "name": "willPresentError",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentError:": {
+      "name": "presentError:",
+      "bridgedName": "presentError",
+      "args": [
+        {
+          "name": "presentError",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentError:modalForWindow:delegate:didPresentSelector:contextInfo:": {
+      "name": "presentError:modalForWindow:delegate:didPresentSelector:contextInfo:",
+      "bridgedName": "presentError_modalForWindow_delegate_didPresentSelector_contextInfo",
+      "args": [
+        {
+          "name": "presentError",
+          "type": "id"
+        },
+        {
+          "name": "modalForWindow",
+          "type": "id"
+        },
+        {
+          "name": "delegate",
+          "type": "id"
+        },
+        {
+          "name": "didPresentSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsKeyDownForEvent:": {
+      "name": "_wantsKeyDownForEvent:",
+      "bridgedName": "_wantsKeyDownForEvent",
+      "args": [
+        {
+          "name": "_wantsKeyDownForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postEventNotification:fromCell:": {
+      "name": "_postEventNotification:fromCell:",
+      "bridgedName": "_postEventNotification_fromCell",
+      "args": [
+        {
+          "name": "_postEventNotification",
+          "type": "id"
+        },
+        {
+          "name": "fromCell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postEventNotification:": {
+      "name": "_postEventNotification:",
+      "bridgedName": "_postEventNotification",
+      "args": [
+        {
+          "name": "_postEventNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldPostEventNotifications:": {
+      "name": "_setShouldPostEventNotifications:",
+      "bridgedName": "_setShouldPostEventNotifications",
+      "args": [
+        {
+          "name": "_setShouldPostEventNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldPostEventNotifications": {
+      "name": "_shouldPostEventNotifications",
+      "bridgedName": "_shouldPostEventNotifications",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noResponderFor:duringForwardingOfEvent:": {
+      "name": "_noResponderFor:duringForwardingOfEvent:",
+      "bridgedName": "_noResponderFor_duringForwardingOfEvent",
+      "args": [
+        {
+          "name": "_noResponderFor",
+          "type": "SEL"
+        },
+        {
+          "name": "duringForwardingOfEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector:": {
+      "name": "doCommandBySelector:",
+      "bridgedName": "doCommandBySelector",
+      "args": [
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertText:": {
+      "name": "insertText:",
+      "bridgedName": "insertText",
+      "args": [
+        {
+          "name": "insertText",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showContextHelp:": {
+      "name": "showContextHelp:",
+      "bridgedName": "showContextHelp",
+      "args": [
+        {
+          "name": "showContextHelp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "helpRequested:": {
+      "name": "helpRequested:",
+      "bridgedName": "helpRequested",
+      "args": [
+        {
+          "name": "helpRequested",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "undoManager": {
+      "name": "undoManager",
+      "bridgedName": "undoManager",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flushBufferedKeyEvents": {
+      "name": "flushBufferedKeyEvents",
+      "bridgedName": "flushBufferedKeyEvents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interpretKeyEvents:": {
+      "name": "interpretKeyEvents:",
+      "bridgedName": "interpretKeyEvents",
+      "args": [
+        {
+          "name": "interpretKeyEvents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supplementalTargetForAction:sender:": {
+      "name": "supplementalTargetForAction:sender:",
+      "bridgedName": "supplementalTargetForAction_sender",
+      "args": [
+        {
+          "name": "supplementalTargetForAction",
+          "type": "SEL"
+        },
+        {
+          "name": "sender",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recursiveResponderThatWantsForwardedScrollEventsForAxis:intendedForSwipe:": {
+      "name": "_recursiveResponderThatWantsForwardedScrollEventsForAxis:intendedForSwipe:",
+      "bridgedName": "_recursiveResponderThatWantsForwardedScrollEventsForAxis_intendedForSwipe",
+      "args": [
+        {
+          "name": "_recursiveResponderThatWantsForwardedScrollEventsForAxis",
+          "type": "long long"
+        },
+        {
+          "name": "intendedForSwipe",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recursiveWantsForwardedScrollEventsForAxis:": {
+      "name": "_recursiveWantsForwardedScrollEventsForAxis:",
+      "bridgedName": "_recursiveWantsForwardedScrollEventsForAxis",
+      "args": [
+        {
+          "name": "_recursiveWantsForwardedScrollEventsForAxis",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsForwardedScrollEventsForAxis:": {
+      "name": "wantsForwardedScrollEventsForAxis:",
+      "bridgedName": "wantsForwardedScrollEventsForAxis",
+      "args": [
+        {
+          "name": "wantsForwardedScrollEventsForAxis",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsScrollEventsForSwipeTrackingOnAxis:": {
+      "name": "wantsScrollEventsForSwipeTrackingOnAxis:",
+      "bridgedName": "wantsScrollEventsForSwipeTrackingOnAxis",
+      "args": [
+        {
+          "name": "wantsScrollEventsForSwipeTrackingOnAxis",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsForwardedScrollEvents": {
+      "name": "wantsForwardedScrollEvents",
+      "bridgedName": "wantsForwardedScrollEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldBeTreatedAsInkEvent:": {
+      "name": "shouldBeTreatedAsInkEvent:",
+      "bridgedName": "shouldBeTreatedAsInkEvent",
+      "args": [
+        {
+          "name": "shouldBeTreatedAsInkEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didResignActiveFirstResponder": {
+      "name": "didResignActiveFirstResponder",
+      "bridgedName": "didResignActiveFirstResponder",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didBecomeActiveFirstResponder": {
+      "name": "didBecomeActiveFirstResponder",
+      "bridgedName": "didBecomeActiveFirstResponder",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resignFirstResponder": {
+      "name": "resignFirstResponder",
+      "bridgedName": "resignFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "becomeFirstResponder": {
+      "name": "becomeFirstResponder",
+      "bridgedName": "becomeFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setGestureEventMask:": {
+      "name": "setGestureEventMask:",
+      "bridgedName": "setGestureEventMask",
+      "args": [
+        {
+          "name": "setGestureEventMask",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gestureEventMask": {
+      "name": "gestureEventMask",
+      "bridgedName": "gestureEventMask",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "noResponderFor:": {
+      "name": "noResponderFor:",
+      "bridgedName": "noResponderFor",
+      "args": [
+        {
+          "name": "noResponderFor",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pressureChangeWithEvent:": {
+      "name": "pressureChangeWithEvent:",
+      "bridgedName": "pressureChangeWithEvent",
+      "args": [
+        {
+          "name": "pressureChangeWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "navigateWithEvent:": {
+      "name": "navigateWithEvent:",
+      "bridgedName": "navigateWithEvent",
+      "args": [
+        {
+          "name": "navigateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quickLookPreviewItemsAtWindowLocation:": {
+      "name": "quickLookPreviewItemsAtWindowLocation:",
+      "bridgedName": "quickLookPreviewItemsAtWindowLocation",
+      "args": [
+        {
+          "name": "quickLookPreviewItemsAtWindowLocation",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quickLookWithEvent:": {
+      "name": "quickLookWithEvent:",
+      "bridgedName": "quickLookWithEvent",
+      "args": [
+        {
+          "name": "quickLookWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesCancelledWithEvent:": {
+      "name": "touchesCancelledWithEvent:",
+      "bridgedName": "touchesCancelledWithEvent",
+      "args": [
+        {
+          "name": "touchesCancelledWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesEndedWithEvent:": {
+      "name": "touchesEndedWithEvent:",
+      "bridgedName": "touchesEndedWithEvent",
+      "args": [
+        {
+          "name": "touchesEndedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesMovedWithEvent:": {
+      "name": "touchesMovedWithEvent:",
+      "bridgedName": "touchesMovedWithEvent",
+      "args": [
+        {
+          "name": "touchesMovedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesBeganWithEvent:": {
+      "name": "touchesBeganWithEvent:",
+      "bridgedName": "touchesBeganWithEvent",
+      "args": [
+        {
+          "name": "touchesBeganWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchesCancelledWithEvent:": {
+      "name": "_touchesCancelledWithEvent:",
+      "bridgedName": "_touchesCancelledWithEvent",
+      "args": [
+        {
+          "name": "_touchesCancelledWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchesEndedWithEvent:": {
+      "name": "_touchesEndedWithEvent:",
+      "bridgedName": "_touchesEndedWithEvent",
+      "args": [
+        {
+          "name": "_touchesEndedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchesMovedWithEvent:": {
+      "name": "_touchesMovedWithEvent:",
+      "bridgedName": "_touchesMovedWithEvent",
+      "args": [
+        {
+          "name": "_touchesMovedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchesBeganWithEvent:": {
+      "name": "_touchesBeganWithEvent:",
+      "bridgedName": "_touchesBeganWithEvent",
+      "args": [
+        {
+          "name": "_touchesBeganWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsTouchesForEvent:": {
+      "name": "_wantsTouchesForEvent:",
+      "bridgedName": "_wantsTouchesForEvent",
+      "args": [
+        {
+          "name": "_wantsTouchesForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endGestureWithEvent:": {
+      "name": "endGestureWithEvent:",
+      "bridgedName": "endGestureWithEvent",
+      "args": [
+        {
+          "name": "endGestureWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginGestureWithEvent:": {
+      "name": "beginGestureWithEvent:",
+      "bridgedName": "beginGestureWithEvent",
+      "args": [
+        {
+          "name": "beginGestureWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "swipeWithEvent:": {
+      "name": "swipeWithEvent:",
+      "bridgedName": "swipeWithEvent",
+      "args": [
+        {
+          "name": "swipeWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "translateWithEvent:": {
+      "name": "translateWithEvent:",
+      "bridgedName": "translateWithEvent",
+      "args": [
+        {
+          "name": "translateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotateWithEvent:": {
+      "name": "rotateWithEvent:",
+      "bridgedName": "rotateWithEvent",
+      "args": [
+        {
+          "name": "rotateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "smartMagnifyWithEvent:": {
+      "name": "smartMagnifyWithEvent:",
+      "bridgedName": "smartMagnifyWithEvent",
+      "args": [
+        {
+          "name": "smartMagnifyWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magnifyWithEvent:": {
+      "name": "magnifyWithEvent:",
+      "bridgedName": "magnifyWithEvent",
+      "args": [
+        {
+          "name": "magnifyWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorUpdate:": {
+      "name": "cursorUpdate:",
+      "bridgedName": "cursorUpdate",
+      "args": [
+        {
+          "name": "cursorUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabletProximity:": {
+      "name": "tabletProximity:",
+      "bridgedName": "tabletProximity",
+      "args": [
+        {
+          "name": "tabletProximity",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabletPoint:": {
+      "name": "tabletPoint:",
+      "bridgedName": "tabletPoint",
+      "args": [
+        {
+          "name": "tabletPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flagsChanged:": {
+      "name": "flagsChanged:",
+      "bridgedName": "flagsChanged",
+      "args": [
+        {
+          "name": "flagsChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyUp:": {
+      "name": "keyUp:",
+      "bridgedName": "keyUp",
+      "args": [
+        {
+          "name": "keyUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseDragged:": {
+      "name": "otherMouseDragged:",
+      "bridgedName": "otherMouseDragged",
+      "args": [
+        {
+          "name": "otherMouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseDragged:": {
+      "name": "rightMouseDragged:",
+      "bridgedName": "rightMouseDragged",
+      "args": [
+        {
+          "name": "rightMouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollWheel:": {
+      "name": "scrollWheel:",
+      "bridgedName": "scrollWheel",
+      "args": [
+        {
+          "name": "scrollWheel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDragged:": {
+      "name": "mouseDragged:",
+      "bridgedName": "mouseDragged",
+      "args": [
+        {
+          "name": "mouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseMoved:": {
+      "name": "mouseMoved:",
+      "bridgedName": "mouseMoved",
+      "args": [
+        {
+          "name": "mouseMoved",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseUp:": {
+      "name": "otherMouseUp:",
+      "bridgedName": "otherMouseUp",
+      "args": [
+        {
+          "name": "otherMouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseUp:": {
+      "name": "rightMouseUp:",
+      "bridgedName": "rightMouseUp",
+      "args": [
+        {
+          "name": "rightMouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUp:": {
+      "name": "mouseUp:",
+      "bridgedName": "mouseUp",
+      "args": [
+        {
+          "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseDown:": {
+      "name": "otherMouseDown:",
+      "bridgedName": "otherMouseDown",
+      "args": [
+        {
+          "name": "otherMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseDown:": {
+      "name": "rightMouseDown:",
+      "bridgedName": "rightMouseDown",
+      "args": [
+        {
+          "name": "rightMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performMnemonic:": {
+      "name": "performMnemonic:",
+      "bridgedName": "performMnemonic",
+      "args": [
+        {
+          "name": "performMnemonic",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performKeyEquivalent:": {
+      "name": "performKeyEquivalent:",
+      "bridgedName": "performKeyEquivalent",
+      "args": [
+        {
+          "name": "performKeyEquivalent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validRequestorForSendType:returnType:": {
+      "name": "validRequestorForSendType:returnType:",
+      "bridgedName": "validRequestorForSendType_returnType",
+      "args": [
+        {
+          "name": "validRequestorForSendType",
+          "type": "id"
+        },
+        {
+          "name": "returnType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToPerform:with:": {
+      "name": "tryToPerform:with:",
+      "bridgedName": "tryToPerform_with",
+      "args": [
+        {
+          "name": "tryToPerform",
+          "type": "SEL"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextResponderForEvent:": {
+      "name": "_nextResponderForEvent:",
+      "bridgedName": "_nextResponderForEvent",
+      "args": [
+        {
+          "name": "_nextResponderForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorFactory": {
+      "name": "colorFactory",
+      "bridgedName": "colorFactory",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInterfaceStyle:": {
+      "name": "setInterfaceStyle:",
+      "bridgedName": "setInterfaceStyle",
+      "args": [
+        {
+          "name": "setInterfaceStyle",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interfaceStyle": {
+      "name": "interfaceStyle",
+      "bridgedName": "interfaceStyle",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_touchBarProvidersKeyPaths": {
+      "name": "NS_touchBarProvidersKeyPaths",
+      "bridgedName": "NS_touchBarProvidersKeyPaths",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "NS_touchBarProviders": {
+      "name": "NS_touchBarProviders",
+      "bridgedName": "NS_touchBarProviders",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presentationWindowForError:originatedInWindow:": {
+      "name": "presentationWindowForError:originatedInWindow:",
+      "bridgedName": "presentationWindowForError_originatedInWindow",
+      "args": [
+        {
+          "name": "presentationWindowForError",
+          "type": "id"
+        },
+        {
+          "name": "originatedInWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cleanUpUserActivity": {
+      "name": "_cleanUpUserActivity",
+      "bridgedName": "_cleanUpUserActivity",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didRestoreUserActivity:": {
+      "name": "_didRestoreUserActivity:",
+      "bridgedName": "_didRestoreUserActivity",
+      "args": [
+        {
+          "name": "_didRestoreUserActivity",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_becomeCurrentUserActivityIfNecessary": {
+      "name": "_becomeCurrentUserActivityIfNecessary",
+      "bridgedName": "_becomeCurrentUserActivityIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userActivityWasContinued:": {
+      "name": "userActivityWasContinued:",
+      "bridgedName": "userActivityWasContinued",
+      "args": [
+        {
+          "name": "userActivityWasContinued",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restoreUserActivityState:": {
+      "name": "restoreUserActivityState:",
+      "bridgedName": "restoreUserActivityState",
+      "args": [
+        {
+          "name": "restoreUserActivityState",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateUserActivityState:": {
+      "name": "updateUserActivityState:",
+      "bridgedName": "updateUserActivityState",
+      "args": [
+        {
+          "name": "updateUserActivityState",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistentUIEncodedReference": {
+      "name": "_persistentUIEncodedReference",
+      "bridgedName": "_persistentUIEncodedReference",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changePersistentKeyPathObservationTo:": {
+      "name": "_changePersistentKeyPathObservationTo:",
+      "bridgedName": "_changePersistentKeyPathObservationTo",
+      "args": [
+        {
+          "name": "_changePersistentKeyPathObservationTo",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recursivelyReinvalidateRestorableStateIfNecessary": {
+      "name": "_recursivelyReinvalidateRestorableStateIfNecessary",
+      "bridgedName": "_recursivelyReinvalidateRestorableStateIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidateRestorableState": {
+      "name": "invalidateRestorableState",
+      "bridgedName": "invalidateRestorableState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restorePersistentState:": {
+      "name": "_restorePersistentState:",
+      "bridgedName": "_restorePersistentState",
+      "args": [
+        {
+          "name": "_restorePersistentState",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodeObjectIntoRestorableState:forKey:": {
+      "name": "_encodeObjectIntoRestorableState:forKey:",
+      "bridgedName": "_encodeObjectIntoRestorableState_forKey",
+      "args": [
+        {
+          "name": "_encodeObjectIntoRestorableState",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restoreStateWithCoder:": {
+      "name": "restoreStateWithCoder:",
+      "bridgedName": "restoreStateWithCoder",
+      "args": [
+        {
+          "name": "restoreStateWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeRestorableStateWithCoder:backgroundQueue:": {
+      "name": "encodeRestorableStateWithCoder:backgroundQueue:",
+      "bridgedName": "encodeRestorableStateWithCoder_backgroundQueue",
+      "args": [
+        {
+          "name": "encodeRestorableStateWithCoder",
+          "type": "id"
+        },
+        {
+          "name": "backgroundQueue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeRestorableStateWithCoder:": {
+      "name": "encodeRestorableStateWithCoder:",
+      "bridgedName": "encodeRestorableStateWithCoder",
+      "args": [
+        {
+          "name": "encodeRestorableStateWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_markAsEverHavingInvalidRestorableState": {
+      "name": "_markAsEverHavingInvalidRestorableState",
+      "bridgedName": "_markAsEverHavingInvalidRestorableState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasEverHadInvalidRestorableState": {
+      "name": "_hasEverHadInvalidRestorableState",
+      "bridgedName": "_hasEverHadInvalidRestorableState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasInvalidRestorableState": {
+      "name": "_hasInvalidRestorableState",
+      "bridgedName": "_hasInvalidRestorableState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setHasInvalidRestorableState:": {
+      "name": "_setHasInvalidRestorableState:",
+      "bridgedName": "_setHasInvalidRestorableState",
+      "args": [
+        {
+          "name": "_setHasInvalidRestorableState",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistentUIIdentifier": {
+      "name": "_persistentUIIdentifier",
+      "bridgedName": "_persistentUIIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistentUIWindowID": {
+      "name": "_persistentUIWindowID",
+      "bridgedName": "_persistentUIWindowID",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_persistentUIWindow": {
+      "name": "_persistentUIWindow",
+      "bridgedName": "_persistentUIWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_copyPersistentUIChildren": {
+      "name": "_copyPersistentUIChildren",
+      "bridgedName": "_copyPersistentUIChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ns_widgetType": {
+      "name": "ns_widgetType",
+      "bridgedName": "ns_widgetType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeFunctionBar": {
+      "name": "makeFunctionBar",
+      "bridgedName": "makeFunctionBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "menu": {
+      "name": "menu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "acceptsFirstResponder": {
+      "name": "acceptsFirstResponder",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_responderDebugDescription": {
+      "name": "_responderDebugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "userActivity": {
+      "name": "userActivity",
+      "pointer": true,
+      "type": "NSUserActivity",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "touchBar": {
+      "name": "touchBar",
+      "pointer": true,
+      "type": "NSTouchBar",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "functionBar": {
+      "name": "functionBar",
+      "pointer": true,
+      "type": "NSTouchBar",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

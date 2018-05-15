@@ -1,0 +1,531 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSProcessInfo",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "processInfo": {
+      "name": "processInfo",
+      "bridgedName": "processInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_reactivateActivity:": {
+      "name": "_reactivateActivity:",
+      "bridgedName": "_reactivateActivity",
+      "args": [
+        {
+          "name": "_reactivateActivity",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_supportsAutomaticTermination": {
+      "name": "_supportsAutomaticTermination",
+      "bridgedName": "_supportsAutomaticTermination",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldRelaunchDueToAutomaticTerminationStateChangedHandler:": {
+      "name": "_setShouldRelaunchDueToAutomaticTerminationStateChangedHandler:",
+      "bridgedName": "_setShouldRelaunchDueToAutomaticTerminationStateChangedHandler",
+      "args": [
+        {
+          "name": "_setShouldRelaunchDueToAutomaticTerminationStateChangedHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enableAutomaticTerminationSupport": {
+      "name": "_enableAutomaticTerminationSupport",
+      "bridgedName": "_enableAutomaticTerminationSupport",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isAutoQuittable": {
+      "name": "_isAutoQuittable",
+      "bridgedName": "_isAutoQuittable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDisableRelaunchOnLoginDueToAutomaticTermination": {
+      "name": "_shouldDisableRelaunchOnLoginDueToAutomaticTermination",
+      "bridgedName": "_shouldDisableRelaunchOnLoginDueToAutomaticTermination",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enableAutomaticTermination": {
+      "name": "enableAutomaticTermination",
+      "bridgedName": "enableAutomaticTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disableAutomaticTermination": {
+      "name": "disableAutomaticTermination",
+      "bridgedName": "disableAutomaticTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enableAutomaticTerminationOnly:": {
+      "name": "_enableAutomaticTerminationOnly:",
+      "bridgedName": "_enableAutomaticTerminationOnly",
+      "args": [
+        {
+          "name": "_enableAutomaticTerminationOnly",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_disableAutomaticTerminationOnly:": {
+      "name": "_disableAutomaticTerminationOnly:",
+      "bridgedName": "_disableAutomaticTerminationOnly",
+      "args": [
+        {
+          "name": "_disableAutomaticTerminationOnly",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enableAutomaticTermination:": {
+      "name": "enableAutomaticTermination:",
+      "bridgedName": "enableAutomaticTermination",
+      "args": [
+        {
+          "name": "enableAutomaticTermination",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disableAutomaticTermination:": {
+      "name": "disableAutomaticTermination:",
+      "bridgedName": "disableAutomaticTermination",
+      "args": [
+        {
+          "name": "disableAutomaticTermination",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enableAutomaticTerminationAlreadyLocked:": {
+      "name": "_enableAutomaticTerminationAlreadyLocked:",
+      "bridgedName": "_enableAutomaticTerminationAlreadyLocked",
+      "args": [
+        {
+          "name": "_enableAutomaticTerminationAlreadyLocked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_disableAutomaticTerminationAlreadyLocked:": {
+      "name": "_disableAutomaticTerminationAlreadyLocked:",
+      "bridgedName": "_disableAutomaticTerminationAlreadyLocked",
+      "args": [
+        {
+          "name": "_disableAutomaticTerminationAlreadyLocked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_suddenTerminationDisablingCount": {
+      "name": "_suddenTerminationDisablingCount",
+      "bridgedName": "_suddenTerminationDisablingCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_exitWhenSuddenTerminationEnabledWithStatus:": {
+      "name": "_exitWhenSuddenTerminationEnabledWithStatus:",
+      "bridgedName": "_exitWhenSuddenTerminationEnabledWithStatus",
+      "args": [
+        {
+          "name": "_exitWhenSuddenTerminationEnabledWithStatus",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_exitIfSuddenTerminationEnabledWithStatus:": {
+      "name": "_exitIfSuddenTerminationEnabledWithStatus:",
+      "bridgedName": "_exitIfSuddenTerminationEnabledWithStatus",
+      "args": [
+        {
+          "name": "_exitIfSuddenTerminationEnabledWithStatus",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enableSuddenTermination": {
+      "name": "enableSuddenTermination",
+      "bridgedName": "enableSuddenTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "disableSuddenTermination": {
+      "name": "disableSuddenTermination",
+      "bridgedName": "disableSuddenTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isTranslated": {
+      "name": "isTranslated",
+      "bridgedName": "isTranslated",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOperatingSystemAtLeastVersion:": {
+      "name": "isOperatingSystemAtLeastVersion:",
+      "bridgedName": "isOperatingSystemAtLeastVersion",
+      "args": [
+        {
+          "name": "isOperatingSystemAtLeastVersion",
+          "type": "CDStruct_2ec95fd7"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "operatingSystemName": {
+      "name": "operatingSystemName",
+      "bridgedName": "operatingSystemName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "operatingSystem": {
+      "name": "operatingSystem",
+      "bridgedName": "operatingSystem",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userHomeDirectory": {
+      "name": "userHomeDirectory",
+      "bridgedName": "userHomeDirectory",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setArguments:": {
+      "name": "setArguments:",
+      "bridgedName": "setArguments",
+      "args": [
+        {
+          "name": "setArguments",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForHardwareStateNotifications": {
+      "name": "_registerForHardwareStateNotifications",
+      "bridgedName": "_registerForHardwareStateNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performActivityWithOptions:reason:usingBlock:": {
+      "name": "performActivityWithOptions:reason:usingBlock:",
+      "bridgedName": "performActivityWithOptions_reason_usingBlock",
+      "args": [
+        {
+          "name": "performActivityWithOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "reason",
+          "type": "id"
+        },
+        {
+          "name": "usingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performActivityWithOptions:reason:block:": {
+      "name": "performActivityWithOptions:reason:block:",
+      "bridgedName": "performActivityWithOptions_reason_block",
+      "args": [
+        {
+          "name": "performActivityWithOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "reason",
+          "type": "id"
+        },
+        {
+          "name": "block",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endActivity:": {
+      "name": "endActivity:",
+      "bridgedName": "endActivity",
+      "args": [
+        {
+          "name": "endActivity",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginActivityWithOptions:reason:": {
+      "name": "beginActivityWithOptions:reason:",
+      "bridgedName": "beginActivityWithOptions_reason",
+      "args": [
+        {
+          "name": "beginActivityWithOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "reason",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endSystemBehaviorSuspension:": {
+      "name": "endSystemBehaviorSuspension:",
+      "bridgedName": "endSystemBehaviorSuspension",
+      "args": [
+        {
+          "name": "endSystemBehaviorSuspension",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSuspensionOfSystemBehaviors:reason:": {
+      "name": "beginSuspensionOfSystemBehaviors:reason:",
+      "bridgedName": "beginSuspensionOfSystemBehaviors_reason",
+      "args": [
+        {
+          "name": "beginSuspensionOfSystemBehaviors",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "reason",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "thermalState": {
+      "name": "thermalState",
+      "bridgedName": "thermalState",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "systemUptime": {
+      "name": "systemUptime",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "physicalMemory": {
+      "name": "physicalMemory",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "activeProcessorCount": {
+      "name": "activeProcessorCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "processorCount": {
+      "name": "processorCount",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "operatingSystemVersion": {
+      "name": "operatingSystemVersion",
+      "pointer": false,
+      "type": "CDStruct_2ec95fd7",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "operatingSystemVersionString": {
+      "name": "operatingSystemVersionString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "userName": {
+      "name": "userName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "globallyUniqueString": {
+      "name": "globallyUniqueString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "processIdentifier": {
+      "name": "processIdentifier",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "processName": {
+      "name": "processName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "hostName": {
+      "name": "hostName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "arguments": {
+      "name": "arguments",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "environment": {
+      "name": "environment",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "fullUserName": {
+      "name": "fullUserName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

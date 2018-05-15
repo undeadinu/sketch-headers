@@ -1,0 +1,550 @@
+{
+  "imports": [
+    "NSMapTable.h",
+    "NSObject.h",
+    "NSCoding.h",
+    "NSCopying.h",
+    "NSFastEnumeration.h"
+  ],
+  "classes": [
+    "NSPointerFunctions"
+  ],
+  "protocol": false,
+  "className": "NSMapTable",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSCoding",
+    "NSFastEnumeration"
+  ],
+  "methods": {
+    "_flushChildCache:": {
+      "name": "_flushChildCache:",
+      "bridgedName": "_flushChildCache",
+      "args": [
+        {
+          "name": "_flushChildCache",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "weakToWeakObjectsMapTable": {
+      "name": "weakToWeakObjectsMapTable",
+      "bridgedName": "weakToWeakObjectsMapTable",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "strongToWeakObjectsMapTable": {
+      "name": "strongToWeakObjectsMapTable",
+      "bridgedName": "strongToWeakObjectsMapTable",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "weakToStrongObjectsMapTable": {
+      "name": "weakToStrongObjectsMapTable",
+      "bridgedName": "weakToStrongObjectsMapTable",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "strongToStrongObjectsMapTable": {
+      "name": "strongToStrongObjectsMapTable",
+      "bridgedName": "strongToStrongObjectsMapTable",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mapTableWithWeakToWeakObjects": {
+      "name": "mapTableWithWeakToWeakObjects",
+      "bridgedName": "mapTableWithWeakToWeakObjects",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mapTableWithStrongToWeakObjects": {
+      "name": "mapTableWithStrongToWeakObjects",
+      "bridgedName": "mapTableWithStrongToWeakObjects",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mapTableWithWeakToStrongObjects": {
+      "name": "mapTableWithWeakToStrongObjects",
+      "bridgedName": "mapTableWithWeakToStrongObjects",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mapTableWithStrongToStrongObjects": {
+      "name": "mapTableWithStrongToStrongObjects",
+      "bridgedName": "mapTableWithStrongToStrongObjects",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mapTableWithKeyOptions:valueOptions:": {
+      "name": "mapTableWithKeyOptions:valueOptions:",
+      "bridgedName": "mapTableWithKeyOptions_valueOptions",
+      "args": [
+        {
+          "name": "mapTableWithKeyOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "valueOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "name": "allocWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "alloc": {
+      "name": "alloc",
+      "bridgedName": "alloc",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mutableCopyWithZone:": {
+      "name": "mutableCopyWithZone:",
+      "bridgedName": "mutableCopyWithZone",
+      "args": [
+        {
+          "name": "mutableCopyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dictionaryRepresentation": {
+      "name": "dictionaryRepresentation",
+      "bridgedName": "dictionaryRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mutableDictionary": {
+      "name": "mutableDictionary",
+      "bridgedName": "mutableDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllObjects": {
+      "name": "removeAllObjects",
+      "bridgedName": "removeAllObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getKeys:values:": {
+      "name": "getKeys:values:",
+      "bridgedName": "getKeys_values",
+      "args": [
+        {
+          "name": "getKeys",
+          "type": "const void **"
+        },
+        {
+          "name": "values",
+          "type": "const void **"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mapMember:originalKey:value:": {
+      "name": "mapMember:originalKey:value:",
+      "bridgedName": "mapMember_originalKey_value",
+      "args": [
+        {
+          "name": "mapMember",
+          "type": "const void *"
+        },
+        {
+          "name": "originalKey",
+          "type": "const void **"
+        },
+        {
+          "name": "value",
+          "type": "const void **"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerator": {
+      "name": "enumerator",
+      "bridgedName": "enumerator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllItems": {
+      "name": "removeAllItems",
+      "bridgedName": "removeAllItems",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allValues": {
+      "name": "allValues",
+      "bridgedName": "allValues",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allKeys": {
+      "name": "allKeys",
+      "bridgedName": "allKeys",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceItem:forExistingKey:": {
+      "name": "replaceItem:forExistingKey:",
+      "bridgedName": "replaceItem_forExistingKey",
+      "args": [
+        {
+          "name": "replaceItem",
+          "type": "const void *"
+        },
+        {
+          "name": "forExistingKey",
+          "type": "const void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "existingItemForSetItem:forAbsentKey:": {
+      "name": "existingItemForSetItem:forAbsentKey:",
+      "bridgedName": "existingItemForSetItem_forAbsentKey",
+      "args": [
+        {
+          "name": "existingItemForSetItem",
+          "type": "const void *"
+        },
+        {
+          "name": "forAbsentKey",
+          "type": "const void *"
+        }
+      ],
+      "returns": "void *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItem:forKnownAbsentKey:": {
+      "name": "setItem:forKnownAbsentKey:",
+      "bridgedName": "setItem_forKnownAbsentKey",
+      "args": [
+        {
+          "name": "setItem",
+          "type": "const void *"
+        },
+        {
+          "name": "forKnownAbsentKey",
+          "type": "const void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItem:forAbsentKey:": {
+      "name": "setItem:forAbsentKey:",
+      "bridgedName": "setItem_forAbsentKey",
+      "args": [
+        {
+          "name": "setItem",
+          "type": "const void *"
+        },
+        {
+          "name": "forAbsentKey",
+          "type": "const void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setItem:forKey:": {
+      "name": "setItem:forKey:",
+      "bridgedName": "setItem_forKey",
+      "args": [
+        {
+          "name": "setItem",
+          "type": "const void *"
+        },
+        {
+          "name": "forKey",
+          "type": "const void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObjectForKey:": {
+      "name": "removeObjectForKey:",
+      "bridgedName": "removeObjectForKey",
+      "args": [
+        {
+          "name": "removeObjectForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObject:forKey:": {
+      "name": "setObject:forKey:",
+      "bridgedName": "setObject_forKey",
+      "args": [
+        {
+          "name": "setObject",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectForKey:": {
+      "name": "objectForKey:",
+      "bridgedName": "objectForKey",
+      "args": [
+        {
+          "name": "objectForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "countByEnumeratingWithState:objects:count:": {
+      "name": "countByEnumeratingWithState:objects:count:",
+      "bridgedName": "countByEnumeratingWithState_objects_count",
+      "args": [
+        {
+          "name": "countByEnumeratingWithState",
+          "type": "CDStruct_70511ce9 *"
+        },
+        {
+          "name": "objects",
+          "type": "id *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copy": {
+      "name": "copy",
+      "bridgedName": "copy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectEnumerator": {
+      "name": "objectEnumerator",
+      "bridgedName": "objectEnumerator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyEnumerator": {
+      "name": "keyEnumerator",
+      "bridgedName": "keyEnumerator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__capacity": {
+      "name": "__capacity",
+      "bridgedName": "__capacity",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithKeyPointerFunctions:valuePointerFunctions:capacity:": {
+      "name": "initWithKeyPointerFunctions:valuePointerFunctions:capacity:",
+      "bridgedName": "initWithKeyPointerFunctions_valuePointerFunctions_capacity",
+      "args": [
+        {
+          "name": "initWithKeyPointerFunctions",
+          "type": "id"
+        },
+        {
+          "name": "valuePointerFunctions",
+          "type": "id"
+        },
+        {
+          "name": "capacity",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithKeyOptions:valueOptions:capacity:": {
+      "name": "initWithKeyOptions:valueOptions:capacity:",
+      "bridgedName": "initWithKeyOptions_valueOptions_capacity",
+      "args": [
+        {
+          "name": "initWithKeyOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "valueOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "capacity",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "valuePointerFunctions": {
+      "name": "valuePointerFunctions",
+      "pointer": true,
+      "type": "NSPointerFunctions",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "keyPointerFunctions": {
+      "name": "keyPointerFunctions",
+      "pointer": true,
+      "type": "NSPointerFunctions",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "count": {
+      "name": "count",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
