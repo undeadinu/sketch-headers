@@ -5,22 +5,44 @@
   "classes": [
     "NSString",
     "NSURL",
+    "SCKShare",
     "SCKShareUploadOperation"
   ],
   "protocol": true,
   "className": "SCKShareUploadDataSource",
   "interfaces": [],
   "methods": {
-    "documentFileURLForShareUploadOperation:": {
-      "name": "documentFileURLForShareUploadOperation:",
-      "bridgedName": "documentFileURLForShareUploadOperation",
+    "shareUploadOperation:exportDocumentWithHandler:": {
+      "name": "shareUploadOperation:exportDocumentWithHandler:",
+      "bridgedName": "shareUploadOperation_exportDocumentWithHandler",
       "args": [
         {
-          "name": "documentFileURLForShareUploadOperation",
+          "name": "shareUploadOperation",
           "type": "SCKShareUploadOperation *"
+        },
+        {
+          "name": "exportDocumentWithHandler",
+          "type": "void (^)(NSURL *)"
         }
       ],
-      "returns": "NSURL *",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shareUploadOperation:willStartUploadingShare:": {
+      "name": "shareUploadOperation:willStartUploadingShare:",
+      "bridgedName": "shareUploadOperation_willStartUploadingShare",
+      "args": [
+        {
+          "name": "shareUploadOperation",
+          "type": "SCKShareUploadOperation *"
+        },
+        {
+          "name": "willStartUploadingShare",
+          "type": "SCKShare *"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

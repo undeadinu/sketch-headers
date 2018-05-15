@@ -70,19 +70,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isUpdateItemInstallable:": {
-      "name": "isUpdateItemInstallable:",
-      "bridgedName": "isUpdateItemInstallable",
-      "args": [
-        {
-          "name": "isUpdateItemInstallable",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "sparkleShortVersionForItem:": {
       "name": "sparkleShortVersionForItem:",
       "bridgedName": "sparkleShortVersionForItem",
@@ -148,6 +135,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isUpdateItemSupportedByOSVersion:": {
+      "name": "isUpdateItemSupportedByOSVersion:",
+      "bridgedName": "isUpdateItemSupportedByOSVersion",
+      "args": [
+        {
+          "name": "isUpdateItemSupportedByOSVersion",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isUpdateItemSupportedByLicense:": {
+      "name": "isUpdateItemSupportedByLicense:",
+      "bridgedName": "isUpdateItemSupportedByLicense",
+      "args": [
+        {
+          "name": "isUpdateItemSupportedByLicense",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithLicenseExpirationDate:buildNumber:": {
       "name": "initWithLicenseExpirationDate:buildNumber:",
       "bridgedName": "initWithLicenseExpirationDate_buildNumber",
@@ -194,6 +207,60 @@
         "nonatomic"
       ]
     },
+    "latestUnavailableBuildNumberBeforeUpdatingMacAndRenewing": {
+      "name": "latestUnavailableBuildNumberBeforeUpdatingMacAndRenewing",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableVersionBeforeUpdatingMacAndRenewing": {
+      "name": "latestUnavailableVersionBeforeUpdatingMacAndRenewing",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableBuildNumberBeforeUpdatingMac": {
+      "name": "latestUnavailableBuildNumberBeforeUpdatingMac",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableVersionBeforeUpdatingMac": {
+      "name": "latestUnavailableVersionBeforeUpdatingMac",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableBuildNumberBeforeRenewing": {
+      "name": "latestUnavailableBuildNumberBeforeRenewing",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestUnavailableVersionBeforeRenewing": {
+      "name": "latestUnavailableVersionBeforeRenewing",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "latestUnavailableBuildNumber": {
       "name": "latestUnavailableBuildNumber",
       "pointer": true,
@@ -212,6 +279,30 @@
         "nonatomic"
       ]
     },
+    "numberOfUpdatesRequiringHostUpdateAndRenewal": {
+      "name": "numberOfUpdatesRequiringHostUpdateAndRenewal",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberOfUpdatesRequiringHostUpdate": {
+      "name": "numberOfUpdatesRequiringHostUpdate",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberOfUpdatesRequiringRenewal": {
+      "name": "numberOfUpdatesRequiringRenewal",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "hasAvailableUpdates": {
       "name": "hasAvailableUpdates",
       "pointer": false,
@@ -225,14 +316,6 @@
       "name": "numberOfUnavailableReleases",
       "pointer": false,
       "type": "unsigned long long",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "hasUnlicensedUpdatesOnly": {
-      "name": "hasUnlicensedUpdatesOnly",
-      "pointer": false,
-      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"

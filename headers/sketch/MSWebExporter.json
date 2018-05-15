@@ -14,12 +14,12 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
-    "fileURLWithHash:inDirectory:": {
-      "name": "fileURLWithHash:inDirectory:",
-      "bridgedName": "fileURLWithHash_inDirectory",
+    "imageURLWithHash:inDirectory:": {
+      "name": "imageURLWithHash:inDirectory:",
+      "bridgedName": "imageURLWithHash_inDirectory",
       "args": [
         {
-          "name": "fileURLWithHash",
+          "name": "imageURLWithHash",
           "type": "id"
         },
         {
@@ -44,21 +44,17 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "exportDocument:withName:includeDocument:toLocalURL:completionBlock:": {
-      "name": "exportDocument:withName:includeDocument:toLocalURL:completionBlock:",
-      "bridgedName": "exportDocument_withName_includeDocument_toLocalURL_completionBlock",
+    "exportArtboardsOfDocument:withName:toLocalURL:completionBlock:": {
+      "name": "exportArtboardsOfDocument:withName:toLocalURL:completionBlock:",
+      "bridgedName": "exportArtboardsOfDocument_withName_toLocalURL_completionBlock",
       "args": [
         {
-          "name": "exportDocument",
+          "name": "exportArtboardsOfDocument",
           "type": "id"
         },
         {
           "name": "withName",
           "type": "id"
-        },
-        {
-          "name": "includeDocument",
-          "type": "BOOL"
         },
         {
           "name": "toLocalURL",
@@ -73,9 +69,9 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:": {
-      "name": "exportSelectedArtboardsOfDocument:withName:includeDocument:toLocalURL:completionBlock:",
-      "bridgedName": "exportSelectedArtboardsOfDocument_withName_includeDocument_toLocalURL_completionBlock",
+    "exportSelectedArtboardsOfDocument:withName:toLocalURL:completionBlock:": {
+      "name": "exportSelectedArtboardsOfDocument:withName:toLocalURL:completionBlock:",
+      "bridgedName": "exportSelectedArtboardsOfDocument_withName_toLocalURL_completionBlock",
       "args": [
         {
           "name": "exportSelectedArtboardsOfDocument",
@@ -84,10 +80,6 @@
         {
           "name": "withName",
           "type": "id"
-        },
-        {
-          "name": "includeDocument",
-          "type": "BOOL"
         },
         {
           "name": "toLocalURL",
@@ -203,12 +195,29 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "exportWithCompletionBlock:": {
-      "name": "exportWithCompletionBlock:",
-      "bridgedName": "exportWithCompletionBlock",
+    "exportDocumentWithUIMetadata:completionBlock:": {
+      "name": "exportDocumentWithUIMetadata:completionBlock:",
+      "bridgedName": "exportDocumentWithUIMetadata_completionBlock",
       "args": [
         {
-          "name": "exportWithCompletionBlock",
+          "name": "exportDocumentWithUIMetadata",
+          "type": "id"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportArtboardsWithCompletionBlock:": {
+      "name": "exportArtboardsWithCompletionBlock:",
+      "bridgedName": "exportArtboardsWithCompletionBlock",
+      "args": [
+        {
+          "name": "exportArtboardsWithCompletionBlock",
           "type": "CDUnknownBlockType"
         }
       ],
@@ -224,9 +233,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithDocument:name:includeDocument:localURL:": {
-      "name": "initWithDocument:name:includeDocument:localURL:",
-      "bridgedName": "initWithDocument_name_includeDocument_localURL",
+    "initWithDocument:name:localURL:": {
+      "name": "initWithDocument:name:localURL:",
+      "bridgedName": "initWithDocument_name_localURL",
       "args": [
         {
           "name": "initWithDocument",
@@ -235,10 +244,6 @@
         {
           "name": "name",
           "type": "id"
-        },
-        {
-          "name": "includeDocument",
-          "type": "BOOL"
         },
         {
           "name": "localURL",
@@ -265,14 +270,6 @@
       "type": "NSObject<OS_dispatch_queue>",
       "attributes": [
         "retain",
-        "nonatomic"
-      ]
-    },
-    "includeDocument": {
-      "name": "includeDocument",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
         "nonatomic"
       ]
     },

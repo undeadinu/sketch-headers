@@ -496,6 +496,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "resetSelectedLayerIDs:": {
+      "name": "resetSelectedLayerIDs:",
+      "bridgedName": "resetSelectedLayerIDs",
+      "args": [
+        {
+          "name": "resetSelectedLayerIDs",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "performInitWithImmutableModelObject:": {
       "name": "performInitWithImmutableModelObject:",
       "bridgedName": "performInitWithImmutableModelObject",
@@ -597,15 +610,6 @@
     }
   },
   "properties": {
-    "selectedLayerIDs": {
-      "name": "selectedLayerIDs",
-      "pointer": true,
-      "type": "NSMutableSet",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "cachedSelectedLayers": {
       "name": "cachedSelectedLayers",
       "pointer": true,
@@ -725,6 +729,15 @@
       "pointer": false,
       "type": "struct CGPoint",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectedLayerIDs": {
+      "name": "selectedLayerIDs",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },

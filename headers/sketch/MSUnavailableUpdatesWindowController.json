@@ -4,6 +4,7 @@
     "NSWindowDelegate.h"
   ],
   "classes": [
+    "NSButton",
     "NSString",
     "NSTextField"
   ],
@@ -14,9 +15,9 @@
     "NSWindowDelegate"
   ],
   "methods": {
-    "showModalWithVersion:buildNumber:": {
-      "name": "showModalWithVersion:buildNumber:",
-      "bridgedName": "showModalWithVersion_buildNumber",
+    "showModalWithVersion:buildNumber:reason:": {
+      "name": "showModalWithVersion:buildNumber:reason:",
+      "bridgedName": "showModalWithVersion_buildNumber_reason",
       "args": [
         {
           "name": "showModalWithVersion",
@@ -25,6 +26,10 @@
         {
           "name": "buildNumber",
           "type": "id"
+        },
+        {
+          "name": "reason",
+          "type": "long long"
         }
       ],
       "returns": "void",
@@ -65,16 +70,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "renewLicense:": {
-      "name": "renewLicense:",
-      "bridgedName": "renewLicense",
+    "confirmationAction:": {
+      "name": "confirmationAction:",
+      "bridgedName": "confirmationAction",
       "args": [
         {
-          "name": "renewLicense",
+          "name": "confirmationAction",
           "type": "id"
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "renewalRequired": {
+      "name": "renewalRequired",
+      "bridgedName": "renewalRequired",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -99,9 +112,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithWindowNibName:version:buildNumber:": {
-      "name": "initWithWindowNibName:version:buildNumber:",
-      "bridgedName": "initWithWindowNibName_version_buildNumber",
+    "initWithWindowNibName:version:buildNumber:reason:": {
+      "name": "initWithWindowNibName:version:buildNumber:reason:",
+      "bridgedName": "initWithWindowNibName_version_buildNumber_reason",
       "args": [
         {
           "name": "initWithWindowNibName",
@@ -114,6 +127,10 @@
         {
           "name": "buildNumber",
           "type": "id"
+        },
+        {
+          "name": "reason",
+          "type": "long long"
         }
       ],
       "returns": "id",
@@ -122,6 +139,14 @@
     }
   },
   "properties": {
+    "blockedUpdateReason": {
+      "name": "blockedUpdateReason",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "lastBuildNumber": {
       "name": "lastBuildNumber",
       "pointer": true,
@@ -137,6 +162,22 @@
       "type": "NSString",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "confirmationButton": {
+      "name": "confirmationButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "headerTextField": {
+      "name": "headerTextField",
+      "pointer": true,
+      "type": "__weak NSTextField",
+      "attributes": [
         "nonatomic"
       ]
     },
