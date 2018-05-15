@@ -8,9 +8,9 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
-    "exportRequestFromLayers:immutablePage:immutableDoc:": {
-      "name": "exportRequestFromLayers:immutablePage:immutableDoc:",
-      "bridgedName": "exportRequestFromLayers_immutablePage_immutableDoc",
+    "exportRequestFromLayers:immutablePage:immutableDoc:includeArtboardBackground:": {
+      "name": "exportRequestFromLayers:immutablePage:immutableDoc:includeArtboardBackground:",
+      "bridgedName": "exportRequestFromLayers_immutablePage_immutableDoc_includeArtboardBackground",
       "args": [
         {
           "name": "exportRequestFromLayers",
@@ -23,15 +23,19 @@
         {
           "name": "immutableDoc",
           "type": "id"
+        },
+        {
+          "name": "includeArtboardBackground",
+          "type": "BOOL"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "trimRectFromLayers:immutablePage:immutableDoc:": {
-      "name": "trimRectFromLayers:immutablePage:immutableDoc:",
-      "bridgedName": "trimRectFromLayers_immutablePage_immutableDoc",
+    "trimRectFromLayers:immutablePage:immutableDoc:includeArtboardBackground:": {
+      "name": "trimRectFromLayers:immutablePage:immutableDoc:includeArtboardBackground:",
+      "bridgedName": "trimRectFromLayers_immutablePage_immutableDoc_includeArtboardBackground",
       "args": [
         {
           "name": "trimRectFromLayers",
@@ -44,6 +48,10 @@
         {
           "name": "immutableDoc",
           "type": "id"
+        },
+        {
+          "name": "includeArtboardBackground",
+          "type": "BOOL"
         }
       ],
       "returns": "struct CGRect",
@@ -84,6 +92,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "trimmedRectFromLayers:immutablePage:immutableDoc:includeArtboardBackground:": {
+      "name": "trimmedRectFromLayers:immutablePage:immutableDoc:includeArtboardBackground:",
+      "bridgedName": "trimmedRectFromLayers_immutablePage_immutableDoc_includeArtboardBackground",
+      "args": [
+        {
+          "name": "trimmedRectFromLayers",
+          "type": "id"
+        },
+        {
+          "name": "immutablePage",
+          "type": "id"
+        },
+        {
+          "name": "immutableDoc",
+          "type": "id"
+        },
+        {
+          "name": "includeArtboardBackground",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "trimmedRectFromLayers:immutablePage:immutableDoc:": {
       "name": "trimmedRectFromLayers:immutablePage:immutableDoc:",
       "bridgedName": "trimmedRectFromLayers_immutablePage_immutableDoc",
@@ -102,6 +135,31 @@
         }
       ],
       "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageFromLayers:immutablePage:immutableDoc:includeArtboardBackground:": {
+      "name": "imageFromLayers:immutablePage:immutableDoc:includeArtboardBackground:",
+      "bridgedName": "imageFromLayers_immutablePage_immutableDoc_includeArtboardBackground",
+      "args": [
+        {
+          "name": "imageFromLayers",
+          "type": "id"
+        },
+        {
+          "name": "immutablePage",
+          "type": "id"
+        },
+        {
+          "name": "immutableDoc",
+          "type": "id"
+        },
+        {
+          "name": "includeArtboardBackground",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
