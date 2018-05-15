@@ -1,0 +1,183 @@
+{
+  "imports": [
+    "NSObject.h",
+    "PDFParser.h"
+  ],
+  "classes": [
+    "NSData",
+    "NSString",
+    "NSURL",
+    "PDFScanner"
+  ],
+  "protocol": true,
+  "className": "PDFParser",
+  "extends": "NSObject",
+  "interfaces": [
+    "PDFParser"
+  ],
+  "methods": {
+    "name": {
+      "name": "name",
+      "bridgedName": "name",
+      "args": [],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pageCount": {
+      "name": "pageCount",
+      "bridgedName": "pageCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parsePastedDocument": {
+      "name": "parsePastedDocument",
+      "bridgedName": "parsePastedDocument",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parseWithProgress:": {
+      "name": "parseWithProgress:",
+      "bridgedName": "parseWithProgress",
+      "args": [
+        {
+          "name": "parseWithProgress",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDocumentFromData:": {
+      "name": "loadDocumentFromData:",
+      "bridgedName": "loadDocumentFromData",
+      "args": [
+        {
+          "name": "loadDocumentFromData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDocumentFromURL:": {
+      "name": "loadDocumentFromURL:",
+      "bridgedName": "loadDocumentFromURL",
+      "args": [
+        {
+          "name": "loadDocumentFromURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithScanner:": {
+      "name": "initWithScanner:",
+      "bridgedName": "initWithScanner",
+      "args": [
+        {
+          "name": "initWithScanner",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parseWithProgress:isPasted:": {
+      "name": "parseWithProgress:isPasted:",
+      "bridgedName": "parseWithProgress_isPasted",
+      "args": [
+        {
+          "name": "parseWithProgress",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "isPasted",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "struct CGPDFDocument",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "scanner": {
+      "name": "scanner",
+      "pointer": true,
+      "type": "PDFScanner",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

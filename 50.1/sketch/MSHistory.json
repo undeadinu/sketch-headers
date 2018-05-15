@@ -1,0 +1,242 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSMoment",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "MSHistory",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "progressToNextMoment": {
+      "name": "progressToNextMoment",
+      "bridgedName": "progressToNextMoment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commitCurrentMoment": {
+      "name": "commitCurrentMoment",
+      "bridgedName": "commitCurrentMoment",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revertToPreviousMoment": {
+      "name": "revertToPreviousMoment",
+      "bridgedName": "revertToPreviousMoment",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addMomentWithTitle:documentData:adaptability:": {
+      "name": "addMomentWithTitle:documentData:adaptability:",
+      "bridgedName": "addMomentWithTitle_documentData_adaptability",
+      "args": [
+        {
+          "name": "addMomentWithTitle",
+          "type": "id"
+        },
+        {
+          "name": "documentData",
+          "type": "id"
+        },
+        {
+          "name": "adaptability",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addMomentWithTitle:documentData:": {
+      "name": "addMomentWithTitle:documentData:",
+      "bridgedName": "addMomentWithTitle_documentData",
+      "args": [
+        {
+          "name": "addMomentWithTitle",
+          "type": "id"
+        },
+        {
+          "name": "documentData",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFutureMoments": {
+      "name": "removeFutureMoments",
+      "bridgedName": "removeFutureMoments",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pagesListChangedFromMoment:toMoment:": {
+      "name": "pagesListChangedFromMoment:toMoment:",
+      "bridgedName": "pagesListChangedFromMoment_toMoment",
+      "args": [
+        {
+          "name": "pagesListChangedFromMoment",
+          "type": "id"
+        },
+        {
+          "name": "toMoment",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "onlyPageSwitchedFromMoment:toMoment:": {
+      "name": "onlyPageSwitchedFromMoment:toMoment:",
+      "bridgedName": "onlyPageSwitchedFromMoment_toMoment",
+      "args": [
+        {
+          "name": "onlyPageSwitchedFromMoment",
+          "type": "id"
+        },
+        {
+          "name": "toMoment",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addMoment:": {
+      "name": "addMoment:",
+      "bridgedName": "addMoment",
+      "args": [
+        {
+          "name": "addMoment",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithInitialMoment:": {
+      "name": "initWithInitialMoment:",
+      "bridgedName": "initWithInitialMoment",
+      "args": [
+        {
+          "name": "initWithInitialMoment",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "indexOfCurrentMoment": {
+      "name": "indexOfCurrentMoment",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "moments": {
+      "name": "moments",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "allowsCoalescingOfMomentsCloseInTime": {
+      "name": "allowsCoalescingOfMomentsCloseInTime",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberOfMoments": {
+      "name": "numberOfMoments",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canProgressToNextMoment": {
+      "name": "canProgressToNextMoment",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "canRevertToPreviousMoment": {
+      "name": "canRevertToPreviousMoment",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "nextMoment": {
+      "name": "nextMoment",
+      "pointer": true,
+      "type": "MSMoment",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "previousMoment": {
+      "name": "previousMoment",
+      "pointer": true,
+      "type": "MSMoment",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentMoment": {
+      "name": "currentMoment",
+      "pointer": true,
+      "type": "MSMoment",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2315 @@
+{
+  "imports": [
+    "NSAnimationDelegate.h",
+    "NSDetachedTabDraggingImageToWindowTransitionControllerDelegate.h",
+    "NSDraggingDestination.h",
+    "NSMorphingDragImageControllerDragSource.h",
+    "NSTabBarSyncedButtonDelegate.h",
+    "NSTabButtonDelegate.h",
+    "NSTabDraggingDestination.h"
+  ],
+  "classes": [
+    "CABackdropLayer",
+    "CALayer",
+    "NSArray",
+    "NSMapTable",
+    "NSMutableArray",
+    "NSScrollView",
+    "NSString",
+    "NSTabBarEmptyRegionPlaceholderButton",
+    "NSTabButton",
+    "NSTrackingArea"
+  ],
+  "protocol": false,
+  "className": "NSTabBar",
+  "extends": "NSView",
+  "interfaces": [
+    "NSDetachedTabDraggingImageToWindowTransitionControllerDelegate",
+    "NSMorphingDragImageControllerDragSource",
+    "NSAnimationDelegate",
+    "NSDraggingDestination",
+    "NSTabButtonDelegate",
+    "NSTabBarSyncedButtonDelegate",
+    "NSTabDraggingDestination"
+  ],
+  "methods": {
+    "accessibilityLabelForNumberOfTabs:andNumberOfPinnedTabs:": {
+      "name": "accessibilityLabelForNumberOfTabs:andNumberOfPinnedTabs:",
+      "bridgedName": "accessibilityLabelForNumberOfTabs_andNumberOfPinnedTabs",
+      "args": [
+        {
+          "name": "accessibilityLabelForNumberOfTabs",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "andNumberOfPinnedTabs",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getTabRectsForInsertingTabCount:": {
+      "name": "_getTabRectsForInsertingTabCount:",
+      "bridgedName": "_getTabRectsForInsertingTabCount",
+      "args": [
+        {
+          "name": "_getTabRectsForInsertingTabCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getFirstTabRectForInsertingTabCount:": {
+      "name": "_getFirstTabRectForInsertingTabCount:",
+      "bridgedName": "_getFirstTabRectForInsertingTabCount",
+      "args": [
+        {
+          "name": "_getFirstTabRectForInsertingTabCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultTabItemRectForTabCount:": {
+      "name": "_defaultTabItemRectForTabCount:",
+      "bridgedName": "_defaultTabItemRectForTabCount",
+      "args": [
+        {
+          "name": "_defaultTabItemRectForTabCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowChangedKeyState": {
+      "name": "_windowChangedKeyState",
+      "bridgedName": "_windowChangedKeyState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "button:didSetHighlightStateToPressed:hovered:": {
+      "name": "button:didSetHighlightStateToPressed:hovered:",
+      "bridgedName": "button_didSetHighlightStateToPressed_hovered",
+      "args": [
+        {
+          "name": "button",
+          "type": "id"
+        },
+        {
+          "name": "didSetHighlightStateToPressed",
+          "type": "BOOL"
+        },
+        {
+          "name": "hovered",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toggleTransparencyIfNecessary": {
+      "name": "_toggleTransparencyIfNecessary",
+      "bridgedName": "_toggleTransparencyIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilityDisplayOptionsDidChange:": {
+      "name": "_accessibilityDisplayOptionsDidChange:",
+      "bridgedName": "_accessibilityDisplayOptionsDidChange",
+      "args": [
+        {
+          "name": "_accessibilityDisplayOptionsDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLabel": {
+      "name": "accessibilityLabel",
+      "bridgedName": "accessibilityLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHitTest:": {
+      "name": "accessibilityHitTest:",
+      "bridgedName": "accessibilityHitTest",
+      "args": [
+        {
+          "name": "accessibilityHitTest",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeValue:": {
+      "name": "accessibilityAttributeValue:",
+      "bridgedName": "accessibilityAttributeValue",
+      "args": [
+        {
+          "name": "accessibilityAttributeValue",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsAttributeSettable:": {
+      "name": "accessibilityIsAttributeSettable:",
+      "bridgedName": "accessibilityIsAttributeSettable",
+      "args": [
+        {
+          "name": "accessibilityIsAttributeSettable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityElement": {
+      "name": "isAccessibilityElement",
+      "bridgedName": "isAccessibilityElement",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "springLoadingExited:": {
+      "name": "springLoadingExited:",
+      "bridgedName": "springLoadingExited",
+      "args": [
+        {
+          "name": "springLoadingExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "springLoadingActivated:draggingInfo:": {
+      "name": "springLoadingActivated:draggingInfo:",
+      "bridgedName": "springLoadingActivated_draggingInfo",
+      "args": [
+        {
+          "name": "springLoadingActivated",
+          "type": "BOOL"
+        },
+        {
+          "name": "draggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "springLoadingHighlightChanged:": {
+      "name": "springLoadingHighlightChanged:",
+      "bridgedName": "springLoadingHighlightChanged",
+      "args": [
+        {
+          "name": "springLoadingHighlightChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "springLoadingUpdated:": {
+      "name": "springLoadingUpdated:",
+      "bridgedName": "springLoadingUpdated",
+      "args": [
+        {
+          "name": "springLoadingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "springLoadingEntered:": {
+      "name": "springLoadingEntered:",
+      "bridgedName": "springLoadingEntered",
+      "args": [
+        {
+          "name": "springLoadingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "worksWhenModal": {
+      "name": "worksWhenModal",
+      "bridgedName": "worksWhenModal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doSpringLoadingSetupForDraggingInfo:": {
+      "name": "_doSpringLoadingSetupForDraggingInfo:",
+      "bridgedName": "_doSpringLoadingSetupForDraggingInfo",
+      "args": [
+        {
+          "name": "_doSpringLoadingSetupForDraggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragOperationForDraggingInfo:": {
+      "name": "_dragOperationForDraggingInfo:",
+      "bridgedName": "_dragOperationForDraggingInfo",
+      "args": [
+        {
+          "name": "_dragOperationForDraggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoSelectIndex:": {
+      "name": "_autoSelectIndex:",
+      "bridgedName": "_autoSelectIndex",
+      "args": [
+        {
+          "name": "_autoSelectIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsSpringLoadingFlashing:index:": {
+      "name": "_setIsSpringLoadingFlashing:index:",
+      "bridgedName": "_setIsSpringLoadingFlashing_index",
+      "args": [
+        {
+          "name": "_setIsSpringLoadingFlashing",
+          "type": "BOOL"
+        },
+        {
+          "name": "index",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDragOperation:": {
+      "name": "performDragOperation:",
+      "bridgedName": "performDragOperation",
+      "args": [
+        {
+          "name": "performDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSpringLoadingTargetIndex:draggingInfo:": {
+      "name": "_setSpringLoadingTargetIndex:draggingInfo:",
+      "bridgedName": "_setSpringLoadingTargetIndex_draggingInfo",
+      "args": [
+        {
+          "name": "_setSpringLoadingTargetIndex",
+          "type": "long long"
+        },
+        {
+          "name": "draggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingUpdated:": {
+      "name": "draggingUpdated:",
+      "bridgedName": "draggingUpdated",
+      "args": [
+        {
+          "name": "draggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingEntered:": {
+      "name": "draggingEntered:",
+      "bridgedName": "draggingEntered",
+      "args": [
+        {
+          "name": "draggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsPeriodicDraggingUpdates": {
+      "name": "wantsPeriodicDraggingUpdates",
+      "bridgedName": "wantsPeriodicDraggingUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willPinTabForTabDragOperation:": {
+      "name": "willPinTabForTabDragOperation:",
+      "bridgedName": "willPinTabForTabDragOperation",
+      "args": [
+        {
+          "name": "willPinTabForTabDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDropIndexWithTabDraggingInfo:": {
+      "name": "_updateDropIndexWithTabDraggingInfo:",
+      "bridgedName": "_updateDropIndexWithTabDraggingInfo",
+      "args": [
+        {
+          "name": "_updateDropIndexWithTabDraggingInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performTabDragOperation:": {
+      "name": "performTabDragOperation:",
+      "bridgedName": "performTabDragOperation",
+      "args": [
+        {
+          "name": "performTabDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabDraggingExited:": {
+      "name": "tabDraggingExited:",
+      "bridgedName": "tabDraggingExited",
+      "args": [
+        {
+          "name": "tabDraggingExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabDraggingUpdated:": {
+      "name": "tabDraggingUpdated:",
+      "bridgedName": "tabDraggingUpdated",
+      "args": [
+        {
+          "name": "tabDraggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabDraggingEntered:": {
+      "name": "tabDraggingEntered:",
+      "bridgedName": "tabDraggingEntered",
+      "args": [
+        {
+          "name": "tabDraggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsPeriodicTabDraggingUpdates": {
+      "name": "wantsPeriodicTabDraggingUpdates",
+      "bridgedName": "wantsPeriodicTabDraggingUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detachedTabDraggingImageToWindowTransitionController:didFinishTransitionAnimationForWindow:": {
+      "name": "detachedTabDraggingImageToWindowTransitionController:didFinishTransitionAnimationForWindow:",
+      "bridgedName": "detachedTabDraggingImageToWindowTransitionController_didFinishTransitionAnimationForWindow",
+      "args": [
+        {
+          "name": "detachedTabDraggingImageToWindowTransitionController",
+          "type": "id"
+        },
+        {
+          "name": "didFinishTransitionAnimationForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "destinationWindowForDetachedTabDraggingImageToWindowTransitionController:": {
+      "name": "destinationWindowForDetachedTabDraggingImageToWindowTransitionController:",
+      "bridgedName": "destinationWindowForDetachedTabDraggingImageToWindowTransitionController",
+      "args": [
+        {
+          "name": "destinationWindowForDetachedTabDraggingImageToWindowTransitionController",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "destinationWindowShouldMoveToDropPointInSpace:forDetachedTabDraggingImageToWindowTransitionController:": {
+      "name": "destinationWindowShouldMoveToDropPointInSpace:forDetachedTabDraggingImageToWindowTransitionController:",
+      "bridgedName": "destinationWindowShouldMoveToDropPointInSpace_forDetachedTabDraggingImageToWindowTransitionController",
+      "args": [
+        {
+          "name": "destinationWindowShouldMoveToDropPointInSpace",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "forDetachedTabDraggingImageToWindowTransitionController",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragDestinationWindowForMorphingDragImage:": {
+      "name": "dragDestinationWindowForMorphingDragImage:",
+      "bridgedName": "dragDestinationWindowForMorphingDragImage",
+      "args": [
+        {
+          "name": "dragDestinationWindowForMorphingDragImage",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "morphingDragImage:wasDroppedAtPointOnScreen:": {
+      "name": "morphingDragImage:wasDroppedAtPointOnScreen:",
+      "bridgedName": "morphingDragImage_wasDroppedAtPointOnScreen",
+      "args": [
+        {
+          "name": "morphingDragImage",
+          "type": "id"
+        },
+        {
+          "name": "wasDroppedAtPointOnScreen",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationWindowForDropOnScreenOperation": {
+      "name": "_destinationWindowForDropOnScreenOperation",
+      "bridgedName": "_destinationWindowForDropOnScreenOperation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_miniWindowDragImageForTabButton:": {
+      "name": "_miniWindowDragImageForTabButton:",
+      "bridgedName": "_miniWindowDragImageForTabButton",
+      "args": [
+        {
+          "name": "_miniWindowDragImageForTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pinnedTabDragImageForTabButton:": {
+      "name": "_pinnedTabDragImageForTabButton:",
+      "bridgedName": "_pinnedTabDragImageForTabButton",
+      "args": [
+        {
+          "name": "_pinnedTabDragImageForTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabDragImageForTabButton:": {
+      "name": "_tabDragImageForTabButton:",
+      "bridgedName": "_tabDragImageForTabButton",
+      "args": [
+        {
+          "name": "_tabDragImageForTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_miniWindowDragImageWidth": {
+      "name": "_miniWindowDragImageWidth",
+      "bridgedName": "_miniWindowDragImageWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_detachTabAndPositionUnderCursor:": {
+      "name": "_detachTabAndPositionUnderCursor:",
+      "bridgedName": "_detachTabAndPositionUnderCursor",
+      "args": [
+        {
+          "name": "_detachTabAndPositionUnderCursor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_mouseLocationInDragImageForTabButton:": {
+      "name": "_mouseLocationInDragImageForTabButton:",
+      "bridgedName": "_mouseLocationInDragImageForTabButton",
+      "args": [
+        {
+          "name": "_mouseLocationInDragImageForTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDetachTabForMouseEvent:": {
+      "name": "_shouldDetachTabForMouseEvent:",
+      "bridgedName": "_shouldDetachTabForMouseEvent",
+      "args": [
+        {
+          "name": "_shouldDetachTabForMouseEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canDetachTab": {
+      "name": "_canDetachTab",
+      "bridgedName": "_canDetachTab",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelReorderingRestrictionsAfterPinning": {
+      "name": "_cancelReorderingRestrictionsAfterPinning",
+      "bridgedName": "_cancelReorderingRestrictionsAfterPinning",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startReorderingRestrictionsAfterPinning": {
+      "name": "_startReorderingRestrictionsAfterPinning",
+      "bridgedName": "_startReorderingRestrictionsAfterPinning",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoscrollButtonsForStackingRegion:": {
+      "name": "_autoscrollButtonsForStackingRegion:",
+      "bridgedName": "_autoscrollButtonsForStackingRegion",
+      "args": [
+        {
+          "name": "_autoscrollButtonsForStackingRegion",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDropIndexWithDraggingLocation:": {
+      "name": "_updateDropIndexWithDraggingLocation:",
+      "bridgedName": "_updateDropIndexWithDraggingLocation",
+      "args": [
+        {
+          "name": "_updateDropIndexWithDraggingLocation",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabDragResultForEventTrackingWithStartEvent:": {
+      "name": "_tabDragResultForEventTrackingWithStartEvent:",
+      "bridgedName": "_tabDragResultForEventTrackingWithStartEvent",
+      "args": [
+        {
+          "name": "_tabDragResultForEventTrackingWithStartEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabDragResultForInitialDragWithStartEvent:": {
+      "name": "_tabDragResultForInitialDragWithStartEvent:",
+      "bridgedName": "_tabDragResultForInitialDragWithStartEvent",
+      "args": [
+        {
+          "name": "_tabDragResultForInitialDragWithStartEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentEventOffsetFromEvent:": {
+      "name": "_currentEventOffsetFromEvent:",
+      "bridgedName": "_currentEventOffsetFromEvent",
+      "args": [
+        {
+          "name": "_currentEventOffsetFromEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackReorderingEventsWithStartEvent:forTabButton:": {
+      "name": "_trackReorderingEventsWithStartEvent:forTabButton:",
+      "bridgedName": "_trackReorderingEventsWithStartEvent_forTabButton",
+      "args": [
+        {
+          "name": "_trackReorderingEventsWithStartEvent",
+          "type": "id"
+        },
+        {
+          "name": "forTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseMoved:": {
+      "name": "mouseMoved:",
+      "bridgedName": "mouseMoved",
+      "args": [
+        {
+          "name": "mouseMoved",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTabButtonUnderMouse:shouldAnimateHighlight:": {
+      "name": "_setTabButtonUnderMouse:shouldAnimateHighlight:",
+      "bridgedName": "_setTabButtonUnderMouse_shouldAnimateHighlight",
+      "args": [
+        {
+          "name": "_setTabButtonUnderMouse",
+          "type": "id"
+        },
+        {
+          "name": "shouldAnimateHighlight",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIndexOfTabUnderMouse:animated:": {
+      "name": "_setIndexOfTabUnderMouse:animated:",
+      "bridgedName": "_setIndexOfTabUnderMouse_animated",
+      "args": [
+        {
+          "name": "_setIndexOfTabUnderMouse",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowCloseButtonForTabBarViewItem:": {
+      "name": "_shouldShowCloseButtonForTabBarViewItem:",
+      "bridgedName": "_shouldShowCloseButtonForTabBarViewItem",
+      "args": [
+        {
+          "name": "_shouldShowCloseButtonForTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldHighlightButtonOnHover": {
+      "name": "_shouldHighlightButtonOnHover",
+      "bridgedName": "_shouldHighlightButtonOnHover",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateIndexOfTabUnderCurrentMouseLocation:": {
+      "name": "_updateIndexOfTabUnderCurrentMouseLocation:",
+      "bridgedName": "_updateIndexOfTabUnderCurrentMouseLocation",
+      "args": [
+        {
+          "name": "_updateIndexOfTabUnderCurrentMouseLocation",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTrackingAreas": {
+      "name": "updateTrackingAreas",
+      "bridgedName": "updateTrackingAreas",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateButtonStateAndKeyLoop": {
+      "name": "_updateButtonStateAndKeyLoop",
+      "bridgedName": "_updateButtonStateAndKeyLoop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackMouseEventsForEvent:onTabAtIndex:": {
+      "name": "_trackMouseEventsForEvent:onTabAtIndex:",
+      "bridgedName": "_trackMouseEventsForEvent_onTabAtIndex",
+      "args": [
+        {
+          "name": "_trackMouseEventsForEvent",
+          "type": "id"
+        },
+        {
+          "name": "onTabAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragShouldBeginFromMouseDown:withExpiration:xHysteresis:yHysteresis:": {
+      "name": "_dragShouldBeginFromMouseDown:withExpiration:xHysteresis:yHysteresis:",
+      "bridgedName": "_dragShouldBeginFromMouseDown_withExpiration_xHysteresis_yHysteresis",
+      "args": [
+        {
+          "name": "_dragShouldBeginFromMouseDown",
+          "type": "id"
+        },
+        {
+          "name": "withExpiration",
+          "type": "id"
+        },
+        {
+          "name": "xHysteresis",
+          "type": "float"
+        },
+        {
+          "name": "yHysteresis",
+          "type": "float"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canDragItems": {
+      "name": "_canDragItems",
+      "bridgedName": "_canDragItems",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackMouseEventsForEvent:inStackingRegion:": {
+      "name": "_trackMouseEventsForEvent:inStackingRegion:",
+      "bridgedName": "_trackMouseEventsForEvent_inStackingRegion",
+      "args": [
+        {
+          "name": "_trackMouseEventsForEvent",
+          "type": "id"
+        },
+        {
+          "name": "inStackingRegion",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackMouseEventsUntilMouseUp:withBlock:": {
+      "name": "_trackMouseEventsUntilMouseUp:withBlock:",
+      "bridgedName": "_trackMouseEventsUntilMouseUp_withBlock",
+      "args": [
+        {
+          "name": "_trackMouseEventsUntilMouseUp",
+          "type": "id"
+        },
+        {
+          "name": "withBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseUp:": {
+      "name": "otherMouseUp:",
+      "bridgedName": "otherMouseUp",
+      "args": [
+        {
+          "name": "otherMouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateTabBackgroundOnClickEventIfAppropriate:": {
+      "name": "_animateTabBackgroundOnClickEventIfAppropriate:",
+      "bridgedName": "_animateTabBackgroundOnClickEventIfAppropriate",
+      "args": [
+        {
+          "name": "_animateTabBackgroundOnClickEventIfAppropriate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUp:": {
+      "name": "mouseUp:",
+      "bridgedName": "mouseUp",
+      "args": [
+        {
+          "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstMouse:": {
+      "name": "acceptsFirstMouse:",
+      "bridgedName": "acceptsFirstMouse",
+      "args": [
+        {
+          "name": "acceptsFirstMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuForEvent:": {
+      "name": "menuForEvent:",
+      "bridgedName": "menuForEvent",
+      "args": [
+        {
+          "name": "menuForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollWheel:": {
+      "name": "scrollWheel:",
+      "bridgedName": "scrollWheel",
+      "args": [
+        {
+          "name": "scrollWheel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTest:": {
+      "name": "hitTest:",
+      "bridgedName": "hitTest",
+      "args": [
+        {
+          "name": "hitTest",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabButtonDidBecomeFirstResponder:": {
+      "name": "tabButtonDidBecomeFirstResponder:",
+      "bridgedName": "tabButtonDidBecomeFirstResponder",
+      "args": [
+        {
+          "name": "tabButtonDidBecomeFirstResponder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closeTabButton:": {
+      "name": "closeTabButton:",
+      "bridgedName": "closeTabButton",
+      "args": [
+        {
+          "name": "closeTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectTabButton:": {
+      "name": "selectTabButton:",
+      "bridgedName": "selectTabButton",
+      "args": [
+        {
+          "name": "selectTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabButton:menuForEvent:": {
+      "name": "tabButton:menuForEvent:",
+      "bridgedName": "tabButton_menuForEvent",
+      "args": [
+        {
+          "name": "tabButton",
+          "type": "id"
+        },
+        {
+          "name": "menuForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_moveButton:forTabBarViewItem:toIndex:": {
+      "name": "_moveButton:forTabBarViewItem:toIndex:",
+      "bridgedName": "_moveButton_forTabBarViewItem_toIndex",
+      "args": [
+        {
+          "name": "_moveButton",
+          "type": "id"
+        },
+        {
+          "name": "forTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCloseButtonVisibilityForTabBarViewItem:": {
+      "name": "updateCloseButtonVisibilityForTabBarViewItem:",
+      "bridgedName": "updateCloseButtonVisibilityForTabBarViewItem",
+      "args": [
+        {
+          "name": "updateCloseButtonVisibilityForTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveTabBarViewItem:toIndex:": {
+      "name": "moveTabBarViewItem:toIndex:",
+      "bridgedName": "moveTabBarViewItem_toIndex",
+      "args": [
+        {
+          "name": "moveTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectTabBarViewItem:animated:": {
+      "name": "selectTabBarViewItem:animated:",
+      "bridgedName": "selectTabBarViewItem_animated",
+      "args": [
+        {
+          "name": "selectTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectTabBarViewItem:": {
+      "name": "selectTabBarViewItem:",
+      "bridgedName": "selectTabBarViewItem",
+      "args": [
+        {
+          "name": "selectTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTabBarViewItem:": {
+      "name": "removeTabBarViewItem:",
+      "bridgedName": "removeTabBarViewItem",
+      "args": [
+        {
+          "name": "removeTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTabBarViewItemAtIndex:": {
+      "name": "removeTabBarViewItemAtIndex:",
+      "bridgedName": "removeTabBarViewItemAtIndex",
+      "args": [
+        {
+          "name": "removeTabBarViewItemAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertTabBarViewItem:atIndex:animated:": {
+      "name": "insertTabBarViewItem:atIndex:animated:",
+      "bridgedName": "insertTabBarViewItem_atIndex_animated",
+      "args": [
+        {
+          "name": "insertTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertTabBarViewItem:atIndex:": {
+      "name": "insertTabBarViewItem:atIndex:",
+      "bridgedName": "insertTabBarViewItem_atIndex",
+      "args": [
+        {
+          "name": "insertTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTabBarViewItem:": {
+      "name": "addTabBarViewItem:",
+      "bridgedName": "addTabBarViewItem",
+      "args": [
+        {
+          "name": "addTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewDidChangeAppearance:": {
+      "name": "_viewDidChangeAppearance:",
+      "bridgedName": "_viewDidChangeAppearance",
+      "args": [
+        {
+          "name": "_viewDidChangeAppearance",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayer": {
+      "name": "updateLayer",
+      "bridgedName": "updateLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDark": {
+      "name": "_isDark",
+      "bridgedName": "_isDark",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsUpdateLayer": {
+      "name": "wantsUpdateLayer",
+      "bridgedName": "wantsUpdateLayer",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollToButtonAtIndex:canScrollSelectedButton:": {
+      "name": "_scrollToButtonAtIndex:canScrollSelectedButton:",
+      "bridgedName": "_scrollToButtonAtIndex_canScrollSelectedButton",
+      "args": [
+        {
+          "name": "_scrollToButtonAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "canScrollSelectedButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rectWithUnstackedButtons": {
+      "name": "_rectWithUnstackedButtons",
+      "bridgedName": "_rectWithUnstackedButtons",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutBoundsEdgeInsetsForUnstackedButtons": {
+      "name": "_layoutBoundsEdgeInsetsForUnstackedButtons",
+      "bridgedName": "_layoutBoundsEdgeInsetsForUnstackedButtons",
+      "args": [],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_syncedScrollBoundsToOrigin:animated:": {
+      "name": "_syncedScrollBoundsToOrigin:animated:",
+      "bridgedName": "_syncedScrollBoundsToOrigin_animated",
+      "args": [
+        {
+          "name": "_syncedScrollBoundsToOrigin",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollAfterClickingOnStackingRegion:": {
+      "name": "_scrollAfterClickingOnStackingRegion:",
+      "bridgedName": "_scrollAfterClickingOnStackingRegion",
+      "args": [
+        {
+          "name": "_scrollAfterClickingOnStackingRegion",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollTargetPointForStackingRegion:": {
+      "name": "_scrollTargetPointForStackingRegion:",
+      "bridgedName": "_scrollTargetPointForStackingRegion",
+      "args": [
+        {
+          "name": "_scrollTargetPointForStackingRegion",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveRightStackWidthForButtonAtIndex:": {
+      "name": "_effectiveRightStackWidthForButtonAtIndex:",
+      "bridgedName": "_effectiveRightStackWidthForButtonAtIndex",
+      "args": [
+        {
+          "name": "_effectiveRightStackWidthForButtonAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveLeftStackWidthForButtonAtIndex:": {
+      "name": "_effectiveLeftStackWidthForButtonAtIndex:",
+      "bridgedName": "_effectiveLeftStackWidthForButtonAtIndex",
+      "args": [
+        {
+          "name": "_effectiveLeftStackWidthForButtonAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visibleTabIndexAtPoint:stackingRegion:ignorePointsOutsideOfLayoutBounds:": {
+      "name": "_visibleTabIndexAtPoint:stackingRegion:ignorePointsOutsideOfLayoutBounds:",
+      "bridgedName": "_visibleTabIndexAtPoint_stackingRegion_ignorePointsOutsideOfLayoutBounds",
+      "args": [
+        {
+          "name": "_visibleTabIndexAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "stackingRegion",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "ignorePointsOutsideOfLayoutBounds",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_visibleTabIndexAtPoint:stackingRegion:": {
+      "name": "_visibleTabIndexAtPoint:stackingRegion:",
+      "bridgedName": "_visibleTabIndexAtPoint_stackingRegion",
+      "args": [
+        {
+          "name": "_visibleTabIndexAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "stackingRegion",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabIndexAtPointWhenLayingOutButtonsToAlignWithWindowCenter:": {
+      "name": "_tabIndexAtPointWhenLayingOutButtonsToAlignWithWindowCenter:",
+      "bridgedName": "_tabIndexAtPointWhenLayingOutButtonsToAlignWithWindowCenter",
+      "args": [
+        {
+          "name": "_tabIndexAtPointWhenLayingOutButtonsToAlignWithWindowCenter",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabIndexAtPoint:withButtonWidth:supplementalWidth:": {
+      "name": "_tabIndexAtPoint:withButtonWidth:supplementalWidth:",
+      "bridgedName": "_tabIndexAtPoint_withButtonWidth_supplementalWidth",
+      "args": [
+        {
+          "name": "_tabIndexAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "withButtonWidth",
+          "type": "double"
+        },
+        {
+          "name": "supplementalWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabIndexAtPoint:": {
+      "name": "_tabIndexAtPoint:",
+      "bridgedName": "_tabIndexAtPoint",
+      "args": [
+        {
+          "name": "_tabIndexAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewFrameForAdjustedButtonFrame:": {
+      "name": "_viewFrameForAdjustedButtonFrame:",
+      "bridgedName": "_viewFrameForAdjustedButtonFrame",
+      "args": [
+        {
+          "name": "_viewFrameForAdjustedButtonFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_horizontalOffsetForButtonAtIndex:frontmostButtonIndex:slowingFactor:": {
+      "name": "_horizontalOffsetForButtonAtIndex:frontmostButtonIndex:slowingFactor:",
+      "bridgedName": "_horizontalOffsetForButtonAtIndex_frontmostButtonIndex_slowingFactor",
+      "args": [
+        {
+          "name": "_horizontalOffsetForButtonAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "frontmostButtonIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "slowingFactor",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titleCenterOffsetForButtonAtIndex:frontmostButtonIndex:": {
+      "name": "_titleCenterOffsetForButtonAtIndex:frontmostButtonIndex:",
+      "bridgedName": "_titleCenterOffsetForButtonAtIndex_frontmostButtonIndex",
+      "args": [
+        {
+          "name": "_titleCenterOffsetForButtonAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "frontmostButtonIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_centeringFrameForButtonAtIndex:": {
+      "name": "_centeringFrameForButtonAtIndex:",
+      "bridgedName": "_centeringFrameForButtonAtIndex",
+      "args": [
+        {
+          "name": "_centeringFrameForButtonAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustedFrameForButtonAtIndex:isHidden:": {
+      "name": "_adjustedFrameForButtonAtIndex:isHidden:",
+      "bridgedName": "_adjustedFrameForButtonAtIndex_isHidden",
+      "args": [
+        {
+          "name": "_adjustedFrameForButtonAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "isHidden",
+          "type": "char *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_frameForButtonAtIndex:firstButtonOffset:buttonWidth:supplementalWidth:": {
+      "name": "_frameForButtonAtIndex:firstButtonOffset:buttonWidth:supplementalWidth:",
+      "bridgedName": "_frameForButtonAtIndex_firstButtonOffset_buttonWidth_supplementalWidth",
+      "args": [
+        {
+          "name": "_frameForButtonAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "firstButtonOffset",
+          "type": "double"
+        },
+        {
+          "name": "buttonWidth",
+          "type": "double"
+        },
+        {
+          "name": "supplementalWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unstackedFrameForButtonAtIndex:": {
+      "name": "_unstackedFrameForButtonAtIndex:",
+      "bridgedName": "_unstackedFrameForButtonAtIndex",
+      "args": [
+        {
+          "name": "_unstackedFrameForButtonAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calculateStackingRegions": {
+      "name": "_calculateStackingRegions",
+      "bridgedName": "_calculateStackingRegions",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_buttonWidthForNumberOfButtons:inWidth:remainderWidth:": {
+      "name": "_buttonWidthForNumberOfButtons:inWidth:remainderWidth:",
+      "bridgedName": "_buttonWidthForNumberOfButtons_inWidth_remainderWidth",
+      "args": [
+        {
+          "name": "_buttonWidthForNumberOfButtons",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "inWidth",
+          "type": "double"
+        },
+        {
+          "name": "remainderWidth",
+          "type": "double *"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateButtonWidthAndRemainingWidthInTabBarToDivideAmongButtons": {
+      "name": "_updateButtonWidthAndRemainingWidthInTabBarToDivideAmongButtons",
+      "bridgedName": "_updateButtonWidthAndRemainingWidthInTabBarToDivideAmongButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recalculateLayout": {
+      "name": "_recalculateLayout",
+      "bridgedName": "_recalculateLayout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutBoundsWidth": {
+      "name": "_layoutBoundsWidth",
+      "bridgedName": "_layoutBoundsWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateNewTabButton": {
+      "name": "_updateNewTabButton",
+      "bridgedName": "_updateNewTabButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addNewTabButton": {
+      "name": "_addNewTabButton",
+      "bridgedName": "_addNewTabButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newTabWithinWindow:": {
+      "name": "_newTabWithinWindow:",
+      "bridgedName": "_newTabWithinWindow",
+      "args": [
+        {
+          "name": "_newTabWithinWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pinningRegionWidth": {
+      "name": "_pinningRegionWidth",
+      "bridgedName": "_pinningRegionWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pinnedTabsWidth": {
+      "name": "_pinnedTabsWidth",
+      "bridgedName": "_pinnedTabsWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentButtonWidth": {
+      "name": "currentButtonWidth",
+      "bridgedName": "currentButtonWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldLayOutButtonsToAlignWithWindowCenter": {
+      "name": "_shouldLayOutButtonsToAlignWithWindowCenter",
+      "bridgedName": "_shouldLayOutButtonsToAlignWithWindowCenter",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAlignTabButtonTitleWithWindowCenter": {
+      "name": "_shouldAlignTabButtonTitleWithWindowCenter",
+      "bridgedName": "_shouldAlignTabButtonTitleWithWindowCenter",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_numberOfPinnedTabsForLayout": {
+      "name": "_numberOfPinnedTabsForLayout",
+      "bridgedName": "_numberOfPinnedTabsForLayout",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_numberOfTabsForLayout": {
+      "name": "_numberOfTabsForLayout",
+      "bridgedName": "_numberOfTabsForLayout",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabButtonFrameForItem:": {
+      "name": "tabButtonFrameForItem:",
+      "bridgedName": "tabButtonFrameForItem",
+      "args": [
+        {
+          "name": "tabButtonFrameForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restackButtonViews": {
+      "name": "_restackButtonViews",
+      "bridgedName": "_restackButtonViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_frontmostButtonIndex": {
+      "name": "_frontmostButtonIndex",
+      "bridgedName": "_frontmostButtonIndex",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTabButton:": {
+      "name": "_removeTabButton:",
+      "bridgedName": "_removeTabButton",
+      "args": [
+        {
+          "name": "_removeTabButton",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updatePinnedTabs": {
+      "name": "_updatePinnedTabs",
+      "bridgedName": "_updatePinnedTabs",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_placeholderTabForEmptyUnpinnedRegionButtonFrame": {
+      "name": "_placeholderTabForEmptyUnpinnedRegionButtonFrame",
+      "bridgedName": "_placeholderTabForEmptyUnpinnedRegionButtonFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_installPlaceholderTabForEmptyUnpinnedRegion": {
+      "name": "_installPlaceholderTabForEmptyUnpinnedRegion",
+      "bridgedName": "_installPlaceholderTabForEmptyUnpinnedRegion",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_uninstallPlaceholderTabForEmptyUnpinnedRegion": {
+      "name": "_uninstallPlaceholderTabForEmptyUnpinnedRegion",
+      "bridgedName": "_uninstallPlaceholderTabForEmptyUnpinnedRegion",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldCreatePlaceholderTabForEmptyUnpinnedRegion": {
+      "name": "_shouldCreatePlaceholderTabForEmptyUnpinnedRegion",
+      "bridgedName": "_shouldCreatePlaceholderTabForEmptyUnpinnedRegion",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertTabButtonWithTabViewItem:atIndex:": {
+      "name": "_insertTabButtonWithTabViewItem:atIndex:",
+      "bridgedName": "_insertTabButtonWithTabViewItem_atIndex",
+      "args": [
+        {
+          "name": "_insertTabButtonWithTabViewItem",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertMissingButtonsFromTabView": {
+      "name": "_insertMissingButtonsFromTabView",
+      "bridgedName": "_insertMissingButtonsFromTabView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layOutButtonsAnimated:": {
+      "name": "_layOutButtonsAnimated:",
+      "bridgedName": "_layOutButtonsAnimated",
+      "args": [
+        {
+          "name": "_layOutButtonsAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateButtonLayout:": {
+      "name": "_animateButtonLayout:",
+      "bridgedName": "_animateButtonLayout",
+      "args": [
+        {
+          "name": "_animateButtonLayout",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titleCenterOffsetForButton:": {
+      "name": "_titleCenterOffsetForButton:",
+      "bridgedName": "_titleCenterOffsetForButton",
+      "args": [
+        {
+          "name": "_titleCenterOffsetForButton",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowCenterX": {
+      "name": "_windowCenterX",
+      "bridgedName": "_windowCenterX",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_moveButtonToExpectedContainerView:": {
+      "name": "_moveButtonToExpectedContainerView:",
+      "bridgedName": "_moveButtonToExpectedContainerView",
+      "args": [
+        {
+          "name": "_moveButtonToExpectedContainerView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layOutDraggedButtonAnimated:": {
+      "name": "_layOutDraggedButtonAnimated:",
+      "bridgedName": "_layOutDraggedButtonAnimated",
+      "args": [
+        {
+          "name": "_layOutDraggedButtonAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recalculateLayoutAndUpdateContainerViewFrames": {
+      "name": "_recalculateLayoutAndUpdateContainerViewFrames",
+      "bridgedName": "_recalculateLayoutAndUpdateContainerViewFrames",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_offsetFromLeftEdge": {
+      "name": "_offsetFromLeftEdge",
+      "bridgedName": "_offsetFromLeftEdge",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toggleBackdropLayerVisibilityIfNecessary": {
+      "name": "_toggleBackdropLayerVisibilityIfNecessary",
+      "bridgedName": "_toggleBackdropLayerVisibilityIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidMoveToWindow": {
+      "name": "viewDidMoveToWindow",
+      "bridgedName": "viewDidMoveToWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToWindow:": {
+      "name": "viewWillMoveToWindow:",
+      "bridgedName": "viewWillMoveToWindow",
+      "args": [
+        {
+          "name": "viewWillMoveToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsLayout:": {
+      "name": "setNeedsLayout:",
+      "bridgedName": "setNeedsLayout",
+      "args": [
+        {
+          "name": "setNeedsLayout",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutSublayersOfLayer:": {
+      "name": "_layoutSublayersOfLayer:",
+      "bridgedName": "_layoutSublayersOfLayer",
+      "args": [
+        {
+          "name": "_layoutSublayersOfLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reallyUpdateButtonsAndLayOutAnimated:isSelectingButton:": {
+      "name": "_reallyUpdateButtonsAndLayOutAnimated:isSelectingButton:",
+      "bridgedName": "_reallyUpdateButtonsAndLayOutAnimated_isSelectingButton",
+      "args": [
+        {
+          "name": "_reallyUpdateButtonsAndLayOutAnimated",
+          "type": "BOOL"
+        },
+        {
+          "name": "isSelectingButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateButtonsAndLayOutAnimated:isSelectingButton:": {
+      "name": "_updateButtonsAndLayOutAnimated:isSelectingButton:",
+      "bridgedName": "_updateButtonsAndLayOutAnimated_isSelectingButton",
+      "args": [
+        {
+          "name": "_updateButtonsAndLayOutAnimated",
+          "type": "BOOL"
+        },
+        {
+          "name": "isSelectingButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateButtonsAndLayOutAnimated:": {
+      "name": "_updateButtonsAndLayOutAnimated:",
+      "bridgedName": "_updateButtonsAndLayOutAnimated",
+      "args": [
+        {
+          "name": "_updateButtonsAndLayOutAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endAnimationGrouping": {
+      "name": "_endAnimationGrouping",
+      "bridgedName": "_endAnimationGrouping",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginAnimationGrouping": {
+      "name": "_beginAnimationGrouping",
+      "bridgedName": "_beginAnimationGrouping",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldLayOutButtonsNow": {
+      "name": "_shouldLayOutButtonsNow",
+      "bridgedName": "_shouldLayOutButtonsNow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clipViewBoundsChanged:": {
+      "name": "_clipViewBoundsChanged:",
+      "bridgedName": "_clipViewBoundsChanged",
+      "args": [
+        {
+          "name": "_clipViewBoundsChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOpaque": {
+      "name": "isOpaque",
+      "bridgedName": "isOpaque",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsVibrancy": {
+      "name": "allowsVibrancy",
+      "bridgedName": "allowsVibrancy",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isInFullscreenToolbarWindow": {
+      "name": "_isInFullscreenToolbarWindow",
+      "bridgedName": "_isInFullscreenToolbarWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endGroupUpdatesAnimated:": {
+      "name": "endGroupUpdatesAnimated:",
+      "bridgedName": "endGroupUpdatesAnimated",
+      "args": [
+        {
+          "name": "endGroupUpdatesAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginGroupUpdates": {
+      "name": "beginGroupUpdates",
+      "bridgedName": "beginGroupUpdates",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNextKeyView:": {
+      "name": "setNextKeyView:",
+      "bridgedName": "setNextKeyView",
+      "args": [
+        {
+          "name": "setNextKeyView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonTabBarViewInit": {
+      "name": "_commonTabBarViewInit",
+      "bridgedName": "_commonTabBarViewInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDoLayerPerformanceUpdates": {
+      "name": "_shouldDoLayerPerformanceUpdates",
+      "bridgedName": "_shouldDoLayerPerformanceUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "buttonThatSyncsWithPlaceholderTabInEmptyUnpinnedRegion": {
+      "name": "buttonThatSyncsWithPlaceholderTabInEmptyUnpinnedRegion",
+      "pointer": false,
+      "type": "__weak id <NSTabBarSyncedButton>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lastKeyView": {
+      "name": "lastKeyView",
+      "pointer": true,
+      "type": "__weak NSView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "firstKeyView": {
+      "name": "firstKeyView",
+      "pointer": true,
+      "type": "__weak NSView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "tabButtons": {
+      "name": "tabButtons",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "tabBarViewItems": {
+      "name": "tabBarViewItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEnabled"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

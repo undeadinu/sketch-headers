@@ -1,0 +1,657 @@
+{
+  "imports": [
+    "NSObject.h",
+    "MSAssetLibraryDelegate.h"
+  ],
+  "classes": [
+    "MSAssetLibraryUpdater",
+    "NSArray",
+    "NSHashTable",
+    "NSMutableArray",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSAssetLibraryController",
+  "extends": "NSObject",
+  "interfaces": [
+    "MSAssetLibraryDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadVersionZeroLibrariesWithDispatchGroup:": {
+      "name": "loadVersionZeroLibrariesWithDispatchGroup:",
+      "bridgedName": "loadVersionZeroLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "name": "loadVersionZeroLibrariesWithDispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadVersionZeroLibrariesFromUnarchiver:forKey:dispatchGroup:": {
+      "name": "loadVersionZeroLibrariesFromUnarchiver:forKey:dispatchGroup:",
+      "bridgedName": "loadVersionZeroLibrariesFromUnarchiver_forKey_dispatchGroup",
+      "args": [
+        {
+          "name": "loadVersionZeroLibrariesFromUnarchiver",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        },
+        {
+          "name": "dispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldAttemptToLoadVersionZeroLibraries": {
+      "name": "shouldAttemptToLoadVersionZeroLibraries",
+      "bridgedName": "shouldAttemptToLoadVersionZeroLibraries",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createAssetLibraryFolder": {
+      "name": "createAssetLibraryFolder",
+      "bridgedName": "createAssetLibraryFolder",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "librariesWithUpdates": {
+      "name": "librariesWithUpdates",
+      "bridgedName": "librariesWithUpdates",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRemoteLibraryFromAppcastURL:withCompletionHandler:": {
+      "name": "addRemoteLibraryFromAppcastURL:withCompletionHandler:",
+      "bridgedName": "addRemoteLibraryFromAppcastURL_withCompletionHandler",
+      "args": [
+        {
+          "name": "addRemoteLibraryFromAppcastURL",
+          "type": "id"
+        },
+        {
+          "name": "withCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeDuplicateRemoteLibraryError": {
+      "name": "makeDuplicateRemoteLibraryError",
+      "bridgedName": "makeDuplicateRemoteLibraryError",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remoteLibraryWithAppcast:": {
+      "name": "remoteLibraryWithAppcast:",
+      "bridgedName": "remoteLibraryWithAppcast",
+      "args": [
+        {
+          "name": "remoteLibraryWithAppcast",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateAndLoadAssetLibrary:completionHandler:": {
+      "name": "updateAndLoadAssetLibrary:completionHandler:",
+      "bridgedName": "updateAndLoadAssetLibrary_completionHandler",
+      "args": [
+        {
+          "name": "updateAndLoadAssetLibrary",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startDownloadingAssetLibrary:progressHandler:downloadCompletionHandler:completionHandler:": {
+      "name": "startDownloadingAssetLibrary:progressHandler:downloadCompletionHandler:completionHandler:",
+      "bridgedName": "startDownloadingAssetLibrary_progressHandler_downloadCompletionHandler_completionHandler",
+      "args": [
+        {
+          "name": "startDownloadingAssetLibrary",
+          "type": "id"
+        },
+        {
+          "name": "progressHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "downloadCompletionHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadAssetLibraryAppcastsWithHandler:completionHandler:": {
+      "name": "downloadAssetLibraryAppcastsWithHandler:completionHandler:",
+      "bridgedName": "downloadAssetLibraryAppcastsWithHandler_completionHandler",
+      "args": [
+        {
+          "name": "downloadAssetLibraryAppcastsWithHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewFromDocumentReader:": {
+      "name": "previewFromDocumentReader:",
+      "bridgedName": "previewFromDocumentReader",
+      "args": [
+        {
+          "name": "previewFromDocumentReader",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generatePreviewImageForLibrary:completionHandler:": {
+      "name": "generatePreviewImageForLibrary:completionHandler:",
+      "bridgedName": "generatePreviewImageForLibrary_completionHandler",
+      "args": [
+        {
+          "name": "generatePreviewImageForLibrary",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "libraryForShareableObject:": {
+      "name": "libraryForShareableObject:",
+      "bridgedName": "libraryForShareableObject",
+      "args": [
+        {
+          "name": "libraryForShareableObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateForeignObjects:inDocument:includeDisabled:block:": {
+      "name": "enumerateForeignObjects:inDocument:includeDisabled:block:",
+      "bridgedName": "enumerateForeignObjects_inDocument_includeDisabled_block",
+      "args": [
+        {
+          "name": "enumerateForeignObjects",
+          "type": "id"
+        },
+        {
+          "name": "inDocument",
+          "type": "id"
+        },
+        {
+          "name": "includeDisabled",
+          "type": "BOOL"
+        },
+        {
+          "name": "block",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncForeignObject:withMaster:fromLibrary:": {
+      "name": "syncForeignObject:withMaster:fromLibrary:",
+      "bridgedName": "syncForeignObject_withMaster_fromLibrary",
+      "args": [
+        {
+          "name": "syncForeignObject",
+          "type": "id"
+        },
+        {
+          "name": "withMaster",
+          "type": "id"
+        },
+        {
+          "name": "fromLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "importShareableObjectReference:intoDocument:": {
+      "name": "importShareableObjectReference:intoDocument:",
+      "bridgedName": "importShareableObjectReference_intoDocument",
+      "args": [
+        {
+          "name": "importShareableObjectReference",
+          "type": "id"
+        },
+        {
+          "name": "intoDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncNestedSymbolsOf:withMaster:fromLibrary:": {
+      "name": "syncNestedSymbolsOf:withMaster:fromLibrary:",
+      "bridgedName": "syncNestedSymbolsOf_withMaster_fromLibrary",
+      "args": [
+        {
+          "name": "syncNestedSymbolsOf",
+          "type": "id"
+        },
+        {
+          "name": "withMaster",
+          "type": "id"
+        },
+        {
+          "name": "fromLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "symbolIDsMappingFrom:toLibrary:": {
+      "name": "symbolIDsMappingFrom:toLibrary:",
+      "bridgedName": "symbolIDsMappingFrom_toLibrary",
+      "args": [
+        {
+          "name": "symbolIDsMappingFrom",
+          "type": "id"
+        },
+        {
+          "name": "toLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldLoadPreviouslySavedLibraries": {
+      "name": "shouldLoadPreviouslySavedLibraries",
+      "bridgedName": "shouldLoadPreviouslySavedLibraries",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadInternalLibraryRepresentationWithCompletionHandler:": {
+      "name": "loadInternalLibraryRepresentationWithCompletionHandler:",
+      "bridgedName": "loadInternalLibraryRepresentationWithCompletionHandler",
+      "args": [
+        {
+          "name": "loadInternalLibraryRepresentationWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadLibrariesWithDispatchGroup:": {
+      "name": "loadLibrariesWithDispatchGroup:",
+      "bridgedName": "loadLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "name": "loadLibrariesWithDispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupInitialRemoteLibrariesWithDispatchGroup:": {
+      "name": "setupInitialRemoteLibrariesWithDispatchGroup:",
+      "bridgedName": "setupInitialRemoteLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "name": "setupInitialRemoteLibrariesWithDispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupInternalLibrariesWithDispatchGroup:": {
+      "name": "setupInternalLibrariesWithDispatchGroup:",
+      "bridgedName": "setupInternalLibrariesWithDispatchGroup",
+      "args": [
+        {
+          "name": "setupInternalLibrariesWithDispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initialInternalLibraries": {
+      "name": "initialInternalLibraries",
+      "bridgedName": "initialInternalLibraries",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initialRemoteLibraryDefinitions": {
+      "name": "initialRemoteLibraryDefinitions",
+      "bridgedName": "initialRemoteLibraryDefinitions",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadLibrariesForKey:dispatchGroup:": {
+      "name": "loadLibrariesForKey:dispatchGroup:",
+      "bridgedName": "loadLibrariesForKey_dispatchGroup",
+      "args": [
+        {
+          "name": "loadLibrariesForKey",
+          "type": "id"
+        },
+        {
+          "name": "dispatchGroup",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "assetLibraryEnableStateChanged:": {
+      "name": "assetLibraryEnableStateChanged:",
+      "bridgedName": "assetLibraryEnableStateChanged",
+      "args": [
+        {
+          "name": "assetLibraryEnableStateChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "assetLibraryChangedOnDisk:": {
+      "name": "assetLibraryChangedOnDisk:",
+      "bridgedName": "assetLibraryChangedOnDisk",
+      "args": [
+        {
+          "name": "assetLibraryChangedOnDisk",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadLibrary:": {
+      "name": "reloadLibrary:",
+      "bridgedName": "reloadLibrary",
+      "args": [
+        {
+          "name": "reloadLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "notifyLibraryChange:": {
+      "name": "notifyLibraryChange:",
+      "bridgedName": "notifyLibraryChange",
+      "args": [
+        {
+          "name": "notifyLibraryChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeRemoteAssetLibrary:": {
+      "name": "removeRemoteAssetLibrary:",
+      "bridgedName": "removeRemoteAssetLibrary",
+      "args": [
+        {
+          "name": "removeRemoteAssetLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeUserAssetLibrary:": {
+      "name": "removeUserAssetLibrary:",
+      "bridgedName": "removeUserAssetLibrary",
+      "args": [
+        {
+          "name": "removeUserAssetLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveLibraries": {
+      "name": "saveLibraries",
+      "bridgedName": "saveLibraries",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "saveLibraries:withLibrariesKey:": {
+      "name": "saveLibraries:withLibrariesKey:",
+      "bridgedName": "saveLibraries_withLibrariesKey",
+      "args": [
+        {
+          "name": "saveLibraries",
+          "type": "id"
+        },
+        {
+          "name": "withLibrariesKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAssetLibrary:": {
+      "name": "removeAssetLibrary:",
+      "bridgedName": "removeAssetLibrary",
+      "args": [
+        {
+          "name": "removeAssetLibrary",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addAssetLibraryAtURL:": {
+      "name": "addAssetLibraryAtURL:",
+      "bridgedName": "addAssetLibraryAtURL",
+      "args": [
+        {
+          "name": "addAssetLibraryAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "assetLibraryUpdater": {
+      "name": "assetLibraryUpdater",
+      "pointer": true,
+      "type": "MSAssetLibraryUpdater",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "delegates": {
+      "name": "delegates",
+      "pointer": true,
+      "type": "NSHashTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "remoteLibraries": {
+      "name": "remoteLibraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "userLibraries": {
+      "name": "userLibraries",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "internalLibraries": {
+      "name": "internalLibraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "libraries": {
+      "name": "libraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "availableLibraries": {
+      "name": "availableLibraries",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

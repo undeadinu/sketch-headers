@@ -1,0 +1,331 @@
+{
+  "imports": [
+    "NSTextView.h"
+  ],
+  "classes": [
+    "MSHangingGlyphView",
+    "NSDictionary",
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "MSTextLayerTextView",
+  "extends": "NSTextView",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rectForSelectedRange": {
+      "name": "rectForSelectedRange",
+      "bridgedName": "rectForSelectedRange",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplayInRect:avoidAdditionalLayout:": {
+      "name": "setNeedsDisplayInRect:avoidAdditionalLayout:",
+      "bridgedName": "setNeedsDisplayInRect_avoidAdditionalLayout",
+      "args": [
+        {
+          "name": "setNeedsDisplayInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "avoidAdditionalLayout",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectSimilar:": {
+      "name": "selectSimilar:",
+      "bridgedName": "selectSimilar",
+      "args": [
+        {
+          "name": "selectSimilar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideSelectionTimerFired:": {
+      "name": "hideSelectionTimerFired:",
+      "bridgedName": "hideSelectionTimerFired",
+      "args": [
+        {
+          "name": "hideSelectionTimerFired",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeHideSelectionTimer": {
+      "name": "makeHideSelectionTimer",
+      "bridgedName": "makeHideSelectionTimer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeSelectionToPasteboard:type:": {
+      "name": "writeSelectionToPasteboard:type:",
+      "bridgedName": "writeSelectionToPasteboard_type",
+      "args": [
+        {
+          "name": "writeSelectionToPasteboard",
+          "type": "id"
+        },
+        {
+          "name": "type",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writablePasteboardTypes": {
+      "name": "writablePasteboardTypes",
+      "bridgedName": "writablePasteboardTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteWithOptions:": {
+      "name": "pasteWithOptions:",
+      "bridgedName": "pasteWithOptions",
+      "args": [
+        {
+          "name": "pasteWithOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteWithStyle:": {
+      "name": "pasteWithStyle:",
+      "bridgedName": "pasteWithStyle",
+      "args": [
+        {
+          "name": "pasteWithStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paste:": {
+      "name": "paste:",
+      "bridgedName": "paste",
+      "args": [
+        {
+          "name": "paste",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readablePasteboardTypes": {
+      "name": "readablePasteboardTypes",
+      "bridgedName": "readablePasteboardTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readSelectionFromPasteboard:": {
+      "name": "readSelectionFromPasteboard:",
+      "bridgedName": "readSelectionFromPasteboard",
+      "args": [
+        {
+          "name": "readSelectionFromPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideSelectionTemporarily": {
+      "name": "hideSelectionTemporarily",
+      "bridgedName": "hideSelectionTemporarily",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestFromEvent:": {
+      "name": "hitTestFromEvent:",
+      "bridgedName": "hitTestFromEvent",
+      "args": [
+        {
+          "name": "hitTestFromEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector:": {
+      "name": "doCommandBySelector:",
+      "bridgedName": "doCommandBySelector",
+      "args": [
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldIgnoreAlreadyApplicableColor:": {
+      "name": "shouldIgnoreAlreadyApplicableColor:",
+      "bridgedName": "shouldIgnoreAlreadyApplicableColor",
+      "args": [
+        {
+          "name": "shouldIgnoreAlreadyApplicableColor",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeColor:": {
+      "name": "changeColor:",
+      "bridgedName": "changeColor",
+      "args": [
+        {
+          "name": "changeColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canvasColorSpace": {
+      "name": "canvasColorSpace",
+      "bridgedName": "canvasColorSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "documentColorSpace": {
+      "name": "documentColorSpace",
+      "bridgedName": "documentColorSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToSuperview:": {
+      "name": "viewWillMoveToSuperview:",
+      "bridgedName": "viewWillMoveToSuperview",
+      "args": [
+        {
+          "name": "viewWillMoveToSuperview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:textContainer:": {
+      "name": "initWithFrame:textContainer:",
+      "bridgedName": "initWithFrame_textContainer",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "textContainer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "selectedTextAttributesBackup": {
+      "name": "selectedTextAttributesBackup",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "hideSelectionTimer": {
+      "name": "hideSelectionTimer",
+      "pointer": true,
+      "type": "NSTimer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "textLayerTextViewDelegate": {
+      "name": "textLayerTextViewDelegate",
+      "pointer": false,
+      "type": "__weak id <MSTextLayerTextViewDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "hangingGlyphView": {
+      "name": "hangingGlyphView",
+      "pointer": true,
+      "type": "__weak MSHangingGlyphView",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,398 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSBundle",
+    "NSMapTable",
+    "NSWindow"
+  ],
+  "protocol": false,
+  "className": "NSHelpManager",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "isContextHelpModeActive": {
+      "name": "isContextHelpModeActive",
+      "bridgedName": "isContextHelpModeActive",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setContextHelpModeActive:": {
+      "name": "setContextHelpModeActive:",
+      "bridgedName": "setContextHelpModeActive",
+      "args": [
+        {
+          "name": "setContextHelpModeActive",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedHelpManager": {
+      "name": "sharedHelpManager",
+      "bridgedName": "sharedHelpManager",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_activateHelpModeBasedOnEvent:": {
+      "name": "_activateHelpModeBasedOnEvent:",
+      "bridgedName": "_activateHelpModeBasedOnEvent",
+      "args": [
+        {
+          "name": "_activateHelpModeBasedOnEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_keyboardIsOldNeXT": {
+      "name": "_keyboardIsOldNeXT",
+      "bridgedName": "_keyboardIsOldNeXT",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setCtrlAltForHelpDesired:": {
+      "name": "_setCtrlAltForHelpDesired:",
+      "bridgedName": "_setCtrlAltForHelpDesired",
+      "args": [
+        {
+          "name": "_setCtrlAltForHelpDesired",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isCtrlAltForHelpDesired": {
+      "name": "_isCtrlAltForHelpDesired",
+      "bridgedName": "_isCtrlAltForHelpDesired",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "registerBooksInBundle:": {
+      "name": "registerBooksInBundle:",
+      "bridgedName": "registerBooksInBundle",
+      "args": [
+        {
+          "name": "registerBooksInBundle",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "findString:inBook:": {
+      "name": "findString:inBook:",
+      "bridgedName": "findString_inBook",
+      "args": [
+        {
+          "name": "findString",
+          "type": "id"
+        },
+        {
+          "name": "inBook",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "openHelpAnchor:inBook:": {
+      "name": "openHelpAnchor:inBook:",
+      "bridgedName": "openHelpAnchor_inBook",
+      "args": [
+        {
+          "name": "openHelpAnchor",
+          "type": "id"
+        },
+        {
+          "name": "inBook",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showContextHelpForObject:locationHint:": {
+      "name": "showContextHelpForObject:locationHint:",
+      "bridgedName": "showContextHelpForObject_locationHint",
+      "args": [
+        {
+          "name": "showContextHelpForObject",
+          "type": "id"
+        },
+        {
+          "name": "locationHint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contextHelpForObject:": {
+      "name": "contextHelpForObject:",
+      "bridgedName": "contextHelpForObject",
+      "args": [
+        {
+          "name": "contextHelpForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeContextHelpForObject:": {
+      "name": "removeContextHelpForObject:",
+      "bridgedName": "removeContextHelpForObject",
+      "args": [
+        {
+          "name": "removeContextHelpForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContextHelp:forObject:": {
+      "name": "setContextHelp:forObject:",
+      "bridgedName": "setContextHelp_forObject",
+      "args": [
+        {
+          "name": "setContextHelp",
+          "type": "id"
+        },
+        {
+          "name": "forObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerHelpBook": {
+      "name": "registerHelpBook",
+      "bridgedName": "registerHelpBook",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showHelpFile:context:": {
+      "name": "showHelpFile:context:",
+      "bridgedName": "showHelpFile_context",
+      "args": [
+        {
+          "name": "showHelpFile",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cleanupHelpForQuit": {
+      "name": "_cleanupHelpForQuit",
+      "bridgedName": "_cleanupHelpForQuit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareHelpWindow:locationHint:": {
+      "name": "_prepareHelpWindow:locationHint:",
+      "bridgedName": "_prepareHelpWindow_locationHint",
+      "args": [
+        {
+          "name": "_prepareHelpWindow",
+          "type": "id"
+        },
+        {
+          "name": "locationHint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_placeHelpWindowNear:": {
+      "name": "_placeHelpWindowNear:",
+      "bridgedName": "_placeHelpWindowNear",
+      "args": [
+        {
+          "name": "_placeHelpWindowNear",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_screenRectContainingPoint:": {
+      "name": "_screenRectContainingPoint:",
+      "bridgedName": "_screenRectContainingPoint",
+      "args": [
+        {
+          "name": "_screenRectContainingPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBundleForHelpSearch:": {
+      "name": "_setBundleForHelpSearch:",
+      "bridgedName": "_setBundleForHelpSearch",
+      "args": [
+        {
+          "name": "_setBundleForHelpSearch",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resolveHelpKeyForObject:": {
+      "name": "_resolveHelpKeyForObject:",
+      "bridgedName": "_resolveHelpKeyForObject",
+      "args": [
+        {
+          "name": "_resolveHelpKeyForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_helpKeyForObject:": {
+      "name": "_helpKeyForObject:",
+      "bridgedName": "_helpKeyForObject",
+      "args": [
+        {
+          "name": "_helpKeyForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_helpBundleForObject:": {
+      "name": "_helpBundleForObject:",
+      "bridgedName": "_helpBundleForObject",
+      "args": [
+        {
+          "name": "_helpBundleForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeHelpKeyForObject:": {
+      "name": "_removeHelpKeyForObject:",
+      "bridgedName": "_removeHelpKeyForObject",
+      "args": [
+        {
+          "name": "_removeHelpKeyForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setHelpKey:forObject:": {
+      "name": "_setHelpKey:forObject:",
+      "bridgedName": "_setHelpKey_forObject",
+      "args": [
+        {
+          "name": "_setHelpKey",
+          "type": "id"
+        },
+        {
+          "name": "forObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_helpWindow": {
+      "name": "_helpWindow",
+      "bridgedName": "_helpWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orderOutHelpWindowAfterEventMask:": {
+      "name": "_orderOutHelpWindowAfterEventMask:",
+      "bridgedName": "_orderOutHelpWindowAfterEventMask",
+      "args": [
+        {
+          "name": "_orderOutHelpWindowAfterEventMask",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orderOutHelpWindow": {
+      "name": "_orderOutHelpWindow",
+      "bridgedName": "_orderOutHelpWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orderFrontHelpWindow": {
+      "name": "_orderFrontHelpWindow",
+      "bridgedName": "_orderFrontHelpWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

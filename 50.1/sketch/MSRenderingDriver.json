@@ -1,0 +1,136 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSRenderingDriverSettings",
+    "NSMapTable"
+  ],
+  "protocol": false,
+  "className": "MSRenderingDriver",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contextWithName:forCGContext:renderingRequest:": {
+      "name": "contextWithName:forCGContext:renderingRequest:",
+      "bridgedName": "contextWithName_forCGContext_renderingRequest",
+      "args": [
+        {
+          "name": "contextWithName",
+          "type": "id"
+        },
+        {
+          "name": "forCGContext",
+          "type": "struct CGContext *"
+        },
+        {
+          "name": "renderingRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rendererForObject:protocol:": {
+      "name": "rendererForObject:protocol:",
+      "bridgedName": "rendererForObject_protocol",
+      "args": [
+        {
+          "name": "rendererForObject",
+          "type": "id"
+        },
+        {
+          "name": "protocol",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRenderersForSubclasses:": {
+      "name": "addRenderersForSubclasses:",
+      "bridgedName": "addRenderersForSubclasses",
+      "args": [
+        {
+          "name": "addRenderersForSubclasses",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupRendererMap": {
+      "name": "setupRendererMap",
+      "bridgedName": "setupRendererMap",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSettings:": {
+      "name": "initWithSettings:",
+      "bridgedName": "initWithSettings",
+      "args": [
+        {
+          "name": "initWithSettings",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createColorFromDefaultNamed:": {
+      "name": "createColorFromDefaultNamed:",
+      "bridgedName": "createColorFromDefaultNamed",
+      "args": [
+        {
+          "name": "createColorFromDefaultNamed",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGColor *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "renderers": {
+      "name": "renderers",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "settings": {
+      "name": "settings",
+      "pointer": true,
+      "type": "MSRenderingDriverSettings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

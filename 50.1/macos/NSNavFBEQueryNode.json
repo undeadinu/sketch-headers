@@ -1,0 +1,638 @@
+{
+  "imports": [],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSNavNode",
+    "NSSet",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSNavFBEQueryNode",
+  "extends": "NSNavFBENode",
+  "interfaces": [],
+  "methods": {
+    "isVisible": {
+      "name": "isVisible",
+      "bridgedName": "isVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isQuery": {
+      "name": "isQuery",
+      "bridgedName": "isQuery",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isContainer": {
+      "name": "isContainer",
+      "bridgedName": "isContainer",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelQuery": {
+      "name": "cancelQuery",
+      "bridgedName": "cancelQuery",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasBeenStarted": {
+      "name": "hasBeenStarted",
+      "bridgedName": "hasBeenStarted",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "name": {
+      "name": "name",
+      "bridgedName": "name",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayName": {
+      "name": "displayName",
+      "bridgedName": "displayName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyIcon": {
+      "name": "copyIcon",
+      "bridgedName": "copyIcon",
+      "args": [],
+      "returns": "struct OpaqueIconRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sortDescriptors": {
+      "name": "sortDescriptors",
+      "bridgedName": "sortDescriptors",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resortWithSortDescriptors:": {
+      "name": "resortWithSortDescriptors:",
+      "bridgedName": "resortWithSortDescriptors",
+      "args": [
+        {
+          "name": "resortWithSortDescriptors",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "queryHitResultsFilterUTIs": {
+      "name": "queryHitResultsFilterUTIs",
+      "bridgedName": "queryHitResultsFilterUTIs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setQueryHitResultsFilterUTIs:": {
+      "name": "setQueryHitResultsFilterUTIs:",
+      "bridgedName": "setQueryHitResultsFilterUTIs",
+      "args": [
+        {
+          "name": "setQueryHitResultsFilterUTIs",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sortsChildrenEfficiently": {
+      "name": "sortsChildrenEfficiently",
+      "bridgedName": "sortsChildrenEfficiently",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setShouldSearchFilenamesOnly:": {
+      "name": "setShouldSearchFilenamesOnly:",
+      "bridgedName": "setShouldSearchFilenamesOnly",
+      "args": [
+        {
+          "name": "setShouldSearchFilenamesOnly",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldSearchFilenamesOnly": {
+      "name": "shouldSearchFilenamesOnly",
+      "bridgedName": "shouldSearchFilenamesOnly",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchScope": {
+      "name": "searchScope",
+      "bridgedName": "searchScope",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setScopeLocations:": {
+      "name": "setScopeLocations:",
+      "bridgedName": "setScopeLocations",
+      "args": [
+        {
+          "name": "setScopeLocations",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scopeLocations": {
+      "name": "scopeLocations",
+      "bridgedName": "scopeLocations",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "anyAttributeString": {
+      "name": "anyAttributeString",
+      "bridgedName": "anyAttributeString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "savedCriteriaSlices": {
+      "name": "savedCriteriaSlices",
+      "bridgedName": "savedCriteriaSlices",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "savedSearchDictionaryWithCriteriaSlices:anyAttribute:viewOptions:": {
+      "name": "savedSearchDictionaryWithCriteriaSlices:anyAttribute:viewOptions:",
+      "bridgedName": "savedSearchDictionaryWithCriteriaSlices_anyAttribute_viewOptions",
+      "args": [
+        {
+          "name": "savedSearchDictionaryWithCriteriaSlices",
+          "type": "id"
+        },
+        {
+          "name": "anyAttribute",
+          "type": "id"
+        },
+        {
+          "name": "viewOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchCriteriaWithSlices:anyAttribute:": {
+      "name": "_searchCriteriaWithSlices:anyAttribute:",
+      "bridgedName": "_searchCriteriaWithSlices_anyAttribute",
+      "args": [
+        {
+          "name": "_searchCriteriaWithSlices",
+          "type": "id"
+        },
+        {
+          "name": "anyAttribute",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "advancedQueryString": {
+      "name": "advancedQueryString",
+      "bridgedName": "advancedQueryString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "simpleQueryString": {
+      "name": "simpleQueryString",
+      "bridgedName": "simpleQueryString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSimpleQueryString:withAdvancedQueryString:": {
+      "name": "setSimpleQueryString:withAdvancedQueryString:",
+      "bridgedName": "setSimpleQueryString_withAdvancedQueryString",
+      "args": [
+        {
+          "name": "setSimpleQueryString",
+          "type": "id"
+        },
+        {
+          "name": "withAdvancedQueryString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setQueryTitle:": {
+      "name": "setQueryTitle:",
+      "bridgedName": "setQueryTitle",
+      "args": [
+        {
+          "name": "setQueryTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateFormattedQueryString": {
+      "name": "_updateFormattedQueryString",
+      "bridgedName": "_updateFormattedQueryString",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "noteQueryAttributesChanged": {
+      "name": "noteQueryAttributesChanged",
+      "bridgedName": "noteQueryAttributesChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getNodeAsContainerNodeForBrowsing:": {
+      "name": "getNodeAsContainerNodeForBrowsing:",
+      "bridgedName": "getNodeAsContainerNodeForBrowsing",
+      "args": [
+        {
+          "name": "getNodeAsContainerNodeForBrowsing",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "children": {
+      "name": "children",
+      "bridgedName": "children",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_childNodeWithFBENode:": {
+      "name": "_childNodeWithFBENode:",
+      "bridgedName": "_childNodeWithFBENode",
+      "args": [
+        {
+          "name": "_childNodeWithFBENode",
+          "type": "struct OpaqueNodeRef *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createAndStartQueryIfRequired": {
+      "name": "_createAndStartQueryIfRequired",
+      "bridgedName": "_createAndStartQueryIfRequired",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetQueryForChangedAttributes:andSendChildrenChanged:": {
+      "name": "_resetQueryForChangedAttributes:andSendChildrenChanged:",
+      "bridgedName": "_resetQueryForChangedAttributes_andSendChildrenChanged",
+      "args": [
+        {
+          "name": "_resetQueryForChangedAttributes",
+          "type": "BOOL"
+        },
+        {
+          "name": "andSendChildrenChanged",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateQueryNode:": {
+      "name": "_updateQueryNode:",
+      "bridgedName": "_updateQueryNode",
+      "args": [
+        {
+          "name": "_updateQueryNode",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSavedQueryData:": {
+      "name": "setSavedQueryData:",
+      "bridgedName": "setSavedQueryData",
+      "args": [
+        {
+          "name": "setSavedQueryData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "savedQueryData": {
+      "name": "savedQueryData",
+      "bridgedName": "savedQueryData",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lazyLoadQueryDictionariesFromSavedQuery": {
+      "name": "_lazyLoadQueryDictionariesFromSavedQuery",
+      "bridgedName": "_lazyLoadQueryDictionariesFromSavedQuery",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadFromQueryData": {
+      "name": "_loadFromQueryData",
+      "bridgedName": "_loadFromQueryData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_criteriaDictionary": {
+      "name": "_criteriaDictionary",
+      "bridgedName": "_criteriaDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_childrenParentNodeRef": {
+      "name": "_childrenParentNodeRef",
+      "bridgedName": "_childrenParentNodeRef",
+      "args": [],
+      "returns": "struct OpaqueNodeRef *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setChildrenParentNodeRef:withNotifications:": {
+      "name": "_setChildrenParentNodeRef:withNotifications:",
+      "bridgedName": "_setChildrenParentNodeRef_withNotifications",
+      "args": [
+        {
+          "name": "_setChildrenParentNodeRef",
+          "type": "struct OpaqueNodeRef *"
+        },
+        {
+          "name": "withNotifications",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsRootNode": {
+      "name": "acceptsRootNode",
+      "bridgedName": "acceptsRootNode",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSavedQueryData": {
+      "name": "resetSavedQueryData",
+      "bridgedName": "resetSavedQueryData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setModified:": {
+      "name": "setModified:",
+      "bridgedName": "setModified",
+      "args": [
+        {
+          "name": "setModified",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isModified": {
+      "name": "isModified",
+      "bridgedName": "isModified",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEditable": {
+      "name": "isEditable",
+      "bridgedName": "isEditable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCurrentDirectoryNode:": {
+      "name": "setCurrentDirectoryNode:",
+      "bridgedName": "setCurrentDirectoryNode",
+      "args": [
+        {
+          "name": "setCurrentDirectoryNode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDirectoryNode": {
+      "name": "currentDirectoryNode",
+      "bridgedName": "currentDirectoryNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isSavedQuery": {
+      "name": "isSavedQuery",
+      "bridgedName": "isSavedQuery",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titleForSimpleQueryString:": {
+      "name": "_titleForSimpleQueryString:",
+      "bridgedName": "_titleForSimpleQueryString",
+      "args": [
+        {
+          "name": "_titleForSimpleQueryString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonQueryNodeDealloc": {
+      "name": "_commonQueryNodeDealloc",
+      "bridgedName": "_commonQueryNodeDealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_releaseQueryNodeRef": {
+      "name": "_releaseQueryNodeRef",
+      "bridgedName": "_releaseQueryNodeRef",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSimpleQueryString:searchScopes:sortDescriptors:": {
+      "name": "initWithSimpleQueryString:searchScopes:sortDescriptors:",
+      "bridgedName": "initWithSimpleQueryString_searchScopes_sortDescriptors",
+      "args": [
+        {
+          "name": "initWithSimpleQueryString",
+          "type": "id"
+        },
+        {
+          "name": "searchScopes",
+          "type": "id"
+        },
+        {
+          "name": "sortDescriptors",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithQueryString:searchScopes:title:sortDescriptors:": {
+      "name": "initWithQueryString:searchScopes:title:sortDescriptors:",
+      "bridgedName": "initWithQueryString_searchScopes_title_sortDescriptors",
+      "args": [
+        {
+          "name": "initWithQueryString",
+          "type": "id"
+        },
+        {
+          "name": "searchScopes",
+          "type": "id"
+        },
+        {
+          "name": "title",
+          "type": "id"
+        },
+        {
+          "name": "sortDescriptors",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithSavedQueryData:title:sortDescriptors:": {
+      "name": "initWithSavedQueryData:title:sortDescriptors:",
+      "bridgedName": "initWithSavedQueryData_title_sortDescriptors",
+      "args": [
+        {
+          "name": "initWithSavedQueryData",
+          "type": "id"
+        },
+        {
+          "name": "title",
+          "type": "id"
+        },
+        {
+          "name": "sortDescriptors",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithFBENode:": {
+      "name": "_initWithFBENode:",
+      "bridgedName": "_initWithFBENode",
+      "args": [
+        {
+          "name": "_initWithFBENode",
+          "type": "struct OpaqueNodeRef *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

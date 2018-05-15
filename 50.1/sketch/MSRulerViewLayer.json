@@ -1,0 +1,282 @@
+{
+  "imports": [
+    "CALayer.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSColor",
+    "NSNumberFormatter",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSRulerViewLayer",
+  "extends": "CALayer",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerHeight": {
+      "name": "rulerHeight",
+      "bridgedName": "rulerHeight",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rulerLength": {
+      "name": "rulerLength",
+      "bridgedName": "rulerLength",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawAlignmentGuidesWithColor:": {
+      "name": "drawAlignmentGuidesWithColor:",
+      "bridgedName": "drawAlignmentGuidesWithColor",
+      "args": [
+        {
+          "name": "drawAlignmentGuidesWithColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawOccupiedRegion": {
+      "name": "drawOccupiedRegion",
+      "bridgedName": "drawOccupiedRegion",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawBackgroundForLabel:atPoint:": {
+      "name": "drawBackgroundForLabel:atPoint:",
+      "bridgedName": "drawBackgroundForLabel_atPoint",
+      "args": [
+        {
+          "name": "drawBackgroundForLabel",
+          "type": "id"
+        },
+        {
+          "name": "atPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawMetric:atPoint:drawBackground:": {
+      "name": "drawMetric:atPoint:drawBackground:",
+      "bridgedName": "drawMetric_atPoint_drawBackground",
+      "args": [
+        {
+          "name": "drawMetric",
+          "type": "id"
+        },
+        {
+          "name": "atPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "drawBackground",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawMetric:atPoint:": {
+      "name": "drawMetric:atPoint:",
+      "bridgedName": "drawMetric_atPoint",
+      "args": [
+        {
+          "name": "drawMetric",
+          "type": "id"
+        },
+        {
+          "name": "atPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawLineAtPosition:withOptions:color:": {
+      "name": "drawLineAtPosition:withOptions:color:",
+      "bridgedName": "drawLineAtPosition_withOptions_color",
+      "args": [
+        {
+          "name": "drawLineAtPosition",
+          "type": "double"
+        },
+        {
+          "name": "withOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "color",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawMetricsWithOptions:color:": {
+      "name": "drawMetricsWithOptions:color:",
+      "bridgedName": "drawMetricsWithOptions_color",
+      "args": [
+        {
+          "name": "drawMetricsWithOptions",
+          "type": "long long"
+        },
+        {
+          "name": "color",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawMetricsWithColor:": {
+      "name": "drawMetricsWithColor:",
+      "bridgedName": "drawMetricsWithColor",
+      "args": [
+        {
+          "name": "drawMetricsWithColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawBackground": {
+      "name": "drawBackground",
+      "bridgedName": "drawBackground",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInContext:": {
+      "name": "drawInContext:",
+      "bridgedName": "drawInContext",
+      "args": [
+        {
+          "name": "drawInContext",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "parentView": {
+      "name": "parentView",
+      "pointer": true,
+      "type": "__weak NSView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldDrawGuides": {
+      "name": "shouldDrawGuides",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "guides": {
+      "name": "guides",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "occupiedRegion": {
+      "name": "occupiedRegion",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "baseLine": {
+      "name": "baseLine",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "zoomValue": {
+      "name": "zoomValue",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "snapColor": {
+      "name": "snapColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "formatter": {
+      "name": "formatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "axis": {
+      "name": "axis",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

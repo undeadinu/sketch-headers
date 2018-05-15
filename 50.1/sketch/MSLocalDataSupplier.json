@@ -1,0 +1,234 @@
+{
+  "imports": [
+    "MSDataSupplier.h"
+  ],
+  "classes": [
+    "MSFolderMonitor",
+    "NSArray",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "MSLocalDataSupplier",
+  "extends": "MSDataSupplier",
+  "interfaces": [],
+  "methods": {
+    "validImageFileUTIs": {
+      "name": "validImageFileUTIs",
+      "bridgedName": "validImageFileUTIs",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "imageFileNamesFromFolderURL:": {
+      "name": "imageFileNamesFromFolderURL:",
+      "bridgedName": "imageFileNamesFromFolderURL",
+      "args": [
+        {
+          "name": "imageFileNamesFromFolderURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "textDataFromFileURL:": {
+      "name": "textDataFromFileURL:",
+      "bridgedName": "textDataFromFileURL",
+      "args": [
+        {
+          "name": "textDataFromFileURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "respondToContentChanged": {
+      "name": "respondToContentChanged",
+      "bridgedName": "respondToContentChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "arrayWithCount:fromArray:": {
+      "name": "arrayWithCount:fromArray:",
+      "bridgedName": "arrayWithCount_fromArray",
+      "args": [
+        {
+          "name": "arrayWithCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromArray",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTextDataFileSystemMonitor": {
+      "name": "makeTextDataFileSystemMonitor",
+      "bridgedName": "makeTextDataFileSystemMonitor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeImageDataFileSystemMonitor": {
+      "name": "makeImageDataFileSystemMonitor",
+      "bridgedName": "makeImageDataFileSystemMonitor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeFolderMonitor": {
+      "name": "makeFolderMonitor",
+      "bridgedName": "makeFolderMonitor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageFileURLForDataItem:": {
+      "name": "imageFileURLForDataItem:",
+      "bridgedName": "imageFileURLForDataItem",
+      "args": [
+        {
+          "name": "imageFileURLForDataItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generateDataWithCount:dataSupplierManager:dataApplier:": {
+      "name": "generateDataWithCount:dataSupplierManager:dataApplier:",
+      "bridgedName": "generateDataWithCount_dataSupplierManager_dataApplier",
+      "args": [
+        {
+          "name": "generateDataWithCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "dataSupplierManager",
+          "type": "id"
+        },
+        {
+          "name": "dataApplier",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valid": {
+      "name": "valid",
+      "bridgedName": "valid",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFileSystemURL:": {
+      "name": "initWithFileSystemURL:",
+      "bridgedName": "initWithFileSystemURL",
+      "args": [
+        {
+          "name": "initWithFileSystemURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "data": {
+      "name": "data",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "folderMonitor": {
+      "name": "folderMonitor",
+      "pointer": true,
+      "type": "MSFolderMonitor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSLocalDataSupplierDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "dataSource": {
+      "name": "dataSource",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isBuiltin": {
+      "name": "isBuiltin",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,951 @@
+{
+  "imports": [
+    "NSItemProvider.h",
+    "NSObject.h",
+    "NSCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSMutableDictionary",
+    "NSMutableOrderedSet",
+    "NSString",
+    "NSUUID"
+  ],
+  "protocol": false,
+  "className": "NSItemProvider",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSSecureCoding",
+    "NSCopying"
+  ],
+  "methods": {
+    "_ckContainerID": {
+      "name": "_ckContainerID",
+      "bridgedName": "_ckContainerID",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ckSourceAppBundleIdentifier": {
+      "name": "_ckSourceAppBundleIdentifier",
+      "bridgedName": "_ckSourceAppBundleIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ckContainerIdentifier": {
+      "name": "_ckContainerIdentifier",
+      "bridgedName": "_ckContainerIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ckShare": {
+      "name": "_ckShare",
+      "bridgedName": "_ckShare",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ckDictionary": {
+      "name": "_ckDictionary",
+      "bridgedName": "_ckDictionary",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerCloudKitShareWithPreparationHandler:": {
+      "name": "registerCloudKitShareWithPreparationHandler:",
+      "bridgedName": "registerCloudKitShareWithPreparationHandler",
+      "args": [
+        {
+          "name": "registerCloudKitShareWithPreparationHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerCloudKitShare:container:": {
+      "name": "registerCloudKitShare:container:",
+      "bridgedName": "registerCloudKitShare_container",
+      "args": [
+        {
+          "name": "registerCloudKitShare",
+          "type": "id"
+        },
+        {
+          "name": "container",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemSourceInfo": {
+      "name": "_itemSourceInfo",
+      "bridgedName": "_itemSourceInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreferredPresentationSize:": {
+      "name": "setPreferredPresentationSize:",
+      "bridgedName": "setPreferredPresentationSize",
+      "args": [
+        {
+          "name": "setPreferredPresentationSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setContainerFrame:": {
+      "name": "setContainerFrame:",
+      "bridgedName": "setContainerFrame",
+      "args": [
+        {
+          "name": "setContainerFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSourceFrame:": {
+      "name": "setSourceFrame:",
+      "bridgedName": "setSourceFrame",
+      "args": [
+        {
+          "name": "setSourceFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadItemOfClass:withLoadHandler:options:coerceForCoding:completionHandler:": {
+      "name": "_loadItemOfClass:withLoadHandler:options:coerceForCoding:completionHandler:",
+      "bridgedName": "_loadItemOfClass_withLoadHandler_options_coerceForCoding_completionHandler",
+      "args": [
+        {
+          "name": "_loadItemOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "withLoadHandler",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "options",
+          "type": "id"
+        },
+        {
+          "name": "coerceForCoding",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadPreviewImageOfClass:options:coerceForCoding:completionHandler:": {
+      "name": "_loadPreviewImageOfClass:options:coerceForCoding:completionHandler:",
+      "bridgedName": "_loadPreviewImageOfClass_options_coerceForCoding_completionHandler",
+      "args": [
+        {
+          "name": "_loadPreviewImageOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "options",
+          "type": "id"
+        },
+        {
+          "name": "coerceForCoding",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadItemOfClass:forTypeIdentifier:options:coerceForCoding:completionHandler:": {
+      "name": "_loadItemOfClass:forTypeIdentifier:options:coerceForCoding:completionHandler:",
+      "bridgedName": "_loadItemOfClass_forTypeIdentifier_options_coerceForCoding_completionHandler",
+      "args": [
+        {
+          "name": "_loadItemOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "forTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "id"
+        },
+        {
+          "name": "coerceForCoding",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadItemForTypeIdentifier:options:completionHandler:": {
+      "name": "loadItemForTypeIdentifier:options:completionHandler:",
+      "bridgedName": "loadItemForTypeIdentifier_options_completionHandler",
+      "args": [
+        {
+          "name": "loadItemForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerItemForTypeIdentifier:loadHandler:": {
+      "name": "registerItemForTypeIdentifier:loadHandler:",
+      "bridgedName": "registerItemForTypeIdentifier_loadHandler",
+      "args": [
+        {
+          "name": "registerItemForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "loadHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:": {
+      "name": "initWithContentsOfURL:",
+      "bridgedName": "initWithContentsOfURL",
+      "args": [
+        {
+          "name": "initWithContentsOfURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithItem:typeIdentifier:": {
+      "name": "initWithItem:typeIdentifier:",
+      "bridgedName": "initWithItem_typeIdentifier",
+      "args": [
+        {
+          "name": "initWithItem",
+          "type": "id"
+        },
+        {
+          "name": "typeIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasItemConformingToTypeIdentifier:": {
+      "name": "hasItemConformingToTypeIdentifier:",
+      "bridgedName": "hasItemConformingToTypeIdentifier",
+      "args": [
+        {
+          "name": "hasItemConformingToTypeIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadObjectOfClass:options:completionHandler:": {
+      "name": "_loadObjectOfClass:options:completionHandler:",
+      "bridgedName": "_loadObjectOfClass_options_completionHandler",
+      "args": [
+        {
+          "name": "_loadObjectOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "options",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadObjectOfClass:completionHandler:": {
+      "name": "loadObjectOfClass:completionHandler:",
+      "bridgedName": "loadObjectOfClass_completionHandler",
+      "args": [
+        {
+          "name": "loadObjectOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canLoadObjectOfClass:": {
+      "name": "canLoadObjectOfClass:",
+      "bridgedName": "canLoadObjectOfClass",
+      "args": [
+        {
+          "name": "canLoadObjectOfClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerObjectOfClass:visibility:loadHandler:": {
+      "name": "registerObjectOfClass:visibility:loadHandler:",
+      "bridgedName": "registerObjectOfClass_visibility_loadHandler",
+      "args": [
+        {
+          "name": "registerObjectOfClass",
+          "type": "Class"
+        },
+        {
+          "name": "visibility",
+          "type": "long long"
+        },
+        {
+          "name": "loadHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerObject:visibility:": {
+      "name": "registerObject:visibility:",
+      "bridgedName": "registerObject_visibility",
+      "args": [
+        {
+          "name": "registerObject",
+          "type": "id"
+        },
+        {
+          "name": "visibility",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithObject:": {
+      "name": "initWithObject:",
+      "bridgedName": "initWithObject",
+      "args": [
+        {
+          "name": "initWithObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:": {
+      "name": "loadInPlaceFileRepresentationForTypeIdentifier:completionHandler:",
+      "bridgedName": "loadInPlaceFileRepresentationForTypeIdentifier_completionHandler",
+      "args": [
+        {
+          "name": "loadInPlaceFileRepresentationForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadFileRepresentationForTypeIdentifier:completionHandler:": {
+      "name": "loadFileRepresentationForTypeIdentifier:completionHandler:",
+      "bridgedName": "loadFileRepresentationForTypeIdentifier_completionHandler",
+      "args": [
+        {
+          "name": "loadFileRepresentationForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDataRepresentationForTypeIdentifier:completionHandler:": {
+      "name": "loadDataRepresentationForTypeIdentifier:completionHandler:",
+      "bridgedName": "loadDataRepresentationForTypeIdentifier_completionHandler",
+      "args": [
+        {
+          "name": "loadDataRepresentationForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerFileRepresentationForTypeIdentifier:fileOptions:visibility:loadHandler:": {
+      "name": "registerFileRepresentationForTypeIdentifier:fileOptions:visibility:loadHandler:",
+      "bridgedName": "registerFileRepresentationForTypeIdentifier_fileOptions_visibility_loadHandler",
+      "args": [
+        {
+          "name": "registerFileRepresentationForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "fileOptions",
+          "type": "long long"
+        },
+        {
+          "name": "visibility",
+          "type": "long long"
+        },
+        {
+          "name": "loadHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerDataRepresentationForTypeIdentifier:visibility:loadHandler:": {
+      "name": "registerDataRepresentationForTypeIdentifier:visibility:loadHandler:",
+      "bridgedName": "registerDataRepresentationForTypeIdentifier_visibility_loadHandler",
+      "args": [
+        {
+          "name": "registerDataRepresentationForTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "visibility",
+          "type": "long long"
+        },
+        {
+          "name": "loadHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasRepresentationConformingToTypeIdentifier:fileOptions:": {
+      "name": "hasRepresentationConformingToTypeIdentifier:fileOptions:",
+      "bridgedName": "hasRepresentationConformingToTypeIdentifier_fileOptions",
+      "args": [
+        {
+          "name": "hasRepresentationConformingToTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "fileOptions",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registeredTypeIdentifiersWithFileOptions:": {
+      "name": "registeredTypeIdentifiersWithFileOptions:",
+      "bridgedName": "registeredTypeIdentifiersWithFileOptions",
+      "args": [
+        {
+          "name": "registeredTypeIdentifiersWithFileOptions",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMetadataValue:forKey:": {
+      "name": "_setMetadataValue:forKey:",
+      "bridgedName": "_setMetadataValue_forKey",
+      "args": [
+        {
+          "name": "_setMetadataValue",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_metadataValueForKey:": {
+      "name": "_metadataValueForKey:",
+      "bridgedName": "_metadataValueForKey",
+      "args": [
+        {
+          "name": "_metadataValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_representationForType:": {
+      "name": "_representationForType:",
+      "bridgedName": "_representationForType",
+      "args": [
+        {
+          "name": "_representationForType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setItemRepresentation:": {
+      "name": "_setItemRepresentation:",
+      "bridgedName": "_setItemRepresentation",
+      "args": [
+        {
+          "name": "_setItemRepresentation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_representationConformingToType:": {
+      "name": "_representationConformingToType:",
+      "bridgedName": "_representationConformingToType",
+      "args": [
+        {
+          "name": "_representationConformingToType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "representations": {
+      "name": "representations",
+      "bridgedName": "representations",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addRepresentationType:preferredRepresentation:loader:": {
+      "name": "_addRepresentationType:preferredRepresentation:loader:",
+      "bridgedName": "_addRepresentationType_preferredRepresentation_loader",
+      "args": [
+        {
+          "name": "_addRepresentationType",
+          "type": "id"
+        },
+        {
+          "name": "preferredRepresentation",
+          "type": "long long"
+        },
+        {
+          "name": "loader",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addRepresentationType_v2:preferredRepresentation:loader:": {
+      "name": "_addRepresentationType_v2:preferredRepresentation:loader:",
+      "bridgedName": "_addRepresentationType_v2_preferredRepresentation_loader",
+      "args": [
+        {
+          "name": "_addRepresentationType_v2",
+          "type": "id"
+        },
+        {
+          "name": "preferredRepresentation",
+          "type": "long long"
+        },
+        {
+          "name": "loader",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addRepresentationType:preferredRepresentation:visibility:loader:": {
+      "name": "_addRepresentationType:preferredRepresentation:visibility:loader:",
+      "bridgedName": "_addRepresentationType_preferredRepresentation_visibility_loader",
+      "args": [
+        {
+          "name": "_addRepresentationType",
+          "type": "id"
+        },
+        {
+          "name": "preferredRepresentation",
+          "type": "long long"
+        },
+        {
+          "name": "visibility",
+          "type": "long long"
+        },
+        {
+          "name": "loader",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_availableTypesWithFilterBlock:": {
+      "name": "_availableTypesWithFilterBlock:",
+      "bridgedName": "_availableTypesWithFilterBlock",
+      "args": [
+        {
+          "name": "_availableTypesWithFilterBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasRepresentationConformingToType:": {
+      "name": "_hasRepresentationConformingToType:",
+      "bridgedName": "_hasRepresentationConformingToType",
+      "args": [
+        {
+          "name": "_hasRepresentationConformingToType",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasRepresentationOfType:": {
+      "name": "_hasRepresentationOfType:",
+      "bridgedName": "_hasRepresentationOfType",
+      "args": [
+        {
+          "name": "_hasRepresentationOfType",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_availableTypes": {
+      "name": "_availableTypes",
+      "bridgedName": "_availableTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInitGenerateUUID:": {
+      "name": "_commonInitGenerateUUID:",
+      "bridgedName": "_commonInitGenerateUUID",
+      "args": [
+        {
+          "name": "_commonInitGenerateUUID",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadPreviewImageWithOptions:completionHandler:": {
+      "name": "loadPreviewImageWithOptions:completionHandler:",
+      "bridgedName": "loadPreviewImageWithOptions_completionHandler",
+      "args": [
+        {
+          "name": "loadPreviewImageWithOptions",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "preferredPresentationSize": {
+      "name": "preferredPresentationSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "containerFrame": {
+      "name": "containerFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "sourceFrame": {
+      "name": "sourceFrame",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_sanitizedSuggestedName": {
+      "name": "_sanitizedSuggestedName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "userInfo": {
+      "name": "userInfo",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "suggestedName": {
+      "name": "suggestedName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "_UUID": {
+      "name": "_UUID",
+      "pointer": true,
+      "type": "NSUUID",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_preferredRepresentationByType": {
+      "name": "_preferredRepresentationByType",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "_representations": {
+      "name": "_representations",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_typeOrder": {
+      "name": "_typeOrder",
+      "pointer": true,
+      "type": "NSMutableOrderedSet",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "_representationByType": {
+      "name": "_representationByType",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "_loadOperator": {
+      "name": "_loadOperator",
+      "pointer": false,
+      "type": "id <_NSItemProviderLoading>",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "registeredTypeIdentifiers": {
+      "name": "registeredTypeIdentifiers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "previewImageHandler": {
+      "name": "previewImageHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "_NSActionRecordStore",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "sharedActionRecordStoreIfExists": {
+      "name": "sharedActionRecordStoreIfExists",
+      "bridgedName": "sharedActionRecordStoreIfExists",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "sharedActionRecordStore": {
+      "name": "sharedActionRecordStore",
+      "bridgedName": "sharedActionRecordStore",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "replaceObjectInActionRecordsAtIndex:withObject:": {
+      "name": "replaceObjectInActionRecordsAtIndex:withObject:",
+      "bridgedName": "replaceObjectInActionRecordsAtIndex_withObject",
+      "args": [
+        {
+          "name": "replaceObjectInActionRecordsAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "withObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObjectFromActionRecordsAtIndex:": {
+      "name": "removeObjectFromActionRecordsAtIndex:",
+      "bridgedName": "removeObjectFromActionRecordsAtIndex",
+      "args": [
+        {
+          "name": "removeObjectFromActionRecordsAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertObject:inActionRecordsAtIndex:": {
+      "name": "insertObject:inActionRecordsAtIndex:",
+      "bridgedName": "insertObject_inActionRecordsAtIndex",
+      "args": [
+        {
+          "name": "insertObject",
+          "type": "id"
+        },
+        {
+          "name": "inActionRecordsAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRecord:": {
+      "name": "addRecord:",
+      "bridgedName": "addRecord",
+      "args": [
+        {
+          "name": "addRecord",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addRecordWithAction:target:sender:": {
+      "name": "addRecordWithAction:target:sender:",
+      "bridgedName": "addRecordWithAction_target_sender",
+      "args": [
+        {
+          "name": "addRecordWithAction",
+          "type": "SEL"
+        },
+        {
+          "name": "target",
+          "type": "id"
+        },
+        {
+          "name": "sender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "actionRecords": {
+      "name": "actionRecords",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

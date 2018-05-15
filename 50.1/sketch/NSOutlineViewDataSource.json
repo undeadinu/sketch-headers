@@ -1,0 +1,347 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDraggingSession",
+    "NSOutlineView",
+    "NSPasteboard",
+    "NSTableColumn",
+    "NSURL"
+  ],
+  "protocol": true,
+  "className": "NSOutlineViewDataSource",
+  "interfaces": [],
+  "methods": {
+    "outlineView:namesOfPromisedFilesDroppedAtDestination:forDraggedItems:": {
+      "name": "outlineView:namesOfPromisedFilesDroppedAtDestination:forDraggedItems:",
+      "bridgedName": "outlineView_namesOfPromisedFilesDroppedAtDestination_forDraggedItems",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "namesOfPromisedFilesDroppedAtDestination",
+          "type": "NSURL *"
+        },
+        {
+          "name": "forDraggedItems",
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:acceptDrop:item:childIndex:": {
+      "name": "outlineView:acceptDrop:item:childIndex:",
+      "bridgedName": "outlineView_acceptDrop_item_childIndex",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "acceptDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "item",
+          "type": "id"
+        },
+        {
+          "name": "childIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:validateDrop:proposedItem:proposedChildIndex:": {
+      "name": "outlineView:validateDrop:proposedItem:proposedChildIndex:",
+      "bridgedName": "outlineView_validateDrop_proposedItem_proposedChildIndex",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "validateDrop",
+          "type": "id <NSDraggingInfo>"
+        },
+        {
+          "name": "proposedItem",
+          "type": "id"
+        },
+        {
+          "name": "proposedChildIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:updateDraggingItemsForDrag:": {
+      "name": "outlineView:updateDraggingItemsForDrag:",
+      "bridgedName": "outlineView_updateDraggingItemsForDrag",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "updateDraggingItemsForDrag",
+          "type": "id <NSDraggingInfo>"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:writeItems:toPasteboard:": {
+      "name": "outlineView:writeItems:toPasteboard:",
+      "bridgedName": "outlineView_writeItems_toPasteboard",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "writeItems",
+          "type": "NSArray *"
+        },
+        {
+          "name": "toPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:draggingSession:endedAtPoint:operation:": {
+      "name": "outlineView:draggingSession:endedAtPoint:operation:",
+      "bridgedName": "outlineView_draggingSession_endedAtPoint_operation",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "draggingSession",
+          "type": "NSDraggingSession *"
+        },
+        {
+          "name": "endedAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "operation",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:draggingSession:willBeginAtPoint:forItems:": {
+      "name": "outlineView:draggingSession:willBeginAtPoint:forItems:",
+      "bridgedName": "outlineView_draggingSession_willBeginAtPoint_forItems",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "draggingSession",
+          "type": "NSDraggingSession *"
+        },
+        {
+          "name": "willBeginAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "forItems",
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:pasteboardWriterForItem:": {
+      "name": "outlineView:pasteboardWriterForItem:",
+      "bridgedName": "outlineView_pasteboardWriterForItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "pasteboardWriterForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id <NSPasteboardWriting>",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:sortDescriptorsDidChange:": {
+      "name": "outlineView:sortDescriptorsDidChange:",
+      "bridgedName": "outlineView_sortDescriptorsDidChange",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "sortDescriptorsDidChange",
+          "type": "NSArray *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:persistentObjectForItem:": {
+      "name": "outlineView:persistentObjectForItem:",
+      "bridgedName": "outlineView_persistentObjectForItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "persistentObjectForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:itemForPersistentObject:": {
+      "name": "outlineView:itemForPersistentObject:",
+      "bridgedName": "outlineView_itemForPersistentObject",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "itemForPersistentObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:setObjectValue:forTableColumn:byItem:": {
+      "name": "outlineView:setObjectValue:forTableColumn:byItem:",
+      "bridgedName": "outlineView_setObjectValue_forTableColumn_byItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        },
+        {
+          "name": "forTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "byItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:objectValueForTableColumn:byItem:": {
+      "name": "outlineView:objectValueForTableColumn:byItem:",
+      "bridgedName": "outlineView_objectValueForTableColumn_byItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "objectValueForTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "byItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:isItemExpandable:": {
+      "name": "outlineView:isItemExpandable:",
+      "bridgedName": "outlineView_isItemExpandable",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "isItemExpandable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:child:ofItem:": {
+      "name": "outlineView:child:ofItem:",
+      "bridgedName": "outlineView_child_ofItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "child",
+          "type": "long long"
+        },
+        {
+          "name": "ofItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "outlineView:numberOfChildrenOfItem:": {
+      "name": "outlineView:numberOfChildrenOfItem:",
+      "bridgedName": "outlineView_numberOfChildrenOfItem",
+      "args": [
+        {
+          "name": "outlineView",
+          "type": "NSOutlineView *"
+        },
+        {
+          "name": "numberOfChildrenOfItem",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,267 @@
+{
+  "imports": [
+    "NSObservable.h",
+    "NSObserver.h"
+  ],
+  "classes": [
+    "NSNumberFormatter",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSMassFormatter",
+  "extends": "NSFormatter",
+  "interfaces": [
+    "NSObservable",
+    "NSObserver"
+  ],
+  "methods": {
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringFromValue:unit:": {
+      "name": "stringFromValue:unit:",
+      "bridgedName": "stringFromValue_unit",
+      "args": [
+        {
+          "name": "stringFromValue",
+          "type": "double"
+        },
+        {
+          "name": "unit",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringFromKilograms:": {
+      "name": "stringFromKilograms:",
+      "bridgedName": "stringFromKilograms",
+      "args": [
+        {
+          "name": "stringFromKilograms",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unitStringFromValue:unit:": {
+      "name": "unitStringFromValue:unit:",
+      "bridgedName": "unitStringFromValue_unit",
+      "args": [
+        {
+          "name": "unitStringFromValue",
+          "type": "double"
+        },
+        {
+          "name": "unit",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unitStringFromKilograms:usedUnit:": {
+      "name": "unitStringFromKilograms:usedUnit:",
+      "bridgedName": "unitStringFromKilograms_usedUnit",
+      "args": [
+        {
+          "name": "unitStringFromKilograms",
+          "type": "double"
+        },
+        {
+          "name": "usedUnit",
+          "type": "long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "targetUnitFromKilograms:": {
+      "name": "targetUnitFromKilograms:",
+      "bridgedName": "targetUnitFromKilograms",
+      "args": [
+        {
+          "name": "targetUnitFromKilograms",
+          "type": "double"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attributedStringForObjectValue:withDefaultAttributes:": {
+      "name": "attributedStringForObjectValue:withDefaultAttributes:",
+      "bridgedName": "attributedStringForObjectValue_withDefaultAttributes",
+      "args": [
+        {
+          "name": "attributedStringForObjectValue",
+          "type": "id"
+        },
+        {
+          "name": "withDefaultAttributes",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringForObjectValue:": {
+      "name": "stringForObjectValue:",
+      "bridgedName": "stringForObjectValue",
+      "args": [
+        {
+          "name": "stringForObjectValue",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getObjectValue:forString:errorDescription:": {
+      "name": "getObjectValue:forString:errorDescription:",
+      "bridgedName": "getObjectValue_forString_errorDescription",
+      "args": [
+        {
+          "name": "getObjectValue",
+          "type": "out id *"
+        },
+        {
+          "name": "forString",
+          "type": "id"
+        },
+        {
+          "name": "errorDescription",
+          "type": "out id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "receiveObservedValue:": {
+      "name": "receiveObservedValue:",
+      "bridgedName": "receiveObservedValue",
+      "args": [
+        {
+          "name": "receiveObservedValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "forPersonMassUse": {
+      "name": "forPersonMassUse",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isForPersonMassUse"
+      ]
+    },
+    "numberFormatter": {
+      "name": "numberFormatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}
