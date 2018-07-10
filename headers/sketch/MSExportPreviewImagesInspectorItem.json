@@ -5,10 +5,7 @@
   ],
   "classes": [
     "NSArray",
-    "NSMutableArray",
-    "NSMutableSet",
-    "NSString",
-    "NSTimer"
+    "NSString"
   ],
   "protocol": false,
   "className": "MSExportPreviewImagesInspectorItem",
@@ -17,6 +14,40 @@
     "MSLayerChangeObserver"
   ],
   "methods": {
+    "setFrameOfViewModels:withInspectorWidth:": {
+      "name": "setFrameOfViewModels:withInspectorWidth:",
+      "bridgedName": "setFrameOfViewModels_withInspectorWidth",
+      "args": [
+        {
+          "name": "setFrameOfViewModels",
+          "type": "id"
+        },
+        {
+          "name": "withInspectorWidth",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "reloadPreviewsForLayers:withCompletion:": {
+      "name": "reloadPreviewsForLayers:withCompletion:",
+      "bridgedName": "reloadPreviewsForLayers_withCompletion",
+      "args": [
+        {
+          "name": "reloadPreviewsForLayers",
+          "type": "id"
+        },
+        {
+          "name": "withCompletion",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "filterSelection:": {
       "name": "filterSelection:",
       "bridgedName": "filterSelection",
@@ -38,6 +69,51 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreviewsWithViewModels:": {
+      "name": "setPreviewsWithViewModels:",
+      "bridgedName": "setPreviewsWithViewModels",
+      "args": [
+        {
+          "name": "setPreviewsWithViewModels",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadPreviewViews": {
+      "name": "reloadPreviewViews",
+      "bridgedName": "reloadPreviewViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllPreviewViews": {
+      "name": "removeAllPreviewViews",
+      "bridgedName": "removeAllPreviewViews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "schedulePreviewViewReload": {
+      "name": "schedulePreviewViewReload",
+      "bridgedName": "schedulePreviewViewReload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "layerDidChange:": {
       "name": "layerDidChange:",
       "bridgedName": "layerDidChange",
@@ -47,77 +123,6 @@
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "sizeSliceView": {
-      "name": "sizeSliceView",
-      "bridgedName": "sizeSliceView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "reloadSlicesFromArray:": {
-      "name": "reloadSlicesFromArray:",
-      "bridgedName": "reloadSlicesFromArray",
-      "args": [
-        {
-          "name": "reloadSlicesFromArray",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "sliceViewWithRect:": {
-      "name": "sliceViewWithRect:",
-      "bridgedName": "sliceViewWithRect",
-      "args": [
-        {
-          "name": "sliceViewWithRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeAllSliceViews": {
-      "name": "removeAllSliceViews",
-      "bridgedName": "removeAllSliceViews",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "loadSliceViews": {
-      "name": "loadSliceViews",
-      "bridgedName": "loadSliceViews",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshTimerFired:": {
-      "name": "refreshTimerFired:",
-      "bridgedName": "refreshTimerFired",
-      "args": [
-        {
-          "name": "refreshTimerFired",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scheduleSliceViewReload": {
-      "name": "scheduleSliceViewReload",
-      "bridgedName": "scheduleSliceViewReload",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -142,48 +147,21 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
-    "gridDataSource": {
-      "name": "gridDataSource",
+    "throttleCount": {
+      "name": "throttleCount",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "previewViews": {
+      "name": "previewViews",
       "pointer": true,
       "type": "NSArray",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "sliceViewPool": {
-      "name": "sliceViewPool",
-      "pointer": true,
-      "type": "NSMutableSet",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "sliceViews": {
-      "name": "sliceViews",
-      "pointer": true,
-      "type": "NSMutableArray",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "refreshTimer": {
-      "name": "refreshTimer",
-      "pointer": true,
-      "type": "NSTimer",
       "attributes": [
         "retain",
         "nonatomic"

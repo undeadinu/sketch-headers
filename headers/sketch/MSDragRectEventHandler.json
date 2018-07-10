@@ -1,17 +1,22 @@
 {
   "imports": [
-    "MSEventHandler.h"
+    "MSEventHandler.h",
+    "MSAlignmentEngineDelegate.h"
   ],
   "classes": [
+    "MSAlignmentEngine",
+    "MSAlignmentEngineResult",
     "MSDragGestureRecognizer",
-    "MSPointSnapper",
-    "MSPointSnappingResult",
-    "NSCursor"
+    "NSArray",
+    "NSCursor",
+    "NSString"
   ],
   "protocol": false,
   "className": "MSDragRectEventHandler",
   "extends": "MSEventHandler",
-  "interfaces": [],
+  "interfaces": [
+    "MSAlignmentEngineDelegate"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -54,12 +59,46 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapMouseToEdges:modifierFlags:": {
-      "name": "snapMouseToEdges:modifierFlags:",
-      "bridgedName": "snapMouseToEdges_modifierFlags",
+    "alignmentEngine:roundPoint:": {
+      "name": "alignmentEngine:roundPoint:",
+      "bridgedName": "alignmentEngine_roundPoint",
       "args": [
         {
-          "name": "snapMouseToEdges",
+          "name": "alignmentEngine",
+          "type": "id"
+        },
+        {
+          "name": "roundPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentEngine:alignPoint:": {
+      "name": "alignmentEngine:alignPoint:",
+      "bridgedName": "alignmentEngine_alignPoint",
+      "args": [
+        {
+          "name": "alignmentEngine",
+          "type": "id"
+        },
+        {
+          "name": "alignPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapAndAlignPoint:modifierFlags:": {
+      "name": "snapAndAlignPoint:modifierFlags:",
+      "bridgedName": "snapAndAlignPoint_modifierFlags",
+      "args": [
+        {
+          "name": "snapAndAlignPoint",
           "type": "struct CGPoint"
         },
         {
@@ -68,31 +107,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "snapMouseAndShowSnapLines:modifierFlags:": {
-      "name": "snapMouseAndShowSnapLines:modifierFlags:",
-      "bridgedName": "snapMouseAndShowSnapLines_modifierFlags",
-      "args": [
-        {
-          "name": "snapMouseAndShowSnapLines",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "modifierFlags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "prepareGraphicsContext": {
-      "name": "prepareGraphicsContext",
-      "bridgedName": "prepareGraphicsContext",
-      "args": [],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -226,61 +240,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteMouseDragged:flags:": {
-      "name": "absoluteMouseDragged:flags:",
-      "bridgedName": "absoluteMouseDragged_flags",
-      "args": [
-        {
-          "name": "absoluteMouseDragged",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "absoluteMouseDown:clickCount:flags:": {
-      "name": "absoluteMouseDown:clickCount:flags:",
-      "bridgedName": "absoluteMouseDown_clickCount_flags",
-      "args": [
-        {
-          "name": "absoluteMouseDown",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "clickCount",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "absoluteMouseMoved:flags:": {
-      "name": "absoluteMouseMoved:flags:",
-      "bridgedName": "absoluteMouseMoved_flags",
-      "args": [
-        {
-          "name": "absoluteMouseMoved",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "handleDrag:": {
       "name": "handleDrag:",
       "bridgedName": "handleDrag",
@@ -313,23 +272,19 @@
       "args": [
         {
           "name": "makeDiagonalTranslation",
-          "type": "struct CGPoint"
+          "type": "struct CGVector"
         }
       ],
-      "returns": "struct CGPoint",
+      "returns": "struct CGVector",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "calculateInsertionRect:inLayer:": {
-      "name": "calculateInsertionRect:inLayer:",
-      "bridgedName": "calculateInsertionRect_inLayer",
+    "calculateInsertionRect:": {
+      "name": "calculateInsertionRect:",
+      "bridgedName": "calculateInsertionRect",
       "args": [
         {
           "name": "calculateInsertionRect",
-          "type": "id"
-        },
-        {
-          "name": "inLayer",
           "type": "id"
         }
       ],
@@ -360,6 +315,15 @@
     }
   },
   "properties": {
+    "snapTargets": {
+      "name": "snapTargets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "insertionCursor": {
       "name": "insertionCursor",
       "pointer": true,
@@ -372,7 +336,7 @@
     "snappingResult": {
       "name": "snappingResult",
       "pointer": true,
-      "type": "MSPointSnappingResult",
+      "type": "MSAlignmentEngineResult",
       "attributes": [
         "retain",
         "nonatomic"
@@ -381,7 +345,7 @@
     "snapper": {
       "name": "snapper",
       "pointer": true,
-      "type": "MSPointSnapper",
+      "type": "MSAlignmentEngine",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -427,6 +391,40 @@
       "attributes": [
         "readonly",
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

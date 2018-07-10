@@ -124,9 +124,9 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "backgroundColor": {
-      "name": "backgroundColor",
-      "bridgedName": "backgroundColor",
+    "hashMarkColor": {
+      "name": "hashMarkColor",
+      "bridgedName": "hashMarkColor",
       "args": [],
       "returns": "id",
       "kind": "class",
@@ -216,14 +216,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isOpaque": {
-      "name": "isOpaque",
-      "bridgedName": "isOpaque",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setFrameSize:": {
       "name": "setFrameSize:",
       "bridgedName": "setFrameSize",
@@ -237,11 +229,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "preservesContentDuringLiveResize": {
-      "name": "preservesContentDuringLiveResize",
-      "bridgedName": "preservesContentDuringLiveResize",
-      "args": [],
-      "returns": "BOOL",
+    "_drawContentRect:": {
+      "name": "_drawContentRect:",
+      "bridgedName": "_drawContentRect",
+      "args": [
+        {
+          "name": "_drawContentRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -336,19 +333,6 @@
       "args": [
         {
           "name": "drawSeparatorInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawBackgroundInRect:": {
-      "name": "drawBackgroundInRect:",
-      "bridgedName": "drawBackgroundInRect",
-      "args": [
-        {
-          "name": "drawBackgroundInRect",
           "type": "struct CGRect"
         }
       ],
@@ -485,6 +469,14 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commonInit": {
+      "name": "_commonInit",
+      "bridgedName": "_commonInit",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -827,31 +819,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_recursiveDisplayRectIfNeededIgnoringOpacity:isVisibleRect:rectIsVisibleRectForView:topView:": {
-      "name": "_recursiveDisplayRectIfNeededIgnoringOpacity:isVisibleRect:rectIsVisibleRectForView:topView:",
-      "bridgedName": "_recursiveDisplayRectIfNeededIgnoringOpacity_isVisibleRect_rectIsVisibleRectForView_topView",
-      "args": [
-        {
-          "name": "_recursiveDisplayRectIfNeededIgnoringOpacity",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "isVisibleRect",
-          "type": "BOOL"
-        },
-        {
-          "name": "rectIsVisibleRectForView",
-          "type": "id"
-        },
-        {
-          "name": "topView",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setNeedsDisplayInRect:": {
       "name": "setNeedsDisplayInRect:",
       "bridgedName": "setNeedsDisplayInRect",
@@ -883,23 +850,6 @@
       "bridgedName": "_draggingMarkerView",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_bitBlitSourceRect:toDestinationRect:": {
-      "name": "_bitBlitSourceRect:toDestinationRect:",
-      "bridgedName": "_bitBlitSourceRect_toDestinationRect",
-      "args": [
-        {
-          "name": "_bitBlitSourceRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "toDestinationRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

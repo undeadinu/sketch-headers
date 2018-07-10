@@ -1,6 +1,7 @@
 {
   "imports": [
-    "MSAction.h"
+    "MSAction.h",
+    "MSPluginLogAction.h"
   ],
   "classes": [
     "NSDictionary"
@@ -8,7 +9,9 @@
   "protocol": false,
   "className": "MSLogAction",
   "extends": "MSAction",
-  "interfaces": [],
+  "interfaces": [
+    "MSPluginLogAction"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -26,12 +29,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "print:": {
-      "name": "print:",
-      "bridgedName": "print",
+    "log:": {
+      "name": "log:",
+      "bridgedName": "log",
       "args": [
         {
-          "name": "print",
+          "name": "log",
           "type": "id"
         }
       ],

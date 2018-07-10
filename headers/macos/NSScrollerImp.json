@@ -256,29 +256,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilterForAppearance:": {
-      "name": "_vibrancyFilterForAppearance:",
-      "bridgedName": "_vibrancyFilterForAppearance",
+    "_vibrancyBlendModeForAppearance:": {
+      "name": "_vibrancyBlendModeForAppearance:",
+      "bridgedName": "_vibrancyBlendModeForAppearance",
       "args": [
         {
-          "name": "_vibrancyFilterForAppearance",
+          "name": "_vibrancyBlendModeForAppearance",
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "allowsVibrancyForAppearance:": {
-      "name": "allowsVibrancyForAppearance:",
-      "bridgedName": "allowsVibrancyForAppearance",
-      "args": [
-        {
-          "name": "allowsVibrancyForAppearance",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -306,14 +293,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "loadImages": {
-      "name": "loadImages",
-      "bridgedName": "loadImages",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "hitTestForLocalPoint:": {
       "name": "hitTestForLocalPoint:",
       "bridgedName": "hitTestForLocalPoint",
@@ -324,6 +303,19 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "expandedRectForPart:": {
+      "name": "expandedRectForPart:",
+      "bridgedName": "expandedRectForPart",
+      "args": [
+        {
+          "name": "expandedRectForPart",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -457,27 +449,6 @@
       "bridgedName": "overlayScrollerState",
       "args": [],
       "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setTracking:": {
-      "name": "setTracking:",
-      "bridgedName": "setTracking",
-      "args": [
-        {
-          "name": "setTracking",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isTracking": {
-      "name": "isTracking",
-      "bridgedName": "isTracking",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -777,6 +748,14 @@
       "type": "BOOL",
       "attributes": [
         "getter=isExpanded"
+      ]
+    },
+    "tracking": {
+      "name": "tracking",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isTracking"
       ]
     },
     "scrollerStyle": {

@@ -64,6 +64,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "contentBoundsForDocument:": {
+      "name": "contentBoundsForDocument:",
+      "bridgedName": "contentBoundsForDocument",
+      "args": [
+        {
+          "name": "contentBoundsForDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "rulerBase": {
       "name": "rulerBase",
       "bridgedName": "rulerBase",
@@ -118,24 +131,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "exporterForWebOnPage:document:scale:": {
-      "name": "exporterForWebOnPage:document:scale:",
-      "bridgedName": "exporterForWebOnPage_document_scale",
+    "rectInFixedViewportWithRect:fromFixingLayer:": {
+      "name": "rectInFixedViewportWithRect:fromFixingLayer:",
+      "bridgedName": "rectInFixedViewportWithRect_fromFixingLayer",
       "args": [
         {
-          "name": "exporterForWebOnPage",
-          "type": "id"
+          "name": "rectInFixedViewportWithRect",
+          "type": "struct CGRect"
         },
         {
-          "name": "document",
+          "name": "fromFixingLayer",
           "type": "id"
-        },
-        {
-          "name": "scale",
-          "type": "double"
         }
       ],
-      "returns": "id",
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webExportLayerBehaviorWithRect:fromLayer:": {
+      "name": "webExportLayerBehaviorWithRect:fromLayer:",
+      "bridgedName": "webExportLayerBehaviorWithRect_fromLayer",
+      "args": [
+        {
+          "name": "webExportLayerBehaviorWithRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "fromLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -263,6 +289,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "addChildrenToElement:exporter:": {
+      "name": "addChildrenToElement:exporter:",
+      "bridgedName": "addChildrenToElement_exporter",
+      "args": [
+        {
+          "name": "addChildrenToElement",
+          "type": "id"
+        },
+        {
+          "name": "exporter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "appendBaseTranslation:exporter:": {
       "name": "appendBaseTranslation:exporter:",
       "bridgedName": "appendBaseTranslation_exporter",
@@ -313,10 +356,10 @@
         "nonatomic"
       ]
     },
-    "contentBounds": {
-      "name": "contentBounds",
+    "containsFixedLayers": {
+      "name": "containsFixedLayers",
       "pointer": false,
-      "type": "struct CGRect",
+      "type": "BOOL",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -489,6 +532,15 @@
       "name": "origin",
       "pointer": false,
       "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathForBooleanOperations": {
+      "name": "pathForBooleanOperations",
+      "pointer": true,
+      "type": "MSPath",
       "attributes": [
         "readonly",
         "nonatomic"

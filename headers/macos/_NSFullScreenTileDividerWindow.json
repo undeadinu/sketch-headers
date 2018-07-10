@@ -1,6 +1,7 @@
 {
   "imports": [],
   "classes": [
+    "CALayer",
     "_NSFullScreenSpace"
   ],
   "protocol": false,
@@ -8,6 +9,19 @@
   "extends": "NSPanel",
   "interfaces": [],
   "methods": {
+    "tileGrabBarWithSize:": {
+      "name": "tileGrabBarWithSize:",
+      "bridgedName": "tileGrabBarWithSize",
+      "args": [
+        {
+          "name": "tileGrabBarWithSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_endLiveResizeAtDividerLocation:": {
       "name": "_endLiveResizeAtDividerLocation:",
       "bridgedName": "_endLiveResizeAtDividerLocation",
@@ -242,25 +256,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shouldAutoDecSubLevel": {
-      "name": "_shouldAutoDecSubLevel",
-      "bridgedName": "_shouldAutoDecSubLevel",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldAutoIncSubLevel": {
-      "name": "_shouldAutoIncSubLevel",
-      "bridgedName": "_shouldAutoIncSubLevel",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setAsActiveTileDividerWindow": {
       "name": "setAsActiveTileDividerWindow",
       "bridgedName": "setAsActiveTileDividerWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reshape": {
+      "name": "reshape",
+      "bridgedName": "reshape",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -328,6 +334,22 @@
           "type": "BOOL"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideGrabBar": {
+      "name": "hideGrabBar",
+      "bridgedName": "hideGrabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showGrabBar": {
+      "name": "showGrabBar",
+      "bridgedName": "showGrabBar",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"

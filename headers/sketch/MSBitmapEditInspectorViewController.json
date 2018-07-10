@@ -1,15 +1,10 @@
 {
   "imports": [
     "NSViewController.h",
-    "BCPopoverDelegate.h",
-    "MSColorInspectorDelegate.h",
-    "MSInspectorChildController.h",
-    "MSModeModePickerDelegate.h"
+    "MSInspectorChildController.h"
   ],
   "classes": [
-    "BCPopover",
     "MSBitmapEditEventHandler",
-    "MSModePickerView",
     "NSButton",
     "NSString"
   ],
@@ -17,9 +12,6 @@
   "className": "MSBitmapEditInspectorViewController",
   "extends": "NSViewController",
   "interfaces": [
-    "MSModeModePickerDelegate",
-    "BCPopoverDelegate",
-    "MSColorInspectorDelegate",
     "MSInspectorChildController"
   ],
   "methods": {
@@ -57,92 +49,6 @@
       "bridgedName": "views",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pickerViewChanged:": {
-      "name": "pickerViewChanged:",
-      "bridgedName": "pickerViewChanged",
-      "args": [
-        {
-          "name": "pickerViewChanged",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pickerViewWillChange:": {
-      "name": "pickerViewWillChange:",
-      "bridgedName": "pickerViewWillChange",
-      "args": [
-        {
-          "name": "pickerViewWillChange",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pickerView:labelForMode:": {
-      "name": "pickerView:labelForMode:",
-      "bridgedName": "pickerView_labelForMode",
-      "args": [
-        {
-          "name": "pickerView",
-          "type": "id"
-        },
-        {
-          "name": "labelForMode",
-          "type": "long long"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "colorInspector:didChangeToColor:": {
-      "name": "colorInspector:didChangeToColor:",
-      "bridgedName": "colorInspector_didChangeToColor",
-      "args": [
-        {
-          "name": "colorInspector",
-          "type": "id"
-        },
-        {
-          "name": "didChangeToColor",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "colorMagnifierAction:": {
-      "name": "colorMagnifierAction:",
-      "bridgedName": "colorMagnifierAction",
-      "args": [
-        {
-          "name": "colorMagnifierAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "colorizeAction:": {
-      "name": "colorizeAction:",
-      "bridgedName": "colorizeAction",
-      "args": [
-        {
-          "name": "colorizeAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -185,56 +91,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "magicWandAction:": {
-      "name": "magicWandAction:",
-      "bridgedName": "magicWandAction",
-      "args": [
-        {
-          "name": "magicWandAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rectSelectionAction:": {
-      "name": "rectSelectionAction:",
-      "bridgedName": "rectSelectionAction",
-      "args": [
-        {
-          "name": "rectSelectionAction",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "refresh": {
       "name": "refresh",
       "bridgedName": "refresh",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "dismissViewController:": {
-      "name": "dismissViewController:",
-      "bridgedName": "dismissViewController",
-      "args": [
-        {
-          "name": "dismissViewController",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "viewWillDisappear": {
-      "name": "viewWillDisappear",
-      "bridgedName": "viewWillDisappear",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -250,17 +109,8 @@
     }
   },
   "properties": {
-    "popover": {
-      "name": "popover",
-      "pointer": true,
-      "type": "BCPopover",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "magicWandButton": {
-      "name": "magicWandButton",
+    "invertButton": {
+      "name": "invertButton",
       "pointer": true,
       "type": "NSButton",
       "attributes": [
@@ -268,19 +118,10 @@
         "nonatomic"
       ]
     },
-    "rectSelectionButton": {
-      "name": "rectSelectionButton",
+    "cropButton": {
+      "name": "cropButton",
       "pointer": true,
       "type": "NSButton",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "pickerView": {
-      "name": "pickerView",
-      "pointer": true,
-      "type": "MSModePickerView",
       "attributes": [
         "retain",
         "nonatomic"
@@ -298,14 +139,6 @@
       "name": "hasSelection",
       "pointer": false,
       "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "currentMode": {
-      "name": "currentMode",
-      "pointer": false,
-      "type": "long long",
       "attributes": [
         "nonatomic"
       ]

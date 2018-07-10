@@ -139,6 +139,27 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "extensionsWithMatchingAttributes:synchronously:completion:": {
+      "name": "extensionsWithMatchingAttributes:synchronously:completion:",
+      "bridgedName": "extensionsWithMatchingAttributes_synchronously_completion",
+      "args": [
+        {
+          "name": "extensionsWithMatchingAttributes",
+          "type": "id"
+        },
+        {
+          "name": "synchronously",
+          "type": "BOOL"
+        },
+        {
+          "name": "completion",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "extensionsWithMatchingAttributes:completion:": {
       "name": "extensionsWithMatchingAttributes:completion:",
       "bridgedName": "extensionsWithMatchingAttributes_completion",
@@ -227,6 +248,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "extensionContexts": {
+      "name": "extensionContexts",
+      "bridgedName": "extensionContexts",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_kill:": {
       "name": "_kill:",
       "bridgedName": "_kill",
@@ -270,6 +299,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "newAssertionToBeginUsingPluginWithError:": {
+      "name": "newAssertionToBeginUsingPluginWithError:",
+      "bridgedName": "newAssertionToBeginUsingPluginWithError",
+      "args": [
+        {
+          "name": "newAssertionToBeginUsingPluginWithError",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_safelyBeginUsing_withAssertion:": {
       "name": "_safelyBeginUsing_withAssertion:",
       "bridgedName": "_safelyBeginUsing_withAssertion",
@@ -283,12 +325,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_safelyBeginUsing_withAssertion_onSafeQueue:": {
-      "name": "_safelyBeginUsing_withAssertion_onSafeQueue:",
-      "bridgedName": "_safelyBeginUsing_withAssertion_onSafeQueue",
+    "_safelyBeginUsingSynchronously:withAssertion_onSafeQueue:": {
+      "name": "_safelyBeginUsingSynchronously:withAssertion_onSafeQueue:",
+      "bridgedName": "_safelyBeginUsingSynchronously_withAssertion_onSafeQueue",
       "args": [
         {
-          "name": "_safelyBeginUsing_withAssertion_onSafeQueue",
+          "name": "_safelyBeginUsingSynchronously",
+          "type": "BOOL"
+        },
+        {
+          "name": "withAssertion_onSafeQueue",
           "type": "CDUnknownBlockType"
         }
       ],
@@ -524,6 +570,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "beginExtensionRequestWithInputItems:error:": {
+      "name": "beginExtensionRequestWithInputItems:error:",
+      "bridgedName": "beginExtensionRequestWithInputItems_error",
+      "args": [
+        {
+          "name": "beginExtensionRequestWithInputItems",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "beginExtensionRequestWithInputItems:completion:": {
       "name": "beginExtensionRequestWithInputItems:completion:",
       "bridgedName": "beginExtensionRequestWithInputItems_completion",
@@ -538,6 +601,27 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginExtensionRequestWithInputItems:listenerEndpoint:error:": {
+      "name": "beginExtensionRequestWithInputItems:listenerEndpoint:error:",
+      "bridgedName": "beginExtensionRequestWithInputItems_listenerEndpoint_error",
+      "args": [
+        {
+          "name": "beginExtensionRequestWithInputItems",
+          "type": "id"
+        },
+        {
+          "name": "listenerEndpoint",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -559,6 +643,56 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reallyBeginExtensionRequestWithContext:extensionServiceConnection:listenerEndpoint:synchronously:completion:": {
+      "name": "_reallyBeginExtensionRequestWithContext:extensionServiceConnection:listenerEndpoint:synchronously:completion:",
+      "bridgedName": "_reallyBeginExtensionRequestWithContext_extensionServiceConnection_listenerEndpoint_synchronously_completion",
+      "args": [
+        {
+          "name": "_reallyBeginExtensionRequestWithContext",
+          "type": "id"
+        },
+        {
+          "name": "extensionServiceConnection",
+          "type": "id"
+        },
+        {
+          "name": "listenerEndpoint",
+          "type": "id"
+        },
+        {
+          "name": "synchronously",
+          "type": "BOOL"
+        },
+        {
+          "name": "completion",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newExtensionContextAndGetConnection:assertion:inputItems:": {
+      "name": "_newExtensionContextAndGetConnection:assertion:inputItems:",
+      "bridgedName": "_newExtensionContextAndGetConnection_assertion_inputItems",
+      "args": [
+        {
+          "name": "_newExtensionContextAndGetConnection",
+          "type": "id *"
+        },
+        {
+          "name": "assertion",
+          "type": "id"
+        },
+        {
+          "name": "inputItems",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -689,6 +823,14 @@
     }
   },
   "properties": {
+    "_safePluginQueue": {
+      "name": "_safePluginQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain"
+      ]
+    },
     "connectionUUID": {
       "name": "connectionUUID",
       "pointer": true,
@@ -745,6 +887,22 @@
       "name": "_requestPostCompletionBlock",
       "pointer": false,
       "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "_localizedShortName": {
+      "name": "_localizedShortName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "_localizedName": {
+      "name": "_localizedName",
+      "pointer": true,
+      "type": "NSString",
       "attributes": [
         "copy"
       ]

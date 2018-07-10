@@ -1,5 +1,6 @@
 {
   "imports": [
+    "NSGestureRecognizerDelegate.h",
     "NSScrollerImpPairDelegate.h",
     "NSTextFinderBarContainer.h"
   ],
@@ -16,6 +17,7 @@
   "extends": "NSView",
   "interfaces": [
     "NSScrollerImpPairDelegate",
+    "NSGestureRecognizerDelegate",
     "NSTextFinderBarContainer"
   ],
   "methods": {
@@ -453,14 +455,6 @@
     "_contentView": {
       "name": "_contentView",
       "bridgedName": "_contentView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_headerClipView": {
-      "name": "_headerClipView",
-      "bridgedName": "_headerClipView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -1444,14 +1438,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_corneViewIsSmallSize": {
-      "name": "_corneViewIsSmallSize",
-      "bridgedName": "_corneViewIsSmallSize",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_removeCornerViewForLayer": {
       "name": "_removeCornerViewForLayer",
       "bridgedName": "_removeCornerViewForLayer",
@@ -1550,30 +1536,6 @@
     "_documentViewWantsHeaderView": {
       "name": "_documentViewWantsHeaderView",
       "bridgedName": "_documentViewWantsHeaderView",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateGrowBoxForWindowFrameChange": {
-      "name": "_updateGrowBoxForWindowFrameChange",
-      "bridgedName": "_updateGrowBoxForWindowFrameChange",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_fixGrowBox": {
-      "name": "_fixGrowBox",
-      "bridgedName": "_fixGrowBox",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_ownsWindowGrowBox": {
-      "name": "_ownsWindowGrowBox",
-      "bridgedName": "_ownsWindowGrowBox",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -1850,19 +1812,6 @@
         {
           "name": "fromView",
           "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_desiredLayerSizeMeritsTiledBackingLayer:": {
-      "name": "_desiredLayerSizeMeritsTiledBackingLayer:",
-      "bridgedName": "_desiredLayerSizeMeritsTiledBackingLayer",
-      "args": [
-        {
-          "name": "_desiredLayerSizeMeritsTiledBackingLayer",
-          "type": "struct CGSize"
         }
       ],
       "returns": "BOOL",
@@ -2233,15 +2182,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_viewDidChangeAppearance:": {
-      "name": "_viewDidChangeAppearance:",
-      "bridgedName": "_viewDidChangeAppearance",
-      "args": [
-        {
-          "name": "_viewDidChangeAppearance",
-          "type": "id"
-        }
-      ],
+    "viewDidChangeEffectiveAppearance": {
+      "name": "viewDidChangeEffectiveAppearance",
+      "bridgedName": "viewDidChangeEffectiveAppearance",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -2750,27 +2694,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_lineBorderColor": {
-      "name": "_lineBorderColor",
-      "bridgedName": "_lineBorderColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setLineBorderColor:": {
-      "name": "_setLineBorderColor:",
-      "bridgedName": "_setLineBorderColor",
-      "args": [
-        {
-          "name": "_setLineBorderColor",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "scrollerImpPair:updateScrollerStyleForNewRecommendedScrollerStyle:": {
       "name": "scrollerImpPair:updateScrollerStyleForNewRecommendedScrollerStyle:",
       "bridgedName": "scrollerImpPair_updateScrollerStyleForNewRecommendedScrollerStyle",
@@ -3068,6 +2991,14 @@
         "retain"
       ]
     },
+    "_headerClipView": {
+      "name": "_headerClipView",
+      "pointer": true,
+      "type": "NSClipView",
+      "attributes": [
+        "readonly"
+      ]
+    },
     "horizontalScroller": {
       "name": "horizontalScroller",
       "pointer": true,
@@ -3146,6 +3077,16 @@
       "type": "NSRulerView",
       "attributes": [
         "retain"
+      ]
+    },
+    "_lineBorderColor": {
+      "name": "_lineBorderColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "retain",
+        "nonatomic",
+        "setter=_setLineBorderColor:"
       ]
     },
     "debugDescription": {

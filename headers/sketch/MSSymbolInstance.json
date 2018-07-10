@@ -3,6 +3,7 @@
     "_MSSymbolInstance.h"
   ],
   "classes": [
+    "NSArray",
     "NSDictionary",
     "NSSet"
   ],
@@ -11,23 +12,6 @@
   "extends": "_MSSymbolInstance",
   "interfaces": [],
   "methods": {
-    "updateInstances:preservingOverridesInBlock:": {
-      "name": "updateInstances:preservingOverridesInBlock:",
-      "bridgedName": "updateInstances_preservingOverridesInBlock",
-      "args": [
-        {
-          "name": "updateInstances",
-          "type": "id"
-        },
-        {
-          "name": "preservingOverridesInBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "keyPathsForValuesAffectingPreviewImages": {
       "name": "keyPathsForValuesAffectingPreviewImages",
       "bridgedName": "keyPathsForValuesAffectingPreviewImages",
@@ -35,6 +19,19 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "invalidateIfAffectedBySymbolMastersIn:": {
+      "name": "invalidateIfAffectedBySymbolMastersIn:",
+      "bridgedName": "invalidateIfAffectedBySymbolMastersIn",
+      "args": [
+        {
+          "name": "invalidateIfAffectedBySymbolMastersIn",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "applyOverride:toPoint:": {
       "name": "applyOverride:toPoint:",
@@ -285,49 +282,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canInsertIntoGroupWithoutInfiniteRecursion:visitedSymbols:symbolInstancesBySymbolID:": {
-      "name": "canInsertIntoGroupWithoutInfiniteRecursion:visitedSymbols:symbolInstancesBySymbolID:",
-      "bridgedName": "canInsertIntoGroupWithoutInfiniteRecursion_visitedSymbols_symbolInstancesBySymbolID",
-      "args": [
-        {
-          "name": "canInsertIntoGroupWithoutInfiniteRecursion",
-          "type": "id"
-        },
-        {
-          "name": "visitedSymbols",
-          "type": "id"
-        },
-        {
-          "name": "symbolInstancesBySymbolID",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "canInsertIntoGroupWithoutInfiniteRecursion:symbolInstancesBySymbolID:": {
-      "name": "canInsertIntoGroupWithoutInfiniteRecursion:symbolInstancesBySymbolID:",
-      "bridgedName": "canInsertIntoGroupWithoutInfiniteRecursion_symbolInstancesBySymbolID",
-      "args": [
-        {
-          "name": "canInsertIntoGroupWithoutInfiniteRecursion",
-          "type": "id"
-        },
-        {
-          "name": "symbolInstancesBySymbolID",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "numberOfVisibleCells": {
       "name": "numberOfVisibleCells",
       "bridgedName": "numberOfVisibleCells",
       "args": [],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidateImmutableObject": {
+      "name": "invalidateImmutableObject",
+      "bridgedName": "invalidateImmutableObject",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -370,6 +337,19 @@
       "bridgedName": "symbolMaster",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithImmutableModelObject:": {
+      "name": "performInitWithImmutableModelObject:",
+      "bridgedName": "performInitWithImmutableModelObject",
+      "args": [
+        {
+          "name": "performInitWithImmutableModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -451,14 +431,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "availableOverrides": {
-      "name": "availableOverrides",
-      "bridgedName": "availableOverrides",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "overridePoints": {
       "name": "overridePoints",
       "bridgedName": "overridePoints",
@@ -482,6 +454,14 @@
     }
   },
   "properties": {
+    "masterRefreshCounter": {
+      "name": "masterRefreshCounter",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "influencingSymbolIDs": {
       "name": "influencingSymbolIDs",
       "pointer": true,
@@ -497,6 +477,15 @@
       "type": "NSDictionary",
       "attributes": [
         "copy",
+        "nonatomic"
+      ]
+    },
+    "availableOverrides": {
+      "name": "availableOverrides",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

@@ -1,23 +1,19 @@
 {
   "imports": [
     "CHWindowController.h",
-    "WebFrameLoadDelegate.h",
-    "WebPolicyDelegate.h",
-    "WebResourceLoadDelegate.h"
+    "WKNavigationDelegate.h"
   ],
   "classes": [
     "NSButton",
     "NSString",
     "NSURL",
-    "WebView"
+    "WKWebView"
   ],
   "protocol": false,
   "className": "MSNewsTriggerWindowController",
   "extends": "CHWindowController",
   "interfaces": [
-    "WebFrameLoadDelegate",
-    "WebPolicyDelegate",
-    "WebResourceLoadDelegate"
+    "WKNavigationDelegate"
   ],
   "methods": {
     ".cxx_destruct": {
@@ -28,38 +24,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "webView:resource:willSendRequest:redirectResponse:fromDataSource:": {
-      "name": "webView:resource:willSendRequest:redirectResponse:fromDataSource:",
-      "bridgedName": "webView_resource_willSendRequest_redirectResponse_fromDataSource",
-      "args": [
-        {
-          "name": "webView",
-          "type": "id"
-        },
-        {
-          "name": "resource",
-          "type": "id"
-        },
-        {
-          "name": "willSendRequest",
-          "type": "id"
-        },
-        {
-          "name": "redirectResponse",
-          "type": "id"
-        },
-        {
-          "name": "fromDataSource",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "webView:decidePolicyForNavigationAction:request:frame:decisionListener:": {
-      "name": "webView:decidePolicyForNavigationAction:request:frame:decisionListener:",
-      "bridgedName": "webView_decidePolicyForNavigationAction_request_frame_decisionListener",
+    "webView:decidePolicyForNavigationAction:decisionHandler:": {
+      "name": "webView:decidePolicyForNavigationAction:decisionHandler:",
+      "bridgedName": "webView_decidePolicyForNavigationAction_decisionHandler",
       "args": [
         {
           "name": "webView",
@@ -70,32 +37,24 @@
           "type": "id"
         },
         {
-          "name": "request",
-          "type": "id"
-        },
-        {
-          "name": "frame",
-          "type": "id"
-        },
-        {
-          "name": "decisionListener",
-          "type": "id"
+          "name": "decisionHandler",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "webView:didFinishLoadForFrame:": {
-      "name": "webView:didFinishLoadForFrame:",
-      "bridgedName": "webView_didFinishLoadForFrame",
+    "webView:didCommitNavigation:": {
+      "name": "webView:didCommitNavigation:",
+      "bridgedName": "webView_didCommitNavigation",
       "args": [
         {
           "name": "webView",
           "type": "id"
         },
         {
-          "name": "didFinishLoadForFrame",
+          "name": "didCommitNavigation",
           "type": "id"
         }
       ],
@@ -132,14 +91,6 @@
     "windowDidLoad": {
       "name": "windowDidLoad",
       "bridgedName": "windowDidLoad",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -183,7 +134,7 @@
     "webView": {
       "name": "webView",
       "pointer": true,
-      "type": "WebView",
+      "type": "WKWebView",
       "attributes": [
         "nonatomic"
       ]

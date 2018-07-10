@@ -1,14 +1,21 @@
 {
-  "imports": [],
+  "imports": [
+    "_NSTouchBarItemLayoutWrapper.h"
+  ],
   "classes": [
     "NSMutableArray",
+    "NSStackView",
+    "NSString",
+    "NSToolbar",
     "NSToolbarItem",
     "NSToolbarView"
   ],
   "protocol": false,
   "className": "NSToolbarItemViewer",
   "extends": "NSView",
-  "interfaces": [],
+  "interfaces": [
+    "_NSTouchBarItemLayoutWrapper"
+  ],
   "methods": {
     "_toolbarView": {
       "name": "_toolbarView",
@@ -21,6 +28,43 @@
     "_menuFormRepresentationChanged": {
       "name": "_menuFormRepresentationChanged",
       "bridgedName": "_menuFormRepresentationChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraintsDidChangeInEngine:": {
+      "name": "constraintsDidChangeInEngine:",
+      "bridgedName": "constraintsDidChangeInEngine",
+      "args": [
+        {
+          "name": "constraintsDidChangeInEngine",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scalableMaxIconSize": {
+      "name": "_scalableMaxIconSize",
+      "bridgedName": "_scalableMaxIconSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scalableMinIconSize": {
+      "name": "_scalableMinIconSize",
+      "bridgedName": "_scalableMinIconSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateMeasuredSizes": {
+      "name": "_updateMeasuredSizes",
+      "bridgedName": "_updateMeasuredSizes",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -82,30 +126,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_isSizedSmallerThanMinWidth": {
-      "name": "_isSizedSmallerThanMinWidth",
-      "bridgedName": "_isSizedSmallerThanMinWidth",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_widthIsFlexible": {
-      "name": "_widthIsFlexible",
-      "bridgedName": "_widthIsFlexible",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_heightIsFlexible": {
-      "name": "_heightIsFlexible",
-      "bridgedName": "_heightIsFlexible",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_needsViewerLayout": {
       "name": "_needsViewerLayout",
       "bridgedName": "_needsViewerLayout",
@@ -160,6 +180,19 @@
       "name": "_beginToolbarEditingMode",
       "bridgedName": "_beginToolbarEditingMode",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateJiggle:": {
+      "name": "_updateJiggle:",
+      "bridgedName": "_updateJiggle",
+      "args": [
+        {
+          "name": "_updateJiggle",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -571,14 +604,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "description": {
-      "name": "description",
-      "bridgedName": "description",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "acceptsFirstMouse:": {
       "name": "acceptsFirstMouse:",
       "bridgedName": "acceptsFirstMouse",
@@ -767,22 +792,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_useSquareToolbarSelectionHighlight": {
-      "name": "_useSquareToolbarSelectionHighlight",
-      "bridgedName": "_useSquareToolbarSelectionHighlight",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_useLeopardToolbarSelectionHighlight": {
-      "name": "_useLeopardToolbarSelectionHighlight",
-      "bridgedName": "_useLeopardToolbarSelectionHighlight",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_shouldDrawSelectionIndicator": {
       "name": "_shouldDrawSelectionIndicator",
       "bridgedName": "_shouldDrawSelectionIndicator",
@@ -832,64 +841,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "destination": {
-      "name": "destination",
-      "bridgedName": "destination",
-      "args": [],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isInMotion": {
-      "name": "isInMotion",
-      "bridgedName": "isInMotion",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "stepTowardsDestinationWithCurrentTime:": {
-      "name": "stepTowardsDestinationWithCurrentTime:",
-      "bridgedName": "stepTowardsDestinationWithCurrentTime",
-      "args": [
-        {
-          "name": "stepTowardsDestinationWithCurrentTime",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setDestinationRect:targetIconWidth:travelTimeInSeconds:": {
-      "name": "setDestinationRect:targetIconWidth:travelTimeInSeconds:",
-      "bridgedName": "setDestinationRect_targetIconWidth_travelTimeInSeconds",
-      "args": [
-        {
-          "name": "setDestinationRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "targetIconWidth",
-          "type": "double"
-        },
-        {
-          "name": "travelTimeInSeconds",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_teardownMotionData": {
-      "name": "_teardownMotionData",
-      "bridgedName": "_teardownMotionData",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setFrameOrigin:": {
       "name": "setFrameOrigin:",
       "bridgedName": "setFrameOrigin",
@@ -913,40 +864,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setFrameAssumingLTR:": {
-      "name": "_setFrameAssumingLTR:",
-      "bridgedName": "_setFrameAssumingLTR",
-      "args": [
-        {
-          "name": "_setFrameAssumingLTR",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setFrameOriginAssumingLTR:": {
-      "name": "_setFrameOriginAssumingLTR:",
-      "bridgedName": "_setFrameOriginAssumingLTR",
-      "args": [
-        {
-          "name": "_setFrameOriginAssumingLTR",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_frameAssumingLTR": {
-      "name": "_frameAssumingLTR",
-      "bridgedName": "_frameAssumingLTR",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1013,87 +930,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "minIconSize": {
-      "name": "minIconSize",
-      "bridgedName": "minIconSize",
-      "args": [],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "minViewerSize": {
       "name": "minViewerSize",
       "bridgedName": "minViewerSize",
       "args": [],
       "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "maxSize": {
-      "name": "maxSize",
-      "bridgedName": "maxSize",
-      "args": [],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layoutToFitInIconWidth:": {
-      "name": "layoutToFitInIconWidth:",
-      "bridgedName": "layoutToFitInIconWidth",
-      "args": [
-        {
-          "name": "layoutToFitInIconWidth",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "frameWidthForIconWidth:": {
-      "name": "frameWidthForIconWidth:",
-      "bridgedName": "frameWidthForIconWidth",
-      "args": [
-        {
-          "name": "frameWidthForIconWidth",
-          "type": "double"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layoutToFitInViewerFrameHeight:": {
-      "name": "layoutToFitInViewerFrameHeight:",
-      "bridgedName": "layoutToFitInViewerFrameHeight",
-      "args": [
-        {
-          "name": "layoutToFitInViewerFrameHeight",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layoutToFitInMinimumIconSizeInWindow:": {
-      "name": "layoutToFitInMinimumIconSizeInWindow:",
-      "bridgedName": "layoutToFitInMinimumIconSizeInWindow",
-      "args": [
-        {
-          "name": "layoutToFitInMinimumIconSizeInWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layoutToFitInMinimumIconSize": {
-      "name": "layoutToFitInMinimumIconSize",
-      "bridgedName": "layoutToFitInMinimumIconSize",
-      "args": [],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1126,6 +967,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateConstraints": {
+      "name": "updateConstraints",
+      "bridgedName": "updateConstraints",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_configureLabelCellStringValue": {
       "name": "_configureLabelCellStringValue",
       "bridgedName": "_configureLabelCellStringValue",
@@ -1150,9 +999,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_computeLayoutInfoForIconViewSize:frameSize:iconFrame:labelFrame:": {
-      "name": "_computeLayoutInfoForIconViewSize:frameSize:iconFrame:labelFrame:",
-      "bridgedName": "_computeLayoutInfoForIconViewSize_frameSize_iconFrame_labelFrame",
+    "_computeLayoutInfoForIconViewSize:frameSize:": {
+      "name": "_computeLayoutInfoForIconViewSize:frameSize:",
+      "bridgedName": "_computeLayoutInfoForIconViewSize_frameSize",
       "args": [
         {
           "name": "_computeLayoutInfoForIconViewSize",
@@ -1161,14 +1010,6 @@
         {
           "name": "frameSize",
           "type": "struct CGSize *"
-        },
-        {
-          "name": "iconFrame",
-          "type": "struct CGRect *"
-        },
-        {
-          "name": "labelFrame",
-          "type": "struct CGRect *"
         }
       ],
       "returns": "void",
@@ -1278,11 +1119,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_backgroundColorForFontSmoothing": {
-      "name": "_backgroundColorForFontSmoothing",
-      "bridgedName": "_backgroundColorForFontSmoothing",
+    "_endSubviewsBeingBorrowed": {
+      "name": "_endSubviewsBeingBorrowed",
+      "bridgedName": "_endSubviewsBeingBorrowed",
       "args": [],
-      "returns": "id",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginSubviewsBeingBorrowed": {
+      "name": "_beginSubviewsBeingBorrowed",
+      "bridgedName": "_beginSubviewsBeingBorrowed",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1735,28 +1584,102 @@
     }
   },
   "properties": {
-    "forcibleFrameWidthForLayout": {
-      "name": "forcibleFrameWidthForLayout",
-      "pointer": false,
-      "type": "double",
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
       "attributes": [
-        "nonatomic"
+        "readonly",
+        "copy"
       ]
     },
-    "iconWidthForLayout": {
-      "name": "iconWidthForLayout",
+    "preferredTrailingPosition": {
+      "name": "preferredTrailingPosition",
       "pointer": false,
       "type": "double",
       "attributes": [
-        "nonatomic"
+        "readonly"
       ]
     },
-    "xOriginForLayout": {
-      "name": "xOriginForLayout",
+    "isSpace": {
+      "name": "isSpace",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "minSize": {
+      "name": "minSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "maxSize": {
+      "name": "maxSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "contentClippingSize": {
+      "name": "contentClippingSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "itemPosition": {
+      "name": "itemPosition",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "preferredSize": {
+      "name": "preferredSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "preferredZOrder": {
+      "name": "preferredZOrder",
       "pointer": false,
       "type": "double",
       "attributes": [
-        "nonatomic"
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

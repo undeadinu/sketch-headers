@@ -10,6 +10,45 @@
   "extends": "_MSRectangleShape",
   "interfaces": [],
   "methods": {
+    "validateComponentString:": {
+      "name": "validateComponentString:",
+      "bridgedName": "validateComponentString",
+      "args": [
+        {
+          "name": "validateComponentString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "componentStringWithValues:": {
+      "name": "componentStringWithValues:",
+      "bridgedName": "componentStringWithValues",
+      "args": [
+        {
+          "name": "componentStringWithValues",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "looksLikeComponentString:": {
+      "name": "looksLikeComponentString:",
+      "bridgedName": "looksLikeComponentString",
+      "args": [
+        {
+          "name": "looksLikeComponentString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "useSmoothCorners": {
       "name": "useSmoothCorners",
       "bridgedName": "useSmoothCorners",
@@ -95,11 +134,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "inspectorViewControllerNames": {
-      "name": "inspectorViewControllerNames",
-      "bridgedName": "inspectorViewControllerNames",
+    "inspectorViewControllers": {
+      "name": "inspectorViewControllers",
+      "bridgedName": "inspectorViewControllers",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetPointsBasedOnUserInteraction": {
+      "name": "resetPointsBasedOnUserInteraction",
+      "bridgedName": "resetPointsBasedOnUserInteraction",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -169,9 +216,44 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "validateProposedCornerRadiusWithFloat:": {
+      "name": "validateProposedCornerRadiusWithFloat:",
+      "bridgedName": "validateProposedCornerRadiusWithFloat",
+      "args": [
+        {
+          "name": "validateProposedCornerRadiusWithFloat",
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateProposedCornerRadiusSizeWithString:": {
+      "name": "validateProposedCornerRadiusSizeWithString:",
+      "bridgedName": "validateProposedCornerRadiusSizeWithString",
+      "args": [
+        {
+          "name": "validateProposedCornerRadiusSizeWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "maximumAllowedRadius": {
+      "name": "maximumAllowedRadius",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "smoothCornersAllowed": {
       "name": "smoothCornersAllowed",
       "pointer": false,

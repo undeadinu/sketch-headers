@@ -321,14 +321,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_permitDarkenedTextForDisabled": {
-      "name": "_permitDarkenedTextForDisabled",
-      "bridgedName": "_permitDarkenedTextForDisabled",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_textDimsWhenDisabled": {
       "name": "_textDimsWhenDisabled",
       "bridgedName": "_textDimsWhenDisabled",
@@ -337,30 +329,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateCoreUIOptions:withContentAppearanceInView:": {
-      "name": "_updateCoreUIOptions:withContentAppearanceInView:",
-      "bridgedName": "_updateCoreUIOptions_withContentAppearanceInView",
-      "args": [
-        {
-          "name": "_updateCoreUIOptions",
-          "type": "id"
-        },
-        {
-          "name": "withContentAppearanceInView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_effectiveBackgroundStyleInView:": {
-      "name": "_effectiveBackgroundStyleInView:",
-      "bridgedName": "_effectiveBackgroundStyleInView",
+    "_effectiveBackgroundStyleInView:isTemplate:": {
+      "name": "_effectiveBackgroundStyleInView:isTemplate:",
+      "bridgedName": "_effectiveBackgroundStyleInView_isTemplate",
       "args": [
         {
           "name": "_effectiveBackgroundStyleInView",
           "type": "id"
+        },
+        {
+          "name": "isTemplate",
+          "type": "BOOL"
         }
       ],
       "returns": "int",
@@ -372,6 +351,19 @@
       "bridgedName": "interiorBackgroundStyle",
       "args": [],
       "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interiorContentValueStateInView:": {
+      "name": "_interiorContentValueStateInView:",
+      "bridgedName": "_interiorContentValueStateInView",
+      "args": [
+        {
+          "name": "_interiorContentValueStateInView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -515,6 +507,35 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_bezelLayer": {
+      "name": "_bezelLayer",
+      "bridgedName": "_bezelLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateBezelInLayer:withFrame:inView:": {
+      "name": "_updateBezelInLayer:withFrame:inView:",
+      "bridgedName": "_updateBezelInLayer_withFrame_inView",
+      "args": [
+        {
+          "name": "_updateBezelInLayer",
+          "type": "id"
+        },
+        {
+          "name": "withFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setBackgroundStyle:": {
       "name": "setBackgroundStyle:",
       "bridgedName": "setBackgroundStyle",
@@ -541,9 +562,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_invalidateTextLayerIfNeeded": {
-      "name": "_invalidateTextLayerIfNeeded",
-      "bridgedName": "_invalidateTextLayerIfNeeded",
+    "_invalidateCachedLineRef": {
+      "name": "_invalidateCachedLineRef",
+      "bridgedName": "_invalidateCachedLineRef",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -555,19 +576,6 @@
       "args": [
         {
           "name": "_isEditingInView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "textLayerNeedsLinearMaskOverlayForFontSmoothing:": {
-      "name": "textLayerNeedsLinearMaskOverlayForFontSmoothing:",
-      "bridgedName": "textLayerNeedsLinearMaskOverlayForFontSmoothing",
-      "args": [
-        {
-          "name": "textLayerNeedsLinearMaskOverlayForFontSmoothing",
           "type": "id"
         }
       ],
@@ -593,27 +601,6 @@
         }
       ],
       "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setDrawHandlerDelegate:": {
-      "name": "_setDrawHandlerDelegate:",
-      "bridgedName": "_setDrawHandlerDelegate",
-      "args": [
-        {
-          "name": "_setDrawHandlerDelegate",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawHandlerDelegate": {
-      "name": "_drawHandlerDelegate",
-      "bridgedName": "_drawHandlerDelegate",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -702,48 +689,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_reallyDrawsBackground": {
-      "name": "_reallyDrawsBackground",
-      "bridgedName": "_reallyDrawsBackground",
+    "_fillsWithBackgroundColor": {
+      "name": "_fillsWithBackgroundColor",
+      "bridgedName": "_fillsWithBackgroundColor",
       "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_hasOpaqueContentBoundsForFrame:inView:includeFocus:": {
-      "name": "_hasOpaqueContentBoundsForFrame:inView:includeFocus:",
-      "bridgedName": "_hasOpaqueContentBoundsForFrame_inView_includeFocus",
-      "args": [
-        {
-          "name": "_hasOpaqueContentBoundsForFrame",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "inView",
-          "type": "id"
-        },
-        {
-          "name": "includeFocus",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_hasOpaqueContentBoundsForFrame:coreUIOptions:": {
-      "name": "_hasOpaqueContentBoundsForFrame:coreUIOptions:",
-      "bridgedName": "_hasOpaqueContentBoundsForFrame_coreUIOptions",
-      "args": [
-        {
-          "name": "_hasOpaqueContentBoundsForFrame",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "coreUIOptions",
-          "type": "struct __CFDictionary *"
-        }
-      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -825,35 +774,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilterForControlView:": {
-      "name": "_vibrancyFilterForControlView:",
-      "bridgedName": "_vibrancyFilterForControlView",
-      "args": [
-        {
-          "name": "_vibrancyFilterForControlView",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_allowsVibrancyForControlView:": {
-      "name": "_allowsVibrancyForControlView:",
-      "bridgedName": "_allowsVibrancyForControlView",
-      "args": [
-        {
-          "name": "_allowsVibrancyForControlView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_coreUIDrawOptionsWithFrame:inView:includeFocus:": {
-      "name": "_coreUIDrawOptionsWithFrame:inView:includeFocus:",
-      "bridgedName": "_coreUIDrawOptionsWithFrame_inView_includeFocus",
+    "_coreUIDrawOptionsWithFrame:inView:includeFocus:maskOnly:": {
+      "name": "_coreUIDrawOptionsWithFrame:inView:includeFocus:maskOnly:",
+      "bridgedName": "_coreUIDrawOptionsWithFrame_inView_includeFocus_maskOnly",
       "args": [
         {
           "name": "_coreUIDrawOptionsWithFrame",
@@ -865,6 +788,10 @@
         },
         {
           "name": "includeFocus",
+          "type": "BOOL"
+        },
+        {
+          "name": "maskOnly",
           "type": "BOOL"
         }
       ],
@@ -1092,14 +1019,6 @@
     "acceptsFirstResponder": {
       "name": "acceptsFirstResponder",
       "bridgedName": "acceptsFirstResponder",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_acceptsFirstResponderWhenSelectableWithFullKeyboardAccess": {
-      "name": "_acceptsFirstResponderWhenSelectableWithFullKeyboardAccess",
-      "bridgedName": "_acceptsFirstResponderWhenSelectableWithFullKeyboardAccess",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",

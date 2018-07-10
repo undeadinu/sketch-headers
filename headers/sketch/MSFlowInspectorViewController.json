@@ -2,7 +2,8 @@
   "imports": [
     "NSViewController.h",
     "MSFlowMenuBuilderTarget.h",
-    "MSInspectorSection.h"
+    "MSInspectorSection.h",
+    "MSLayerChangeObserver.h"
   ],
   "classes": [
     "NSArray",
@@ -15,6 +16,7 @@
   "className": "MSFlowInspectorViewController",
   "extends": "NSViewController",
   "interfaces": [
+    "MSLayerChangeObserver",
     "MSInspectorSection",
     "MSFlowMenuBuilderTarget"
   ],
@@ -75,6 +77,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "validateFixLayersToViewportButton": {
+      "name": "validateFixLayersToViewportButton",
+      "bridgedName": "validateFixLayersToViewportButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidChange:": {
+      "name": "layerDidChange:",
+      "bridgedName": "layerDidChange",
+      "args": [
+        {
+          "name": "layerDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "validateFlowAnimationButtonForFlow:": {
       "name": "validateFlowAnimationButtonForFlow:",
       "bridgedName": "validateFlowAnimationButtonForFlow",
@@ -93,6 +116,14 @@
       "bridgedName": "views",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowFixedLayerView": {
+      "name": "shouldShowFixedLayerView",
+      "bridgedName": "shouldShowFixedLayerView",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -226,6 +257,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "viewDidLoad": {
       "name": "viewDidLoad",
       "bridgedName": "viewDidLoad",
@@ -236,6 +275,14 @@
     }
   },
   "properties": {
+    "fixToViewportButton": {
+      "name": "fixToViewportButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "followFlowButton": {
       "name": "followFlowButton",
       "pointer": true,
@@ -313,6 +360,15 @@
       "pointer": true,
       "type": "__weak NSPopUpButton",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "fixLayerView": {
+      "name": "fixLayerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
         "nonatomic"
       ]
     },

@@ -8,13 +8,30 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
-    "_copyObserversOfObject:": {
-      "name": "_copyObserversOfObject:",
-      "bridgedName": "_copyObserversOfObject",
+    "destroyObserverListForObject:": {
+      "name": "destroyObserverListForObject:",
+      "bridgedName": "destroyObserverListForObject",
+      "args": [
+        {
+          "name": "destroyObserverListForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_copyObserversOfObject:creatingIfAbsent:": {
+      "name": "_copyObserversOfObject:creatingIfAbsent:",
+      "bridgedName": "_copyObserversOfObject_creatingIfAbsent",
       "args": [
         {
           "name": "_copyObserversOfObject",
           "type": "id"
+        },
+        {
+          "name": "creatingIfAbsent",
+          "type": "BOOL"
         }
       ],
       "returns": "id",
@@ -79,6 +96,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "removeBlockSink:observation:": {
+      "name": "removeBlockSink:observation:",
+      "bridgedName": "removeBlockSink_observation",
+      "args": [
+        {
+          "name": "removeBlockSink",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "observation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "removeObserver:observation:": {
       "name": "removeObserver:observation:",
       "bridgedName": "removeObserver_observation",
@@ -115,6 +149,27 @@
         {
           "name": "toObservableObject",
           "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addBlockSink:toObservableObject:forTag:": {
+      "name": "addBlockSink:toObservableObject:forTag:",
+      "bridgedName": "addBlockSink_toObservableObject_forTag",
+      "args": [
+        {
+          "name": "addBlockSink",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "toObservableObject",
+          "type": "id"
+        },
+        {
+          "name": "forTag",
+          "type": "int"
         }
       ],
       "returns": "id",

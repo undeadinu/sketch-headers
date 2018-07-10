@@ -1,17 +1,18 @@
 {
   "imports": [
     "NSObject.h",
+    "MSAlignmentEngineDelegate.h",
     "MSSelectVectorHandleGestureRecognizerDelegate.h"
   ],
   "classes": [
+    "MSAlignmentEngine",
+    "MSAlignmentEngineResult",
     "MSClickGestureRecognizer",
     "MSContentDrawView",
     "MSDragHandleGestureRecognizer",
     "MSDragSegmentGestureRecognizer",
     "MSDragToSelectGestureRecognizer",
     "MSPathController",
-    "MSPointSnapper",
-    "MSPointSnappingResult",
     "MSSelectVectorHandleGestureRecognizer",
     "MSShapeEditingBehavior",
     "MSShapeEventHandler",
@@ -26,7 +27,8 @@
   "className": "MSVectorCanvas",
   "extends": "NSObject",
   "interfaces": [
-    "MSSelectVectorHandleGestureRecognizerDelegate"
+    "MSSelectVectorHandleGestureRecognizerDelegate",
+    "MSAlignmentEngineDelegate"
   ],
   "methods": {
     ".cxx_destruct": {
@@ -34,6 +36,23 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentEngine:alignPoint:": {
+      "name": "alignmentEngine:alignPoint:",
+      "bridgedName": "alignmentEngine_alignPoint",
+      "args": [
+        {
+          "name": "alignmentEngine",
+          "type": "id"
+        },
+        {
+          "name": "alignPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -358,6 +377,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "adjustHandle:toValue:onAxis:": {
+      "name": "adjustHandle:toValue:onAxis:",
+      "bridgedName": "adjustHandle_toValue_onAxis",
+      "args": [
+        {
+          "name": "adjustHandle",
+          "type": "id"
+        },
+        {
+          "name": "toValue",
+          "type": "double"
+        },
+        {
+          "name": "onAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "adjustHandlesToValue:onAxis:": {
       "name": "adjustHandlesToValue:onAxis:",
       "bridgedName": "adjustHandlesToValue_onAxis",
@@ -577,16 +617,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addTargetForHandleAtLocation:shape:": {
-      "name": "addTargetForHandleAtLocation:shape:",
-      "bridgedName": "addTargetForHandleAtLocation_shape",
+    "includePointForSnapping:inPathLayer:": {
+      "name": "includePointForSnapping:inPathLayer:",
+      "bridgedName": "includePointForSnapping_inPathLayer",
       "args": [
         {
-          "name": "addTargetForHandleAtLocation",
+          "name": "includePointForSnapping",
           "type": "struct CGPoint"
         },
         {
-          "name": "shape",
+          "name": "inPathLayer",
           "type": "id"
         }
       ],
@@ -594,15 +634,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "prepareSnapperForDragging:": {
-      "name": "prepareSnapperForDragging:",
-      "bridgedName": "prepareSnapperForDragging",
+    "addTargetsToSnapperForDragging:": {
+      "name": "addTargetsToSnapperForDragging:",
+      "bridgedName": "addTargetsToSnapperForDragging",
       "args": [
         {
-          "name": "prepareSnapperForDragging",
+          "name": "addTargetsToSnapperForDragging",
           "type": "BOOL"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareSnapper": {
+      "name": "prepareSnapper",
+      "bridgedName": "prepareSnapper",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -864,10 +912,19 @@
         "nonatomic"
       ]
     },
+    "shapeCenterSnapTargets": {
+      "name": "shapeCenterSnapTargets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
     "snapper": {
       "name": "snapper",
       "pointer": true,
-      "type": "MSPointSnapper",
+      "type": "MSAlignmentEngine",
       "attributes": [
         "retain",
         "nonatomic"
@@ -965,7 +1022,7 @@
     "snaps": {
       "name": "snaps",
       "pointer": true,
-      "type": "MSPointSnappingResult",
+      "type": "MSAlignmentEngineResult",
       "attributes": [
         "copy",
         "nonatomic"

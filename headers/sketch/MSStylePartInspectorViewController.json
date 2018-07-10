@@ -4,6 +4,7 @@
     "MSColorInspectorDelegate.h",
     "MSInspectorSection.h",
     "MSStylePartPreviewButtonDelegate.h",
+    "MSStylePartPreviewButtonDisabledTarget.h",
     "NSPopoverDelegate.h",
     "NSWindowDelegate.h"
   ],
@@ -20,6 +21,7 @@
   "extends": "NSViewController",
   "interfaces": [
     "NSPopoverDelegate",
+    "MSStylePartPreviewButtonDisabledTarget",
     "MSInspectorSection",
     "NSWindowDelegate",
     "MSColorInspectorDelegate",
@@ -180,6 +182,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "stylePartPreviewButtonDisabledAction:": {
+      "name": "stylePartPreviewButtonDisabledAction:",
+      "bridgedName": "stylePartPreviewButtonDisabledAction",
+      "args": [
+        {
+          "name": "stylePartPreviewButtonDisabledAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "previewCellAction:": {
       "name": "previewCellAction:",
       "bridgedName": "previewCellAction",
@@ -218,14 +233,6 @@
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
-      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"

@@ -7,8 +7,8 @@
   "classes": [
     "CAMediaTimingFunction",
     "NSArray",
-    "NSCache",
     "NSDictionary",
+    "NSMutableDictionary",
     "NSSet",
     "NSString",
     "NSTouchBarCustomizableConfiguration",
@@ -208,70 +208,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "minimizeSystemModalFunctionBar:": {
-      "name": "minimizeSystemModalFunctionBar:",
-      "bridgedName": "minimizeSystemModalFunctionBar",
-      "args": [
-        {
-          "name": "minimizeSystemModalFunctionBar",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "dismissSystemModalFunctionBar:": {
-      "name": "dismissSystemModalFunctionBar:",
-      "bridgedName": "dismissSystemModalFunctionBar",
-      "args": [
-        {
-          "name": "dismissSystemModalFunctionBar",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "presentSystemModalFunctionBar:systemTrayItemIdentifier:": {
-      "name": "presentSystemModalFunctionBar:systemTrayItemIdentifier:",
-      "bridgedName": "presentSystemModalFunctionBar_systemTrayItemIdentifier",
-      "args": [
-        {
-          "name": "presentSystemModalFunctionBar",
-          "type": "id"
-        },
-        {
-          "name": "systemTrayItemIdentifier",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "presentSystemModalFunctionBar:placement:systemTrayItemIdentifier:": {
-      "name": "presentSystemModalFunctionBar:placement:systemTrayItemIdentifier:",
-      "bridgedName": "presentSystemModalFunctionBar_placement_systemTrayItemIdentifier",
-      "args": [
-        {
-          "name": "presentSystemModalFunctionBar",
-          "type": "id"
-        },
-        {
-          "name": "placement",
-          "type": "long long"
-        },
-        {
-          "name": "systemTrayItemIdentifier",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "keyPathsForValuesAffectingDefaultItems": {
       "name": "keyPathsForValuesAffectingDefaultItems",
       "bridgedName": "keyPathsForValuesAffectingDefaultItems",
@@ -409,6 +345,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_purgeCacheIfNecessary": {
+      "name": "_purgeCacheIfNecessary",
+      "bridgedName": "_purgeCacheIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_didItemsReallyChange:": {
       "name": "_didItemsReallyChange:",
       "bridgedName": "_didItemsReallyChange",
@@ -469,19 +413,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "minWidthGivenVisualCenterX:": {
-      "name": "minWidthGivenVisualCenterX:",
-      "bridgedName": "minWidthGivenVisualCenterX",
-      "args": [
-        {
-          "name": "minWidthGivenVisualCenterX",
-          "type": "double"
-        }
-      ],
-      "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -552,6 +483,19 @@
       "bridgedName": "_animatorClass",
       "args": [],
       "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minWidthGivenVisualCenterX:": {
+      "name": "minWidthGivenVisualCenterX:",
+      "bridgedName": "minWidthGivenVisualCenterX",
+      "args": [
+        {
+          "name": "minWidthGivenVisualCenterX",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -741,14 +685,6 @@
       "type": "NSTouchBarItem",
       "attributes": [
         "retain"
-      ]
-    },
-    "customizationPresets": {
-      "name": "customizationPresets",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "copy"
       ]
     }
   }

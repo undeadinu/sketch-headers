@@ -1,17 +1,22 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h"
+    "NSCoding.h",
+    "NSEditor.h",
+    "NSEditorRegistration.h"
   ],
   "classes": [
     "NSMutableArray",
-    "NSMutableDictionary"
+    "NSMutableDictionary",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSController",
   "extends": "NSObject",
   "interfaces": [
-    "NSCoding"
+    "NSCoding",
+    "NSEditor",
+    "NSEditorRegistration"
   ],
   "methods": {
     "_shouldAddObservationForwardersForKey:": {
@@ -541,50 +546,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeObserver:forKeyPath:context:": {
-      "name": "removeObserver:forKeyPath:context:",
-      "bridgedName": "removeObserver_forKeyPath_context",
-      "args": [
-        {
-          "name": "removeObserver",
-          "type": "id"
-        },
-        {
-          "name": "forKeyPath",
-          "type": "id"
-        },
-        {
-          "name": "context",
-          "type": "void *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "removeObserver:forKeyPath:": {
       "name": "removeObserver:forKeyPath:",
       "bridgedName": "removeObserver_forKeyPath",
       "args": [
         {
           "name": "removeObserver",
-          "type": "id"
-        },
-        {
-          "name": "forKeyPath",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_commonRemoveObserver:forKeyPath:": {
-      "name": "_commonRemoveObserver:forKeyPath:",
-      "bridgedName": "_commonRemoveObserver_forKeyPath",
-      "args": [
-        {
-          "name": "_commonRemoveObserver",
           "type": "id"
         },
         {
@@ -802,6 +769,40 @@
       "attributes": [
         "readonly",
         "getter=isEditing"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

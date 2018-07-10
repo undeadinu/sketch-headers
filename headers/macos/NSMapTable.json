@@ -2,9 +2,9 @@
   "imports": [
     "NSMapTable.h",
     "NSObject.h",
-    "NSCoding.h",
     "NSCopying.h",
-    "NSFastEnumeration.h"
+    "NSFastEnumeration.h",
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSPointerFunctions"
@@ -14,7 +14,7 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding",
+    "NSSecureCoding",
     "NSFastEnumeration"
   ],
   "methods": {
@@ -30,6 +30,14 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
     },
     "weakToWeakObjectsMapTable": {
       "name": "weakToWeakObjectsMapTable",

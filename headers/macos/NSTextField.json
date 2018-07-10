@@ -1,9 +1,11 @@
 {
   "imports": [
     "NSAccessibilityNavigableStaticText.h",
+    "NSTextViewDelegate.h",
     "NSUserInterfaceValidations.h"
   ],
   "classes": [
+    "CUIStyleEffectConfiguration",
     "NSAttributedString",
     "NSColor",
     "NSNumber",
@@ -13,6 +15,7 @@
   "className": "NSTextField",
   "extends": "NSControl",
   "interfaces": [
+    "NSTextViewDelegate",
     "NSUserInterfaceValidations",
     "NSAccessibilityNavigableStaticText"
   ],
@@ -89,49 +92,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "editableTextFieldWithString:": {
-      "name": "editableTextFieldWithString:",
-      "bridgedName": "editableTextFieldWithString",
-      "args": [
-        {
-          "name": "editableTextFieldWithString",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "textFieldWithAttributedString:": {
-      "name": "textFieldWithAttributedString:",
-      "bridgedName": "textFieldWithAttributedString",
-      "args": [
-        {
-          "name": "textFieldWithAttributedString",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "wrappingTextFieldWithString:preferredMaxLayoutWidth:": {
-      "name": "wrappingTextFieldWithString:preferredMaxLayoutWidth:",
-      "bridgedName": "wrappingTextFieldWithString_preferredMaxLayoutWidth",
-      "args": [
-        {
-          "name": "wrappingTextFieldWithString",
-          "type": "id"
-        },
-        {
-          "name": "preferredMaxLayoutWidth",
-          "type": "double"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "textFieldWithString:": {
       "name": "textFieldWithString:",
       "bridgedName": "textFieldWithString",
@@ -188,6 +148,49 @@
       "name": "_newBaseLabelWithoutTitle",
       "bridgedName": "_newBaseLabelWithoutTitle",
       "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "editableTextFieldWithString:": {
+      "name": "editableTextFieldWithString:",
+      "bridgedName": "editableTextFieldWithString",
+      "args": [
+        {
+          "name": "editableTextFieldWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "textFieldWithAttributedString:": {
+      "name": "textFieldWithAttributedString:",
+      "bridgedName": "textFieldWithAttributedString",
+      "args": [
+        {
+          "name": "textFieldWithAttributedString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "wrappingTextFieldWithString:preferredMaxLayoutWidth:": {
+      "name": "wrappingTextFieldWithString:preferredMaxLayoutWidth:",
+      "bridgedName": "wrappingTextFieldWithString_preferredMaxLayoutWidth",
+      "args": [
+        {
+          "name": "wrappingTextFieldWithString",
+          "type": "id"
+        },
+        {
+          "name": "preferredMaxLayoutWidth",
+          "type": "double"
+        }
+      ],
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
@@ -393,6 +396,14 @@
       "bridgedName": "intrinsicContentSize",
       "args": [],
       "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidateIntrinsicContentSize": {
+      "name": "invalidateIntrinsicContentSize",
+      "bridgedName": "invalidateIntrinsicContentSize",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -756,27 +767,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setTextAlignmentPolicy:": {
-      "name": "setTextAlignmentPolicy:",
-      "bridgedName": "setTextAlignmentPolicy",
-      "args": [
-        {
-          "name": "setTextAlignmentPolicy",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "textAlignmentPolicy": {
-      "name": "textAlignmentPolicy",
-      "bridgedName": "textAlignmentPolicy",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "textView:shouldSelectCandidateAtIndex:": {
       "name": "textView:shouldSelectCandidateAtIndex:",
       "bridgedName": "textView_shouldSelectCandidateAtIndex",
@@ -874,27 +864,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setStyleEffectConfiguration:": {
-      "name": "setStyleEffectConfiguration:",
-      "bridgedName": "setStyleEffectConfiguration",
-      "args": [
-        {
-          "name": "setStyleEffectConfiguration",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "styleEffectConfiguration": {
-      "name": "styleEffectConfiguration",
-      "bridgedName": "styleEffectConfiguration",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setImportsGraphics:": {
       "name": "setImportsGraphics:",
       "bridgedName": "setImportsGraphics",
@@ -979,16 +948,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "displayTextLayer:withContext:": {
-      "name": "displayTextLayer:withContext:",
-      "bridgedName": "displayTextLayer_withContext",
+    "displayTextLayer:": {
+      "name": "displayTextLayer:",
+      "bridgedName": "displayTextLayer",
       "args": [
         {
           "name": "displayTextLayer",
-          "type": "id"
-        },
-        {
-          "name": "withContext",
           "type": "id"
         }
       ],
@@ -1021,6 +986,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setCell:": {
       "name": "setCell:",
       "bridgedName": "setCell",
@@ -1039,6 +1012,14 @@
       "bridgedName": "viewDidMoveToWindow",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredLayerContentsRedrawPolicy": {
+      "name": "_preferredLayerContentsRedrawPolicy",
+      "bridgedName": "_preferredLayerContentsRedrawPolicy",
+      "args": [],
+      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1108,6 +1089,15 @@
       "type": "BOOL",
       "attributes": [
         "readonly"
+      ]
+    },
+    "styleEffectConfiguration": {
+      "name": "styleEffectConfiguration",
+      "pointer": true,
+      "type": "CUIStyleEffectConfiguration",
+      "attributes": [
+        "copy",
+        "nonatomic"
       ]
     },
     "selectable": {

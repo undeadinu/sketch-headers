@@ -22,24 +22,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "concatTransformsForDrawSnaps": {
-      "name": "concatTransformsForDrawSnaps",
-      "bridgedName": "concatTransformsForDrawSnaps",
+    "bounds": {
+      "name": "bounds",
+      "bridgedName": "bounds",
       "args": [],
-      "returns": "void",
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "convertPointToAbsoluteCoordinates:": {
-      "name": "convertPointToAbsoluteCoordinates:",
-      "bridgedName": "convertPointToAbsoluteCoordinates",
-      "args": [
-        {
-          "name": "convertPointToAbsoluteCoordinates",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "struct CGPoint",
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "bridgedName": "coordinateSpace",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -64,9 +59,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "transformShape": {
-      "name": "transformShape",
-      "bridgedName": "transformShape",
+    "transformLayers": {
+      "name": "transformLayers",
+      "bridgedName": "transformLayers",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -82,23 +77,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "absoluteMouseMoved:flags:": {
-      "name": "absoluteMouseMoved:flags:",
-      "bridgedName": "absoluteMouseMoved_flags",
-      "args": [
-        {
-          "name": "absoluteMouseMoved",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -136,6 +114,40 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "keyDown:": {
       "name": "keyDown:",
       "bridgedName": "keyDown",
@@ -149,62 +161,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "adjustPoint:": {
-      "name": "adjustPoint:",
-      "bridgedName": "adjustPoint",
-      "args": [
-        {
-          "name": "adjustPoint",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "bounds": {
-      "name": "bounds",
-      "bridgedName": "bounds",
+    "useSnaps": {
+      "name": "useSnaps",
+      "bridgedName": "useSnaps",
       "args": [],
-      "returns": "struct CGRect",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "movePointsRelatedToCorner:newLocation:previous:": {
-      "name": "movePointsRelatedToCorner:newLocation:previous:",
-      "bridgedName": "movePointsRelatedToCorner_newLocation_previous",
-      "args": [
-        {
-          "name": "movePointsRelatedToCorner",
-          "type": "long long"
-        },
-        {
-          "name": "newLocation",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "previous",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "replacePointAtIndex:withPoint:": {
-      "name": "replacePointAtIndex:withPoint:",
-      "bridgedName": "replacePointAtIndex_withPoint",
-      "args": [
-        {
-          "name": "replacePointAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "withPoint",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
+    "pointsToSnap": {
+      "name": "pointsToSnap",
+      "bridgedName": "pointsToSnap",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -238,24 +207,49 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteMouseDown:clickCount:flags:": {
-      "name": "absoluteMouseDown:clickCount:flags:",
-      "bridgedName": "absoluteMouseDown_clickCount_flags",
+    "movePointsRelatedToCorner:newLocation:previous:modifierFlags:": {
+      "name": "movePointsRelatedToCorner:newLocation:previous:modifierFlags:",
+      "bridgedName": "movePointsRelatedToCorner_newLocation_previous_modifierFlags",
       "args": [
         {
-          "name": "absoluteMouseDown",
+          "name": "movePointsRelatedToCorner",
+          "type": "long long"
+        },
+        {
+          "name": "newLocation",
           "type": "struct CGPoint"
         },
         {
-          "name": "clickCount",
-          "type": "unsigned long long"
+          "name": "previous",
+          "type": "struct CGPoint"
         },
         {
-          "name": "flags",
+          "name": "modifierFlags",
           "type": "unsigned long long"
         }
       ],
-      "returns": "BOOL",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointAtIndex:toLocation:modifierFlags:": {
+      "name": "movePointAtIndex:toLocation:modifierFlags:",
+      "bridgedName": "movePointAtIndex_toLocation_modifierFlags",
+      "args": [
+        {
+          "name": "movePointAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -272,22 +266,6 @@
       "bridgedName": "handlerWillLoseFocus",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "snapsForShape": {
-      "name": "snapsForShape",
-      "bridgedName": "snapsForShape",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "pointsToSnap": {
-      "name": "pointsToSnap",
-      "bridgedName": "pointsToSnap",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },

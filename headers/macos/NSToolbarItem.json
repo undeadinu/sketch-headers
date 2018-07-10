@@ -2,6 +2,7 @@
   "imports": [
     "NSObject.h",
     "NSCopying.h",
+    "NSMenuItemValidation.h",
     "NSValidatedUserInterfaceItem.h"
   ],
   "classes": [
@@ -16,6 +17,7 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
+    "NSMenuItemValidation",
     "NSValidatedUserInterfaceItem"
   ],
   "methods": {
@@ -174,6 +176,60 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isSpace": {
+      "name": "isSpace",
+      "bridgedName": "isSpace",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isMeasuring": {
+      "name": "isMeasuring",
+      "bridgedName": "isMeasuring",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_itemViewMinSize:maxSize:stretchesContent:": {
+      "name": "_itemViewMinSize:maxSize:stretchesContent:",
+      "bridgedName": "_itemViewMinSize_maxSize_stretchesContent",
+      "args": [
+        {
+          "name": "_itemViewMinSize",
+          "type": "struct CGSize *"
+        },
+        {
+          "name": "maxSize",
+          "type": "struct CGSize *"
+        },
+        {
+          "name": "stretchesContent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textOrSearchFieldAdjustedMinOrMaxSize:withSize:": {
+      "name": "_textOrSearchFieldAdjustedMinOrMaxSize:withSize:",
+      "bridgedName": "_textOrSearchFieldAdjustedMinOrMaxSize_withSize",
+      "args": [
+        {
+          "name": "_textOrSearchFieldAdjustedMinOrMaxSize",
+          "type": "BOOL"
+        },
+        {
+          "name": "withSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_scalableMaxSize": {
       "name": "_scalableMaxSize",
       "bridgedName": "_scalableMaxSize",
@@ -186,19 +242,6 @@
       "name": "_scalableMinSize",
       "bridgedName": "_scalableMinSize",
       "args": [],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_textOrSearchFieldAdjustedMinOrMaxSize:": {
-      "name": "_textOrSearchFieldAdjustedMinOrMaxSize:",
-      "bridgedName": "_textOrSearchFieldAdjustedMinOrMaxSize",
-      "args": [
-        {
-          "name": "_textOrSearchFieldAdjustedMinOrMaxSize",
-          "type": "BOOL"
-        }
-      ],
       "returns": "struct CGSize",
       "kind": "instance",
       "kindIndicator": "-"
@@ -240,6 +283,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_setIgnoresMinMaxSizes:": {
+      "name": "_setIgnoresMinMaxSizes:",
+      "bridgedName": "_setIgnoresMinMaxSizes",
+      "args": [
+        {
+          "name": "_setIgnoresMinMaxSizes",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ignoresMinMaxSizes": {
+      "name": "_ignoresMinMaxSizes",
+      "bridgedName": "_ignoresMinMaxSizes",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_canUserSetVisibilityPriority": {
       "name": "_canUserSetVisibilityPriority",
       "bridgedName": "_canUserSetVisibilityPriority",
@@ -261,35 +325,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_autocalculatesSize": {
+      "name": "_autocalculatesSize",
+      "bridgedName": "_autocalculatesSize",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_setSizesToFittingSizeIfBaseLocalized": {
       "name": "_setSizesToFittingSizeIfBaseLocalized",
       "bridgedName": "_setSizesToFittingSizeIfBaseLocalized",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_autorecalculateSizesIfNotSetExplicitly": {
-      "name": "_autorecalculateSizesIfNotSetExplicitly",
-      "bridgedName": "_autorecalculateSizesIfNotSetExplicitly",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_autorecalculateMinSize:maxSize:": {
-      "name": "_autorecalculateMinSize:maxSize:",
-      "bridgedName": "_autorecalculateMinSize_maxSize",
-      "args": [
-        {
-          "name": "_autorecalculateMinSize",
-          "type": "struct CGSize *"
-        },
-        {
-          "name": "maxSize",
-          "type": "struct CGSize *"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -383,6 +430,19 @@
       "bridgedName": "_isEnabledAndHasEnabledSubitem",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reallySetEnabled:": {
+      "name": "_reallySetEnabled:",
+      "bridgedName": "_reallySetEnabled",
+      "args": [
+        {
+          "name": "_reallySetEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -805,6 +865,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_restoreToolbarItemAfterConfigPanel": {
+      "name": "_restoreToolbarItemAfterConfigPanel",
+      "bridgedName": "_restoreToolbarItemAfterConfigPanel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareToolbarItemForConfigPanel": {
+      "name": "_prepareToolbarItemForConfigPanel",
+      "bridgedName": "_prepareToolbarItemForConfigPanel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_restoreToolbarItemAfterSheet": {
       "name": "_restoreToolbarItemAfterSheet",
       "bridgedName": "_restoreToolbarItemAfterSheet",
@@ -887,19 +963,6 @@
         {
           "name": "isPalette",
           "type": "BOOL"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_wantsImageWrapperForInsertionIntoPaletteToolbar:": {
-      "name": "_wantsImageWrapperForInsertionIntoPaletteToolbar:",
-      "bridgedName": "_wantsImageWrapperForInsertionIntoPaletteToolbar",
-      "args": [
-        {
-          "name": "_wantsImageWrapperForInsertionIntoPaletteToolbar",
-          "type": "id"
         }
       ],
       "returns": "BOOL",
@@ -1299,6 +1362,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_viewForPopoverAnchor": {
+      "name": "_viewForPopoverAnchor",
+      "bridgedName": "_viewForPopoverAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_menuFormRepresentation": {
       "name": "_menuFormRepresentation",
       "bridgedName": "_menuFormRepresentation",
@@ -1457,6 +1528,40 @@
       "attributes": [
         "readonly",
         "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

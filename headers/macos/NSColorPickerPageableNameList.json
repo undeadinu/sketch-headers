@@ -1,6 +1,8 @@
 {
   "imports": [
-    "NSColorPickingCustom.h"
+    "NSColorPickingCustom.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h"
   ],
   "classes": [
     "NSArray",
@@ -20,6 +22,8 @@
   "className": "NSColorPickerPageableNameList",
   "extends": "NSColorPicker",
   "interfaces": [
+    "NSTableViewDelegate",
+    "NSTableViewDataSource",
     "NSColorPickingCustom"
   ],
   "methods": {
@@ -398,27 +402,6 @@
         {
           "name": "removeList",
           "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeListSheetDidEnd:returnCode:context:": {
-      "name": "removeListSheetDidEnd:returnCode:context:",
-      "bridgedName": "removeListSheetDidEnd_returnCode_context",
-      "args": [
-        {
-          "name": "removeListSheetDidEnd",
-          "type": "id"
-        },
-        {
-          "name": "returnCode",
-          "type": "long long"
-        },
-        {
-          "name": "context",
-          "type": "void *"
         }
       ],
       "returns": "void",
@@ -1137,5 +1120,48 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "listPickerView": {
+      "name": "listPickerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
 }

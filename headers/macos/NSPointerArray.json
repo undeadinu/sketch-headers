@@ -1,9 +1,9 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
     "NSCopying.h",
-    "NSFastEnumeration.h"
+    "NSFastEnumeration.h",
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSPointerFunctions"
@@ -14,9 +14,17 @@
   "interfaces": [
     "NSFastEnumeration",
     "NSCopying",
-    "NSCoding"
+    "NSSecureCoding"
   ],
   "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "allocWithZone:": {
       "name": "allocWithZone:",
       "bridgedName": "allocWithZone",

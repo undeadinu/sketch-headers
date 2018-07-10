@@ -1,6 +1,7 @@
 {
   "imports": [
     "NSViewController.h",
+    "MSInspectorValueAdaptorDelegate.h",
     "MSUpDownTextFieldDelegate.h"
   ],
   "classes": [
@@ -13,6 +14,7 @@
   "className": "MSInspectorItem",
   "extends": "NSViewController",
   "interfaces": [
+    "MSInspectorValueAdaptorDelegate",
     "MSUpDownTextFieldDelegate"
   ],
   "methods": {
@@ -106,6 +108,19 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorValueAdaptorDidChangeValue:": {
+      "name": "inspectorValueAdaptorDidChangeValue:",
+      "bridgedName": "inspectorValueAdaptorDidChangeValue",
+      "args": [
+        {
+          "name": "inspectorValueAdaptorDidChangeValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

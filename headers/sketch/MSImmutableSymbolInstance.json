@@ -4,6 +4,8 @@
     "MSFlowContainmentCheck.h"
   ],
   "classes": [
+    "BCReadWriteLock",
+    "NSArray",
     "NSDictionary"
   ],
   "protocol": false,
@@ -28,6 +30,27 @@
       "returns": "unsigned long long",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "availableOverridesWithDocument:": {
+      "name": "availableOverridesWithDocument:",
+      "bridgedName": "availableOverridesWithDocument",
+      "args": [
+        {
+          "name": "availableOverridesWithDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "scale": {
       "name": "scale",
@@ -66,14 +89,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "influenceRectForBounds": {
-      "name": "influenceRectForBounds",
-      "bridgedName": "influenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "influenceRectForBoundsInDocument:visitedSymbols:": {
       "name": "influenceRectForBoundsInDocument:visitedSymbols:",
       "bridgedName": "influenceRectForBoundsInDocument_visitedSymbols",
@@ -97,6 +112,53 @@
       "args": [
         {
           "name": "overridesFromGroupForMigration",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualForDiffToObject:": {
+      "name": "isEqualForDiffToObject:",
+      "bridgedName": "isEqualForDiffToObject",
+      "args": [
+        {
+          "name": "isEqualForDiffToObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectDidInit": {
+      "name": "objectDidInit",
+      "bridgedName": "objectDidInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithMutableModelObject:": {
+      "name": "performInitWithMutableModelObject:",
+      "bridgedName": "performInitWithMutableModelObject",
+      "args": [
+        {
+          "name": "performInitWithMutableModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keysDifferingFromObject:": {
+      "name": "keysDifferingFromObject:",
+      "bridgedName": "keysDifferingFromObject",
+      "args": [
+        {
+          "name": "keysDifferingFromObject",
           "type": "id"
         }
       ],
@@ -130,20 +192,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "includeInManifest": {
-      "name": "includeInManifest",
-      "bridgedName": "includeInManifest",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "containsFlowWithSymbolsFromDocument:visited:": {
-      "name": "containsFlowWithSymbolsFromDocument:visited:",
-      "bridgedName": "containsFlowWithSymbolsFromDocument_visited",
+    "firstFlowWithSymbolsFromDocument:visited:": {
+      "name": "firstFlowWithSymbolsFromDocument:visited:",
+      "bridgedName": "firstFlowWithSymbolsFromDocument_visited",
       "args": [
         {
-          "name": "containsFlowWithSymbolsFromDocument",
+          "name": "firstFlowWithSymbolsFromDocument",
           "type": "id"
         },
         {
@@ -151,16 +205,16 @@
           "type": "id"
         }
       ],
-      "returns": "BOOL",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "availableOverridesWithDocument:": {
-      "name": "availableOverridesWithDocument:",
-      "bridgedName": "availableOverridesWithDocument",
+    "calculateAvailableOverridesWithDocument:": {
+      "name": "calculateAvailableOverridesWithDocument:",
+      "bridgedName": "calculateAvailableOverridesWithDocument",
       "args": [
         {
-          "name": "availableOverridesWithDocument",
+          "name": "calculateAvailableOverridesWithDocument",
           "type": "id"
         }
       ],
@@ -396,6 +450,15 @@
     }
   },
   "properties": {
+    "masterRefreshCounter": {
+      "name": "masterRefreshCounter",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "modifiedMasterCacheKey": {
       "name": "modifiedMasterCacheKey",
       "pointer": false,

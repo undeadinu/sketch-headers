@@ -1,8 +1,11 @@
 {
   "imports": [
-    "NSAccessibilityImage.h"
+    "NSAccessibilityImage.h",
+    "NSMenuItemValidation.h",
+    "_NSAsynchronousPreparationDelegate.h"
   ],
   "classes": [
+    "NSColor",
     "NSImage",
     "NSString"
   ],
@@ -10,7 +13,9 @@
   "className": "NSImageView",
   "extends": "NSControl",
   "interfaces": [
-    "NSAccessibilityImage"
+    "_NSAsynchronousPreparationDelegate",
+    "NSAccessibilityImage",
+    "NSMenuItemValidation"
   ],
   "methods": {
     "initialize": {
@@ -55,6 +60,14 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "registerForDrags": {
+      "name": "registerForDrags",
+      "bridgedName": "registerForDrags",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "accessibilityLabel": {
       "name": "accessibilityLabel",
       "bridgedName": "accessibilityLabel",
@@ -95,14 +108,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_desiredContentsRedrawPolicy": {
-      "name": "_desiredContentsRedrawPolicy",
-      "bridgedName": "_desiredContentsRedrawPolicy",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setFrameSize:": {
       "name": "setFrameSize:",
       "bridgedName": "setFrameSize",
@@ -113,35 +118,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_redisplayImageWhenLayerBacked": {
-      "name": "_redisplayImageWhenLayerBacked",
-      "bridgedName": "_redisplayImageWhenLayerBacked",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_ensureInitialStateIsSetForAnimationsForSize:": {
-      "name": "_ensureInitialStateIsSetForAnimationsForSize:",
-      "bridgedName": "_ensureInitialStateIsSetForAnimationsForSize",
-      "args": [
-        {
-          "name": "_ensureInitialStateIsSetForAnimationsForSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "makeBackingLayer": {
-      "name": "makeBackingLayer",
-      "bridgedName": "makeBackingLayer",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -158,12 +134,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setBackgroundStyle:": {
-      "name": "setBackgroundStyle:",
-      "bridgedName": "setBackgroundStyle",
+    "_setBackgroundStyleForSubtree:": {
+      "name": "_setBackgroundStyleForSubtree:",
+      "bridgedName": "_setBackgroundStyleForSubtree",
       "args": [
         {
-          "name": "setBackgroundStyle",
+          "name": "_setBackgroundStyleForSubtree",
           "type": "long long"
         }
       ],
@@ -176,80 +152,6 @@
       "bridgedName": "backgroundStyle",
       "args": [],
       "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setLayer:": {
-      "name": "setLayer:",
-      "bridgedName": "setLayer",
-      "args": [
-        {
-          "name": "setLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layout": {
-      "name": "layout",
-      "bridgedName": "layout",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_didRemoveLayer": {
-      "name": "_didRemoveLayer",
-      "bridgedName": "_didRemoveLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateLayer": {
-      "name": "updateLayer",
-      "bridgedName": "updateLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateLayerContentsToBorderImage": {
-      "name": "_updateLayerContentsToBorderImage",
-      "bridgedName": "_updateLayerContentsToBorderImage",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateLayerContentsToImage": {
-      "name": "_updateLayerContentsToImage",
-      "bridgedName": "_updateLayerContentsToImage",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "wantsUpdateLayer": {
-      "name": "wantsUpdateLayer",
-      "bridgedName": "wantsUpdateLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setNeedsDisplayInRect:": {
-      "name": "setNeedsDisplayInRect:",
-      "bridgedName": "setNeedsDisplayInRect",
-      "args": [
-        {
-          "name": "setNeedsDisplayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -514,6 +416,36 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "asynchronousPreparationDidChangePreparedResult:": {
+      "name": "asynchronousPreparationDidChangePreparedResult:",
+      "bridgedName": "asynchronousPreparationDidChangePreparedResult",
+      "args": [
+        {
+          "name": "asynchronousPreparationDidChangePreparedResult",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "asynchronousPreparation:prepareResultUsingParameters:": {
+      "name": "asynchronousPreparation:prepareResultUsingParameters:",
+      "bridgedName": "asynchronousPreparation_prepareResultUsingParameters",
+      "args": [
+        {
+          "name": "asynchronousPreparation",
+          "type": "id"
+        },
+        {
+          "name": "prepareResultUsingParameters",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setObjectValue:": {
       "name": "setObjectValue:",
       "bridgedName": "setObjectValue",
@@ -540,30 +472,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shouldDoOldLayerUpdate": {
-      "name": "_shouldDoOldLayerUpdate",
-      "bridgedName": "_shouldDoOldLayerUpdate",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_invalidateLayerLayoutAndSetNeedsDisplay": {
-      "name": "_invalidateLayerLayoutAndSetNeedsDisplay",
-      "bridgedName": "_invalidateLayerLayoutAndSetNeedsDisplay",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_usingUpdateLayer": {
-      "name": "_usingUpdateLayer",
-      "bridgedName": "_usingUpdateLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "setCell:": {
       "name": "setCell:",
       "bridgedName": "setCell",
@@ -577,49 +485,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateImageView": {
-      "name": "_updateImageView",
-      "bridgedName": "_updateImageView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_processedImageForView:": {
-      "name": "_processedImageForView:",
-      "bridgedName": "_processedImageForView",
+    "setLayer:": {
+      "name": "setLayer:",
+      "bridgedName": "setLayer",
       "args": [
         {
-          "name": "_processedImageForView",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_imageViewFrame": {
-      "name": "_imageViewFrame",
-      "bridgedName": "_imageViewFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_removeImageView": {
-      "name": "_removeImageView",
-      "bridgedName": "_removeImageView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setImageView:": {
-      "name": "_setImageView:",
-      "bridgedName": "_setImageView",
-      "args": [
-        {
-          "name": "_setImageView",
+          "name": "setLayer",
           "type": "id"
         }
       ],
@@ -627,19 +498,111 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_imageView": {
-      "name": "_imageView",
-      "bridgedName": "_imageView",
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
       "args": [],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "allowsVibrancy": {
-      "name": "allowsVibrancy",
-      "bridgedName": "allowsVibrancy",
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayer": {
+      "name": "updateLayer",
+      "bridgedName": "updateLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsUpdateLayer": {
+      "name": "wantsUpdateLayer",
+      "bridgedName": "wantsUpdateLayer",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateUsesSubview": {
+      "name": "_updateUsesSubview",
+      "bridgedName": "_updateUsesSubview",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usesSubview": {
+      "name": "_usesSubview",
+      "bridgedName": "_usesSubview",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplayInRect:": {
+      "name": "setNeedsDisplayInRect:",
+      "bridgedName": "setNeedsDisplayInRect",
+      "args": [
+        {
+          "name": "setNeedsDisplayInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCell:": {
+      "name": "updateCell:",
+      "bridgedName": "updateCell",
+      "args": [
+        {
+          "name": "updateCell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateImageSubview": {
+      "name": "_updateImageSubview",
+      "bridgedName": "_updateImageSubview",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setImageSubview:": {
+      "name": "_setImageSubview:",
+      "bridgedName": "_setImageSubview",
+      "args": [
+        {
+          "name": "_setImageSubview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_imageSubview": {
+      "name": "_imageSubview",
+      "bridgedName": "_imageSubview",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -661,46 +624,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldDoLegacyLayerUpdate": {
-      "name": "_shouldDoLegacyLayerUpdate",
-      "bridgedName": "_shouldDoLegacyLayerUpdate",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateLayerContentsRedrawPolicy": {
-      "name": "_updateLayerContentsRedrawPolicy",
-      "bridgedName": "_updateLayerContentsRedrawPolicy",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateCompatibleScalingAndAlignment": {
-      "name": "_updateCompatibleScalingAndAlignment",
-      "bridgedName": "_updateCompatibleScalingAndAlignment",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateOverridesDrawing": {
-      "name": "_updateOverridesDrawing",
-      "bridgedName": "_updateOverridesDrawing",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "registerForDrags": {
-      "name": "registerForDrags",
-      "bridgedName": "registerForDrags",
-      "args": [],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -742,6 +665,30 @@
       "attributes": [
         "nonatomic",
         "setter=_setUsesCachedImage:"
+      ]
+    },
+    "templateTintColor": {
+      "name": "templateTintColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "contentTintColor": {
+      "name": "contentTintColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "placeholderImage": {
+      "name": "placeholderImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "retain"
       ]
     },
     "image": {

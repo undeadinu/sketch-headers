@@ -25,6 +25,14 @@
     "NSAccessibility"
   ],
   "methods": {
+    "_revealedMenuBarHeight": {
+      "name": "_revealedMenuBarHeight",
+      "bridgedName": "_revealedMenuBarHeight",
+      "args": [],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_drawHelpResultsSeparatorInRect:withClipRect:flags:": {
       "name": "_drawHelpResultsSeparatorInRect:withClipRect:flags:",
       "bridgedName": "_drawHelpResultsSeparatorInRect_withClipRect_flags",
@@ -310,6 +318,53 @@
       "bridgedName": "initialize",
       "args": [],
       "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "standardImportFromDeviceMenuWithOptions:": {
+      "name": "standardImportFromDeviceMenuWithOptions:",
+      "bridgedName": "standardImportFromDeviceMenuWithOptions",
+      "args": [
+        {
+          "name": "standardImportFromDeviceMenuWithOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_sidecarServicesMenuWithTarget:action:options:": {
+      "name": "_sidecarServicesMenuWithTarget:action:options:",
+      "bridgedName": "_sidecarServicesMenuWithTarget_action_options",
+      "args": [
+        {
+          "name": "_sidecarServicesMenuWithTarget",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_sidecarServicesMenuWithOptions:": {
+      "name": "_sidecarServicesMenuWithOptions:",
+      "bridgedName": "_sidecarServicesMenuWithOptions",
+      "args": [
+        {
+          "name": "_sidecarServicesMenuWithOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -1610,48 +1665,6 @@
       "bridgedName": "_layoutDirectionIfExists",
       "args": [],
       "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setIndentationWidth:": {
-      "name": "_setIndentationWidth:",
-      "bridgedName": "_setIndentationWidth",
-      "args": [
-        {
-          "name": "_setIndentationWidth",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_indentationWidth": {
-      "name": "_indentationWidth",
-      "bridgedName": "_indentationWidth",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setHasNCStyle:": {
-      "name": "_setHasNCStyle:",
-      "bridgedName": "_setHasNCStyle",
-      "args": [
-        {
-          "name": "_setHasNCStyle",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_hasNCStyle": {
-      "name": "_hasNCStyle",
-      "bridgedName": "_hasNCStyle",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3490,6 +3503,22 @@
         "readonly"
       ]
     },
+    "_indentationWidth": {
+      "name": "_indentationWidth",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "setter=_setIndentationWidth:"
+      ]
+    },
+    "_hasNCStyle": {
+      "name": "_hasNCStyle",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "setter=_setHasNCStyle:"
+      ]
+    },
     "font": {
       "name": "font",
       "pointer": true,
@@ -3519,7 +3548,6 @@
       "pointer": true,
       "type": "NSArray",
       "attributes": [
-        "readonly",
         "copy"
       ]
     },

@@ -1,7 +1,7 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h"
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSBundle",
@@ -11,7 +11,7 @@
   "className": "NSAppearance",
   "extends": "NSObject",
   "interfaces": [
-    "NSCoding"
+    "NSSecureCoding"
   ],
   "methods": {
     "_isLightTintColor:": {
@@ -23,6 +23,14 @@
           "type": "id"
         }
       ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
       "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
@@ -52,9 +60,17 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "_defaultAppearance": {
-      "name": "_defaultAppearance",
-      "bridgedName": "_defaultAppearance",
+    "_systemAppearanceProxy": {
+      "name": "_systemAppearanceProxy",
+      "bridgedName": "_systemAppearanceProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_menuBarAppearanceProxy": {
+      "name": "_menuBarAppearanceProxy",
+      "bridgedName": "_menuBarAppearanceProxy",
       "args": [],
       "returns": "id",
       "kind": "class",
@@ -70,6 +86,14 @@
         }
       ],
       "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_darkAquaAppearance": {
+      "name": "_darkAquaAppearance",
+      "bridgedName": "_darkAquaAppearance",
+      "args": [],
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -158,6 +182,14 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "_applicationAppearance": {
+      "name": "_applicationAppearance",
+      "bridgedName": "_applicationAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "setCurrentAppearance:": {
       "name": "setCurrentAppearance:",
       "bridgedName": "setCurrentAppearance",
@@ -187,6 +219,53 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "_setSystemAppearanceTestingOverride:": {
+      "name": "_setSystemAppearanceTestingOverride:",
+      "bridgedName": "_setSystemAppearanceTestingOverride",
+      "args": [
+        {
+          "name": "_setSystemAppearanceTestingOverride",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bestMatchFromAppearancesWithNames:": {
+      "name": "bestMatchFromAppearancesWithNames:",
+      "bridgedName": "bestMatchFromAppearancesWithNames",
+      "args": [
+        {
+          "name": "bestMatchFromAppearancesWithNames",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_temporaryCatalogForStatefulTextColorStyles": {
+      "name": "_temporaryCatalogForStatefulTextColorStyles",
+      "bridgedName": "_temporaryCatalogForStatefulTextColorStyles",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_resolvesToFunctionRowAppearanceForWidget:": {
       "name": "_resolvesToFunctionRowAppearanceForWidget:",
       "bridgedName": "_resolvesToFunctionRowAppearanceForWidget",
@@ -208,11 +287,43 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_allowsCustomControlTintColors": {
+      "name": "_allowsCustomControlTintColors",
+      "bridgedName": "_allowsCustomControlTintColors",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsSystemControlTintColors": {
+      "name": "_allowsSystemControlTintColors",
+      "bridgedName": "_allowsSystemControlTintColors",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_isTintedWithLightColor": {
       "name": "_isTintedWithLightColor",
       "bridgedName": "_isTintedWithLightColor",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_minimumSizeForSmallToolbarButton": {
+      "name": "_minimumSizeForSmallToolbarButton",
+      "bridgedName": "_minimumSizeForSmallToolbarButton",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_minimumSizeForToolbarButton": {
+      "name": "_minimumSizeForToolbarButton",
+      "bridgedName": "_minimumSizeForToolbarButton",
+      "args": [],
+      "returns": "struct CGSize",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -290,52 +401,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_internalVisualEffectMaterialForMenu": {
-      "name": "_internalVisualEffectMaterialForMenu",
-      "bridgedName": "_internalVisualEffectMaterialForMenu",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_internalVisualEffectMaterialForSelection:isDarker:": {
-      "name": "_internalVisualEffectMaterialForSelection:isDarker:",
-      "bridgedName": "_internalVisualEffectMaterialForSelection_isDarker",
-      "args": [
-        {
-          "name": "_internalVisualEffectMaterialForSelection",
-          "type": "BOOL"
-        },
-        {
-          "name": "isDarker",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_internalVisualEffectMaterialForTitlebar": {
-      "name": "_internalVisualEffectMaterialForTitlebar",
-      "bridgedName": "_internalVisualEffectMaterialForTitlebar",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_internalVisualEffectMaterialForBlendingMode:": {
-      "name": "_internalVisualEffectMaterialForBlendingMode:",
-      "bridgedName": "_internalVisualEffectMaterialForBlendingMode",
-      "args": [
-        {
-          "name": "_internalVisualEffectMaterialForBlendingMode",
-          "type": "long long"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "shouldBeArchived": {
       "name": "shouldBeArchived",
       "bridgedName": "shouldBeArchived",
@@ -370,14 +435,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "classForCoder": {
-      "name": "classForCoder",
-      "bridgedName": "classForCoder",
-      "args": [],
-      "returns": "Class",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "encodeWithCoder:": {
       "name": "encodeWithCoder:",
       "bridgedName": "encodeWithCoder",
@@ -388,6 +445,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "classForCoder": {
+      "name": "classForCoder",
+      "bridgedName": "classForCoder",
+      "args": [],
+      "returns": "Class",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -402,6 +467,14 @@
     "_bundle": {
       "name": "_bundle",
       "bridgedName": "_bundle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshedAppearance": {
+      "name": "_refreshedAppearance",
+      "bridgedName": "_refreshedAppearance",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -611,6 +684,40 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_customColor:withTint:": {
+      "name": "_customColor:withTint:",
+      "bridgedName": "_customColor_withTint",
+      "args": [
+        {
+          "name": "_customColor",
+          "type": "id"
+        },
+        {
+          "name": "withTint",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_copyCustomCGColor:withTint:": {
+      "name": "_copyCustomCGColor:withTint:",
+      "bridgedName": "_copyCustomCGColor_withTint",
+      "args": [
+        {
+          "name": "_copyCustomCGColor",
+          "type": "id"
+        },
+        {
+          "name": "withTint",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGColor *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_createLayerContents:contentsCenter:": {
       "name": "_createLayerContents:contentsCenter:",
       "bridgedName": "_createLayerContents_contentsCenter",
@@ -633,14 +740,6 @@
       "bridgedName": "_defaultCompositingFilter",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isPrimarilyDark": {
-      "name": "_isPrimarilyDark",
-      "bridgedName": "_isPrimarilyDark",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -758,6 +857,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_flattenedAppearanceNamesList": {
+      "name": "_flattenedAppearanceNamesList",
+      "bridgedName": "_flattenedAppearanceNamesList",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_defaultBezelBrightness": {
       "name": "_defaultBezelBrightness",
       "bridgedName": "_defaultBezelBrightness",
@@ -774,35 +881,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_backstoppedByDefaultAppearance": {
-      "name": "_backstoppedByDefaultAppearance",
-      "bridgedName": "_backstoppedByDefaultAppearance",
+    "_backstoppedByFullAppearance": {
+      "name": "_backstoppedByFullAppearance",
+      "bridgedName": "_backstoppedByFullAppearance",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_appearanceForStandardTableView": {
-      "name": "_appearanceForStandardTableView",
-      "bridgedName": "_appearanceForStandardTableView",
+    "_appearanceForNonVibrantContent": {
+      "name": "_appearanceForNonVibrantContent",
+      "bridgedName": "_appearanceForNonVibrantContent",
       "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_appearanceForSourceListTableView": {
-      "name": "_appearanceForSourceListTableView",
-      "bridgedName": "_appearanceForSourceListTableView",
+    "_appearanceForVibrantContent": {
+      "name": "_appearanceForVibrantContent",
+      "bridgedName": "_appearanceForVibrantContent",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isDefaultAppearance": {
-      "name": "_isDefaultAppearance",
-      "bridgedName": "_isDefaultAppearance",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },

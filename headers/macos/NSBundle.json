@@ -176,6 +176,14 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "load": {
+      "name": "load",
+      "bridgedName": "load",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "loadNibNamed:owner:topLevelObjects:": {
       "name": "loadNibNamed:owner:topLevelObjects:",
       "bridgedName": "loadNibNamed_owner_topLevelObjects",
@@ -337,27 +345,6 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
-    },
-    "_safeLoadNibNamed:owner:topLevelObjects:": {
-      "name": "_safeLoadNibNamed:owner:topLevelObjects:",
-      "bridgedName": "_safeLoadNibNamed_owner_topLevelObjects",
-      "args": [
-        {
-          "name": "_safeLoadNibNamed",
-          "type": "id"
-        },
-        {
-          "name": "owner",
-          "type": "id"
-        },
-        {
-          "name": "topLevelObjects",
-          "type": "id *"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
     },
     "loadNibFile:externalNameTable:options:withZone:": {
       "name": "loadNibFile:externalNameTable:options:withZone:",
@@ -921,10 +908,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "load": {
-      "name": "load",
-      "bridgedName": "load",
-      "args": [],
+    "_searchForLocalizedString:foundKey:foundTable:": {
+      "name": "_searchForLocalizedString:foundKey:foundTable:",
+      "bridgedName": "_searchForLocalizedString_foundKey_foundTable",
+      "args": [
+        {
+          "name": "_searchForLocalizedString",
+          "type": "id"
+        },
+        {
+          "name": "foundKey",
+          "type": "id *"
+        },
+        {
+          "name": "foundTable",
+          "type": "id *"
+        }
+      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1144,6 +1144,53 @@
       "bridgedName": "_cfBundle",
       "args": [],
       "returns": "struct __CFBundle *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "preservationPriorityForTag:": {
+      "name": "preservationPriorityForTag:",
+      "bridgedName": "preservationPriorityForTag",
+      "args": [
+        {
+          "name": "preservationPriorityForTag",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreservationPriority:forTag:": {
+      "name": "setPreservationPriority:forTag:",
+      "bridgedName": "setPreservationPriority_forTag",
+      "args": [
+        {
+          "name": "setPreservationPriority",
+          "type": "double"
+        },
+        {
+          "name": "forTag",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreservationPriority:forTags:": {
+      "name": "setPreservationPriority:forTags:",
+      "bridgedName": "setPreservationPriority_forTags",
+      "args": [
+        {
+          "name": "setPreservationPriority",
+          "type": "double"
+        },
+        {
+          "name": "forTags",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     }

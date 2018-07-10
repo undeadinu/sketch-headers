@@ -40,9 +40,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeAllDistanceMeasurements": {
-      "name": "removeAllDistanceMeasurements",
-      "bridgedName": "removeAllDistanceMeasurements",
+    "removeAllSpacingSnaps": {
+      "name": "removeAllSpacingSnaps",
+      "bridgedName": "removeAllSpacingSnaps",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -61,9 +61,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeAllDimensionMeasurements": {
-      "name": "removeAllDimensionMeasurements",
-      "bridgedName": "removeAllDimensionMeasurements",
+    "removeAllDimensionSnaps": {
+      "name": "removeAllDimensionSnaps",
+      "bridgedName": "removeAllDimensionSnaps",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -82,37 +82,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "resetLineSnapping": {
-      "name": "resetLineSnapping",
-      "bridgedName": "resetLineSnapping",
+    "removeAllEdgeSnaps": {
+      "name": "removeAllEdgeSnaps",
+      "bridgedName": "removeAllEdgeSnaps",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "extendGuideToStartPosition:endPosition:": {
-      "name": "extendGuideToStartPosition:endPosition:",
-      "bridgedName": "extendGuideToStartPosition_endPosition",
+    "addLineRelationship:": {
+      "name": "addLineRelationship:",
+      "bridgedName": "addLineRelationship",
       "args": [
         {
-          "name": "extendGuideToStartPosition",
-          "type": "double"
-        },
-        {
-          "name": "endPosition",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addTarget:": {
-      "name": "addTarget:",
-      "bridgedName": "addTarget",
-      "args": [
-        {
-          "name": "addTarget",
+          "name": "addLineRelationship",
           "type": "id"
         }
       ],
@@ -135,8 +118,8 @@
     }
   },
   "properties": {
-    "distanceMeasurements": {
-      "name": "distanceMeasurements",
+    "spacingSnaps": {
+      "name": "spacingSnaps",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
@@ -144,8 +127,8 @@
         "nonatomic"
       ]
     },
-    "dimensionMeasurements": {
-      "name": "dimensionMeasurements",
+    "dimensionSnaps": {
+      "name": "dimensionSnaps",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
@@ -153,46 +136,10 @@
         "nonatomic"
       ]
     },
-    "guideEndPosition": {
-      "name": "guideEndPosition",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "guideStartPosition": {
-      "name": "guideStartPosition",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "wantsGuide": {
-      "name": "wantsGuide",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "position": {
-      "name": "position",
-      "pointer": false,
-      "type": "double",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "snappedToLine": {
-      "name": "snappedToLine",
-      "pointer": false,
-      "type": "BOOL",
+    "edgeSnaps": {
+      "name": "edgeSnaps",
+      "pointer": true,
+      "type": "NSArray",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -4,7 +4,7 @@
     "NSMutableArray",
     "NSResponder",
     "NSToolbar",
-    "NSToolbarClippedItemsIndicator",
+    "NSToolbarClippedItemsIndicatorViewer",
     "NSToolbarItem"
   ],
   "protocol": false,
@@ -326,6 +326,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_minimumWidthEnsuringVisibilityOfAllItems": {
+      "name": "_minimumWidthEnsuringVisibilityOfAllItems",
+      "bridgedName": "_minimumWidthEnsuringVisibilityOfAllItems",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_toolbarMetrics": {
       "name": "_toolbarMetrics",
       "bridgedName": "_toolbarMetrics",
@@ -513,222 +521,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_layoutRowWithCenterStartingAtIndex:endingAtIndex:withFirstItemPosition:gridWidth:": {
-      "name": "_layoutRowWithCenterStartingAtIndex:endingAtIndex:withFirstItemPosition:gridWidth:",
-      "bridgedName": "_layoutRowWithCenterStartingAtIndex_endingAtIndex_withFirstItemPosition_gridWidth",
-      "args": [
-        {
-          "name": "_layoutRowWithCenterStartingAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "endingAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "withFirstItemPosition",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "gridWidth",
-          "type": "double"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_layoutRowStartingAtIndex:endingAtIndex:withFirstItemPosition:gridWidth:allowOverflowMenu:validWidthWithClipIndicator:withoutClip:clippedItemViewers:canClipFirstItem:leadingFlexibleSpaceOffset:flexibleSpace:unusedSpace:": {
-      "name": "_layoutRowStartingAtIndex:endingAtIndex:withFirstItemPosition:gridWidth:allowOverflowMenu:validWidthWithClipIndicator:withoutClip:clippedItemViewers:canClipFirstItem:leadingFlexibleSpaceOffset:flexibleSpace:unusedSpace:",
-      "bridgedName": "_layoutRowStartingAtIndex_endingAtIndex_withFirstItemPosition_gridWidth_allowOverflowMenu_validWidthWithClipIndicator_withoutClip_clippedItemViewers_canClipFirstItem_leadingFlexibleSpaceOffset_flexibleSpace_unusedSpace",
-      "args": [
-        {
-          "name": "_layoutRowStartingAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "endingAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "withFirstItemPosition",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "gridWidth",
-          "type": "long long"
-        },
-        {
-          "name": "allowOverflowMenu",
-          "type": "BOOL"
-        },
-        {
-          "name": "validWidthWithClipIndicator",
-          "type": "double"
-        },
-        {
-          "name": "withoutClip",
-          "type": "double"
-        },
-        {
-          "name": "clippedItemViewers",
-          "type": "id"
-        },
-        {
-          "name": "canClipFirstItem",
-          "type": "BOOL"
-        },
-        {
-          "name": "leadingFlexibleSpaceOffset",
-          "type": "double"
-        },
-        {
-          "name": "flexibleSpace",
-          "type": "double *"
-        },
-        {
-          "name": "unusedSpace",
-          "type": "double *"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_layoutRowStartingAtIndex:withFirstItemPosition:gridWidth:allowOverflowMenu:validWidthWithClipIndicator:withoutClip:leadingFlexibleSpaceOffset:": {
-      "name": "_layoutRowStartingAtIndex:withFirstItemPosition:gridWidth:allowOverflowMenu:validWidthWithClipIndicator:withoutClip:leadingFlexibleSpaceOffset:",
-      "bridgedName": "_layoutRowStartingAtIndex_withFirstItemPosition_gridWidth_allowOverflowMenu_validWidthWithClipIndicator_withoutClip_leadingFlexibleSpaceOffset",
-      "args": [
-        {
-          "name": "_layoutRowStartingAtIndex",
-          "type": "long long"
-        },
-        {
-          "name": "withFirstItemPosition",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "gridWidth",
-          "type": "long long"
-        },
-        {
-          "name": "allowOverflowMenu",
-          "type": "BOOL"
-        },
-        {
-          "name": "validWidthWithClipIndicator",
-          "type": "double"
-        },
-        {
-          "name": "withoutClip",
-          "type": "double"
-        },
-        {
-          "name": "leadingFlexibleSpaceOffset",
-          "type": "double"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_sizeItemViewersWithPreferredWidthRatios:withRemainingUndistributedWidth:ctm:": {
-      "name": "_sizeItemViewersWithPreferredWidthRatios:withRemainingUndistributedWidth:ctm:",
-      "bridgedName": "_sizeItemViewersWithPreferredWidthRatios_withRemainingUndistributedWidth_ctm",
-      "args": [
-        {
-          "name": "_sizeItemViewersWithPreferredWidthRatios",
-          "type": "id"
-        },
-        {
-          "name": "withRemainingUndistributedWidth",
-          "type": "double *"
-        },
-        {
-          "name": "ctm",
-          "type": "const struct CGAffineTransform *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_desiredExtraSpaceForItemViewersWithPreferredWidthRatios:": {
-      "name": "_desiredExtraSpaceForItemViewersWithPreferredWidthRatios:",
-      "bridgedName": "_desiredExtraSpaceForItemViewersWithPreferredWidthRatios",
-      "args": [
-        {
-          "name": "_desiredExtraSpaceForItemViewersWithPreferredWidthRatios",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_sizePartitioningSpacersInItemViewers:startingAtPoint:withInterItemViewerSpacing:withCTM:withRemainingUndistributedWidth:": {
-      "name": "_sizePartitioningSpacersInItemViewers:startingAtPoint:withInterItemViewerSpacing:withCTM:withRemainingUndistributedWidth:",
-      "bridgedName": "_sizePartitioningSpacersInItemViewers_startingAtPoint_withInterItemViewerSpacing_withCTM_withRemainingUndistributedWidth",
-      "args": [
-        {
-          "name": "_sizePartitioningSpacersInItemViewers",
-          "type": "id"
-        },
-        {
-          "name": "startingAtPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "withInterItemViewerSpacing",
-          "type": "double"
-        },
-        {
-          "name": "withCTM",
-          "type": "const struct CGAffineTransform *"
-        },
-        {
-          "name": "withRemainingUndistributedWidth",
-          "type": "double *"
-        }
-      ],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_getPixelAligningTransformForLayout": {
       "name": "_getPixelAligningTransformForLayout",
       "bridgedName": "_getPixelAligningTransformForLayout",
       "args": [],
       "returns": "struct CGAffineTransform",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_distributeAvailableSpaceIfNecessary:toFlexibleSizedItems:lastItemIsRightAligned:undistributedWidth:ctm:": {
-      "name": "_distributeAvailableSpaceIfNecessary:toFlexibleSizedItems:lastItemIsRightAligned:undistributedWidth:ctm:",
-      "bridgedName": "_distributeAvailableSpaceIfNecessary_toFlexibleSizedItems_lastItemIsRightAligned_undistributedWidth_ctm",
-      "args": [
-        {
-          "name": "_distributeAvailableSpaceIfNecessary",
-          "type": "double"
-        },
-        {
-          "name": "toFlexibleSizedItems",
-          "type": "id"
-        },
-        {
-          "name": "lastItemIsRightAligned",
-          "type": "char *"
-        },
-        {
-          "name": "undistributedWidth",
-          "type": "double *"
-        },
-        {
-          "name": "ctm",
-          "type": "const struct CGAffineTransform *"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -757,45 +554,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_computeCustomItemViewersWithPreferredWidthRatiosInRange:": {
-      "name": "_computeCustomItemViewersWithPreferredWidthRatiosInRange:",
-      "bridgedName": "_computeCustomItemViewersWithPreferredWidthRatiosInRange",
-      "args": [
-        {
-          "name": "_computeCustomItemViewersWithPreferredWidthRatiosInRange",
-          "type": "struct _NSRange"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_computeFlexibleSpaceItemViewersInRange:": {
-      "name": "_computeFlexibleSpaceItemViewersInRange:",
-      "bridgedName": "_computeFlexibleSpaceItemViewersInRange",
-      "args": [
-        {
-          "name": "_computeFlexibleSpaceItemViewersInRange",
-          "type": "struct _NSRange"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_computeResizeableCustomItemViewersInRange:": {
-      "name": "_computeResizeableCustomItemViewersInRange:",
-      "bridgedName": "_computeResizeableCustomItemViewersInRange",
-      "args": [
-        {
-          "name": "_computeResizeableCustomItemViewersInRange",
-          "type": "struct _NSRange"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_cycleWindows:": {
       "name": "_cycleWindows:",
       "bridgedName": "_cycleWindows",
@@ -805,6 +563,14 @@
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateEffectiveVibrantBlendingStyle": {
+      "name": "_invalidateEffectiveVibrantBlendingStyle",
+      "bridgedName": "_invalidateEffectiveVibrantBlendingStyle",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1021,14 +787,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_didRemoveLayer": {
-      "name": "_didRemoveLayer",
-      "bridgedName": "_didRemoveLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "layout": {
       "name": "layout",
       "bridgedName": "layout",
@@ -1037,11 +795,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_removeBaselineView": {
-      "name": "_removeBaselineView",
-      "bridgedName": "_removeBaselineView",
+    "_subviewLayoutInProgress": {
+      "name": "_subviewLayoutInProgress",
+      "bridgedName": "_subviewLayoutInProgress",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBaselineSeparatorStyle:": {
+      "name": "_setBaselineSeparatorStyle:",
+      "bridgedName": "_setBaselineSeparatorStyle",
+      "args": [
+        {
+          "name": "_setBaselineSeparatorStyle",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_baselineSeparatorStyle": {
+      "name": "_baselineSeparatorStyle",
+      "bridgedName": "_baselineSeparatorStyle",
+      "args": [],
+      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1049,7 +828,20 @@
       "name": "_updateBaselineView",
       "bridgedName": "_updateBaselineView",
       "args": [],
-      "returns": "BOOL",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_frameForBaselineView:": {
+      "name": "_frameForBaselineView:",
+      "bridgedName": "_frameForBaselineView",
+      "args": [
+        {
+          "name": "_frameForBaselineView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1103,32 +895,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_drawBaselineInClipRect:": {
-      "name": "_drawBaselineInClipRect:",
-      "bridgedName": "_drawBaselineInClipRect",
-      "args": [
-        {
-          "name": "_drawBaselineInClipRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_frameForBaselineView:": {
-      "name": "_frameForBaselineView:",
-      "bridgedName": "_frameForBaselineView",
-      "args": [
-        {
-          "name": "_frameForBaselineView",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_drawBackgroundFillInClipRect:": {
       "name": "_drawBackgroundFillInClipRect:",
       "bridgedName": "_drawBackgroundFillInClipRect",
@@ -1153,27 +919,6 @@
     "_drawsBaseline": {
       "name": "_drawsBaseline",
       "bridgedName": "_drawsBaseline",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setWindowWantsSquareToolbarSelectionHighlight:": {
-      "name": "_setWindowWantsSquareToolbarSelectionHighlight:",
-      "bridgedName": "_setWindowWantsSquareToolbarSelectionHighlight",
-      "args": [
-        {
-          "name": "_setWindowWantsSquareToolbarSelectionHighlight",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_windowWantsSquareToolbarSelectionHighlight": {
-      "name": "_windowWantsSquareToolbarSelectionHighlight",
-      "bridgedName": "_windowWantsSquareToolbarSelectionHighlight",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -1483,6 +1228,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "set_clipIndicator:": {
+      "name": "set_clipIndicator:",
+      "bridgedName": "set_clipIndicator",
+      "args": [
+        {
+          "name": "set_clipIndicator",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_clipIndicator": {
       "name": "_clipIndicator",
       "bridgedName": "_clipIndicator",
@@ -1630,6 +1388,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_endSubviewsBeingBorrowed": {
+      "name": "_endSubviewsBeingBorrowed",
+      "bridgedName": "_endSubviewsBeingBorrowed",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginSubviewsBeingBorrowed": {
+      "name": "_beginSubviewsBeingBorrowed",
+      "bridgedName": "_beginSubviewsBeingBorrowed",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "toolbar": {
       "name": "toolbar",
       "bridgedName": "toolbar",
@@ -1656,23 +1430,6 @@
       "bridgedName": "_isPaletteView",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setActsAsPalette:forToolbar:": {
-      "name": "_setActsAsPalette:forToolbar:",
-      "bridgedName": "_setActsAsPalette_forToolbar",
-      "args": [
-        {
-          "name": "_setActsAsPalette",
-          "type": "BOOL"
-        },
-        {
-          "name": "forToolbar",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1711,19 +1468,6 @@
       "args": [
         {
           "name": "_setDrawsBaseline",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setAllowsMultipleRows:": {
-      "name": "_setAllowsMultipleRows:",
-      "bridgedName": "_setAllowsMultipleRows",
-      "args": [
-        {
-          "name": "_setAllowsMultipleRows",
           "type": "BOOL"
         }
       ],
@@ -1806,16 +1550,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setLayoutEngine:": {
-      "name": "_setLayoutEngine:",
-      "bridgedName": "_setLayoutEngine",
-      "args": [
-        {
-          "name": "_setLayoutEngine",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
+    "wantsLayer": {
+      "name": "wantsLayer",
+      "bridgedName": "wantsLayer",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2247,40 +1986,6 @@
         {
           "name": "throwAwayCacheWhenDone",
           "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_computeTravelTimeForInsertionOfItemViewer:": {
-      "name": "_computeTravelTimeForInsertionOfItemViewer:",
-      "bridgedName": "_computeTravelTimeForInsertionOfItemViewer",
-      "args": [
-        {
-          "name": "_computeTravelTimeForInsertionOfItemViewer",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "stopUpdateInsertionAnimation": {
-      "name": "stopUpdateInsertionAnimation",
-      "bridgedName": "stopUpdateInsertionAnimation",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateDragInsertion:": {
-      "name": "_updateDragInsertion:",
-      "bridgedName": "_updateDragInsertion",
-      "args": [
-        {
-          "name": "_updateDragInsertion",
-          "type": "id"
         }
       ],
       "returns": "void",

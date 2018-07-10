@@ -5,8 +5,7 @@
   "classes": [
     "MSCloudAvatarView",
     "NSProgressIndicator",
-    "NSTextField",
-    "NSView"
+    "NSTextField"
   ],
   "protocol": false,
   "className": "MSCloudPreferencesAccountViewController",
@@ -63,6 +62,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "willPresentError:": {
+      "name": "willPresentError:",
+      "bridgedName": "willPresentError",
+      "args": [
+        {
+          "name": "willPresentError",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "logout:": {
       "name": "logout:",
       "bridgedName": "logout",
@@ -84,23 +96,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "updateUserLoading": {
-      "name": "updateUserLoading",
-      "bridgedName": "updateUserLoading",
+    "loadUser": {
+      "name": "loadUser",
+      "bridgedName": "loadUser",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "userDidChangeLoadingNotification:": {
-      "name": "userDidChangeLoadingNotification:",
-      "bridgedName": "userDidChangeLoadingNotification",
-      "args": [
-        {
-          "name": "userDidChangeLoadingNotification",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -178,6 +177,23 @@
     }
   },
   "properties": {
+    "loading": {
+      "name": "loading",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "errorLabel": {
+      "name": "errorLabel",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "progressIndicator": {
       "name": "progressIndicator",
       "pointer": true,
@@ -209,15 +225,6 @@
       "name": "avatarView",
       "pointer": true,
       "type": "MSCloudAvatarView",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "userMetadataView": {
-      "name": "userMetadataView",
-      "pointer": true,
-      "type": "NSView",
       "attributes": [
         "retain",
         "nonatomic"

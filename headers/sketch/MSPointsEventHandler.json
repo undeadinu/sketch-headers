@@ -4,6 +4,7 @@
   ],
   "classes": [
     "MSLayer",
+    "MSStyledLayer",
     "NSMutableDictionary"
   ],
   "protocol": false,
@@ -49,23 +50,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapsForPoints:": {
-      "name": "snapsForPoints:",
-      "bridgedName": "snapsForPoints",
-      "args": [
-        {
-          "name": "snapsForPoints",
-          "type": "id"
-        }
-      ],
+    "pointsToSnap": {
+      "name": "pointsToSnap",
+      "bridgedName": "pointsToSnap",
+      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapsForShape": {
-      "name": "snapsForShape",
-      "bridgedName": "snapsForShape",
-      "args": [],
+    "snapTargetsForPoints:": {
+      "name": "snapTargetsForPoints:",
+      "bridgedName": "snapTargetsForPoints",
+      "args": [
+        {
+          "name": "snapTargetsForPoints",
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -78,12 +79,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawDotAtPoint:index:selected:": {
-      "name": "drawDotAtPoint:index:selected:",
-      "bridgedName": "drawDotAtPoint_index_selected",
+    "drawHandleAtPoint:index:selected:": {
+      "name": "drawHandleAtPoint:index:selected:",
+      "bridgedName": "drawHandleAtPoint_index_selected",
       "args": [
         {
-          "name": "drawDotAtPoint",
+          "name": "drawHandleAtPoint",
           "type": "struct CGPoint"
         },
         {
@@ -110,14 +111,6 @@
     "drawSnaps": {
       "name": "drawSnaps",
       "bridgedName": "drawSnaps",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "concatTransformsForDrawSnaps": {
-      "name": "concatTransformsForDrawSnaps",
-      "bridgedName": "concatTransformsForDrawSnaps",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -177,19 +170,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "adjustPoint:": {
-      "name": "adjustPoint:",
-      "bridgedName": "adjustPoint",
-      "args": [
-        {
-          "name": "adjustPoint",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "shouldReturnToDefaultHandlerInCurrentState": {
       "name": "shouldReturnToDefaultHandlerInCurrentState",
       "bridgedName": "shouldReturnToDefaultHandlerInCurrentState",
@@ -229,6 +209,27 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointAtIndex:toLocation:modifierFlags:": {
+      "name": "movePointAtIndex:toLocation:modifierFlags:",
+      "bridgedName": "movePointAtIndex_toLocation_modifierFlags",
+      "args": [
+        {
+          "name": "movePointAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -300,12 +301,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "indexForMouse:": {
-      "name": "indexForMouse:",
-      "bridgedName": "indexForMouse",
+    "indexOfPointAtLocation:": {
+      "name": "indexOfPointAtLocation:",
+      "bridgedName": "indexOfPointAtLocation",
       "args": [
         {
-          "name": "indexForMouse",
+          "name": "indexOfPointAtLocation",
           "type": "struct CGPoint"
         }
       ],
@@ -321,12 +322,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "relMouse:": {
-      "name": "relMouse:",
-      "bridgedName": "relMouse",
+    "convertPointToUnitCoordinateSpace:": {
+      "name": "convertPointToUnitCoordinateSpace:",
+      "bridgedName": "convertPointToUnitCoordinateSpace",
       "args": [
         {
-          "name": "relMouse",
+          "name": "convertPointToUnitCoordinateSpace",
           "type": "struct CGPoint"
         }
       ],
@@ -358,19 +359,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "setLayer:": {
-      "name": "setLayer:",
-      "bridgedName": "setLayer",
-      "args": [
-        {
-          "name": "setLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "handlerWillLoseFocus": {
       "name": "handlerWillLoseFocus",
       "bridgedName": "handlerWillLoseFocus",
@@ -387,9 +375,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layerFromSelectedLayers": {
-      "name": "layerFromSelectedLayers",
-      "bridgedName": "layerFromSelectedLayers",
+    "findSelectedLayer": {
+      "name": "findSelectedLayer",
+      "bridgedName": "findSelectedLayer",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -410,11 +398,29 @@
     }
   },
   "properties": {
-    "selectedPoint": {
-      "name": "selectedPoint",
+    "indexForSelectedPoint": {
+      "name": "indexForSelectedPoint",
       "pointer": false,
       "type": "long long",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "layer": {
+      "name": "layer",
+      "pointer": true,
+      "type": "MSStyledLayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "pointer": true,
+      "type": "MSLayer",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

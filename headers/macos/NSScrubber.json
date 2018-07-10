@@ -4,7 +4,6 @@
     "NSScrollViewDelegate.h"
   ],
   "classes": [
-    "NSArray",
     "NSButton",
     "NSColor",
     "NSPanGestureRecognizer",
@@ -24,6 +23,14 @@
     "NSGestureRecognizerDelegate"
   ],
   "methods": {
+    "texturedBackgroundColor": {
+      "name": "texturedBackgroundColor",
+      "bridgedName": "texturedBackgroundColor",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "keyPathsForValuesAffectingAlignmentRectInsets": {
       "name": "keyPathsForValuesAffectingAlignmentRectInsets",
       "bridgedName": "keyPathsForValuesAffectingAlignmentRectInsets",
@@ -43,14 +50,6 @@
     "keyPathsForValuesInvalidatingItemLayout": {
       "name": "keyPathsForValuesInvalidatingItemLayout",
       "bridgedName": "keyPathsForValuesInvalidatingItemLayout",
-      "args": [],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "texturedBackgroundColor": {
-      "name": "texturedBackgroundColor",
-      "bridgedName": "texturedBackgroundColor",
       "args": [],
       "returns": "id",
       "kind": "class",
@@ -94,6 +93,64 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEndcapCornerRadius:": {
+      "name": "setEndcapCornerRadius:",
+      "bridgedName": "setEndcapCornerRadius",
+      "args": [
+        {
+          "name": "setEndcapCornerRadius",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endcapCornerRadius": {
+      "name": "endcapCornerRadius",
+      "bridgedName": "endcapCornerRadius",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSelectionLensSize:": {
+      "name": "setSelectionLensSize:",
+      "bridgedName": "setSelectionLensSize",
+      "args": [
+        {
+          "name": "setSelectionLensSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionLensSize": {
+      "name": "selectionLensSize",
+      "bridgedName": "selectionLensSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "populatedItemViews": {
+      "name": "populatedItemViews",
+      "bridgedName": "populatedItemViews",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollView": {
+      "name": "scrollView",
+      "bridgedName": "scrollView",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -676,6 +733,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "performSequentialBatchUpdates:completionHandler:": {
+      "name": "performSequentialBatchUpdates:completionHandler:",
+      "bridgedName": "performSequentialBatchUpdates_completionHandler",
+      "args": [
+        {
+          "name": "performSequentialBatchUpdates",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "performSequentialBatchUpdates:": {
       "name": "performSequentialBatchUpdates:",
       "bridgedName": "performSequentialBatchUpdates",
@@ -751,6 +825,27 @@
       "bridgedName": "registerDependencyObservations",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIgnoresTouches:": {
+      "name": "_setIgnoresTouches:",
+      "bridgedName": "_setIgnoresTouches",
+      "args": [
+        {
+          "name": "_setIgnoresTouches",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ignoresTouches": {
+      "name": "_ignoresTouches",
+      "bridgedName": "_ignoresTouches",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1249,15 +1344,6 @@
         "readonly"
       ]
     },
-    "ignoresTouches": {
-      "name": "ignoresTouches",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "getter=_ignoresTouches",
-        "setter=_setIgnoresTouches:"
-      ]
-    },
     "backgroundView": {
       "name": "backgroundView",
       "pointer": true,
@@ -1314,20 +1400,20 @@
         "retain"
       ]
     },
-    "populatedItemViews": {
-      "name": "populatedItemViews",
-      "pointer": true,
-      "type": "NSArray",
+    "_wantsPageAlignedHorizontalAxis": {
+      "name": "_wantsPageAlignedHorizontalAxis",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
-        "readonly"
+        "setter=_setWantsPageAlignedHorizontalAxis:"
       ]
     },
-    "scrollView": {
-      "name": "scrollView",
-      "pointer": true,
-      "type": "NSScrollView",
+    "_wantsPageAlignedVerticalAxis": {
+      "name": "_wantsPageAlignedVerticalAxis",
+      "pointer": false,
+      "type": "BOOL",
       "attributes": [
-        "readonly"
+        "setter=_setWantsPageAlignedVerticalAxis:"
       ]
     },
     "debugDescription": {

@@ -16,9 +16,10 @@
     "NSString",
     "MSAbsoluteRect",
     "MSImmutableLayerAncestry",
+    "MSLayoutAnchor",
+    "MSLayoutPosition",
     "MSModelObject<BCSortable><MSSharedObjectStyling>",
     "MSSharedStyle",
-    "MSSnapLine",
     "MSStyledLayer",
     "NSDictionary",
     "NSHashTable",
@@ -212,6 +213,19 @@
       "bridgedName": "keyPathsForValuesAffectingUserVisibleRotation",
       "args": [],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "rotationForUserVisibleRotation:": {
+      "name": "rotationForUserVisibleRotation:",
+      "bridgedName": "rotationForUserVisibleRotation",
+      "args": [
+        {
+          "name": "rotationForUserVisibleRotation",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -493,13 +507,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "convertRectToAbsoluteCoordinates:": {
-      "name": "convertRectToAbsoluteCoordinates:",
-      "bridgedName": "convertRectToAbsoluteCoordinates",
+    "convertRect:toLayer:": {
+      "name": "convertRect:toLayer:",
+      "bridgedName": "convertRect_toLayer",
       "args": [
         {
-          "name": "convertRectToAbsoluteCoordinates",
+          "name": "convertRect",
           "type": "struct CGRect"
+        },
+        {
+          "name": "toLayer",
+          "type": "id"
         }
       ],
       "returns": "struct CGRect",
@@ -654,6 +672,31 @@
       "bridgedName": "makeOriginIntegral",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boundsRectForAlignment": {
+      "name": "boundsRectForAlignment",
+      "bridgedName": "boundsRectForAlignment",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentRectInLayer:options:": {
+      "name": "alignmentRectInLayer:options:",
+      "bridgedName": "alignmentRectInLayer_options",
+      "args": [
+        {
+          "name": "alignmentRectInLayer",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1018,7 +1061,7 @@
       "args": [
         {
           "name": "moveBySuggestedOffset",
-          "type": "struct CGSize"
+          "type": "struct CGVector"
         }
       ],
       "returns": "void",
@@ -1176,19 +1219,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "measurementRectWithOptions:": {
-      "name": "measurementRectWithOptions:",
-      "bridgedName": "measurementRectWithOptions",
-      "args": [
-        {
-          "name": "measurementRectWithOptions",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "cornerRectType": {
       "name": "cornerRectType",
       "bridgedName": "cornerRectType",
@@ -1296,32 +1326,6 @@
       "bridgedName": "handleDoubleClick",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "boundsForParentInDocument:": {
-      "name": "boundsForParentInDocument:",
-      "bridgedName": "boundsForParentInDocument",
-      "args": [
-        {
-          "name": "boundsForParentInDocument",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layerDidResizeFromInspector:": {
-      "name": "layerDidResizeFromInspector:",
-      "bridgedName": "layerDidResizeFromInspector",
-      "args": [
-        {
-          "name": "layerDidResizeFromInspector",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1458,6 +1462,48 @@
       "bridgedName": "canSplitPaths",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "minimumAdjustedRectForValue:axis:anchor:": {
+      "name": "minimumAdjustedRectForValue:axis:anchor:",
+      "bridgedName": "minimumAdjustedRectForValue_axis_anchor",
+      "args": [
+        {
+          "name": "minimumAdjustedRectForValue",
+          "type": "double"
+        },
+        {
+          "name": "axis",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "anchor",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boundsOfParentLayer": {
+      "name": "boundsOfParentLayer",
+      "bridgedName": "boundsOfParentLayer",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidResizeFromInspector:": {
+      "name": "layerDidResizeFromInspector:",
+      "bridgedName": "layerDidResizeFromInspector",
+      "args": [
+        {
+          "name": "layerDidResizeFromInspector",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2060,6 +2106,40 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "applyUserVisibleRotation:explicitRotationCenter:": {
+      "name": "applyUserVisibleRotation:explicitRotationCenter:",
+      "bridgedName": "applyUserVisibleRotation_explicitRotationCenter",
+      "args": [
+        {
+          "name": "applyUserVisibleRotation",
+          "type": "double"
+        },
+        {
+          "name": "explicitRotationCenter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyRotation:explicitRotationCenter:": {
+      "name": "applyRotation:explicitRotationCenter:",
+      "bridgedName": "applyRotation_explicitRotationCenter",
+      "args": [
+        {
+          "name": "applyRotation",
+          "type": "double"
+        },
+        {
+          "name": "explicitRotationCenter",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "applyOverride:toPoint:": {
       "name": "applyOverride:toPoint:",
       "bridgedName": "applyOverride_toPoint",
@@ -2099,14 +2179,6 @@
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overridePoints": {
-      "name": "overridePoints",
-      "bridgedName": "overridePoints",
-      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -2232,6 +2304,15 @@
         "nonatomic"
       ]
     },
+    "pathForBooleanOperations": {
+      "name": "pathForBooleanOperations",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "pathInFrameWithTransforms": {
       "name": "pathInFrameWithTransforms",
       "pointer": true,
@@ -2313,8 +2394,8 @@
         "nonatomic"
       ]
     },
-    "isHovering": {
-      "name": "isHovering",
+    "isHighlighted": {
+      "name": "isHighlighted",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -2415,6 +2496,15 @@
         "nonatomic"
       ]
     },
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "pointer": true,
+      "type": "MSLayer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "rectForSnapping": {
       "name": "rectForSnapping",
       "pointer": false,
@@ -2433,10 +2523,46 @@
         "nonatomic"
       ]
     },
+    "midXHeightAnchor": {
+      "name": "midXHeightAnchor",
+      "pointer": true,
+      "type": "MSLayoutPosition",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "baselineAnchor": {
+      "name": "baselineAnchor",
+      "pointer": true,
+      "type": "MSLayoutPosition",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "heightAnchor": {
+      "name": "heightAnchor",
+      "pointer": true,
+      "type": "MSLayoutAnchor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "widthAnchor": {
+      "name": "widthAnchor",
+      "pointer": true,
+      "type": "MSLayoutAnchor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "centerYAnchor": {
       "name": "centerYAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2445,7 +2571,7 @@
     "centerXAnchor": {
       "name": "centerXAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2454,7 +2580,7 @@
     "bottomAnchor": {
       "name": "bottomAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2463,7 +2589,7 @@
     "topAnchor": {
       "name": "topAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2472,7 +2598,7 @@
     "rightAnchor": {
       "name": "rightAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -2481,14 +2607,14 @@
     "leftAnchor": {
       "name": "leftAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
       ]
     },
-    "snapLines": {
-      "name": "snapLines",
+    "anchorsForSnapping": {
+      "name": "anchorsForSnapping",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
@@ -2745,6 +2871,16 @@
       "pointer": false,
       "type": "double",
       "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "overridePoints": {
+      "name": "overridePoints",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },
@@ -2772,6 +2908,15 @@
       "type": "unsigned long long",
       "attributes": [
         "readonly"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
       ]
     },
     "superclass": {

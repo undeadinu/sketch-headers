@@ -3,13 +3,27 @@
   "classes": [
     "NSColor",
     "NSFont",
-    "NSString"
+    "NSString",
+    "NSTextField"
   ],
   "protocol": false,
   "className": "NSBox",
   "extends": "NSView",
   "interfaces": [],
   "methods": {
+    "defaultAnimationForKey:": {
+      "name": "defaultAnimationForKey:",
+      "bridgedName": "defaultAnimationForKey",
+      "args": [
+        {
+          "name": "defaultAnimationForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "requiresConstraintBasedLayout": {
       "name": "requiresConstraintBasedLayout",
       "bridgedName": "requiresConstraintBasedLayout",
@@ -26,6 +40,40 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "_lineColor": {
+      "name": "_lineColor",
+      "bridgedName": "_lineColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setLineColor:": {
+      "name": "_setLineColor:",
+      "bridgedName": "_setLineColor",
+      "args": [
+        {
+          "name": "_setLineColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitleWithMnemonic:": {
+      "name": "setTitleWithMnemonic:",
+      "bridgedName": "setTitleWithMnemonic",
+      "args": [
+        {
+          "name": "setTitleWithMnemonic",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "backgroundColor": {
       "name": "backgroundColor",
       "bridgedName": "backgroundColor",
@@ -41,6 +89,205 @@
         {
           "name": "setBackgroundColor",
           "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTitleTextField": {
+      "name": "_removeTitleTextField",
+      "bridgedName": "_removeTitleTextField",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTitleTextField": {
+      "name": "_updateTitleTextField",
+      "bridgedName": "_updateTitleTextField",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titleTextFieldFrame": {
+      "name": "_titleTextFieldFrame",
+      "bridgedName": "_titleTextFieldFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needsTitleTextField": {
+      "name": "_needsTitleTextField",
+      "bridgedName": "_needsTitleTextField",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needsBackgroundView": {
+      "name": "_needsBackgroundView",
+      "bridgedName": "_needsBackgroundView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeBackgroundView": {
+      "name": "_removeBackgroundView",
+      "bridgedName": "_removeBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateCustomBackgroundView": {
+      "name": "_updateCustomBackgroundView",
+      "bridgedName": "_updateCustomBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSeparatorBackgroundView": {
+      "name": "_updateSeparatorBackgroundView",
+      "bridgedName": "_updateSeparatorBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateOldStyleBackgroundView": {
+      "name": "_updateOldStyleBackgroundView",
+      "bridgedName": "_updateOldStyleBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateThemeBoxBackgroundView": {
+      "name": "_updateThemeBoxBackgroundView",
+      "bridgedName": "_updateThemeBoxBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateBackgroundView": {
+      "name": "_updateBackgroundView",
+      "bridgedName": "_updateBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_backgroundViewFrame": {
+      "name": "_backgroundViewFrame",
+      "bridgedName": "_backgroundViewFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateSubviewsForStateChange": {
+      "name": "_invalidateSubviewsForStateChange",
+      "bridgedName": "_invalidateSubviewsForStateChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fontSmoothingBackgroundColor": {
+      "name": "fontSmoothingBackgroundColor",
+      "bridgedName": "fontSmoothingBackgroundColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayer": {
+      "name": "updateLayer",
+      "bridgedName": "updateLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillDraw": {
+      "name": "viewWillDraw",
+      "bridgedName": "viewWillDraw",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_classToCheckForWantsUpdateLayer": {
+      "name": "_classToCheckForWantsUpdateLayer",
+      "bridgedName": "_classToCheckForWantsUpdateLayer",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsBoxSubviews": {
+      "name": "_wantsBoxSubviews",
+      "bridgedName": "_wantsBoxSubviews",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSubviews": {
+      "name": "_updateSubviews",
+      "bridgedName": "_updateSubviews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUserInterfaceLayoutDirection:": {
+      "name": "setUserInterfaceLayoutDirection:",
+      "bridgedName": "setUserInterfaceLayoutDirection",
+      "args": [
+        {
+          "name": "setUserInterfaceLayoutDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_separatorBoxIsHorizontal": {
+      "name": "_separatorBoxIsHorizontal",
+      "bridgedName": "_separatorBoxIsHorizontal",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tile:": {
+      "name": "_tile:",
+      "bridgedName": "_tile",
+      "args": [
+        {
+          "name": "_tile",
+          "type": "BOOL"
         }
       ],
       "returns": "void",
@@ -79,138 +326,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithCoder:": {
-      "name": "initWithCoder:",
-      "bridgedName": "initWithCoder",
-      "args": [
-        {
-          "name": "initWithCoder",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "encodeWithCoder:": {
-      "name": "encodeWithCoder:",
-      "bridgedName": "encodeWithCoder",
-      "args": [
-        {
-          "name": "encodeWithCoder",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "allowsVibrancy": {
-      "name": "allowsVibrancy",
-      "bridgedName": "allowsVibrancy",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_viewDidChangeAppearance:": {
-      "name": "_viewDidChangeAppearance:",
-      "bridgedName": "_viewDidChangeAppearance",
-      "args": [
-        {
-          "name": "_viewDidChangeAppearance",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_separatorBoxIsHorizontal": {
-      "name": "_separatorBoxIsHorizontal",
-      "bridgedName": "_separatorBoxIsHorizontal",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_lineColor": {
-      "name": "_lineColor",
-      "bridgedName": "_lineColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setLineColor:": {
-      "name": "_setLineColor:",
-      "bridgedName": "_setLineColor",
-      "args": [
-        {
-          "name": "_setLineColor",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawRect:": {
-      "name": "drawRect:",
-      "bridgedName": "drawRect",
-      "args": [
-        {
-          "name": "drawRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateLayer": {
-      "name": "updateLayer",
-      "bridgedName": "updateLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resetLayerContentsFromCustomBox": {
-      "name": "_resetLayerContentsFromCustomBox",
-      "bridgedName": "_resetLayerContentsFromCustomBox",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setLayerContentsForCustomBox": {
-      "name": "_setLayerContentsForCustomBox",
-      "bridgedName": "_setLayerContentsForCustomBox",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "layout": {
       "name": "layout",
       "bridgedName": "layout",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "autoresizesSubviews": {
-      "name": "autoresizesSubviews",
-      "bridgedName": "autoresizesSubviews",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_didRemoveLayer": {
-      "name": "_didRemoveLayer",
-      "bridgedName": "_didRemoveLayer",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -220,256 +338,6 @@
       "name": "updateConstraints",
       "bridgedName": "updateConstraints",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsTitleTextField": {
-      "name": "_needsTitleTextField",
-      "bridgedName": "_needsTitleTextField",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateTitleTextField": {
-      "name": "_updateTitleTextField",
-      "bridgedName": "_updateTitleTextField",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isOldStyleBordered": {
-      "name": "_isOldStyleBordered",
-      "bridgedName": "_isOldStyleBordered",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_titleTextFieldFrame": {
-      "name": "_titleTextFieldFrame",
-      "bridgedName": "_titleTextFieldFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_removeTitleTextField": {
-      "name": "_removeTitleTextField",
-      "bridgedName": "_removeTitleTextField",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsBackgroundView": {
-      "name": "_needsBackgroundView",
-      "bridgedName": "_needsBackgroundView",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isBoxSeparator": {
-      "name": "_isBoxSeparator",
-      "bridgedName": "_isBoxSeparator",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_removeBackgroundView": {
-      "name": "_removeBackgroundView",
-      "bridgedName": "_removeBackgroundView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateSeparatorBackgroundView": {
-      "name": "_updateSeparatorBackgroundView",
-      "bridgedName": "_updateSeparatorBackgroundView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateGrooveBackgroundView": {
-      "name": "_updateGrooveBackgroundView",
-      "bridgedName": "_updateGrooveBackgroundView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_grooveFrameRect": {
-      "name": "_grooveFrameRect",
-      "bridgedName": "_grooveFrameRect",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateBackgroundView": {
-      "name": "_updateBackgroundView",
-      "bridgedName": "_updateBackgroundView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setTitleTextField:": {
-      "name": "_setTitleTextField:",
-      "bridgedName": "_setTitleTextField",
-      "args": [
-        {
-          "name": "_setTitleTextField",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_titleTextField": {
-      "name": "_titleTextField",
-      "bridgedName": "_titleTextField",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setBackgroundView:": {
-      "name": "_setBackgroundView:",
-      "bridgedName": "_setBackgroundView",
-      "args": [
-        {
-          "name": "_setBackgroundView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_backgroundView": {
-      "name": "_backgroundView",
-      "bridgedName": "_backgroundView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_backgroundViewFrame": {
-      "name": "_backgroundViewFrame",
-      "bridgedName": "_backgroundViewFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_borderRectForOldStyleLineBox": {
-      "name": "_borderRectForOldStyleLineBox",
-      "bridgedName": "_borderRectForOldStyleLineBox",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resetLayerContentsToEmpty": {
-      "name": "_resetLayerContentsToEmpty",
-      "bridgedName": "_resetLayerContentsToEmpty",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_justDrawsAGrooveOnOneSide": {
-      "name": "_justDrawsAGrooveOnOneSide",
-      "bridgedName": "_justDrawsAGrooveOnOneSide",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_classToCheckForWantsUpdateLayer": {
-      "name": "_classToCheckForWantsUpdateLayer",
-      "bridgedName": "_classToCheckForWantsUpdateLayer",
-      "args": [],
-      "returns": "Class",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "viewWillDraw": {
-      "name": "viewWillDraw",
-      "bridgedName": "viewWillDraw",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawRectIfEmpty": {
-      "name": "_drawRectIfEmpty",
-      "bridgedName": "_drawRectIfEmpty",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setTitleWithMnemonic:": {
-      "name": "setTitleWithMnemonic:",
-      "bridgedName": "setTitleWithMnemonic",
-      "args": [
-        {
-          "name": "setTitleWithMnemonic",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "replaceSubview:with:": {
-      "name": "replaceSubview:with:",
-      "bridgedName": "replaceSubview_with",
-      "args": [
-        {
-          "name": "replaceSubview",
-          "type": "id"
-        },
-        {
-          "name": "with",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addSubview:": {
-      "name": "addSubview:",
-      "bridgedName": "addSubview",
-      "args": [
-        {
-          "name": "addSubview",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "willRemoveSubview:": {
-      "name": "willRemoveSubview:",
-      "bridgedName": "willRemoveSubview",
-      "args": [
-        {
-          "name": "willRemoveSubview",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -508,40 +376,104 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "viewDidLiveResizeFromRect:": {
-      "name": "viewDidLiveResizeFromRect:",
-      "bridgedName": "viewDidLiveResizeFromRect",
+    "_isOldStyleBordered": {
+      "name": "_isOldStyleBordered",
+      "bridgedName": "_isOldStyleBordered",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_justDrawsAGrooveOnOneSide": {
+      "name": "_justDrawsAGrooveOnOneSide",
+      "bridgedName": "_justDrawsAGrooveOnOneSide",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_directlyAddSubview:positioned:relativeTo:": {
+      "name": "_directlyAddSubview:positioned:relativeTo:",
+      "bridgedName": "_directlyAddSubview_positioned_relativeTo",
       "args": [
         {
-          "name": "viewDidLiveResizeFromRect",
-          "type": "struct CGRect"
+          "name": "_directlyAddSubview",
+          "type": "id"
+        },
+        {
+          "name": "positioned",
+          "type": "long long"
+        },
+        {
+          "name": "relativeTo",
+          "type": "id"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "preservesContentDuringLiveResize": {
-      "name": "preservesContentDuringLiveResize",
-      "bridgedName": "preservesContentDuringLiveResize",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_invalidateLayerContentsForStateChange": {
-      "name": "_invalidateLayerContentsForStateChange",
-      "bridgedName": "_invalidateLayerContentsForStateChange",
-      "args": [],
+    "willRemoveSubview:": {
+      "name": "willRemoveSubview:",
+      "bridgedName": "willRemoveSubview",
+      "args": [
+        {
+          "name": "willRemoveSubview",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_effectiveTitlePosition": {
-      "name": "_effectiveTitlePosition",
-      "bridgedName": "_effectiveTitlePosition",
+    "replaceSubview:with:": {
+      "name": "replaceSubview:with:",
+      "bridgedName": "replaceSubview_with",
+      "args": [
+        {
+          "name": "replaceSubview",
+          "type": "id"
+        },
+        {
+          "name": "with",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSubview:": {
+      "name": "addSubview:",
+      "bridgedName": "addSubview",
+      "args": [
+        {
+          "name": "addSubview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "borderType": {
+      "name": "borderType",
+      "bridgedName": "borderType",
       "args": [],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setBorderType:": {
+      "name": "setBorderType:",
+      "bridgedName": "setBorderType",
+      "args": [
+        {
+          "name": "setBorderType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -553,32 +485,29 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_tile:": {
-      "name": "_tile:",
-      "bridgedName": "_tile",
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
       "args": [
         {
-          "name": "_tile",
-          "type": "BOOL"
+          "name": "encodeWithCoder",
+          "type": "id"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canSmoothFontsInLayer": {
-      "name": "canSmoothFontsInLayer",
-      "bridgedName": "canSmoothFontsInLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "isOpaque": {
-      "name": "isOpaque",
-      "bridgedName": "isOpaque",
-      "args": [],
-      "returns": "BOOL",
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -600,14 +529,6 @@
       "bridgedName": "_setupAuxiliaryStorage",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_auxiliaryStorage": {
-      "name": "_auxiliaryStorage",
-      "bridgedName": "_auxiliaryStorage",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -766,6 +687,32 @@
         "copy"
       ]
     },
+    "_effectiveBorderWidth": {
+      "name": "_effectiveBorderWidth",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_titleTextField": {
+      "name": "_titleTextField",
+      "pointer": true,
+      "type": "NSTextField",
+      "attributes": [
+        "retain",
+        "setter=_setTitleTextField:"
+      ]
+    },
+    "_backgroundView": {
+      "name": "_backgroundView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "setter=_setBackgroundView:"
+      ]
+    },
     "contentView": {
       "name": "contentView",
       "pointer": true,
@@ -820,6 +767,14 @@
       "type": "NSString",
       "attributes": [
         "copy"
+      ]
+    },
+    "_effectiveTitlePosition": {
+      "name": "_effectiveTitlePosition",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
       ]
     }
   }

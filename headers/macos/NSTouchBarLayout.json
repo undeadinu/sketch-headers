@@ -8,12 +8,75 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
+    "toolbarLayoutWithVisualCenterX:": {
+      "name": "toolbarLayoutWithVisualCenterX:",
+      "bridgedName": "toolbarLayoutWithVisualCenterX",
+      "args": [
+        {
+          "name": "toolbarLayoutWithVisualCenterX",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "touchBarLayoutWithVisualCenterX:": {
+      "name": "touchBarLayoutWithVisualCenterX:",
+      "bridgedName": "touchBarLayoutWithVisualCenterX",
+      "args": [
+        {
+          "name": "touchBarLayoutWithVisualCenterX",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_calculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:": {
       "name": "_calculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:",
       "bridgedName": "_calculateLayoutOfItems_withAvailableSize_startingWidth_xOrigin_sharesLeftEdge_sharesRightEdge_itemsToFrames",
       "args": [
         {
           "name": "_calculateLayoutOfItems",
+          "type": "id"
+        },
+        {
+          "name": "withAvailableSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "startingWidth",
+          "type": "double"
+        },
+        {
+          "name": "xOrigin",
+          "type": "double"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "itemsToFrames",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_divideAndCalculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:": {
+      "name": "_divideAndCalculateLayoutOfItems:withAvailableSize:startingWidth:xOrigin:sharesLeftEdge:sharesRightEdge:itemsToFrames:",
+      "bridgedName": "_divideAndCalculateLayoutOfItems_withAvailableSize_startingWidth_xOrigin_sharesLeftEdge_sharesRightEdge_itemsToFrames",
+      "args": [
+        {
+          "name": "_divideAndCalculateLayoutOfItems",
           "type": "id"
         },
         {
@@ -62,17 +125,51 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_fittingWidthForItems:availableWidth:sharesLeftEdge:sharesRightEdge:attachedItems:": {
-      "name": "_fittingWidthForItems:availableWidth:sharesLeftEdge:sharesRightEdge:attachedItems:",
-      "bridgedName": "_fittingWidthForItems_availableWidth_sharesLeftEdge_sharesRightEdge_attachedItems",
+    "_orderedItemsGivenUnorderedArray:usingOrderedArray:": {
+      "name": "_orderedItemsGivenUnorderedArray:usingOrderedArray:",
+      "bridgedName": "_orderedItemsGivenUnorderedArray_usingOrderedArray",
       "args": [
         {
-          "name": "_fittingWidthForItems",
+          "name": "_orderedItemsGivenUnorderedArray",
           "type": "id"
         },
         {
-          "name": "availableWidth",
-          "type": "double"
+          "name": "usingOrderedArray",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentClippingWidthOfItems:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_contentClippingWidthOfItems:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_contentClippingWidthOfItems_sharesLeftEdge_sharesRightEdge",
+      "args": [
+        {
+          "name": "_contentClippingWidthOfItems",
+          "type": "id"
+        },
+        {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
+          "name": "sharesRightEdge",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:containsFlexibleSpaceItems:": {
+      "name": "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:containsFlexibleSpaceItems:",
+      "bridgedName": "_maxWidthOfItems_sharesLeftEdge_sharesRightEdge_containsFlexibleSpaceItems",
+      "args": [
+        {
+          "name": "_maxWidthOfItems",
+          "type": "id"
         },
         {
           "name": "sharesLeftEdge",
@@ -83,28 +180,11 @@
           "type": "BOOL"
         },
         {
-          "name": "attachedItems",
-          "type": "id"
+          "name": "containsFlexibleSpaceItems",
+          "type": "char *"
         }
       ],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "orderedItemsGivenUnorderedArray:usingOrderedArray:": {
-      "name": "orderedItemsGivenUnorderedArray:usingOrderedArray:",
-      "bridgedName": "orderedItemsGivenUnorderedArray_usingOrderedArray",
-      "args": [
-        {
-          "name": "orderedItemsGivenUnorderedArray",
-          "type": "id"
-        },
-        {
-          "name": "usingOrderedArray",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -129,12 +209,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_preferredWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:": {
-      "name": "_preferredWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:",
-      "bridgedName": "_preferredWidthOfCenterItems_sharesLeftEdge_sharesRightEdge",
+    "_aggregateWidthOfItems:sharesLeftEdge:sharesRightEdge:widthMeasurement:": {
+      "name": "_aggregateWidthOfItems:sharesLeftEdge:sharesRightEdge:widthMeasurement:",
+      "bridgedName": "_aggregateWidthOfItems_sharesLeftEdge_sharesRightEdge_widthMeasurement",
       "args": [
         {
-          "name": "_preferredWidthOfCenterItems",
+          "name": "_aggregateWidthOfItems",
           "type": "id"
         },
         {
@@ -144,125 +224,22 @@
         {
           "name": "sharesRightEdge",
           "type": "BOOL"
+        },
+        {
+          "name": "widthMeasurement",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_contentClippingWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:": {
-      "name": "_contentClippingWidthOfCenterItems:sharesLeftEdge:sharesRightEdge:",
-      "bridgedName": "_contentClippingWidthOfCenterItems_sharesLeftEdge_sharesRightEdge",
+    "_prioritizedItems:": {
+      "name": "_prioritizedItems:",
+      "bridgedName": "_prioritizedItems",
       "args": [
         {
-          "name": "_contentClippingWidthOfCenterItems",
-          "type": "id"
-        },
-        {
-          "name": "sharesLeftEdge",
-          "type": "BOOL"
-        },
-        {
-          "name": "sharesRightEdge",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:": {
-      "name": "_maxWidthOfItems:sharesLeftEdge:sharesRightEdge:",
-      "bridgedName": "_maxWidthOfItems_sharesLeftEdge_sharesRightEdge",
-      "args": [
-        {
-          "name": "_maxWidthOfItems",
-          "type": "id"
-        },
-        {
-          "name": "sharesLeftEdge",
-          "type": "BOOL"
-        },
-        {
-          "name": "sharesRightEdge",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_itemIsFlexibleSpace:": {
-      "name": "_itemIsFlexibleSpace:",
-      "bridgedName": "_itemIsFlexibleSpace",
-      "args": [
-        {
-          "name": "_itemIsFlexibleSpace",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_contentClippingSizeOfItem:": {
-      "name": "_contentClippingSizeOfItem:",
-      "bridgedName": "_contentClippingSizeOfItem",
-      "args": [
-        {
-          "name": "_contentClippingSizeOfItem",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_preferredSizeOfItem:": {
-      "name": "_preferredSizeOfItem:",
-      "bridgedName": "_preferredSizeOfItem",
-      "args": [
-        {
-          "name": "_preferredSizeOfItem",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "priorityIndexOfItem:": {
-      "name": "priorityIndexOfItem:",
-      "bridgedName": "priorityIndexOfItem",
-      "args": [
-        {
-          "name": "priorityIndexOfItem",
-          "type": "id"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "itemPaddingForItem:": {
-      "name": "itemPaddingForItem:",
-      "bridgedName": "itemPaddingForItem",
-      "args": [
-        {
-          "name": "itemPaddingForItem",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "prioritizedItems:": {
-      "name": "prioritizedItems:",
-      "bridgedName": "prioritizedItems",
-      "args": [
-        {
-          "name": "prioritizedItems",
+          "name": "_prioritizedItems",
           "type": "id"
         }
       ],
@@ -270,9 +247,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:availableWidth:": {
-      "name": "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:availableWidth:",
-      "bridgedName": "_centerRectGivenItems_remainingLeftWidth_remainingRightWidth_sharesLeftEdge_sharesRightEdge_availableWidth",
+    "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:": {
+      "name": "_centerRectGivenItems:remainingLeftWidth:remainingRightWidth:sharesLeftEdge:sharesRightEdge:",
+      "bridgedName": "_centerRectGivenItems_remainingLeftWidth_remainingRightWidth_sharesLeftEdge_sharesRightEdge",
       "args": [
         {
           "name": "_centerRectGivenItems",
@@ -293,26 +270,30 @@
         {
           "name": "sharesRightEdge",
           "type": "BOOL"
-        },
-        {
-          "name": "availableWidth",
-          "type": "double"
         }
       ],
       "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_highestPriorityIndexOfItems:": {
-      "name": "_highestPriorityIndexOfItems:",
-      "bridgedName": "_highestPriorityIndexOfItems",
+    "_adjustForItemUserInterfaceLayoutDirection:itemsToAttributes:availableWidth:": {
+      "name": "_adjustForItemUserInterfaceLayoutDirection:itemsToAttributes:availableWidth:",
+      "bridgedName": "_adjustForItemUserInterfaceLayoutDirection_itemsToAttributes_availableWidth",
       "args": [
         {
-          "name": "_highestPriorityIndexOfItems",
+          "name": "_adjustForItemUserInterfaceLayoutDirection",
           "type": "id"
+        },
+        {
+          "name": "itemsToAttributes",
+          "type": "id"
+        },
+        {
+          "name": "availableWidth",
+          "type": "double"
         }
       ],
-      "returns": "long long",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -392,9 +373,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_calculateLayoutOfItems:centerItems:givenSize:": {
-      "name": "_calculateLayoutOfItems:centerItems:givenSize:",
-      "bridgedName": "_calculateLayoutOfItems_centerItems_givenSize",
+    "_calculateLayoutOfItems:centerItems:givenSize:originX:": {
+      "name": "_calculateLayoutOfItems:centerItems:givenSize:originX:",
+      "bridgedName": "_calculateLayoutOfItems_centerItems_givenSize_originX",
       "args": [
         {
           "name": "_calculateLayoutOfItems",
@@ -407,36 +388,19 @@
         {
           "name": "givenSize",
           "type": "struct CGSize"
+        },
+        {
+          "name": "originX",
+          "type": "double"
         }
       ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "framesOfItems:centerItems:givenSize:": {
-      "name": "framesOfItems:centerItems:givenSize:",
-      "bridgedName": "framesOfItems_centerItems_givenSize",
-      "args": [
-        {
-          "name": "framesOfItems",
-          "type": "id"
-        },
-        {
-          "name": "centerItems",
-          "type": "id"
-        },
-        {
-          "name": "givenSize",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_attributesOfItems:centerItems:givenSize:sharesRightEdge:": {
-      "name": "_attributesOfItems:centerItems:givenSize:sharesRightEdge:",
-      "bridgedName": "_attributesOfItems_centerItems_givenSize_sharesRightEdge",
+    "_attributesOfItems:centerItems:givenSize:sharesLeftEdge:sharesRightEdge:xOrigin:": {
+      "name": "_attributesOfItems:centerItems:givenSize:sharesLeftEdge:sharesRightEdge:xOrigin:",
+      "bridgedName": "_attributesOfItems_centerItems_givenSize_sharesLeftEdge_sharesRightEdge_xOrigin",
       "args": [
         {
           "name": "_attributesOfItems",
@@ -451,8 +415,16 @@
           "type": "struct CGSize"
         },
         {
+          "name": "sharesLeftEdge",
+          "type": "BOOL"
+        },
+        {
           "name": "sharesRightEdge",
           "type": "BOOL"
+        },
+        {
+          "name": "xOrigin",
+          "type": "double"
         }
       ],
       "returns": "id",

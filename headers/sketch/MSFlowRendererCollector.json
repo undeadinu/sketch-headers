@@ -6,6 +6,7 @@
     "BCCache",
     "MSImmutableDocumentData",
     "MSImmutablePage",
+    "NSArray",
     "NSDictionary",
     "NSMutableArray",
     "NSSet"
@@ -128,11 +129,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "collect": {
-      "name": "collect",
-      "bridgedName": "collect",
-      "args": [],
-      "returns": "id",
+    "shouldInvalidateCollectedFlowsWithDiff:": {
+      "name": "shouldInvalidateCollectedFlowsWithDiff:",
+      "bridgedName": "shouldInvalidateCollectedFlowsWithDiff",
+      "args": [
+        {
+          "name": "shouldInvalidateCollectedFlowsWithDiff",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -211,8 +217,8 @@
         "nonatomic"
       ]
     },
-    "renderers": {
-      "name": "renderers",
+    "mutableRenderers": {
+      "name": "mutableRenderers",
       "pointer": true,
       "type": "NSMutableArray",
       "attributes": [
@@ -235,6 +241,15 @@
       "type": "MSImmutablePage",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "flowRenderers": {
+      "name": "flowRenderers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     }

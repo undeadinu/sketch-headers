@@ -20,7 +20,6 @@
     "MSDocumentationSearcher",
     "MSFontWatcher",
     "MSHUDWindowController",
-    "MSIOSConnectionController",
     "MSMirrorDataProvider",
     "MSPasteboardManager",
     "MSPersistentAssetCollection",
@@ -257,6 +256,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isThereAPluginForDataSupplier:": {
+      "name": "isThereAPluginForDataSupplier:",
+      "bridgedName": "isThereAPluginForDataSupplier",
+      "args": [
+        {
+          "name": "isThereAPluginForDataSupplier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginForDataSupplierEnabled:": {
+      "name": "isPluginForDataSupplierEnabled:",
+      "bridgedName": "isPluginForDataSupplierEnabled",
+      "args": [
+        {
+          "name": "isPluginForDataSupplierEnabled",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "requestDataFromPluginDataSupplier:pluginContext:": {
       "name": "requestDataFromPluginDataSupplier:pluginContext:",
       "bridgedName": "requestDataFromPluginDataSupplier_pluginContext",
@@ -271,6 +296,40 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataAction": {
+      "name": "dataAction",
+      "bridgedName": "dataAction",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProviderApplyMasterDataToInstances:": {
+      "name": "dataMenuProviderApplyMasterDataToInstances:",
+      "bridgedName": "dataMenuProviderApplyMasterDataToInstances",
+      "args": [
+        {
+          "name": "dataMenuProviderApplyMasterDataToInstances",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProviderCanApplyMasterDataToInstances:": {
+      "name": "dataMenuProviderCanApplyMasterDataToInstances:",
+      "bridgedName": "dataMenuProviderCanApplyMasterDataToInstances",
+      "args": [
+        {
+          "name": "dataMenuProviderCanApplyMasterDataToInstances",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -331,6 +390,19 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataMenuProviderSelectedLayerDataSupplierIdentifier:": {
+      "name": "dataMenuProviderSelectedLayerDataSupplierIdentifier:",
+      "bridgedName": "dataMenuProviderSelectedLayerDataSupplierIdentifier",
+      "args": [
+        {
+          "name": "dataMenuProviderSelectedLayerDataSupplierIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -471,6 +543,23 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "periodWithInitialValue:defaultsKey:": {
+      "name": "periodWithInitialValue:defaultsKey:",
+      "bridgedName": "periodWithInitialValue_defaultsKey",
+      "args": [
+        {
+          "name": "periodWithInitialValue",
+          "type": "long long"
+        },
+        {
+          "name": "defaultsKey",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -675,6 +764,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "setupPluginManager": {
+      "name": "setupPluginManager",
+      "bridgedName": "setupPluginManager",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "reloadAssetLibraryPreferencesTableView": {
       "name": "reloadAssetLibraryPreferencesTableView",
       "bridgedName": "reloadAssetLibraryPreferencesTableView",
@@ -766,32 +863,6 @@
       "bridgedName": "init",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "displayDuplicateAlertSheetForRemoteAssetLibrary:": {
-      "name": "displayDuplicateAlertSheetForRemoteAssetLibrary:",
-      "bridgedName": "displayDuplicateAlertSheetForRemoteAssetLibrary",
-      "args": [
-        {
-          "name": "displayDuplicateAlertSheetForRemoteAssetLibrary",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "startDownloadingLibrary:": {
-      "name": "startDownloadingLibrary:",
-      "bridgedName": "startDownloadingLibrary",
-      "args": [
-        {
-          "name": "startDownloadingLibrary",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1262,12 +1333,19 @@
         "nonatomic"
       ]
     },
+    "needToInformUserPluginsAreDisabled": {
+      "name": "needToInformUserPluginsAreDisabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "sketchSafeModeOn": {
       "name": "sketchSafeModeOn",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
-        "readonly",
         "nonatomic"
       ]
     },
@@ -1439,15 +1517,6 @@
         "nonatomic"
       ]
     },
-    "connectionController": {
-      "name": "connectionController",
-      "pointer": true,
-      "type": "MSIOSConnectionController",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "debugMenuItem": {
       "name": "debugMenuItem",
       "pointer": true,
@@ -1493,6 +1562,15 @@
       "pointer": false,
       "type": "__weak id",
       "attributes": [
+        "nonatomic"
+      ]
+    },
+    "checkForLibraryUpdatesPeriod": {
+      "name": "checkForLibraryUpdatesPeriod",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

@@ -1,10 +1,10 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
     "NSCopying.h",
     "NSPasteboardReading.h",
-    "NSPasteboardWriting.h"
+    "NSPasteboardWriting.h",
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSString"
@@ -14,7 +14,7 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding",
+    "NSSecureCoding",
     "NSPasteboardReading",
     "NSPasteboardWriting"
   ],
@@ -172,6 +172,14 @@
       "bridgedName": "soundUnfilteredTypes",
       "args": [],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -456,6 +464,23 @@
       "bridgedName": "_url",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isValidDecodedChannelMap:error:": {
+      "name": "_isValidDecodedChannelMap:error:",
+      "bridgedName": "_isValidDecodedChannelMap_error",
+      "args": [
+        {
+          "name": "_isValidDecodedChannelMap",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },

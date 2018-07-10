@@ -1,26 +1,11 @@
 {
   "imports": [],
-  "classes": [
-    "NSAppearance"
-  ],
+  "classes": [],
   "protocol": false,
   "className": "NSCoreUIImageRep",
   "extends": "NSImageRep",
   "interfaces": [],
   "methods": {
-    "imageRepWithCGLayer:": {
-      "name": "imageRepWithCGLayer:",
-      "bridgedName": "imageRepWithCGLayer",
-      "args": [
-        {
-          "name": "imageRepWithCGLayer",
-          "type": "struct CGLayer *"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "imageRepWithCGImage:": {
       "name": "imageRepWithCGImage:",
       "bridgedName": "imageRepWithCGImage",
@@ -71,27 +56,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_isValid": {
-      "name": "_isValid",
-      "bridgedName": "_isValid",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "boundingRectWithExtraEffects:": {
-      "name": "boundingRectWithExtraEffects:",
-      "bridgedName": "boundingRectWithExtraEffects",
-      "args": [
-        {
-          "name": "boundingRectWithExtraEffects",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "boundingRectWithExtraEffectsForState:backgroundStyle:context:": {
       "name": "boundingRectWithExtraEffectsForState:backgroundStyle:context:",
       "bridgedName": "boundingRectWithExtraEffectsForState_backgroundStyle_context",
@@ -113,51 +77,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addEffects:": {
-      "name": "addEffects:",
-      "bridgedName": "addEffects",
-      "args": [
-        {
-          "name": "addEffects",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "hasEffects": {
-      "name": "hasEffects",
-      "bridgedName": "hasEffects",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_drawOnlyUsesOneDrawingOperation": {
       "name": "_drawOnlyUsesOneDrawingOperation",
       "bridgedName": "_drawOnlyUsesOneDrawingOperation",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setSuppressesCache:": {
-      "name": "setSuppressesCache:",
-      "bridgedName": "setSuppressesCache",
-      "args": [
-        {
-          "name": "setSuppressesCache",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "suppressesCache": {
-      "name": "suppressesCache",
-      "bridgedName": "suppressesCache",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -189,40 +111,6 @@
       "bridgedName": "isTemplate",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setBackgroundStyle:": {
-      "name": "setBackgroundStyle:",
-      "bridgedName": "setBackgroundStyle",
-      "args": [
-        {
-          "name": "setBackgroundStyle",
-          "type": "int"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setState:": {
-      "name": "setState:",
-      "bridgedName": "setState",
-      "args": [
-        {
-          "name": "setState",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "state": {
-      "name": "state",
-      "bridgedName": "state",
-      "args": [],
-      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -273,19 +161,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithCGLayer:": {
-      "name": "initWithCGLayer:",
-      "bridgedName": "initWithCGLayer",
-      "args": [
-        {
-          "name": "initWithCGLayer",
-          "type": "struct CGLayer *"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "initWithCGImage:": {
       "name": "initWithCGImage:",
       "bridgedName": "initWithCGImage",
@@ -331,12 +206,12 @@
     }
   },
   "properties": {
-    "preferredAppearance": {
-      "name": "preferredAppearance",
+    "tintColor": {
+      "name": "tintColor",
       "pointer": true,
-      "type": "NSAppearance",
+      "type": "struct CGColor",
       "attributes": [
-        "retain"
+        "copy"
       ]
     }
   }

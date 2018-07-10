@@ -14,6 +14,58 @@
   "extends": "_MSImmutableStyle",
   "interfaces": [],
   "methods": {
+    "migratePropertiesFromV104OrEarlierWithUnarchiver:": {
+      "name": "migratePropertiesFromV104OrEarlierWithUnarchiver:",
+      "bridgedName": "migratePropertiesFromV104OrEarlierWithUnarchiver",
+      "args": [
+        {
+          "name": "migratePropertiesFromV104OrEarlierWithUnarchiver",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "migratePropertiesFromV103OrEarlierWithUnarchiver:": {
+      "name": "migratePropertiesFromV103OrEarlierWithUnarchiver:",
+      "bridgedName": "migratePropertiesFromV103OrEarlierWithUnarchiver",
+      "args": [
+        {
+          "name": "migratePropertiesFromV103OrEarlierWithUnarchiver",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodePropertiesWithCoder:": {
+      "name": "encodePropertiesWithCoder:",
+      "bridgedName": "encodePropertiesWithCoder",
+      "args": [
+        {
+          "name": "encodePropertiesWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boundingBoxForBiggestShadowSpreadForLayer:": {
+      "name": "boundingBoxForBiggestShadowSpreadForLayer:",
+      "bridgedName": "boundingBoxForBiggestShadowSpreadForLayer",
+      "args": [
+        {
+          "name": "boundingBoxForBiggestShadowSpreadForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "clearTextStyle": {
       "name": "clearTextStyle",
       "bridgedName": "clearTextStyle",
@@ -98,12 +150,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "applyLayerInfluenceRectBounds:toFilter:withRadius:": {
-      "name": "applyLayerInfluenceRectBounds:toFilter:withRadius:",
-      "bridgedName": "applyLayerInfluenceRectBounds_toFilter_withRadius",
+    "applyLayerInfluenceRectBounds:document:toFilter:withRadius:": {
+      "name": "applyLayerInfluenceRectBounds:document:toFilter:withRadius:",
+      "bridgedName": "applyLayerInfluenceRectBounds_document_toFilter_withRadius",
       "args": [
         {
           "name": "applyLayerInfluenceRectBounds",
+          "type": "id"
+        },
+        {
+          "name": "document",
           "type": "id"
         },
         {
@@ -392,8 +448,8 @@
         "nonatomic"
       ]
     },
-    "hasDecorations": {
-      "name": "hasDecorations",
+    "hasMarkers": {
+      "name": "hasMarkers",
       "pointer": false,
       "type": "BOOL",
       "attributes": [
@@ -403,6 +459,24 @@
     },
     "hasEnabledBackgroundBlur": {
       "name": "hasEnabledBackgroundBlur",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "renderableFills": {
+      "name": "renderableFills",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasEnabledOpaqueFill": {
+      "name": "hasEnabledOpaqueFill",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

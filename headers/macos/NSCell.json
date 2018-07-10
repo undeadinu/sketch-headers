@@ -36,14 +36,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "_useAutoreleasePoolInTrackMouse": {
-      "name": "_useAutoreleasePoolInTrackMouse",
-      "bridgedName": "_useAutoreleasePoolInTrackMouse",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "_cuiStyleEffectsKey": {
       "name": "_cuiStyleEffectsKey",
       "bridgedName": "_cuiStyleEffectsKey",
@@ -57,14 +49,6 @@
       "bridgedName": "_cuiCatalogKey",
       "args": [],
       "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_compatibleListShouldUseAlternateSelectedControlColor": {
-      "name": "_compatibleListShouldUseAlternateSelectedControlColor",
-      "bridgedName": "_compatibleListShouldUseAlternateSelectedControlColor",
-      "args": [],
-      "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -668,9 +652,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_effectiveBackgroundStyleInView:forSpecifiedStyle:": {
-      "name": "_effectiveBackgroundStyleInView:forSpecifiedStyle:",
-      "bridgedName": "_effectiveBackgroundStyleInView_forSpecifiedStyle",
+    "_effectiveBackgroundStyleInView:forSpecifiedStyle:isTemplate:": {
+      "name": "_effectiveBackgroundStyleInView:forSpecifiedStyle:isTemplate:",
+      "bridgedName": "_effectiveBackgroundStyleInView_forSpecifiedStyle_isTemplate",
       "args": [
         {
           "name": "_effectiveBackgroundStyleInView",
@@ -679,19 +663,27 @@
         {
           "name": "forSpecifiedStyle",
           "type": "long long"
+        },
+        {
+          "name": "isTemplate",
+          "type": "BOOL"
         }
       ],
       "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_effectiveBackgroundStyleInView:": {
-      "name": "_effectiveBackgroundStyleInView:",
-      "bridgedName": "_effectiveBackgroundStyleInView",
+    "_effectiveBackgroundStyleInView:isTemplate:": {
+      "name": "_effectiveBackgroundStyleInView:isTemplate:",
+      "bridgedName": "_effectiveBackgroundStyleInView_isTemplate",
       "args": [
         {
           "name": "_effectiveBackgroundStyleInView",
           "type": "id"
+        },
+        {
+          "name": "isTemplate",
+          "type": "BOOL"
         }
       ],
       "returns": "int",
@@ -767,19 +759,6 @@
       "args": [
         {
           "name": "_allowsTextTighteningInView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_wantsDefaultLineFragmentPaddingInView:": {
-      "name": "_wantsDefaultLineFragmentPaddingInView:",
-      "bridgedName": "_wantsDefaultLineFragmentPaddingInView",
-      "args": [
-        {
-          "name": "_wantsDefaultLineFragmentPaddingInView",
           "type": "id"
         }
       ],
@@ -1911,16 +1890,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_finalizeStyleTextOptions:": {
-      "name": "_finalizeStyleTextOptions:",
-      "bridgedName": "_finalizeStyleTextOptions",
+    "_effectiveStyleEffectConfigurationInView:": {
+      "name": "_effectiveStyleEffectConfigurationInView:",
+      "bridgedName": "_effectiveStyleEffectConfigurationInView",
       "args": [
         {
-          "name": "_finalizeStyleTextOptions",
+          "name": "_effectiveStyleEffectConfigurationInView",
           "type": "id"
         }
       ],
-      "returns": "BOOL",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1947,40 +1926,6 @@
         }
       ],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateStyledTextOptions:withContentAppearanceInView:": {
-      "name": "_updateStyledTextOptions:withContentAppearanceInView:",
-      "bridgedName": "_updateStyledTextOptions_withContentAppearanceInView",
-      "args": [
-        {
-          "name": "_updateStyledTextOptions",
-          "type": "id"
-        },
-        {
-          "name": "withContentAppearanceInView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateCoreUIOptions:withContentAppearanceInView:": {
-      "name": "_updateCoreUIOptions:withContentAppearanceInView:",
-      "bridgedName": "_updateCoreUIOptions_withContentAppearanceInView",
-      "args": [
-        {
-          "name": "_updateCoreUIOptions",
-          "type": "id"
-        },
-        {
-          "name": "withContentAppearanceInView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2026,16 +1971,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_controlView:didChangeAppearance:": {
-      "name": "_controlView:didChangeAppearance:",
-      "bridgedName": "_controlView_didChangeAppearance",
+    "_controlViewDidChangeEffectiveAppearance:": {
+      "name": "_controlViewDidChangeEffectiveAppearance:",
+      "bridgedName": "_controlViewDidChangeEffectiveAppearance",
       "args": [
         {
-          "name": "_controlView",
-          "type": "id"
-        },
-        {
-          "name": "didChangeAppearance",
+          "name": "_controlViewDidChangeEffectiveAppearance",
           "type": "id"
         }
       ],
@@ -2054,6 +1995,19 @@
         {
           "name": "semanticContext",
           "type": "int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferInactiveContentInView:": {
+      "name": "_preferInactiveContentInView:",
+      "bridgedName": "_preferInactiveContentInView",
+      "args": [
+        {
+          "name": "_preferInactiveContentInView",
+          "type": "id"
         }
       ],
       "returns": "BOOL",
@@ -2096,23 +2050,6 @@
         {
           "name": "_setNeedsHighlightedTextHint",
           "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawLiveResizeHighlightWithFrame:inView:": {
-      "name": "_drawLiveResizeHighlightWithFrame:inView:",
-      "bridgedName": "_drawLiveResizeHighlightWithFrame_inView",
-      "args": [
-        {
-          "name": "_drawLiveResizeHighlightWithFrame",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "inView",
-          "type": "id"
         }
       ],
       "returns": "void",
@@ -2185,12 +2122,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_beginVibrantBlendGroupIfNeccessaryForControlView:": {
-      "name": "_beginVibrantBlendGroupIfNeccessaryForControlView:",
-      "bridgedName": "_beginVibrantBlendGroupIfNeccessaryForControlView",
+    "_beginVibrantBlendGroupIfNecessaryForControlView:": {
+      "name": "_beginVibrantBlendGroupIfNecessaryForControlView:",
+      "bridgedName": "_beginVibrantBlendGroupIfNecessaryForControlView",
       "args": [
         {
-          "name": "_beginVibrantBlendGroupIfNeccessaryForControlView",
+          "name": "_beginVibrantBlendGroupIfNecessaryForControlView",
           "type": "id"
         }
       ],
@@ -2211,37 +2148,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilterForControlView:": {
-      "name": "_vibrancyFilterForControlView:",
-      "bridgedName": "_vibrancyFilterForControlView",
-      "args": [
-        {
-          "name": "_vibrancyFilterForControlView",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_allowsVibrancyForControlView:": {
-      "name": "_allowsVibrancyForControlView:",
-      "bridgedName": "_allowsVibrancyForControlView",
-      "args": [
-        {
-          "name": "_allowsVibrancyForControlView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_coreUIWidgetName": {
       "name": "_coreUIWidgetName",
       "bridgedName": "_coreUIWidgetName",
       "args": [],
       "returns": "struct __CFString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveCoreUIBackgroundTypeInControlView:": {
+      "name": "_effectiveCoreUIBackgroundTypeInControlView:",
+      "bridgedName": "_effectiveCoreUIBackgroundTypeInControlView",
+      "args": [
+        {
+          "name": "_effectiveCoreUIBackgroundTypeInControlView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2398,27 +2322,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_addTypeSelectAttributesForString:": {
-      "name": "_addTypeSelectAttributesForString:",
-      "bridgedName": "_addTypeSelectAttributesForString",
-      "args": [
-        {
-          "name": "_addTypeSelectAttributesForString",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_typeSelectAttributes": {
-      "name": "_typeSelectAttributes",
-      "bridgedName": "_typeSelectAttributes",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "drawWithExpansionFrame:inView:": {
       "name": "drawWithExpansionFrame:inView:",
       "bridgedName": "drawWithExpansionFrame_inView",
@@ -2458,27 +2361,6 @@
       "bridgedName": "_backgroundColorForFontSmoothing",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isWhite": {
-      "name": "_isWhite",
-      "bridgedName": "_isWhite",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setIsWhite:": {
-      "name": "_setIsWhite:",
-      "bridgedName": "_setIsWhite",
-      "args": [
-        {
-          "name": "_setIsWhite",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2548,6 +2430,27 @@
         }
       ],
       "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTint": {
+      "name": "controlTint",
+      "bridgedName": "controlTint",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setControlTint:": {
+      "name": "setControlTint:",
+      "bridgedName": "setControlTint",
+      "args": [
+        {
+          "name": "setControlTint",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3013,22 +2916,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_typesetterBehavior": {
-      "name": "_typesetterBehavior",
-      "bridgedName": "_typesetterBehavior",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setTextAttributeParaStyleNeedsRecalc": {
-      "name": "_setTextAttributeParaStyleNeedsRecalc",
-      "bridgedName": "_setTextAttributeParaStyleNeedsRecalc",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_setLineBreakMode:": {
       "name": "_setLineBreakMode:",
       "bridgedName": "_setLineBreakMode",
@@ -3047,6 +2934,22 @@
       "bridgedName": "_lineBreakMode",
       "args": [],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_typesetterBehavior": {
+      "name": "_typesetterBehavior",
+      "bridgedName": "_typesetterBehavior",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTextAttributeParaStyleNeedsRecalc": {
+      "name": "_setTextAttributeParaStyleNeedsRecalc",
+      "bridgedName": "_setTextAttributeParaStyleNeedsRecalc",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3727,14 +3630,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_realControlTint": {
-      "name": "_realControlTint",
-      "bridgedName": "_realControlTint",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_defaultPlaceholderString": {
       "name": "_defaultPlaceholderString",
       "bridgedName": "_defaultPlaceholderString",
@@ -3848,6 +3743,14 @@
       "bridgedName": "_initialBackgroundStyleCompatibilityGuessIgnoringExternalContext",
       "args": [],
       "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deepestAccessibilityDescendants": {
+      "name": "deepestAccessibilityDescendants",
+      "bridgedName": "deepestAccessibilityDescendants",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -4586,6 +4489,53 @@
       "bridgedName": "accessibilityCurrentEditor",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finalizeStyleTextOptions:": {
+      "name": "_finalizeStyleTextOptions:",
+      "bridgedName": "_finalizeStyleTextOptions",
+      "args": [
+        {
+          "name": "_finalizeStyleTextOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateStyledTextOptions:withContentAppearanceInView:": {
+      "name": "_updateStyledTextOptions:withContentAppearanceInView:",
+      "bridgedName": "_updateStyledTextOptions_withContentAppearanceInView",
+      "args": [
+        {
+          "name": "_updateStyledTextOptions",
+          "type": "id"
+        },
+        {
+          "name": "withContentAppearanceInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateCoreUIOptions:withContentAppearanceInView:": {
+      "name": "_updateCoreUIOptions:withContentAppearanceInView:",
+      "bridgedName": "_updateCoreUIOptions_withContentAppearanceInView",
+      "args": [
+        {
+          "name": "_updateCoreUIOptions",
+          "type": "id"
+        },
+        {
+          "name": "withContentAppearanceInView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

@@ -3,6 +3,7 @@
     "NSTextField.h"
   ],
   "classes": [
+    "MSMouseTracker",
     "NSArray",
     "NSTextField<MSUpDownProtocol>"
   ],
@@ -11,6 +12,19 @@
   "extends": "NSTextField",
   "interfaces": [],
   "methods": {
+    "resizeCursorForFlags:": {
+      "name": "resizeCursorForFlags:",
+      "bridgedName": "resizeCursorForFlags",
+      "args": [
+        {
+          "name": "resizeCursorForFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -78,9 +92,72 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateCursor": {
+      "name": "updateCursor",
+      "bridgedName": "updateCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowStatusChanged:": {
+      "name": "windowStatusChanged:",
+      "bridgedName": "windowStatusChanged",
+      "args": [
+        {
+          "name": "windowStatusChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidMoveToWindow": {
+      "name": "viewDidMoveToWindow",
+      "bridgedName": "viewDidMoveToWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "awakeFromNib": {
       "name": "awakeFromNib",
       "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setShouldTrackFlags:": {
+      "name": "setShouldTrackFlags:",
+      "bridgedName": "setShouldTrackFlags",
+      "args": [
+        {
+          "name": "setShouldTrackFlags",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -101,6 +178,24 @@
     }
   },
   "properties": {
+    "mouseTracker": {
+      "name": "mouseTracker",
+      "pointer": true,
+      "type": "MSMouseTracker",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "flagsMonitor": {
+      "name": "flagsMonitor",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "textFields": {
       "name": "textFields",
       "pointer": true,

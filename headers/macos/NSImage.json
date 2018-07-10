@@ -1,7 +1,6 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
     "NSCopying.h",
     "NSPasteboardReading.h",
     "NSPasteboardWriting.h",
@@ -19,7 +18,6 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding",
     "NSSecureCoding",
     "NSPasteboardReading",
     "NSPasteboardWriting"
@@ -951,6 +949,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_applyAsContentsToLayer:": {
+      "name": "_applyAsContentsToLayer:",
+      "bridgedName": "_applyAsContentsToLayer",
+      "args": [
+        {
+          "name": "_applyAsContentsToLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_defaultAccessibilityDescription": {
       "name": "_defaultAccessibilityDescription",
       "bridgedName": "_defaultAccessibilityDescription",
@@ -969,48 +980,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setImageInterpolation:": {
-      "name": "setImageInterpolation:",
-      "bridgedName": "setImageInterpolation",
-      "args": [
-        {
-          "name": "setImageInterpolation",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "imageInterpolation": {
-      "name": "imageInterpolation",
-      "bridgedName": "imageInterpolation",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setImageInterpolation:": {
-      "name": "_setImageInterpolation:",
-      "bridgedName": "_setImageInterpolation",
-      "args": [
-        {
-          "name": "_setImageInterpolation",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_imageInterpolation": {
-      "name": "_imageInterpolation",
-      "bridgedName": "_imageInterpolation",
-      "args": [],
-      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1224,6 +1193,19 @@
       "bridgedName": "_failsafeAllocAuxiliaryStorage",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithISIcon:": {
+      "name": "initWithISIcon:",
+      "bridgedName": "initWithISIcon",
+      "args": [
+        {
+          "name": "initWithISIcon",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1849,19 +1831,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_cacheSnapshotRep:": {
-      "name": "_cacheSnapshotRep:",
-      "bridgedName": "_cacheSnapshotRep",
-      "args": [
-        {
-          "name": "_cacheSnapshotRep",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_shouldCacheWhenDrawingRep:rect:context:processedHints:": {
       "name": "_shouldCacheWhenDrawingRep:rect:context:processedHints:",
       "bridgedName": "_shouldCacheWhenDrawingRep_rect_context_processedHints",
@@ -1939,19 +1908,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "tv_tintedImageWithTintColor:": {
-      "name": "tv_tintedImageWithTintColor:",
-      "bridgedName": "tv_tintedImageWithTintColor",
-      "args": [
-        {
-          "name": "tv_tintedImageWithTintColor",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2480,6 +2436,14 @@
       "type": "NSString",
       "attributes": [
         "copy"
+      ]
+    },
+    "_imageInterpolation": {
+      "name": "_imageInterpolation",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "setter=_setImageInterpolation:"
       ]
     },
     "template": {

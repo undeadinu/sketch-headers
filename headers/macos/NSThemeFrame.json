@@ -1,15 +1,20 @@
 {
-  "imports": [],
+  "imports": [
+    "NSViewLayerContentScaleDelegate.h"
+  ],
   "classes": [
     "NSButton",
     "NSString",
     "NSTitlebarContainerView",
-    "NSView"
+    "NSView",
+    "NSVisualEffectView"
   ],
   "protocol": false,
   "className": "NSThemeFrame",
   "extends": "NSTitledFrame",
-  "interfaces": [],
+  "interfaces": [
+    "NSViewLayerContentScaleDelegate"
+  ],
   "methods": {
     "_prepareRenameField:forEditingMode:": {
       "name": "_prepareRenameField:forEditingMode:",
@@ -326,6 +331,14 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "automaticallyNotifiesObserversOf_backdropView": {
+      "name": "automaticallyNotifiesObserversOf_backdropView",
+      "bridgedName": "automaticallyNotifiesObserversOf_backdropView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_cuiMaskOnlyOptionsForWindowType:cornerMask:inRect:": {
       "name": "_cuiMaskOnlyOptionsForWindowType:cornerMask:inRect:",
       "bridgedName": "_cuiMaskOnlyOptionsForWindowType_cornerMask_inRect",
@@ -412,27 +425,6 @@
         {
           "name": "isDarkWindow",
           "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "maskWindowCornersWithMask:inRect:clipRect:": {
-      "name": "maskWindowCornersWithMask:inRect:clipRect:",
-      "bridgedName": "maskWindowCornersWithMask_inRect_clipRect",
-      "args": [
-        {
-          "name": "maskWindowCornersWithMask",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "clipRect",
-          "type": "struct CGRect"
         }
       ],
       "returns": "void",
@@ -870,14 +862,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "titlebarRectAssumingVisible": {
-      "name": "titlebarRectAssumingVisible",
-      "bridgedName": "titlebarRectAssumingVisible",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_mouseInTitleRect:": {
       "name": "_mouseInTitleRect:",
       "bridgedName": "_mouseInTitleRect",
@@ -909,73 +893,6 @@
       "bridgedName": "_inactiveButtonsNeedMask",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawGrowBoxWithClip:": {
-      "name": "_drawGrowBoxWithClip:",
-      "bridgedName": "_drawGrowBoxWithClip",
-      "args": [
-        {
-          "name": "_drawGrowBoxWithClip",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawGrowBoxWithClip:inRect:opaque:": {
-      "name": "_drawGrowBoxWithClip:inRect:opaque:",
-      "bridgedName": "_drawGrowBoxWithClip_inRect_opaque",
-      "args": [
-        {
-          "name": "_drawGrowBoxWithClip",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "opaque",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_coreUIDrawResizeBoxInRect:active:": {
-      "name": "_coreUIDrawResizeBoxInRect:active:",
-      "bridgedName": "_coreUIDrawResizeBoxInRect_active",
-      "args": [
-        {
-          "name": "_coreUIDrawResizeBoxInRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "active",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_canDrawWindowGrowBox": {
-      "name": "_canDrawWindowGrowBox",
-      "bridgedName": "_canDrawWindowGrowBox",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_growBoxRect": {
-      "name": "_growBoxRect",
-      "bridgedName": "_growBoxRect",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1072,14 +989,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_windowDidChangeSheetParent": {
-      "name": "_windowDidChangeSheetParent",
-      "bridgedName": "_windowDidChangeSheetParent",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_sheetHeightAdjustment": {
       "name": "_sheetHeightAdjustment",
       "bridgedName": "_sheetHeightAdjustment",
@@ -1139,14 +1048,6 @@
     "_minXBorderRect": {
       "name": "_minXBorderRect",
       "bridgedName": "_minXBorderRect",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_maxXminYResizeRect": {
-      "name": "_maxXminYResizeRect",
-      "bridgedName": "_maxXminYResizeRect",
       "args": [],
       "returns": "struct CGRect",
       "kind": "instance",
@@ -1213,22 +1114,6 @@
       "bridgedName": "_maxYTitlebarDragHeight",
       "args": [],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resetDragMargins": {
-      "name": "_resetDragMargins",
-      "bridgedName": "_resetDragMargins",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_draggableFrame": {
-      "name": "_draggableFrame",
-      "bridgedName": "_draggableFrame",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2864,6 +2749,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_hasToolbarReservedSpace": {
+      "name": "_hasToolbarReservedSpace",
+      "bridgedName": "_hasToolbarReservedSpace",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_toolbarIsShown": {
       "name": "_toolbarIsShown",
       "bridgedName": "_toolbarIsShown",
@@ -2993,41 +2886,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_internalVisualEffectViewMaterial": {
-      "name": "_internalVisualEffectViewMaterial",
-      "bridgedName": "_internalVisualEffectViewMaterial",
+    "_vibrantBlendingStyleForSubtree": {
+      "name": "_vibrantBlendingStyleForSubtree",
+      "bridgedName": "_vibrantBlendingStyleForSubtree",
       "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_containingBackdropView": {
-      "name": "_containingBackdropView",
-      "bridgedName": "_containingBackdropView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldFakeContainingBackdropView": {
-      "name": "_shouldFakeContainingBackdropView",
-      "bridgedName": "_shouldFakeContainingBackdropView",
-      "args": [],
-      "returns": "BOOL",
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
     "_shouldUseDarkAppearanceInHUDWindows": {
       "name": "_shouldUseDarkAppearanceInHUDWindows",
       "bridgedName": "_shouldUseDarkAppearanceInHUDWindows",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldUseMaterialsInHUDWindows": {
-      "name": "_shouldUseMaterialsInHUDWindows",
-      "bridgedName": "_shouldUseMaterialsInHUDWindows",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -3046,18 +2915,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_backdropView": {
-      "name": "_backdropView",
-      "bridgedName": "_backdropView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsBackdropView": {
-      "name": "_needsBackdropView",
-      "bridgedName": "_needsBackdropView",
-      "args": [],
+    "_needsVisualEffectViewBackgroundWithMaterial:blendingMode:": {
+      "name": "_needsVisualEffectViewBackgroundWithMaterial:blendingMode:",
+      "bridgedName": "_needsVisualEffectViewBackgroundWithMaterial_blendingMode",
+      "args": [
+        {
+          "name": "_needsVisualEffectViewBackgroundWithMaterial",
+          "type": "long long *"
+        },
+        {
+          "name": "blendingMode",
+          "type": "long long *"
+        }
+      ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -3215,14 +3085,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_invalidateNeedsTitlebarSeparator": {
-      "name": "_invalidateNeedsTitlebarSeparator",
-      "bridgedName": "_invalidateNeedsTitlebarSeparator",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "windowTitleModeChanged": {
       "name": "windowTitleModeChanged",
       "bridgedName": "windowTitleModeChanged",
@@ -3352,48 +3214,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "effectiveAppearance": {
-      "name": "effectiveAppearance",
-      "bridgedName": "effectiveAppearance",
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
       "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_defaultWindowAppearance": {
-      "name": "_defaultWindowAppearance",
-      "bridgedName": "_defaultWindowAppearance",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setAppearance:": {
-      "name": "setAppearance:",
-      "bridgedName": "setAppearance",
-      "args": [
-        {
-          "name": "setAppearance",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateTitlebarViewMaterialAndAppearance": {
-      "name": "_updateTitlebarViewMaterialAndAppearance",
-      "bridgedName": "_updateTitlebarViewMaterialAndAppearance",
+    "viewDidChangeEffectiveAppearance": {
+      "name": "viewDidChangeEffectiveAppearance",
+      "bridgedName": "viewDidChangeEffectiveAppearance",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_defaultTitlebarAppearance": {
-      "name": "_defaultTitlebarAppearance",
-      "bridgedName": "_defaultTitlebarAppearance",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3415,51 +3248,6 @@
       "bridgedName": "_updateTitleSeparatorViewIfNeeded",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_makeSeparatorAccessoryViewController": {
-      "name": "_makeSeparatorAccessoryViewController",
-      "bridgedName": "_makeSeparatorAccessoryViewController",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setSeparatorAccessoryViewController:": {
-      "name": "_setSeparatorAccessoryViewController:",
-      "bridgedName": "_setSeparatorAccessoryViewController",
-      "args": [
-        {
-          "name": "_setSeparatorAccessoryViewController",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_separatorAccessoryViewController": {
-      "name": "_separatorAccessoryViewController",
-      "bridgedName": "_separatorAccessoryViewController",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldAddTitlebarSeparatorView": {
-      "name": "_shouldAddTitlebarSeparatorView",
-      "bridgedName": "_shouldAddTitlebarSeparatorView",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_tilebarViewNeedsTitlebarSeparator": {
-      "name": "_tilebarViewNeedsTitlebarSeparator",
-      "bridgedName": "_tilebarViewNeedsTitlebarSeparator",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3489,14 +3277,6 @@
       "bridgedName": "_updateContentLayoutGuideFrame",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_behindWindowVisualEffectLayoutRect": {
-      "name": "_behindWindowVisualEffectLayoutRect",
-      "bridgedName": "_behindWindowVisualEffectLayoutRect",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -4156,22 +3936,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_inactiveTexturedWindowColor": {
-      "name": "_inactiveTexturedWindowColor",
-      "bridgedName": "_inactiveTexturedWindowColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_activeTexturedWindowColor": {
-      "name": "_activeTexturedWindowColor",
-      "bridgedName": "_activeTexturedWindowColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_isTexturedWindow": {
       "name": "_isTexturedWindow",
       "bridgedName": "_isTexturedWindow",
@@ -4575,22 +4339,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_texturedTitleBarViewFrame": {
-      "name": "_texturedTitleBarViewFrame",
-      "bridgedName": "_texturedTitleBarViewFrame",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_textureWidth": {
-      "name": "_textureWidth",
-      "bridgedName": "_textureWidth",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "opaqueAncestor": {
       "name": "opaqueAncestor",
       "bridgedName": "opaqueAncestor",
@@ -4741,19 +4489,6 @@
       "args": [
         {
           "name": "_drawFrameRects",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawResizeIndicators:": {
-      "name": "_drawResizeIndicators:",
-      "bridgedName": "_drawResizeIndicators",
-      "args": [
-        {
-          "name": "_drawResizeIndicators",
           "type": "struct CGRect"
         }
       ],
@@ -5058,6 +4793,14 @@
       "bridgedName": "_separatorRectForInactiveWindow",
       "args": [],
       "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsToolbarHeightTitlebarWithoutToolbar": {
+      "name": "_wantsToolbarHeightTitlebarWithoutToolbar",
+      "bridgedName": "_wantsToolbarHeightTitlebarWithoutToolbar",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -5522,6 +5265,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "activationRect": {
+      "name": "activationRect",
+      "bridgedName": "activationRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_isDarkWindow": {
       "name": "_isDarkWindow",
       "bridgedName": "_isDarkWindow",
@@ -5537,14 +5288,6 @@
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "_copyDragRegion": {
-      "name": "_copyDragRegion",
-      "bridgedName": "_copyDragRegion",
-      "args": [],
-      "returns": "struct CGSRegionObject *",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -5552,6 +5295,14 @@
       "name": "titleHeightToHideInFullScreen",
       "pointer": false,
       "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_backdropView": {
+      "name": "_backdropView",
+      "pointer": true,
+      "type": "NSVisualEffectView",
       "attributes": [
         "readonly"
       ]
@@ -5576,6 +5327,40 @@
       "name": "titlebarContainerView",
       "pointer": true,
       "type": "NSTitlebarContainerView",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
       "attributes": [
         "readonly"
       ]

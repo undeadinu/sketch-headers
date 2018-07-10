@@ -14,6 +14,77 @@
     "NSCoding"
   ],
   "methods": {
+    "_imageRectForDrawingImageOfAlignmentRectSize:inFrame:scaling:alignment:flipped:": {
+      "name": "_imageRectForDrawingImageOfAlignmentRectSize:inFrame:scaling:alignment:flipped:",
+      "bridgedName": "_imageRectForDrawingImageOfAlignmentRectSize_inFrame_scaling_alignment_flipped",
+      "args": [
+        {
+          "name": "_imageRectForDrawingImageOfAlignmentRectSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "inFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "scaling",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "alignment",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_cellSizeAccountingForImageOfSize:frameStyle:flipped:": {
+      "name": "_cellSizeAccountingForImageOfSize:frameStyle:flipped:",
+      "bridgedName": "_cellSizeAccountingForImageOfSize_frameStyle_flipped",
+      "args": [
+        {
+          "name": "_cellSizeAccountingForImageOfSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "frameStyle",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_drawingRectForBounds:frameStyle:flipped:": {
+      "name": "_drawingRectForBounds:frameStyle:flipped:",
+      "bridgedName": "_drawingRectForBounds_frameStyle_flipped",
+      "args": [
+        {
+          "name": "_drawingRectForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "frameStyle",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "initialize": {
       "name": "initialize",
       "bridgedName": "initialize",
@@ -21,6 +92,77 @@
       "returns": "void",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "_animationTimerCallback:": {
+      "name": "_animationTimerCallback:",
+      "bridgedName": "_animationTimerCallback",
+      "args": [
+        {
+          "name": "_animationTimerCallback",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopAnimation": {
+      "name": "_stopAnimation",
+      "bridgedName": "_stopAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startAnimation": {
+      "name": "_startAnimation",
+      "bridgedName": "_startAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAnimates:": {
+      "name": "_setAnimates:",
+      "bridgedName": "_setAnimates",
+      "args": [
+        {
+          "name": "_setAnimates",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animates": {
+      "name": "_animates",
+      "bridgedName": "_animates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setContentTintColor:": {
+      "name": "_setContentTintColor:",
+      "bridgedName": "_setContentTintColor",
+      "args": [
+        {
+          "name": "_setContentTintColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentTintColor": {
+      "name": "_contentTintColor",
+      "bridgedName": "_contentTintColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "controlView": {
       "name": "controlView",
@@ -85,6 +227,14 @@
     "isOpaque": {
       "name": "isOpaque",
       "bridgedName": "isOpaque",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needRedrawOnWindowChangedKeyState": {
+      "name": "_needRedrawOnWindowChangedKeyState",
+      "bridgedName": "_needRedrawOnWindowChangedKeyState",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -166,29 +316,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilterForControlView:": {
-      "name": "_vibrancyFilterForControlView:",
-      "bridgedName": "_vibrancyFilterForControlView",
+    "_vibrancyBlendModeForControlView:": {
+      "name": "_vibrancyBlendModeForControlView:",
+      "bridgedName": "_vibrancyBlendModeForControlView",
       "args": [
         {
-          "name": "_vibrancyFilterForControlView",
+          "name": "_vibrancyBlendModeForControlView",
           "type": "id"
         }
       ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_allowsVibrancyForControlView:": {
-      "name": "_allowsVibrancyForControlView:",
-      "bridgedName": "_allowsVibrancyForControlView",
-      "args": [
-        {
-          "name": "_allowsVibrancyForControlView",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -273,16 +410,59 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_effectiveBackgroundStyleInView:": {
-      "name": "_effectiveBackgroundStyleInView:",
-      "bridgedName": "_effectiveBackgroundStyleInView",
+    "_shouldDrawWithContentTintColorInView:": {
+      "name": "_shouldDrawWithContentTintColorInView:",
+      "bridgedName": "_shouldDrawWithContentTintColorInView",
+      "args": [
+        {
+          "name": "_shouldDrawWithContentTintColorInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveBackgroundStyleInView:isTemplate:": {
+      "name": "_effectiveBackgroundStyleInView:isTemplate:",
+      "bridgedName": "_effectiveBackgroundStyleInView_isTemplate",
       "args": [
         {
           "name": "_effectiveBackgroundStyleInView",
           "type": "id"
+        },
+        {
+          "name": "isTemplate",
+          "type": "BOOL"
         }
       ],
       "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interiorContentValueStateInView:": {
+      "name": "_interiorContentValueStateInView:",
+      "bridgedName": "_interiorContentValueStateInView",
+      "args": [
+        {
+          "name": "_interiorContentValueStateInView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interiorContentAppearanceInView:": {
+      "name": "_interiorContentAppearanceInView:",
+      "bridgedName": "_interiorContentAppearanceInView",
+      "args": [
+        {
+          "name": "_interiorContentAppearanceInView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -328,12 +508,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_cellSizeAccountingForImageInControl:": {
-      "name": "_cellSizeAccountingForImageInControl:",
-      "bridgedName": "_cellSizeAccountingForImageInControl",
+    "_cellSizeAccountingForImage:inControl:": {
+      "name": "_cellSizeAccountingForImage:inControl:",
+      "bridgedName": "_cellSizeAccountingForImage_inControl",
       "args": [
         {
-          "name": "_cellSizeAccountingForImageInControl",
+          "name": "_cellSizeAccountingForImage",
+          "type": "id"
+        },
+        {
+          "name": "inControl",
           "type": "id"
         }
       ],
@@ -528,6 +712,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_autoflipUnarchivedProperties": {
+      "name": "_autoflipUnarchivedProperties",
+      "bridgedName": "_autoflipUnarchivedProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initImageCell:": {
       "name": "initImageCell:",
       "bridgedName": "initImageCell",
@@ -546,56 +738,6 @@
       "bridgedName": "init",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_animationTimerCallback:": {
-      "name": "_animationTimerCallback:",
-      "bridgedName": "_animationTimerCallback",
-      "args": [
-        {
-          "name": "_animationTimerCallback",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_stopAnimation": {
-      "name": "_stopAnimation",
-      "bridgedName": "_stopAnimation",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_startAnimation": {
-      "name": "_startAnimation",
-      "bridgedName": "_startAnimation",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setAnimates:": {
-      "name": "_setAnimates:",
-      "bridgedName": "_setAnimates",
-      "args": [
-        {
-          "name": "_setAnimates",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_animates": {
-      "name": "_animates",
-      "bridgedName": "_animates",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },

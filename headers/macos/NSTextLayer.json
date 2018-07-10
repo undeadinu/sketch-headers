@@ -5,6 +5,7 @@
   "classes": [
     "CALayer",
     "CALinearMaskLayer",
+    "NSGraphicsContext",
     "NSMapTable",
     "NSMutableArray",
     "NSString"
@@ -101,14 +102,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "NS_usesLinearMaskOverlay": {
-      "name": "NS_usesLinearMaskOverlay",
-      "bridgedName": "NS_usesLinearMaskOverlay",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_NS_invalidateSuggestedContentsScale": {
       "name": "_NS_invalidateSuggestedContentsScale",
       "bridgedName": "_NS_invalidateSuggestedContentsScale",
@@ -174,6 +167,22 @@
     }
   },
   "properties": {
+    "drawingContext": {
+      "name": "drawingContext",
+      "pointer": true,
+      "type": "NSGraphicsContext",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "bezelLayer": {
+      "name": "bezelLayer",
+      "pointer": true,
+      "type": "CALayer",
+      "attributes": [
+        "retain"
+      ]
+    },
     "debugDescription": {
       "name": "debugDescription",
       "pointer": true,

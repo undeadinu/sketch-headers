@@ -3,8 +3,14 @@
     "NSObject.h"
   ],
   "classes": [
+    "NSArray",
     "NSKeyboardShortcut",
-    "NSString"
+    "NSOperationQueue",
+    "NSPasteboard",
+    "NSResponder",
+    "NSSet",
+    "NSString",
+    "NSUUID"
   ],
   "protocol": true,
   "className": "_NSServiceAction",
@@ -25,6 +31,83 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "validateWithResponder:completionHandler:": {
+      "name": "validateWithResponder:completionHandler:",
+      "bridgedName": "validateWithResponder_completionHandler",
+      "args": [
+        {
+          "name": "validateWithResponder",
+          "type": "NSResponder *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(BOOL)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithPasteboard:": {
+      "name": "invokeWithPasteboard:",
+      "bridgedName": "invokeWithPasteboard",
+      "args": [
+        {
+          "name": "invokeWithPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithResponder:": {
+      "name": "invokeWithResponder:",
+      "bridgedName": "invokeWithResponder",
+      "args": [
+        {
+          "name": "invokeWithResponder",
+          "type": "NSResponder *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadBackgroundColorOnQueue:completionHandler:": {
+      "name": "loadBackgroundColorOnQueue:completionHandler:",
+      "bridgedName": "loadBackgroundColorOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadBackgroundColorOnQueue",
+          "type": "NSOperationQueue *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(NSColor *)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadImageOnQueue:completionHandler:": {
+      "name": "loadImageOnQueue:completionHandler:",
+      "bridgedName": "loadImageOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadImageOnQueue",
+          "type": "NSOperationQueue *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(NSImage *)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -34,15 +117,6 @@
       "type": "BOOL",
       "attributes": [
         "readonly",
-        "nonatomic"
-      ]
-    },
-    "keyEquivalent": {
-      "name": "keyEquivalent",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "copy",
         "nonatomic"
       ]
     },
@@ -62,24 +136,6 @@
         "nonatomic"
       ]
     },
-    "isWorkflow": {
-      "name": "isWorkflow",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "localizedServiceDescription": {
-      "name": "localizedServiceDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "isRestricted": {
       "name": "isRestricted",
       "pointer": false,
@@ -89,8 +145,136 @@
         "nonatomic"
       ]
     },
+    "isWorkflow": {
+      "name": "isWorkflow",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "bundleIdentifier": {
       "name": "bundleIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "serviceUUID": {
+      "name": "serviceUUID",
+      "pointer": true,
+      "type": "NSUUID",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "keyEquivalent": {
+      "name": "keyEquivalent",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "keyboardShortcut": {
+      "name": "keyboardShortcut",
+      "pointer": true,
+      "type": "NSKeyboardShortcut",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "defaultKeyboardShortcut": {
+      "name": "defaultKeyboardShortcut",
+      "pointer": true,
+      "type": "NSKeyboardShortcut",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "returnTypes": {
+      "name": "returnTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "sendFileTypes": {
+      "name": "sendFileTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "combinedSendTypes": {
+      "name": "combinedSendTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasBackgroundColor": {
+      "name": "hasBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasCustomIcon": {
+      "name": "hasCustomIcon",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "availablePresentationModes": {
+      "name": "availablePresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "defaultPresentationModes": {
+      "name": "defaultPresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "presentationModes": {
+      "name": "presentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "localizedServiceDescription": {
+      "name": "localizedServiceDescription",
       "pointer": true,
       "type": "NSString",
       "attributes": [
@@ -120,24 +304,6 @@
       "name": "categoryTitle",
       "pointer": true,
       "type": "NSString",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "keyboardShortcut": {
-      "name": "keyboardShortcut",
-      "pointer": true,
-      "type": "NSKeyboardShortcut",
-      "attributes": [
-        "copy",
-        "nonatomic"
-      ]
-    },
-    "defaultKeyboardShortcut": {
-      "name": "defaultKeyboardShortcut",
-      "pointer": true,
-      "type": "NSKeyboardShortcut",
       "attributes": [
         "readonly",
         "nonatomic"

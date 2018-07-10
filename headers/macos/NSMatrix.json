@@ -1,18 +1,21 @@
 {
   "imports": [
-    "NSUserInterfaceValidations.h"
+    "NSUserInterfaceValidations.h",
+    "NSViewToolTipOwner.h"
   ],
   "classes": [
     "NSArray",
     "NSCell",
     "NSColor",
-    "NSMutableArray"
+    "NSMutableArray",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSMatrix",
   "extends": "NSControl",
   "interfaces": [
-    "NSUserInterfaceValidations"
+    "NSUserInterfaceValidations",
+    "NSViewToolTipOwner"
   ],
   "methods": {
     "isCompatibleWithResponsiveScrolling": {
@@ -60,27 +63,6 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "heartBeat:": {
-      "name": "heartBeat:",
-      "bridgedName": "heartBeat",
-      "args": [
-        {
-          "name": "heartBeat",
-          "type": "CDStruct_fadd2e06 *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_wantsHeartBeat": {
-      "name": "_wantsHeartBeat",
-      "bridgedName": "_wantsHeartBeat",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1658,19 +1640,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_findFirstOne:long *)arg2": {
-      "name": "_findFirstOne:long *)arg2",
-      "bridgedName": "_findFirstOne_long *)arg2",
-      "args": [
-        {
-          "name": "_findFirstOne",
-          "type": "long long *"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_radioHit:row:col:": {
       "name": "_radioHit:row:col:",
       "bridgedName": "_radioHit_row_col",
@@ -1864,19 +1833,6 @@
       "args": [
         {
           "name": "_propagateDownNeedsDisplayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_liveResizeHighlightSelectionInClipRect:": {
-      "name": "_liveResizeHighlightSelectionInClipRect:",
-      "bridgedName": "_liveResizeHighlightSelectionInClipRect",
-      "args": [
-        {
-          "name": "_liveResizeHighlightSelectionInClipRect",
           "type": "struct CGRect"
         }
       ],
@@ -3686,6 +3642,40 @@
       "type": "NSCell",
       "attributes": [
         "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

@@ -11,6 +11,7 @@
     "NSTabBar",
     "NSTabPickerViewController",
     "NSWindow",
+    "NSWindowTab",
     "_NSFullScreenModalStackController"
   ],
   "protocol": false,
@@ -388,19 +389,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_makeTabPickerSnapshotForWindow:": {
-      "name": "_makeTabPickerSnapshotForWindow:",
-      "bridgedName": "_makeTabPickerSnapshotForWindow",
-      "args": [
-        {
-          "name": "_makeTabPickerSnapshotForWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "tabBarSnapshotForTabPicker:": {
       "name": "tabBarSnapshotForTabPicker:",
       "bridgedName": "tabBarSnapshotForTabPicker",
@@ -514,6 +502,43 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "plusTab": {
+      "name": "plusTab",
+      "bridgedName": "plusTab",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabBar": {
+      "name": "_tabBar",
+      "bridgedName": "_tabBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTabBarEnabled:": {
+      "name": "setTabBarEnabled:",
+      "bridgedName": "setTabBarEnabled",
+      "args": [
+        {
+          "name": "setTabBarEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isTabBarEnabled": {
+      "name": "isTabBarEnabled",
+      "bridgedName": "isTabBarEnabled",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1524,6 +1549,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_tabPickerIsVisible": {
+      "name": "_tabPickerIsVisible",
+      "bridgedName": "_tabPickerIsVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_tabBarShouldBeVisible": {
       "name": "_tabBarShouldBeVisible",
       "bridgedName": "_tabBarShouldBeVisible",
@@ -1707,19 +1740,6 @@
       "args": [
         {
           "name": "_ensureAccessoryViewControllerExistsForWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateTabBarAppearanceBasedOnWindow:": {
-      "name": "updateTabBarAppearanceBasedOnWindow:",
-      "bridgedName": "updateTabBarAppearanceBasedOnWindow",
-      "args": [
-        {
-          "name": "updateTabBarAppearanceBasedOnWindow",
           "type": "id"
         }
       ],

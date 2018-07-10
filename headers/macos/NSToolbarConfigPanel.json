@@ -1,19 +1,32 @@
 {
-  "imports": [],
+  "imports": [
+    "NSCollectionViewDataSource.h",
+    "NSCollectionViewDelegate.h",
+    "NSCollectionViewDelegateFlowLayout.h",
+    "NSTouchBarCustomizationPaletteLayoutDelegate.h"
+  ],
   "classes": [
+    "NSBox",
     "NSButton",
+    "NSCollectionView",
     "NSPopUpButton",
     "NSScrollView",
     "NSSegmentedControl",
+    "NSString",
     "NSTextField",
     "NSToolbar",
-    "NSToolbarView",
+    "NSToolbarSnapshotWindow",
     "_NSToolbarImageRepView"
   ],
   "protocol": false,
   "className": "NSToolbarConfigPanel",
   "extends": "NSPanel",
-  "interfaces": [],
+  "interfaces": [
+    "NSCollectionViewDataSource",
+    "NSTouchBarCustomizationPaletteLayoutDelegate",
+    "NSCollectionViewDelegateFlowLayout",
+    "NSCollectionViewDelegate"
+  ],
   "methods": {
     "toolbarConfigPanelForToolbar:withWidth:": {
       "name": "toolbarConfigPanelForToolbar:withWidth:",
@@ -120,97 +133,217 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_layoutForData": {
-      "name": "_layoutForData",
-      "bridgedName": "_layoutForData",
-      "args": [],
+    "collectionView:draggingSession:endedAtPoint:dragOperation:": {
+      "name": "collectionView:draggingSession:endedAtPoint:dragOperation:",
+      "bridgedName": "collectionView_draggingSession_endedAtPoint_dragOperation",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "draggingSession",
+          "type": "id"
+        },
+        {
+          "name": "endedAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "dragOperation",
+          "type": "unsigned long long"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_resizeViewToFit:": {
-      "name": "_resizeViewToFit:",
-      "bridgedName": "_resizeViewToFit",
+    "_spaceNeededForPaletteLabelsOfItem:preferredWidth:": {
+      "name": "_spaceNeededForPaletteLabelsOfItem:preferredWidth:",
+      "bridgedName": "_spaceNeededForPaletteLabelsOfItem_preferredWidth",
       "args": [
         {
-          "name": "_resizeViewToFit",
+          "name": "_spaceNeededForPaletteLabelsOfItem",
           "type": "id"
+        },
+        {
+          "name": "preferredWidth",
+          "type": "double"
         }
       ],
       "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_resizeToolbarViewToFit:": {
-      "name": "_resizeToolbarViewToFit:",
-      "bridgedName": "_resizeToolbarViewToFit",
+    "collectionView:layout:sizeForItemAtIndexPath:": {
+      "name": "collectionView:layout:sizeForItemAtIndexPath:",
+      "bridgedName": "collectionView_layout_sizeForItemAtIndexPath",
       "args": [
         {
-          "name": "_resizeToolbarViewToFit",
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "layout",
+          "type": "id"
+        },
+        {
+          "name": "sizeForItemAtIndexPath",
           "type": "id"
         }
       ],
-      "returns": "double",
+      "returns": "struct CGSize",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_computeMaxItemViewHeight": {
-      "name": "_computeMaxItemViewHeight",
-      "bridgedName": "_computeMaxItemViewHeight",
+    "collectionView:draggingImageForItemsAtIndexPaths:withEvent:offset:": {
+      "name": "collectionView:draggingImageForItemsAtIndexPaths:withEvent:offset:",
+      "bridgedName": "collectionView_draggingImageForItemsAtIndexPaths_withEvent_offset",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "draggingImageForItemsAtIndexPaths",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        },
+        {
+          "name": "offset",
+          "type": "struct CGPoint *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:writeItemsAtIndexPaths:toPasteboard:": {
+      "name": "collectionView:writeItemsAtIndexPaths:toPasteboard:",
+      "bridgedName": "collectionView_writeItemsAtIndexPaths_toPasteboard",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "writeItemsAtIndexPaths",
+          "type": "id"
+        },
+        {
+          "name": "toPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:canDragItemsAtIndexPaths:withEvent:": {
+      "name": "collectionView:canDragItemsAtIndexPaths:withEvent:",
+      "bridgedName": "collectionView_canDragItemsAtIndexPaths_withEvent",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "canDragItemsAtIndexPaths",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:maxSizeForItemAtIndexPath:": {
+      "name": "collectionView:layout:maxSizeForItemAtIndexPath:",
+      "bridgedName": "collectionView_layout_maxSizeForItemAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "layout",
+          "type": "id"
+        },
+        {
+          "name": "maxSizeForItemAtIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:layout:minSizeForItemAtIndexPath:": {
+      "name": "collectionView:layout:minSizeForItemAtIndexPath:",
+      "bridgedName": "collectionView_layout_minSizeForItemAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "layout",
+          "type": "id"
+        },
+        {
+          "name": "minSizeForItemAtIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:itemForRepresentedObjectAtIndexPath:": {
+      "name": "collectionView:itemForRepresentedObjectAtIndexPath:",
+      "bridgedName": "collectionView_itemForRepresentedObjectAtIndexPath",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "itemForRepresentedObjectAtIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "collectionView:numberOfItemsInSection:": {
+      "name": "collectionView:numberOfItemsInSection:",
+      "bridgedName": "collectionView_numberOfItemsInSection",
+      "args": [
+        {
+          "name": "collectionView",
+          "type": "id"
+        },
+        {
+          "name": "numberOfItemsInSection",
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeVibrancyOnContainerIfNecessary": {
+      "name": "_removeVibrancyOnContainerIfNecessary",
+      "bridgedName": "_removeVibrancyOnContainerIfNecessary",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_deltaForResizingImageRepView:": {
-      "name": "_deltaForResizingImageRepView:",
-      "bridgedName": "_deltaForResizingImageRepView",
-      "args": [
-        {
-          "name": "_deltaForResizingImageRepView",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resizeToolbarImageRepViewToFit:": {
-      "name": "_resizeToolbarImageRepViewToFit:",
-      "bridgedName": "_resizeToolbarImageRepViewToFit",
-      "args": [
-        {
-          "name": "_resizeToolbarImageRepViewToFit",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_deltaForResizingTextField:": {
-      "name": "_deltaForResizingTextField:",
-      "bridgedName": "_deltaForResizingTextField",
-      "args": [
-        {
-          "name": "_deltaForResizingTextField",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resizeTextFieldToFit:": {
-      "name": "_resizeTextFieldToFit:",
-      "bridgedName": "_resizeTextFieldToFit",
-      "args": [
-        {
-          "name": "_resizeTextFieldToFit",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -232,6 +365,14 @@
         }
       ],
       "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadIndividualItemsCollectionView": {
+      "name": "_loadIndividualItemsCollectionView",
+      "bridgedName": "_loadIndividualItemsCollectionView",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -375,5 +516,40 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
 }

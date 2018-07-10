@@ -6,7 +6,9 @@
   "classes": [
     "NSArray",
     "NSKeyboardShortcut",
-    "NSString"
+    "NSSet",
+    "NSString",
+    "NSUUID"
   ],
   "protocol": false,
   "className": "_NSServiceEntry",
@@ -15,6 +17,104 @@
     "_NSServiceAction"
   ],
   "methods": {
+    "internalRunService:flags:cancelledHint:": {
+      "name": "internalRunService:flags:cancelledHint:",
+      "bridgedName": "internalRunService_flags_cancelledHint",
+      "args": [
+        {
+          "name": "internalRunService",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "cancelledHint",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateWithResponder:completionHandler:": {
+      "name": "validateWithResponder:completionHandler:",
+      "bridgedName": "validateWithResponder_completionHandler",
+      "args": [
+        {
+          "name": "validateWithResponder",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithPasteboard:": {
+      "name": "invokeWithPasteboard:",
+      "bridgedName": "invokeWithPasteboard",
+      "args": [
+        {
+          "name": "invokeWithPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithResponder:": {
+      "name": "invokeWithResponder:",
+      "bridgedName": "invokeWithResponder",
+      "args": [
+        {
+          "name": "invokeWithResponder",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadBackgroundColorOnQueue:completionHandler:": {
+      "name": "loadBackgroundColorOnQueue:completionHandler:",
+      "bridgedName": "loadBackgroundColorOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadBackgroundColorOnQueue",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadImageOnQueue:completionHandler:": {
+      "name": "loadImageOnQueue:completionHandler:",
+      "bridgedName": "loadImageOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadImageOnQueue",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "enableStatus": {
       "name": "enableStatus",
       "bridgedName": "enableStatus",
@@ -168,17 +268,38 @@
       "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "combinedSendTypes": {
-      "name": "combinedSendTypes",
-      "bridgedName": "combinedSendTypes",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
+    "availablePresentationModes": {
+      "name": "availablePresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "defaultPresentationModes": {
+      "name": "defaultPresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "presentationModes": {
+      "name": "presentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
     "bundleIdentifier": {
       "name": "bundleIdentifier",
       "pointer": true,
@@ -224,10 +345,37 @@
         "nonatomic"
       ]
     },
+    "hasBackgroundColor": {
+      "name": "hasBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasCustomIcon": {
+      "name": "hasCustomIcon",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "localizedTitle": {
       "name": "localizedTitle",
       "pointer": true,
       "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "serviceUUID": {
+      "name": "serviceUUID",
+      "pointer": true,
+      "type": "NSUUID",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -316,6 +464,33 @@
       "name": "isWorkflow",
       "pointer": false,
       "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "returnTypes": {
+      "name": "returnTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "sendFileTypes": {
+      "name": "sendFileTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "combinedSendTypes": {
+      "name": "combinedSendTypes",
+      "pointer": true,
+      "type": "NSArray",
       "attributes": [
         "readonly",
         "nonatomic"

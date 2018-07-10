@@ -5,6 +5,7 @@
     "NSFont",
     "NSImage",
     "NSSegmentItem",
+    "NSSegmentItemBezelView",
     "NSSegmentItemImageView",
     "NSSegmentItemLabelView",
     "NSSegmentedCell",
@@ -24,46 +25,68 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "canSmoothFontsInLayer": {
-      "name": "canSmoothFontsInLayer",
-      "bridgedName": "canSmoothFontsInLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateLayer": {
-      "name": "updateLayer",
-      "bridgedName": "updateLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "wantsUpdateLayer": {
-      "name": "wantsUpdateLayer",
-      "bridgedName": "wantsUpdateLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawRect:": {
-      "name": "drawRect:",
-      "bridgedName": "drawRect",
+    "_vibrancyBlendModeForSegmentLabelView:proposedBlendMode:": {
+      "name": "_vibrancyBlendModeForSegmentLabelView:proposedBlendMode:",
+      "bridgedName": "_vibrancyBlendModeForSegmentLabelView_proposedBlendMode",
       "args": [
         {
-          "name": "drawRect",
-          "type": "struct CGRect"
+          "name": "_vibrancyBlendModeForSegmentLabelView",
+          "type": "id"
+        },
+        {
+          "name": "proposedBlendMode",
+          "type": "int"
         }
       ],
-      "returns": "void",
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_drawBezel": {
-      "name": "_drawBezel",
-      "bridgedName": "_drawBezel",
+    "_vibrancyBlendModeForSegmentImageView:proposedBlendMode:": {
+      "name": "_vibrancyBlendModeForSegmentImageView:proposedBlendMode:",
+      "bridgedName": "_vibrancyBlendModeForSegmentImageView_proposedBlendMode",
+      "args": [
+        {
+          "name": "_vibrancyBlendModeForSegmentImageView",
+          "type": "id"
+        },
+        {
+          "name": "proposedBlendMode",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrancyBlendModeForSegmentBezelView:proposedBlendMode:": {
+      "name": "_vibrancyBlendModeForSegmentBezelView:proposedBlendMode:",
+      "bridgedName": "_vibrancyBlendModeForSegmentBezelView_proposedBlendMode",
+      "args": [
+        {
+          "name": "_vibrancyBlendModeForSegmentBezelView",
+          "type": "id"
+        },
+        {
+          "name": "proposedBlendMode",
+          "type": "int"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrancyBlendMode": {
+      "name": "_vibrancyBlendMode",
+      "bridgedName": "_vibrancyBlendMode",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateBezelView": {
+      "name": "_updateBezelView",
+      "bridgedName": "_updateBezelView",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -289,15 +312,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_viewDidChangeAppearance:": {
-      "name": "_viewDidChangeAppearance:",
-      "bridgedName": "_viewDidChangeAppearance",
-      "args": [
-        {
-          "name": "_viewDidChangeAppearance",
-          "type": "id"
-        }
-      ],
+    "viewDidChangeEffectiveAppearance": {
+      "name": "viewDidChangeEffectiveAppearance",
+      "bridgedName": "viewDidChangeEffectiveAppearance",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"

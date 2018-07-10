@@ -4,15 +4,18 @@
     "NSAccessibilityElement.h",
     "NSAnimatablePropertyContainer.h",
     "NSAppearanceCustomization.h",
+    "NSAppearanceCustomizationInternal.h",
     "NSDraggingDestination.h",
     "NSUserInterfaceItemIdentification.h"
   ],
   "classes": [
     "CALayer",
+    "CAProxyLayer",
     "CIFilter",
     "NSAppearance",
     "NSArray",
     "NSBezierPath",
+    "NSCGSWindowBackdrop",
     "NSCandidateListTouchBarItem",
     "NSColor",
     "NSColorSpace",
@@ -37,6 +40,7 @@
   "className": "NSView",
   "extends": "NSResponder",
   "interfaces": [
+    "NSAppearanceCustomizationInternal",
     "NSAnimatablePropertyContainer",
     "NSUserInterfaceItemIdentification",
     "NSDraggingDestination",
@@ -147,30 +151,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "isLockFocusFlushEnabled": {
-      "name": "isLockFocusFlushEnabled",
-      "bridgedName": "isLockFocusFlushEnabled",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_enableLockFocusFlush": {
-      "name": "_enableLockFocusFlush",
-      "bridgedName": "_enableLockFocusFlush",
-      "args": [],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_disableLockFocusFlush": {
-      "name": "_disableLockFocusFlush",
-      "bridgedName": "_disableLockFocusFlush",
-      "args": [],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "defaultAnimationForKey:": {
       "name": "defaultAnimationForKey:",
       "bridgedName": "defaultAnimationForKey",
@@ -221,19 +201,24 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "_antialiasThresholdChanged:": {
+      "name": "_antialiasThresholdChanged:",
+      "bridgedName": "_antialiasThresholdChanged",
+      "args": [
+        {
+          "name": "_antialiasThresholdChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "initialize": {
       "name": "initialize",
       "bridgedName": "initialize",
       "args": [],
       "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_cui_keyPathsAffectingValuesForCurrentState": {
-      "name": "_cui_keyPathsAffectingValuesForCurrentState",
-      "bridgedName": "_cui_keyPathsAffectingValuesForCurrentState",
-      "args": [],
-      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -294,32 +279,6 @@
         {
           "name": "_setShowsAllDrawing",
           "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "endFreezingInWindow:": {
-      "name": "endFreezingInWindow:",
-      "bridgedName": "endFreezingInWindow",
-      "args": [
-        {
-          "name": "endFreezingInWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "beginFreezingInWindow:": {
-      "name": "beginFreezingInWindow:",
-      "bridgedName": "beginFreezingInWindow",
-      "args": [
-        {
-          "name": "beginFreezingInWindow",
-          "type": "id"
         }
       ],
       "returns": "void",
@@ -619,19 +578,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_invalidateTextLayersIfNeeded": {
-      "name": "_invalidateTextLayersIfNeeded",
-      "bridgedName": "_invalidateTextLayersIfNeeded",
+    "effectiveAppearanceDidChange": {
+      "name": "effectiveAppearanceDidChange",
+      "bridgedName": "effectiveAppearanceDidChange",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_recacheEffectiveAppearance": {
-      "name": "_recacheEffectiveAppearance",
-      "bridgedName": "_recacheEffectiveAppearance",
+    "viewDidChangeEffectiveAppearance": {
+      "name": "viewDidChangeEffectiveAppearance",
+      "bridgedName": "viewDidChangeEffectiveAppearance",
       "args": [],
-      "returns": "BOOL",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -755,10 +714,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_clearHasBeenCommittedIfNeeded": {
-      "name": "_clearHasBeenCommittedIfNeeded",
-      "bridgedName": "_clearHasBeenCommittedIfNeeded",
-      "args": [],
+    "_clearHasBeenCommittedIfNeededOrForced:": {
+      "name": "_clearHasBeenCommittedIfNeededOrForced:",
+      "bridgedName": "_clearHasBeenCommittedIfNeededOrForced",
+      "args": [
+        {
+          "name": "_clearHasBeenCommittedIfNeededOrForced",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -854,9 +818,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "buildLayerTreeWithOwnLayerRequirement:someAncestorWantsLayer:canJoinInclusiveLayer:containingLayer:": {
-      "name": "buildLayerTreeWithOwnLayerRequirement:someAncestorWantsLayer:canJoinInclusiveLayer:containingLayer:",
-      "bridgedName": "buildLayerTreeWithOwnLayerRequirement_someAncestorWantsLayer_canJoinInclusiveLayer_containingLayer",
+    "buildLayerTreeWithOwnLayerRequirement:someAncestorWantsLayer:": {
+      "name": "buildLayerTreeWithOwnLayerRequirement:someAncestorWantsLayer:",
+      "bridgedName": "buildLayerTreeWithOwnLayerRequirement_someAncestorWantsLayer",
       "args": [
         {
           "name": "buildLayerTreeWithOwnLayerRequirement",
@@ -865,14 +829,6 @@
         {
           "name": "someAncestorWantsLayer",
           "type": "BOOL"
-        },
-        {
-          "name": "canJoinInclusiveLayer",
-          "type": "BOOL"
-        },
-        {
-          "name": "containingLayer",
-          "type": "id"
         }
       ],
       "returns": "id",
@@ -884,44 +840,6 @@
       "bridgedName": "buildLayerTree",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_addLayerToLayerTree": {
-      "name": "_addLayerToLayerTree",
-      "bridgedName": "_addLayerToLayerTree",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_usingAlternateHighlightColorForCell:withFrame:": {
-      "name": "_usingAlternateHighlightColorForCell:withFrame:",
-      "bridgedName": "_usingAlternateHighlightColorForCell_withFrame",
-      "args": [
-        {
-          "name": "_usingAlternateHighlightColorForCell",
-          "type": "id"
-        },
-        {
-          "name": "withFrame",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_highlightColorForCell:": {
-      "name": "_highlightColorForCell:",
-      "bridgedName": "_highlightColorForCell",
-      "args": [
-        {
-          "name": "_highlightColorForCell",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -951,27 +869,6 @@
           "type": "id"
         }
       ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "heartBeat:": {
-      "name": "heartBeat:",
-      "bridgedName": "heartBeat",
-      "args": [
-        {
-          "name": "heartBeat",
-          "type": "CDStruct_fadd2e06 *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_wantsHeartBeat": {
-      "name": "_wantsHeartBeat",
-      "bridgedName": "_wantsHeartBeat",
-      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -2656,27 +2553,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_invalidateTextLayersInRect:": {
-      "name": "_invalidateTextLayersInRect:",
-      "bridgedName": "_invalidateTextLayersInRect",
-      "args": [
-        {
-          "name": "_invalidateTextLayersInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_includeSubviewsInCacheDisplayInRect": {
-      "name": "_includeSubviewsInCacheDisplayInRect",
-      "bridgedName": "_includeSubviewsInCacheDisplayInRect",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "displayRectIgnoringOpacity:": {
       "name": "displayRectIgnoringOpacity:",
       "bridgedName": "displayRectIgnoringOpacity",
@@ -2768,35 +2644,6 @@
         {
           "name": "setNeedsDisplayInRect",
           "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldKeepTrackOfRectsBeingDrawn": {
-      "name": "_shouldKeepTrackOfRectsBeingDrawn",
-      "bridgedName": "_shouldKeepTrackOfRectsBeingDrawn",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_regionDrawnInto": {
-      "name": "_regionDrawnInto",
-      "bridgedName": "_regionDrawnInto",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setRegionDrawnInto:": {
-      "name": "_setRegionDrawnInto:",
-      "bridgedName": "_setRegionDrawnInto",
-      "args": [
-        {
-          "name": "_setRegionDrawnInto",
-          "type": "id"
         }
       ],
       "returns": "void",
@@ -3492,23 +3339,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_sendViewWillDrawInRect:clipRootView:": {
-      "name": "_sendViewWillDrawInRect:clipRootView:",
-      "bridgedName": "_sendViewWillDrawInRect_clipRootView",
-      "args": [
-        {
-          "name": "_sendViewWillDrawInRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "clipRootView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "drawOverlayRect:": {
       "name": "drawOverlayRect:",
       "bridgedName": "drawOverlayRect",
@@ -3699,19 +3529,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_lightWeightRecursiveDisplayInRect:": {
-      "name": "_lightWeightRecursiveDisplayInRect:",
-      "bridgedName": "_lightWeightRecursiveDisplayInRect",
-      "args": [
-        {
-          "name": "_lightWeightRecursiveDisplayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_dirtyRect": {
       "name": "_dirtyRect",
       "bridgedName": "_dirtyRect",
@@ -3755,48 +3572,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawAsMultiClippedContentInRect:": {
-      "name": "_drawAsMultiClippedContentInRect:",
-      "bridgedName": "_drawAsMultiClippedContentInRect",
-      "args": [
-        {
-          "name": "_drawAsMultiClippedContentInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_rectsForMultiClippedContentDrawing": {
-      "name": "_rectsForMultiClippedContentDrawing",
-      "bridgedName": "_rectsForMultiClippedContentDrawing",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isDrawingMultiClippedContentAtIndex:": {
-      "name": "_isDrawingMultiClippedContentAtIndex:",
-      "bridgedName": "_isDrawingMultiClippedContentAtIndex",
-      "args": [
-        {
-          "name": "_isDrawingMultiClippedContentAtIndex",
-          "type": "long long"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_multiClipDrawingHelper": {
-      "name": "_multiClipDrawingHelper",
-      "bridgedName": "_multiClipDrawingHelper",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -4004,54 +3779,6 @@
       "bridgedName": "lockFocusIfCanDraw",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_unlockFocusOnLayer": {
-      "name": "_unlockFocusOnLayer",
-      "bridgedName": "_unlockFocusOnLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_lockFocusOnLayer": {
-      "name": "_lockFocusOnLayer",
-      "bridgedName": "_lockFocusOnLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_lockFocusFlush": {
-      "name": "_lockFocusFlush",
-      "bridgedName": "_lockFocusFlush",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsLockFocusFlush": {
-      "name": "_needsLockFocusFlush",
-      "bridgedName": "_needsLockFocusFlush",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldDoLockFocusForLayerBacking": {
-      "name": "_shouldDoLockFocusForLayerBacking",
-      "bridgedName": "_shouldDoLockFocusForLayerBacking",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_viewWithLayerToLockFocusOn": {
-      "name": "_viewWithLayerToLockFocusOn",
-      "bridgedName": "_viewWithLayerToLockFocusOn",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -5607,6 +5334,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_layoutFrame": {
+      "name": "_layoutFrame",
+      "bridgedName": "_layoutFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_maybeCheckForAmbiguityForItem:": {
       "name": "_maybeCheckForAmbiguityForItem:",
       "bridgedName": "_maybeCheckForAmbiguityForItem",
@@ -6209,6 +5944,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_setBackgroundStyleForSubtree:": {
+      "name": "_setBackgroundStyleForSubtree:",
+      "bridgedName": "_setBackgroundStyleForSubtree",
+      "args": [
+        {
+          "name": "_setBackgroundStyleForSubtree",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "viewDidMoveToSuperview": {
       "name": "viewDidMoveToSuperview",
       "bridgedName": "viewDidMoveToSuperview",
@@ -6802,14 +6550,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_showKeyboardUILoop": {
-      "name": "_showKeyboardUILoop",
-      "bridgedName": "_showKeyboardUILoop",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_focusRingVisibleRect": {
       "name": "_focusRingVisibleRect",
       "bridgedName": "_focusRingVisibleRect",
@@ -6899,14 +6639,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_layerSurface": {
-      "name": "_layerSurface",
-      "bridgedName": "_layerSurface",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_isLayingOut": {
       "name": "_isLayingOut",
       "bridgedName": "_isLayingOut",
@@ -6923,69 +6655,33 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_cui_invalidateCurrentState": {
-      "name": "_cui_invalidateCurrentState",
-      "bridgedName": "_cui_invalidateCurrentState",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_cui_sizeValueMetricForKey:defaultValue:": {
-      "name": "_cui_sizeValueMetricForKey:defaultValue:",
-      "bridgedName": "_cui_sizeValueMetricForKey_defaultValue",
+    "_usingAlternateHighlightColorForCell:withFrame:": {
+      "name": "_usingAlternateHighlightColorForCell:withFrame:",
+      "bridgedName": "_usingAlternateHighlightColorForCell_withFrame",
       "args": [
         {
-          "name": "_cui_sizeValueMetricForKey",
+          "name": "_usingAlternateHighlightColorForCell",
           "type": "id"
         },
         {
-          "name": "defaultValue",
-          "type": "struct CGSize"
+          "name": "withFrame",
+          "type": "struct CGRect"
         }
       ],
-      "returns": "struct CGSize",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_cui_floatValueMetricForKey:defaultValue:": {
-      "name": "_cui_floatValueMetricForKey:defaultValue:",
-      "bridgedName": "_cui_floatValueMetricForKey_defaultValue",
+    "_highlightColorForCell:": {
+      "name": "_highlightColorForCell:",
+      "bridgedName": "_highlightColorForCell",
       "args": [
         {
-          "name": "_cui_floatValueMetricForKey",
+          "name": "_highlightColorForCell",
           "type": "id"
-        },
-        {
-          "name": "defaultValue",
-          "type": "double"
         }
       ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_cui_artworkMetrics": {
-      "name": "_cui_artworkMetrics",
-      "bridgedName": "_cui_artworkMetrics",
-      "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_copyDragRegion": {
-      "name": "_copyDragRegion",
-      "bridgedName": "_copyDragRegion",
-      "args": [],
-      "returns": "struct CGSRegionObject *",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_draggableFrame": {
-      "name": "_draggableFrame",
-      "bridgedName": "_draggableFrame",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -7152,6 +6848,14 @@
       "bridgedName": "_enclosingMenuItem",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_debug_showKeyboardUILoop": {
+      "name": "_debug_showKeyboardUILoop",
+      "bridgedName": "_debug_showKeyboardUILoop",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -7445,42 +7149,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_proxyLayer": {
-      "name": "_proxyLayer",
-      "bridgedName": "_proxyLayer",
+    "_removeVibrantBlendingMimicBackdropOrProxyLayerIfNeeded": {
+      "name": "_removeVibrantBlendingMimicBackdropOrProxyLayerIfNeeded",
+      "bridgedName": "_removeVibrantBlendingMimicBackdropOrProxyLayerIfNeeded",
       "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setProxyLayer:": {
-      "name": "_setProxyLayer:",
-      "bridgedName": "_setProxyLayer",
-      "args": [
-        {
-          "name": "_setProxyLayer",
-          "type": "id"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_windowBackdrop": {
-      "name": "_windowBackdrop",
-      "bridgedName": "_windowBackdrop",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setWindowBackdrop:": {
-      "name": "_setWindowBackdrop:",
-      "bridgedName": "_setWindowBackdrop",
+    "_updateVibrantBlendingMimicBackdropOrProxyLayerWithBlendMode:": {
+      "name": "_updateVibrantBlendingMimicBackdropOrProxyLayerWithBlendMode:",
+      "bridgedName": "_updateVibrantBlendingMimicBackdropOrProxyLayerWithBlendMode",
       "args": [
         {
-          "name": "_setWindowBackdrop",
-          "type": "id"
+          "name": "_updateVibrantBlendingMimicBackdropOrProxyLayerWithBlendMode",
+          "type": "int"
         }
       ],
       "returns": "void",
@@ -7492,27 +7175,6 @@
       "bridgedName": "_isDiagonallyRotatedOrScaledFromBase",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_addCornerDirtyRectForRect:list:count:": {
-      "name": "_addCornerDirtyRectForRect:list:count:",
-      "bridgedName": "_addCornerDirtyRectForRect_list_count",
-      "args": [
-        {
-          "name": "_addCornerDirtyRectForRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "list",
-          "type": "struct CGRect *"
-        },
-        {
-          "name": "count",
-          "type": "long long *"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -7530,6 +7192,19 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "heartBeat:": {
+      "name": "heartBeat:",
+      "bridgedName": "heartBeat",
+      "args": [
+        {
+          "name": "heartBeat",
+          "type": "CDStruct_fadd2e06 *"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -7860,22 +7535,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_invalidateShouldAutoFlattenLayerTreeRecursively": {
-      "name": "_invalidateShouldAutoFlattenLayerTreeRecursively",
-      "bridgedName": "_invalidateShouldAutoFlattenLayerTreeRecursively",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_invalidateShouldAutoFlattenLayerTree": {
-      "name": "_invalidateShouldAutoFlattenLayerTree",
-      "bridgedName": "_invalidateShouldAutoFlattenLayerTree",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_shouldAutoFlattenLayerTree": {
       "name": "_shouldAutoFlattenLayerTree",
       "bridgedName": "_shouldAutoFlattenLayerTree",
@@ -8016,14 +7675,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateGrowBoxForWindowFrameChange": {
-      "name": "_updateGrowBoxForWindowFrameChange",
-      "bridgedName": "_updateGrowBoxForWindowFrameChange",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_NSView_isWebClipView": {
       "name": "_NSView_isWebClipView",
       "bridgedName": "_NSView_isWebClipView",
@@ -8061,34 +7712,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_recursive:displayRectIgnoringOpacity:inGraphicsContext:shouldChangeFontReferenceColor:": {
-      "name": "_recursive:displayRectIgnoringOpacity:inGraphicsContext:shouldChangeFontReferenceColor:",
-      "bridgedName": "_recursive_displayRectIgnoringOpacity_inGraphicsContext_shouldChangeFontReferenceColor",
-      "args": [
-        {
-          "name": "_recursive",
-          "type": "BOOL"
-        },
-        {
-          "name": "displayRectIgnoringOpacity",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "inGraphicsContext",
-          "type": "id"
-        },
-        {
-          "name": "shouldChangeFontReferenceColor",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_recursive:displayRectIgnoringOpacity:inContext:shouldChangeFontReferenceColor:": {
-      "name": "_recursive:displayRectIgnoringOpacity:inContext:shouldChangeFontReferenceColor:",
-      "bridgedName": "_recursive_displayRectIgnoringOpacity_inContext_shouldChangeFontReferenceColor",
+    "_recursive:displayRectIgnoringOpacity:inContext:shouldChangeFontReferenceColor:stopAtLayerBackedViews:": {
+      "name": "_recursive:displayRectIgnoringOpacity:inContext:shouldChangeFontReferenceColor:stopAtLayerBackedViews:",
+      "bridgedName": "_recursive_displayRectIgnoringOpacity_inContext_shouldChangeFontReferenceColor_stopAtLayerBackedViews",
       "args": [
         {
           "name": "_recursive",
@@ -8104,6 +7730,10 @@
         },
         {
           "name": "shouldChangeFontReferenceColor",
+          "type": "BOOL"
+        },
+        {
+          "name": "stopAtLayerBackedViews",
           "type": "BOOL"
         }
       ],
@@ -8132,14 +7762,6 @@
       "bridgedName": "_enableNeedsDisplayInRectNotifications",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_layerDrawingNeedsLinearMaskOverlayForFontSmoothing": {
-      "name": "_layerDrawingNeedsLinearMaskOverlayForFontSmoothing",
-      "bridgedName": "_layerDrawingNeedsLinearMaskOverlayForFontSmoothing",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8181,14 +7803,6 @@
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawSurroundingOutline": {
-      "name": "_drawSurroundingOutline",
-      "bridgedName": "_drawSurroundingOutline",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -8353,9 +7967,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_canDisableBaseVibrancy": {
-      "name": "_canDisableBaseVibrancy",
-      "bridgedName": "_canDisableBaseVibrancy",
+    "_needsVibrancy": {
+      "name": "_needsVibrancy",
+      "bridgedName": "_needsVibrancy",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -8369,88 +7983,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_addWindowBackdropIfNeededForVibrancy:": {
-      "name": "_addWindowBackdropIfNeededForVibrancy:",
-      "bridgedName": "_addWindowBackdropIfNeededForVibrancy",
+    "_invalidateEffectiveVibrantBlendingStyle": {
+      "name": "_invalidateEffectiveVibrantBlendingStyle",
+      "bridgedName": "_invalidateEffectiveVibrantBlendingStyle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeVibrantBlendingCACompositingFilterIfNeeded": {
+      "name": "_removeVibrantBlendingCACompositingFilterIfNeeded",
+      "bridgedName": "_removeVibrantBlendingCACompositingFilterIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateVibrantBlendingCACompositingFilterWithBlendMode:": {
+      "name": "_updateVibrantBlendingCACompositingFilterWithBlendMode:",
+      "bridgedName": "_updateVibrantBlendingCACompositingFilterWithBlendMode",
       "args": [
         {
-          "name": "_addWindowBackdropIfNeededForVibrancy",
-          "type": "BOOL"
+          "name": "_updateVibrantBlendingCACompositingFilterWithBlendMode",
+          "type": "int"
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_unregisterWithBackdropViewIfNeeded": {
-      "name": "_unregisterWithBackdropViewIfNeeded",
-      "bridgedName": "_unregisterWithBackdropViewIfNeeded",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_registerWithBackdropView": {
-      "name": "_registerWithBackdropView",
-      "bridgedName": "_registerWithBackdropView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_recursivelyNoteBackdropViewChanged": {
-      "name": "_recursivelyNoteBackdropViewChanged",
-      "bridgedName": "_recursivelyNoteBackdropViewChanged",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_recursivelyUnregisterWithBackdropView": {
-      "name": "_recursivelyUnregisterWithBackdropView",
-      "bridgedName": "_recursivelyUnregisterWithBackdropView",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_recursivelyUpdateVibrancy": {
-      "name": "_recursivelyUpdateVibrancy",
-      "bridgedName": "_recursivelyUpdateVibrancy",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_removeInWindowVibrancyFilter": {
-      "name": "_removeInWindowVibrancyFilter",
-      "bridgedName": "_removeInWindowVibrancyFilter",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateInWindowNonVibrancyFilter": {
-      "name": "_updateInWindowNonVibrancyFilter",
-      "bridgedName": "_updateInWindowNonVibrancyFilter",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateInWindowVibrancyFilter": {
-      "name": "_updateInWindowVibrancyFilter",
-      "bridgedName": "_updateInWindowVibrancyFilter",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_vibrancyBlendingMode": {
-      "name": "_vibrancyBlendingMode",
-      "bridgedName": "_vibrancyBlendingMode",
-      "args": [],
-      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8459,51 +8017,6 @@
       "bridgedName": "_vibrancyBlendMode",
       "args": [],
       "returns": "int",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_vibrancyFilter": {
-      "name": "_vibrancyFilter",
-      "bridgedName": "_vibrancyFilter",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_containingBackdropView": {
-      "name": "_containingBackdropView",
-      "bridgedName": "_containingBackdropView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setContainingBackdropView:": {
-      "name": "_setContainingBackdropView:",
-      "bridgedName": "_setContainingBackdropView",
-      "args": [
-        {
-          "name": "_setContainingBackdropView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_hasCachedContainingBackdropView": {
-      "name": "_hasCachedContainingBackdropView",
-      "bridgedName": "_hasCachedContainingBackdropView",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsVibrancy": {
-      "name": "_needsVibrancy",
-      "bridgedName": "_needsVibrancy",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8539,14 +8052,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_createLayerIfNeeded": {
-      "name": "_createLayerIfNeeded",
-      "bridgedName": "_createLayerIfNeeded",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_handleFrameChangeForSubview:": {
       "name": "_handleFrameChangeForSubview:",
       "bridgedName": "_handleFrameChangeForSubview",
@@ -8578,6 +8083,14 @@
       "bridgedName": "_compositeHiddenViewHighlight",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appearanceSensitiveIsOpaque": {
+      "name": "_appearanceSensitiveIsOpaque",
+      "bridgedName": "_appearanceSensitiveIsOpaque",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8631,6 +8144,19 @@
       "bridgedName": "_needsRedisplayOnFrameChange",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_recursiveSetNeedsDisplay:": {
+      "name": "_recursiveSetNeedsDisplay:",
+      "bridgedName": "_recursiveSetNeedsDisplay",
+      "args": [
+        {
+          "name": "_recursiveSetNeedsDisplay",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -9227,27 +8753,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_canDrawWindowGrowBox": {
-      "name": "_canDrawWindowGrowBox",
-      "bridgedName": "_canDrawWindowGrowBox",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_sendViewWillDrawAndRecurse:": {
-      "name": "_sendViewWillDrawAndRecurse:",
-      "bridgedName": "_sendViewWillDrawAndRecurse",
-      "args": [
-        {
-          "name": "_sendViewWillDrawAndRecurse",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_sendViewWillDraw": {
       "name": "_sendViewWillDraw",
       "bridgedName": "_sendViewWillDraw",
@@ -9259,14 +8764,6 @@
     "_viewDying": {
       "name": "_viewDying",
       "bridgedName": "_viewDying",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsViewWillDraw": {
-      "name": "_needsViewWillDraw",
-      "bridgedName": "_needsViewWillDraw",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -9531,6 +9028,14 @@
     "accessibilityAuditPotentialChildren": {
       "name": "accessibilityAuditPotentialChildren",
       "bridgedName": "accessibilityAuditPotentialChildren",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deepestAccessibilityDescendants": {
+      "name": "deepestAccessibilityDescendants",
+      "bridgedName": "deepestAccessibilityDescendants",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -10092,6 +9597,14 @@
       "bridgedName": "accessibilityAttributeNames",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsHeartBeat": {
+      "name": "_wantsHeartBeat",
+      "bridgedName": "_wantsHeartBeat",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -10684,23 +10197,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_view:shouldSaveDirtyRectIfNecessary:": {
-      "name": "_view:shouldSaveDirtyRectIfNecessary:",
-      "bridgedName": "_view_shouldSaveDirtyRectIfNecessary",
-      "args": [
-        {
-          "name": "_view",
-          "type": "id"
-        },
-        {
-          "name": "shouldSaveDirtyRectIfNecessary",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_layoutSublayersOfLayer:": {
       "name": "_layoutSublayersOfLayer:",
       "bridgedName": "_layoutSublayersOfLayer",
@@ -10711,19 +10207,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "NS_canDrawLayer:": {
-      "name": "NS_canDrawLayer:",
-      "bridgedName": "NS_canDrawLayer",
-      "args": [
-        {
-          "name": "NS_canDrawLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -10813,9 +10296,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateLayerHiddenStateFromView": {
-      "name": "_updateLayerHiddenStateFromView",
-      "bridgedName": "_updateLayerHiddenStateFromView",
+    "_updateLayerHiddenFromView": {
+      "name": "_updateLayerHiddenFromView",
+      "bridgedName": "_updateLayerHiddenFromView",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -12837,6 +12320,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_nonTAMICConstraints": {
+      "name": "_nonTAMICConstraints",
+      "bridgedName": "_nonTAMICConstraints",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_effectiveBackingScaleFactorForLayout": {
       "name": "_effectiveBackingScaleFactorForLayout",
       "bridgedName": "_effectiveBackingScaleFactorForLayout",
@@ -12966,6 +12457,22 @@
     "_minXVariable": {
       "name": "_minXVariable",
       "bridgedName": "_minXVariable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsli_boundsHeightVariable": {
+      "name": "nsli_boundsHeightVariable",
+      "bridgedName": "nsli_boundsHeightVariable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nsli_boundsWidthVariable": {
+      "name": "nsli_boundsWidthVariable",
+      "bridgedName": "nsli_boundsWidthVariable",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -13718,14 +13225,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_appearanceBearingParent": {
-      "name": "_appearanceBearingParent",
-      "bridgedName": "_appearanceBearingParent",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "removeConstraintWithIdentifier:": {
       "name": "removeConstraintWithIdentifier:",
       "bridgedName": "removeConstraintWithIdentifier",
@@ -13747,6 +13246,14 @@
       "type": "NSAppearance",
       "attributes": [
         "readonly"
+      ]
+    },
+    "_usesNonVibrantAppearance": {
+      "name": "_usesNonVibrantAppearance",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "setter=_setUsesNonVibrantAppearance:"
       ]
     },
     "appearance": {
@@ -14027,40 +13534,6 @@
         "readonly"
       ]
     },
-    "_cui_optionsForCurrentState": {
-      "name": "_cui_optionsForCurrentState",
-      "pointer": true,
-      "type": "NSDictionary",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "_cui_availableMetrics": {
-      "name": "_cui_availableMetrics",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "_cui_alignmentRectInsets": {
-      "name": "_cui_alignmentRectInsets",
-      "pointer": false,
-      "type": "struct NSEdgeInsets",
-      "attributes": [
-        "readonly"
-      ]
-    },
-    "_cui_intrinsicContentSize": {
-      "name": "_cui_intrinsicContentSize",
-      "pointer": false,
-      "type": "struct CGSize",
-      "attributes": [
-        "readonly"
-      ]
-    },
     "drawingFindIndicator": {
       "name": "drawingFindIndicator",
       "pointer": false,
@@ -14131,12 +13604,20 @@
         "retain"
       ]
     },
-    "_behindWindowVisualEffectLayoutRect": {
-      "name": "_behindWindowVisualEffectLayoutRect",
-      "pointer": false,
-      "type": "struct CGRect",
+    "_proxyLayer": {
+      "name": "_proxyLayer",
+      "pointer": true,
+      "type": "CAProxyLayer",
       "attributes": [
-        "readonly"
+        "setter=_setProxyLayer:"
+      ]
+    },
+    "_windowBackdrop": {
+      "name": "_windowBackdrop",
+      "pointer": true,
+      "type": "NSCGSWindowBackdrop",
+      "attributes": [
+        "setter=_setWindowBackdrop:"
       ]
     },
     "fontSmoothingBackgroundColor": {
@@ -14154,6 +13635,14 @@
       "attributes": [
         "retain",
         "setter=_setSurface:"
+      ]
+    },
+    "_vibrantBlendingStyleForSubtree": {
+      "name": "_vibrantBlendingStyleForSubtree",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "setter=_setVibrantBlendingStyleForSubtree:"
       ]
     },
     "_clipPath": {
@@ -14262,6 +13751,14 @@
       "name": "alignmentLayoutRect",
       "pointer": true,
       "type": "NSLayoutRect",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_effectiveAppearanceParent": {
+      "name": "_effectiveAppearanceParent",
+      "pointer": false,
+      "type": "id <NSAppearanceCustomization>",
       "attributes": [
         "readonly"
       ]

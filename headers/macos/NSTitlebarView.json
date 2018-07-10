@@ -2,24 +2,30 @@
   "imports": [],
   "classes": [
     "NSThemeFrame",
-    "NSTrackingArea"
+    "NSTrackingArea",
+    "_NSTitlebarDecorationView"
   ],
   "protocol": false,
   "className": "NSTitlebarView",
   "extends": "NSVisualEffectView",
   "interfaces": [],
   "methods": {
-    "_titleTextFieldView": {
-      "name": "_titleTextFieldView",
-      "bridgedName": "_titleTextFieldView",
-      "args": [],
-      "returns": "id",
+    "addSubview:": {
+      "name": "addSubview:",
+      "bridgedName": "addSubview",
+      "args": [
+        {
+          "name": "addSubview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "titleFont": {
-      "name": "titleFont",
-      "bridgedName": "titleFont",
+    "_titleTextFieldView": {
+      "name": "_titleTextFieldView",
+      "bridgedName": "_titleTextFieldView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -132,6 +138,30 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "viewDidMoveToWindow": {
+      "name": "viewDidMoveToWindow",
+      "bridgedName": "viewDidMoveToWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isHUDWindow": {
+      "name": "_isHUDWindow",
+      "bridgedName": "_isHUDWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "shouldSetFontSmoothingBackgroundColor": {
       "name": "shouldSetFontSmoothingBackgroundColor",
       "bridgedName": "shouldSetFontSmoothingBackgroundColor",
@@ -174,14 +204,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shouldAddBorderLayer": {
-      "name": "_shouldAddBorderLayer",
-      "bridgedName": "_shouldAddBorderLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "initWithFrame:": {
       "name": "initWithFrame:",
       "bridgedName": "initWithFrame",
@@ -191,6 +213,14 @@
           "type": "struct CGRect"
         }
       ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "titleFont": {
+      "name": "titleFont",
+      "bridgedName": "titleFont",
+      "args": [],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"

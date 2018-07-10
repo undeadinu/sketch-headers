@@ -10,14 +10,15 @@
   ],
   "classes": [
     "CABackdropLayer",
-    "CALayer",
     "NSArray",
+    "NSBackgroundColorView",
     "NSMapTable",
     "NSMutableArray",
     "NSScrollView",
     "NSString",
     "NSTabBarEmptyRegionPlaceholderButton",
     "NSTabButton",
+    "NSTitlebarSeparatorView",
     "NSTrackingArea"
   ],
   "protocol": false,
@@ -44,6 +45,19 @@
         {
           "name": "andNumberOfPinnedTabs",
           "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tabBarColorNamed:": {
+      "name": "_tabBarColorNamed:",
+      "bridgedName": "_tabBarColorNamed",
+      "args": [
+        {
+          "name": "_tabBarColorNamed",
+          "type": "id"
         }
       ],
       "returns": "id",
@@ -1295,32 +1309,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_viewDidChangeAppearance:": {
-      "name": "_viewDidChangeAppearance:",
-      "bridgedName": "_viewDidChangeAppearance",
-      "args": [
-        {
-          "name": "_viewDidChangeAppearance",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "updateLayer": {
       "name": "updateLayer",
       "bridgedName": "updateLayer",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isDark": {
-      "name": "_isDark",
-      "bridgedName": "_isDark",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2116,6 +2109,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentBounds": {
+      "name": "_contentBounds",
+      "bridgedName": "_contentBounds",
+      "args": [],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },

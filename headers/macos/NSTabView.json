@@ -718,24 +718,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_realControlTint": {
-      "name": "_realControlTint",
-      "bridgedName": "_realControlTint",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawBorder:inRect:": {
-      "name": "_drawBorder:inRect:",
-      "bridgedName": "_drawBorder_inRect",
+    "_drawBackgroundAndBorderInRect:": {
+      "name": "_drawBackgroundAndBorderInRect:",
+      "bridgedName": "_drawBackgroundAndBorderInRect",
       "args": [
         {
-          "name": "_drawBorder",
-          "type": "id"
-        },
-        {
-          "name": "inRect",
+          "name": "_drawBackgroundAndBorderInRect",
           "type": "struct CGRect"
         }
       ],
@@ -743,33 +731,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_drawBezelBorder:inRect:": {
-      "name": "_drawBezelBorder:inRect:",
-      "bridgedName": "_drawBezelBorder_inRect",
+    "_drawBezelBorderInBounds:clipRect:": {
+      "name": "_drawBezelBorderInBounds:clipRect:",
+      "bridgedName": "_drawBezelBorderInBounds_clipRect",
       "args": [
         {
-          "name": "_drawBezelBorder",
-          "type": "id"
-        },
-        {
-          "name": "inRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawThemeBezelBorder:inBounds:clipRect:": {
-      "name": "_drawThemeBezelBorder:inBounds:clipRect:",
-      "bridgedName": "_drawThemeBezelBorder_inBounds_clipRect",
-      "args": [
-        {
-          "name": "_drawThemeBezelBorder",
-          "type": "id"
-        },
-        {
-          "name": "inBounds",
+          "name": "_drawBezelBorderInBounds",
           "type": "struct CGRect"
         },
         {
@@ -810,6 +777,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_createCoreUIMaskOnlyBezelOptionsForTabItem:": {
+      "name": "_createCoreUIMaskOnlyBezelOptionsForTabItem:",
+      "bridgedName": "_createCoreUIMaskOnlyBezelOptionsForTabItem",
+      "args": [
+        {
+          "name": "_createCoreUIMaskOnlyBezelOptionsForTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "struct __CFDictionary *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_createCoreUIBezelOptionsFlipped:": {
       "name": "_createCoreUIBezelOptionsFlipped:",
       "bridgedName": "_createCoreUIBezelOptionsFlipped",
@@ -844,14 +824,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilter": {
-      "name": "_vibrancyFilter",
-      "bridgedName": "_vibrancyFilter",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "allowsVibrancy": {
       "name": "allowsVibrancy",
       "bridgedName": "allowsVibrancy",
@@ -881,9 +853,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_copyCoreUIOptionsForTabViewItem:withState:inRect:": {
-      "name": "_copyCoreUIOptionsForTabViewItem:withState:inRect:",
-      "bridgedName": "_copyCoreUIOptionsForTabViewItem_withState_inRect",
+    "_copyCoreUIOptionsForTabViewItem:withState:maskOnly:inRect:": {
+      "name": "_copyCoreUIOptionsForTabViewItem:withState:maskOnly:inRect:",
+      "bridgedName": "_copyCoreUIOptionsForTabViewItem_withState_maskOnly_inRect",
       "args": [
         {
           "name": "_copyCoreUIOptionsForTabViewItem",
@@ -892,6 +864,10 @@
         {
           "name": "withState",
           "type": "unsigned long long"
+        },
+        {
+          "name": "maskOnly",
+          "type": "BOOL"
         },
         {
           "name": "inRect",
@@ -1059,41 +1035,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_didRemoveLayer": {
-      "name": "_didRemoveLayer",
-      "bridgedName": "_didRemoveLayer",
+    "_removeTabButtonSubviewIfNeeded": {
+      "name": "_removeTabButtonSubviewIfNeeded",
+      "bridgedName": "_removeTabButtonSubviewIfNeeded",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layout": {
-      "name": "layout",
-      "bridgedName": "layout",
+    "_addTabViewButtonsIfNeeded": {
+      "name": "_addTabViewButtonsIfNeeded",
+      "bridgedName": "_addTabViewButtonsIfNeeded",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_removeTabButtonLayer": {
-      "name": "_removeTabButtonLayer",
-      "bridgedName": "_removeTabButtonLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_removeBackgroundBezelLayer": {
-      "name": "_removeBackgroundBezelLayer",
-      "bridgedName": "_removeBackgroundBezelLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_addTabViewButtons": {
-      "name": "_addTabViewButtons",
-      "bridgedName": "_addTabViewButtons",
+    "_updateTabViewButtons": {
+      "name": "_updateTabViewButtons",
+      "bridgedName": "_updateTabViewButtons",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -1115,49 +1075,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_addAndUpdateBezelLayerIfNeeded": {
-      "name": "_addAndUpdateBezelLayerIfNeeded",
-      "bridgedName": "_addAndUpdateBezelLayerIfNeeded",
-      "args": [],
+    "_setTabViewButtons:": {
+      "name": "_setTabViewButtons:",
+      "bridgedName": "_setTabViewButtons",
+      "args": [
+        {
+          "name": "_setTabViewButtons",
+          "type": "id"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "viewDidChangeBackingProperties": {
-      "name": "viewDidChangeBackingProperties",
-      "bridgedName": "viewDidChangeBackingProperties",
+    "_tabViewButtons": {
+      "name": "_tabViewButtons",
+      "bridgedName": "_tabViewButtons",
       "args": [],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_bezelLayerFrame": {
-      "name": "_bezelLayerFrame",
-      "bridgedName": "_bezelLayerFrame",
+    "_usesSubviewsForButtons": {
+      "name": "_usesSubviewsForButtons",
+      "bridgedName": "_usesSubviewsForButtons",
       "args": [],
-      "returns": "struct CGRect",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_performTabLayoutIfNeeded": {
-      "name": "_performTabLayoutIfNeeded",
-      "bridgedName": "_performTabLayoutIfNeeded",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateLayer": {
-      "name": "updateLayer",
-      "bridgedName": "updateLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_redisplayForStateChange": {
-      "name": "_redisplayForStateChange",
-      "bridgedName": "_redisplayForStateChange",
+    "_removeBackgroundBezelLayer": {
+      "name": "_removeBackgroundBezelLayer",
+      "bridgedName": "_removeBackgroundBezelLayer",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -1168,6 +1117,27 @@
       "bridgedName": "_updateBackgroundBezelLayerIfRequired",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBackgroundBezelMaskLayer:": {
+      "name": "_setBackgroundBezelMaskLayer:",
+      "bridgedName": "_setBackgroundBezelMaskLayer",
+      "args": [
+        {
+          "name": "_setBackgroundBezelMaskLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_backgroundBezelMaskLayer": {
+      "name": "_backgroundBezelMaskLayer",
+      "bridgedName": "_backgroundBezelMaskLayer",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1192,15 +1162,74 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateTabBezelStyleForLayer:": {
-      "name": "_updateTabBezelStyleForLayer:",
-      "bridgedName": "_updateTabBezelStyleForLayer",
-      "args": [
-        {
-          "name": "_updateTabBezelStyleForLayer",
-          "type": "id"
-        }
-      ],
+    "_bezelLayerFrame": {
+      "name": "_bezelLayerFrame",
+      "bridgedName": "_bezelLayerFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addAndUpdateBezelLayerIfNeeded": {
+      "name": "_addAndUpdateBezelLayerIfNeeded",
+      "bridgedName": "_addAndUpdateBezelLayerIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didRemoveLayer": {
+      "name": "_didRemoveLayer",
+      "bridgedName": "_didRemoveLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayer": {
+      "name": "updateLayer",
+      "bridgedName": "updateLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_classToCheckForWantsUpdateLayer": {
+      "name": "_classToCheckForWantsUpdateLayer",
+      "bridgedName": "_classToCheckForWantsUpdateLayer",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performTabLayoutIfNeeded": {
+      "name": "_performTabLayoutIfNeeded",
+      "bridgedName": "_performTabLayoutIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidChangeBackingProperties": {
+      "name": "viewDidChangeBackingProperties",
+      "bridgedName": "viewDidChangeBackingProperties",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_redisplayForStateChange": {
+      "name": "_redisplayForStateChange",
+      "bridgedName": "_redisplayForStateChange",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1213,6 +1242,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_currentBorderWidth": {
+      "name": "_currentBorderWidth",
+      "bridgedName": "_currentBorderWidth",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_currentBorderColor": {
       "name": "_currentBorderColor",
       "bridgedName": "_currentBorderColor",
@@ -1221,11 +1258,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_classToCheckForWantsUpdateLayer": {
-      "name": "_classToCheckForWantsUpdateLayer",
-      "bridgedName": "_classToCheckForWantsUpdateLayer",
+    "_currentBackgroundColor": {
+      "name": "_currentBackgroundColor",
+      "bridgedName": "_currentBackgroundColor",
       "args": [],
-      "returns": "Class",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1268,27 +1305,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setTabViewButtons:": {
-      "name": "_setTabViewButtons:",
-      "bridgedName": "_setTabViewButtons",
-      "args": [
-        {
-          "name": "_setTabViewButtons",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_tabViewButtons": {
-      "name": "_tabViewButtons",
-      "bridgedName": "_tabViewButtons",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2063,14 +2079,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_usesSubviewsForButtons": {
-      "name": "_usesSubviewsForButtons",
-      "bridgedName": "_usesSubviewsForButtons",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_setWindow:": {
       "name": "_setWindow:",
       "bridgedName": "_setWindow",
@@ -2414,7 +2422,6 @@
       "pointer": true,
       "type": "NSArray",
       "attributes": [
-        "readonly",
         "copy"
       ]
     }

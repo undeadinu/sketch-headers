@@ -5,6 +5,7 @@
   ],
   "classes": [
     "MSWelcomeCollectionItem",
+    "MSWelcomeProgressView",
     "NSString"
   ],
   "protocol": false,
@@ -14,6 +15,40 @@
     "NSMenuDelegate"
   ],
   "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateRevealInCloudMenuItem:": {
+      "name": "validateRevealInCloudMenuItem:",
+      "bridgedName": "validateRevealInCloudMenuItem",
+      "args": [
+        {
+          "name": "validateRevealInCloudMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateRevealInFinderMenuItem:": {
+      "name": "validateRevealInFinderMenuItem:",
+      "bridgedName": "validateRevealInFinderMenuItem",
+      "args": [
+        {
+          "name": "validateRevealInFinderMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "menuNeedsUpdate:": {
       "name": "menuNeedsUpdate:",
       "bridgedName": "menuNeedsUpdate",
@@ -23,6 +58,14 @@
           "type": "id"
         }
       ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetchPreviewImage": {
+      "name": "fetchPreviewImage",
+      "bridgedName": "fetchPreviewImage",
+      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -63,6 +106,14 @@
     }
   },
   "properties": {
+    "progressView": {
+      "name": "progressView",
+      "pointer": true,
+      "type": "__weak MSWelcomeProgressView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "collectionItem": {
       "name": "collectionItem",
       "pointer": true,

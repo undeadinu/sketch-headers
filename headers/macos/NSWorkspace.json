@@ -4,6 +4,7 @@
   ],
   "classes": [
     "NSArray",
+    "NSImage",
     "NSNotificationCenter",
     "NSRunningApplication"
   ],
@@ -957,14 +958,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_defaultDocIcon": {
-      "name": "_defaultDocIcon",
-      "bridgedName": "_defaultDocIcon",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "launchApplicationAtURL:options:configuration:error:": {
       "name": "launchApplicationAtURL:options:configuration:error:",
       "bridgedName": "launchApplicationAtURL_options_configuration_error",
@@ -1497,6 +1490,14 @@
         "copy"
       ]
     },
+    "_defaultDocumentIcon": {
+      "name": "_defaultDocumentIcon",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly"
+      ]
+    },
     "notificationCenter": {
       "name": "notificationCenter",
       "pointer": true,
@@ -1515,6 +1516,14 @@
     },
     "accessibilityDisplayShouldDifferentiateWithoutColor": {
       "name": "accessibilityDisplayShouldDifferentiateWithoutColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "accessibilityDisplayShouldUseGrayscale": {
+      "name": "accessibilityDisplayShouldUseGrayscale",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

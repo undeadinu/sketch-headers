@@ -2,7 +2,9 @@
   "imports": [
     "NSColorPickingCustom.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSView"
+  ],
   "protocol": false,
   "className": "NSColorPickerWheel",
   "extends": "NSColorPicker",
@@ -107,6 +109,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithPickerMask:colorPanel:": {
       "name": "initWithPickerMask:colorPanel:",
       "bridgedName": "initWithPickerMask_colorPanel",
@@ -125,5 +135,14 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "containerView": {
+      "name": "containerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
 }

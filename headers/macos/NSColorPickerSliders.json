@@ -2,7 +2,10 @@
   "imports": [
     "NSColorPickingCustom.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSColorSpaceSliders",
+    "NSView"
+  ],
   "protocol": false,
   "className": "NSColorPickerSliders",
   "extends": "NSColorPicker",
@@ -144,14 +147,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setupProfileUI": {
-      "name": "_setupProfileUI",
-      "bridgedName": "_setupProfileUI",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "initWithPickerMask:colorPanel:": {
       "name": "initWithPickerMask:colorPanel:",
       "bridgedName": "initWithPickerMask_colorPanel",
@@ -288,7 +283,56 @@
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "cmykSliders": {
+      "name": "cmykSliders",
+      "pointer": true,
+      "type": "NSColorSpaceSliders",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "hsbSliders": {
+      "name": "hsbSliders",
+      "pointer": true,
+      "type": "NSColorSpaceSliders",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "rgbSliders": {
+      "name": "rgbSliders",
+      "pointer": true,
+      "type": "NSColorSpaceSliders",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "greySliders": {
+      "name": "greySliders",
+      "pointer": true,
+      "type": "NSColorSpaceSliders",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "slidersView": {
+      "name": "slidersView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain"
+      ]
+    }
+  }
 }

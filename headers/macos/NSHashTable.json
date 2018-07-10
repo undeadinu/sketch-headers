@@ -1,9 +1,9 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
     "NSCopying.h",
-    "NSFastEnumeration.h"
+    "NSFastEnumeration.h",
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSArray",
@@ -15,10 +15,18 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding",
+    "NSSecureCoding",
     "NSFastEnumeration"
   ],
   "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "hashTableWithOptions:": {
       "name": "hashTableWithOptions:",
       "bridgedName": "hashTableWithOptions",

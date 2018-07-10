@@ -3,7 +3,10 @@
     "NSObject.h"
   ],
   "classes": [
-    "MSSnappingAccumulator"
+    "MSMeasurementDrawing",
+    "MSSnapItem",
+    "MSSnappingAccumulator",
+    "NSNumberFormatter"
   ],
   "protocol": false,
   "className": "MSSnapperData",
@@ -39,12 +42,33 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawAccumulator:zoomScale:": {
-      "name": "drawAccumulator:zoomScale:",
-      "bridgedName": "drawAccumulator_zoomScale",
+    "drawSpacingSnap:zoomScale:coordinateSpace:": {
+      "name": "drawSpacingSnap:zoomScale:coordinateSpace:",
+      "bridgedName": "drawSpacingSnap_zoomScale_coordinateSpace",
       "args": [
         {
-          "name": "drawAccumulator",
+          "name": "drawSpacingSnap",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        },
+        {
+          "name": "coordinateSpace",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawDimensionSnap:zoomScale:": {
+      "name": "drawDimensionSnap:zoomScale:",
+      "bridgedName": "drawDimensionSnap_zoomScale",
+      "args": [
+        {
+          "name": "drawDimensionSnap",
           "type": "id"
         },
         {
@@ -56,16 +80,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawForGroup:zoom:": {
-      "name": "drawForGroup:zoom:",
-      "bridgedName": "drawForGroup_zoom",
+    "drawAccumulator:inLayer:zoomScale:": {
+      "name": "drawAccumulator:inLayer:zoomScale:",
+      "bridgedName": "drawAccumulator_inLayer_zoomScale",
+      "args": [
+        {
+          "name": "drawAccumulator",
+          "type": "id"
+        },
+        {
+          "name": "inLayer",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawForGroup:zoomScale:": {
+      "name": "drawForGroup:zoomScale:",
+      "bridgedName": "drawForGroup_zoomScale",
       "args": [
         {
           "name": "drawForGroup",
           "type": "id"
         },
         {
-          "name": "zoom",
+          "name": "zoomScale",
           "type": "double"
         }
       ],
@@ -73,12 +118,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "resetSnappingForAxis:": {
-      "name": "resetSnappingForAxis:",
-      "bridgedName": "resetSnappingForAxis",
+    "resetEdgeSnapsForAxis:": {
+      "name": "resetEdgeSnapsForAxis:",
+      "bridgedName": "resetEdgeSnapsForAxis",
       "args": [
         {
-          "name": "resetSnappingForAxis",
+          "name": "resetEdgeSnapsForAxis",
           "type": "unsigned long long"
         }
       ],
@@ -86,33 +131,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "extendGuideForAxis:toStartPosition:endPosition:": {
-      "name": "extendGuideForAxis:toStartPosition:endPosition:",
-      "bridgedName": "extendGuideForAxis_toStartPosition_endPosition",
+    "addEdgeSnap:": {
+      "name": "addEdgeSnap:",
+      "bridgedName": "addEdgeSnap",
       "args": [
         {
-          "name": "extendGuideForAxis",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "toStartPosition",
-          "type": "double"
-        },
-        {
-          "name": "endPosition",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addTarget:": {
-      "name": "addTarget:",
-      "bridgedName": "addTarget",
-      "args": [
-        {
-          "name": "addTarget",
+          "name": "addEdgeSnap",
           "type": "id"
         }
       ],
@@ -120,25 +144,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "enumerateMeasurementsUsingBlock:": {
-      "name": "enumerateMeasurementsUsingBlock:",
-      "bridgedName": "enumerateMeasurementsUsingBlock",
+    "addSpacingSnap:": {
+      "name": "addSpacingSnap:",
+      "bridgedName": "addSpacingSnap",
       "args": [
         {
-          "name": "enumerateMeasurementsUsingBlock",
-          "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addDistanceMeasurement:": {
-      "name": "addDistanceMeasurement:",
-      "bridgedName": "addDistanceMeasurement",
-      "args": [
-        {
-          "name": "addDistanceMeasurement",
+          "name": "addSpacingSnap",
           "type": "id"
         }
       ],
@@ -146,12 +157,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "firstDistanceMeasurementForAxis:": {
-      "name": "firstDistanceMeasurementForAxis:",
-      "bridgedName": "firstDistanceMeasurementForAxis",
+    "firstSpacingSnapForAxis:": {
+      "name": "firstSpacingSnapForAxis:",
+      "bridgedName": "firstSpacingSnapForAxis",
       "args": [
         {
-          "name": "firstDistanceMeasurementForAxis",
+          "name": "firstSpacingSnapForAxis",
           "type": "unsigned long long"
         }
       ],
@@ -159,12 +170,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addDimensionMeasurement:": {
-      "name": "addDimensionMeasurement:",
-      "bridgedName": "addDimensionMeasurement",
+    "addDimensionSnap:": {
+      "name": "addDimensionSnap:",
+      "bridgedName": "addDimensionSnap",
       "args": [
         {
-          "name": "addDimensionMeasurement",
+          "name": "addDimensionSnap",
           "type": "id"
         }
       ],
@@ -172,12 +183,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "firstDimensionMeasurementForAxis:": {
-      "name": "firstDimensionMeasurementForAxis:",
-      "bridgedName": "firstDimensionMeasurementForAxis",
+    "firstDimensionSnapForAxis:": {
+      "name": "firstDimensionSnapForAxis:",
+      "bridgedName": "firstDimensionSnapForAxis",
       "args": [
         {
-          "name": "firstDimensionMeasurementForAxis",
+          "name": "firstDimensionSnapForAxis",
           "type": "unsigned long long"
         }
       ],
@@ -198,16 +209,39 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
-      "args": [],
+    "initWithItem:": {
+      "name": "initWithItem:",
+      "bridgedName": "initWithItem",
+      "args": [
+        {
+          "name": "initWithItem",
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
+    "drawingHelper": {
+      "name": "drawingHelper",
+      "pointer": true,
+      "type": "MSMeasurementDrawing",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "numberFormatter": {
+      "name": "numberFormatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "yAxisAccumulator": {
       "name": "yAxisAccumulator",
       "pointer": true,
@@ -226,8 +260,17 @@
         "nonatomic"
       ]
     },
-    "measurementAxes": {
-      "name": "measurementAxes",
+    "item": {
+      "name": "item",
+      "pointer": true,
+      "type": "MSSnapItem",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dimensionAxes": {
+      "name": "dimensionAxes",
       "pointer": false,
       "type": "unsigned long long",
       "attributes": [

@@ -3,8 +3,11 @@
     "NSObject.h"
   ],
   "classes": [
-    "MSSnapLine",
-    "NSArray"
+    "MSLayer",
+    "MSLayoutAnchor",
+    "MSLayoutPosition",
+    "NSArray",
+    "NSString"
   ],
   "protocol": true,
   "className": "MSSnappable",
@@ -56,6 +59,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "alignmentRectInLayer:options:": {
+      "name": "alignmentRectInLayer:options:",
+      "bridgedName": "alignmentRectInLayer_options",
+      "args": [
+        {
+          "name": "alignmentRectInLayer",
+          "type": "MSLayer *"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "boundsRect": {
       "name": "boundsRect",
       "bridgedName": "boundsRect",
@@ -66,6 +86,15 @@
     }
   },
   "properties": {
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "snapItemForDrawing": {
       "name": "snapItemForDrawing",
       "pointer": false,
@@ -75,10 +104,46 @@
         "nonatomic"
       ]
     },
+    "midXHeightAnchor": {
+      "name": "midXHeightAnchor",
+      "pointer": true,
+      "type": "MSLayoutPosition",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "baselineAnchor": {
+      "name": "baselineAnchor",
+      "pointer": true,
+      "type": "MSLayoutPosition",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "heightAnchor": {
+      "name": "heightAnchor",
+      "pointer": true,
+      "type": "MSLayoutAnchor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "widthAnchor": {
+      "name": "widthAnchor",
+      "pointer": true,
+      "type": "MSLayoutAnchor",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "centerYAnchor": {
       "name": "centerYAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -87,7 +152,7 @@
     "centerXAnchor": {
       "name": "centerXAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -96,7 +161,7 @@
     "bottomAnchor": {
       "name": "bottomAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -105,7 +170,7 @@
     "topAnchor": {
       "name": "topAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -114,7 +179,7 @@
     "rightAnchor": {
       "name": "rightAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -123,16 +188,25 @@
     "leftAnchor": {
       "name": "leftAnchor",
       "pointer": true,
-      "type": "MSSnapLine",
+      "type": "MSLayoutPosition",
       "attributes": [
         "readonly",
         "nonatomic"
       ]
     },
-    "snapLines": {
-      "name": "snapLines",
+    "anchorsForSnapping": {
+      "name": "anchorsForSnapping",
       "pointer": true,
       "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "pointer": true,
+      "type": "MSLayer",
       "attributes": [
         "readonly",
         "nonatomic"

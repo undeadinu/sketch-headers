@@ -1,23 +1,103 @@
 {
-  "imports": [],
+  "imports": [
+    "NSAccessibilityButton.h"
+  ],
   "classes": [
     "NSColor",
+    "NSImage",
     "NSImageView",
+    "NSString",
     "NSTableViewRowAction",
     "NSTextField"
   ],
   "protocol": false,
   "className": "NSTableViewActionButton",
-  "extends": "NSButton",
-  "interfaces": [],
+  "extends": "NSControl",
+  "interfaces": [
+    "NSAccessibilityButton"
+  ],
   "methods": {
-    "cellClass": {
-      "name": "cellClass",
-      "bridgedName": "cellClass",
+    "keyPathsForValuesInvalidatingLayout": {
+      "name": "keyPathsForValuesInvalidatingLayout",
+      "bridgedName": "keyPathsForValuesInvalidatingLayout",
       "args": [],
-      "returns": "Class",
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "keyPathsForValuesInvalidatingDisplay": {
+      "name": "keyPathsForValuesInvalidatingDisplay",
+      "bridgedName": "keyPathsForValuesInvalidatingDisplay",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "accessibilityPerformPress": {
+      "name": "accessibilityPerformPress",
+      "bridgedName": "accessibilityPerformPress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityLabel": {
+      "name": "accessibilityLabel",
+      "bridgedName": "accessibilityLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRole": {
+      "name": "accessibilityRole",
+      "bridgedName": "accessibilityRole",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAccessibilityElement": {
+      "name": "isAccessibilityElement",
+      "bridgedName": "isAccessibilityElement",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTest:": {
+      "name": "hitTest:",
+      "bridgedName": "hitTest",
+      "args": [
+        {
+          "name": "hitTest",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "sizeThatFits:": {
       "name": "sizeThatFits:",
@@ -32,66 +112,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
       "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "resizeWithOldSuperviewSize:": {
-      "name": "resizeWithOldSuperviewSize:",
-      "bridgedName": "resizeWithOldSuperviewSize",
+    "layoutStateForBounds:": {
+      "name": "layoutStateForBounds:",
+      "bridgedName": "layoutStateForBounds",
       "args": [
         {
-          "name": "resizeWithOldSuperviewSize",
-          "type": "struct CGSize"
+          "name": "layoutStateForBounds",
+          "type": "struct CGRect"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setImage:": {
-      "name": "setImage:",
-      "bridgedName": "setImage",
-      "args": [
-        {
-          "name": "setImage",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "image": {
-      "name": "image",
-      "bridgedName": "image",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setTitle:": {
-      "name": "setTitle:",
-      "bridgedName": "setTitle",
-      "args": [
-        {
-          "name": "setTitle",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_layoutContents": {
-      "name": "_layoutContents",
-      "bridgedName": "_layoutContents",
-      "args": [],
-      "returns": "void",
+      "returns": "CDStruct_a26f6e08",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -108,14 +146,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "allowsVibrancy": {
-      "name": "allowsVibrancy",
-      "bridgedName": "allowsVibrancy",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "updateLayer": {
       "name": "updateLayer",
       "bridgedName": "updateLayer",
@@ -124,31 +154,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "wantsUpdateLayer": {
-      "name": "wantsUpdateLayer",
-      "bridgedName": "wantsUpdateLayer",
+    "wantsLayer": {
+      "name": "wantsLayer",
+      "bridgedName": "wantsLayer",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "layout": {
-      "name": "layout",
-      "bridgedName": "layout",
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawRect:": {
-      "name": "drawRect:",
-      "bridgedName": "drawRect",
-      "args": [
-        {
-          "name": "drawRect",
-          "type": "struct CGRect"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -176,12 +193,70 @@
         "retain"
       ]
     },
+    "highlighted": {
+      "name": "highlighted",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isHighlighted"
+      ]
+    },
     "backgroundColor": {
       "name": "backgroundColor",
       "pointer": true,
       "type": "NSColor",
       "attributes": [
-        "retain"
+        "copy"
+      ]
+    },
+    "image": {
+      "name": "image",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "title": {
+      "name": "title",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

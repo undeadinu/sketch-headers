@@ -2,7 +2,6 @@
   "imports": [
     "NSObject.h",
     "NSCoding.h",
-    "NSFunctionBarProvider.h",
     "NSTouchBarProvider.h",
     "NSTouchBarProviderContainer.h",
     "NSUIActivityProvider.h"
@@ -20,7 +19,6 @@
     "NSTouchBarProviderContainer",
     "NSUIActivityProvider",
     "NSTouchBarProvider",
-    "NSFunctionBarProvider",
     "NSCoding"
   ],
   "methods": {
@@ -4147,6 +4145,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "invalidateRequestor": {
+      "name": "invalidateRequestor",
+      "bridgedName": "invalidateRequestor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "validRequestorForSendType:returnType:": {
       "name": "validRequestorForSendType:returnType:",
       "bridgedName": "validRequestorForSendType_returnType",
@@ -4234,6 +4240,14 @@
     "NS_touchBarProviders": {
       "name": "NS_touchBarProviders",
       "bridgedName": "NS_touchBarProviders",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_eventResponderChainDescription": {
+      "name": "_eventResponderChainDescription",
+      "bridgedName": "_eventResponderChainDescription",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -4518,14 +4532,6 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "makeFunctionBar": {
-      "name": "makeFunctionBar",
-      "bridgedName": "makeFunctionBar",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -4563,14 +4569,6 @@
     },
     "touchBar": {
       "name": "touchBar",
-      "pointer": true,
-      "type": "NSTouchBar",
-      "attributes": [
-        "retain"
-      ]
-    },
-    "functionBar": {
-      "name": "functionBar",
       "pointer": true,
       "type": "NSTouchBar",
       "attributes": [

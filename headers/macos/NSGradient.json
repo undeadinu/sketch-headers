@@ -1,8 +1,8 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
-    "NSCopying.h"
+    "NSCopying.h",
+    "NSSecureCoding.h"
   ],
   "classes": [
     "NSArray",
@@ -13,9 +13,17 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding"
+    "NSSecureCoding"
   ],
   "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "initialize": {
       "name": "initialize",
       "bridgedName": "initialize",
@@ -44,6 +52,23 @@
       "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "_isValidDecodedColorArray:error:": {
+      "name": "_isValidDecodedColorArray:error:",
+      "bridgedName": "_isValidDecodedColorArray_error",
+      "args": [
+        {
+          "name": "_isValidDecodedColorArray",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "encodeWithCoder:": {
       "name": "encodeWithCoder:",

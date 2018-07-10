@@ -267,7 +267,7 @@
       "args": [
         {
           "name": "offsetsOfIntersectionsWithTangent",
-          "type": "struct MSTangent"
+          "type": "struct MSLine"
         }
       ],
       "returns": "id",
@@ -359,7 +359,7 @@
           "type": "double"
         }
       ],
-      "returns": "struct MSTangent",
+      "returns": "struct MSLine",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -369,7 +369,7 @@
       "args": [
         {
           "name": "tanget",
-          "type": "struct MSTangent *"
+          "type": "struct MSLine *"
         },
         {
           "name": "andPoint",
@@ -646,6 +646,15 @@
       "name": "transformForXAxisAlignment",
       "pointer": false,
       "type": "struct CGAffineTransform",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "lineSegment": {
+      "name": "lineSegment",
+      "pointer": false,
+      "type": "struct MSLineSegment",
       "attributes": [
         "readonly",
         "nonatomic"

@@ -10,6 +10,31 @@
   "extends": "MSDataSupplier",
   "interfaces": [],
   "methods": {
+    "identifierWithPluginIdentifier:commandIdentifier:dynamicDataKey:dataName:": {
+      "name": "identifierWithPluginIdentifier:commandIdentifier:dynamicDataKey:dataName:",
+      "bridgedName": "identifierWithPluginIdentifier_commandIdentifier_dynamicDataKey_dataName",
+      "args": [
+        {
+          "name": "identifierWithPluginIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "commandIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "dynamicDataKey",
+          "type": "id"
+        },
+        {
+          "name": "dataName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     ".cxx_destruct": {
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
@@ -60,11 +85,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "feedIdentifier": {
-      "name": "feedIdentifier",
-      "bridgedName": "feedIdentifier",
-      "args": [],
-      "returns": "id",
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -96,9 +126,30 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "registered": {
+      "name": "registered",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
     "dynamicDataKey": {
       "name": "dynamicDataKey",
       "pointer": true,
@@ -123,6 +174,14 @@
       "type": "NSString",
       "attributes": [
         "readonly",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSPluginDataSupplierDelegate>",
+      "attributes": [
         "nonatomic"
       ]
     }

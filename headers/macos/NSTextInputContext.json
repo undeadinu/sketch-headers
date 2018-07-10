@@ -4,7 +4,11 @@
   ],
   "classes": [
     "NSArray",
-    "NSString"
+    "NSBridgedTextCorrectionController",
+    "NSBridgedTextSubstitutionController",
+    "NSBridgedTextTouchBarController",
+    "NSString",
+    "TITextInputTraits"
   ],
   "protocol": false,
   "className": "NSTextInputContext",
@@ -34,6 +38,19 @@
         }
       ],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversForKey:": {
+      "name": "automaticallyNotifiesObserversForKey:",
+      "bridgedName": "automaticallyNotifiesObserversForKey",
+      "args": [
+        {
+          "name": "automaticallyNotifiesObserversForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -139,19 +156,6 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "automaticallyNotifiesObserversForKey:": {
-      "name": "automaticallyNotifiesObserversForKey:",
-      "bridgedName": "automaticallyNotifiesObserversForKey",
-      "args": [
-        {
-          "name": "automaticallyNotifiesObserversForKey",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
     "keyPathsForValuesAffectingKeyboardInputSourceOverlayVisible": {
       "name": "keyPathsForValuesAffectingKeyboardInputSourceOverlayVisible",
       "bridgedName": "keyPathsForValuesAffectingKeyboardInputSourceOverlayVisible",
@@ -188,6 +192,23 @@
         {
           "name": "cycleToNextInputScript",
           "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector:completionHandlerWithResult:": {
+      "name": "doCommandBySelector:completionHandlerWithResult:",
+      "bridgedName": "doCommandBySelector_completionHandlerWithResult",
+      "args": [
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        },
+        {
+          "name": "completionHandlerWithResult",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "void",
@@ -818,6 +839,39 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "tryHandleTSMEvent_attributedString_attributedSubstringForProposedRange_withContext:dispatchCondition:dispatchWork:dispatchFurtherCondition:dispatchFurtherWork:continuation:": {
+      "name": "tryHandleTSMEvent_attributedString_attributedSubstringForProposedRange_withContext:dispatchCondition:dispatchWork:dispatchFurtherCondition:dispatchFurtherWork:continuation:",
+      "bridgedName": "tryHandleTSMEvent_attributedString_attributedSubstringForProposedRange_withContext_dispatchCondition_dispatchWork_dispatchFurtherCondition_dispatchFurtherWork_continuation",
+      "args": [
+        {
+          "name": "tryHandleTSMEvent_attributedString_attributedSubstringForProposedRange_withContext",
+          "type": "struct HandleTSMEventCompletionContext *"
+        },
+        {
+          "name": "dispatchCondition",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "dispatchWork",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "dispatchFurtherCondition",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "dispatchFurtherWork",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "continuation",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "tryHandleTSMEvent_attributedSubstringForProposedRange_withContext:dispatchCondition:dispatchWork:continuation:": {
       "name": "tryHandleTSMEvent_attributedSubstringForProposedRange_withContext:dispatchCondition:dispatchWork:continuation:",
       "bridgedName": "tryHandleTSMEvent_attributedSubstringForProposedRange_withContext_dispatchCondition_dispatchWork_continuation",
@@ -1192,6 +1246,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_isIOSMacClient": {
+      "name": "_isIOSMacClient",
+      "bridgedName": "_isIOSMacClient",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_isAsyncTextInputClient": {
       "name": "_isAsyncTextInputClient",
       "bridgedName": "_isAsyncTextInputClient",
@@ -1507,6 +1569,546 @@
         {
           "name": "completionHandler",
           "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelectorWithResult:": {
+      "name": "doCommandBySelectorWithResult:",
+      "bridgedName": "doCommandBySelectorWithResult",
+      "args": [
+        {
+          "name": "doCommandBySelectorWithResult",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToHalfWidth:": {
+      "name": "convertToHalfWidth:",
+      "bridgedName": "convertToHalfWidth",
+      "args": [
+        {
+          "name": "convertToHalfWidth",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToFullWidth:": {
+      "name": "convertToFullWidth:",
+      "bridgedName": "convertToFullWidth",
+      "args": [
+        {
+          "name": "convertToFullWidth",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToTraditionalChinese:": {
+      "name": "convertToTraditionalChinese:",
+      "bridgedName": "convertToTraditionalChinese",
+      "args": [
+        {
+          "name": "convertToTraditionalChinese",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToSimplifiedChinese:": {
+      "name": "convertToSimplifiedChinese:",
+      "bridgedName": "convertToSimplifiedChinese",
+      "args": [
+        {
+          "name": "convertToSimplifiedChinese",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "capitalizeWord:": {
+      "name": "capitalizeWord:",
+      "bridgedName": "capitalizeWord",
+      "args": [
+        {
+          "name": "capitalizeWord",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lowercaseWord:": {
+      "name": "lowercaseWord:",
+      "bridgedName": "lowercaseWord",
+      "args": [
+        {
+          "name": "lowercaseWord",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uppercaseWord:": {
+      "name": "uppercaseWord:",
+      "bridgedName": "uppercaseWord",
+      "args": [
+        {
+          "name": "uppercaseWord",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceTextInSelection:": {
+      "name": "replaceTextInSelection:",
+      "bridgedName": "replaceTextInSelection",
+      "args": [
+        {
+          "name": "replaceTextInSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addLinksInSelection:": {
+      "name": "addLinksInSelection:",
+      "bridgedName": "addLinksInSelection",
+      "args": [
+        {
+          "name": "addLinksInSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceDashesInSelection:": {
+      "name": "replaceDashesInSelection:",
+      "bridgedName": "replaceDashesInSelection",
+      "args": [
+        {
+          "name": "replaceDashesInSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceQuotesInSelection:": {
+      "name": "replaceQuotesInSelection:",
+      "bridgedName": "replaceQuotesInSelection",
+      "args": [
+        {
+          "name": "replaceQuotesInSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleAutomaticTextReplacement:": {
+      "name": "toggleAutomaticTextReplacement:",
+      "bridgedName": "toggleAutomaticTextReplacement",
+      "args": [
+        {
+          "name": "toggleAutomaticTextReplacement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleAutomaticDashSubstitution:": {
+      "name": "toggleAutomaticDashSubstitution:",
+      "bridgedName": "toggleAutomaticDashSubstitution",
+      "args": [
+        {
+          "name": "toggleAutomaticDashSubstitution",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleAutomaticLinkDetection:": {
+      "name": "toggleAutomaticLinkDetection:",
+      "bridgedName": "toggleAutomaticLinkDetection",
+      "args": [
+        {
+          "name": "toggleAutomaticLinkDetection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleAutomaticQuoteSubstitution:": {
+      "name": "toggleAutomaticQuoteSubstitution:",
+      "bridgedName": "toggleAutomaticQuoteSubstitution",
+      "args": [
+        {
+          "name": "toggleAutomaticQuoteSubstitution",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "orderFrontSubstitutionsPanel:": {
+      "name": "orderFrontSubstitutionsPanel:",
+      "bridgedName": "orderFrontSubstitutionsPanel",
+      "args": [
+        {
+          "name": "orderFrontSubstitutionsPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ignoreSpelling:": {
+      "name": "ignoreSpelling:",
+      "bridgedName": "ignoreSpelling",
+      "args": [
+        {
+          "name": "ignoreSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeSpelling:": {
+      "name": "changeSpelling:",
+      "bridgedName": "changeSpelling",
+      "args": [
+        {
+          "name": "changeSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleAutomaticSpellingCorrection:": {
+      "name": "toggleAutomaticSpellingCorrection:",
+      "bridgedName": "toggleAutomaticSpellingCorrection",
+      "args": [
+        {
+          "name": "toggleAutomaticSpellingCorrection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleGrammarChecking:": {
+      "name": "toggleGrammarChecking:",
+      "bridgedName": "toggleGrammarChecking",
+      "args": [
+        {
+          "name": "toggleGrammarChecking",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "toggleContinuousSpellChecking:": {
+      "name": "toggleContinuousSpellChecking:",
+      "bridgedName": "toggleContinuousSpellChecking",
+      "args": [
+        {
+          "name": "toggleContinuousSpellChecking",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "checkSpelling:": {
+      "name": "checkSpelling:",
+      "bridgedName": "checkSpelling",
+      "args": [
+        {
+          "name": "checkSpelling",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showGuessPanel:": {
+      "name": "showGuessPanel:",
+      "bridgedName": "showGuessPanel",
+      "args": [
+        {
+          "name": "showGuessPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareContextMenu:": {
+      "name": "prepareContextMenu:",
+      "bridgedName": "prepareContextMenu",
+      "args": [
+        {
+          "name": "prepareContextMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawsVerticallyForCharacterAtIndex_RTI:": {
+      "name": "drawsVerticallyForCharacterAtIndex_RTI:",
+      "bridgedName": "drawsVerticallyForCharacterAtIndex_RTI",
+      "args": [
+        {
+          "name": "drawsVerticallyForCharacterAtIndex_RTI",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "baselineDeltaForCharacterAtIndex_RTI:": {
+      "name": "baselineDeltaForCharacterAtIndex_RTI:",
+      "bridgedName": "baselineDeltaForCharacterAtIndex_RTI",
+      "args": [
+        {
+          "name": "baselineDeltaForCharacterAtIndex_RTI",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fractionOfDistanceThroughGlyphForPoint_RTI:": {
+      "name": "fractionOfDistanceThroughGlyphForPoint_RTI:",
+      "bridgedName": "fractionOfDistanceThroughGlyphForPoint_RTI",
+      "args": [
+        {
+          "name": "fractionOfDistanceThroughGlyphForPoint_RTI",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attributedString_RTI": {
+      "name": "attributedString_RTI",
+      "bridgedName": "attributedString_RTI",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "characterIndexForPoint_RTI:": {
+      "name": "characterIndexForPoint_RTI:",
+      "bridgedName": "characterIndexForPoint_RTI",
+      "args": [
+        {
+          "name": "characterIndexForPoint_RTI",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstRectForCharacterRange_RTI:actualRange:": {
+      "name": "firstRectForCharacterRange_RTI:actualRange:",
+      "bridgedName": "firstRectForCharacterRange_RTI_actualRange",
+      "args": [
+        {
+          "name": "firstRectForCharacterRange_RTI",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "actualRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validAttributesForMarkedText_RTI": {
+      "name": "validAttributesForMarkedText_RTI",
+      "bridgedName": "validAttributesForMarkedText_RTI",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attributedSubstringForProposedRange_RTI:actualRange:": {
+      "name": "attributedSubstringForProposedRange_RTI:actualRange:",
+      "bridgedName": "attributedSubstringForProposedRange_RTI_actualRange",
+      "args": [
+        {
+          "name": "attributedSubstringForProposedRange_RTI",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "actualRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasMarkedText_RTI": {
+      "name": "hasMarkedText_RTI",
+      "bridgedName": "hasMarkedText_RTI",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "markedRange_RTI": {
+      "name": "markedRange_RTI",
+      "bridgedName": "markedRange_RTI",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedRange_RTI": {
+      "name": "selectedRange_RTI",
+      "bridgedName": "selectedRange_RTI",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unmarkText_RTI": {
+      "name": "unmarkText_RTI",
+      "bridgedName": "unmarkText_RTI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setMarkedText_RTI:selectedRange:replacementRange:": {
+      "name": "setMarkedText_RTI:selectedRange:replacementRange:",
+      "bridgedName": "setMarkedText_RTI_selectedRange_replacementRange",
+      "args": [
+        {
+          "name": "setMarkedText_RTI",
+          "type": "id"
+        },
+        {
+          "name": "selectedRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "replacementRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector_RTI:resultHandler:": {
+      "name": "doCommandBySelector_RTI:resultHandler:",
+      "bridgedName": "doCommandBySelector_RTI_resultHandler",
+      "args": [
+        {
+          "name": "doCommandBySelector_RTI",
+          "type": "SEL"
+        },
+        {
+          "name": "resultHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doCommandBySelector_RTI:": {
+      "name": "doCommandBySelector_RTI:",
+      "bridgedName": "doCommandBySelector_RTI",
+      "args": [
+        {
+          "name": "doCommandBySelector_RTI",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertText_RTI:replacementRange:": {
+      "name": "insertText_RTI:replacementRange:",
+      "bridgedName": "insertText_RTI_replacementRange",
+      "args": [
+        {
+          "name": "insertText_RTI",
+          "type": "id"
+        },
+        {
+          "name": "replacementRange",
+          "type": "struct _NSRange"
         }
       ],
       "returns": "void",
@@ -1945,6 +2547,38 @@
         "readonly"
       ]
     },
+    "bridgedTextSubstitutionController": {
+      "name": "bridgedTextSubstitutionController",
+      "pointer": true,
+      "type": "NSBridgedTextSubstitutionController",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "bridgedTextCorrectionController": {
+      "name": "bridgedTextCorrectionController",
+      "pointer": true,
+      "type": "NSBridgedTextCorrectionController",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "bridgedTextTouchBarController": {
+      "name": "bridgedTextTouchBarController",
+      "pointer": true,
+      "type": "NSBridgedTextTouchBarController",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "tiTextInputTraits": {
+      "name": "tiTextInputTraits",
+      "pointer": true,
+      "type": "TITextInputTraits",
+      "attributes": [
+        "retain"
+      ]
+    },
     "selectedKeyboardInputSource": {
       "name": "selectedKeyboardInputSource",
       "pointer": true,
@@ -1967,6 +2601,15 @@
       "type": "NSArray",
       "attributes": [
         "copy"
+      ]
+    },
+    "rtiSelectedTextRange": {
+      "name": "rtiSelectedTextRange",
+      "pointer": false,
+      "type": "struct _NSRange",
+      "attributes": [
+        "nonatomic",
+        "setter=setRTISelectedTextRange:"
       ]
     },
     "hasActiveTextInputFunctionRowItem": {

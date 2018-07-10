@@ -3,6 +3,7 @@
     "MSLayerTraits.h"
   ],
   "classes": [
+    "MSImmutableDocumentData",
     "MSImmutableLayoutGrid",
     "MSImmutableRulerData",
     "MSImmutableSimpleGrid"
@@ -10,7 +11,21 @@
   "protocol": true,
   "className": "MSImmutableRootLayer",
   "interfaces": [],
-  "methods": {},
+  "methods": {
+    "contentBoundsForDocument:": {
+      "name": "contentBoundsForDocument:",
+      "bridgedName": "contentBoundsForDocument",
+      "args": [
+        {
+          "name": "contentBoundsForDocument",
+          "type": "MSImmutableDocumentData *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
   "properties": {
     "verticalRulerData": {
       "name": "verticalRulerData",
@@ -49,15 +64,6 @@
       "attributes": [
         "readonly",
         "copy",
-        "nonatomic"
-      ]
-    },
-    "contentBounds": {
-      "name": "contentBounds",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "readonly",
         "nonatomic"
       ]
     }

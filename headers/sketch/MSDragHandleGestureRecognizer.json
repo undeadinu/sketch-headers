@@ -3,7 +3,7 @@
     "MSDragToMoveOrCopyGestureRecognizer.h"
   ],
   "classes": [
-    "NSAffineTransform"
+    "MSAlignmentEngineConstraint"
   ],
   "protocol": false,
   "className": "MSDragHandleGestureRecognizer",
@@ -18,36 +18,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "locationInLayer:": {
-      "name": "locationInLayer:",
-      "bridgedName": "locationInLayer",
-      "args": [
-        {
-          "name": "locationInLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setCenterForCurveAdjustmentLocking:slope:": {
-      "name": "setCenterForCurveAdjustmentLocking:slope:",
-      "bridgedName": "setCenterForCurveAdjustmentLocking_slope",
-      "args": [
-        {
-          "name": "setCenterForCurveAdjustmentLocking",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "slope",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "reset": {
       "name": "reset",
       "bridgedName": "reset",
@@ -55,13 +25,30 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithTarget:action:": {
+      "name": "initWithTarget:action:",
+      "bridgedName": "initWithTarget_action",
+      "args": [
+        {
+          "name": "initWithTarget",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
-    "curveAdjustmentLockingTransform": {
-      "name": "curveAdjustmentLockingTransform",
+    "lockingConstraint": {
+      "name": "lockingConstraint",
       "pointer": true,
-      "type": "NSAffineTransform",
+      "type": "MSAlignmentEngineConstraint",
       "attributes": [
         "copy",
         "nonatomic"
@@ -75,10 +62,10 @@
         "nonatomic"
       ]
     },
-    "shouldSteadyCurveAdjustmentHandle": {
-      "name": "shouldSteadyCurveAdjustmentHandle",
-      "pointer": false,
-      "type": "BOOL",
+    "effectiveLockingConstraint": {
+      "name": "effectiveLockingConstraint",
+      "pointer": true,
+      "type": "MSAlignmentEngineConstraint",
       "attributes": [
         "readonly",
         "nonatomic"

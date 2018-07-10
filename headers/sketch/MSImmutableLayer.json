@@ -10,7 +10,7 @@
     "MSImmutableStyle",
     "MSPath",
     "NSAffineTransform",
-    "NSArray",
+    "NSObject",
     "NSSet",
     "NSString"
   ],
@@ -53,27 +53,19 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "canSkipAdvancedClipForStrokes": {
       "name": "canSkipAdvancedClipForStrokes",
       "bridgedName": "canSkipAdvancedClipForStrokes",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayInfluenceRectForBounds": {
-      "name": "overlayInfluenceRectForBounds",
-      "bridgedName": "overlayInfluenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "calculateInfluenceRectForBounds": {
-      "name": "calculateInfluenceRectForBounds",
-      "bridgedName": "calculateInfluenceRectForBounds",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -88,6 +80,19 @@
         {
           "name": "visitedSymbols",
           "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "influenceRectForBoundsOrCalculateInBlock:": {
+      "name": "influenceRectForBoundsOrCalculateInBlock:",
+      "bridgedName": "influenceRectForBoundsOrCalculateInBlock",
+      "args": [
+        {
+          "name": "influenceRectForBoundsOrCalculateInBlock",
+          "type": "CDUnknownBlockType"
         }
       ],
       "returns": "struct CGRect",
@@ -493,14 +498,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "includeInManifest": {
-      "name": "includeInManifest",
-      "bridgedName": "includeInManifest",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "lastLayer": {
       "name": "lastLayer",
       "bridgedName": "lastLayer",
@@ -696,23 +693,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "containsFlowWithSymbolsFromDocument:visited:": {
-      "name": "containsFlowWithSymbolsFromDocument:visited:",
-      "bridgedName": "containsFlowWithSymbolsFromDocument_visited",
-      "args": [
-        {
-          "name": "containsFlowWithSymbolsFromDocument",
-          "type": "id"
-        },
-        {
-          "name": "visited",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "containsFlowWithSymbolsFromDocument:": {
       "name": "containsFlowWithSymbolsFromDocument:",
       "bridgedName": "containsFlowWithSymbolsFromDocument",
@@ -723,6 +703,36 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstFlowWithSymbolsFromDocument:visited:": {
+      "name": "firstFlowWithSymbolsFromDocument:visited:",
+      "bridgedName": "firstFlowWithSymbolsFromDocument_visited",
+      "args": [
+        {
+          "name": "firstFlowWithSymbolsFromDocument",
+          "type": "id"
+        },
+        {
+          "name": "visited",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstFlowWithSymbolsFromDocument:": {
+      "name": "firstFlowWithSymbolsFromDocument:",
+      "bridgedName": "firstFlowWithSymbolsFromDocument",
+      "args": [
+        {
+          "name": "firstFlowWithSymbolsFromDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1139,15 +1149,6 @@
         "nonatomic"
       ]
     },
-    "influenceRectForFrame": {
-      "name": "influenceRectForFrame",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "frameForTransforms": {
       "name": "frameForTransforms",
       "pointer": false,
@@ -1179,6 +1180,15 @@
       "name": "usedStyle",
       "pointer": true,
       "type": "MSImmutableStyle",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathForBooleanOperations": {
+      "name": "pathForBooleanOperations",
+      "pointer": true,
+      "type": "MSPath",
       "attributes": [
         "readonly",
         "nonatomic"
@@ -1260,15 +1270,6 @@
       "name": "isLayerExportable",
       "pointer": false,
       "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
-    "manifestLayers": {
-      "name": "manifestLayers",
-      "pointer": true,
-      "type": "NSArray",
       "attributes": [
         "readonly",
         "nonatomic"

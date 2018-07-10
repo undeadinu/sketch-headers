@@ -4,6 +4,8 @@
     "NSAccessibilityElement.h",
     "NSAnimatablePropertyContainer.h",
     "NSAppearanceCustomization.h",
+    "NSAppearanceCustomizationInternal.h",
+    "NSMenuItemValidation.h",
     "NSTouchBarProviderContainer.h",
     "NSUserInterfaceItemIdentification.h",
     "NSUserInterfaceValidations.h"
@@ -18,9 +20,9 @@
     "NSColorSpace",
     "NSDictionary",
     "NSDockTile",
-    "NSGraphicsContext",
     "NSImage",
     "NSMutableSet",
+    "NSObject<NSAppearanceCustomization>",
     "NSScreen",
     "NSString",
     "NSTabBarItem",
@@ -41,7 +43,9 @@
   "extends": "NSResponder",
   "interfaces": [
     "NSTouchBarProviderContainer",
+    "NSAppearanceCustomizationInternal",
     "NSAnimatablePropertyContainer",
+    "NSMenuItemValidation",
     "NSUserInterfaceValidations",
     "NSUserInterfaceItemIdentification",
     "NSAppearanceCustomization",
@@ -67,6 +71,30 @@
         }
       ],
       "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingEffectiveAppearance": {
+      "name": "keyPathsForValuesAffectingEffectiveAppearance",
+      "bridgedName": "keyPathsForValuesAffectingEffectiveAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingAppearance": {
+      "name": "keyPathsForValuesAffectingAppearance",
+      "bridgedName": "keyPathsForValuesAffectingAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfAppearance": {
+      "name": "automaticallyNotifiesObserversOfAppearance",
+      "bridgedName": "automaticallyNotifiesObserversOfAppearance",
+      "args": [],
+      "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -314,6 +342,14 @@
           "type": "id"
         }
       ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOf_borderView": {
+      "name": "automaticallyNotifiesObserversOf_borderView",
+      "bridgedName": "automaticallyNotifiesObserversOf_borderView",
+      "args": [],
       "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
@@ -770,6 +806,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_allowsRootLayerBacking": {
+      "name": "_allowsRootLayerBacking",
+      "bridgedName": "_allowsRootLayerBacking",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "setTitlebarAlphaValue:": {
       "name": "setTitlebarAlphaValue:",
       "bridgedName": "setTitlebarAlphaValue",
@@ -1048,24 +1092,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setHasCustomAppearanceInASubview:": {
-      "name": "_setHasCustomAppearanceInASubview:",
-      "bridgedName": "_setHasCustomAppearanceInASubview",
+    "setAppearanceParent:": {
+      "name": "setAppearanceParent:",
+      "bridgedName": "setAppearanceParent",
       "args": [
         {
-          "name": "_setHasCustomAppearanceInASubview",
-          "type": "BOOL"
+          "name": "setAppearanceParent",
+          "type": "id"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_hasCustomAppearanceInASubview": {
-      "name": "_hasCustomAppearanceInASubview",
-      "bridgedName": "_hasCustomAppearanceInASubview",
+    "appearanceParent": {
+      "name": "appearanceParent",
+      "bridgedName": "appearanceParent",
       "args": [],
-      "returns": "BOOL",
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowDidChangeAppearance": {
+      "name": "_windowDidChangeAppearance",
+      "bridgedName": "_windowDidChangeAppearance",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1402,79 +1454,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_hasOrderedInViewBackingSurfaces": {
-      "name": "_hasOrderedInViewBackingSurfaces",
-      "bridgedName": "_hasOrderedInViewBackingSurfaces",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setViewBackingSurfaceNeedsDisplay:": {
-      "name": "_setViewBackingSurfaceNeedsDisplay:",
-      "bridgedName": "_setViewBackingSurfaceNeedsDisplay",
-      "args": [
-        {
-          "name": "_setViewBackingSurfaceNeedsDisplay",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_surfaceRemovedFromWindow:": {
-      "name": "_surfaceRemovedFromWindow:",
-      "bridgedName": "_surfaceRemovedFromWindow",
-      "args": [
-        {
-          "name": "_surfaceRemovedFromWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_surfaceOrderedInWindow:": {
-      "name": "_surfaceOrderedInWindow:",
-      "bridgedName": "_surfaceOrderedInWindow",
-      "args": [
-        {
-          "name": "_surfaceOrderedInWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_surfaceMovedInWindow:": {
-      "name": "_surfaceMovedInWindow:",
-      "bridgedName": "_surfaceMovedInWindow",
-      "args": [
-        {
-          "name": "_surfaceMovedInWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_surfaceAddedToWindow:": {
-      "name": "_surfaceAddedToWindow:",
-      "bridgedName": "_surfaceAddedToWindow",
-      "args": [
-        {
-          "name": "_surfaceAddedToWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "canRepresentDisplayGamut:": {
       "name": "canRepresentDisplayGamut:",
       "bridgedName": "canRepresentDisplayGamut",
@@ -1555,6 +1534,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_windowValidForDrawing": {
+      "name": "_windowValidForDrawing",
+      "bridgedName": "_windowValidForDrawing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_setAnyViewCanDrawConcurrently:": {
       "name": "_setAnyViewCanDrawConcurrently:",
       "bridgedName": "_setAnyViewCanDrawConcurrently",
@@ -1573,6 +1560,35 @@
       "bridgedName": "_anyViewCanDrawConcurrently",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "backingLocation": {
+      "name": "backingLocation",
+      "bridgedName": "backingLocation",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "preferredBackingLocation": {
+      "name": "preferredBackingLocation",
+      "bridgedName": "preferredBackingLocation",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPreferredBackingLocation:": {
+      "name": "setPreferredBackingLocation:",
+      "bridgedName": "setPreferredBackingLocation",
+      "args": [
+        {
+          "name": "setPreferredBackingLocation",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1734,10 +1750,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_reorderChildren": {
-      "name": "_reorderChildren",
-      "bridgedName": "_reorderChildren",
-      "args": [],
+    "_rebuildOrderingGroup:": {
+      "name": "_rebuildOrderingGroup:",
+      "bridgedName": "_rebuildOrderingGroup",
+      "args": [
+        {
+          "name": "_rebuildOrderingGroup",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1756,14 +1777,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_attachToParentBeforeOrderingWindow": {
-      "name": "_attachToParentBeforeOrderingWindow",
-      "bridgedName": "_attachToParentBeforeOrderingWindow",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1821,19 +1834,6 @@
         {
           "name": "_didAddChildWindow",
           "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setRelativeOrdering:": {
-      "name": "_setRelativeOrdering:",
-      "bridgedName": "_setRelativeOrdering",
-      "args": [
-        {
-          "name": "_setRelativeOrdering",
-          "type": "long long"
         }
       ],
       "returns": "void",
@@ -1975,6 +1975,22 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_endFauxModalSession": {
+      "name": "_endFauxModalSession",
+      "bridgedName": "_endFauxModalSession",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginFauxModalSession": {
+      "name": "_beginFauxModalSession",
+      "bridgedName": "_beginFauxModalSession",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_endWindowBlockingModalSessionForShownService:": {
       "name": "_endWindowBlockingModalSessionForShownService:",
       "bridgedName": "_endWindowBlockingModalSessionForShownService",
@@ -1998,6 +2014,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showingModalSheet": {
+      "name": "_showingModalSheet",
+      "bridgedName": "_showingModalSheet",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2144,6 +2168,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "showsResizeIndicator": {
+      "name": "showsResizeIndicator",
+      "bridgedName": "showsResizeIndicator",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setShowsResizeIndicator:": {
+      "name": "setShowsResizeIndicator:",
+      "bridgedName": "setShowsResizeIndicator",
+      "args": [
+        {
+          "name": "setShowsResizeIndicator",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_effectiveAlphaValue": {
       "name": "_effectiveAlphaValue",
       "bridgedName": "_effectiveAlphaValue",
@@ -2194,6 +2239,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "graphicsContext": {
+      "name": "graphicsContext",
+      "bridgedName": "graphicsContext",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_windowDeviceRoundWithContext:": {
       "name": "_windowDeviceRoundWithContext:",
       "bridgedName": "_windowDeviceRoundWithContext",
@@ -2228,19 +2281,6 @@
       "bridgedName": "_threadContext",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_blockHeartBeat:": {
-      "name": "_blockHeartBeat:",
-      "bridgedName": "_blockHeartBeat",
-      "args": [
-        {
-          "name": "_blockHeartBeat",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2313,6 +2353,14 @@
           "type": "id"
         }
       ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_runningDocModalOrFauxModal": {
+      "name": "_runningDocModalOrFauxModal",
+      "bridgedName": "_runningDocModalOrFauxModal",
+      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -3138,14 +3186,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateStructuralRegionsOnNextDisplayCycle": {
-      "name": "_updateStructuralRegionsOnNextDisplayCycle",
-      "bridgedName": "_updateStructuralRegionsOnNextDisplayCycle",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_endLiveResize": {
       "name": "_endLiveResize",
       "bridgedName": "_endLiveResize",
@@ -3297,7 +3337,7 @@
           "type": "unsigned long long"
         }
       ],
-      "returns": "void",
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3380,6 +3420,27 @@
       "bridgedName": "_isOnActiveScreen",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOneShot": {
+      "name": "isOneShot",
+      "bridgedName": "isOneShot",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOneShot:": {
+      "name": "setOneShot:",
+      "bridgedName": "setOneShot",
+      "args": [
+        {
+          "name": "setOneShot",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -3562,6 +3623,32 @@
       "bridgedName": "_nsib_usesPointIntegralizationForLayout",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertPointFromBacking:": {
+      "name": "convertPointFromBacking:",
+      "bridgedName": "convertPointFromBacking",
+      "args": [
+        {
+          "name": "convertPointFromBacking",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertPointToBacking:": {
+      "name": "convertPointToBacking:",
+      "bridgedName": "convertPointToBacking",
+      "args": [
+        {
+          "name": "convertPointToBacking",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -4001,11 +4088,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_sublevelNeedsUpdating": {
-      "name": "_sublevelNeedsUpdating",
-      "bridgedName": "_sublevelNeedsUpdating",
+    "_unlockSublevel": {
+      "name": "_unlockSublevel",
+      "bridgedName": "_unlockSublevel",
       "args": [],
-      "returns": "BOOL",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lockToAbsoluteSubLevel:": {
+      "name": "_lockToAbsoluteSubLevel:",
+      "bridgedName": "_lockToAbsoluteSubLevel",
+      "args": [
+        {
+          "name": "_lockToAbsoluteSubLevel",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -4073,51 +4173,6 @@
           "type": "long long"
         }
       ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateSubLevel": {
-      "name": "_updateSubLevel",
-      "bridgedName": "_updateSubLevel",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_effectiveSubLevel": {
-      "name": "_effectiveSubLevel",
-      "bridgedName": "_effectiveSubLevel",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setSubLevel:": {
-      "name": "_setSubLevel:",
-      "bridgedName": "_setSubLevel",
-      "args": [
-        {
-          "name": "_setSubLevel",
-          "type": "long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resetSublevelOnChildWindowAddition": {
-      "name": "_resetSublevelOnChildWindowAddition",
-      "bridgedName": "_resetSublevelOnChildWindowAddition",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_subLevel": {
-      "name": "_subLevel",
-      "bridgedName": "_subLevel",
-      "args": [],
       "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
@@ -5085,14 +5140,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_fontSmoothingBackgroundColor": {
-      "name": "_fontSmoothingBackgroundColor",
-      "bridgedName": "_fontSmoothingBackgroundColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_hasBackgroundColor": {
       "name": "_hasBackgroundColor",
       "bridgedName": "_hasBackgroundColor",
@@ -5117,33 +5164,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_generateMetalBackground": {
-      "name": "_generateMetalBackground",
-      "bridgedName": "_generateMetalBackground",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateMetalBackgroundStyle": {
-      "name": "_updateMetalBackgroundStyle",
-      "bridgedName": "_updateMetalBackgroundStyle",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_resizeMetalBackground": {
-      "name": "_resizeMetalBackground",
-      "bridgedName": "_resizeMetalBackground",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_metalStyle": {
-      "name": "_metalStyle",
-      "bridgedName": "_metalStyle",
+    "_themeBackgroundStyle": {
+      "name": "_themeBackgroundStyle",
+      "bridgedName": "_themeBackgroundStyle",
       "args": [],
       "returns": "unsigned long long",
       "kind": "instance",
@@ -5347,9 +5370,42 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_miniturizeFromFullScreen": {
+      "name": "_miniturizeFromFullScreen",
+      "bridgedName": "_miniturizeFromFullScreen",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_canMiniaturize": {
       "name": "_canMiniaturize",
       "bridgedName": "_canMiniaturize",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canMiniaturizeCheckingMask:forButtonEnabledState:": {
+      "name": "_canMiniaturizeCheckingMask:forButtonEnabledState:",
+      "bridgedName": "_canMiniaturizeCheckingMask_forButtonEnabledState",
+      "args": [
+        {
+          "name": "_canMiniaturizeCheckingMask",
+          "type": "BOOL"
+        },
+        {
+          "name": "forButtonEnabledState",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasSiblingSpaceWhenFullScreenPrefersModal": {
+      "name": "_hasSiblingSpaceWhenFullScreenPrefersModal",
+      "bridgedName": "_hasSiblingSpaceWhenFullScreenPrefersModal",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -5899,6 +5955,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_isResigningKeyFocusOnly": {
+      "name": "_isResigningKeyFocusOnly",
+      "bridgedName": "_isResigningKeyFocusOnly",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_resignKeyFocus": {
       "name": "_resignKeyFocus",
       "bridgedName": "_resignKeyFocus",
@@ -6002,14 +6066,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_resizesFromEdges": {
-      "name": "_resizesFromEdges",
-      "bridgedName": "_resizesFromEdges",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_updateWindowDockFeedbackAtRectEdges:": {
       "name": "_updateWindowDockFeedbackAtRectEdges:",
       "bridgedName": "_updateWindowDockFeedbackAtRectEdges",
@@ -6050,22 +6106,6 @@
     "_makeSnappingInfo": {
       "name": "_makeSnappingInfo",
       "bridgedName": "_makeSnappingInfo",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_showSnappingTargets": {
-      "name": "_showSnappingTargets",
-      "bridgedName": "_showSnappingTargets",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_hideSnappingTargets": {
-      "name": "_hideSnappingTargets",
-      "bridgedName": "_hideSnappingTargets",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -6807,19 +6847,6 @@
         }
       ],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_showDynamicDragFeedbackForValue:": {
-      "name": "_showDynamicDragFeedbackForValue:",
-      "bridgedName": "_showDynamicDragFeedbackForValue",
-      "args": [
-        {
-          "name": "_showDynamicDragFeedbackForValue",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8014,6 +8041,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "isAutodisplay": {
+      "name": "isAutodisplay",
+      "bridgedName": "isAutodisplay",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAutodisplay:": {
+      "name": "setAutodisplay:",
+      "bridgedName": "setAutodisplay",
+      "args": [
+        {
+          "name": "setAutodisplay",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "display": {
       "name": "display",
       "bridgedName": "display",
@@ -8051,19 +8099,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setNeedsDisplay:": {
-      "name": "_setNeedsDisplay:",
-      "bridgedName": "_setNeedsDisplay",
-      "args": [
-        {
-          "name": "_setNeedsDisplay",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_postingDisabled": {
       "name": "_postingDisabled",
       "bridgedName": "_postingDisabled",
@@ -8091,51 +8126,6 @@
     "_resetPostingCounts": {
       "name": "_resetPostingCounts",
       "bridgedName": "_resetPostingCounts",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_postWindowNeedsDisplayUnlessPostingDisabled": {
-      "name": "_postWindowNeedsDisplayUnlessPostingDisabled",
-      "bridgedName": "_postWindowNeedsDisplayUnlessPostingDisabled",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_postWindowNeedsLayoutUnlessPostingDisabled": {
-      "name": "_postWindowNeedsLayoutUnlessPostingDisabled",
-      "bridgedName": "_postWindowNeedsLayoutUnlessPostingDisabled",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled": {
-      "name": "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled",
-      "bridgedName": "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_delayedWindowDisplay:": {
-      "name": "_delayedWindowDisplay:",
-      "bridgedName": "_delayedWindowDisplay",
-      "args": [
-        {
-          "name": "_delayedWindowDisplay",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_postWindowNeedsDisplayOrLayoutOrUpdateConstraintsUnlessPostingDisabled": {
-      "name": "_postWindowNeedsDisplayOrLayoutOrUpdateConstraintsUnlessPostingDisabled",
-      "bridgedName": "_postWindowNeedsDisplayOrLayoutOrUpdateConstraintsUnlessPostingDisabled",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -8213,36 +8203,10 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setShadowAnimationProgress:": {
-      "name": "_setShadowAnimationProgress:",
-      "bridgedName": "_setShadowAnimationProgress",
-      "args": [
-        {
-          "name": "_setShadowAnimationProgress",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "shadowParameters": {
       "name": "shadowParameters",
       "bridgedName": "shadowParameters",
       "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shadowParametersForActiveAppearance:": {
-      "name": "_shadowParametersForActiveAppearance:",
-      "bridgedName": "_shadowParametersForActiveAppearance",
-      "args": [
-        {
-          "name": "_shadowParametersForActiveAppearance",
-          "type": "BOOL"
-        }
-      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -8300,9 +8264,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_hasAtLeastOneDirtyBackdropView": {
-      "name": "_hasAtLeastOneDirtyBackdropView",
-      "bridgedName": "_hasAtLeastOneDirtyBackdropView",
+    "_hasAtLeastOneBackdropView": {
+      "name": "_hasAtLeastOneBackdropView",
+      "bridgedName": "_hasAtLeastOneBackdropView",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -8360,6 +8324,14 @@
       "bridgedName": "_registeredBackdropViews",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlushWindowDisabled": {
+      "name": "isFlushWindowDisabled",
+      "bridgedName": "isFlushWindowDisabled",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -8823,22 +8795,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateGrowBoxOwner": {
-      "name": "_updateGrowBoxOwner",
-      "bridgedName": "_updateGrowBoxOwner",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_findNewGrowBoxOwner": {
-      "name": "_findNewGrowBoxOwner",
-      "bridgedName": "_findNewGrowBoxOwner",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_oldPlaceWindow:": {
       "name": "_oldPlaceWindow:",
       "bridgedName": "_oldPlaceWindow",
@@ -8846,6 +8802,31 @@
         {
           "name": "_oldPlaceWindow",
           "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
         }
       ],
       "returns": "void",
@@ -8924,6 +8905,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titlebarBackdropGroupName": {
+      "name": "_titlebarBackdropGroupName",
+      "bridgedName": "_titlebarBackdropGroupName",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -9031,14 +9020,6 @@
     "_canAddUnderTitlebarViews": {
       "name": "_canAddUnderTitlebarViews",
       "bridgedName": "_canAddUnderTitlebarViews",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_useMetalPattern": {
-      "name": "_useMetalPattern",
-      "bridgedName": "_useMetalPattern",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -9314,14 +9295,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shadowRimInfo": {
-      "name": "_shadowRimInfo",
-      "bridgedName": "_shadowRimInfo",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_hasCornerMask": {
       "name": "_hasCornerMask",
       "bridgedName": "_hasCornerMask",
@@ -9569,19 +9542,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_viewFreeing:": {
-      "name": "_viewFreeing:",
-      "bridgedName": "_viewFreeing",
-      "args": [
-        {
-          "name": "_viewFreeing",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_viewDetaching:": {
       "name": "_viewDetaching:",
       "bridgedName": "_viewDetaching",
@@ -9601,6 +9561,19 @@
       "args": [
         {
           "name": "_lighterViewDetaching",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewAttaching:": {
+      "name": "_viewAttaching:",
+      "bridgedName": "_viewAttaching",
+      "args": [
+        {
+          "name": "_viewAttaching",
           "type": "id"
         }
       ],
@@ -10354,14 +10327,6 @@
           "type": "BOOL"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_tabbedAppearanceChanged": {
-      "name": "_tabbedAppearanceChanged",
-      "bridgedName": "_tabbedAppearanceChanged",
-      "args": [],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -11663,22 +11628,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_installCursorObserver": {
-      "name": "_installCursorObserver",
-      "bridgedName": "_installCursorObserver",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_invalidateCursorObserver": {
-      "name": "_invalidateCursorObserver",
-      "bridgedName": "_invalidateCursorObserver",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_updateCursorRectsDueToResigningKey": {
       "name": "_updateCursorRectsDueToResigningKey",
       "bridgedName": "_updateCursorRectsDueToResigningKey",
@@ -11918,14 +11867,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_runLoopModesForInvalidCursorRectsObserver": {
-      "name": "_runLoopModesForInvalidCursorRectsObserver",
-      "bridgedName": "_runLoopModesForInvalidCursorRectsObserver",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "discardCursorRects": {
       "name": "discardCursorRects",
       "bridgedName": "discardCursorRects",
@@ -12026,103 +11967,6 @@
       "bridgedName": "openDrawers",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "removeAllDrawersImmediately": {
-      "name": "removeAllDrawersImmediately",
-      "bridgedName": "removeAllDrawersImmediately",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawerIsOpen": {
-      "name": "_drawerIsOpen",
-      "bridgedName": "_drawerIsOpen",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shutDrawer": {
-      "name": "_shutDrawer",
-      "bridgedName": "_shutDrawer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shutAllDrawers:": {
-      "name": "shutAllDrawers:",
-      "bridgedName": "shutAllDrawers",
-      "args": [
-        {
-          "name": "shutAllDrawers",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_openDrawerOnEdge:": {
-      "name": "_openDrawerOnEdge:",
-      "bridgedName": "_openDrawerOnEdge",
-      "args": [
-        {
-          "name": "_openDrawerOnEdge",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_openDrawer": {
-      "name": "_openDrawer",
-      "bridgedName": "_openDrawer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "openFirstDrawer:": {
-      "name": "openFirstDrawer:",
-      "bridgedName": "openFirstDrawer",
-      "args": [
-        {
-          "name": "openFirstDrawer",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_addDrawerWithView:": {
-      "name": "_addDrawerWithView:",
-      "bridgedName": "_addDrawerWithView",
-      "args": [
-        {
-          "name": "_addDrawerWithView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "addDrawerWithView:": {
-      "name": "addDrawerWithView:",
-      "bridgedName": "addDrawerWithView",
-      "args": [
-        {
-          "name": "addDrawerWithView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -12359,6 +12203,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_eventFirstResponderChainDescription": {
+      "name": "_eventFirstResponderChainDescription",
+      "bridgedName": "_eventFirstResponderChainDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_setLastDragRegion:": {
       "name": "_setLastDragRegion:",
       "bridgedName": "_setLastDragRegion",
@@ -12524,23 +12376,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_positionSheetConstrained:andDisplay:": {
-      "name": "_positionSheetConstrained:andDisplay:",
-      "bridgedName": "_positionSheetConstrained_andDisplay",
-      "args": [
-        {
-          "name": "_positionSheetConstrained",
-          "type": "BOOL"
-        },
-        {
-          "name": "andDisplay",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_positionSheet:constrained:andDisplay:": {
       "name": "_positionSheet:constrained:andDisplay:",
       "bridgedName": "_positionSheet_constrained_andDisplay",
@@ -12556,6 +12391,31 @@
         {
           "name": "andDisplay",
           "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustFrame:constrained:forSheet:positioningFrame:": {
+      "name": "_adjustFrame:constrained:forSheet:positioningFrame:",
+      "bridgedName": "_adjustFrame_constrained_forSheet_positioningFrame",
+      "args": [
+        {
+          "name": "_adjustFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "constrained",
+          "type": "BOOL"
+        },
+        {
+          "name": "forSheet",
+          "type": "id"
+        },
+        {
+          "name": "positioningFrame",
+          "type": "struct CGRect *"
         }
       ],
       "returns": "struct CGRect",
@@ -12676,27 +12536,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_positionSheetRect:onRect:andDisplay:": {
-      "name": "_positionSheetRect:onRect:andDisplay:",
-      "bridgedName": "_positionSheetRect_onRect_andDisplay",
-      "args": [
-        {
-          "name": "_positionSheetRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "onRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "andDisplay",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_setSheetParent:": {
       "name": "_setSheetParent:",
       "bridgedName": "_setSheetParent",
@@ -12770,6 +12609,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_attachedSheetsConsideringDetachedToolbar": {
+      "name": "_attachedSheetsConsideringDetachedToolbar",
+      "bridgedName": "_attachedSheetsConsideringDetachedToolbar",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -12869,6 +12716,38 @@
       "bridgedName": "_responderDebugDescription",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateStructuralRegionsOnNextDisplayCycle": {
+      "name": "_updateStructuralRegionsOnNextDisplayCycle",
+      "bridgedName": "_updateStructuralRegionsOnNextDisplayCycle",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postWindowNeedsDisplayUnlessPostingDisabled": {
+      "name": "_postWindowNeedsDisplayUnlessPostingDisabled",
+      "bridgedName": "_postWindowNeedsDisplayUnlessPostingDisabled",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postWindowNeedsLayoutUnlessPostingDisabled": {
+      "name": "_postWindowNeedsLayoutUnlessPostingDisabled",
+      "bridgedName": "_postWindowNeedsLayoutUnlessPostingDisabled",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled": {
+      "name": "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled",
+      "bridgedName": "_postWindowNeedsUpdateConstraintsUnlessPostingDisabled",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -13278,6 +13157,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_defaultButtonSuppressed": {
+      "name": "_defaultButtonSuppressed",
+      "bridgedName": "_defaultButtonSuppressed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDefaultButtonSuppressed:": {
+      "name": "_setDefaultButtonSuppressed:",
+      "bridgedName": "_setDefaultButtonSuppressed",
+      "args": [
+        {
+          "name": "_setDefaultButtonSuppressed",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_createWindowsMenuEntryWithTitle:enabled:": {
       "name": "_createWindowsMenuEntryWithTitle:enabled:",
       "bridgedName": "_createWindowsMenuEntryWithTitle_enabled",
@@ -13337,6 +13237,14 @@
       "bridgedName": "showDeminiaturizedWindow",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enterFullScreenIfNeededAfterMiniturized": {
+      "name": "_enterFullScreenIfNeededAfterMiniturized",
+      "bridgedName": "_enterFullScreenIfNeededAfterMiniturized",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -13407,32 +13315,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_removeHeartBeartClientView:": {
-      "name": "_removeHeartBeartClientView:",
-      "bridgedName": "_removeHeartBeartClientView",
-      "args": [
-        {
-          "name": "_removeHeartBeartClientView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_addHeartBeatClientView:": {
-      "name": "_addHeartBeatClientView:",
-      "bridgedName": "_addHeartBeatClientView",
-      "args": [
-        {
-          "name": "_addHeartBeatClientView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "heartBeat:": {
       "name": "heartBeat:",
       "bridgedName": "heartBeat",
@@ -13451,6 +13333,19 @@
       "bridgedName": "_wantsHeartBeat",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addHeartBeatClientView:": {
+      "name": "_addHeartBeatClientView:",
+      "bridgedName": "_addHeartBeatClientView",
+      "args": [
+        {
+          "name": "_addHeartBeatClientView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -13686,6 +13581,59 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_titlebarButtonsPreventingActivationRegion": {
+      "name": "_titlebarButtonsPreventingActivationRegion",
+      "bridgedName": "_titlebarButtonsPreventingActivationRegion",
+      "args": [],
+      "returns": "struct CGSRegionObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titlebarCommandModifierExclusionRegion": {
+      "name": "_titlebarCommandModifierExclusionRegion",
+      "bridgedName": "_titlebarCommandModifierExclusionRegion",
+      "args": [],
+      "returns": "struct CGSRegionObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_titlebarActivationRegion": {
+      "name": "_titlebarActivationRegion",
+      "bridgedName": "_titlebarActivationRegion",
+      "args": [],
+      "returns": "struct CGSRegionObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_regionForOpaqueViewsBlockingDraggableFrame:": {
+      "name": "_regionForOpaqueViewsBlockingDraggableFrame:",
+      "bridgedName": "_regionForOpaqueViewsBlockingDraggableFrame",
+      "args": [
+        {
+          "name": "_regionForOpaqueViewsBlockingDraggableFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGSRegionObject *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetDragMargins": {
+      "name": "_resetDragMargins",
+      "bridgedName": "_resetDragMargins",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggableFrame": {
+      "name": "_draggableFrame",
+      "bridgedName": "_draggableFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_transparency": {
       "name": "_transparency",
       "bridgedName": "_transparency",
@@ -13720,77 +13668,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_showOpaqueGrowBox": {
-      "name": "_showOpaqueGrowBox",
-      "bridgedName": "_showOpaqueGrowBox",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_growBoxOwner": {
-      "name": "_growBoxOwner",
-      "bridgedName": "_growBoxOwner",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setShowOpaqueGrowBox:": {
-      "name": "_setShowOpaqueGrowBox:",
-      "bridgedName": "_setShowOpaqueGrowBox",
-      "args": [
-        {
-          "name": "_setShowOpaqueGrowBox",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setShowOpaqueGrowBoxForOwner:": {
-      "name": "_setShowOpaqueGrowBoxForOwner:",
-      "bridgedName": "_setShowOpaqueGrowBoxForOwner",
-      "args": [
-        {
-          "name": "_setShowOpaqueGrowBoxForOwner",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setGrowBoxView:": {
-      "name": "_setGrowBoxView:",
-      "bridgedName": "_setGrowBoxView",
-      "args": [
-        {
-          "name": "_setGrowBoxView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_growBoxView": {
-      "name": "_growBoxView",
-      "bridgedName": "_growBoxView",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_scrollerExclusionRect": {
-      "name": "_scrollerExclusionRect",
-      "bridgedName": "_scrollerExclusionRect",
-      "args": [],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -13845,6 +13722,14 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixIgnoredKeyMainAppearancesIfNeeded": {
+      "name": "_fixIgnoredKeyMainAppearancesIfNeeded",
+      "bridgedName": "_fixIgnoredKeyMainAppearancesIfNeeded",
+      "args": [],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -14125,19 +14010,6 @@
         {
           "name": "_shadowOffsetForActiveAppearance",
           "type": "BOOL"
-        }
-      ],
-      "returns": "struct CGSize",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shadowOffsetForOptions:": {
-      "name": "_shadowOffsetForOptions:",
-      "bridgedName": "_shadowOffsetForOptions",
-      "args": [
-        {
-          "name": "_shadowOffsetForOptions",
-          "type": "unsigned long long"
         }
       ],
       "returns": "struct CGSize",
@@ -15315,22 +15187,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "accessibilityGrowAreaAttribute": {
-      "name": "accessibilityGrowAreaAttribute",
-      "bridgedName": "accessibilityGrowAreaAttribute",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_accessibilityGrowBoxRect": {
-      "name": "_accessibilityGrowBoxRect",
-      "bridgedName": "_accessibilityGrowBoxRect",
-      "args": [],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "accessibilityIsTitleUIElementAttributeSettable": {
       "name": "accessibilityIsTitleUIElementAttributeSettable",
       "bridgedName": "accessibilityIsTitleUIElementAttributeSettable",
@@ -16134,6 +15990,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registeredDraggedTypes": {
+      "name": "registeredDraggedTypes",
+      "bridgedName": "registeredDraggedTypes",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -17370,7 +17234,7 @@
         },
         {
           "name": "state",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "struct CGRect",
@@ -17391,7 +17255,7 @@
         },
         {
           "name": "state",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "struct CGRect",
@@ -17412,7 +17276,7 @@
         },
         {
           "name": "state",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "struct CGRect",
@@ -17433,7 +17297,7 @@
         },
         {
           "name": "state",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "BOOL",
@@ -17496,7 +17360,7 @@
         },
         {
           "name": "state",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "struct CGRect",
@@ -17554,7 +17418,7 @@
         },
         {
           "name": "withState",
-          "type": "CDStruct_a42fe1e7 *"
+          "type": "CDStruct_222f2799 *"
         }
       ],
       "returns": "struct CGRect",
@@ -17574,14 +17438,6 @@
       "bridgedName": "_resizingShouldSnapToWindows",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_createSnappingInfo": {
-      "name": "_createSnappingInfo",
-      "bridgedName": "_createSnappingInfo",
-      "args": [],
-      "returns": "struct CGSnappingInfo *",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -17687,19 +17543,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_windowResizeMouseLocationIsInVisibleScrollerThumb:": {
-      "name": "_windowResizeMouseLocationIsInVisibleScrollerThumb:",
-      "bridgedName": "_windowResizeMouseLocationIsInVisibleScrollerThumb",
-      "args": [
-        {
-          "name": "_windowResizeMouseLocationIsInVisibleScrollerThumb",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -17921,6 +17764,19 @@
         {
           "name": "_setViewsNeedUpdateLayoutDependentMetrics",
           "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "constraintsDidChangeInEngine:": {
+      "name": "constraintsDidChangeInEngine:",
+      "bridgedName": "constraintsDidChangeInEngine",
+      "args": [
+        {
+          "name": "constraintsDidChangeInEngine",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -18410,14 +18266,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_appearanceBearingParent": {
-      "name": "_appearanceBearingParent",
-      "bridgedName": "_appearanceBearingParent",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_tileSpaceID": {
       "name": "_tileSpaceID",
       "bridgedName": "_tileSpaceID",
@@ -18829,14 +18677,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_attachesToolbarToMenuBarInFullScreen": {
-      "name": "_attachesToolbarToMenuBarInFullScreen",
-      "bridgedName": "_attachesToolbarToMenuBarInFullScreen",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_positionsToolbarInExternalWindow": {
       "name": "_positionsToolbarInExternalWindow",
       "bridgedName": "_positionsToolbarInExternalWindow",
@@ -18993,33 +18833,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shouldAutoIncSubLevel": {
-      "name": "_shouldAutoIncSubLevel",
-      "bridgedName": "_shouldAutoIncSubLevel",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_isInFullScreenSpace": {
       "name": "_isInFullScreenSpace",
       "bridgedName": "_isInFullScreenSpace",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldAutoDecSubLevel": {
-      "name": "_shouldAutoDecSubLevel",
-      "bridgedName": "_shouldAutoDecSubLevel",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_shouldIncChildWindowSubLevel": {
-      "name": "_shouldIncChildWindowSubLevel",
-      "bridgedName": "_shouldIncChildWindowSubLevel",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -19358,14 +19174,6 @@
         "retain"
       ]
     },
-    "backingLocation": {
-      "name": "backingLocation",
-      "pointer": false,
-      "type": "unsigned long long",
-      "attributes": [
-        "readonly"
-      ]
-    },
     "animations": {
       "name": "animations",
       "pointer": true,
@@ -19433,14 +19241,6 @@
         "getter=isOpaque"
       ]
     },
-    "graphicsContext": {
-      "name": "graphicsContext",
-      "pointer": true,
-      "type": "NSGraphicsContext",
-      "attributes": [
-        "readonly"
-      ]
-    },
     "screen": {
       "name": "screen",
       "pointer": true,
@@ -19499,14 +19299,6 @@
       "attributes": [
         "readonly",
         "getter=isOnActiveSpace"
-      ]
-    },
-    "oneShot": {
-      "name": "oneShot",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "getter=isOneShot"
       ]
     },
     "worksWhenModal": {
@@ -19688,23 +19480,6 @@
       "type": "__weak NSResponder",
       "attributes": [
         "readonly"
-      ]
-    },
-    "autodisplay": {
-      "name": "autodisplay",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "getter=isAutodisplay"
-      ]
-    },
-    "flushWindowDisabled": {
-      "name": "flushWindowDisabled",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "readonly",
-        "getter=isFlushWindowDisabled"
       ]
     },
     "frame": {
@@ -19954,6 +19729,14 @@
       "name": "hasCloseBox",
       "pointer": false,
       "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "_effectiveAppearanceParent": {
+      "name": "_effectiveAppearanceParent",
+      "pointer": false,
+      "type": "id <NSAppearanceCustomization>",
       "attributes": [
         "readonly"
       ]

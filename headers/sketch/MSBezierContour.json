@@ -11,6 +11,27 @@
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
+    "contourWithPolygonAtPoint:radius:sides:": {
+      "name": "contourWithPolygonAtPoint:radius:sides:",
+      "bridgedName": "contourWithPolygonAtPoint_radius_sides",
+      "args": [
+        {
+          "name": "contourWithPolygonAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "radius",
+          "type": "double"
+        },
+        {
+          "name": "sides",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "contourWithRect:": {
       "name": "contourWithRect:",
       "bridgedName": "contourWithRect",
@@ -36,6 +57,19 @@
       "name": "debugQuickLookObject",
       "bridgedName": "debugQuickLookObject",
       "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intersectionsWithSegment:": {
+      "name": "intersectionsWithSegment:",
+      "bridgedName": "intersectionsWithSegment",
+      "args": [
+        {
+          "name": "intersectionsWithSegment",
+          "type": "id"
+        }
+      ],
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
@@ -227,9 +261,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "closedContour": {
+      "name": "closedContour",
+      "bridgedName": "closedContour",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "reversedContour": {
       "name": "reversedContour",
       "bridgedName": "reversedContour",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createPath": {
+      "name": "createPath",
+      "bridgedName": "createPath",
       "args": [],
       "returns": "id",
       "kind": "instance",

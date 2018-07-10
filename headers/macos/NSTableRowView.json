@@ -174,14 +174,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_selectionNeedsRedrawingOnFrameChange": {
-      "name": "_selectionNeedsRedrawingOnFrameChange",
-      "bridgedName": "_selectionNeedsRedrawingOnFrameChange",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "preservesContentDuringLiveResize": {
       "name": "preservesContentDuringLiveResize",
       "bridgedName": "preservesContentDuringLiveResize",
@@ -622,22 +614,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_springLoadedBlendColor": {
-      "name": "_springLoadedBlendColor",
-      "bridgedName": "_springLoadedBlendColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_canDisableBaseVibrancy": {
-      "name": "_canDisableBaseVibrancy",
-      "bridgedName": "_canDisableBaseVibrancy",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_removeSelectedBackgroundView": {
       "name": "_removeSelectedBackgroundView",
       "bridgedName": "_removeSelectedBackgroundView",
@@ -678,9 +654,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_makeBlurBackgroundView": {
-      "name": "_makeBlurBackgroundView",
-      "bridgedName": "_makeBlurBackgroundView",
+    "_makeSelectionBlurBackgroundView": {
+      "name": "_makeSelectionBlurBackgroundView",
+      "bridgedName": "_makeSelectionBlurBackgroundView",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -696,6 +672,75 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_groupBackgroundView": {
+      "name": "_groupBackgroundView",
+      "bridgedName": "_groupBackgroundView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setGroupBackgroundView:": {
+      "name": "_setGroupBackgroundView:",
+      "bridgedName": "_setGroupBackgroundView",
+      "args": [
+        {
+          "name": "_setGroupBackgroundView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeGroupBackgroundView": {
+      "name": "_removeGroupBackgroundView",
+      "bridgedName": "_removeGroupBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeGroupBackgroundView": {
+      "name": "_makeGroupBackgroundView",
+      "bridgedName": "_makeGroupBackgroundView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needsGroupBackground": {
+      "name": "_needsGroupBackground",
+      "bridgedName": "_needsGroupBackground",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateGroupBackgroundView": {
+      "name": "_updateGroupBackgroundView",
+      "bridgedName": "_updateGroupBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawsGroupRowBackground": {
+      "name": "_drawsGroupRowBackground",
+      "bridgedName": "_drawsGroupRowBackground",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dividerPosition": {
+      "name": "_dividerPosition",
+      "bridgedName": "_dividerPosition",
+      "args": [],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -860,9 +905,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_needsBlurBackgroundView": {
-      "name": "_needsBlurBackgroundView",
-      "bridgedName": "_needsBlurBackgroundView",
+    "_needsSelectionBlurBackgroundView": {
+      "name": "_needsSelectionBlurBackgroundView",
+      "bridgedName": "_needsSelectionBlurBackgroundView",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
@@ -882,45 +927,6 @@
       "args": [
         {
           "name": "_drawSourceListBackgroundInnerEdgeInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawGroupRowStyleGrayInverseInRect:": {
-      "name": "drawGroupRowStyleGrayInverseInRect:",
-      "bridgedName": "drawGroupRowStyleGrayInverseInRect",
-      "args": [
-        {
-          "name": "drawGroupRowStyleGrayInverseInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawGroupRowStyleGrayInRect:": {
-      "name": "drawGroupRowStyleGrayInRect:",
-      "bridgedName": "drawGroupRowStyleGrayInRect",
-      "args": [
-        {
-          "name": "drawGroupRowStyleGrayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "drawGroupRowStyleFinderInRect:": {
-      "name": "drawGroupRowStyleFinderInRect:",
-      "bridgedName": "drawGroupRowStyleFinderInRect",
-      "args": [
-        {
-          "name": "drawGroupRowStyleFinderInRect",
           "type": "struct CGRect"
         }
       ],
@@ -1167,11 +1173,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_containingBackdropView": {
-      "name": "_containingBackdropView",
-      "bridgedName": "_containingBackdropView",
+    "_vibrantBlendingStyleForSubtree": {
+      "name": "_vibrantBlendingStyleForSubtree",
+      "bridgedName": "_vibrantBlendingStyleForSubtree",
       "args": [],
-      "returns": "id",
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1185,48 +1191,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateLightHighlightAttributesForView:": {
-      "name": "_updateLightHighlightAttributesForView:",
-      "bridgedName": "_updateLightHighlightAttributesForView",
-      "args": [
-        {
-          "name": "_updateLightHighlightAttributesForView",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_updateLightHighlightColorForSelectedTextField:": {
-      "name": "_updateLightHighlightColorForSelectedTextField:",
-      "bridgedName": "_updateLightHighlightColorForSelectedTextField",
-      "args": [
-        {
-          "name": "_updateLightHighlightColorForSelectedTextField",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_nonFirstResponderTextColor": {
-      "name": "_nonFirstResponderTextColor",
-      "bridgedName": "_nonFirstResponderTextColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "selectedTextColor": {
-      "name": "selectedTextColor",
-      "bridgedName": "selectedTextColor",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1345,23 +1309,18 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_hasSourceListBackground": {
-      "name": "_hasSourceListBackground",
-      "bridgedName": "_hasSourceListBackground",
+    "_hasContentBackgroundColor": {
+      "name": "_hasContentBackgroundColor",
+      "bridgedName": "_hasContentBackgroundColor",
       "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_isSourceListBackgroundColor:": {
-      "name": "_isSourceListBackgroundColor:",
-      "bridgedName": "_isSourceListBackgroundColor",
-      "args": [
-        {
-          "name": "_isSourceListBackgroundColor",
-          "type": "id"
-        }
-      ],
+    "_hasSourceListBackground": {
+      "name": "_hasSourceListBackground",
+      "bridgedName": "_hasSourceListBackground",
+      "args": [],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
@@ -1591,14 +1550,6 @@
       "name": "editActionButtons",
       "pointer": true,
       "type": "NSArray",
-      "attributes": [
-        "retain"
-      ]
-    },
-    "grayView": {
-      "name": "grayView",
-      "pointer": true,
-      "type": "NSView",
       "attributes": [
         "retain"
       ]

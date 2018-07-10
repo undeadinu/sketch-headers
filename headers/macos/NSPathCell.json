@@ -1,5 +1,6 @@
 {
   "imports": [
+    "NSMenuItemValidation.h",
     "NSOpenSavePanelDelegate.h"
   ],
   "classes": [
@@ -17,6 +18,7 @@
   "className": "NSPathCell",
   "extends": "NSActionCell",
   "interfaces": [
+    "NSMenuItemValidation",
     "NSOpenSavePanelDelegate"
   ],
   "methods": {
@@ -96,6 +98,14 @@
         }
       ],
       "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needRedrawOnWindowChangedKeyState": {
+      "name": "_needRedrawOnWindowChangedKeyState",
+      "bridgedName": "_needRedrawOnWindowChangedKeyState",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -931,22 +941,6 @@
     "_titleAttributes": {
       "name": "_titleAttributes",
       "bridgedName": "_titleAttributes",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_inActiveBackgroundColor": {
-      "name": "_inActiveBackgroundColor",
-      "bridgedName": "_inActiveBackgroundColor",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_activeBackgroundColor": {
-      "name": "_activeBackgroundColor",
-      "bridgedName": "_activeBackgroundColor",
       "args": [],
       "returns": "id",
       "kind": "instance",

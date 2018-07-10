@@ -1,24 +1,30 @@
 {
   "imports": [],
   "classes": [
-    "NSBundle"
+    "NSBundle",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSBuiltinAppearance",
   "extends": "NSAppearance",
   "interfaces": [],
   "methods": {
-    "_bundleResourceName": {
-      "name": "_bundleResourceName",
-      "bridgedName": "_bundleResourceName",
-      "args": [],
-      "returns": "id",
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_appearanceForSourceListTableView": {
-      "name": "_appearanceForSourceListTableView",
-      "bridgedName": "_appearanceForSourceListTableView",
+    "_bundleResourceName": {
+      "name": "_bundleResourceName",
+      "bridgedName": "_bundleResourceName",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -40,12 +46,24 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithBundleResourceName:": {
-      "name": "initWithBundleResourceName:",
-      "bridgedName": "initWithBundleResourceName",
+    "name": {
+      "name": "name",
+      "bridgedName": "name",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithBundleResourceName:publicName:": {
+      "name": "initWithBundleResourceName:publicName:",
+      "bridgedName": "initWithBundleResourceName_publicName",
       "args": [
         {
           "name": "initWithBundleResourceName",
+          "type": "id"
+        },
+        {
+          "name": "publicName",
           "type": "id"
         }
       ],

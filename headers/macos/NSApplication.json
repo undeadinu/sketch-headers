@@ -2,10 +2,14 @@
   "imports": [
     "NSAccessibility.h",
     "NSAccessibilityElement.h",
+    "NSAppearanceCustomization.h",
+    "NSAppearanceCustomizationInternal.h",
+    "NSMenuItemValidation.h",
     "NSTouchBarProviderContainer.h",
     "NSUserInterfaceValidations.h"
   ],
   "classes": [
+    "NSAppearance",
     "NSArray",
     "NSDockTile",
     "NSEvent",
@@ -20,8 +24,11 @@
   "className": "NSApplication",
   "extends": "NSResponder",
   "interfaces": [
+    "NSAppearanceCustomization",
     "NSTouchBarProviderContainer",
+    "NSAppearanceCustomizationInternal",
     "NSUserInterfaceValidations",
+    "NSMenuItemValidation",
     "NSAccessibilityElement",
     "NSAccessibility"
   ],
@@ -92,6 +99,22 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "_preventDockConnections": {
+      "name": "_preventDockConnections",
+      "bridgedName": "_preventDockConnections",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_accessibilityInitialize": {
+      "name": "_accessibilityInitialize",
+      "bridgedName": "_accessibilityInitialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_userLoggedOut": {
       "name": "_userLoggedOut",
       "bridgedName": "_userLoggedOut",
@@ -119,14 +142,6 @@
     "_initializeRegisteredDefaults": {
       "name": "_initializeRegisteredDefaults",
       "bridgedName": "_initializeRegisteredDefaults",
-      "args": [],
-      "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "_initializeArchiverMappings": {
-      "name": "_initializeArchiverMappings",
-      "bridgedName": "_initializeArchiverMappings",
       "args": [],
       "returns": "void",
       "kind": "class",
@@ -181,6 +196,23 @@
       "args": [
         {
           "name": "_fileURLsWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_logicalURLsForRawURLs:event:": {
+      "name": "_logicalURLsForRawURLs:event:",
+      "bridgedName": "_logicalURLsForRawURLs_event",
+      "args": [
+        {
+          "name": "_logicalURLsForRawURLs",
+          "type": "id"
+        },
+        {
+          "name": "event",
           "type": "id"
         }
       ],
@@ -1197,27 +1229,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setAllowAutomaticTerminationInsteadOfTermination:": {
-      "name": "_setAllowAutomaticTerminationInsteadOfTermination:",
-      "bridgedName": "_setAllowAutomaticTerminationInsteadOfTermination",
-      "args": [
-        {
-          "name": "_setAllowAutomaticTerminationInsteadOfTermination",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_allowAutomaticTerminationInsteadOfTermination": {
-      "name": "_allowAutomaticTerminationInsteadOfTermination",
-      "bridgedName": "_allowAutomaticTerminationInsteadOfTermination",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "updateWindows": {
       "name": "updateWindows",
       "bridgedName": "updateWindows",
@@ -1281,6 +1292,14 @@
       "bridgedName": "_dockRestarted",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_iconImageIfSet": {
+      "name": "_iconImageIfSet",
+      "bridgedName": "_iconImageIfSet",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -2873,14 +2892,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_keyWindowForHeartBeat": {
-      "name": "_keyWindowForHeartBeat",
-      "bridgedName": "_keyWindowForHeartBeat",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_setPreviousKeyWindow:": {
       "name": "_setPreviousKeyWindow:",
       "bridgedName": "_setPreviousKeyWindow",
@@ -2950,19 +2961,6 @@
       "args": [
         {
           "name": "windowWithWindowNumber",
-          "type": "long long"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_windowWithRealWindowNumber:": {
-      "name": "_windowWithRealWindowNumber:",
-      "bridgedName": "_windowWithRealWindowNumber",
-      "args": [
-        {
-          "name": "_windowWithRealWindowNumber",
           "type": "long long"
         }
       ],
@@ -3365,27 +3363,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_axContrastChanged:": {
-      "name": "_axContrastChanged:",
-      "bridgedName": "_axContrastChanged",
-      "args": [
-        {
-          "name": "_axContrastChanged",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_aquaColorVariantChanged": {
-      "name": "_aquaColorVariantChanged",
-      "bridgedName": "_aquaColorVariantChanged",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -3398,27 +3375,6 @@
       "name": "_initializeAutomaticTermination",
       "bridgedName": "_initializeAutomaticTermination",
       "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_sleepInAutomaticTermination": {
-      "name": "_sleepInAutomaticTermination",
-      "bridgedName": "_sleepInAutomaticTermination",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_awakenIfSleepingInAutoQuitAndContinueTermination:": {
-      "name": "_awakenIfSleepingInAutoQuitAndContinueTermination:",
-      "bridgedName": "_awakenIfSleepingInAutoQuitAndContinueTermination",
-      "args": [
-        {
-          "name": "_awakenIfSleepingInAutoQuitAndContinueTermination",
-          "type": "BOOL"
-        }
-      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -3592,6 +3548,35 @@
     "_cleanUpForCarbonAppTermination": {
       "name": "_cleanUpForCarbonAppTermination",
       "bridgedName": "_cleanUpForCarbonAppTermination",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_emitApplicationLaunchExtendedSignpostsAppIsOptedIn:": {
+      "name": "_emitApplicationLaunchExtendedSignpostsAppIsOptedIn:",
+      "bridgedName": "_emitApplicationLaunchExtendedSignpostsAppIsOptedIn",
+      "args": [
+        {
+          "name": "_emitApplicationLaunchExtendedSignpostsAppIsOptedIn",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "markAppLaunchComplete": {
+      "name": "markAppLaunchComplete",
+      "bridgedName": "markAppLaunchComplete",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_emitApplicationLaunchSignpost": {
+      "name": "_emitApplicationLaunchSignpost",
+      "bridgedName": "_emitApplicationLaunchSignpost",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -3869,6 +3854,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "registerForRemoteNotifications": {
+      "name": "registerForRemoteNotifications",
+      "bridgedName": "registerForRemoteNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "registerForRemoteNotificationTypes:": {
       "name": "registerForRemoteNotificationTypes:",
       "bridgedName": "registerForRemoteNotificationTypes",
@@ -3882,16 +3875,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "userNotificationCenter:didFailToRegisterForRemoteNotificationsWithError:": {
-      "name": "userNotificationCenter:didFailToRegisterForRemoteNotificationsWithError:",
-      "bridgedName": "userNotificationCenter_didFailToRegisterForRemoteNotificationsWithError",
+    "pushRegistrationDidReceiveRemotePush:": {
+      "name": "pushRegistrationDidReceiveRemotePush:",
+      "bridgedName": "pushRegistrationDidReceiveRemotePush",
       "args": [
         {
-          "name": "userNotificationCenter",
-          "type": "id"
-        },
-        {
-          "name": "didFailToRegisterForRemoteNotificationsWithError",
+          "name": "pushRegistrationDidReceiveRemotePush",
           "type": "id"
         }
       ],
@@ -3899,16 +3888,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "userNotificationCenter:didRegisterForRemoteNotificationsWithDeviceToken:": {
-      "name": "userNotificationCenter:didRegisterForRemoteNotificationsWithDeviceToken:",
-      "bridgedName": "userNotificationCenter_didRegisterForRemoteNotificationsWithDeviceToken",
+    "pushRegistrationDidFailToRegister:": {
+      "name": "pushRegistrationDidFailToRegister:",
+      "bridgedName": "pushRegistrationDidFailToRegister",
       "args": [
         {
-          "name": "userNotificationCenter",
-          "type": "id"
-        },
-        {
-          "name": "didRegisterForRemoteNotificationsWithDeviceToken",
+          "name": "pushRegistrationDidFailToRegister",
           "type": "id"
         }
       ],
@@ -3916,16 +3901,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "userNotificationCenter:didDeliverNotification:": {
-      "name": "userNotificationCenter:didDeliverNotification:",
-      "bridgedName": "userNotificationCenter_didDeliverNotification",
+    "pushRegistrationDidRegisterWithDeviceToken:": {
+      "name": "pushRegistrationDidRegisterWithDeviceToken:",
+      "bridgedName": "pushRegistrationDidRegisterWithDeviceToken",
       "args": [
         {
-          "name": "userNotificationCenter",
-          "type": "id"
-        },
-        {
-          "name": "didDeliverNotification",
+          "name": "pushRegistrationDidRegisterWithDeviceToken",
           "type": "id"
         }
       ],
@@ -4007,6 +3988,40 @@
     "_customizeMainMenu": {
       "name": "_customizeMainMenu",
       "bridgedName": "_customizeMainMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addTextInputMenuItems:": {
+      "name": "_addTextInputMenuItems:",
+      "bridgedName": "_addTextInputMenuItems",
+      "args": [
+        {
+          "name": "_addTextInputMenuItems",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "importFromDevice:": {
+      "name": "importFromDevice:",
+      "bridgedName": "importFromDevice",
+      "args": [
+        {
+          "name": "importFromDevice",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_customizeImportFromDeviceMenuItem": {
+      "name": "_customizeImportFromDeviceMenuItem",
+      "bridgedName": "_customizeImportFromDeviceMenuItem",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -5288,6 +5303,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "orderFrontPreferencesPanel:": {
+      "name": "orderFrontPreferencesPanel:",
+      "bridgedName": "orderFrontPreferencesPanel",
+      "args": [
+        {
+          "name": "orderFrontPreferencesPanel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_handleCursorRectEvent:": {
       "name": "_handleCursorRectEvent:",
       "bridgedName": "_handleCursorRectEvent",
@@ -5396,6 +5424,67 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_invalidateWindowAppearances": {
+      "name": "_invalidateWindowAppearances",
+      "bridgedName": "_invalidateWindowAppearances",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_refreshSetAppearance": {
+      "name": "_refreshSetAppearance",
+      "bridgedName": "_refreshSetAppearance",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateEffectiveAppearance": {
+      "name": "_invalidateEffectiveAppearance",
+      "bridgedName": "_invalidateEffectiveAppearance",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_observeValueForSystemAppearanceKeyPath:ofObject:change:": {
+      "name": "_observeValueForSystemAppearanceKeyPath:ofObject:change:",
+      "bridgedName": "_observeValueForSystemAppearanceKeyPath_ofObject_change",
+      "args": [
+        {
+          "name": "_observeValueForSystemAppearanceKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unregisterForAppearanceNotifications": {
+      "name": "_unregisterForAppearanceNotifications",
+      "bridgedName": "_unregisterForAppearanceNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForAppearanceNotifications": {
+      "name": "_registerForAppearanceNotifications",
+      "bridgedName": "_registerForAppearanceNotifications",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "NS_touchBarProviders": {
       "name": "NS_touchBarProviders",
       "bridgedName": "NS_touchBarProviders",
@@ -5422,6 +5511,14 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_eventFirstResponderChainDescription": {
+      "name": "_eventFirstResponderChainDescription",
+      "bridgedName": "_eventFirstResponderChainDescription",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -6145,19 +6242,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_findWindowUsingRealWindowNumber:": {
-      "name": "_findWindowUsingRealWindowNumber:",
-      "bridgedName": "_findWindowUsingRealWindowNumber",
-      "args": [
-        {
-          "name": "_findWindowUsingRealWindowNumber",
-          "type": "long long"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_findWindowUsingCache:": {
       "name": "_findWindowUsingCache:",
       "bridgedName": "_findWindowUsingCache",
@@ -6796,6 +6880,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_kitAppearance": {
+      "name": "_kitAppearance",
+      "bridgedName": "_kitAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_restoreWindowWithRestoration:completionHandler:": {
       "name": "_restoreWindowWithRestoration:completionHandler:",
       "bridgedName": "_restoreWindowWithRestoration_completionHandler",
@@ -7169,6 +7261,15 @@
         "readonly"
       ]
     },
+    "registeredForRemoteNotifications": {
+      "name": "registeredForRemoteNotifications",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isRegisteredForRemoteNotifications"
+      ]
+    },
     "touchBar": {
       "name": "touchBar",
       "pointer": true,
@@ -7193,6 +7294,22 @@
       "attributes": [
         "readonly",
         "copy"
+      ]
+    },
+    "effectiveAppearance": {
+      "name": "effectiveAppearance",
+      "pointer": true,
+      "type": "NSAppearance",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "appearance": {
+      "name": "appearance",
+      "pointer": true,
+      "type": "NSAppearance",
+      "attributes": [
+        "retain"
       ]
     },
     "servicesProvider": {
@@ -7225,6 +7342,14 @@
       "type": "NSMenu",
       "attributes": [
         "retain"
+      ]
+    },
+    "_effectiveAppearanceParent": {
+      "name": "_effectiveAppearanceParent",
+      "pointer": false,
+      "type": "id <NSAppearanceCustomization>",
+      "attributes": [
+        "readonly"
       ]
     },
     "accessibilityAllowedValues": {

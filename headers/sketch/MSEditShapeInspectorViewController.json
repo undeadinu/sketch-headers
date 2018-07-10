@@ -4,8 +4,11 @@
     "MSInspectorChildController.h"
   ],
   "classes": [
+    "MSMathInspectorValueAdaptor",
     "MSPathController",
     "MSShapeEventHandler",
+    "MSUpDownTextField",
+    "NSArrayController",
     "NSButton",
     "NSPopUpButton",
     "NSSlider",
@@ -24,6 +27,31 @@
       "name": ".cxx_destruct",
       "bridgedName": ".cxx_destruct",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -125,6 +153,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "refreshCoordinates": {
+      "name": "refreshCoordinates",
+      "bridgedName": "refreshCoordinates",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "vectorModeSegmentedButtonAction:": {
       "name": "vectorModeSegmentedButtonAction:",
       "bridgedName": "vectorModeSegmentedButtonAction",
@@ -141,74 +177,6 @@
     "refreshCurveModeControls": {
       "name": "refreshCurveModeControls",
       "bridgedName": "refreshCurveModeControls",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "takeHandleLocationOnAxis:fromTextField:": {
-      "name": "takeHandleLocationOnAxis:fromTextField:",
-      "bridgedName": "takeHandleLocationOnAxis_fromTextField",
-      "args": [
-        {
-          "name": "takeHandleLocationOnAxis",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "fromTextField",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "changeYPosition:": {
-      "name": "changeYPosition:",
-      "bridgedName": "changeYPosition",
-      "args": [
-        {
-          "name": "changeYPosition",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "changeXPosition:": {
-      "name": "changeXPosition:",
-      "bridgedName": "changeXPosition",
-      "args": [
-        {
-          "name": "changeXPosition",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "updateCoordinateValueForField:onAxis:": {
-      "name": "updateCoordinateValueForField:onAxis:",
-      "bridgedName": "updateCoordinateValueForField_onAxis",
-      "args": [
-        {
-          "name": "updateCoordinateValueForField",
-          "type": "id"
-        },
-        {
-          "name": "onAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "refreshXYFields": {
-      "name": "refreshXYFields",
-      "bridgedName": "refreshXYFields",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -279,9 +247,53 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "name": "initWithNibName",
+          "type": "id"
+        },
+        {
+          "name": "bundle",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "pointsController": {
+      "name": "pointsController",
+      "pointer": true,
+      "type": "NSArrayController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "yAdapter": {
+      "name": "yAdapter",
+      "pointer": true,
+      "type": "MSMathInspectorValueAdaptor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "xAdapter": {
+      "name": "xAdapter",
+      "pointer": true,
+      "type": "MSMathInspectorValueAdaptor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "cornerRadiusSlider": {
       "name": "cornerRadiusSlider",
       "pointer": true,
@@ -294,7 +306,7 @@
     "curvePointYField": {
       "name": "curvePointYField",
       "pointer": true,
-      "type": "NSTextField",
+      "type": "MSUpDownTextField",
       "attributes": [
         "retain",
         "nonatomic"
@@ -303,7 +315,7 @@
     "curvePointXField": {
       "name": "curvePointXField",
       "pointer": true,
-      "type": "NSTextField",
+      "type": "MSUpDownTextField",
       "attributes": [
         "retain",
         "nonatomic"

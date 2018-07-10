@@ -128,12 +128,25 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "pathWithSubPaths:": {
-      "name": "pathWithSubPaths:",
-      "bridgedName": "pathWithSubPaths",
+    "pathWithContours:": {
+      "name": "pathWithContours:",
+      "bridgedName": "pathWithContours",
       "args": [
         {
-          "name": "pathWithSubPaths",
+          "name": "pathWithContours",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithSubpaths:": {
+      "name": "pathWithSubpaths:",
+      "bridgedName": "pathWithSubpaths",
+      "args": [
+        {
+          "name": "pathWithSubpaths",
           "type": "id"
         }
       ],
@@ -238,17 +251,29 @@
       "name": "_initCachedProperties",
       "bridgedName": "_initCachedProperties",
       "args": [],
-      "returns": "void",
+      "returns": "struct MSPathCachedProperties",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bezierIndexForPoint:": {
-      "name": "bezierIndexForPoint:",
-      "bridgedName": "bezierIndexForPoint",
+    "_calculateCachedProperies": {
+      "name": "_calculateCachedProperies",
+      "bridgedName": "_calculateCachedProperies",
+      "args": [],
+      "returns": "struct MSPathCachedProperties",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bezierIndexForPoint:tolerance:": {
+      "name": "bezierIndexForPoint:tolerance:",
+      "bridgedName": "bezierIndexForPoint_tolerance",
       "args": [
         {
           "name": "bezierIndexForPoint",
           "type": "struct CGPoint"
+        },
+        {
+          "name": "tolerance",
+          "type": "double"
         }
       ],
       "returns": "unsigned long long",
@@ -383,14 +408,6 @@
         }
       ],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "subPaths": {
-      "name": "subPaths",
-      "bridgedName": "subPaths",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -560,6 +577,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "createContours": {
+      "name": "createContours",
+      "bridgedName": "createContours",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "init": {
       "name": "init",
       "bridgedName": "init",
@@ -709,6 +734,19 @@
       "bridgedName": "dealloc",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContours:": {
+      "name": "initWithContours:",
+      "bridgedName": "initWithContours",
+      "args": [
+        {
+          "name": "initWithContours",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -949,44 +987,12 @@
     }
   },
   "properties": {
-    "cachedIsClosed": {
-      "name": "cachedIsClosed",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "cachedEndPoint": {
-      "name": "cachedEndPoint",
-      "pointer": false,
-      "type": "struct CGPoint",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
-    "cachedStartPoint": {
-      "name": "cachedStartPoint",
-      "pointer": false,
-      "type": "struct CGPoint",
-      "attributes": [
-        "nonatomic"
-      ]
-    },
     "contours": {
       "name": "contours",
       "pointer": true,
       "type": "NSArray",
       "attributes": [
         "copy",
-        "nonatomic"
-      ]
-    },
-    "cachedPropertiesInitialized": {
-      "name": "cachedPropertiesInitialized",
-      "pointer": false,
-      "type": "BOOL",
-      "attributes": [
         "nonatomic"
       ]
     },
@@ -1002,6 +1008,33 @@
       "name": "CGPath",
       "pointer": true,
       "type": "struct CGPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "closedSubpaths": {
+      "name": "closedSubpaths",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "openSubpaths": {
+      "name": "openSubpaths",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "subpaths": {
+      "name": "subpaths",
+      "pointer": true,
+      "type": "NSArray",
       "attributes": [
         "readonly",
         "nonatomic"

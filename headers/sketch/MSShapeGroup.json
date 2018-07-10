@@ -294,6 +294,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "hitTestMarkers:zoomValue:": {
+      "name": "hitTestMarkers:zoomValue:",
+      "bridgedName": "hitTestMarkers_zoomValue",
+      "args": [
+        {
+          "name": "hitTestMarkers",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "zoomValue",
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "hitTestAsLine:zoomValue:": {
       "name": "hitTestAsLine:zoomValue:",
       "bridgedName": "hitTestAsLine_zoomValue",
@@ -337,6 +354,14 @@
       "bridgedName": "defaultName",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boundsRectForAlignment": {
+      "name": "boundsRectForAlignment",
+      "bridgedName": "boundsRectForAlignment",
+      "args": [],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -704,12 +729,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "outlineShapeWithBorder:": {
-      "name": "outlineShapeWithBorder:",
-      "bridgedName": "outlineShapeWithBorder",
+    "outlineShapeFromPath:withBorder:": {
+      "name": "outlineShapeFromPath:withBorder:",
+      "bridgedName": "outlineShapeFromPath_withBorder",
       "args": [
         {
-          "name": "outlineShapeWithBorder",
+          "name": "outlineShapeFromPath",
+          "type": "id"
+        },
+        {
+          "name": "withBorder",
           "type": "id"
         }
       ],
@@ -846,8 +875,8 @@
         "nonatomic"
       ]
     },
-    "hasDecorations": {
-      "name": "hasDecorations",
+    "hasMarkers": {
+      "name": "hasMarkers",
       "pointer": false,
       "type": "BOOL",
       "attributes": [

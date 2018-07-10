@@ -1,13 +1,18 @@
 {
-  "imports": [],
+  "imports": [
+    "NSViewToolTipOwner.h"
+  ],
   "classes": [
     "NSImage",
+    "NSString",
     "NSTableView"
   ],
   "protocol": false,
   "className": "NSTableHeaderView",
   "extends": "NSView",
-  "interfaces": [],
+  "interfaces": [
+    "NSViewToolTipOwner"
+  ],
   "methods": {
     ".cxx_destruct": {
       "name": ".cxx_destruct",
@@ -283,6 +288,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_vibrantBlendingStyleForSubtree": {
+      "name": "_vibrantBlendingStyleForSubtree",
+      "bridgedName": "_vibrantBlendingStyleForSubtree",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_removeBackgroundView": {
       "name": "_removeBackgroundView",
       "bridgedName": "_removeBackgroundView",
@@ -370,14 +383,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_canAddBlurView": {
-      "name": "_canAddBlurView",
-      "bridgedName": "_canAddBlurView",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_setWantsTranslucency:": {
       "name": "_setWantsTranslucency:",
       "bridgedName": "_setWantsTranslucency",
@@ -396,6 +401,27 @@
       "bridgedName": "_wantsTranslucency",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawsBackground": {
+      "name": "drawsBackground",
+      "bridgedName": "drawsBackground",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDrawsBackground:": {
+      "name": "setDrawsBackground:",
+      "bridgedName": "setDrawsBackground",
+      "args": [
+        {
+          "name": "setDrawsBackground",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -880,14 +906,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_rectsForMultiClippedContentDrawing": {
-      "name": "_rectsForMultiClippedContentDrawing",
-      "bridgedName": "_rectsForMultiClippedContentDrawing",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_hasRowHeaderColumn": {
       "name": "_hasRowHeaderColumn",
       "bridgedName": "_hasRowHeaderColumn",
@@ -1062,11 +1080,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilter": {
-      "name": "_vibrancyFilter",
-      "bridgedName": "_vibrancyFilter",
+    "_vibrancyBlendMode": {
+      "name": "_vibrancyBlendMode",
+      "bridgedName": "_vibrancyBlendMode",
       "args": [],
-      "returns": "id",
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1399,6 +1417,40 @@
       "name": "resizedColumn",
       "pointer": false,
       "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
       "attributes": [
         "readonly"
       ]

@@ -1,16 +1,20 @@
 {
   "imports": [
     "MSNormalBaseEventHandler.h",
+    "MSAlignmentEngineDelegate.h",
     "NSTouchBarDelegate.h"
   ],
   "classes": [
-    "MSDragGestureRecognizer",
+    "MSAlignmentEngineResult",
+    "MSDragToMoveOrCopyGestureRecognizer",
+    "MSRotationGestureInterpreter",
     "NSString"
   ],
   "protocol": false,
   "className": "MSRotateEventHandler",
   "extends": "MSNormalBaseEventHandler",
   "interfaces": [
+    "MSAlignmentEngineDelegate",
     "NSTouchBarDelegate"
   ],
   "methods": {
@@ -24,27 +28,6 @@
         }
       ],
       "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "degreesForPoint:inLayer:rotationCenter:": {
-      "name": "degreesForPoint:inLayer:rotationCenter:",
-      "bridgedName": "degreesForPoint_inLayer_rotationCenter",
-      "args": [
-        {
-          "name": "degreesForPoint",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "inLayer",
-          "type": "id"
-        },
-        {
-          "name": "rotationCenter",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "long long",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -107,10 +90,15 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawRotationCenter": {
-      "name": "drawRotationCenter",
-      "bridgedName": "drawRotationCenter",
-      "args": [],
+    "drawRotationCenterAtZoomScale:": {
+      "name": "drawRotationCenterAtZoomScale:",
+      "bridgedName": "drawRotationCenterAtZoomScale",
+      "args": [
+        {
+          "name": "drawRotationCenterAtZoomScale",
+          "type": "double"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -132,29 +120,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "alignDegreesTo45Angles:": {
-      "name": "alignDegreesTo45Angles:",
-      "bridgedName": "alignDegreesTo45Angles",
+    "alignDegreesTo15Angles:": {
+      "name": "alignDegreesTo15Angles:",
+      "bridgedName": "alignDegreesTo15Angles",
       "args": [
         {
-          "name": "alignDegreesTo45Angles",
+          "name": "alignDegreesTo15Angles",
           "type": "double"
         }
       ],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "degreesForPoint:": {
-      "name": "degreesForPoint:",
-      "bridgedName": "degreesForPoint",
-      "args": [
-        {
-          "name": "degreesForPoint",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -188,38 +163,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "mouseDraggedRotateLayer:mouse:flags:": {
-      "name": "mouseDraggedRotateLayer:mouse:flags:",
-      "bridgedName": "mouseDraggedRotateLayer_mouse_flags",
+    "dragLayer:": {
+      "name": "dragLayer:",
+      "bridgedName": "dragLayer",
       "args": [
         {
-          "name": "mouseDraggedRotateLayer",
+          "name": "dragLayer",
           "type": "id"
-        },
-        {
-          "name": "mouse",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseDraggedMoveLayer:mouse:": {
-      "name": "mouseDraggedMoveLayer:mouse:",
-      "bridgedName": "mouseDraggedMoveLayer_mouse",
-      "args": [
-        {
-          "name": "mouseDraggedMoveLayer",
-          "type": "id"
-        },
-        {
-          "name": "mouse",
-          "type": "struct CGPoint"
         }
       ],
       "returns": "void",
@@ -247,20 +197,29 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteMouseMoved:flags:": {
-      "name": "absoluteMouseMoved:flags:",
-      "bridgedName": "absoluteMouseMoved_flags",
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
       "args": [
         {
-          "name": "absoluteMouseMoved",
-          "type": "struct CGPoint"
-        },
-        {
-          "name": "flags",
-          "type": "unsigned long long"
+          "name": "trackMouse",
+          "type": "id"
         }
       ],
-      "returns": "BOOL",
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragCenterPoint:": {
+      "name": "dragCenterPoint:",
+      "bridgedName": "dragCenterPoint",
+      "args": [
+        {
+          "name": "dragCenterPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -270,6 +229,19 @@
       "args": [
         {
           "name": "handleDrag",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleRotation:": {
+      "name": "handleRotation:",
+      "bridgedName": "handleRotation",
+      "args": [
+        {
+          "name": "handleRotation",
           "type": "id"
         }
       ],
@@ -290,11 +262,76 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "rotationCenterInAbsoluteCoordinates": {
-      "name": "rotationCenterInAbsoluteCoordinates",
-      "bridgedName": "rotationCenterInAbsoluteCoordinates",
-      "args": [],
+    "alignmentEngine:alignPoint:": {
+      "name": "alignmentEngine:alignPoint:",
+      "bridgedName": "alignmentEngine_alignPoint",
+      "args": [
+        {
+          "name": "alignmentEngine",
+          "type": "id"
+        },
+        {
+          "name": "alignPoint",
+          "type": "struct CGPoint"
+        }
+      ],
       "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotationCenterPointForAnchorPoint:layer:": {
+      "name": "rotationCenterPointForAnchorPoint:layer:",
+      "bridgedName": "rotationCenterPointForAnchorPoint_layer",
+      "args": [
+        {
+          "name": "rotationCenterPointForAnchorPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "layer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRotationCenterPointWithoutUpdatingAnchorPoint:": {
+      "name": "setRotationCenterPointWithoutUpdatingAnchorPoint:",
+      "bridgedName": "setRotationCenterPointWithoutUpdatingAnchorPoint",
+      "args": [
+        {
+          "name": "setRotationCenterPointWithoutUpdatingAnchorPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetWithSelection:": {
+      "name": "resetWithSelection:",
+      "bridgedName": "resetWithSelection",
+      "args": [
+        {
+          "name": "resetWithSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "name": "selectionDidChangeTo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -329,6 +366,15 @@
     }
   },
   "properties": {
+    "centerPointSnaps": {
+      "name": "centerPointSnaps",
+      "pointer": true,
+      "type": "MSAlignmentEngineResult",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
     "draggedComponent": {
       "name": "draggedComponent",
       "pointer": false,
@@ -337,17 +383,43 @@
         "nonatomic"
       ]
     },
-    "dragGestureRecognizer": {
-      "name": "dragGestureRecognizer",
+    "dragRotationInterpreter": {
+      "name": "dragRotationInterpreter",
       "pointer": true,
-      "type": "MSDragGestureRecognizer",
+      "type": "MSRotationGestureInterpreter",
       "attributes": [
         "readonly",
         "nonatomic"
       ]
     },
-    "rotationCenter": {
-      "name": "rotationCenter",
+    "cursorRotationInterpreter": {
+      "name": "cursorRotationInterpreter",
+      "pointer": true,
+      "type": "MSRotationGestureInterpreter",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dragGestureRecognizer": {
+      "name": "dragGestureRecognizer",
+      "pointer": true,
+      "type": "MSDragToMoveOrCopyGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rotationAnchorPoint": {
+      "name": "rotationAnchorPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rotationCenterPoint": {
+      "name": "rotationCenterPoint",
       "pointer": false,
       "type": "struct CGPoint",
       "attributes": [

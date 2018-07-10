@@ -2,12 +2,22 @@
   "imports": [
     "NSObject.h"
   ],
-  "classes": [],
+  "classes": [
+    "NSDisplayCyclePhase"
+  ],
   "protocol": false,
   "className": "NSDisplayCycleObserver",
   "extends": "NSObject",
   "interfaces": [],
   "methods": {
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "dealloc": {
       "name": "dealloc",
       "bridgedName": "dealloc",
@@ -15,47 +25,41 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithPhase:handler:": {
+      "name": "initWithPhase:handler:",
+      "bridgedName": "initWithPhase_handler",
+      "args": [
+        {
+          "name": "initWithPhase",
+          "type": "id"
+        },
+        {
+          "name": "handler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
-    "updateCursorHandler": {
-      "name": "updateCursorHandler",
+    "handler": {
+      "name": "handler",
       "pointer": false,
       "type": "CDUnknownBlockType",
       "attributes": [
+        "readonly",
         "copy"
       ]
     },
-    "updateStructuralRegionsHandler": {
-      "name": "updateStructuralRegionsHandler",
-      "pointer": false,
-      "type": "CDUnknownBlockType",
+    "phase": {
+      "name": "phase",
+      "pointer": true,
+      "type": "NSDisplayCyclePhase",
       "attributes": [
-        "copy"
-      ]
-    },
-    "displayHandler": {
-      "name": "displayHandler",
-      "pointer": false,
-      "type": "CDUnknownBlockType",
-      "attributes": [
-        "copy"
-      ]
-    },
-    "layoutHandler": {
-      "name": "layoutHandler",
-      "pointer": false,
-      "type": "CDUnknownBlockType",
-      "attributes": [
-        "copy"
-      ]
-    },
-    "updateConstraintsHandler": {
-      "name": "updateConstraintsHandler",
-      "pointer": false,
-      "type": "CDUnknownBlockType",
-      "attributes": [
-        "copy"
+        "readonly"
       ]
     }
   }

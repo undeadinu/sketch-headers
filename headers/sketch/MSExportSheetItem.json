@@ -4,10 +4,10 @@
   ],
   "classes": [
     "MSExportSheet",
-    "MSSliceDragView",
     "NSButton",
     "NSImageView",
-    "NSTextField"
+    "NSTextField",
+    "NSView"
   ],
   "protocol": false,
   "className": "MSExportSheetItem",
@@ -27,6 +27,19 @@
       "bridgedName": "subTitle",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportPreviewOperationDidFinish:": {
+      "name": "exportPreviewOperationDidFinish:",
+      "bridgedName": "exportPreviewOperationDidFinish",
+      "args": [
+        {
+          "name": "exportPreviewOperationDidFinish",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -108,10 +121,10 @@
         "nonatomic"
       ]
     },
-    "previewView": {
-      "name": "previewView",
+    "previewContainer": {
+      "name": "previewContainer",
       "pointer": true,
-      "type": "MSSliceDragView",
+      "type": "NSView",
       "attributes": [
         "retain",
         "nonatomic"

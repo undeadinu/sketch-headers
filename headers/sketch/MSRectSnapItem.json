@@ -8,17 +8,17 @@
   "extends": "MSSnapItem",
   "interfaces": [],
   "methods": {
-    "snapItemWithRect:layer:constrainProportions:": {
-      "name": "snapItemWithRect:layer:constrainProportions:",
-      "bridgedName": "snapItemWithRect_layer_constrainProportions",
+    "rectSnapItemWithLayer:rect:constrainProportions:": {
+      "name": "rectSnapItemWithLayer:rect:constrainProportions:",
+      "bridgedName": "rectSnapItemWithLayer_rect_constrainProportions",
       "args": [
         {
-          "name": "snapItemWithRect",
-          "type": "struct CGRect"
+          "name": "rectSnapItemWithLayer",
+          "type": "id"
         },
         {
-          "name": "layer",
-          "type": "id"
+          "name": "rect",
+          "type": "struct CGRect"
         },
         {
           "name": "constrainProportions",
@@ -55,6 +55,23 @@
       "bridgedName": "shouldConstrainProportions",
       "args": [],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentRectInLayer:options:": {
+      "name": "alignmentRectInLayer:options:",
+      "bridgedName": "alignmentRectInLayer_options",
+      "args": [
+        {
+          "name": "alignmentRectInLayer",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -103,9 +120,57 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "snapLines": {
-      "name": "snapLines",
-      "bridgedName": "snapLines",
+    "centerYAnchor": {
+      "name": "centerYAnchor",
+      "bridgedName": "centerYAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "centerXAnchor": {
+      "name": "centerXAnchor",
+      "bridgedName": "centerXAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bottomAnchor": {
+      "name": "bottomAnchor",
+      "bridgedName": "bottomAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "topAnchor": {
+      "name": "topAnchor",
+      "bridgedName": "topAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightAnchor": {
+      "name": "rightAnchor",
+      "bridgedName": "rightAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "leftAnchor": {
+      "name": "leftAnchor",
+      "bridgedName": "leftAnchor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "anchorsForSnapping": {
+      "name": "anchorsForSnapping",
+      "bridgedName": "anchorsForSnapping",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -133,14 +198,5 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {
-    "storedRect": {
-      "name": "storedRect",
-      "pointer": false,
-      "type": "struct CGRect",
-      "attributes": [
-        "nonatomic"
-      ]
-    }
-  }
+  "properties": {}
 }

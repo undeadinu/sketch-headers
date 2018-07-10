@@ -1,16 +1,20 @@
 {
   "imports": [
-    "NSObject.h"
+    "NSObject.h",
+    "NSMenuItemValidation.h"
   ],
   "classes": [
     "NSArray",
     "NSFont",
-    "NSFontPanel"
+    "NSFontPanel",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSFontManager",
   "extends": "NSObject",
-  "interfaces": [],
+  "interfaces": [
+    "NSMenuItemValidation"
+  ],
   "methods": {
     "setFontManagerFactory:": {
       "name": "setFontManagerFactory:",
@@ -1421,6 +1425,40 @@
       "type": "BOOL",
       "attributes": [
         "getter=isEnabled"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

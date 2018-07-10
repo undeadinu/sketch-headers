@@ -31,9 +31,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithBaselineOffsets:firstLineCapOffset:lineFragmentBounds:": {
-      "name": "initWithBaselineOffsets:firstLineCapOffset:lineFragmentBounds:",
-      "bridgedName": "initWithBaselineOffsets_firstLineCapOffset_lineFragmentBounds",
+    "initWithBaselineOffsets:firstLineCapOffset:lineFragments:lineFragmentBounds:": {
+      "name": "initWithBaselineOffsets:firstLineCapOffset:lineFragments:lineFragmentBounds:",
+      "bridgedName": "initWithBaselineOffsets_firstLineCapOffset_lineFragments_lineFragmentBounds",
       "args": [
         {
           "name": "initWithBaselineOffsets",
@@ -42,6 +42,10 @@
         {
           "name": "firstLineCapOffset",
           "type": "double"
+        },
+        {
+          "name": "lineFragments",
+          "type": "id"
         },
         {
           "name": "lineFragmentBounds",
@@ -72,6 +76,16 @@
         "nonatomic"
       ]
     },
+    "lineFragmentRectangles": {
+      "name": "lineFragmentRectangles",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
     "baselineOffsets": {
       "name": "baselineOffsets",
       "pointer": true,
@@ -79,6 +93,15 @@
       "attributes": [
         "readonly",
         "copy",
+        "nonatomic"
+      ]
+    },
+    "lastBaselineOffset": {
+      "name": "lastBaselineOffset",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

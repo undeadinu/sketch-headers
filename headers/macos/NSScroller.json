@@ -12,16 +12,24 @@
     "NSScrollerImpDelegate"
   ],
   "methods": {
-    "_drawEndCapInRect:": {
-      "name": "_drawEndCapInRect:",
-      "bridgedName": "_drawEndCapInRect",
+    "scrollerSubclassIsCompatibleWithOverlayScrollers": {
+      "name": "scrollerSubclassIsCompatibleWithOverlayScrollers",
+      "bridgedName": "scrollerSubclassIsCompatibleWithOverlayScrollers",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultAnimationForKey:": {
+      "name": "defaultAnimationForKey:",
+      "bridgedName": "defaultAnimationForKey",
       "args": [
         {
-          "name": "_drawEndCapInRect",
-          "type": "struct CGRect"
+          "name": "defaultAnimationForKey",
+          "type": "id"
         }
       ],
-      "returns": "void",
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -113,6 +121,14 @@
       "kind": "class",
       "kindIndicator": "+"
     },
+    "isCompatibleWithOverlayScrollers": {
+      "name": "isCompatibleWithOverlayScrollers",
+      "bridgedName": "isCompatibleWithOverlayScrollers",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "_aquaScrollerBehaviorChanged:": {
       "name": "_aquaScrollerBehaviorChanged:",
       "bridgedName": "_aquaScrollerBehaviorChanged",
@@ -126,32 +142,11 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "isCompatibleWithOverlayScrollers": {
-      "name": "isCompatibleWithOverlayScrollers",
-      "bridgedName": "isCompatibleWithOverlayScrollers",
+    "clickBehavior": {
+      "name": "clickBehavior",
+      "bridgedName": "clickBehavior",
       "args": [],
-      "returns": "BOOL",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "defaultAnimationForKey:": {
-      "name": "defaultAnimationForKey:",
-      "bridgedName": "defaultAnimationForKey",
-      "args": [
-        {
-          "name": "defaultAnimationForKey",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "scrollerSubclassIsCompatibleWithOverlayScrollers": {
-      "name": "scrollerSubclassIsCompatibleWithOverlayScrollers",
-      "bridgedName": "scrollerSubclassIsCompatibleWithOverlayScrollers",
-      "args": [],
-      "returns": "BOOL",
+      "returns": "long long",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -162,6 +157,569 @@
       "returns": "BOOL",
       "kind": "class",
       "kindIndicator": "+"
+    },
+    "_drawingRectForPart:": {
+      "name": "_drawingRectForPart:",
+      "bridgedName": "_drawingRectForPart",
+      "args": [
+        {
+          "name": "_drawingRectForPart",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setThumbingKnobProportion:": {
+      "name": "_setThumbingKnobProportion:",
+      "bridgedName": "_setThumbingKnobProportion",
+      "args": [
+        {
+          "name": "_setThumbingKnobProportion",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_thumbingKnobProportion": {
+      "name": "_thumbingKnobProportion",
+      "bridgedName": "_thumbingKnobProportion",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setThumbingDoubleValue:": {
+      "name": "_setThumbingDoubleValue:",
+      "bridgedName": "_setThumbingDoubleValue",
+      "args": [
+        {
+          "name": "_setThumbingDoubleValue",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_thumbingDoubleValue": {
+      "name": "_thumbingDoubleValue",
+      "bridgedName": "_thumbingDoubleValue",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scrollByDelta:": {
+      "name": "_scrollByDelta:",
+      "bridgedName": "_scrollByDelta",
+      "args": [
+        {
+          "name": "_scrollByDelta",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_incrementPage:": {
+      "name": "_incrementPage:",
+      "bridgedName": "_incrementPage",
+      "args": [
+        {
+          "name": "_incrementPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decrementPage:": {
+      "name": "_decrementPage:",
+      "bridgedName": "_decrementPage",
+      "args": [
+        {
+          "name": "_decrementPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_incrementLine:": {
+      "name": "_incrementLine:",
+      "bridgedName": "_incrementLine",
+      "args": [
+        {
+          "name": "_incrementLine",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decrementLine:": {
+      "name": "_decrementLine:",
+      "bridgedName": "_decrementLine",
+      "args": [
+        {
+          "name": "_decrementLine",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUsePresentationValue:": {
+      "name": "setUsePresentationValue:",
+      "bridgedName": "setUsePresentationValue",
+      "args": [
+        {
+          "name": "setUsePresentationValue",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPresentationValue:": {
+      "name": "setPresentationValue:",
+      "bridgedName": "setPresentationValue",
+      "args": [
+        {
+          "name": "setPresentationValue",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayScrollerTrackAlpha": {
+      "name": "overlayScrollerTrackAlpha",
+      "bridgedName": "overlayScrollerTrackAlpha",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "overlayScrollerKnobAlpha": {
+      "name": "overlayScrollerKnobAlpha",
+      "bridgedName": "overlayScrollerKnobAlpha",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overlayScrollerState": {
+      "name": "_overlayScrollerState",
+      "bridgedName": "_overlayScrollerState",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp": {
+      "name": "scrollerImp",
+      "bridgedName": "scrollerImp",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_orientation": {
+      "name": "_orientation",
+      "bridgedName": "_orientation",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setIsHorizontal:": {
+      "name": "_setIsHorizontal:",
+      "bridgedName": "_setIsHorizontal",
+      "args": [
+        {
+          "name": "_setIsHorizontal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect:": {
+      "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect:",
+      "bridgedName": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect",
+      "args": [
+        {
+          "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNeedsDisplayIfNotLayerBackedOverlayCompatible": {
+      "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatible",
+      "bridgedName": "_setNeedsDisplayIfNotLayerBackedOverlayCompatible",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplayInRect:": {
+      "name": "setNeedsDisplayInRect:",
+      "bridgedName": "setNeedsDisplayInRect",
+      "args": [
+        {
+          "name": "setNeedsDisplayInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setNeedsDisplay:": {
+      "name": "setNeedsDisplay:",
+      "bridgedName": "setNeedsDisplay",
+      "args": [
+        {
+          "name": "setNeedsDisplay",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setOverlayScrollerState:forceImmediately:": {
+      "name": "_setOverlayScrollerState:forceImmediately:",
+      "bridgedName": "_setOverlayScrollerState_forceImmediately",
+      "args": [
+        {
+          "name": "_setOverlayScrollerState",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "forceImmediately",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp:overlayScrollerStateChangedTo:": {
+      "name": "scrollerImp:overlayScrollerStateChangedTo:",
+      "bridgedName": "scrollerImp_overlayScrollerStateChangedTo",
+      "args": [
+        {
+          "name": "scrollerImp",
+          "type": "id"
+        },
+        {
+          "name": "overlayScrollerStateChangedTo",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp:animateTrackAlphaTo:duration:": {
+      "name": "scrollerImp:animateTrackAlphaTo:duration:",
+      "bridgedName": "scrollerImp_animateTrackAlphaTo_duration",
+      "args": [
+        {
+          "name": "scrollerImp",
+          "type": "id"
+        },
+        {
+          "name": "animateTrackAlphaTo",
+          "type": "double"
+        },
+        {
+          "name": "duration",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp:animateKnobAlphaTo:duration:": {
+      "name": "scrollerImp:animateKnobAlphaTo:duration:",
+      "bridgedName": "scrollerImp_animateKnobAlphaTo_duration",
+      "args": [
+        {
+          "name": "scrollerImp",
+          "type": "id"
+        },
+        {
+          "name": "animateKnobAlphaTo",
+          "type": "double"
+        },
+        {
+          "name": "duration",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp:animateExpansionTransitionWithDuration:": {
+      "name": "scrollerImp:animateExpansionTransitionWithDuration:",
+      "bridgedName": "scrollerImp_animateExpansionTransitionWithDuration",
+      "args": [
+        {
+          "name": "scrollerImp",
+          "type": "id"
+        },
+        {
+          "name": "animateExpansionTransitionWithDuration",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollerImp:animateUIStateTransitionWithDuration:": {
+      "name": "scrollerImp:animateUIStateTransitionWithDuration:",
+      "bridgedName": "scrollerImp_animateUIStateTransitionWithDuration",
+      "args": [
+        {
+          "name": "scrollerImp",
+          "type": "id"
+        },
+        {
+          "name": "animateUIStateTransitionWithDuration",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseLocationInScrollerForScrollerImp:": {
+      "name": "mouseLocationInScrollerForScrollerImp:",
+      "bridgedName": "mouseLocationInScrollerForScrollerImp",
+      "args": [
+        {
+          "name": "mouseLocationInScrollerForScrollerImp",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldUseLayerPerPartForScrollerImp:": {
+      "name": "shouldUseLayerPerPartForScrollerImp:",
+      "bridgedName": "shouldUseLayerPerPartForScrollerImp",
+      "args": [
+        {
+          "name": "shouldUseLayerPerPartForScrollerImp",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAvoidingOtherScrollerThumb:": {
+      "name": "_setAvoidingOtherScrollerThumb:",
+      "bridgedName": "_setAvoidingOtherScrollerThumb",
+      "args": [
+        {
+          "name": "_setAvoidingOtherScrollerThumb",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCursorRects": {
+      "name": "resetCursorRects",
+      "bridgedName": "resetCursorRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_expansionTransitionProgress": {
+      "name": "_expansionTransitionProgress",
+      "bridgedName": "_expansionTransitionProgress",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setExpansionTransitionProgress:": {
+      "name": "setExpansionTransitionProgress:",
+      "bridgedName": "setExpansionTransitionProgress",
+      "args": [
+        {
+          "name": "setExpansionTransitionProgress",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_uiStateTransitionProgress": {
+      "name": "_uiStateTransitionProgress",
+      "bridgedName": "_uiStateTransitionProgress",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUiStateTransitionProgress:": {
+      "name": "setUiStateTransitionProgress:",
+      "bridgedName": "setUiStateTransitionProgress",
+      "args": [
+        {
+          "name": "setUiStateTransitionProgress",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOverlayScrollerTrackAlpha:": {
+      "name": "setOverlayScrollerTrackAlpha:",
+      "bridgedName": "setOverlayScrollerTrackAlpha",
+      "args": [
+        {
+          "name": "setOverlayScrollerTrackAlpha",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOverlayScrollerKnobAlpha:": {
+      "name": "setOverlayScrollerKnobAlpha:",
+      "bridgedName": "setOverlayScrollerKnobAlpha",
+      "args": [
+        {
+          "name": "setOverlayScrollerKnobAlpha",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layer:shouldInheritContentsScale:fromWindow:": {
+      "name": "layer:shouldInheritContentsScale:fromWindow:",
+      "bridgedName": "layer_shouldInheritContentsScale_fromWindow",
+      "args": [
+        {
+          "name": "layer",
+          "type": "id"
+        },
+        {
+          "name": "shouldInheritContentsScale",
+          "type": "double"
+        },
+        {
+          "name": "fromWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLayer:": {
+      "name": "setLayer:",
+      "bridgedName": "setLayer",
+      "args": [
+        {
+          "name": "setLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTrackingInKnob:": {
+      "name": "_setTrackingInKnob:",
+      "bridgedName": "_setTrackingInKnob",
+      "args": [
+        {
+          "name": "_setTrackingInKnob",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isTrackingInKnob": {
+      "name": "_isTrackingInKnob",
+      "bridgedName": "_isTrackingInKnob",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixScrollerImpForSwizzlers": {
+      "name": "_fixScrollerImpForSwizzlers",
+      "bridgedName": "_fixScrollerImpForSwizzlers",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replaceScrollerImp": {
+      "name": "_replaceScrollerImp",
+      "bridgedName": "_replaceScrollerImp",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setLionScrollerStyle:": {
+      "name": "_setLionScrollerStyle:",
+      "bridgedName": "_setLionScrollerStyle",
+      "args": [
+        {
+          "name": "_setLionScrollerStyle",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lionScrollerStyle": {
+      "name": "_lionScrollerStyle",
+      "bridgedName": "_lionScrollerStyle",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
     },
     "_CAViewFlags": {
       "name": "_CAViewFlags",
@@ -464,6 +1022,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_preferredLayerContentsRedrawPolicy": {
+      "name": "_preferredLayerContentsRedrawPolicy",
+      "bridgedName": "_preferredLayerContentsRedrawPolicy",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_compositeScrollerPart:inRect:withAlpha:drawHandler:": {
       "name": "_compositeScrollerPart:inRect:withAlpha:drawHandler:",
       "bridgedName": "_compositeScrollerPart_inRect_withAlpha_drawHandler",
@@ -506,34 +1072,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_old_drawKnobSlotInRect:highlight:": {
-      "name": "_old_drawKnobSlotInRect:highlight:",
-      "bridgedName": "_old_drawKnobSlotInRect_highlight",
-      "args": [
-        {
-          "name": "_old_drawKnobSlotInRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "highlight",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "drawKnob": {
       "name": "drawKnob",
       "bridgedName": "drawKnob",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_old_drawKnob": {
-      "name": "_old_drawKnob",
-      "bridgedName": "_old_drawKnob",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -590,11 +1131,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_vibrancyFilter": {
-      "name": "_vibrancyFilter",
-      "bridgedName": "_vibrancyFilter",
+    "_vibrancyBlendMode": {
+      "name": "_vibrancyBlendMode",
+      "bridgedName": "_vibrancyBlendMode",
       "args": [],
-      "returns": "id",
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -606,11 +1147,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_copyCompositeCoreUIDrawOptions": {
-      "name": "_copyCompositeCoreUIDrawOptions",
-      "bridgedName": "_copyCompositeCoreUIDrawOptions",
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
       "args": [],
-      "returns": "struct __CFDictionary *",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -627,11 +1168,45 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_realControlTint": {
-      "name": "_realControlTint",
-      "bridgedName": "_realControlTint",
+    "controlTint": {
+      "name": "controlTint",
+      "bridgedName": "controlTint",
       "args": [],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setControlTint:": {
+      "name": "setControlTint:",
+      "bridgedName": "setControlTint",
+      "args": [
+        {
+          "name": "setControlTint",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "arrowsPosition": {
+      "name": "arrowsPosition",
+      "bridgedName": "arrowsPosition",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setArrowsPosition:": {
+      "name": "setArrowsPosition:",
+      "bridgedName": "setArrowsPosition",
+      "args": [
+        {
+          "name": "setArrowsPosition",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -724,22 +1299,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_updateWantsLayer": {
-      "name": "_updateWantsLayer",
-      "bridgedName": "_updateWantsLayer",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_scrollerWantsLayer": {
-      "name": "_scrollerWantsLayer",
-      "bridgedName": "_scrollerWantsLayer",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "isFlipped": {
       "name": "isFlipped",
       "bridgedName": "isFlipped",
@@ -803,606 +1362,6 @@
       "bridgedName": "_repeatTime",
       "args": [],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_useTigerMetrics": {
-      "name": "_useTigerMetrics",
-      "bridgedName": "_useTigerMetrics",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_desiredLayerSizeMeritsTiledBackingLayer:": {
-      "name": "_desiredLayerSizeMeritsTiledBackingLayer:",
-      "bridgedName": "_desiredLayerSizeMeritsTiledBackingLayer",
-      "args": [
-        {
-          "name": "_desiredLayerSizeMeritsTiledBackingLayer",
-          "type": "struct CGSize"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_orientation": {
-      "name": "_orientation",
-      "bridgedName": "_orientation",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setIsHorizontal:": {
-      "name": "_setIsHorizontal:",
-      "bridgedName": "_setIsHorizontal",
-      "args": [
-        {
-          "name": "_setIsHorizontal",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect:": {
-      "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect:",
-      "bridgedName": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect",
-      "args": [
-        {
-          "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatibleInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setNeedsDisplayIfNotLayerBackedOverlayCompatible": {
-      "name": "_setNeedsDisplayIfNotLayerBackedOverlayCompatible",
-      "bridgedName": "_setNeedsDisplayIfNotLayerBackedOverlayCompatible",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setNeedsDisplayInRect:": {
-      "name": "setNeedsDisplayInRect:",
-      "bridgedName": "setNeedsDisplayInRect",
-      "args": [
-        {
-          "name": "setNeedsDisplayInRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setNeedsDisplay:": {
-      "name": "setNeedsDisplay:",
-      "bridgedName": "setNeedsDisplay",
-      "args": [
-        {
-          "name": "setNeedsDisplay",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setOverlayScrollerState:forceImmediately:": {
-      "name": "_setOverlayScrollerState:forceImmediately:",
-      "bridgedName": "_setOverlayScrollerState_forceImmediately",
-      "args": [
-        {
-          "name": "_setOverlayScrollerState",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "forceImmediately",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp:overlayScrollerStateChangedTo:": {
-      "name": "scrollerImp:overlayScrollerStateChangedTo:",
-      "bridgedName": "scrollerImp_overlayScrollerStateChangedTo",
-      "args": [
-        {
-          "name": "scrollerImp",
-          "type": "id"
-        },
-        {
-          "name": "overlayScrollerStateChangedTo",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp:animateTrackAlphaTo:duration:": {
-      "name": "scrollerImp:animateTrackAlphaTo:duration:",
-      "bridgedName": "scrollerImp_animateTrackAlphaTo_duration",
-      "args": [
-        {
-          "name": "scrollerImp",
-          "type": "id"
-        },
-        {
-          "name": "animateTrackAlphaTo",
-          "type": "double"
-        },
-        {
-          "name": "duration",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp:animateKnobAlphaTo:duration:": {
-      "name": "scrollerImp:animateKnobAlphaTo:duration:",
-      "bridgedName": "scrollerImp_animateKnobAlphaTo_duration",
-      "args": [
-        {
-          "name": "scrollerImp",
-          "type": "id"
-        },
-        {
-          "name": "animateKnobAlphaTo",
-          "type": "double"
-        },
-        {
-          "name": "duration",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp:animateExpansionTransitionWithDuration:": {
-      "name": "scrollerImp:animateExpansionTransitionWithDuration:",
-      "bridgedName": "scrollerImp_animateExpansionTransitionWithDuration",
-      "args": [
-        {
-          "name": "scrollerImp",
-          "type": "id"
-        },
-        {
-          "name": "animateExpansionTransitionWithDuration",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp:animateUIStateTransitionWithDuration:": {
-      "name": "scrollerImp:animateUIStateTransitionWithDuration:",
-      "bridgedName": "scrollerImp_animateUIStateTransitionWithDuration",
-      "args": [
-        {
-          "name": "scrollerImp",
-          "type": "id"
-        },
-        {
-          "name": "animateUIStateTransitionWithDuration",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseLocationInScrollerForScrollerImp:": {
-      "name": "mouseLocationInScrollerForScrollerImp:",
-      "bridgedName": "mouseLocationInScrollerForScrollerImp",
-      "args": [
-        {
-          "name": "mouseLocationInScrollerForScrollerImp",
-          "type": "id"
-        }
-      ],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "shouldUseLayerPerPartForScrollerImp:": {
-      "name": "shouldUseLayerPerPartForScrollerImp:",
-      "bridgedName": "shouldUseLayerPerPartForScrollerImp",
-      "args": [
-        {
-          "name": "shouldUseLayerPerPartForScrollerImp",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setAvoidingOtherScrollerThumb:": {
-      "name": "_setAvoidingOtherScrollerThumb:",
-      "bridgedName": "_setAvoidingOtherScrollerThumb",
-      "args": [
-        {
-          "name": "_setAvoidingOtherScrollerThumb",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_avoidingOtherScrollerThumb": {
-      "name": "_avoidingOtherScrollerThumb",
-      "bridgedName": "_avoidingOtherScrollerThumb",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "resetCursorRects": {
-      "name": "resetCursorRects",
-      "bridgedName": "resetCursorRects",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_expansionTransitionProgress": {
-      "name": "_expansionTransitionProgress",
-      "bridgedName": "_expansionTransitionProgress",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setExpansionTransitionProgress:": {
-      "name": "setExpansionTransitionProgress:",
-      "bridgedName": "setExpansionTransitionProgress",
-      "args": [
-        {
-          "name": "setExpansionTransitionProgress",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_uiStateTransitionProgress": {
-      "name": "_uiStateTransitionProgress",
-      "bridgedName": "_uiStateTransitionProgress",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setUiStateTransitionProgress:": {
-      "name": "setUiStateTransitionProgress:",
-      "bridgedName": "setUiStateTransitionProgress",
-      "args": [
-        {
-          "name": "setUiStateTransitionProgress",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setOverlayScrollerTrackAlpha:": {
-      "name": "setOverlayScrollerTrackAlpha:",
-      "bridgedName": "setOverlayScrollerTrackAlpha",
-      "args": [
-        {
-          "name": "setOverlayScrollerTrackAlpha",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setOverlayScrollerKnobAlpha:": {
-      "name": "setOverlayScrollerKnobAlpha:",
-      "bridgedName": "setOverlayScrollerKnobAlpha",
-      "args": [
-        {
-          "name": "setOverlayScrollerKnobAlpha",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "layer:shouldInheritContentsScale:fromWindow:": {
-      "name": "layer:shouldInheritContentsScale:fromWindow:",
-      "bridgedName": "layer_shouldInheritContentsScale_fromWindow",
-      "args": [
-        {
-          "name": "layer",
-          "type": "id"
-        },
-        {
-          "name": "shouldInheritContentsScale",
-          "type": "double"
-        },
-        {
-          "name": "fromWindow",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setLayer:": {
-      "name": "setLayer:",
-      "bridgedName": "setLayer",
-      "args": [
-        {
-          "name": "setLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_needsMasksToBounds": {
-      "name": "_needsMasksToBounds",
-      "bridgedName": "_needsMasksToBounds",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setTrackingInKnob:": {
-      "name": "_setTrackingInKnob:",
-      "bridgedName": "_setTrackingInKnob",
-      "args": [
-        {
-          "name": "_setTrackingInKnob",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isTrackingInKnob": {
-      "name": "_isTrackingInKnob",
-      "bridgedName": "_isTrackingInKnob",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_fixScrollerImpForSwizzlers": {
-      "name": "_fixScrollerImpForSwizzlers",
-      "bridgedName": "_fixScrollerImpForSwizzlers",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_replaceScrollerImp": {
-      "name": "_replaceScrollerImp",
-      "bridgedName": "_replaceScrollerImp",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setLionScrollerStyle:": {
-      "name": "_setLionScrollerStyle:",
-      "bridgedName": "_setLionScrollerStyle",
-      "args": [
-        {
-          "name": "_setLionScrollerStyle",
-          "type": "long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_lionScrollerStyle": {
-      "name": "_lionScrollerStyle",
-      "bridgedName": "_lionScrollerStyle",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_drawingRectForPart:": {
-      "name": "_drawingRectForPart:",
-      "bridgedName": "_drawingRectForPart",
-      "args": [
-        {
-          "name": "_drawingRectForPart",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "struct CGRect",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setThumbingKnobProportion:": {
-      "name": "_setThumbingKnobProportion:",
-      "bridgedName": "_setThumbingKnobProportion",
-      "args": [
-        {
-          "name": "_setThumbingKnobProportion",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_thumbingKnobProportion": {
-      "name": "_thumbingKnobProportion",
-      "bridgedName": "_thumbingKnobProportion",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_setThumbingDoubleValue:": {
-      "name": "_setThumbingDoubleValue:",
-      "bridgedName": "_setThumbingDoubleValue",
-      "args": [
-        {
-          "name": "_setThumbingDoubleValue",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_thumbingDoubleValue": {
-      "name": "_thumbingDoubleValue",
-      "bridgedName": "_thumbingDoubleValue",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_scrollByDelta:": {
-      "name": "_scrollByDelta:",
-      "bridgedName": "_scrollByDelta",
-      "args": [
-        {
-          "name": "_scrollByDelta",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_incrementPage:": {
-      "name": "_incrementPage:",
-      "bridgedName": "_incrementPage",
-      "args": [
-        {
-          "name": "_incrementPage",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_decrementPage:": {
-      "name": "_decrementPage:",
-      "bridgedName": "_decrementPage",
-      "args": [
-        {
-          "name": "_decrementPage",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_incrementLine:": {
-      "name": "_incrementLine:",
-      "bridgedName": "_incrementLine",
-      "args": [
-        {
-          "name": "_incrementLine",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_decrementLine:": {
-      "name": "_decrementLine:",
-      "bridgedName": "_decrementLine",
-      "args": [
-        {
-          "name": "_decrementLine",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setUsePresentationValue:": {
-      "name": "setUsePresentationValue:",
-      "bridgedName": "setUsePresentationValue",
-      "args": [
-        {
-          "name": "setUsePresentationValue",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setPresentationValue:": {
-      "name": "setPresentationValue:",
-      "bridgedName": "setPresentationValue",
-      "args": [
-        {
-          "name": "setPresentationValue",
-          "type": "double"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayScrollerTrackAlpha": {
-      "name": "overlayScrollerTrackAlpha",
-      "bridgedName": "overlayScrollerTrackAlpha",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "overlayScrollerKnobAlpha": {
-      "name": "overlayScrollerKnobAlpha",
-      "bridgedName": "overlayScrollerKnobAlpha",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_overlayScrollerState": {
-      "name": "_overlayScrollerState",
-      "bridgedName": "_overlayScrollerState",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "scrollerImp": {
-      "name": "scrollerImp",
-      "bridgedName": "scrollerImp",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },

@@ -5,6 +5,7 @@
     "MSWebExportableRootLayer.h"
   ],
   "classes": [
+    "MSArtboardPreset",
     "MSImmutableColor",
     "MSImmutableLayoutGrid",
     "MSImmutableRulerData",
@@ -58,6 +59,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "contentBoundsForDocument:": {
+      "name": "contentBoundsForDocument:",
+      "bridgedName": "contentBoundsForDocument",
+      "args": [
+        {
+          "name": "contentBoundsForDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "rulerBase": {
       "name": "rulerBase",
       "bridgedName": "rulerBase",
@@ -74,19 +88,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "decodePropertiesWithUnarchiver:": {
-      "name": "decodePropertiesWithUnarchiver:",
-      "bridgedName": "decodePropertiesWithUnarchiver",
-      "args": [
-        {
-          "name": "decodePropertiesWithUnarchiver",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "performInitWithMutableModelObject:": {
       "name": "performInitWithMutableModelObject:",
       "bridgedName": "performInitWithMutableModelObject",
@@ -100,24 +101,37 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "exporterForWebOnPage:document:scale:": {
-      "name": "exporterForWebOnPage:document:scale:",
-      "bridgedName": "exporterForWebOnPage_document_scale",
+    "rectInFixedViewportWithRect:fromFixingLayer:": {
+      "name": "rectInFixedViewportWithRect:fromFixingLayer:",
+      "bridgedName": "rectInFixedViewportWithRect_fromFixingLayer",
       "args": [
         {
-          "name": "exporterForWebOnPage",
-          "type": "id"
+          "name": "rectInFixedViewportWithRect",
+          "type": "struct CGRect"
         },
         {
-          "name": "document",
+          "name": "fromFixingLayer",
           "type": "id"
-        },
-        {
-          "name": "scale",
-          "type": "double"
         }
       ],
-      "returns": "id",
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "webExportLayerBehaviorWithRect:fromLayer:": {
+      "name": "webExportLayerBehaviorWithRect:fromLayer:",
+      "bridgedName": "webExportLayerBehaviorWithRect_fromLayer",
+      "args": [
+        {
+          "name": "webExportLayerBehaviorWithRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "fromLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -287,10 +301,19 @@
         "nonatomic"
       ]
     },
-    "contentBounds": {
-      "name": "contentBounds",
+    "containsFixedLayers": {
+      "name": "containsFixedLayers",
       "pointer": false,
-      "type": "struct CGRect",
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "preset": {
+      "name": "preset",
+      "pointer": true,
+      "type": "MSArtboardPreset",
       "attributes": [
         "readonly",
         "nonatomic"

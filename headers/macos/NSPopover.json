@@ -146,31 +146,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawBackgroundInRect:ofView:anchorEdge:anchorPoint:": {
-      "name": "drawBackgroundInRect:ofView:anchorEdge:anchorPoint:",
-      "bridgedName": "drawBackgroundInRect_ofView_anchorEdge_anchorPoint",
-      "args": [
-        {
-          "name": "drawBackgroundInRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "ofView",
-          "type": "id"
-        },
-        {
-          "name": "anchorEdge",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "anchorPoint",
-          "type": "struct CGPoint"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "contentInset": {
       "name": "contentInset",
       "bridgedName": "contentInset",
@@ -409,14 +384,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_popoverWindowSubLevel": {
-      "name": "_popoverWindowSubLevel",
-      "bridgedName": "_popoverWindowSubLevel",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_updatePopoverWindowLevels": {
       "name": "_updatePopoverWindowLevels",
       "bridgedName": "_updatePopoverWindowLevels",
@@ -550,6 +517,44 @@
         {
           "name": "preferredEdge",
           "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setListenToEffectiveAppearanceDidChange:": {
+      "name": "_setListenToEffectiveAppearanceDidChange:",
+      "bridgedName": "_setListenToEffectiveAppearanceDidChange",
+      "args": [
+        {
+          "name": "_setListenToEffectiveAppearanceDidChange",
+          "type": "BOOL"
         }
       ],
       "returns": "void",
@@ -855,12 +860,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_shouldUseAquaAppearanceForContentView:": {
-      "name": "_shouldUseAquaAppearanceForContentView:",
-      "bridgedName": "_shouldUseAquaAppearanceForContentView",
+    "_shouldUseNonVibrantAppearanceForContentView:": {
+      "name": "_shouldUseNonVibrantAppearanceForContentView:",
+      "bridgedName": "_shouldUseNonVibrantAppearanceForContentView",
       "args": [
         {
-          "name": "_shouldUseAquaAppearanceForContentView",
+          "name": "_shouldUseNonVibrantAppearanceForContentView",
           "type": "id"
         }
       ],
@@ -1158,6 +1163,23 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_currentFrameOnScreenWithContentSize:outAnchorEdge:": {
+      "name": "_currentFrameOnScreenWithContentSize:outAnchorEdge:",
+      "bridgedName": "_currentFrameOnScreenWithContentSize_outAnchorEdge",
+      "args": [
+        {
+          "name": "_currentFrameOnScreenWithContentSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "outAnchorEdge",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_closeForToolbarPresentingOnWindow:": {
       "name": "_closeForToolbarPresentingOnWindow:",
       "bridgedName": "_closeForToolbarPresentingOnWindow",
@@ -1339,6 +1361,15 @@
       "attributes": [
         "readonly",
         "getter=isDetached"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
       ]
     },
     "shown": {
@@ -2151,15 +2182,6 @@
     },
     "debugDescription": {
       "name": "debugDescription",
-      "pointer": true,
-      "type": "NSString",
-      "attributes": [
-        "readonly",
-        "copy"
-      ]
-    },
-    "description": {
-      "name": "description",
       "pointer": true,
       "type": "NSString",
       "attributes": [

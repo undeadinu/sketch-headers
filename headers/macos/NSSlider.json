@@ -2,7 +2,8 @@
   "imports": [
     "NSAccessibilitySlider.h",
     "NSSliderAccessoryContainer.h",
-    "NSSliderCellControlView.h"
+    "NSSliderCellControlView.h",
+    "NSSliderTickMarksDelegate.h"
   ],
   "classes": [
     "NSColor",
@@ -16,6 +17,7 @@
   "interfaces": [
     "NSSliderAccessoryContainer",
     "NSSliderCellControlView",
+    "NSSliderTickMarksDelegate",
     "NSAccessibilitySlider"
   ],
   "methods": {
@@ -289,6 +291,185 @@
       "bridgedName": "accessibilityLabel",
       "args": [],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutComponentSubviewsIfNecessary": {
+      "name": "_layoutComponentSubviewsIfNecessary",
+      "bridgedName": "_layoutComponentSubviewsIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearComponentSubviewsAndRemoveFromSuperview:": {
+      "name": "_clearComponentSubviewsAndRemoveFromSuperview:",
+      "bridgedName": "_clearComponentSubviewsAndRemoveFromSuperview",
+      "args": [
+        {
+          "name": "_clearComponentSubviewsAndRemoveFromSuperview",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearComponentSubviews": {
+      "name": "_clearComponentSubviews",
+      "bridgedName": "_clearComponentSubviews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createComponentSubviews": {
+      "name": "_createComponentSubviews",
+      "bridgedName": "_createComponentSubviews",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateComponentSubviewRenderingState": {
+      "name": "_updateComponentSubviewRenderingState",
+      "bridgedName": "_updateComponentSubviewRenderingState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_circularKnobView": {
+      "name": "_circularKnobView",
+      "bridgedName": "_circularKnobView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCircularKnobView:": {
+      "name": "_setCircularKnobView:",
+      "bridgedName": "_setCircularKnobView",
+      "args": [
+        {
+          "name": "_setCircularKnobView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dialView": {
+      "name": "_dialView",
+      "bridgedName": "_dialView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDialView:": {
+      "name": "_setDialView:",
+      "bridgedName": "_setDialView",
+      "args": [
+        {
+          "name": "_setDialView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_knobView": {
+      "name": "_knobView",
+      "bridgedName": "_knobView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setKnobView:": {
+      "name": "_setKnobView:",
+      "bridgedName": "_setKnobView",
+      "args": [
+        {
+          "name": "_setKnobView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tickMarksView": {
+      "name": "_tickMarksView",
+      "bridgedName": "_tickMarksView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTickMarksView:": {
+      "name": "_setTickMarksView:",
+      "bridgedName": "_setTickMarksView",
+      "args": [
+        {
+          "name": "_setTickMarksView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackView": {
+      "name": "_trackView",
+      "bridgedName": "_trackView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTrackView:": {
+      "name": "_setTrackView:",
+      "bridgedName": "_setTrackView",
+      "args": [
+        {
+          "name": "_setTrackView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subviewRenderingMode": {
+      "name": "_subviewRenderingMode",
+      "bridgedName": "_subviewRenderingMode",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setSubviewRenderingMode:": {
+      "name": "_setSubviewRenderingMode:",
+      "bridgedName": "_setSubviewRenderingMode",
+      "args": [
+        {
+          "name": "_setSubviewRenderingMode",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -880,6 +1061,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "designatedFocusRingView": {
+      "name": "designatedFocusRingView",
+      "bridgedName": "designatedFocusRingView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "isFlipped": {
       "name": "isFlipped",
       "bridgedName": "isFlipped",
@@ -945,6 +1147,32 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sliderCellDidInvalidateComponentRects:": {
+      "name": "sliderCellDidInvalidateComponentRects:",
+      "bridgedName": "sliderCellDidInvalidateComponentRects",
+      "args": [
+        {
+          "name": "sliderCellDidInvalidateComponentRects",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateCell:": {
+      "name": "updateCell:",
+      "bridgedName": "updateCell",
+      "args": [
+        {
+          "name": "updateCell",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

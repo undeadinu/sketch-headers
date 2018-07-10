@@ -14,27 +14,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "isObscured": {
-      "name": "isObscured",
-      "bridgedName": "isObscured",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setObscured:": {
-      "name": "setObscured:",
-      "bridgedName": "setObscured",
-      "args": [
-        {
-          "name": "setObscured",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "getState:": {
       "name": "getState:",
       "bridgedName": "getState",
@@ -66,6 +45,19 @@
         }
       ],
       "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrancyBlendModeForControlView:": {
+      "name": "_vibrancyBlendModeForControlView:",
+      "bridgedName": "_vibrancyBlendModeForControlView",
+      "args": [
+        {
+          "name": "_vibrancyBlendModeForControlView",
+          "type": "id"
+        }
+      ],
+      "returns": "int",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -230,11 +222,60 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "coreUIDrawOptionsInView:isFlipped:": {
+      "name": "coreUIDrawOptionsInView:isFlipped:",
+      "bridgedName": "coreUIDrawOptionsInView_isFlipped",
+      "args": [
+        {
+          "name": "coreUIDrawOptionsInView",
+          "type": "id"
+        },
+        {
+          "name": "isFlipped",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coreUIWidgetType": {
+      "name": "coreUIWidgetType",
+      "bridgedName": "coreUIWidgetType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coreUIWindowType": {
+      "name": "coreUIWindowType",
+      "bridgedName": "coreUIWindowType",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coreUIValue": {
+      "name": "coreUIValue",
+      "bridgedName": "coreUIValue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "coreUIState": {
       "name": "coreUIState",
       "bridgedName": "coreUIState",
       "args": [],
-      "returns": "struct __CFString *",
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coreUIPresentationState": {
+      "name": "coreUIPresentationState",
+      "bridgedName": "coreUIPresentationState",
+      "args": [],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -248,14 +289,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "coreUIPresentationState": {
-      "name": "coreUIPresentationState",
-      "bridgedName": "coreUIPresentationState",
-      "args": [],
-      "returns": "struct __CFString *",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -275,74 +308,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "temporarilyDisabled": {
-      "name": "temporarilyDisabled",
-      "bridgedName": "temporarilyDisabled",
-      "args": [],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setTemporarilyDisabled:": {
-      "name": "setTemporarilyDisabled:",
-      "bridgedName": "setTemporarilyDisabled",
-      "args": [
-        {
-          "name": "setTemporarilyDisabled",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setCoreUIWindowType:": {
-      "name": "setCoreUIWindowType:",
-      "bridgedName": "setCoreUIWindowType",
-      "args": [
-        {
-          "name": "setCoreUIWindowType",
-          "type": "struct __CFString *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "coreUIWidgetType": {
-      "name": "coreUIWidgetType",
-      "bridgedName": "coreUIWidgetType",
-      "args": [],
-      "returns": "struct __CFString *",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_realWindow": {
       "name": "_realWindow",
       "bridgedName": "_realWindow",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setCoreUIWidgetType:": {
-      "name": "setCoreUIWidgetType:",
-      "bridgedName": "setCoreUIWidgetType",
-      "args": [
-        {
-          "name": "setCoreUIWidgetType",
-          "type": "struct __CFString *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
-      "args": [],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -356,40 +326,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "initImageCell:": {
-      "name": "initImageCell:",
-      "bridgedName": "initImageCell",
-      "args": [
-        {
-          "name": "initImageCell",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "initTextCell:": {
-      "name": "initTextCell:",
-      "bridgedName": "initTextCell",
-      "args": [
-        {
-          "name": "initTextCell",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_NSThemeWidgetCell_commonInit": {
-      "name": "_NSThemeWidgetCell_commonInit",
-      "bridgedName": "_NSThemeWidgetCell_commonInit",
-      "args": [],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -516,5 +452,14 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "obscured": {
+      "name": "obscured",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isObscured"
+      ]
+    }
+  }
 }

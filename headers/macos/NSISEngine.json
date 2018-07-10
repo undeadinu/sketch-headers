@@ -9,7 +9,7 @@
     "NSMapTable",
     "NSMutableArray",
     "NSMutableDictionary",
-    "NSMutableSet",
+    "NSMutableIndexSet",
     "NSObject<NSObservable>",
     "NSString",
     "NSThread",
@@ -74,38 +74,46 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "incoming:andOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:": {
-      "name": "incoming:andOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:",
-      "bridgedName": "incoming_andOutgoing_rowHeadsThatMakeValueAmbiguousForVariable",
+    "incoming:andOutgoing:foundOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:": {
+      "name": "incoming:andOutgoing:foundOutgoing:rowHeadsThatMakeValueAmbiguousForVariable:",
+      "bridgedName": "incoming_andOutgoing_foundOutgoing_rowHeadsThatMakeValueAmbiguousForVariable",
       "args": [
         {
           "name": "incoming",
-          "type": "id *"
+          "type": "CDStruct_5cfd13ef *"
         },
         {
           "name": "andOutgoing",
-          "type": "id *"
+          "type": "CDStruct_5cfd13ef *"
+        },
+        {
+          "name": "foundOutgoing",
+          "type": "char *"
         },
         {
           "name": "rowHeadsThatMakeValueAmbiguousForVariable",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:": {
-      "name": "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:",
-      "bridgedName": "bodyVarIsAmbiguous_withPivotOfOutgoingRowHead",
+    "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:foundOutgoingRowHead:": {
+      "name": "bodyVarIsAmbiguous:withPivotOfOutgoingRowHead:foundOutgoingRowHead:",
+      "bridgedName": "bodyVarIsAmbiguous_withPivotOfOutgoingRowHead_foundOutgoingRowHead",
       "args": [
         {
           "name": "bodyVarIsAmbiguous",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "withPivotOfOutgoingRowHead",
-          "type": "id *"
+          "type": "CDStruct_5cfd13ef *"
+        },
+        {
+          "name": "foundOutgoingRowHead",
+          "type": "char *"
         }
       ],
       "returns": "BOOL",
@@ -144,6 +152,14 @@
     "pivotCount": {
       "name": "pivotCount",
       "bridgedName": "pivotCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rowCount": {
+      "name": "rowCount",
+      "bridgedName": "rowCount",
       "args": [],
       "returns": "unsigned long long",
       "kind": "instance",
@@ -298,16 +314,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "outgoingRowHeadForRemovingConstraintWithMarker:": {
-      "name": "outgoingRowHeadForRemovingConstraintWithMarker:",
-      "bridgedName": "outgoingRowHeadForRemovingConstraintWithMarker",
+    "outgoingRowHeadForRemovingConstraintWithMarker:outgoingRowHead:": {
+      "name": "outgoingRowHeadForRemovingConstraintWithMarker:outgoingRowHead:",
+      "bridgedName": "outgoingRowHeadForRemovingConstraintWithMarker_outgoingRowHead",
       "args": [
         {
           "name": "outgoingRowHeadForRemovingConstraintWithMarker",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
+        },
+        {
+          "name": "outgoingRowHead",
+          "type": "CDStruct_5cfd13ef *"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -366,6 +386,48 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "tryToAddConstraintWithMarkerEngineVar:row:mutuallyExclusiveConstraints:": {
+      "name": "tryToAddConstraintWithMarkerEngineVar:row:mutuallyExclusiveConstraints:",
+      "bridgedName": "tryToAddConstraintWithMarkerEngineVar_row_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "tryToAddConstraintWithMarkerEngineVar",
+          "type": "CDStruct_5cfd13ef"
+        },
+        {
+          "name": "row",
+          "type": "CDStruct_5cfd13ef"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tryToAddConstraintWithMarker:expression:mutuallyExclusiveConstraints:": {
+      "name": "tryToAddConstraintWithMarker:expression:mutuallyExclusiveConstraints:",
+      "bridgedName": "tryToAddConstraintWithMarker_expression_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "tryToAddConstraintWithMarker",
+          "type": "id"
+        },
+        {
+          "name": "expression",
+          "type": "id"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "tryToAddConstraintWithMarker:expression:integralizationAdjustment:mutuallyExclusiveConstraints:": {
       "name": "tryToAddConstraintWithMarker:expression:integralizationAdjustment:mutuallyExclusiveConstraints:",
       "bridgedName": "tryToAddConstraintWithMarker_expression_integralizationAdjustment_mutuallyExclusiveConstraints",
@@ -391,25 +453,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "endBookkeepingForVariableIfUnused:": {
+      "name": "endBookkeepingForVariableIfUnused:",
+      "bridgedName": "endBookkeepingForVariableIfUnused",
+      "args": [
+        {
+          "name": "endBookkeepingForVariableIfUnused",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginBookkeepingForVariableIfNeeded:": {
+      "name": "beginBookkeepingForVariableIfNeeded:",
+      "bridgedName": "beginBookkeepingForVariableIfNeeded",
+      "args": [
+        {
+          "name": "beginBookkeepingForVariableIfNeeded",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "containsVariable:": {
       "name": "containsVariable:",
       "bridgedName": "containsVariable",
       "args": [
         {
           "name": "containsVariable",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_variableIsAbsentExceptForObjectiveRow:": {
-      "name": "_variableIsAbsentExceptForObjectiveRow:",
-      "bridgedName": "_variableIsAbsentExceptForObjectiveRow",
-      "args": [
-        {
-          "name": "_variableIsAbsentExceptForObjectiveRow",
           "type": "id"
         }
       ],
@@ -562,6 +637,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_addObjectiveRow": {
+      "name": "_addObjectiveRow",
+      "bridgedName": "_addObjectiveRow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "rebuildFromConstraints": {
       "name": "rebuildFromConstraints",
       "bridgedName": "rebuildFromConstraints",
@@ -627,6 +710,45 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "valueRestrictionForEngineVarIndex:": {
+      "name": "valueRestrictionForEngineVarIndex:",
+      "bridgedName": "valueRestrictionForEngineVarIndex",
+      "args": [
+        {
+          "name": "valueRestrictionForEngineVarIndex",
+          "type": "CDStruct_fcd6c539"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "variableForEngineVarIndex:": {
+      "name": "variableForEngineVarIndex:",
+      "bridgedName": "variableForEngineVarIndex",
+      "args": [
+        {
+          "name": "variableForEngineVarIndex",
+          "type": "CDStruct_fcd6c539"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "engineVarIndexForVariable:": {
+      "name": "engineVarIndexForVariable:",
+      "bridgedName": "engineVarIndexForVariable",
+      "args": [
+        {
+          "name": "engineVarIndexForVariable",
+          "type": "id"
+        }
+      ],
+      "returns": "CDStruct_fcd6c539",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "dealloc": {
       "name": "dealloc",
       "bridgedName": "dealloc",
@@ -643,17 +765,17 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "tryUsingArtificialVariableToAddConstraintWithMarker:rowBody:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:": {
-      "name": "tryUsingArtificialVariableToAddConstraintWithMarker:rowBody:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:",
-      "bridgedName": "tryUsingArtificialVariableToAddConstraintWithMarker_rowBody_usingInfeasibilityHandlingBehavior_mutuallyExclusiveConstraints",
+    "tryUsingArtificialVariableToAddConstraintWithMarker:row:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:": {
+      "name": "tryUsingArtificialVariableToAddConstraintWithMarker:row:usingInfeasibilityHandlingBehavior:mutuallyExclusiveConstraints:",
+      "bridgedName": "tryUsingArtificialVariableToAddConstraintWithMarker_row_usingInfeasibilityHandlingBehavior_mutuallyExclusiveConstraints",
       "args": [
         {
           "name": "tryUsingArtificialVariableToAddConstraintWithMarker",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
         },
         {
-          "name": "rowBody",
-          "type": "id"
+          "name": "row",
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "usingInfeasibilityHandlingBehavior",
@@ -674,27 +796,31 @@
       "args": [
         {
           "name": "tryAddingDirectly",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "chooseHeadForRowBody:outNewToEngine:": {
-      "name": "chooseHeadForRowBody:outNewToEngine:",
-      "bridgedName": "chooseHeadForRowBody_outNewToEngine",
+    "chooseHeadForRow:chosenCol:outNewToEngine:": {
+      "name": "chooseHeadForRow:chosenCol:outNewToEngine:",
+      "bridgedName": "chooseHeadForRow_chosenCol_outNewToEngine",
       "args": [
         {
-          "name": "chooseHeadForRowBody",
-          "type": "id"
+          "name": "chooseHeadForRow",
+          "type": "CDStruct_5cfd13ef"
+        },
+        {
+          "name": "chosenCol",
+          "type": "CDStruct_5cfd13ef *"
         },
         {
           "name": "outNewToEngine",
           "type": "char *"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -708,61 +834,6 @@
         }
       ],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "fixupIntegralizationViolations": {
-      "name": "fixupIntegralizationViolations",
-      "bridgedName": "fixupIntegralizationViolations",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses:varsAlreadyAdjusted:": {
-      "name": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses:varsAlreadyAdjusted:",
-      "bridgedName": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses_varsAlreadyAdjusted",
-      "args": [
-        {
-          "name": "variableToWorkOnAmongVariablesWithIntegralizationViolationsIgnoringLostCauses",
-          "type": "id"
-        },
-        {
-          "name": "varsAlreadyAdjusted",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable:ignoringConstraintsWithMarkers:": {
-      "name": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable:ignoringConstraintsWithMarkers:",
-      "bridgedName": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable_ignoringConstraintsWithMarkers",
-      "args": [
-        {
-          "name": "numberOfConstraintsEligibleForAdjustmentToIntegralizeVariable",
-          "type": "id"
-        },
-        {
-          "name": "ignoringConstraintsWithMarkers",
-          "type": "id"
-        }
-      ],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "valueForVariableWithoutIntegralizationAdjustments:": {
-      "name": "valueForVariableWithoutIntegralizationAdjustments:",
-      "bridgedName": "valueForVariableWithoutIntegralizationAdjustments",
-      "args": [
-        {
-          "name": "valueForVariableWithoutIntegralizationAdjustments",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -821,6 +892,31 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "handleUnsatisfiableRow:usingInfeasibilityHandlingBehavior:prospectiveRowHead:mutuallyExclusiveConstraints:": {
+      "name": "handleUnsatisfiableRow:usingInfeasibilityHandlingBehavior:prospectiveRowHead:mutuallyExclusiveConstraints:",
+      "bridgedName": "handleUnsatisfiableRow_usingInfeasibilityHandlingBehavior_prospectiveRowHead_mutuallyExclusiveConstraints",
+      "args": [
+        {
+          "name": "handleUnsatisfiableRow",
+          "type": "CDStruct_5cfd13ef"
+        },
+        {
+          "name": "usingInfeasibilityHandlingBehavior",
+          "type": "long long"
+        },
+        {
+          "name": "prospectiveRowHead",
+          "type": "CDStruct_5cfd13ef *"
+        },
+        {
+          "name": "mutuallyExclusiveConstraints",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "fallbackMarkerForConstraintToBreakInRowWithHead:body:": {
       "name": "fallbackMarkerForConstraintToBreakInRowWithHead:body:",
       "bridgedName": "fallbackMarkerForConstraintToBreakInRowWithHead_body",
@@ -855,21 +951,21 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "replaceMarker:withMarkerPlusCoefficient:timesVariable:": {
-      "name": "replaceMarker:withMarkerPlusCoefficient:timesVariable:",
-      "bridgedName": "replaceMarker_withMarkerPlusCoefficient_timesVariable",
+    "replaceMarker:withMarkerPlusCoefficient:timesCol:": {
+      "name": "replaceMarker:withMarkerPlusCoefficient:timesCol:",
+      "bridgedName": "replaceMarker_withMarkerPlusCoefficient_timesCol",
       "args": [
         {
           "name": "replaceMarker",
-          "type": "id"
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "withMarkerPlusCoefficient",
           "type": "double"
         },
         {
-          "name": "timesVariable",
-          "type": "id"
+          "name": "timesCol",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
@@ -944,38 +1040,34 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addExpression:times:toRowWithHead:body:": {
-      "name": "addExpression:times:toRowWithHead:body:",
-      "bridgedName": "addExpression_times_toRowWithHead_body",
+    "addRowBody:times:toRow:": {
+      "name": "addRowBody:times:toRow:",
+      "bridgedName": "addRowBody_times_toRow",
       "args": [
         {
-          "name": "addExpression",
-          "type": "id"
+          "name": "addRowBody",
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "times",
           "type": "double"
         },
         {
-          "name": "toRowWithHead",
-          "type": "id"
-        },
-        {
-          "name": "body",
-          "type": "id"
+          "name": "toRow",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addExpression:priority:times:toObjectiveRowWithHead:body:": {
-      "name": "addExpression:priority:times:toObjectiveRowWithHead:body:",
-      "bridgedName": "addExpression_priority_times_toObjectiveRowWithHead_body",
+    "addRowBody:priority:times:toObjectiveRow:": {
+      "name": "addRowBody:priority:times:toObjectiveRow:",
+      "bridgedName": "addRowBody_priority_times_toObjectiveRow",
       "args": [
         {
-          "name": "addExpression",
-          "type": "id"
+          "name": "addRowBody",
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "priority",
@@ -986,50 +1078,50 @@
           "type": "double"
         },
         {
-          "name": "toObjectiveRowWithHead",
-          "type": "id"
-        },
-        {
-          "name": "body",
-          "type": "id"
+          "name": "toObjectiveRow",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addVariable:coefficient:toRowWithHead:body:": {
-      "name": "addVariable:coefficient:toRowWithHead:body:",
-      "bridgedName": "addVariable_coefficient_toRowWithHead_body",
+    "_removeAllVariables": {
+      "name": "_removeAllVariables",
+      "bridgedName": "_removeAllVariables",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addCol:coefficient:toRow:": {
+      "name": "addCol:coefficient:toRow:",
+      "bridgedName": "addCol_coefficient_toRow",
       "args": [
         {
-          "name": "addVariable",
-          "type": "id"
+          "name": "addCol",
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "coefficient",
           "type": "double"
         },
         {
-          "name": "toRowWithHead",
-          "type": "id"
-        },
-        {
-          "name": "body",
-          "type": "id"
+          "name": "toRow",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "addVariable:priority:times:toObjectiveRowWithHead:body:": {
-      "name": "addVariable:priority:times:toObjectiveRowWithHead:body:",
-      "bridgedName": "addVariable_priority_times_toObjectiveRowWithHead_body",
+    "addCol:priority:times:toObjectiveRow:": {
+      "name": "addCol:priority:times:toObjectiveRow:",
+      "bridgedName": "addCol_priority_times_toObjectiveRow",
       "args": [
         {
-          "name": "addVariable",
-          "type": "id"
+          "name": "addCol",
+          "type": "CDStruct_5cfd13ef"
         },
         {
           "name": "priority",
@@ -1040,42 +1132,21 @@
           "type": "double"
         },
         {
-          "name": "toObjectiveRowWithHead",
-          "type": "id"
-        },
-        {
-          "name": "body",
-          "type": "id"
+          "name": "toObjectiveRow",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeBodyVarFromAllRows:": {
-      "name": "removeBodyVarFromAllRows:",
-      "bridgedName": "removeBodyVarFromAllRows",
+    "removeColFromAllRows:": {
+      "name": "removeColFromAllRows:",
+      "bridgedName": "removeColFromAllRows",
       "args": [
         {
-          "name": "removeBodyVarFromAllRows",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setIntegralizationAdjustment:forMarker:": {
-      "name": "setIntegralizationAdjustment:forMarker:",
-      "bridgedName": "setIntegralizationAdjustment_forMarker",
-      "args": [
-        {
-          "name": "setIntegralizationAdjustment",
-          "type": "double"
-        },
-        {
-          "name": "forMarker",
-          "type": "id"
+          "name": "removeColFromAllRows",
+          "type": "CDStruct_5cfd13ef"
         }
       ],
       "returns": "void",
@@ -1194,16 +1265,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "negativeErrorVarForBrokenConstraintWithMarker:": {
-      "name": "negativeErrorVarForBrokenConstraintWithMarker:",
-      "bridgedName": "negativeErrorVarForBrokenConstraintWithMarker",
+    "negativeErrorVarForBrokenConstraintWithMarker:errorVar:": {
+      "name": "negativeErrorVarForBrokenConstraintWithMarker:errorVar:",
+      "bridgedName": "negativeErrorVarForBrokenConstraintWithMarker_errorVar",
       "args": [
         {
           "name": "negativeErrorVarForBrokenConstraintWithMarker",
           "type": "id"
+        },
+        {
+          "name": "errorVar",
+          "type": "CDStruct_5cfd13ef *"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1240,16 +1315,20 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "positiveErrorVarForBrokenConstraintWithMarker:": {
-      "name": "positiveErrorVarForBrokenConstraintWithMarker:",
-      "bridgedName": "positiveErrorVarForBrokenConstraintWithMarker",
+    "positiveErrorVarForBrokenConstraintWithMarker:errorVar:": {
+      "name": "positiveErrorVarForBrokenConstraintWithMarker:errorVar:",
+      "bridgedName": "positiveErrorVarForBrokenConstraintWithMarker_errorVar",
       "args": [
         {
           "name": "positiveErrorVarForBrokenConstraintWithMarker",
           "type": "id"
+        },
+        {
+          "name": "errorVar",
+          "type": "CDStruct_5cfd13ef *"
         }
       ],
-      "returns": "id",
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -1269,43 +1348,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "enumerateRowsCrossIndex:": {
-      "name": "enumerateRowsCrossIndex:",
-      "bridgedName": "enumerateRowsCrossIndex",
+    "enumerateCols:": {
+      "name": "enumerateCols:",
+      "bridgedName": "enumerateCols",
       "args": [
         {
-          "name": "enumerateRowsCrossIndex",
+          "name": "enumerateCols",
           "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rawRemoveRowWithHead:": {
-      "name": "rawRemoveRowWithHead:",
-      "bridgedName": "rawRemoveRowWithHead",
-      "args": [
-        {
-          "name": "rawRemoveRowWithHead",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rawSetRowWithHead:body:": {
-      "name": "rawSetRowWithHead:body:",
-      "bridgedName": "rawSetRowWithHead_body",
-      "args": [
-        {
-          "name": "rawSetRowWithHead",
-          "type": "id"
-        },
-        {
-          "name": "body",
-          "type": "id"
         }
       ],
       "returns": "void",
@@ -1326,6 +1375,19 @@
       "args": [
         {
           "name": "enumerateRows",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateEngineVars:": {
+      "name": "enumerateEngineVars:",
+      "bridgedName": "enumerateEngineVars",
+      "args": [
+        {
+          "name": "enumerateEngineVars",
           "type": "CDUnknownBlockType"
         }
       ],
@@ -1364,42 +1426,10 @@
         "nonatomic"
       ]
     },
-    "variablesWithIntegralizationViolations": {
-      "name": "variablesWithIntegralizationViolations",
-      "pointer": true,
-      "type": "NSMutableSet",
-      "attributes": [
-        "retain"
-      ]
-    },
     "variablesWithValueRestrictionViolations": {
       "name": "variablesWithValueRestrictionViolations",
       "pointer": true,
       "type": "NSMutableArray",
-      "attributes": [
-        "retain"
-      ]
-    },
-    "headForObjectiveRow": {
-      "name": "headForObjectiveRow",
-      "pointer": true,
-      "type": "NSISVariable",
-      "attributes": [
-        "retain"
-      ]
-    },
-    "rowsCrossIndex": {
-      "name": "rowsCrossIndex",
-      "pointer": true,
-      "type": "NSMapTable",
-      "attributes": [
-        "retain"
-      ]
-    },
-    "rows": {
-      "name": "rows",
-      "pointer": true,
-      "type": "NSMapTable",
       "attributes": [
         "retain"
       ]

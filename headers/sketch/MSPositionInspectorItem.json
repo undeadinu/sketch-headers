@@ -1,13 +1,40 @@
 {
   "imports": [
-    "MSTwoTextFieldInspectorItem.h"
+    "MSTwoTextFieldInspectorItem.h",
+    "MSInspectorValueAdaptorDelegate.h"
   ],
-  "classes": [],
+  "classes": [
+    "MSCoordinateInspectorValueAdaptor",
+    "NSString"
+  ],
   "protocol": false,
   "className": "MSPositionInspectorItem",
   "extends": "MSTwoTextFieldInspectorItem",
-  "interfaces": [],
+  "interfaces": [
+    "MSInspectorValueAdaptorDelegate"
+  ],
   "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorValueAdaptorAllowFloat:": {
+      "name": "inspectorValueAdaptorAllowFloat:",
+      "bridgedName": "inspectorValueAdaptorAllowFloat",
+      "args": [
+        {
+          "name": "inspectorValueAdaptorAllowFloat",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "allowFloatValues": {
       "name": "allowFloatValues",
       "bridgedName": "allowFloatValues",
@@ -24,88 +51,32 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "rulerOriginXForLayer:": {
-      "name": "rulerOriginXForLayer:",
-      "bridgedName": "rulerOriginXForLayer",
-      "args": [
-        {
-          "name": "rulerOriginXForLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rulerOriginYForLayer:": {
-      "name": "rulerOriginYForLayer:",
-      "bridgedName": "rulerOriginYForLayer",
-      "args": [
-        {
-          "name": "rulerOriginYForLayer",
-          "type": "id"
-        }
-      ],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "absoluteYForLayers": {
-      "name": "absoluteYForLayers",
-      "bridgedName": "absoluteYForLayers",
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
       "args": [],
-      "returns": "double",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "absoluteXForLayers": {
-      "name": "absoluteXForLayers",
-      "bridgedName": "absoluteXForLayers",
-      "args": [],
-      "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "setLayerPositionFromString:onAxis:": {
-      "name": "setLayerPositionFromString:onAxis:",
-      "bridgedName": "setLayerPositionFromString_onAxis",
+    "initWithTitle:field1Label:field2Label:": {
+      "name": "initWithTitle:field1Label:field2Label:",
+      "bridgedName": "initWithTitle_field1Label_field2Label",
       "args": [
         {
-          "name": "setLayerPositionFromString",
+          "name": "initWithTitle",
           "type": "id"
         },
         {
-          "name": "onAxis",
-          "type": "unsigned long long"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "textField2Action:": {
-      "name": "textField2Action:",
-      "bridgedName": "textField2Action",
-      "args": [
+          "name": "field1Label",
+          "type": "id"
+        },
         {
-          "name": "textField2Action",
+          "name": "field2Label",
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "textField1Action:": {
-      "name": "textField1Action:",
-      "bridgedName": "textField1Action",
-      "args": [
-        {
-          "name": "textField1Action",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -118,5 +89,58 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "yAdaptor": {
+      "name": "yAdaptor",
+      "pointer": true,
+      "type": "MSCoordinateInspectorValueAdaptor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "xAdaptor": {
+      "name": "xAdaptor",
+      "pointer": true,
+      "type": "MSCoordinateInspectorValueAdaptor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
 }

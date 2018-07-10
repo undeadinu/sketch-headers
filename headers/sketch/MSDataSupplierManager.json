@@ -1,7 +1,8 @@
 {
   "imports": [
     "NSObject.h",
-    "MSLocalDataSupplierDelegate.h"
+    "MSLocalDataSupplierDelegate.h",
+    "MSPluginDataSupplierDelegate.h"
   ],
   "classes": [
     "NSArray",
@@ -13,7 +14,8 @@
   "className": "MSDataSupplierManager",
   "extends": "NSObject",
   "interfaces": [
-    "MSLocalDataSupplierDelegate"
+    "MSLocalDataSupplierDelegate",
+    "MSPluginDataSupplierDelegate"
   ],
   "methods": {
     "validLocalDataFileSystemURL:": {
@@ -74,6 +76,52 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dataIdentifierFromUserInfoForKey:onLayer:": {
+      "name": "dataIdentifierFromUserInfoForKey:onLayer:",
+      "bridgedName": "dataIdentifierFromUserInfoForKey_onLayer",
+      "args": [
+        {
+          "name": "dataIdentifierFromUserInfoForKey",
+          "type": "id"
+        },
+        {
+          "name": "onLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDataIdentifierToUserInfo:forKey:toLayer:": {
+      "name": "setDataIdentifierToUserInfo:forKey:toLayer:",
+      "bridgedName": "setDataIdentifierToUserInfo_forKey_toLayer",
+      "args": [
+        {
+          "name": "setDataIdentifierToUserInfo",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        },
+        {
+          "name": "toLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadPluginData": {
+      "name": "loadPluginData",
+      "bridgedName": "loadPluginData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "localDataForDefaultsKey:": {
       "name": "localDataForDefaultsKey:",
       "bridgedName": "localDataForDefaultsKey",
@@ -87,11 +135,106 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "postLocalDataSupplierChangeNotification": {
-      "name": "postLocalDataSupplierChangeNotification",
-      "bridgedName": "postLocalDataSupplierChangeNotification",
+    "postDataSupplierChangeNotification": {
+      "name": "postDataSupplierChangeNotification",
+      "bridgedName": "postDataSupplierChangeNotification",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasDataSupplierWithDataIdentifier:": {
+      "name": "hasDataSupplierWithDataIdentifier:",
+      "bridgedName": "hasDataSupplierWithDataIdentifier",
+      "args": [
+        {
+          "name": "hasDataSupplierWithDataIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasBuiltinDataSupplierWithDataIdentifier:": {
+      "name": "hasBuiltinDataSupplierWithDataIdentifier:",
+      "bridgedName": "hasBuiltinDataSupplierWithDataIdentifier",
+      "args": [
+        {
+          "name": "hasBuiltinDataSupplierWithDataIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasLocalDataSupplierWithDataIdentifier:": {
+      "name": "hasLocalDataSupplierWithDataIdentifier:",
+      "bridgedName": "hasLocalDataSupplierWithDataIdentifier",
+      "args": [
+        {
+          "name": "hasLocalDataSupplierWithDataIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasPluginDataSupplierWithDataIdentifier:": {
+      "name": "hasPluginDataSupplierWithDataIdentifier:",
+      "bridgedName": "hasPluginDataSupplierWithDataIdentifier",
+      "args": [
+        {
+          "name": "hasPluginDataSupplierWithDataIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstPluginDataSupplierWithIdentifier:": {
+      "name": "firstPluginDataSupplierWithIdentifier:",
+      "bridgedName": "firstPluginDataSupplierWithIdentifier",
+      "args": [
+        {
+          "name": "firstPluginDataSupplierWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "firstDataSupplierInArray:dataIdentifier:": {
+      "name": "firstDataSupplierInArray:dataIdentifier:",
+      "bridgedName": "firstDataSupplierInArray_dataIdentifier",
+      "args": [
+        {
+          "name": "firstDataSupplierInArray",
+          "type": "id"
+        },
+        {
+          "name": "dataIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPluginForDataSupplierEnabled:": {
+      "name": "isPluginForDataSupplierEnabled:",
+      "bridgedName": "isPluginForDataSupplierEnabled",
+      "args": [
+        {
+          "name": "isPluginForDataSupplierEnabled",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -108,12 +251,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "locaDataSupplierDataChanged:": {
-      "name": "locaDataSupplierDataChanged:",
-      "bridgedName": "locaDataSupplierDataChanged",
+    "localDataSupplierDataChanged:": {
+      "name": "localDataSupplierDataChanged:",
+      "bridgedName": "localDataSupplierDataChanged",
       "args": [
         {
-          "name": "locaDataSupplierDataChanged",
+          "name": "localDataSupplierDataChanged",
           "type": "id"
         }
       ],
@@ -121,12 +264,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "removeDataSupplier:": {
-      "name": "removeDataSupplier:",
-      "bridgedName": "removeDataSupplier",
+    "removePluginDataSuppliersNotIdentifiedWithIdentifiers:": {
+      "name": "removePluginDataSuppliersNotIdentifiedWithIdentifiers:",
+      "bridgedName": "removePluginDataSuppliersNotIdentifiedWithIdentifiers",
       "args": [
         {
-          "name": "removeDataSupplier",
+          "name": "removePluginDataSuppliersNotIdentifiedWithIdentifiers",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeLocalDataSupplier:": {
+      "name": "removeLocalDataSupplier:",
+      "bridgedName": "removeLocalDataSupplier",
+      "args": [
+        {
+          "name": "removeLocalDataSupplier",
           "type": "id"
         }
       ],
@@ -150,6 +306,19 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "hasLocalDataSupplierWithURL:": {
+      "name": "hasLocalDataSupplierWithURL:",
+      "bridgedName": "hasLocalDataSupplierWithURL",
+      "args": [
+        {
+          "name": "hasLocalDataSupplierWithURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "addLocalData:": {
       "name": "addLocalData:",
       "bridgedName": "addLocalData",
@@ -168,6 +337,40 @@
       "bridgedName": "resetSketchBuiltinData",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDataSuppliersWithResetBuiltin:": {
+      "name": "loadDataSuppliersWithResetBuiltin:",
+      "bridgedName": "loadDataSuppliersWithResetBuiltin",
+      "args": [
+        {
+          "name": "loadDataSuppliersWithResetBuiltin",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localDataSuppliers": {
+      "name": "localDataSuppliers",
+      "bridgedName": "localDataSuppliers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataSupplierWithIdentifier:": {
+      "name": "dataSupplierWithIdentifier:",
+      "bridgedName": "dataSupplierWithIdentifier",
+      "args": [
+        {
+          "name": "dataSupplierWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -338,15 +541,6 @@
         "nonatomic"
       ]
     },
-    "localDataSuppliers": {
-      "name": "localDataSuppliers",
-      "pointer": true,
-      "type": "NSArray",
-      "attributes": [
-        "readonly",
-        "nonatomic"
-      ]
-    },
     "dataSuppliers": {
       "name": "dataSuppliers",
       "pointer": true,
@@ -354,6 +548,40 @@
       "attributes": [
         "readonly",
         "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
       ]
     }
   }

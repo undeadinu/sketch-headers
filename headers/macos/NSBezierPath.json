@@ -1,8 +1,8 @@
 {
   "imports": [
     "NSObject.h",
-    "NSCoding.h",
-    "NSCopying.h"
+    "NSCopying.h",
+    "NSSecureCoding.h"
   ],
   "classes": [],
   "protocol": false,
@@ -10,9 +10,17 @@
   "extends": "NSObject",
   "interfaces": [
     "NSCopying",
-    "NSCoding"
+    "NSSecureCoding"
   ],
   "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
     "defaultLineWidth": {
       "name": "defaultLineWidth",
       "bridgedName": "defaultLineWidth",
@@ -398,43 +406,6 @@
         }
       ],
       "returns": "void",
-      "kind": "class",
-      "kindIndicator": "+"
-    },
-    "bezierPathWithRoundedRect:xRadius:yRadius:roundedTopLeftCorner:roundedTopRightCorner:roundedBottomLeftCorner:roundedBottomRightCorner:": {
-      "name": "bezierPathWithRoundedRect:xRadius:yRadius:roundedTopLeftCorner:roundedTopRightCorner:roundedBottomLeftCorner:roundedBottomRightCorner:",
-      "bridgedName": "bezierPathWithRoundedRect_xRadius_yRadius_roundedTopLeftCorner_roundedTopRightCorner_roundedBottomLeftCorner_roundedBottomRightCorner",
-      "args": [
-        {
-          "name": "bezierPathWithRoundedRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "xRadius",
-          "type": "double"
-        },
-        {
-          "name": "yRadius",
-          "type": "double"
-        },
-        {
-          "name": "roundedTopLeftCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedTopRightCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedBottomLeftCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedBottomRightCorner",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -1069,6 +1040,56 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_initializeDashPatternFromDecodedBytes:length:requiresSecureCoding:error:": {
+      "name": "_initializeDashPatternFromDecodedBytes:length:requiresSecureCoding:error:",
+      "bridgedName": "_initializeDashPatternFromDecodedBytes_length_requiresSecureCoding_error",
+      "args": [
+        {
+          "name": "_initializeDashPatternFromDecodedBytes",
+          "type": "const void *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "requiresSecureCoding",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initializeSegmentsFromDecodedBytes:length:requiresSecureCoding:error:": {
+      "name": "_initializeSegmentsFromDecodedBytes:length:requiresSecureCoding:error:",
+      "bridgedName": "_initializeSegmentsFromDecodedBytes_length_requiresSecureCoding_error",
+      "args": [
+        {
+          "name": "_initializeSegmentsFromDecodedBytes",
+          "type": "const void *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "requiresSecureCoding",
+          "type": "BOOL"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_deviceClosePath": {
       "name": "_deviceClosePath",
       "bridgedName": "_deviceClosePath",
@@ -1218,43 +1239,6 @@
       "bridgedName": "cachesBezierPath",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "appendBezierPathWithRoundedRect:xRadius:yRadius:roundedTopLeftCorner:roundedTopRightCorner:roundedBottomLeftCorner:roundedBottomRightCorner:": {
-      "name": "appendBezierPathWithRoundedRect:xRadius:yRadius:roundedTopLeftCorner:roundedTopRightCorner:roundedBottomLeftCorner:roundedBottomRightCorner:",
-      "bridgedName": "appendBezierPathWithRoundedRect_xRadius_yRadius_roundedTopLeftCorner_roundedTopRightCorner_roundedBottomLeftCorner_roundedBottomRightCorner",
-      "args": [
-        {
-          "name": "appendBezierPathWithRoundedRect",
-          "type": "struct CGRect"
-        },
-        {
-          "name": "xRadius",
-          "type": "double"
-        },
-        {
-          "name": "yRadius",
-          "type": "double"
-        },
-        {
-          "name": "roundedTopLeftCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedTopRightCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedBottomLeftCorner",
-          "type": "BOOL"
-        },
-        {
-          "name": "roundedBottomRightCorner",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },

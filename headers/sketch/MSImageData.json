@@ -6,6 +6,7 @@
     "NSCopying.h"
   ],
   "classes": [
+    "BCReadWriteLock",
     "NSData",
     "NSImage",
     "NSObject<OS_dispatch_semaphore>",
@@ -50,6 +51,45 @@
       "bridgedName": ".cxx_destruct",
       "args": [],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "CGImageAtLevelOfDetail:": {
+      "name": "CGImageAtLevelOfDetail:",
+      "bridgedName": "CGImageAtLevelOfDetail",
+      "args": [
+        {
+          "name": "CGImageAtLevelOfDetail",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generateCGImageAtLevelOfDetail:": {
+      "name": "generateCGImageAtLevelOfDetail:",
+      "bridgedName": "generateCGImageAtLevelOfDetail",
+      "args": [
+        {
+          "name": "generateCGImageAtLevelOfDetail",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "CGImageSuitableForDrawingWithSize:": {
+      "name": "CGImageSuitableForDrawingWithSize:",
+      "bridgedName": "CGImageSuitableForDrawingWithSize",
+      "args": [
+        {
+          "name": "CGImageSuitableForDrawingWithSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "struct CGImage *",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -257,6 +297,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "initWithLegacyHash:": {
       "name": "initWithLegacyHash:",
       "bridgedName": "initWithLegacyHash",
@@ -300,6 +348,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "initDefault": {
+      "name": "initDefault",
+      "bridgedName": "initDefault",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "treeAsDictionary": {
       "name": "treeAsDictionary",
       "bridgedName": "treeAsDictionary",
@@ -310,6 +366,15 @@
     }
   },
   "properties": {
+    "imageLock": {
+      "name": "imageLock",
+      "pointer": true,
+      "type": "BCReadWriteLock",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
     "dataLock": {
       "name": "dataLock",
       "pointer": true,
@@ -325,6 +390,15 @@
       "type": "NSImage",
       "attributes": [
         "retain",
+        "nonatomic"
+      ]
+    },
+    "cgImage": {
+      "name": "cgImage",
+      "pointer": true,
+      "type": "struct CGImage",
+      "attributes": [
+        "readonly",
         "nonatomic"
       ]
     },

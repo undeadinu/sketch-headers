@@ -1,20 +1,22 @@
 {
   "imports": [
     "MSStylePartInspectorViewController.h",
+    "MSStylePartInspectorItemDelegate.h",
     "NSMenuDelegate.h"
   ],
   "classes": [
-    "NSButton",
+    "MSBlurNameInspectorItem",
+    "MSMotionBlurInspectorItem",
+    "MSSimpleBlurInspectorItem",
+    "MSZoomBlurInspectorItem",
     "NSMenuItem",
-    "NSSlider",
-    "NSString",
-    "NSTextField",
-    "NSView"
+    "NSString"
   ],
   "protocol": false,
   "className": "MSBlurInspectorViewController",
   "extends": "MSStylePartInspectorViewController",
   "interfaces": [
+    "MSStylePartInspectorItemDelegate",
     "NSMenuDelegate"
   ],
   "methods": {
@@ -26,20 +28,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "dealloc": {
-      "name": "dealloc",
-      "bridgedName": "dealloc",
-      "args": [],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "handlerFocusDidChange:": {
-      "name": "handlerFocusDidChange:",
-      "bridgedName": "handlerFocusDidChange",
+    "valuesPossiblyChanged:": {
+      "name": "valuesPossiblyChanged:",
+      "bridgedName": "valuesPossiblyChanged",
       "args": [
         {
-          "name": "handlerFocusDidChange",
+          "name": "valuesPossiblyChanged",
           "type": "id"
         }
       ],
@@ -47,29 +41,16 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "blurPopUpAction:": {
-      "name": "blurPopUpAction:",
-      "bridgedName": "blurPopUpAction",
+    "stylePartInspectorItemDocument:": {
+      "name": "stylePartInspectorItemDocument:",
+      "bridgedName": "stylePartInspectorItemDocument",
       "args": [
         {
-          "name": "blurPopUpAction",
+          "name": "stylePartInspectorItemDocument",
           "type": "id"
         }
       ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "editZoomCenter:": {
-      "name": "editZoomCenter:",
-      "bridgedName": "editZoomCenter",
-      "args": [
-        {
-          "name": "editZoomCenter",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
+      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -81,12 +62,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "menuNeedsUpdate:": {
-      "name": "menuNeedsUpdate:",
-      "bridgedName": "menuNeedsUpdate",
+    "setStyleParts:": {
+      "name": "setStyleParts:",
+      "bridgedName": "setStyleParts",
       "args": [
         {
-          "name": "menuNeedsUpdate",
+          "name": "setStyleParts",
           "type": "id"
         }
       ],
@@ -94,9 +75,25 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "blurKinds": {
+      "name": "blurKinds",
+      "bridgedName": "blurKinds",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "views": {
       "name": "views",
       "bridgedName": "views",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "items": {
+      "name": "items",
+      "bridgedName": "items",
       "args": [],
       "returns": "id",
       "kind": "instance",
@@ -128,9 +125,9 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "awakeFromNib": {
-      "name": "awakeFromNib",
-      "bridgedName": "awakeFromNib",
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
       "args": [],
       "returns": "void",
       "kind": "instance",
@@ -138,55 +135,46 @@
     }
   },
   "properties": {
-    "normalBlurSlider": {
-      "name": "normalBlurSlider",
+    "zoomBlurItem": {
+      "name": "zoomBlurItem",
       "pointer": true,
-      "type": "NSSlider",
+      "type": "MSZoomBlurInspectorItem",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "motionBlurSlider": {
-      "name": "motionBlurSlider",
+    "motionBlurItem": {
+      "name": "motionBlurItem",
       "pointer": true,
-      "type": "NSSlider",
+      "type": "MSMotionBlurInspectorItem",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "zoomBlurSlider": {
-      "name": "zoomBlurSlider",
+    "simpleBlurItem": {
+      "name": "simpleBlurItem",
       "pointer": true,
-      "type": "NSSlider",
+      "type": "MSSimpleBlurInspectorItem",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "normalBlurTextField": {
-      "name": "normalBlurTextField",
+    "blurNameItem": {
+      "name": "blurNameItem",
       "pointer": true,
-      "type": "NSTextField",
+      "type": "MSBlurNameInspectorItem",
       "attributes": [
         "retain",
         "nonatomic"
       ]
     },
-    "motionBlurTextField": {
-      "name": "motionBlurTextField",
+    "multipleBlursMenuItem": {
+      "name": "multipleBlursMenuItem",
       "pointer": true,
-      "type": "NSTextField",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "zoomBlurTextField": {
-      "name": "zoomBlurTextField",
-      "pointer": true,
-      "type": "NSTextField",
+      "type": "NSMenuItem",
       "attributes": [
         "retain",
         "nonatomic"
@@ -196,42 +184,6 @@
       "name": "backgroundBlurMenuItem",
       "pointer": true,
       "type": "NSMenuItem",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "editButton": {
-      "name": "editButton",
-      "pointer": true,
-      "type": "NSButton",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "zoomBlurView": {
-      "name": "zoomBlurView",
-      "pointer": true,
-      "type": "NSView",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "motionBlurView": {
-      "name": "motionBlurView",
-      "pointer": true,
-      "type": "NSView",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "gaussianBlurView": {
-      "name": "gaussianBlurView",
-      "pointer": true,
-      "type": "NSView",
       "attributes": [
         "retain",
         "nonatomic"

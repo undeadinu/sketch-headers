@@ -1,7 +1,10 @@
 {
   "imports": [
     "NSAccessibilityNavigableStaticText.h",
+    "NSColorChanging.h",
     "NSDraggingSource.h",
+    "NSMenuItemValidation.h",
+    "NSStandardKeyBindingResponding.h",
     "NSTextInput.h",
     "NSTextInputClient.h",
     "NSTextLayoutOrientationProvider.h",
@@ -21,10 +24,13 @@
   "className": "NSTextView",
   "extends": "NSText",
   "interfaces": [
+    "NSColorChanging",
+    "NSMenuItemValidation",
     "NSUserInterfaceValidations",
     "NSTextInputClient",
     "NSTextLayoutOrientationProvider",
     "NSDraggingSource",
+    "NSStandardKeyBindingResponding",
     "NSTextInput",
     "NSAccessibilityNavigableStaticText"
   ],
@@ -58,6 +64,38 @@
       "bridgedName": "initialize",
       "args": [],
       "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "scrollablePlainDocumentContentTextView": {
+      "name": "scrollablePlainDocumentContentTextView",
+      "bridgedName": "scrollablePlainDocumentContentTextView",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "scrollableDocumentContentTextView": {
+      "name": "scrollableDocumentContentTextView",
+      "bridgedName": "scrollableDocumentContentTextView",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fieldEditor": {
+      "name": "fieldEditor",
+      "bridgedName": "fieldEditor",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "scrollableTextView": {
+      "name": "scrollableTextView",
+      "bridgedName": "scrollableTextView",
+      "args": [],
+      "returns": "id",
       "kind": "class",
       "kindIndicator": "+"
     },
@@ -2882,6 +2920,23 @@
         }
       ],
       "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performValidatedReplacementInRange:withAttributedString:": {
+      "name": "performValidatedReplacementInRange:withAttributedString:",
+      "bridgedName": "performValidatedReplacementInRange_withAttributedString",
+      "args": [
+        {
+          "name": "performValidatedReplacementInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withAttributedString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -6118,6 +6173,58 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "convertToHalfWidth:": {
+      "name": "convertToHalfWidth:",
+      "bridgedName": "convertToHalfWidth",
+      "args": [
+        {
+          "name": "convertToHalfWidth",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToFullWidth:": {
+      "name": "convertToFullWidth:",
+      "bridgedName": "convertToFullWidth",
+      "args": [
+        {
+          "name": "convertToFullWidth",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToTraditionalChinese:": {
+      "name": "convertToTraditionalChinese:",
+      "bridgedName": "convertToTraditionalChinese",
+      "args": [
+        {
+          "name": "convertToTraditionalChinese",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertToSimplifiedChinese:": {
+      "name": "convertToSimplifiedChinese:",
+      "bridgedName": "convertToSimplifiedChinese",
+      "args": [
+        {
+          "name": "convertToSimplifiedChinese",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "capitalizeWord:": {
       "name": "capitalizeWord:",
       "bridgedName": "capitalizeWord",
@@ -8939,6 +9046,100 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_updateCaretDisplayWithSharedData:textView:": {
+      "name": "_updateCaretDisplayWithSharedData:textView:",
+      "bridgedName": "_updateCaretDisplayWithSharedData_textView",
+      "args": [
+        {
+          "name": "_updateCaretDisplayWithSharedData",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateBlinkUpdate:": {
+      "name": "_animateBlinkUpdate:",
+      "bridgedName": "_animateBlinkUpdate",
+      "args": [
+        {
+          "name": "_animateBlinkUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateCaretViewWithSharedData:textView:animated:": {
+      "name": "_updateCaretViewWithSharedData:textView:animated:",
+      "bridgedName": "_updateCaretViewWithSharedData_textView_animated",
+      "args": [
+        {
+          "name": "_updateCaretViewWithSharedData",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didAddSubview:": {
+      "name": "didAddSubview:",
+      "bridgedName": "didAddSubview",
+      "args": [
+        {
+          "name": "didAddSubview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "switchBlinkTimersIfNecessaryWithSharedData:": {
+      "name": "switchBlinkTimersIfNecessaryWithSharedData:",
+      "bridgedName": "switchBlinkTimersIfNecessaryWithSharedData",
+      "args": [
+        {
+          "name": "switchBlinkTimersIfNecessaryWithSharedData",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_blinkCaret:animated:": {
+      "name": "_blinkCaret:animated:",
+      "bridgedName": "_blinkCaret_animated",
+      "args": [
+        {
+          "name": "_blinkCaret",
+          "type": "id"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_blinkCaret:": {
       "name": "_blinkCaret:",
       "bridgedName": "_blinkCaret",
@@ -8949,6 +9150,22 @@
         }
       ],
       "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_useUpdateBlinkRate": {
+      "name": "_useUpdateBlinkRate",
+      "bridgedName": "_useUpdateBlinkRate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_caretMustDraw": {
+      "name": "_caretMustDraw",
+      "bridgedName": "_caretMustDraw",
+      "args": [],
+      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -9265,6 +9482,44 @@
         }
       ],
       "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_superviewClipViewFrameChangedWithNotification:": {
+      "name": "_superviewClipViewFrameChangedWithNotification:",
+      "bridgedName": "_superviewClipViewFrameChangedWithNotification",
+      "args": [
+        {
+          "name": "_superviewClipViewFrameChangedWithNotification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -10456,10 +10711,52 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_restartBlinkDrawTimer": {
+      "name": "_restartBlinkDrawTimer",
+      "bridgedName": "_restartBlinkDrawTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_restartBlinkTimer": {
       "name": "_restartBlinkTimer",
       "bridgedName": "_restartBlinkTimer",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restartBlinkTimersWithSharedData:": {
+      "name": "_restartBlinkTimersWithSharedData:",
+      "bridgedName": "_restartBlinkTimersWithSharedData",
+      "args": [
+        {
+          "name": "_restartBlinkTimersWithSharedData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateBlinkTimersWithSharedData:restartFlag:forceBlink:": {
+      "name": "_updateBlinkTimersWithSharedData:restartFlag:forceBlink:",
+      "bridgedName": "_updateBlinkTimersWithSharedData_restartFlag_forceBlink",
+      "args": [
+        {
+          "name": "_updateBlinkTimersWithSharedData",
+          "type": "id"
+        },
+        {
+          "name": "restartFlag",
+          "type": "BOOL"
+        },
+        {
+          "name": "forceBlink",
+          "type": "BOOL"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
@@ -11309,6 +11606,35 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "_hasJapaneseInPreferredLanguages": {
+      "name": "_hasJapaneseInPreferredLanguages",
+      "bridgedName": "_hasJapaneseInPreferredLanguages",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldRemoveTransformationAction:": {
+      "name": "shouldRemoveTransformationAction:",
+      "bridgedName": "shouldRemoveTransformationAction",
+      "args": [
+        {
+          "name": "shouldRemoveTransformationAction",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldRemoveCaseTransformations": {
+      "name": "shouldRemoveCaseTransformations",
+      "bridgedName": "shouldRemoveCaseTransformations",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_sharingServiceItemsInRanges:": {
       "name": "_sharingServiceItemsInRanges:",
       "bridgedName": "_sharingServiceItemsInRanges",
@@ -11552,16 +11878,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "displayTextLayer:withContext:": {
-      "name": "displayTextLayer:withContext:",
-      "bridgedName": "displayTextLayer_withContext",
+    "displayTextLayer:": {
+      "name": "displayTextLayer:",
+      "bridgedName": "displayTextLayer",
       "args": [
         {
           "name": "displayTextLayer",
-          "type": "id"
-        },
-        {
-          "name": "withContext",
           "type": "id"
         }
       ],

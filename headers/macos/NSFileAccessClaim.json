@@ -4,6 +4,7 @@
     "NSSecureCoding.h"
   ],
   "classes": [
+    "NSArray",
     "NSCountedSet",
     "NSError",
     "NSFileAccessProcessManager",
@@ -86,14 +87,6 @@
       "bridgedName": "shouldCancelInsteadOfWaiting",
       "args": [],
       "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "allURLs": {
-      "name": "allURLs",
-      "bridgedName": "allURLs",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -416,6 +409,27 @@
         {
           "name": "provideIfNecessaryWithOptions",
           "type": "unsigned long long"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ensureProvidersOfItemsAtReadingLocations:writingLocations:thenContinue:": {
+      "name": "ensureProvidersOfItemsAtReadingLocations:writingLocations:thenContinue:",
+      "bridgedName": "ensureProvidersOfItemsAtReadingLocations_writingLocations_thenContinue",
+      "args": [
+        {
+          "name": "ensureProvidersOfItemsAtReadingLocations",
+          "type": "id"
+        },
+        {
+          "name": "writingLocations",
+          "type": "id"
         },
         {
           "name": "thenContinue",
@@ -915,6 +929,15 @@
       "type": "NSObject<OS_dispatch_semaphore>",
       "attributes": [
         "readonly"
+      ]
+    },
+    "allURLs": {
+      "name": "allURLs",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
       ]
     }
   }

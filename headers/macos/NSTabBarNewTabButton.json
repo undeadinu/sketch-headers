@@ -5,8 +5,10 @@
   ],
   "classes": [
     "CALayer",
+    "NSBox",
     "NSColor",
     "NSString",
+    "NSTitlebarSeparatorView",
     "NSTrackingArea"
   ],
   "protocol": false,
@@ -71,6 +73,134 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "updateDraggingItemsForDrag:": {
+      "name": "updateDraggingItemsForDrag:",
+      "bridgedName": "updateDraggingItemsForDrag",
+      "args": [
+        {
+          "name": "updateDraggingItemsForDrag",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "concludeDragOperation:": {
+      "name": "concludeDragOperation:",
+      "bridgedName": "concludeDragOperation",
+      "args": [
+        {
+          "name": "concludeDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDragOperation:": {
+      "name": "performDragOperation:",
+      "bridgedName": "performDragOperation",
+      "args": [
+        {
+          "name": "performDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForDragOperation:": {
+      "name": "prepareForDragOperation:",
+      "bridgedName": "prepareForDragOperation",
+      "args": [
+        {
+          "name": "prepareForDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingExited:": {
+      "name": "draggingExited:",
+      "bridgedName": "draggingExited",
+      "args": [
+        {
+          "name": "draggingExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingEnded:": {
+      "name": "draggingEnded:",
+      "bridgedName": "draggingEnded",
+      "args": [
+        {
+          "name": "draggingEnded",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingUpdated:": {
+      "name": "draggingUpdated:",
+      "bridgedName": "draggingUpdated",
+      "args": [
+        {
+          "name": "draggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsPeriodicDraggingUpdates": {
+      "name": "wantsPeriodicDraggingUpdates",
+      "bridgedName": "wantsPeriodicDraggingUpdates",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingEntered:": {
+      "name": "draggingEntered:",
+      "bridgedName": "draggingEntered",
+      "args": [
+        {
+          "name": "draggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggingDestination": {
+      "name": "draggingDestination",
+      "bridgedName": "draggingDestination",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragTypes": {
+      "name": "_dragTypes",
+      "bridgedName": "_dragTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_windowIsActive": {
       "name": "_windowIsActive",
       "bridgedName": "_windowIsActive",
@@ -84,14 +214,6 @@
       "bridgedName": "_windowChangedKeyState",
       "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_topBorderDefaultColor": {
-      "name": "_topBorderDefaultColor",
-      "bridgedName": "_topBorderDefaultColor",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -174,19 +296,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_viewDidChangeAppearance:": {
-      "name": "_viewDidChangeAppearance:",
-      "bridgedName": "_viewDidChangeAppearance",
-      "args": [
-        {
-          "name": "_viewDidChangeAppearance",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_finishInitialization": {
       "name": "_finishInitialization",
       "bridgedName": "_finishInitialization",
@@ -195,16 +304,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "_setLeadingBorderColor:topBorderColor:withAnimation:": {
-      "name": "_setLeadingBorderColor:topBorderColor:withAnimation:",
-      "bridgedName": "_setLeadingBorderColor_topBorderColor_withAnimation",
+    "_setLeadingBorderColor:withAnimation:": {
+      "name": "_setLeadingBorderColor:withAnimation:",
+      "bridgedName": "_setLeadingBorderColor_withAnimation",
       "args": [
         {
           "name": "_setLeadingBorderColor",
-          "type": "id"
-        },
-        {
-          "name": "topBorderColor",
           "type": "id"
         },
         {
@@ -251,14 +356,6 @@
         }
       ],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "_isDark": {
-      "name": "_isDark",
-      "bridgedName": "_isDark",
-      "args": [],
-      "returns": "BOOL",
       "kind": "instance",
       "kindIndicator": "-"
     },

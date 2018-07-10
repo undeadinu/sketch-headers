@@ -228,68 +228,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "didEndSheet:returnCode:contextInfo:": {
-      "name": "didEndSheet:returnCode:contextInfo:",
-      "bridgedName": "didEndSheet_returnCode_contextInfo",
-      "args": [
-        {
-          "name": "didEndSheet",
-          "type": "id"
-        },
-        {
-          "name": "returnCode",
-          "type": "long long"
-        },
-        {
-          "name": "contextInfo",
-          "type": "void *"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "buildAlertStyle:title:message:first:second:third:oldStyle:args:": {
-      "name": "buildAlertStyle:title:message:first:second:third:oldStyle:args:",
-      "bridgedName": "buildAlertStyle_title_message_first_second_third_oldStyle_args",
-      "args": [
-        {
-          "name": "buildAlertStyle",
-          "type": "unsigned long long"
-        },
-        {
-          "name": "title",
-          "type": "id"
-        },
-        {
-          "name": "message",
-          "type": "id"
-        },
-        {
-          "name": "first",
-          "type": "id"
-        },
-        {
-          "name": "second",
-          "type": "id"
-        },
-        {
-          "name": "third",
-          "type": "id"
-        },
-        {
-          "name": "oldStyle",
-          "type": "BOOL"
-        },
-        {
-          "name": "args",
-          "type": "struct __va_list_tag [1]"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "buildAlertStyle:title:formattedMessage:first:second:third:oldStyle:": {
       "name": "buildAlertStyle:title:formattedMessage:first:second:third:oldStyle:",
       "bridgedName": "buildAlertStyle_title_formattedMessage_first_second_third_oldStyle",
@@ -526,7 +464,7 @@
           "type": "id"
         }
       ],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -535,27 +473,6 @@
       "bridgedName": "_screenForMaxHeight",
       "args": [],
       "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "didEndAlert:returnCode:contextInfo:": {
-      "name": "didEndAlert:returnCode:contextInfo:",
-      "bridgedName": "didEndAlert_returnCode_contextInfo",
-      "args": [
-        {
-          "name": "didEndAlert",
-          "type": "id"
-        },
-        {
-          "name": "returnCode",
-          "type": "long long"
-        },
-        {
-          "name": "contextInfo",
-          "type": "void *"
-        }
-      ],
-      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -570,31 +487,6 @@
         {
           "name": "completionHandler",
           "type": "CDUnknownBlockType"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:": {
-      "name": "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:",
-      "bridgedName": "beginSheetModalForWindow_modalDelegate_didEndSelector_contextInfo",
-      "args": [
-        {
-          "name": "beginSheetModalForWindow",
-          "type": "id"
-        },
-        {
-          "name": "modalDelegate",
-          "type": "id"
-        },
-        {
-          "name": "didEndSelector",
-          "type": "SEL"
-        },
-        {
-          "name": "contextInfo",
-          "type": "void *"
         }
       ],
       "returns": "void",
@@ -724,9 +616,125 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "didEndSheet:returnCode:contextInfo:": {
+      "name": "didEndSheet:returnCode:contextInfo:",
+      "bridgedName": "didEndSheet_returnCode_contextInfo",
+      "args": [
+        {
+          "name": "didEndSheet",
+          "type": "id"
+        },
+        {
+          "name": "returnCode",
+          "type": "long long"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didEndAlert:returnCode:contextInfo:": {
+      "name": "didEndAlert:returnCode:contextInfo:",
+      "bridgedName": "didEndAlert_returnCode_contextInfo",
+      "args": [
+        {
+          "name": "didEndAlert",
+          "type": "id"
+        },
+        {
+          "name": "returnCode",
+          "type": "long long"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:": {
+      "name": "beginSheetModalForWindow:modalDelegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginSheetModalForWindow_modalDelegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "name": "beginSheetModalForWindow",
+          "type": "id"
+        },
+        {
+          "name": "modalDelegate",
+          "type": "id"
+        },
+        {
+          "name": "didEndSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "buildAlertStyle:title:message:first:second:third:oldStyle:args:": {
+      "name": "buildAlertStyle:title:message:first:second:third:oldStyle:args:",
+      "bridgedName": "buildAlertStyle_title_message_first_second_third_oldStyle_args",
+      "args": [
+        {
+          "name": "buildAlertStyle",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "title",
+          "type": "id"
+        },
+        {
+          "name": "message",
+          "type": "id"
+        },
+        {
+          "name": "first",
+          "type": "id"
+        },
+        {
+          "name": "second",
+          "type": "id"
+        },
+        {
+          "name": "third",
+          "type": "id"
+        },
+        {
+          "name": "oldStyle",
+          "type": "BOOL"
+        },
+        {
+          "name": "args",
+          "type": "struct __va_list_tag [1]"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "_panel": {
+      "name": "_panel",
+      "pointer": true,
+      "type": "NSWindow",
+      "attributes": [
+        "retain"
+      ]
+    },
     "accessoryView": {
       "name": "accessoryView",
       "pointer": true,

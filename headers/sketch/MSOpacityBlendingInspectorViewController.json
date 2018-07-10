@@ -5,8 +5,10 @@
     "NSMenuDelegate.h"
   ],
   "classes": [
+    "MSMathInspectorValueAdaptor",
+    "MSUpDownTextField",
     "NSArray",
-    "NSNumberFormatter",
+    "NSArrayController",
     "NSString"
   ],
   "protocol": false,
@@ -33,20 +35,38 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "init": {
-      "name": "init",
-      "bridgedName": "init",
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
       "args": [],
-      "returns": "id",
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     }
   },
   "properties": {
-    "numberFormatter": {
-      "name": "numberFormatter",
+    "opacityAdaptor": {
+      "name": "opacityAdaptor",
       "pointer": true,
-      "type": "NSNumberFormatter",
+      "type": "MSMathInspectorValueAdaptor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "arrayController": {
+      "name": "arrayController",
+      "pointer": true,
+      "type": "NSArrayController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "opacityField": {
+      "name": "opacityField",
+      "pointer": true,
+      "type": "MSUpDownTextField",
       "attributes": [
         "retain",
         "nonatomic"

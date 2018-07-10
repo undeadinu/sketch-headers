@@ -6,7 +6,9 @@
     "NSDraggingInfo_Private.h"
   ],
   "classes": [
+    "NSImage",
     "NSMutableSet",
+    "NSPasteboard",
     "NSString",
     "NSWindow"
   ],
@@ -19,6 +21,14 @@
     "NSDraggingInfo_Private"
   ],
   "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_deviceID": {
       "name": "_deviceID",
       "bridgedName": "_deviceID",
@@ -492,14 +502,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "draggingSequenceNumber": {
-      "name": "draggingSequenceNumber",
-      "bridgedName": "draggingSequenceNumber",
-      "args": [],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "_draggingStage": {
       "name": "_draggingStage",
       "bridgedName": "_draggingStage",
@@ -521,62 +523,6 @@
       "bridgedName": "_draggingForce",
       "args": [],
       "returns": "double",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggingSource": {
-      "name": "draggingSource",
-      "bridgedName": "draggingSource",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggingPasteboard": {
-      "name": "draggingPasteboard",
-      "bridgedName": "draggingPasteboard",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggedImage": {
-      "name": "draggedImage",
-      "bridgedName": "draggedImage",
-      "args": [],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggedImageLocation": {
-      "name": "draggedImageLocation",
-      "bridgedName": "draggedImageLocation",
-      "args": [],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggingLocation": {
-      "name": "draggingLocation",
-      "bridgedName": "draggingLocation",
-      "args": [],
-      "returns": "struct CGPoint",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggingSourceOperationMask": {
-      "name": "draggingSourceOperationMask",
-      "bridgedName": "draggingSourceOperationMask",
-      "args": [],
-      "returns": "unsigned long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "draggingDestinationWindow": {
-      "name": "draggingDestinationWindow",
-      "bridgedName": "draggingDestinationWindow",
-      "args": [],
-      "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -686,6 +632,70 @@
       "name": "springLoadingHighlight",
       "pointer": false,
       "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSequenceNumber": {
+      "name": "draggingSequenceNumber",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSource": {
+      "name": "draggingSource",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingPasteboard": {
+      "name": "draggingPasteboard",
+      "pointer": true,
+      "type": "NSPasteboard",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggedImage": {
+      "name": "draggedImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggedImageLocation": {
+      "name": "draggedImageLocation",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingLocation": {
+      "name": "draggingLocation",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSourceOperationMask": {
+      "name": "draggingSourceOperationMask",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingDestinationWindow": {
+      "name": "draggingDestinationWindow",
+      "pointer": true,
+      "type": "NSWindow",
       "attributes": [
         "readonly"
       ]
