@@ -1,0 +1,461 @@
+{
+  "imports": [],
+  "classes": [],
+  "protocol": false,
+  "className": "NSMachPort",
+  "extends": "NSPort",
+  "interfaces": [],
+  "methods": {
+    "sendBeforeTime:streamData:components:to:from:msgid:reserved:": {
+      "name": "sendBeforeTime:streamData:components:to:from:msgid:reserved:",
+      "bridgedName": "sendBeforeTime_streamData_components_to_from_msgid_reserved",
+      "args": [
+        {
+          "name": "sendBeforeTime",
+          "type": "double"
+        },
+        {
+          "name": "streamData",
+          "type": "id"
+        },
+        {
+          "name": "components",
+          "type": "id"
+        },
+        {
+          "name": "to",
+          "type": "id"
+        },
+        {
+          "name": "from",
+          "type": "id"
+        },
+        {
+          "name": "msgid",
+          "type": "unsigned int"
+        },
+        {
+          "name": "reserved",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "parseMachMessage:localPort:remotePort:msgid:components:": {
+      "name": "parseMachMessage:localPort:remotePort:msgid:components:",
+      "bridgedName": "parseMachMessage_localPort_remotePort_msgid_components",
+      "args": [
+        {
+          "name": "parseMachMessage",
+          "type": "void *"
+        },
+        {
+          "name": "localPort",
+          "type": "id *"
+        },
+        {
+          "name": "remotePort",
+          "type": "id *"
+        },
+        {
+          "name": "msgid",
+          "type": "unsigned int *"
+        },
+        {
+          "name": "components",
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_fixNSMachPortLeak": {
+      "name": "_fixNSMachPortLeak",
+      "bridgedName": "_fixNSMachPortLeak",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "portWithMachPort:options:": {
+      "name": "portWithMachPort:options:",
+      "bridgedName": "portWithMachPort_options",
+      "args": [
+        {
+          "name": "portWithMachPort",
+          "type": "unsigned int"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "portWithMachPort:": {
+      "name": "portWithMachPort:",
+      "bridgedName": "portWithMachPort",
+      "args": [
+        {
+          "name": "portWithMachPort",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "port": {
+      "name": "port",
+      "bridgedName": "port",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "resetAllPorts": {
+      "name": "resetAllPorts",
+      "bridgedName": "resetAllPorts",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMachPort:": {
+      "name": "initWithMachPort:",
+      "bridgedName": "initWithMachPort",
+      "args": [
+        {
+          "name": "initWithMachPort",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMachPort:options:": {
+      "name": "initWithMachPort:options:",
+      "bridgedName": "initWithMachPort_options",
+      "args": [
+        {
+          "name": "initWithMachPort",
+          "type": "unsigned int"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlePortMessage:": {
+      "name": "handlePortMessage:",
+      "bridgedName": "handlePortMessage",
+      "args": [
+        {
+          "name": "handlePortMessage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addConnection:toRunLoop:forMode:": {
+      "name": "addConnection:toRunLoop:forMode:",
+      "bridgedName": "addConnection_toRunLoop_forMode",
+      "args": [
+        {
+          "name": "addConnection",
+          "type": "id"
+        },
+        {
+          "name": "toRunLoop",
+          "type": "id"
+        },
+        {
+          "name": "forMode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFromRunLoop:forMode:": {
+      "name": "removeFromRunLoop:forMode:",
+      "bridgedName": "removeFromRunLoop_forMode",
+      "args": [
+        {
+          "name": "removeFromRunLoop",
+          "type": "id"
+        },
+        {
+          "name": "forMode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleInRunLoop:forMode:": {
+      "name": "scheduleInRunLoop:forMode:",
+      "bridgedName": "scheduleInRunLoop_forMode",
+      "args": [
+        {
+          "name": "scheduleInRunLoop",
+          "type": "id"
+        },
+        {
+          "name": "forMode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendBeforeDate:msgid:components:from:reserved:": {
+      "name": "sendBeforeDate:msgid:components:from:reserved:",
+      "bridgedName": "sendBeforeDate_msgid_components_from_reserved",
+      "args": [
+        {
+          "name": "sendBeforeDate",
+          "type": "id"
+        },
+        {
+          "name": "msgid",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "components",
+          "type": "id"
+        },
+        {
+          "name": "from",
+          "type": "id"
+        },
+        {
+          "name": "reserved",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendBeforeDate:components:from:reserved:": {
+      "name": "sendBeforeDate:components:from:reserved:",
+      "bridgedName": "sendBeforeDate_components_from_reserved",
+      "args": [
+        {
+          "name": "sendBeforeDate",
+          "type": "id"
+        },
+        {
+          "name": "components",
+          "type": "id"
+        },
+        {
+          "name": "from",
+          "type": "id"
+        },
+        {
+          "name": "reserved",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendBeforeTime:streamData:components:from:msgid:": {
+      "name": "sendBeforeTime:streamData:components:from:msgid:",
+      "bridgedName": "sendBeforeTime_streamData_components_from_msgid",
+      "args": [
+        {
+          "name": "sendBeforeTime",
+          "type": "double"
+        },
+        {
+          "name": "streamData",
+          "type": "void *"
+        },
+        {
+          "name": "components",
+          "type": "id"
+        },
+        {
+          "name": "from",
+          "type": "id"
+        },
+        {
+          "name": "msgid",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delegate": {
+      "name": "delegate",
+      "bridgedName": "delegate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDelegate:": {
+      "name": "setDelegate:",
+      "bridgedName": "setDelegate",
+      "args": [
+        {
+          "name": "setDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidate": {
+      "name": "invalidate",
+      "bridgedName": "invalidate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isValid": {
+      "name": "isValid",
+      "bridgedName": "isValid",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isMemberOfClass:": {
+      "name": "isMemberOfClass:",
+      "bridgedName": "isMemberOfClass",
+      "args": [
+        {
+          "name": "isMemberOfClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isKindOfClass:": {
+      "name": "isKindOfClass:",
+      "bridgedName": "isKindOfClass",
+      "args": [
+        {
+          "name": "isKindOfClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "retainCount": {
+      "name": "retainCount",
+      "bridgedName": "retainCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tryRetain": {
+      "name": "_tryRetain",
+      "bridgedName": "_tryRetain",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDeallocating": {
+      "name": "_isDeallocating",
+      "bridgedName": "_isDeallocating",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "release": {
+      "name": "release",
+      "bridgedName": "release",
+      "args": [],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "retain": {
+      "name": "retain",
+      "bridgedName": "retain",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cfTypeID": {
+      "name": "_cfTypeID",
+      "bridgedName": "_cfTypeID",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "machPort": {
+      "name": "machPort",
+      "pointer": false,
+      "type": "unsigned int",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

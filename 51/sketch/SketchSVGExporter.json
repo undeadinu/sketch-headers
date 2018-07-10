@@ -1,0 +1,508 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSImmutableDocumentData",
+    "MSImmutableSymbolInstance",
+    "MSSVGFilter",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSSet",
+    "NSString",
+    "NSXMLDocument",
+    "NSXMLElement"
+  ],
+  "protocol": false,
+  "className": "SketchSVGExporter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerIsIncluded:": {
+      "name": "layerIsIncluded:",
+      "bridgedName": "layerIsIncluded",
+      "args": [
+        {
+          "name": "layerIsIncluded",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isDrawingSymbol": {
+      "name": "isDrawingSymbol",
+      "bridgedName": "isDrawingSymbol",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawSymbolInstance:inBlock:": {
+      "name": "drawSymbolInstance:inBlock:",
+      "bridgedName": "drawSymbolInstance_inBlock",
+      "args": [
+        {
+          "name": "drawSymbolInstance",
+          "type": "id"
+        },
+        {
+          "name": "inBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performWithParent:block:": {
+      "name": "performWithParent:block:",
+      "bridgedName": "performWithParent_block",
+      "args": [
+        {
+          "name": "performWithParent",
+          "type": "id"
+        },
+        {
+          "name": "block",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popParent": {
+      "name": "popParent",
+      "bridgedName": "popParent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pushParent:": {
+      "name": "pushParent:",
+      "bridgedName": "pushParent",
+      "args": [
+        {
+          "name": "pushParent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentForLayer:": {
+      "name": "parentForLayer:",
+      "bridgedName": "parentForLayer",
+      "args": [
+        {
+          "name": "parentForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ancestorsForLayer:": {
+      "name": "ancestorsForLayer:",
+      "bridgedName": "ancestorsForLayer",
+      "args": [
+        {
+          "name": "ancestorsForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "radialGradientAttributes:inRect:": {
+      "name": "radialGradientAttributes:inRect:",
+      "bridgedName": "radialGradientAttributes_inRect",
+      "args": [
+        {
+          "name": "radialGradientAttributes",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "linearGradientAttributes:": {
+      "name": "linearGradientAttributes:",
+      "bridgedName": "linearGradientAttributes",
+      "args": [
+        {
+          "name": "linearGradientAttributes",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopsForGradient:": {
+      "name": "stopsForGradient:",
+      "bridgedName": "stopsForGradient",
+      "args": [
+        {
+          "name": "stopsForGradient",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "gradientElement:inRect:": {
+      "name": "gradientElement:inRect:",
+      "bridgedName": "gradientElement_inRect",
+      "args": [
+        {
+          "name": "gradientElement",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addGradient:inRect:": {
+      "name": "addGradient:inRect:",
+      "bridgedName": "addGradient_inRect",
+      "args": [
+        {
+          "name": "addGradient",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hashForGradient:inRect:": {
+      "name": "hashForGradient:inRect:",
+      "bridgedName": "hashForGradient_inRect",
+      "args": [
+        {
+          "name": "hashForGradient",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endFilterGroup": {
+      "name": "endFilterGroup",
+      "bridgedName": "endFilterGroup",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginFilterGroup": {
+      "name": "beginFilterGroup",
+      "bridgedName": "beginFilterGroup",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addDefinitionWithName:children:attributes:": {
+      "name": "addDefinitionWithName:children:attributes:",
+      "bridgedName": "addDefinitionWithName_children_attributes",
+      "args": [
+        {
+          "name": "addDefinitionWithName",
+          "type": "id"
+        },
+        {
+          "name": "children",
+          "type": "id"
+        },
+        {
+          "name": "attributes",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uniqueIDForElementWithName:": {
+      "name": "uniqueIDForElementWithName:",
+      "bridgedName": "uniqueIDForElementWithName",
+      "args": [
+        {
+          "name": "uniqueIDForElementWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDescription:": {
+      "name": "setDescription:",
+      "bridgedName": "setDescription",
+      "args": [
+        {
+          "name": "setDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitle:": {
+      "name": "setTitle:",
+      "bridgedName": "setTitle",
+      "args": [
+        {
+          "name": "setTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "exportLayers:": {
+      "name": "exportLayers:",
+      "bridgedName": "exportLayers",
+      "args": [
+        {
+          "name": "exportLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithName:exportRequest:": {
+      "name": "initWithName:exportRequest:",
+      "bridgedName": "initWithName_exportRequest",
+      "args": [
+        {
+          "name": "initWithName",
+          "type": "id"
+        },
+        {
+          "name": "exportRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithImmutableDocument:exportRect:layerIDs:": {
+      "name": "initWithImmutableDocument:exportRect:layerIDs:",
+      "bridgedName": "initWithImmutableDocument_exportRect_layerIDs",
+      "args": [
+        {
+          "name": "initWithImmutableDocument",
+          "type": "id"
+        },
+        {
+          "name": "exportRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "layerIDs",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupCommonElementsWithName:": {
+      "name": "setupCommonElementsWithName:",
+      "bridgedName": "setupCommonElementsWithName",
+      "args": [
+        {
+          "name": "setupCommonElementsWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRootSVGElementAttributes": {
+      "name": "setRootSVGElementAttributes",
+      "bridgedName": "setRootSVGElementAttributes",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "includedLayerIDs": {
+      "name": "includedLayerIDs",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "parentStack": {
+      "name": "parentStack",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "nextUniqueID": {
+      "name": "nextUniqueID",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "gradients": {
+      "name": "gradients",
+      "pointer": true,
+      "type": "NSMutableDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "root": {
+      "name": "root",
+      "pointer": true,
+      "type": "NSXMLElement",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "defs": {
+      "name": "defs",
+      "pointer": true,
+      "type": "NSXMLElement",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "doc": {
+      "name": "doc",
+      "pointer": true,
+      "type": "NSXMLDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "currentSymbolInstance": {
+      "name": "currentSymbolInstance",
+      "pointer": true,
+      "type": "MSImmutableSymbolInstance",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentFilterGroup": {
+      "name": "currentFilterGroup",
+      "pointer": true,
+      "type": "MSSVGFilter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "MSImmutableDocumentData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentShapeDef": {
+      "name": "currentShapeDef",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "mask": {
+      "name": "mask",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "exportBounds": {
+      "name": "exportBounds",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

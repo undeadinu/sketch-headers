@@ -1,0 +1,124 @@
+{
+  "imports": [
+    "MSExistingDocumentCollectionItem.h"
+  ],
+  "classes": [
+    "NSProgress",
+    "SCKCloudDocument",
+    "SCKShare"
+  ],
+  "protocol": false,
+  "className": "MSCloudShareCollectionItem",
+  "extends": "MSExistingDocumentCollectionItem",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "downloadLatestDocument:": {
+      "name": "downloadLatestDocument:",
+      "bridgedName": "downloadLatestDocument",
+      "args": [
+        {
+          "name": "downloadLatestDocument",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fetchPreviewImageWithMaximumPixelSize:completionHandler:": {
+      "name": "fetchPreviewImageWithMaximumPixelSize:completionHandler:",
+      "bridgedName": "fetchPreviewImageWithMaximumPixelSize_completionHandler",
+      "args": [
+        {
+          "name": "fetchPreviewImageWithMaximumPixelSize",
+          "type": "double"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "providesPreviewImage": {
+      "name": "providesPreviewImage",
+      "bridgedName": "providesPreviewImage",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "URL": {
+      "name": "URL",
+      "bridgedName": "URL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "title": {
+      "name": "title",
+      "bridgedName": "title",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithController:cloudShare:": {
+      "name": "initWithController:cloudShare:",
+      "bridgedName": "initWithController_cloudShare",
+      "args": [
+        {
+          "name": "initWithController",
+          "type": "id"
+        },
+        {
+          "name": "cloudShare",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "downloadProgress": {
+      "name": "downloadProgress",
+      "pointer": true,
+      "type": "NSProgress",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "cloudShare": {
+      "name": "cloudShare",
+      "pointer": true,
+      "type": "SCKShare",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "latestDocument": {
+      "name": "latestDocument",
+      "pointer": true,
+      "type": "SCKCloudDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

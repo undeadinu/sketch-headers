@@ -1,0 +1,1432 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSEvent",
+    "NSMutableArray",
+    "NSMutableSet",
+    "NSPressureConfiguration",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSGestureRecognizer",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    "_mostCompatibleRecognizerFromConfigured:": {
+      "name": "_mostCompatibleRecognizerFromConfigured:",
+      "bridgedName": "_mostCompatibleRecognizerFromConfigured",
+      "args": [
+        {
+          "name": "_mostCompatibleRecognizerFromConfigured",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "locationInView:": {
+      "name": "locationInView:",
+      "bridgedName": "locationInView",
+      "args": [
+        {
+          "name": "locationInView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_affectedByGesture:": {
+      "name": "_affectedByGesture:",
+      "bridgedName": "_affectedByGesture",
+      "args": [
+        {
+          "name": "_affectedByGesture",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidate": {
+      "name": "_invalidate",
+      "bridgedName": "_invalidate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendDescriptionToString:atLevel:includingDependencies:": {
+      "name": "_appendDescriptionToString:atLevel:includingDependencies:",
+      "bridgedName": "_appendDescriptionToString_atLevel_includingDependencies",
+      "args": [
+        {
+          "name": "_appendDescriptionToString",
+          "type": "id"
+        },
+        {
+          "name": "atLevel",
+          "type": "int"
+        },
+        {
+          "name": "includingDependencies",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendDescription:forDependencies:toString:atLevel:": {
+      "name": "_appendDescription:forDependencies:toString:atLevel:",
+      "bridgedName": "_appendDescription_forDependencies_toString_atLevel",
+      "args": [
+        {
+          "name": "_appendDescription",
+          "type": "id"
+        },
+        {
+          "name": "forDependencies",
+          "type": "id"
+        },
+        {
+          "name": "toString",
+          "type": "id"
+        },
+        {
+          "name": "atLevel",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_appendSubclassDescription:": {
+      "name": "_appendSubclassDescription:",
+      "bridgedName": "_appendSubclassDescription",
+      "args": [
+        {
+          "name": "_appendSubclassDescription",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_briefDescription": {
+      "name": "_briefDescription",
+      "bridgedName": "_briefDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willBeginAfterSatisfyingFailureRequirements": {
+      "name": "_willBeginAfterSatisfyingFailureRequirements",
+      "bridgedName": "_willBeginAfterSatisfyingFailureRequirements",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_acceptsFailureRequirements": {
+      "name": "_acceptsFailureRequirements",
+      "bridgedName": "_acceptsFailureRequirements",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAcceptsFailureRequiments:": {
+      "name": "_setAcceptsFailureRequiments:",
+      "bridgedName": "_setAcceptsFailureRequiments",
+      "args": [
+        {
+          "name": "_setAcceptsFailureRequiments",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_failureRequirementCompleted:withEvent:": {
+      "name": "_failureRequirementCompleted:withEvent:",
+      "bridgedName": "_failureRequirementCompleted_withEvent",
+      "args": [
+        {
+          "name": "_failureRequirementCompleted",
+          "type": "id"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFailureRequirement:": {
+      "name": "removeFailureRequirement:",
+      "bridgedName": "removeFailureRequirement",
+      "args": [
+        {
+          "name": "removeFailureRequirement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "requireOtherGestureToFail:": {
+      "name": "requireOtherGestureToFail:",
+      "bridgedName": "requireOtherGestureToFail",
+      "args": [
+        {
+          "name": "requireOtherGestureToFail",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addDynamicFailureRequirement:": {
+      "name": "_addDynamicFailureRequirement:",
+      "bridgedName": "_addDynamicFailureRequirement",
+      "args": [
+        {
+          "name": "_addDynamicFailureRequirement",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeFailureDependent:": {
+      "name": "_removeFailureDependent:",
+      "bridgedName": "_removeFailureDependent",
+      "args": [
+        {
+          "name": "_removeFailureDependent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addDynamicFailureDependent:": {
+      "name": "_addDynamicFailureDependent:",
+      "bridgedName": "_addDynamicFailureDependent",
+      "args": [
+        {
+          "name": "_addDynamicFailureDependent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addFailureDependent:": {
+      "name": "_addFailureDependent:",
+      "bridgedName": "_addFailureDependent",
+      "args": [
+        {
+          "name": "_addFailureDependent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearReferencesToRelatedGesture:": {
+      "name": "_clearReferencesToRelatedGesture:",
+      "bridgedName": "_clearReferencesToRelatedGesture",
+      "args": [
+        {
+          "name": "_clearReferencesToRelatedGesture",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_exclude": {
+      "name": "_exclude",
+      "bridgedName": "_exclude",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelRecognition": {
+      "name": "_cancelRecognition",
+      "bridgedName": "_cancelRecognition",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isDirty": {
+      "name": "_isDirty",
+      "bridgedName": "_isDirty",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDirty": {
+      "name": "_setDirty",
+      "bridgedName": "_setDirty",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isExcludedByGesture:": {
+      "name": "_isExcludedByGesture:",
+      "bridgedName": "_isExcludedByGesture",
+      "args": [
+        {
+          "name": "_isExcludedByGesture",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateCanPreventGestureRecognizer:": {
+      "name": "_delegateCanPreventGestureRecognizer:",
+      "bridgedName": "_delegateCanPreventGestureRecognizer",
+      "args": [
+        {
+          "name": "_delegateCanPreventGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isFriendWithGesture:": {
+      "name": "_isFriendWithGesture:",
+      "bridgedName": "_isFriendWithGesture",
+      "args": [
+        {
+          "name": "_isFriendWithGesture",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addFriendGesture:": {
+      "name": "_addFriendGesture:",
+      "bridgedName": "_addFriendGesture",
+      "args": [
+        {
+          "name": "_addFriendGesture",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldBegin": {
+      "name": "_shouldBegin",
+      "bridgedName": "_shouldBegin",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateShouldSendActionWhenPossibleConcurrentlyWithRecognizer:": {
+      "name": "_delegateShouldSendActionWhenPossibleConcurrentlyWithRecognizer:",
+      "bridgedName": "_delegateShouldSendActionWhenPossibleConcurrentlyWithRecognizer",
+      "args": [
+        {
+          "name": "_delegateShouldSendActionWhenPossibleConcurrentlyWithRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateShouldReceiveTouch:": {
+      "name": "_delegateShouldReceiveTouch:",
+      "bridgedName": "_delegateShouldReceiveTouch",
+      "args": [
+        {
+          "name": "_delegateShouldReceiveTouch",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delegateShouldAttemptToRecognizeWithEvent:": {
+      "name": "_delegateShouldAttemptToRecognizeWithEvent:",
+      "bridgedName": "_delegateShouldAttemptToRecognizeWithEvent",
+      "args": [
+        {
+          "name": "_delegateShouldAttemptToRecognizeWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_depthFirstViewCompare:": {
+      "name": "_depthFirstViewCompare:",
+      "bridgedName": "_depthFirstViewCompare",
+      "args": [
+        {
+          "name": "_depthFirstViewCompare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isRecognized": {
+      "name": "_isRecognized",
+      "bridgedName": "_isRecognized",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_queueForResetIfFinished": {
+      "name": "_queueForResetIfFinished",
+      "bridgedName": "_queueForResetIfFinished",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetIfFinished": {
+      "name": "_resetIfFinished",
+      "bridgedName": "_resetIfFinished",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateGestureStateWithEvent:afterDelay:": {
+      "name": "_updateGestureStateWithEvent:afterDelay:",
+      "bridgedName": "_updateGestureStateWithEvent_afterDelay",
+      "args": [
+        {
+          "name": "_updateGestureStateWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "afterDelay",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didSendActions": {
+      "name": "_didSendActions",
+      "bridgedName": "_didSendActions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delayedUpdateGesture": {
+      "name": "_delayedUpdateGesture",
+      "bridgedName": "_delayedUpdateGesture",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_requiresGestureRecognizerToFail:": {
+      "name": "_requiresGestureRecognizerToFail:",
+      "bridgedName": "_requiresGestureRecognizerToFail",
+      "args": [
+        {
+          "name": "_requiresGestureRecognizerToFail",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateGestureWithEvent:": {
+      "name": "_updateGestureWithEvent:",
+      "bridgedName": "_updateGestureWithEvent",
+      "args": [
+        {
+          "name": "_updateGestureWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enqueueDelayedEventsToSend": {
+      "name": "_enqueueDelayedEventsToSend",
+      "bridgedName": "_enqueueDelayedEventsToSend",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearDelayedEvents": {
+      "name": "_clearDelayedEvents",
+      "bridgedName": "_clearDelayedEvents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_eventWasCancelled:": {
+      "name": "_eventWasCancelled:",
+      "bridgedName": "_eventWasCancelled",
+      "args": [
+        {
+          "name": "_eventWasCancelled",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasDelayedEvents": {
+      "name": "_hasDelayedEvents",
+      "bridgedName": "_hasDelayedEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delayEvent:": {
+      "name": "_delayEvent:",
+      "bridgedName": "_delayEvent",
+      "args": [
+        {
+          "name": "_delayEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldBeRequiredToFailByGestureRecognizer:": {
+      "name": "shouldBeRequiredToFailByGestureRecognizer:",
+      "bridgedName": "shouldBeRequiredToFailByGestureRecognizer",
+      "args": [
+        {
+          "name": "shouldBeRequiredToFailByGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldRequireFailureOfGestureRecognizer:": {
+      "name": "shouldRequireFailureOfGestureRecognizer:",
+      "bridgedName": "shouldRequireFailureOfGestureRecognizer",
+      "args": [
+        {
+          "name": "shouldRequireFailureOfGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldBeRequiredToFailByGestureRecognizer:": {
+      "name": "_shouldBeRequiredToFailByGestureRecognizer:",
+      "bridgedName": "_shouldBeRequiredToFailByGestureRecognizer",
+      "args": [
+        {
+          "name": "_shouldBeRequiredToFailByGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldRequireFailureOfGestureRecognizer:": {
+      "name": "_shouldRequireFailureOfGestureRecognizer:",
+      "bridgedName": "_shouldRequireFailureOfGestureRecognizer",
+      "args": [
+        {
+          "name": "_shouldRequireFailureOfGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBePreventedByGestureRecognizer:": {
+      "name": "canBePreventedByGestureRecognizer:",
+      "bridgedName": "canBePreventedByGestureRecognizer",
+      "args": [
+        {
+          "name": "canBePreventedByGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canPreventGestureRecognizer:": {
+      "name": "canPreventGestureRecognizer:",
+      "bridgedName": "canPreventGestureRecognizer",
+      "args": [
+        {
+          "name": "canPreventGestureRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstMouse:": {
+      "name": "acceptsFirstMouse:",
+      "bridgedName": "acceptsFirstMouse",
+      "args": [
+        {
+          "name": "acceptsFirstMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesCancelledWithEvent:": {
+      "name": "touchesCancelledWithEvent:",
+      "bridgedName": "touchesCancelledWithEvent",
+      "args": [
+        {
+          "name": "touchesCancelledWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesEndedWithEvent:": {
+      "name": "touchesEndedWithEvent:",
+      "bridgedName": "touchesEndedWithEvent",
+      "args": [
+        {
+          "name": "touchesEndedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesMovedWithEvent:": {
+      "name": "touchesMovedWithEvent:",
+      "bridgedName": "touchesMovedWithEvent",
+      "args": [
+        {
+          "name": "touchesMovedWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchesBeganWithEvent:": {
+      "name": "touchesBeganWithEvent:",
+      "bridgedName": "touchesBeganWithEvent",
+      "args": [
+        {
+          "name": "touchesBeganWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldSendActionWhenPossibleConcurrentlyWithRecognizer:": {
+      "name": "_shouldSendActionWhenPossibleConcurrentlyWithRecognizer:",
+      "bridgedName": "_shouldSendActionWhenPossibleConcurrentlyWithRecognizer",
+      "args": [
+        {
+          "name": "_shouldSendActionWhenPossibleConcurrentlyWithRecognizer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteDesiredPressureBehaviorChanged": {
+      "name": "_noteDesiredPressureBehaviorChanged",
+      "bridgedName": "_noteDesiredPressureBehaviorChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_desiredPressureBehavior": {
+      "name": "_desiredPressureBehavior",
+      "bridgedName": "_desiredPressureBehavior",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsForceGestureEvents": {
+      "name": "wantsForceGestureEvents",
+      "bridgedName": "wantsForceGestureEvents",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pressureChangeWithEvent:": {
+      "name": "pressureChangeWithEvent:",
+      "bridgedName": "pressureChangeWithEvent",
+      "args": [
+        {
+          "name": "pressureChangeWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "translateWithEvent:": {
+      "name": "translateWithEvent:",
+      "bridgedName": "translateWithEvent",
+      "args": [
+        {
+          "name": "translateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotateWithEvent:": {
+      "name": "rotateWithEvent:",
+      "bridgedName": "rotateWithEvent",
+      "args": [
+        {
+          "name": "rotateWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "magnifyWithEvent:": {
+      "name": "magnifyWithEvent:",
+      "bridgedName": "magnifyWithEvent",
+      "args": [
+        {
+          "name": "magnifyWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabletPoint:": {
+      "name": "tabletPoint:",
+      "bridgedName": "tabletPoint",
+      "args": [
+        {
+          "name": "tabletPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flagsChanged:": {
+      "name": "flagsChanged:",
+      "bridgedName": "flagsChanged",
+      "args": [
+        {
+          "name": "flagsChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyUp:": {
+      "name": "keyUp:",
+      "bridgedName": "keyUp",
+      "args": [
+        {
+          "name": "keyUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseDragged:": {
+      "name": "otherMouseDragged:",
+      "bridgedName": "otherMouseDragged",
+      "args": [
+        {
+          "name": "otherMouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseDragged:": {
+      "name": "rightMouseDragged:",
+      "bridgedName": "rightMouseDragged",
+      "args": [
+        {
+          "name": "rightMouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDragged:": {
+      "name": "mouseDragged:",
+      "bridgedName": "mouseDragged",
+      "args": [
+        {
+          "name": "mouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseUp:": {
+      "name": "otherMouseUp:",
+      "bridgedName": "otherMouseUp",
+      "args": [
+        {
+          "name": "otherMouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseUp:": {
+      "name": "rightMouseUp:",
+      "bridgedName": "rightMouseUp",
+      "args": [
+        {
+          "name": "rightMouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUp:": {
+      "name": "mouseUp:",
+      "bridgedName": "mouseUp",
+      "args": [
+        {
+          "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherMouseDown:": {
+      "name": "otherMouseDown:",
+      "bridgedName": "otherMouseDown",
+      "args": [
+        {
+          "name": "otherMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rightMouseDown:": {
+      "name": "rightMouseDown:",
+      "bridgedName": "rightMouseDown",
+      "args": [
+        {
+          "name": "rightMouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsFunctionRowTouches": {
+      "name": "_wantsFunctionRowTouches",
+      "bridgedName": "_wantsFunctionRowTouches",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setWantsFunctionRowTouches:": {
+      "name": "_setWantsFunctionRowTouches:",
+      "bridgedName": "_setWantsFunctionRowTouches",
+      "args": [
+        {
+          "name": "_setWantsFunctionRowTouches",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAllowedTouchTypes:": {
+      "name": "setAllowedTouchTypes:",
+      "bridgedName": "setAllowedTouchTypes",
+      "args": [
+        {
+          "name": "setAllowedTouchTypes",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowedTouchTypes": {
+      "name": "allowedTouchTypes",
+      "bridgedName": "allowedTouchTypes",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "modifierFlags": {
+      "name": "modifierFlags",
+      "bridgedName": "modifierFlags",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSendsActionWhenPossible:": {
+      "name": "setSendsActionWhenPossible:",
+      "bridgedName": "setSendsActionWhenPossible",
+      "args": [
+        {
+          "name": "setSendsActionWhenPossible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendsActionWhenPossible": {
+      "name": "sendsActionWhenPossible",
+      "bridgedName": "sendsActionWhenPossible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasTargets": {
+      "name": "_hasTargets",
+      "bridgedName": "_hasTargets",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_delayedEvents": {
+      "name": "_delayedEvents",
+      "bridgedName": "_delayedEvents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFailureMap:": {
+      "name": "_setFailureMap:",
+      "bridgedName": "_setFailureMap",
+      "args": [
+        {
+          "name": "_setFailureMap",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_failureMap": {
+      "name": "_failureMap",
+      "bridgedName": "_failureMap",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRequiresSystemGesturesToFail:": {
+      "name": "_setRequiresSystemGesturesToFail:",
+      "bridgedName": "_setRequiresSystemGesturesToFail",
+      "args": [
+        {
+          "name": "_setRequiresSystemGesturesToFail",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_requiresSystemGesturesToFail": {
+      "name": "_requiresSystemGesturesToFail",
+      "bridgedName": "_requiresSystemGesturesToFail",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setState:": {
+      "name": "setState:",
+      "bridgedName": "setState",
+      "args": [
+        {
+          "name": "setState",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCancelsTouchesInView:": {
+      "name": "setCancelsTouchesInView:",
+      "bridgedName": "setCancelsTouchesInView",
+      "args": [
+        {
+          "name": "setCancelsTouchesInView",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelsTouchesInView": {
+      "name": "cancelsTouchesInView",
+      "bridgedName": "cancelsTouchesInView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setView:": {
+      "name": "setView:",
+      "bridgedName": "setView",
+      "args": [
+        {
+          "name": "setView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_activePressureConfiguration": {
+      "name": "_activePressureConfiguration",
+      "bridgedName": "_activePressureConfiguration",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_acceptedEventMask": {
+      "name": "_acceptedEventMask",
+      "bridgedName": "_acceptedEventMask",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quickLookWithEvent:": {
+      "name": "quickLookWithEvent:",
+      "bridgedName": "quickLookWithEvent",
+      "args": [
+        {
+          "name": "quickLookWithEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetGestureRecognizer": {
+      "name": "_resetGestureRecognizer",
+      "bridgedName": "_resetGestureRecognizer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reset": {
+      "name": "reset",
+      "bridgedName": "reset",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearUpdateTimer": {
+      "name": "_clearUpdateTimer",
+      "bridgedName": "_clearUpdateTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTarget:action:": {
+      "name": "removeTarget:action:",
+      "bridgedName": "removeTarget_action",
+      "args": [
+        {
+          "name": "removeTarget",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addTarget:action:": {
+      "name": "addTarget:action:",
+      "bridgedName": "addTarget_action",
+      "args": [
+        {
+          "name": "addTarget",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTouchContextId:": {
+      "name": "_setTouchContextId:",
+      "bridgedName": "_setTouchContextId",
+      "args": [
+        {
+          "name": "_setTouchContextId",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchContextId": {
+      "name": "_touchContextId",
+      "bridgedName": "_touchContextId",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeActiveGestureRecognizerFromTouchDevice": {
+      "name": "_removeActiveGestureRecognizerFromTouchDevice",
+      "bridgedName": "_removeActiveGestureRecognizerFromTouchDevice",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTouchDevice:": {
+      "name": "_setTouchDevice:",
+      "bridgedName": "_setTouchDevice",
+      "args": [
+        {
+          "name": "_setTouchDevice",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_touchDevice": {
+      "name": "_touchDevice",
+      "bridgedName": "_touchDevice",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_auxiliaryStorage": {
+      "name": "_auxiliaryStorage",
+      "bridgedName": "_auxiliaryStorage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deallocAuxiliaryStorage": {
+      "name": "_deallocAuxiliaryStorage",
+      "bridgedName": "_deallocAuxiliaryStorage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldBeArchived": {
+      "name": "shouldBeArchived",
+      "bridgedName": "shouldBeArchived",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTarget:action:": {
+      "name": "initWithTarget:action:",
+      "bridgedName": "initWithTarget_action",
+      "args": [
+        {
+          "name": "initWithTarget",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_descriptionForTouchBarLogging": {
+      "name": "_descriptionForTouchBarLogging",
+      "bridgedName": "_descriptionForTouchBarLogging",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "_dynamicFailureDependents": {
+      "name": "_dynamicFailureDependents",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "_dynamicFailureRequirements": {
+      "name": "_dynamicFailureRequirements",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "_failureDependents": {
+      "name": "_failureDependents",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "_failureRequirements": {
+      "name": "_failureRequirements",
+      "pointer": true,
+      "type": "NSMutableSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "state": {
+      "name": "state",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isEnabled"
+      ]
+    },
+    "pressureConfiguration": {
+      "name": "pressureConfiguration",
+      "pointer": true,
+      "type": "NSPressureConfiguration",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "view": {
+      "name": "view",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSError",
+    "NSImage"
+  ],
+  "protocol": false,
+  "className": "MSDocumentReader",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "readerForDocumentAtURL:": {
+      "name": "readerForDocumentAtURL:",
+      "bridgedName": "readerForDocumentAtURL",
+      "args": [
+        {
+          "name": "readerForDocumentAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "first4bytesOfFileAtURL:": {
+      "name": "first4bytesOfFileAtURL:",
+      "bridgedName": "first4bytesOfFileAtURL",
+      "args": [
+        {
+          "name": "first4bytesOfFileAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned int",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "previewImageWithMaximumSize:": {
+      "name": "previewImageWithMaximumSize:",
+      "bridgedName": "previewImageWithMaximumSize",
+      "args": [
+        {
+          "name": "previewImageWithMaximumSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readImmutableDataWithCorruptionDetected:error:": {
+      "name": "readImmutableDataWithCorruptionDetected:error:",
+      "bridgedName": "readImmutableDataWithCorruptionDetected_error",
+      "args": [
+        {
+          "name": "readImmutableDataWithCorruptionDetected",
+          "type": "char *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validate": {
+      "name": "validate",
+      "bridgedName": "validate",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "open:": {
+      "name": "open:",
+      "bridgedName": "open",
+      "args": [
+        {
+          "name": "open",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "repair": {
+      "name": "repair",
+      "bridgedName": "repair",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsLibraryPreviewImage": {
+      "name": "containsLibraryPreviewImage",
+      "bridgedName": "containsLibraryPreviewImage",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "readDataWithCorruptionDetected:error:": {
+      "name": "readDataWithCorruptionDetected:error:",
+      "bridgedName": "readDataWithCorruptionDetected_error",
+      "args": [
+        {
+          "name": "readDataWithCorruptionDetected",
+          "type": "char *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "error": {
+      "name": "error",
+      "pointer": true,
+      "type": "NSError",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "libraryPreviewImage": {
+      "name": "libraryPreviewImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "previewImage": {
+      "name": "previewImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "metadata": {
+      "name": "metadata",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "UIMetadata": {
+      "name": "UIMetadata",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "compatibilityVersion": {
+      "name": "compatibilityVersion",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "version": {
+      "name": "version",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "missingFonts": {
+      "name": "missingFonts",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "containsPreviewImage": {
+      "name": "containsPreviewImage",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "documentWasMigrated": {
+      "name": "documentWasMigrated",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSAlignmentEngineConstraint",
+    "MSAlignmentEngineResult",
+    "MSAlignmentEngineWorkings"
+  ],
+  "protocol": false,
+  "className": "MSAlignmentEngine",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "snapTargetsForCentersOfLayers:": {
+      "name": "snapTargetsForCentersOfLayers:",
+      "bridgedName": "snapTargetsForCentersOfLayers",
+      "args": [
+        {
+          "name": "snapTargetsForCentersOfLayers",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "roundPoint:": {
+      "name": "roundPoint:",
+      "bridgedName": "roundPoint",
+      "args": [
+        {
+          "name": "roundPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyDelegateAlignment:snappedAxes:": {
+      "name": "applyDelegateAlignment:snappedAxes:",
+      "bridgedName": "applyDelegateAlignment_snappedAxes",
+      "args": [
+        {
+          "name": "applyDelegateAlignment",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "snappedAxes",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includePoint:": {
+      "name": "includePoint:",
+      "bridgedName": "includePoint",
+      "args": [
+        {
+          "name": "includePoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includeTargets:": {
+      "name": "includeTargets:",
+      "bridgedName": "includeTargets",
+      "args": [
+        {
+          "name": "includeTargets",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includeTarget:": {
+      "name": "includeTarget:",
+      "bridgedName": "includeTarget",
+      "args": [
+        {
+          "name": "includeTarget",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginAlignmentForPoint:": {
+      "name": "beginAlignmentForPoint:",
+      "bridgedName": "beginAlignmentForPoint",
+      "args": [
+        {
+          "name": "beginAlignmentForPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canSnapOnAxis:": {
+      "name": "canSnapOnAxis:",
+      "bridgedName": "canSnapOnAxis",
+      "args": [
+        {
+          "name": "canSnapOnAxis",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "includeRulerGuideTargetsForPage:zoomScale:": {
+      "name": "includeRulerGuideTargetsForPage:zoomScale:",
+      "bridgedName": "includeRulerGuideTargetsForPage_zoomScale",
+      "args": [
+        {
+          "name": "includeRulerGuideTargetsForPage",
+          "type": "id"
+        },
+        {
+          "name": "zoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "yWorkings": {
+      "name": "yWorkings",
+      "pointer": true,
+      "type": "MSAlignmentEngineWorkings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "xWorkings": {
+      "name": "xWorkings",
+      "pointer": true,
+      "type": "MSAlignmentEngineWorkings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSAlignmentEngineDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "point": {
+      "name": "point",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "constraint": {
+      "name": "constraint",
+      "pointer": true,
+      "type": "MSAlignmentEngineConstraint",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "allowedAxes": {
+      "name": "allowedAxes",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "snapDistance": {
+      "name": "snapDistance",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "alignmentResult": {
+      "name": "alignmentResult",
+      "pointer": true,
+      "type": "MSAlignmentEngineResult",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

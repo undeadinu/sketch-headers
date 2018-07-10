@@ -1,0 +1,759 @@
+{
+  "imports": [
+    "NSOperation.h",
+    "NSCopying.h",
+    "NSSecureCoding.h",
+    "NSURLConnectionDataDelegate.h",
+    "NSURLConnectionDelegate.h"
+  ],
+  "classes": [
+    "AFSecurityPolicy",
+    "NSData",
+    "NSDictionary",
+    "NSError",
+    "NSInputStream",
+    "NSObject<OS_dispatch_group>",
+    "NSObject<OS_dispatch_queue>",
+    "NSOutputStream",
+    "NSRecursiveLock",
+    "NSSet",
+    "NSString",
+    "NSURLConnection",
+    "NSURLCredential",
+    "NSURLRequest",
+    "NSURLResponse"
+  ],
+  "protocol": false,
+  "className": "AFURLConnectionOperation",
+  "extends": "NSOperation",
+  "interfaces": [
+    "NSURLConnectionDelegate",
+    "NSURLConnectionDataDelegate",
+    "NSSecureCoding",
+    "NSCopying"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "batchOfRequestOperations:progressBlock:completionBlock:": {
+      "name": "batchOfRequestOperations:progressBlock:completionBlock:",
+      "bridgedName": "batchOfRequestOperations_progressBlock_completionBlock",
+      "args": [
+        {
+          "name": "batchOfRequestOperations",
+          "type": "id"
+        },
+        {
+          "name": "progressBlock",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "completionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "networkRequestThread": {
+      "name": "networkRequestThread",
+      "bridgedName": "networkRequestThread",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "networkRequestThreadEntryPoint:": {
+      "name": "networkRequestThreadEntryPoint:",
+      "bridgedName": "networkRequestThreadEntryPoint",
+      "args": [
+        {
+          "name": "networkRequestThreadEntryPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:willCacheResponse:": {
+      "name": "connection:willCacheResponse:",
+      "bridgedName": "connection_willCacheResponse",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "willCacheResponse",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:didFailWithError:": {
+      "name": "connection:didFailWithError:",
+      "bridgedName": "connection_didFailWithError",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "didFailWithError",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connectionDidFinishLoading:": {
+      "name": "connectionDidFinishLoading:",
+      "bridgedName": "connectionDidFinishLoading",
+      "args": [
+        {
+          "name": "connectionDidFinishLoading",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:didReceiveData:": {
+      "name": "connection:didReceiveData:",
+      "bridgedName": "connection_didReceiveData",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "didReceiveData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:didReceiveResponse:": {
+      "name": "connection:didReceiveResponse:",
+      "bridgedName": "connection_didReceiveResponse",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "didReceiveResponse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:": {
+      "name": "connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite:",
+      "bridgedName": "connection_didSendBodyData_totalBytesWritten_totalBytesExpectedToWrite",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "didSendBodyData",
+          "type": "long long"
+        },
+        {
+          "name": "totalBytesWritten",
+          "type": "long long"
+        },
+        {
+          "name": "totalBytesExpectedToWrite",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:willSendRequest:redirectResponse:": {
+      "name": "connection:willSendRequest:redirectResponse:",
+      "bridgedName": "connection_willSendRequest_redirectResponse",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "willSendRequest",
+          "type": "id"
+        },
+        {
+          "name": "redirectResponse",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connectionShouldUseCredentialStorage:": {
+      "name": "connectionShouldUseCredentialStorage:",
+      "bridgedName": "connectionShouldUseCredentialStorage",
+      "args": [
+        {
+          "name": "connectionShouldUseCredentialStorage",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connection:willSendRequestForAuthenticationChallenge:": {
+      "name": "connection:willSendRequestForAuthenticationChallenge:",
+      "bridgedName": "connection_willSendRequestForAuthenticationChallenge",
+      "args": [
+        {
+          "name": "connection",
+          "type": "id"
+        },
+        {
+          "name": "willSendRequestForAuthenticationChallenge",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelConnection": {
+      "name": "cancelConnection",
+      "bridgedName": "cancelConnection",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel": {
+      "name": "cancel",
+      "bridgedName": "cancel",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finish": {
+      "name": "finish",
+      "bridgedName": "finish",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "operationDidStart": {
+      "name": "operationDidStart",
+      "bridgedName": "operationDidStart",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "start": {
+      "name": "start",
+      "bridgedName": "start",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isConcurrent": {
+      "name": "isConcurrent",
+      "bridgedName": "isConcurrent",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFinished": {
+      "name": "isFinished",
+      "bridgedName": "isFinished",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExecuting": {
+      "name": "isExecuting",
+      "bridgedName": "isExecuting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isReady": {
+      "name": "isReady",
+      "bridgedName": "isReady",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCompletionBlock:": {
+      "name": "setCompletionBlock:",
+      "bridgedName": "setCompletionBlock",
+      "args": [
+        {
+          "name": "setCompletionBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRedirectResponseBlock:": {
+      "name": "setRedirectResponseBlock:",
+      "bridgedName": "setRedirectResponseBlock",
+      "args": [
+        {
+          "name": "setRedirectResponseBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCacheResponseBlock:": {
+      "name": "setCacheResponseBlock:",
+      "bridgedName": "setCacheResponseBlock",
+      "args": [
+        {
+          "name": "setCacheResponseBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setWillSendRequestForAuthenticationChallengeBlock:": {
+      "name": "setWillSendRequestForAuthenticationChallengeBlock:",
+      "bridgedName": "setWillSendRequestForAuthenticationChallengeBlock",
+      "args": [
+        {
+          "name": "setWillSendRequestForAuthenticationChallengeBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDownloadProgressBlock:": {
+      "name": "setDownloadProgressBlock:",
+      "bridgedName": "setDownloadProgressBlock",
+      "args": [
+        {
+          "name": "setDownloadProgressBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUploadProgressBlock:": {
+      "name": "setUploadProgressBlock:",
+      "bridgedName": "setUploadProgressBlock",
+      "args": [
+        {
+          "name": "setUploadProgressBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resume": {
+      "name": "resume",
+      "bridgedName": "resume",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPaused": {
+      "name": "isPaused",
+      "bridgedName": "isPaused",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "operationDidPause": {
+      "name": "operationDidPause",
+      "bridgedName": "operationDidPause",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pause": {
+      "name": "pause",
+      "bridgedName": "pause",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithRequest:": {
+      "name": "initWithRequest:",
+      "bridgedName": "initWithRequest",
+      "args": [
+        {
+          "name": "initWithRequest",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "redirectResponse": {
+      "name": "redirectResponse",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "cacheResponse": {
+      "name": "cacheResponse",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "authenticationChallenge": {
+      "name": "authenticationChallenge",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "downloadProgress": {
+      "name": "downloadProgress",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "uploadProgress": {
+      "name": "uploadProgress",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "backgroundTaskCleanup": {
+      "name": "backgroundTaskCleanup",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "totalBytesRead": {
+      "name": "totalBytesRead",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "responseStringEncoding": {
+      "name": "responseStringEncoding",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "responseString": {
+      "name": "responseString",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "connection": {
+      "name": "connection",
+      "pointer": true,
+      "type": "NSURLConnection",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "lock": {
+      "name": "lock",
+      "pointer": true,
+      "type": "NSRecursiveLock",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "state": {
+      "name": "state",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "userInfo": {
+      "name": "userInfo",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "completionGroup": {
+      "name": "completionGroup",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_group>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "completionQueue": {
+      "name": "completionQueue",
+      "pointer": true,
+      "type": "NSObject<OS_dispatch_queue>",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "securityPolicy": {
+      "name": "securityPolicy",
+      "pointer": true,
+      "type": "AFSecurityPolicy",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "credential": {
+      "name": "credential",
+      "pointer": true,
+      "type": "NSURLCredential",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "shouldUseCredentialStorage": {
+      "name": "shouldUseCredentialStorage",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "responseData": {
+      "name": "responseData",
+      "pointer": true,
+      "type": "NSData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "error": {
+      "name": "error",
+      "pointer": true,
+      "type": "NSError",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "response": {
+      "name": "response",
+      "pointer": true,
+      "type": "NSURLResponse",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "request": {
+      "name": "request",
+      "pointer": true,
+      "type": "NSURLRequest",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "runLoopModes": {
+      "name": "runLoopModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "outputStream": {
+      "name": "outputStream",
+      "pointer": true,
+      "type": "NSOutputStream",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "inputStream": {
+      "name": "inputStream",
+      "pointer": true,
+      "type": "NSInputStream",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

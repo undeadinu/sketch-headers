@@ -1,0 +1,167 @@
+{
+  "imports": [
+    "MSNormalBaseEventHandler.h"
+  ],
+  "classes": [
+    "MSNormalEventData",
+    "MSShapeGroup",
+    "MSSnapper"
+  ],
+  "protocol": false,
+  "className": "MSNormalResizeLineEventHandler",
+  "extends": "MSNormalBaseEventHandler",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "roundMouse:": {
+      "name": "roundMouse:",
+      "bridgedName": "roundMouse",
+      "args": [
+        {
+          "name": "roundMouse",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorForRadians:": {
+      "name": "cursorForRadians:",
+      "bridgedName": "cursorForRadians",
+      "args": [
+        {
+          "name": "cursorForRadians",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayResizeCursor": {
+      "name": "displayResizeCursor",
+      "bridgedName": "displayResizeCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "name": "absoluteMouseUp",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignPoint:withShiftTo:": {
+      "name": "alignPoint:withShiftTo:",
+      "bridgedName": "alignPoint_withShiftTo",
+      "args": [
+        {
+          "name": "alignPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "withShiftTo",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDragged:flags:": {
+      "name": "absoluteMouseDragged:flags:",
+      "bridgedName": "absoluteMouseDragged_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDragged",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "eventData": {
+      "name": "eventData",
+      "pointer": true,
+      "type": "MSNormalEventData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layerSnapper": {
+      "name": "layerSnapper",
+      "pointer": true,
+      "type": "MSSnapper",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "pointIndex": {
+      "name": "pointIndex",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "lineShape": {
+      "name": "lineShape",
+      "pointer": true,
+      "type": "MSShapeGroup",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    }
+  }
+}

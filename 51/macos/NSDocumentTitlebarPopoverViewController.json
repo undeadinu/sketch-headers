@@ -1,0 +1,219 @@
+{
+  "imports": [
+    "NSRemoteViewDelegate.h"
+  ],
+  "classes": [
+    "NSDocument",
+    "NSError",
+    "NSOperationQueue"
+  ],
+  "protocol": false,
+  "className": "NSDocumentTitlebarPopoverViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSRemoteViewDelegate"
+  ],
+  "methods": {
+    "warmup": {
+      "name": "warmup",
+      "bridgedName": "warmup",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_sharedXPCListenerClass": {
+      "name": "_sharedXPCListenerClass",
+      "bridgedName": "_sharedXPCListenerClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_remoteViewClass": {
+      "name": "_remoteViewClass",
+      "bridgedName": "_remoteViewClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enqueueOperationWithBlock:": {
+      "name": "_enqueueOperationWithBlock:",
+      "bridgedName": "_enqueueOperationWithBlock",
+      "args": [
+        {
+          "name": "_enqueueOperationWithBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_whenDocumentOperationCompletesPerformBlock:": {
+      "name": "_whenDocumentOperationCompletesPerformBlock:",
+      "bridgedName": "_whenDocumentOperationCompletesPerformBlock",
+      "args": [
+        {
+          "name": "_whenDocumentOperationCompletesPerformBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didFinishOperation": {
+      "name": "_didFinishOperation",
+      "bridgedName": "_didFinishOperation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willStartOperation": {
+      "name": "_willStartOperation",
+      "bridgedName": "_willStartOperation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidate": {
+      "name": "invalidate",
+      "bridgedName": "invalidate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidInvalidate:": {
+      "name": "viewDidInvalidate:",
+      "bridgedName": "viewDidInvalidate",
+      "args": [
+        {
+          "name": "viewDidInvalidate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidAdvanceToRunPhase:": {
+      "name": "viewDidAdvanceToRunPhase:",
+      "bridgedName": "viewDidAdvanceToRunPhase",
+      "args": [
+        {
+          "name": "viewDidAdvanceToRunPhase",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareViewThenContinue:": {
+      "name": "prepareViewThenContinue:",
+      "bridgedName": "prepareViewThenContinue",
+      "args": [
+        {
+          "name": "prepareViewThenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupBridge": {
+      "name": "_setupBridge",
+      "bridgedName": "_setupBridge",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "invalidationHandler": {
+      "name": "invalidationHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "operationWaiter": {
+      "name": "operationWaiter",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "shouldRetainExportedObject": {
+      "name": "shouldRetainExportedObject",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

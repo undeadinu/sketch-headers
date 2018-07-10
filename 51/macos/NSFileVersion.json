@@ -1,0 +1,1089 @@
+{
+  "imports": [
+    "NSFileVersion.h",
+    "BUStarfieldTimelineItem.h",
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSString",
+    "NSDate",
+    "NSPersonNameComponents",
+    "NSURL"
+  ],
+  "protocol": false,
+  "className": "NSFileVersion",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "timelineItemType": {
+      "name": "timelineItemType",
+      "bridgedName": "timelineItemType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "timelineItemDate": {
+      "name": "timelineItemDate",
+      "bridgedName": "timelineItemDate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_compareToVersion:": {
+      "name": "_compareToVersion:",
+      "bridgedName": "_compareToVersion",
+      "args": [
+        {
+          "name": "_compareToVersion",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishedWithBackupCollection:": {
+      "name": "_finishedWithBackupCollection:",
+      "bridgedName": "_finishedWithBackupCollection",
+      "args": [
+        {
+          "name": "_finishedWithBackupCollection",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_getBackupVersionsForURL:queue:completionHandler:": {
+      "name": "_getBackupVersionsForURL:queue:completionHandler:",
+      "bridgedName": "_getBackupVersionsForURL_queue_completionHandler",
+      "args": [
+        {
+          "name": "_getBackupVersionsForURL",
+          "type": "id"
+        },
+        {
+          "name": "queue",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "removeOtherVersionsOfItemAtURL:error:": {
+      "name": "removeOtherVersionsOfItemAtURL:error:",
+      "bridgedName": "removeOtherVersionsOfItemAtURL_error",
+      "args": [
+        {
+          "name": "removeOtherVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "unresolvedConflictVersionsOfItemAtURL:": {
+      "name": "unresolvedConflictVersionsOfItemAtURL:",
+      "bridgedName": "unresolvedConflictVersionsOfItemAtURL",
+      "args": [
+        {
+          "name": "unresolvedConflictVersionsOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "temporaryDirectoryURLForNewVersionOfItemAtURL:": {
+      "name": "temporaryDirectoryURLForNewVersionOfItemAtURL:",
+      "bridgedName": "temporaryDirectoryURLForNewVersionOfItemAtURL",
+      "args": [
+        {
+          "name": "temporaryDirectoryURLForNewVersionOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "addVersionOfItemAtURL:withContentsOfURL:options:error:": {
+      "name": "addVersionOfItemAtURL:withContentsOfURL:options:error:",
+      "bridgedName": "addVersionOfItemAtURL_withContentsOfURL_options_error",
+      "args": [
+        {
+          "name": "addVersionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "withContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "versionOfItemAtURL:forPersistentIdentifier:": {
+      "name": "versionOfItemAtURL:forPersistentIdentifier:",
+      "bridgedName": "versionOfItemAtURL_forPersistentIdentifier",
+      "args": [
+        {
+          "name": "versionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "forPersistentIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "getNonlocalVersionsOfItemAtURL:completionHandler:": {
+      "name": "getNonlocalVersionsOfItemAtURL:completionHandler:",
+      "bridgedName": "getNonlocalVersionsOfItemAtURL_completionHandler",
+      "args": [
+        {
+          "name": "getNonlocalVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "otherVersionsOfItemAtURL:": {
+      "name": "otherVersionsOfItemAtURL:",
+      "bridgedName": "otherVersionsOfItemAtURL",
+      "args": [
+        {
+          "name": "otherVersionsOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "currentVersionOfItemAtURL:": {
+      "name": "currentVersionOfItemAtURL:",
+      "bridgedName": "currentVersionOfItemAtURL",
+      "args": [
+        {
+          "name": "currentVersionOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingValueForKey:": {
+      "name": "keyPathsForValuesAffectingValueForKey:",
+      "bridgedName": "keyPathsForValuesAffectingValueForKey",
+      "args": [
+        {
+          "name": "keyPathsForValuesAffectingValueForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_removeTemporaryDirectoryAtURL:": {
+      "name": "_removeTemporaryDirectoryAtURL:",
+      "bridgedName": "_removeTemporaryDirectoryAtURL",
+      "args": [
+        {
+          "name": "_removeTemporaryDirectoryAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_versionOfItemAtURL:forClientID:name:temporaryStorageIdentifier:evenIfDeleted:": {
+      "name": "_versionOfItemAtURL:forClientID:name:temporaryStorageIdentifier:evenIfDeleted:",
+      "bridgedName": "_versionOfItemAtURL_forClientID_name_temporaryStorageIdentifier_evenIfDeleted",
+      "args": [
+        {
+          "name": "_versionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "forClientID",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "evenIfDeleted",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_removeOtherVersionsOfItemAtURL:temporaryStorageIdentifier:error:": {
+      "name": "_removeOtherVersionsOfItemAtURL:temporaryStorageIdentifier:error:",
+      "bridgedName": "_removeOtherVersionsOfItemAtURL_temporaryStorageIdentifier_error",
+      "args": [
+        {
+          "name": "_removeOtherVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_temporaryDirectoryURLForNewVersionOfItemAtURL:temporaryStorageIdentifier:": {
+      "name": "_temporaryDirectoryURLForNewVersionOfItemAtURL:temporaryStorageIdentifier:",
+      "bridgedName": "_temporaryDirectoryURLForNewVersionOfItemAtURL_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_temporaryDirectoryURLForNewVersionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_addVersionOfItemAtURL:withContentsOfURL:options:temporaryStorageIdentifier:error:": {
+      "name": "_addVersionOfItemAtURL:withContentsOfURL:options:temporaryStorageIdentifier:error:",
+      "bridgedName": "_addVersionOfItemAtURL_withContentsOfURL_options_temporaryStorageIdentifier_error",
+      "args": [
+        {
+          "name": "_addVersionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "withContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_addVersionOfItemAtURL:withContentsOfURL:options:userInfo:temporaryStorageIdentifier:error:": {
+      "name": "_addVersionOfItemAtURL:withContentsOfURL:options:userInfo:temporaryStorageIdentifier:error:",
+      "bridgedName": "_addVersionOfItemAtURL_withContentsOfURL_options_userInfo_temporaryStorageIdentifier_error",
+      "args": [
+        {
+          "name": "_addVersionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "withContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "userInfo",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_versionOfItemAtURL:forPersistentIdentifier:temporaryStorageIdentifier:": {
+      "name": "_versionOfItemAtURL:forPersistentIdentifier:temporaryStorageIdentifier:",
+      "bridgedName": "_versionOfItemAtURL_forPersistentIdentifier_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_versionOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "forPersistentIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_otherNonpurgeableVersionsOfItemAtURL:temporaryStorageIdentifier:": {
+      "name": "_otherNonpurgeableVersionsOfItemAtURL:temporaryStorageIdentifier:",
+      "bridgedName": "_otherNonpurgeableVersionsOfItemAtURL_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_otherNonpurgeableVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_otherVersionsOfItemAtURL:temporaryStorageIdentifier:": {
+      "name": "_otherVersionsOfItemAtURL:temporaryStorageIdentifier:",
+      "bridgedName": "_otherVersionsOfItemAtURL_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_otherVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_otherVersionsOfItemAtURL:temporaryStorageIdentifier:withoutOptions:": {
+      "name": "_otherVersionsOfItemAtURL:temporaryStorageIdentifier:withoutOptions:",
+      "bridgedName": "_otherVersionsOfItemAtURL_temporaryStorageIdentifier_withoutOptions",
+      "args": [
+        {
+          "name": "_otherVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "withoutOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_libraryForURL:temporaryStorageIdentifier:": {
+      "name": "_libraryForURL:temporaryStorageIdentifier:",
+      "bridgedName": "_libraryForURL_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_libraryForURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id *"
+        }
+      ],
+      "returns": "struct NSObject *",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_existingLibraryForURL:temporaryStorageIdentifier:": {
+      "name": "_existingLibraryForURL:temporaryStorageIdentifier:",
+      "bridgedName": "_existingLibraryForURL_temporaryStorageIdentifier",
+      "args": [
+        {
+          "name": "_existingLibraryForURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "struct NSObject *",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_permanentVersionStorageSupportedForURL:temporaryStorageIdentifier:error:": {
+      "name": "_permanentVersionStorageSupportedForURL:temporaryStorageIdentifier:error:",
+      "bridgedName": "_permanentVersionStorageSupportedForURL_temporaryStorageIdentifier_error",
+      "args": [
+        {
+          "name": "_permanentVersionStorageSupportedForURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageIdentifier",
+          "type": "id *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_makeTemporaryStorageIdentifier": {
+      "name": "_makeTemporaryStorageIdentifier",
+      "bridgedName": "_makeTemporaryStorageIdentifier",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_makePermanentStorageLibraryForURL:temporaryStorageRequired:error:": {
+      "name": "_makePermanentStorageLibraryForURL:temporaryStorageRequired:error:",
+      "bridgedName": "_makePermanentStorageLibraryForURL_temporaryStorageRequired_error",
+      "args": [
+        {
+          "name": "_makePermanentStorageLibraryForURL",
+          "type": "id"
+        },
+        {
+          "name": "temporaryStorageRequired",
+          "type": "char *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_isTemporaryStorageRequiredForGSError:andURL:": {
+      "name": "_isTemporaryStorageRequiredForGSError:andURL:",
+      "bridgedName": "_isTemporaryStorageRequiredForGSError_andURL",
+      "args": [
+        {
+          "name": "_isTemporaryStorageRequiredForGSError",
+          "type": "id"
+        },
+        {
+          "name": "andURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_supportedGenerationalStorageClientIDs": {
+      "name": "_supportedGenerationalStorageClientIDs",
+      "bridgedName": "_supportedGenerationalStorageClientIDs",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_temporaryStorageLocationForIdentifier:": {
+      "name": "_temporaryStorageLocationForIdentifier:",
+      "bridgedName": "_temporaryStorageLocationForIdentifier",
+      "args": [
+        {
+          "name": "_temporaryStorageLocationForIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_autosaveDirectoryURLCreateIfNecessary:": {
+      "name": "_autosaveDirectoryURLCreateIfNecessary:",
+      "bridgedName": "_autosaveDirectoryURLCreateIfNecessary",
+      "args": [
+        {
+          "name": "_autosaveDirectoryURLCreateIfNecessary",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "getNonlocalVersionsOfItemAtURL:options:completionHandler:": {
+      "name": "getNonlocalVersionsOfItemAtURL:options:completionHandler:",
+      "bridgedName": "getNonlocalVersionsOfItemAtURL_options_completionHandler",
+      "args": [
+        {
+          "name": "getNonlocalVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "discoverUbiquitousVersionsOfItemAtURL:completionHandler:": {
+      "name": "discoverUbiquitousVersionsOfItemAtURL:completionHandler:",
+      "bridgedName": "discoverUbiquitousVersionsOfItemAtURL_completionHandler",
+      "args": [
+        {
+          "name": "discoverUbiquitousVersionsOfItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_removeConflictObserver:": {
+      "name": "_removeConflictObserver:",
+      "bridgedName": "_removeConflictObserver",
+      "args": [
+        {
+          "name": "_removeConflictObserver",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_addConflictObserverForItemAtURL:statusChangedHandler:": {
+      "name": "_addConflictObserverForItemAtURL:statusChangedHandler:",
+      "bridgedName": "_addConflictObserverForItemAtURL_statusChangedHandler",
+      "args": [
+        {
+          "name": "_addConflictObserverForItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "statusChangedHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void *",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_markConflicts:asHandledForItemAtURL:": {
+      "name": "_markConflicts:asHandledForItemAtURL:",
+      "bridgedName": "_markConflicts_asHandledForItemAtURL",
+      "args": [
+        {
+          "name": "_markConflicts",
+          "type": "id"
+        },
+        {
+          "name": "asHandledForItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_conflictsExistForItemAtURL:": {
+      "name": "_conflictsExistForItemAtURL:",
+      "bridgedName": "_conflictsExistForItemAtURL",
+      "args": [
+        {
+          "name": "_conflictsExistForItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "unresolvedConflictsExistForItemAtURL:": {
+      "name": "unresolvedConflictsExistForItemAtURL:",
+      "bridgedName": "unresolvedConflictsExistForItemAtURL",
+      "args": [
+        {
+          "name": "unresolvedConflictsExistForItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "versionsOfItemAtURL:": {
+      "name": "versionsOfItemAtURL:",
+      "bridgedName": "versionsOfItemAtURL",
+      "args": [
+        {
+          "name": "versionsOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "removeAndReturnError:": {
+      "name": "removeAndReturnError:",
+      "bridgedName": "removeAndReturnError",
+      "args": [
+        {
+          "name": "removeAndReturnError",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceItemAtURL:options:error:": {
+      "name": "replaceItemAtURL:options:error:",
+      "bridgedName": "replaceItemAtURL_options_error",
+      "args": [
+        {
+          "name": "replaceItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preserveConflictVersionLocally": {
+      "name": "_preserveConflictVersionLocally",
+      "bridgedName": "_preserveConflictVersionLocally",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overrideModificationDateWithDate:": {
+      "name": "_overrideModificationDateWithDate:",
+      "bridgedName": "_overrideModificationDateWithDate",
+      "args": [
+        {
+          "name": "_overrideModificationDateWithDate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDocumentInfo:": {
+      "name": "_setDocumentInfo:",
+      "bridgedName": "_setDocumentInfo",
+      "args": [
+        {
+          "name": "_setDocumentInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_documentInfo": {
+      "name": "_documentInfo",
+      "bridgedName": "_documentInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithFileURL:nonLocalVersion:": {
+      "name": "_initWithFileURL:nonLocalVersion:",
+      "bridgedName": "_initWithFileURL_nonLocalVersion",
+      "args": [
+        {
+          "name": "_initWithFileURL",
+          "type": "id"
+        },
+        {
+          "name": "nonLocalVersion",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithAddition:": {
+      "name": "_initWithAddition:",
+      "bridgedName": "_initWithAddition",
+      "args": [
+        {
+          "name": "_initWithAddition",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithFileURL:library:clientID:name:contentsURL:isBackup:revision:": {
+      "name": "_initWithFileURL:library:clientID:name:contentsURL:isBackup:revision:",
+      "bridgedName": "_initWithFileURL_library_clientID_name_contentsURL_isBackup_revision",
+      "args": [
+        {
+          "name": "_initWithFileURL",
+          "type": "id"
+        },
+        {
+          "name": "library",
+          "type": "id"
+        },
+        {
+          "name": "clientID",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        },
+        {
+          "name": "contentsURL",
+          "type": "id"
+        },
+        {
+          "name": "isBackup",
+          "type": "BOOL"
+        },
+        {
+          "name": "revision",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "restoreOverItemAtURL:error:": {
+      "name": "restoreOverItemAtURL:error:",
+      "bridgedName": "restoreOverItemAtURL_error",
+      "args": [
+        {
+          "name": "restoreOverItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "discardable": {
+      "name": "discardable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isDiscardable"
+      ]
+    },
+    "resolved": {
+      "name": "resolved",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isResolved"
+      ]
+    },
+    "etag": {
+      "name": "etag",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hasThumbnail": {
+      "name": "hasThumbnail",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "hasLocalContents": {
+      "name": "hasLocalContents",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "ubiquitous": {
+      "name": "ubiquitous",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isUbiquitous"
+      ]
+    },
+    "conflict": {
+      "name": "conflict",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isConflict"
+      ]
+    },
+    "persistentIdentifier": {
+      "name": "persistentIdentifier",
+      "pointer": false,
+      "type": "id <NSCoding>",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "size": {
+      "name": "size",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "modificationDate": {
+      "name": "modificationDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "originatorNameComponents": {
+      "name": "originatorNameComponents",
+      "pointer": true,
+      "type": "NSPersonNameComponents",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "originatorName": {
+      "name": "originatorName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "localizedNameOfSavingComputer": {
+      "name": "localizedNameOfSavingComputer",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "localizedName": {
+      "name": "localizedName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "originalPOSIXName": {
+      "name": "originalPOSIXName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "URL": {
+      "name": "URL",
+      "pointer": true,
+      "type": "NSURL",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "_isBackup": {
+      "name": "_isBackup",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=_isBackup"
+      ]
+    }
+  }
+}

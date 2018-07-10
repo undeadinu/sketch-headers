@@ -1,0 +1,423 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSMutableIndexSet"
+  ],
+  "protocol": false,
+  "className": "_NSModelObservingTracker",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "_logObservingInfo": {
+      "name": "_logObservingInfo",
+      "bridgedName": "_logObservingInfo",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "modelAndProxyKeysObserved": {
+      "name": "modelAndProxyKeysObserved",
+      "bridgedName": "modelAndProxyKeysObserved",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "analyzeKeyPath:registerOrUnregister:": {
+      "name": "analyzeKeyPath:registerOrUnregister:",
+      "bridgedName": "analyzeKeyPath_registerOrUnregister",
+      "args": [
+        {
+          "name": "analyzeKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "registerOrUnregister",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeObservedKey:": {
+      "name": "removeObservedKey:",
+      "bridgedName": "removeObservedKey",
+      "args": [
+        {
+          "name": "removeObservedKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addObservedKey:": {
+      "name": "addObservedKey:",
+      "bridgedName": "addObservedKey",
+      "args": [
+        {
+          "name": "addObservedKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerModelKeyPaths:unregisterModelKeyPaths:": {
+      "name": "registerModelKeyPaths:unregisterModelKeyPaths:",
+      "bridgedName": "registerModelKeyPaths_unregisterModelKeyPaths",
+      "args": [
+        {
+          "name": "registerModelKeyPaths",
+          "type": "id"
+        },
+        {
+          "name": "unregisterModelKeyPaths",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unregisterModelKeyPath:": {
+      "name": "unregisterModelKeyPath:",
+      "bridgedName": "unregisterModelKeyPath",
+      "args": [
+        {
+          "name": "unregisterModelKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerModelKeyPath:": {
+      "name": "registerModelKeyPath:",
+      "bridgedName": "registerModelKeyPath",
+      "args": [
+        {
+          "name": "registerModelKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "clearAllModelObjectObserving": {
+      "name": "clearAllModelObjectObserving",
+      "bridgedName": "clearAllModelObjectObserving",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopObservingModelObject:": {
+      "name": "stopObservingModelObject:",
+      "bridgedName": "stopObservingModelObject",
+      "args": [
+        {
+          "name": "stopObservingModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startObservingModelObject:": {
+      "name": "startObservingModelObject:",
+      "bridgedName": "startObservingModelObject",
+      "args": [
+        {
+          "name": "startObservingModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObservingToModelObjectsRange:": {
+      "name": "setObservingToModelObjectsRange:",
+      "bridgedName": "setObservingToModelObjectsRange",
+      "args": [
+        {
+          "name": "setObservingToModelObjectsRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopObservingModelObjectsAtReferenceIndexes:": {
+      "name": "stopObservingModelObjectsAtReferenceIndexes:",
+      "bridgedName": "stopObservingModelObjectsAtReferenceIndexes",
+      "args": [
+        {
+          "name": "stopObservingModelObjectsAtReferenceIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startObservingModelObjectsAtReferenceIndexes:": {
+      "name": "startObservingModelObjectsAtReferenceIndexes:",
+      "bridgedName": "startObservingModelObjectsAtReferenceIndexes",
+      "args": [
+        {
+          "name": "startObservingModelObjectsAtReferenceIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopObservingModelObjectAtReferenceIndex:": {
+      "name": "stopObservingModelObjectAtReferenceIndex:",
+      "bridgedName": "stopObservingModelObjectAtReferenceIndex",
+      "args": [
+        {
+          "name": "stopObservingModelObjectAtReferenceIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startObservingModelObjectAtReferenceIndex:": {
+      "name": "startObservingModelObjectAtReferenceIndex:",
+      "bridgedName": "startObservingModelObjectAtReferenceIndex",
+      "args": [
+        {
+          "name": "startObservingModelObjectAtReferenceIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingModelObject:": {
+      "name": "_stopObservingModelObject:",
+      "bridgedName": "_stopObservingModelObject",
+      "args": [
+        {
+          "name": "_stopObservingModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingModelObject:": {
+      "name": "_startObservingModelObject:",
+      "bridgedName": "_startObservingModelObject",
+      "args": [
+        {
+          "name": "_startObservingModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerOrUnregister:observerNotificationsForKeyPath:": {
+      "name": "_registerOrUnregister:observerNotificationsForKeyPath:",
+      "bridgedName": "_registerOrUnregister_observerNotificationsForKeyPath",
+      "args": [
+        {
+          "name": "_registerOrUnregister",
+          "type": "BOOL"
+        },
+        {
+          "name": "observerNotificationsForKeyPath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerOrUnregister:observerNotificationsForModelObject:": {
+      "name": "_registerOrUnregister:observerNotificationsForModelObject:",
+      "bridgedName": "_registerOrUnregister_observerNotificationsForModelObject",
+      "args": [
+        {
+          "name": "_registerOrUnregister",
+          "type": "BOOL"
+        },
+        {
+          "name": "observerNotificationsForModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerOrUnregister:observerNotificationsForKeyPath:ofModelObject:": {
+      "name": "_registerOrUnregister:observerNotificationsForKeyPath:ofModelObject:",
+      "bridgedName": "_registerOrUnregister_observerNotificationsForKeyPath_ofModelObject",
+      "args": [
+        {
+          "name": "_registerOrUnregister",
+          "type": "BOOL"
+        },
+        {
+          "name": "observerNotificationsForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateReferenceIndexesToReflectRemovalAtIndexes:": {
+      "name": "updateReferenceIndexesToReflectRemovalAtIndexes:",
+      "bridgedName": "updateReferenceIndexesToReflectRemovalAtIndexes",
+      "args": [
+        {
+          "name": "updateReferenceIndexesToReflectRemovalAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateReferenceIndexesToReflectRemovalAtIndex:": {
+      "name": "updateReferenceIndexesToReflectRemovalAtIndex:",
+      "bridgedName": "updateReferenceIndexesToReflectRemovalAtIndex",
+      "args": [
+        {
+          "name": "updateReferenceIndexesToReflectRemovalAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateReferenceIndexesToReflectInsertionAtIndexes:": {
+      "name": "updateReferenceIndexesToReflectInsertionAtIndexes:",
+      "bridgedName": "updateReferenceIndexesToReflectInsertionAtIndexes",
+      "args": [
+        {
+          "name": "updateReferenceIndexesToReflectInsertionAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateReferenceIndexesToReflectInsertionAtIndex:": {
+      "name": "updateReferenceIndexesToReflectInsertionAtIndex:",
+      "bridgedName": "updateReferenceIndexesToReflectInsertionAtIndex",
+      "args": [
+        {
+          "name": "updateReferenceIndexesToReflectInsertionAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceIndexReferenceModelObjectArrayWithEqualCopy:": {
+      "name": "replaceIndexReferenceModelObjectArrayWithEqualCopy:",
+      "bridgedName": "replaceIndexReferenceModelObjectArrayWithEqualCopy",
+      "args": [
+        {
+          "name": "replaceIndexReferenceModelObjectArrayWithEqualCopy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexReferenceModelObjectArray": {
+      "name": "indexReferenceModelObjectArray",
+      "bridgedName": "indexReferenceModelObjectArray",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIndexReferenceModelObjectArray:clearAllModelObjectObserving:": {
+      "name": "setIndexReferenceModelObjectArray:clearAllModelObjectObserving:",
+      "bridgedName": "setIndexReferenceModelObjectArray_clearAllModelObjectObserving",
+      "args": [
+        {
+          "name": "setIndexReferenceModelObjectArray",
+          "type": "id"
+        },
+        {
+          "name": "clearAllModelObjectObserving",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dealloc": {
+      "name": "_dealloc",
+      "bridgedName": "_dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithModelObserver:availableModelAndProxyKeys:": {
+      "name": "initWithModelObserver:availableModelAndProxyKeys:",
+      "bridgedName": "initWithModelObserver_availableModelAndProxyKeys",
+      "args": [
+        {
+          "name": "initWithModelObserver",
+          "type": "id"
+        },
+        {
+          "name": "availableModelAndProxyKeys",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

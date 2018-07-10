@@ -1,0 +1,229 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "MSDocument",
+    "MSHistory",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSHistoryMaker",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ignoreDocumentChangesInBlock:": {
+      "name": "ignoreDocumentChangesInBlock:",
+      "bridgedName": "ignoreDocumentChangesInBlock",
+      "args": [
+        {
+          "name": "ignoreDocumentChangesInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveThroughHistoryBackInTime:": {
+      "name": "moveThroughHistoryBackInTime:",
+      "bridgedName": "moveThroughHistoryBackInTime",
+      "args": [
+        {
+          "name": "moveThroughHistoryBackInTime",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canMoveThroughHistoryBackInTime:": {
+      "name": "canMoveThroughHistoryBackInTime:",
+      "bridgedName": "canMoveThroughHistoryBackInTime",
+      "args": [
+        {
+          "name": "canMoveThroughHistoryBackInTime",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeHistoryIfNecessaryUsingTransientMoment:": {
+      "name": "makeHistoryIfNecessaryUsingTransientMoment:",
+      "bridgedName": "makeHistoryIfNecessaryUsingTransientMoment",
+      "args": [
+        {
+          "name": "makeHistoryIfNecessaryUsingTransientMoment",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deferMakingHistoryInBlock:": {
+      "name": "deferMakingHistoryInBlock:",
+      "bridgedName": "deferMakingHistoryInBlock",
+      "args": [
+        {
+          "name": "deferMakingHistoryInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTransientMomentInHistoryIfNecessary": {
+      "name": "makeTransientMomentInHistoryIfNecessary",
+      "bridgedName": "makeTransientMomentInHistoryIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeHistoryIfNecessary": {
+      "name": "makeHistoryIfNecessary",
+      "bridgedName": "makeHistoryIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commitTransientMomentIfNecessary": {
+      "name": "commitTransientMomentIfNecessary",
+      "bridgedName": "commitTransientMomentIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coalesceHistoryInBlock:": {
+      "name": "coalesceHistoryInBlock:",
+      "bridgedName": "coalesceHistoryInBlock",
+      "args": [
+        {
+          "name": "coalesceHistoryInBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "finishCoalescingHistory": {
+      "name": "finishCoalescingHistory",
+      "bridgedName": "finishCoalescingHistory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startCoalescingHistory": {
+      "name": "startCoalescingHistory",
+      "bridgedName": "startCoalescingHistory",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "registerHistoryMomentTitle:": {
+      "name": "registerHistoryMomentTitle:",
+      "bridgedName": "registerHistoryMomentTitle",
+      "args": [
+        {
+          "name": "registerHistoryMomentTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:": {
+      "name": "initWithDocument:",
+      "bridgedName": "initWithDocument",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "isMakingHistory": {
+      "name": "isMakingHistory",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "isMovingThroughHistory": {
+      "name": "isMovingThroughHistory",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "historyIsCoalescing": {
+      "name": "historyIsCoalescing",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "historyMomentTitle": {
+      "name": "historyMomentTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "history": {
+      "name": "history",
+      "pointer": true,
+      "type": "MSHistory",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "document": {
+      "name": "document",
+      "pointer": true,
+      "type": "__weak MSDocument",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

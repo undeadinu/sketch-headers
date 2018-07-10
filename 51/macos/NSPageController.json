@@ -1,0 +1,827 @@
+{
+  "imports": [
+    "NSAnimatablePropertyContainer.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSString",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "NSPageController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSAnimatablePropertyContainer",
+    "NSCoding"
+  ],
+  "methods": {
+    "defaultAnimationForKey:": {
+      "name": "defaultAnimationForKey:",
+      "bridgedName": "defaultAnimationForKey",
+      "args": [
+        {
+          "name": "defaultAnimationForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_performWithoutAnimation:": {
+      "name": "_performWithoutAnimation:",
+      "bridgedName": "_performWithoutAnimation",
+      "args": [
+        {
+          "name": "_performWithoutAnimation",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animationForKey:": {
+      "name": "animationForKey:",
+      "bridgedName": "animationForKey",
+      "args": [
+        {
+          "name": "animationForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animator": {
+      "name": "animator",
+      "bridgedName": "animator",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animatorClass": {
+      "name": "_animatorClass",
+      "bridgedName": "_animatorClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareViewController:withObject:": {
+      "name": "_prepareViewController:withObject:",
+      "bridgedName": "_prepareViewController_withObject",
+      "args": [
+        {
+          "name": "_prepareViewController",
+          "type": "id"
+        },
+        {
+          "name": "withObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_frameOfRepresentedObjectFromDelegate:defaultFrame:": {
+      "name": "_frameOfRepresentedObjectFromDelegate:defaultFrame:",
+      "bridgedName": "_frameOfRepresentedObjectFromDelegate_defaultFrame",
+      "args": [
+        {
+          "name": "_frameOfRepresentedObjectFromDelegate",
+          "type": "id"
+        },
+        {
+          "name": "defaultFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isInSwipeGesture": {
+      "name": "_isInSwipeGesture",
+      "bridgedName": "_isInSwipeGesture",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_useCachedImageViewsForTransition": {
+      "name": "_useCachedImageViewsForTransition",
+      "bridgedName": "_useCachedImageViewsForTransition",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initializeTransitionViewHierarchy": {
+      "name": "_initializeTransitionViewHierarchy",
+      "bridgedName": "_initializeTransitionViewHierarchy",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_terminateCurrentAnimation": {
+      "name": "_terminateCurrentAnimation",
+      "bridgedName": "_terminateCurrentAnimation",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationAlphaOfFilterTansitionViewForDirection:destinationValid:": {
+      "name": "_destinationAlphaOfFilterTansitionViewForDirection:destinationValid:",
+      "bridgedName": "_destinationAlphaOfFilterTansitionViewForDirection_destinationValid",
+      "args": [
+        {
+          "name": "_destinationAlphaOfFilterTansitionViewForDirection",
+          "type": "long long"
+        },
+        {
+          "name": "destinationValid",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationAlphaOfDestinationTransitionViewForDirection:": {
+      "name": "_destinationAlphaOfDestinationTransitionViewForDirection:",
+      "bridgedName": "_destinationAlphaOfDestinationTransitionViewForDirection",
+      "args": [
+        {
+          "name": "_destinationAlphaOfDestinationTransitionViewForDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationAlphaOfSourceTansitionViewForDirection:destinationValid:": {
+      "name": "_destinationAlphaOfSourceTansitionViewForDirection:destinationValid:",
+      "bridgedName": "_destinationAlphaOfSourceTansitionViewForDirection_destinationValid",
+      "args": [
+        {
+          "name": "_destinationAlphaOfSourceTansitionViewForDirection",
+          "type": "long long"
+        },
+        {
+          "name": "destinationValid",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationFrameOfSourceTansitionViewForDirection:destinationValid:": {
+      "name": "_destinationFrameOfSourceTansitionViewForDirection:destinationValid:",
+      "bridgedName": "_destinationFrameOfSourceTansitionViewForDirection_destinationValid",
+      "args": [
+        {
+          "name": "_destinationFrameOfSourceTansitionViewForDirection",
+          "type": "long long"
+        },
+        {
+          "name": "destinationValid",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_teardownTransitionHierarchy": {
+      "name": "_teardownTransitionHierarchy",
+      "bridgedName": "_teardownTransitionHierarchy",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setupTransitionHierarchyWithSourceView:frame:destinationView:frame:forDirection:destinationValid:": {
+      "name": "_setupTransitionHierarchyWithSourceView:frame:destinationView:frame:forDirection:destinationValid:",
+      "bridgedName": "_setupTransitionHierarchyWithSourceView_frame_destinationView_frame_forDirection_destinationValid",
+      "args": [
+        {
+          "name": "_setupTransitionHierarchyWithSourceView",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "destinationView",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "forDirection",
+          "type": "long long"
+        },
+        {
+          "name": "destinationValid",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sourceTransitionView": {
+      "name": "_sourceTransitionView",
+      "bridgedName": "_sourceTransitionView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_destinationTransitionView": {
+      "name": "_destinationTransitionView",
+      "bridgedName": "_destinationTransitionView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cgSnapshotOfView:": {
+      "name": "_cgSnapshotOfView:",
+      "bridgedName": "_cgSnapshotOfView",
+      "args": [
+        {
+          "name": "_cgSnapshotOfView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheViewController:withSize:toCompletionHandler:": {
+      "name": "_cacheViewController:withSize:toCompletionHandler:",
+      "bridgedName": "_cacheViewController_withSize_toCompletionHandler",
+      "args": [
+        {
+          "name": "_cacheViewController",
+          "type": "id"
+        },
+        {
+          "name": "withSize",
+          "type": "struct CGSize"
+        },
+        {
+          "name": "toCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapshotOfViewController:withSize:": {
+      "name": "_snapshotOfViewController:withSize:",
+      "bridgedName": "_snapshotOfViewController_withSize",
+      "args": [
+        {
+          "name": "_snapshotOfViewController",
+          "type": "id"
+        },
+        {
+          "name": "withSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_snapshotOfView:": {
+      "name": "_snapshotOfView:",
+      "bridgedName": "_snapshotOfView",
+      "args": [
+        {
+          "name": "_snapshotOfView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cachePotentialViewControllers": {
+      "name": "_cachePotentialViewControllers",
+      "bridgedName": "_cachePotentialViewControllers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTemplateImageCache": {
+      "name": "_updateTemplateImageCache",
+      "bridgedName": "_updateTemplateImageCache",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheViewControllerForRepresentedObjectIfNeeded:": {
+      "name": "_cacheViewControllerForRepresentedObjectIfNeeded:",
+      "bridgedName": "_cacheViewControllerForRepresentedObjectIfNeeded",
+      "args": [
+        {
+          "name": "_cacheViewControllerForRepresentedObjectIfNeeded",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeViewControllerWithIdentifier:": {
+      "name": "_makeViewControllerWithIdentifier:",
+      "bridgedName": "_makeViewControllerWithIdentifier",
+      "args": [
+        {
+          "name": "_makeViewControllerWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheReusableViewController:identifier:": {
+      "name": "_cacheReusableViewController:identifier:",
+      "bridgedName": "_cacheReusableViewController_identifier",
+      "args": [
+        {
+          "name": "_cacheReusableViewController",
+          "type": "id"
+        },
+        {
+          "name": "identifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveContentView": {
+      "name": "_effectiveContentView",
+      "bridgedName": "_effectiveContentView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateContentView": {
+      "name": "_updateContentView",
+      "bridgedName": "_updateContentView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeFromResponderChainOfView:": {
+      "name": "_removeFromResponderChainOfView:",
+      "bridgedName": "_removeFromResponderChainOfView",
+      "args": [
+        {
+          "name": "_removeFromResponderChainOfView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewFrameChanged:": {
+      "name": "_viewFrameChanged:",
+      "bridgedName": "_viewFrameChanged",
+      "args": [
+        {
+          "name": "_viewFrameChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingView:": {
+      "name": "_stopObservingView:",
+      "bridgedName": "_stopObservingView",
+      "args": [
+        {
+          "name": "_stopObservingView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingView:": {
+      "name": "_startObservingView:",
+      "bridgedName": "_startObservingView",
+      "args": [
+        {
+          "name": "_startObservingView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scrollWheel:": {
+      "name": "scrollWheel:",
+      "bridgedName": "scrollWheel",
+      "args": [
+        {
+          "name": "scrollWheel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsScrollEventsForSwipeTrackingOnAxis:": {
+      "name": "wantsScrollEventsForSwipeTrackingOnAxis:",
+      "bridgedName": "wantsScrollEventsForSwipeTrackingOnAxis",
+      "args": [
+        {
+          "name": "wantsScrollEventsForSwipeTrackingOnAxis",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "takeSelectedIndexFrom:": {
+      "name": "takeSelectedIndexFrom:",
+      "bridgedName": "takeSelectedIndexFrom",
+      "args": [
+        {
+          "name": "takeSelectedIndexFrom",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "navigateForward:": {
+      "name": "navigateForward:",
+      "bridgedName": "navigateForward",
+      "args": [
+        {
+          "name": "navigateForward",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "navigateBack:": {
+      "name": "navigateBack:",
+      "bridgedName": "navigateBack",
+      "args": [
+        {
+          "name": "navigateBack",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_navigateToIndex:animated:": {
+      "name": "_navigateToIndex:animated:",
+      "bridgedName": "_navigateToIndex_animated",
+      "args": [
+        {
+          "name": "_navigateToIndex",
+          "type": "long long"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateImage:frame:toImage:frame:direction:": {
+      "name": "_animateImage:frame:toImage:frame:direction:",
+      "bridgedName": "_animateImage_frame_toImage_frame_direction",
+      "args": [
+        {
+          "name": "_animateImage",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "toImage",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "direction",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateView:frame:toView:frame:direction:": {
+      "name": "_animateView:frame:toView:frame:direction:",
+      "bridgedName": "_animateView_frame_toView_frame_direction",
+      "args": [
+        {
+          "name": "_animateView",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "toView",
+          "type": "id"
+        },
+        {
+          "name": "frame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "direction",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performAnimationWithDirection:destinationFrame:": {
+      "name": "_performAnimationWithDirection:destinationFrame:",
+      "bridgedName": "_performAnimationWithDirection_destinationFrame",
+      "args": [
+        {
+          "name": "_performAnimationWithDirection",
+          "type": "long long"
+        },
+        {
+          "name": "destinationFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "name": "validateUserInterfaceItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideTransitionView": {
+      "name": "hideTransitionView",
+      "bridgedName": "hideTransitionView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "completeTransition": {
+      "name": "completeTransition",
+      "bridgedName": "completeTransition",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "navigateForwardToObject:": {
+      "name": "navigateForwardToObject:",
+      "bridgedName": "navigateForwardToObject",
+      "args": [
+        {
+          "name": "navigateForwardToObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForwardNavigableObjects": {
+      "name": "removeForwardNavigableObjects",
+      "bridgedName": "removeForwardNavigableObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setShouldDrawEdgeShadow:": {
+      "name": "_setShouldDrawEdgeShadow:",
+      "bridgedName": "_setShouldDrawEdgeShadow",
+      "args": [
+        {
+          "name": "_setShouldDrawEdgeShadow",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldDrawEdgeShadow": {
+      "name": "_shouldDrawEdgeShadow",
+      "bridgedName": "_shouldDrawEdgeShadow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setView:": {
+      "name": "setView:",
+      "bridgedName": "setView",
+      "args": [
+        {
+          "name": "setView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dontCacheViewControllers": {
+      "name": "dontCacheViewControllers",
+      "bridgedName": "dontCacheViewControllers",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDontCacheViewControllers:": {
+      "name": "setDontCacheViewControllers:",
+      "bridgedName": "setDontCacheViewControllers",
+      "args": [
+        {
+          "name": "setDontCacheViewControllers",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "currentIdentifier": {
+      "name": "currentIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "selectedViewController": {
+      "name": "selectedViewController",
+      "pointer": true,
+      "type": "NSViewController",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "animations": {
+      "name": "animations",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "arrangedObjects": {
+      "name": "arrangedObjects",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}
