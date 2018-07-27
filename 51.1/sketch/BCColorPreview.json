@@ -1,0 +1,281 @@
+{
+  "imports": [
+    "NSPopUpButton.h",
+    "NSMenuDelegate.h"
+  ],
+  "classes": [
+    "BCFlexibleColor",
+    "NSArray",
+    "NSNumberFormatter",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "BCColorPreview",
+  "extends": "NSPopUpButton",
+  "interfaces": [
+    "NSMenuDelegate"
+  ],
+  "methods": {
+    "menuItemForColorCounter:target:action:documentColorSpace:useHSB:": {
+      "name": "menuItemForColorCounter:target:action:documentColorSpace:useHSB:",
+      "bridgedName": "menuItemForColorCounter_target_action_documentColorSpace_useHSB",
+      "args": [
+        {
+          "name": "menuItemForColorCounter",
+          "type": "id"
+        },
+        {
+          "name": "target",
+          "type": "id"
+        },
+        {
+          "name": "action",
+          "type": "SEL"
+        },
+        {
+          "name": "documentColorSpace",
+          "type": "id"
+        },
+        {
+          "name": "useHSB",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "menuItemAttributedTitleForColorCounter:useHSB:": {
+      "name": "menuItemAttributedTitleForColorCounter:useHSB:",
+      "bridgedName": "menuItemAttributedTitleForColorCounter_useHSB",
+      "args": [
+        {
+          "name": "menuItemAttributedTitleForColorCounter",
+          "type": "id"
+        },
+        {
+          "name": "useHSB",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "previewImageForColorCounter:documentColorSpace:": {
+      "name": "previewImageForColorCounter:documentColorSpace:",
+      "bridgedName": "previewImageForColorCounter_documentColorSpace",
+      "args": [
+        {
+          "name": "previewImageForColorCounter",
+          "type": "id"
+        },
+        {
+          "name": "documentColorSpace",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "shouldUseHSBInColorDescriptions": {
+      "name": "shouldUseHSBInColorDescriptions",
+      "bridgedName": "shouldUseHSBInColorDescriptions",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawCheckerboard": {
+      "name": "drawCheckerboard",
+      "bridgedName": "drawCheckerboard",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawContentInRect:dirtyRect:": {
+      "name": "drawContentInRect:dirtyRect:",
+      "bridgedName": "drawContentInRect_dirtyRect",
+      "args": [
+        {
+          "name": "drawContentInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "dirtyRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseExited:": {
+      "name": "mouseExited:",
+      "bridgedName": "mouseExited",
+      "args": [
+        {
+          "name": "mouseExited",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseEntered:": {
+      "name": "mouseEntered:",
+      "bridgedName": "mouseEntered",
+      "args": [
+        {
+          "name": "mouseEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuNeedsUpdate:": {
+      "name": "menuNeedsUpdate:",
+      "bridgedName": "menuNeedsUpdate",
+      "args": [
+        {
+          "name": "menuNeedsUpdate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initInBounds:": {
+      "name": "initInBounds:",
+      "bridgedName": "initInBounds",
+      "args": [
+        {
+          "name": "initInBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "numberFormatter": {
+      "name": "numberFormatter",
+      "pointer": true,
+      "type": "NSNumberFormatter",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "isHovering": {
+      "name": "isHovering",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "frequentColors": {
+      "name": "frequentColors",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <BCColorPreviewDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "color": {
+      "name": "color",
+      "pointer": true,
+      "type": "BCFlexibleColor",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,480 @@
+{
+  "imports": [
+    "MSNormalBaseEventHandler.h",
+    "MSAlignmentEngineDelegate.h",
+    "NSTouchBarDelegate.h"
+  ],
+  "classes": [
+    "MSAlignmentEngineResult",
+    "MSDragToMoveOrCopyGestureRecognizer",
+    "MSRotationGestureInterpreter",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSRotateEventHandler",
+  "extends": "MSNormalBaseEventHandler",
+  "interfaces": [
+    "MSAlignmentEngineDelegate",
+    "NSTouchBarDelegate"
+  ],
+  "methods": {
+    "cursorForDegrees:": {
+      "name": "cursorForDegrees:",
+      "bridgedName": "cursorForDegrees",
+      "args": [
+        {
+          "name": "cursorForDegrees",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshTouchBarItemWithIdentifier:": {
+      "name": "refreshTouchBarItemWithIdentifier:",
+      "bridgedName": "refreshTouchBarItemWithIdentifier",
+      "args": [
+        {
+          "name": "refreshTouchBarItemWithIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotationBarAction:": {
+      "name": "rotationBarAction:",
+      "bridgedName": "rotationBarAction",
+      "args": [
+        {
+          "name": "rotationBarAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "touchBar:makeItemForIdentifier:": {
+      "name": "touchBar:makeItemForIdentifier:",
+      "bridgedName": "touchBar_makeItemForIdentifier",
+      "args": [
+        {
+          "name": "touchBar",
+          "type": "id"
+        },
+        {
+          "name": "makeItemForIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeTouchBar": {
+      "name": "makeTouchBar",
+      "bridgedName": "makeTouchBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRotationCenterAtZoomScale:": {
+      "name": "drawRotationCenterAtZoomScale:",
+      "bridgedName": "drawRotationCenterAtZoomScale",
+      "args": [
+        {
+          "name": "drawRotationCenterAtZoomScale",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
+      "args": [
+        {
+          "name": "drawInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignDegreesTo15Angles:": {
+      "name": "alignDegreesTo15Angles:",
+      "bridgedName": "alignDegreesTo15Angles",
+      "args": [
+        {
+          "name": "alignDegreesTo15Angles",
+          "type": "double"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "name": "absoluteMouseUp",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragLayer:": {
+      "name": "dragLayer:",
+      "bridgedName": "dragLayer",
+      "args": [
+        {
+          "name": "dragLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dragCenterPoint:": {
+      "name": "dragCenterPoint:",
+      "bridgedName": "dragCenterPoint",
+      "args": [
+        {
+          "name": "dragCenterPoint",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleDrag:": {
+      "name": "handleDrag:",
+      "bridgedName": "handleDrag",
+      "args": [
+        {
+          "name": "handleDrag",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleRotation:": {
+      "name": "handleRotation:",
+      "bridgedName": "handleRotation",
+      "args": [
+        {
+          "name": "handleRotation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "componentAtPoint:": {
+      "name": "componentAtPoint:",
+      "bridgedName": "componentAtPoint",
+      "args": [
+        {
+          "name": "componentAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "alignmentEngine:alignPoint:": {
+      "name": "alignmentEngine:alignPoint:",
+      "bridgedName": "alignmentEngine_alignPoint",
+      "args": [
+        {
+          "name": "alignmentEngine",
+          "type": "id"
+        },
+        {
+          "name": "alignPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rotationCenterPointForAnchorPoint:layer:": {
+      "name": "rotationCenterPointForAnchorPoint:layer:",
+      "bridgedName": "rotationCenterPointForAnchorPoint_layer",
+      "args": [
+        {
+          "name": "rotationCenterPointForAnchorPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "layer",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRotationCenterPointWithoutUpdatingAnchorPoint:": {
+      "name": "setRotationCenterPointWithoutUpdatingAnchorPoint:",
+      "bridgedName": "setRotationCenterPointWithoutUpdatingAnchorPoint",
+      "args": [
+        {
+          "name": "setRotationCenterPointWithoutUpdatingAnchorPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetWithSelection:": {
+      "name": "resetWithSelection:",
+      "bridgedName": "resetWithSelection",
+      "args": [
+        {
+          "name": "resetWithSelection",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChangeTo:": {
+      "name": "selectionDidChangeTo:",
+      "bridgedName": "selectionDidChangeTo",
+      "args": [
+        {
+          "name": "selectionDidChangeTo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerWillLoseFocus": {
+      "name": "handlerWillLoseFocus",
+      "bridgedName": "handlerWillLoseFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerGotFocus": {
+      "name": "handlerGotFocus",
+      "bridgedName": "handlerGotFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithManager:": {
+      "name": "initWithManager:",
+      "bridgedName": "initWithManager",
+      "args": [
+        {
+          "name": "initWithManager",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "centerPointSnaps": {
+      "name": "centerPointSnaps",
+      "pointer": true,
+      "type": "MSAlignmentEngineResult",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "draggedComponent": {
+      "name": "draggedComponent",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "dragRotationInterpreter": {
+      "name": "dragRotationInterpreter",
+      "pointer": true,
+      "type": "MSRotationGestureInterpreter",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "cursorRotationInterpreter": {
+      "name": "cursorRotationInterpreter",
+      "pointer": true,
+      "type": "MSRotationGestureInterpreter",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dragGestureRecognizer": {
+      "name": "dragGestureRecognizer",
+      "pointer": true,
+      "type": "MSDragToMoveOrCopyGestureRecognizer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rotationAnchorPoint": {
+      "name": "rotationAnchorPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rotationCenterPoint": {
+      "name": "rotationCenterPoint",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "disableMoving": {
+      "name": "disableMoving",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "exitOnMouseUp": {
+      "name": "exitOnMouseUp",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

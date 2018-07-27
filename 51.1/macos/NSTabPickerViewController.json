@@ -1,0 +1,463 @@
+{
+  "imports": [
+    "NSVisualTabPickerDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSMapTable",
+    "NSString",
+    "NSTabBarItem",
+    "NSVisualTabPickerRootViewController"
+  ],
+  "protocol": false,
+  "className": "NSTabPickerViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSVisualTabPickerDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectItemAtIndex:": {
+      "name": "selectItemAtIndex:",
+      "bridgedName": "selectItemAtIndex",
+      "args": [
+        {
+          "name": "selectItemAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "entryOrExitAnimationInProgress": {
+      "name": "entryOrExitAnimationInProgress",
+      "bridgedName": "entryOrExitAnimationInProgress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerControllerDidEndHiding:": {
+      "name": "visualTabPickerControllerDidEndHiding:",
+      "bridgedName": "visualTabPickerControllerDidEndHiding",
+      "args": [
+        {
+          "name": "visualTabPickerControllerDidEndHiding",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerControllerDidBeginHiding:": {
+      "name": "visualTabPickerControllerDidBeginHiding:",
+      "bridgedName": "visualTabPickerControllerDidBeginHiding",
+      "args": [
+        {
+          "name": "visualTabPickerControllerDidBeginHiding",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willStartExitAnimationForVisualTabPickerController:": {
+      "name": "willStartExitAnimationForVisualTabPickerController:",
+      "bridgedName": "willStartExitAnimationForVisualTabPickerController",
+      "args": [
+        {
+          "name": "willStartExitAnimationForVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerControllerWillClose:": {
+      "name": "visualTabPickerControllerWillClose:",
+      "bridgedName": "visualTabPickerControllerWillClose",
+      "args": [
+        {
+          "name": "visualTabPickerControllerWillClose",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerItemsDidChange": {
+      "name": "tabPickerItemsDidChange",
+      "bridgedName": "tabPickerItemsDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerController:closeTabBarItem:": {
+      "name": "visualTabPickerController:closeTabBarItem:",
+      "bridgedName": "visualTabPickerController_closeTabBarItem",
+      "args": [
+        {
+          "name": "visualTabPickerController",
+          "type": "id"
+        },
+        {
+          "name": "closeTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPickerController:selectTab:": {
+      "name": "visualTabPickerController:selectTab:",
+      "bridgedName": "visualTabPickerController_selectTab",
+      "args": [
+        {
+          "name": "visualTabPickerController",
+          "type": "id"
+        },
+        {
+          "name": "selectTab",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createNewTabForVisualTabPickerController:": {
+      "name": "createNewTabForVisualTabPickerController:",
+      "bridgedName": "createNewTabForVisualTabPickerController",
+      "args": [
+        {
+          "name": "createNewTabForVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "creatingNewTabWillCloseVisualTabPickerController:": {
+      "name": "creatingNewTabWillCloseVisualTabPickerController:",
+      "bridgedName": "creatingNewTabWillCloseVisualTabPickerController",
+      "args": [
+        {
+          "name": "creatingNewTabWillCloseVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBarItemsForVisualTabPickerController:": {
+      "name": "tabBarItemsForVisualTabPickerController:",
+      "bridgedName": "tabBarItemsForVisualTabPickerController",
+      "args": [
+        {
+          "name": "tabBarItemsForVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedTabViewItemForVisualTabPickerController:": {
+      "name": "selectedTabViewItemForVisualTabPickerController:",
+      "bridgedName": "selectedTabViewItemForVisualTabPickerController",
+      "args": [
+        {
+          "name": "selectedTabViewItemForVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "frameForVisualTabPickerController:": {
+      "name": "frameForVisualTabPickerController:",
+      "bridgedName": "frameForVisualTabPickerController",
+      "args": [
+        {
+          "name": "frameForVisualTabPickerController",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "visualTabPicker:thumbnailViewForTabItem:": {
+      "name": "visualTabPicker:thumbnailViewForTabItem:",
+      "bridgedName": "visualTabPicker_thumbnailViewForTabItem",
+      "args": [
+        {
+          "name": "visualTabPicker",
+          "type": "id"
+        },
+        {
+          "name": "thumbnailViewForTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapshotForWindow:": {
+      "name": "snapshotForWindow:",
+      "bridgedName": "snapshotForWindow",
+      "args": [
+        {
+          "name": "snapshotForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasSnapshotForWindow:": {
+      "name": "hasSnapshotForWindow:",
+      "bridgedName": "hasSnapshotForWindow",
+      "args": [
+        {
+          "name": "hasSnapshotForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSnapshotForWindow:": {
+      "name": "_updateSnapshotForWindow:",
+      "bridgedName": "_updateSnapshotForWindow",
+      "args": [
+        {
+          "name": "_updateSnapshotForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabPickerSnapshotForWindow:": {
+      "name": "_makeTabPickerSnapshotForWindow:",
+      "bridgedName": "_makeTabPickerSnapshotForWindow",
+      "args": [
+        {
+          "name": "_makeTabPickerSnapshotForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideTabPickerAnimated:": {
+      "name": "hideTabPickerAnimated:",
+      "bridgedName": "hideTabPickerAnimated",
+      "args": [
+        {
+          "name": "hideTabPickerAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showTabPickerAnimated:includeNewButton:": {
+      "name": "showTabPickerAnimated:includeNewButton:",
+      "bridgedName": "showTabPickerAnimated_includeNewButton",
+      "args": [
+        {
+          "name": "showTabPickerAnimated",
+          "type": "BOOL"
+        },
+        {
+          "name": "includeNewButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabPickerViewControllerWithTabBarSnapshot:includeNewButton:": {
+      "name": "_makeTabPickerViewControllerWithTabBarSnapshot:includeNewButton:",
+      "bridgedName": "_makeTabPickerViewControllerWithTabBarSnapshot_includeNewButton",
+      "args": [
+        {
+          "name": "_makeTabPickerViewControllerWithTabBarSnapshot",
+          "type": "id"
+        },
+        {
+          "name": "includeNewButton",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleMagnification:": {
+      "name": "handleMagnification:",
+      "bridgedName": "handleMagnification",
+      "args": [
+        {
+          "name": "handleMagnification",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadView": {
+      "name": "loadView",
+      "bridgedName": "loadView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithNibName:bundle:": {
+      "name": "initWithNibName:bundle:",
+      "bridgedName": "initWithNibName_bundle",
+      "args": [
+        {
+          "name": "initWithNibName",
+          "type": "id"
+        },
+        {
+          "name": "bundle",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "windowSnapshots": {
+      "name": "windowSnapshots",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "tabPickerController": {
+      "name": "tabPickerController",
+      "pointer": true,
+      "type": "NSVisualTabPickerRootViewController",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "isClosing": {
+      "name": "isClosing",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

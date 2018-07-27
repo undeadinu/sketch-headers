@@ -1,0 +1,453 @@
+{
+  "imports": [
+    "NSInputStream.h",
+    "NSCopying.h",
+    "NSStreamDelegate.h"
+  ],
+  "classes": [
+    "AFHTTPBodyPart",
+    "NSEnumerator",
+    "NSError",
+    "NSMutableArray",
+    "NSMutableData",
+    "NSOutputStream",
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "AFMultipartBodyStream",
+  "extends": "NSInputStream",
+  "interfaces": [
+    "NSCopying",
+    "NSStreamDelegate"
+  ],
+  "methods": {
+    "setStreamError:": {
+      "name": "setStreamError:",
+      "bridgedName": "setStreamError",
+      "args": [
+        {
+          "name": "setStreamError",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "streamError": {
+      "name": "streamError",
+      "bridgedName": "streamError",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setStreamStatus:": {
+      "name": "setStreamStatus:",
+      "bridgedName": "setStreamStatus",
+      "args": [
+        {
+          "name": "setStreamStatus",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "streamStatus": {
+      "name": "streamStatus",
+      "bridgedName": "streamStatus",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDelegate:": {
+      "name": "setDelegate:",
+      "bridgedName": "setDelegate",
+      "args": [
+        {
+          "name": "setDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delegate": {
+      "name": "delegate",
+      "bridgedName": "delegate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCFClientFlags:callback:context:": {
+      "name": "_setCFClientFlags:callback:context:",
+      "bridgedName": "_setCFClientFlags_callback_context",
+      "args": [
+        {
+          "name": "_setCFClientFlags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "callback",
+          "type": "CDUnknownFunctionPointerType"
+        },
+        {
+          "name": "context",
+          "type": "CDStruct_e097db04 *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unscheduleFromCFRunLoop:forMode:": {
+      "name": "_unscheduleFromCFRunLoop:forMode:",
+      "bridgedName": "_unscheduleFromCFRunLoop_forMode",
+      "args": [
+        {
+          "name": "_unscheduleFromCFRunLoop",
+          "type": "struct __CFRunLoop *"
+        },
+        {
+          "name": "forMode",
+          "type": "struct __CFString *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scheduleInCFRunLoop:forMode:": {
+      "name": "_scheduleInCFRunLoop:forMode:",
+      "bridgedName": "_scheduleInCFRunLoop_forMode",
+      "args": [
+        {
+          "name": "_scheduleInCFRunLoop",
+          "type": "struct __CFRunLoop *"
+        },
+        {
+          "name": "forMode",
+          "type": "struct __CFString *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFromRunLoop:forMode:": {
+      "name": "removeFromRunLoop:forMode:",
+      "bridgedName": "removeFromRunLoop_forMode",
+      "args": [
+        {
+          "name": "removeFromRunLoop",
+          "type": "id"
+        },
+        {
+          "name": "forMode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scheduleInRunLoop:forMode:": {
+      "name": "scheduleInRunLoop:forMode:",
+      "bridgedName": "scheduleInRunLoop_forMode",
+      "args": [
+        {
+          "name": "scheduleInRunLoop",
+          "type": "id"
+        },
+        {
+          "name": "forMode",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setProperty:forKey:": {
+      "name": "setProperty:forKey:",
+      "bridgedName": "setProperty_forKey",
+      "args": [
+        {
+          "name": "setProperty",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertyForKey:": {
+      "name": "propertyForKey:",
+      "bridgedName": "propertyForKey",
+      "args": [
+        {
+          "name": "propertyForKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "close": {
+      "name": "close",
+      "bridgedName": "close",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "open": {
+      "name": "open",
+      "bridgedName": "open",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasBytesAvailable": {
+      "name": "hasBytesAvailable",
+      "bridgedName": "hasBytesAvailable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getBuffer:length:": {
+      "name": "getBuffer:length:",
+      "bridgedName": "getBuffer_length",
+      "args": [
+        {
+          "name": "getBuffer",
+          "type": "char **"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "read:maxLength:": {
+      "name": "read:maxLength:",
+      "bridgedName": "read_maxLength",
+      "args": [
+        {
+          "name": "read",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appendHTTPBodyPart:": {
+      "name": "appendHTTPBodyPart:",
+      "bridgedName": "appendHTTPBodyPart",
+      "args": [
+        {
+          "name": "appendHTTPBodyPart",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setInitialAndFinalBoundaries": {
+      "name": "setInitialAndFinalBoundaries",
+      "bridgedName": "setInitialAndFinalBoundaries",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithStringEncoding:": {
+      "name": "initWithStringEncoding:",
+      "bridgedName": "initWithStringEncoding",
+      "args": [
+        {
+          "name": "initWithStringEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "buffer": {
+      "name": "buffer",
+      "pointer": true,
+      "type": "NSMutableData",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "outputStream": {
+      "name": "outputStream",
+      "pointer": true,
+      "type": "NSOutputStream",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "currentHTTPBodyPart": {
+      "name": "currentHTTPBodyPart",
+      "pointer": true,
+      "type": "AFHTTPBodyPart",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "HTTPBodyPartEnumerator": {
+      "name": "HTTPBodyPartEnumerator",
+      "pointer": true,
+      "type": "NSEnumerator",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "HTTPBodyParts": {
+      "name": "HTTPBodyParts",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "stringEncoding": {
+      "name": "stringEncoding",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "inputStream": {
+      "name": "inputStream",
+      "pointer": true,
+      "type": "NSInputStream",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delay": {
+      "name": "delay",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "numberOfBytesInPacket": {
+      "name": "numberOfBytesInPacket",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "contentLength": {
+      "name": "contentLength",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "empty": {
+      "name": "empty",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic",
+        "getter=isEmpty"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

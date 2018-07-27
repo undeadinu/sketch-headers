@@ -1,0 +1,458 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSTearOffTabWindowDelegate.h"
+  ],
+  "classes": [
+    "NSAnimation",
+    "NSImage",
+    "NSMorphingDragImageView",
+    "NSString",
+    "NSTabBarItem",
+    "NSTearOffTabWindow",
+    "NSTimer",
+    "NSView",
+    "NSWindow"
+  ],
+  "protocol": false,
+  "className": "NSMorphingDragImageController",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSTearOffTabWindowDelegate"
+  ],
+  "methods": {
+    "dragTabWithDraggingItem:tabButtonImage:pinnedTabButtonImage:windowImage:fromView:at:source:": {
+      "name": "dragTabWithDraggingItem:tabButtonImage:pinnedTabButtonImage:windowImage:fromView:at:source:",
+      "bridgedName": "dragTabWithDraggingItem_tabButtonImage_pinnedTabButtonImage_windowImage_fromView_at_source",
+      "args": [
+        {
+          "name": "dragTabWithDraggingItem",
+          "type": "id"
+        },
+        {
+          "name": "tabButtonImage",
+          "type": "id"
+        },
+        {
+          "name": "pinnedTabButtonImage",
+          "type": "id"
+        },
+        {
+          "name": "windowImage",
+          "type": "id"
+        },
+        {
+          "name": "fromView",
+          "type": "id"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "source",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detachWindowForTearOffTabWindow:": {
+      "name": "detachWindowForTearOffTabWindow:",
+      "bridgedName": "detachWindowForTearOffTabWindow",
+      "args": [
+        {
+          "name": "detachWindowForTearOffTabWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_morphToDragImage:": {
+      "name": "_morphToDragImage:",
+      "bridgedName": "_morphToDragImage",
+      "args": [
+        {
+          "name": "_morphToDragImage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateDragImageForCurrentDragState": {
+      "name": "_updateDragImageForCurrentDragState",
+      "bridgedName": "_updateDragImageForCurrentDragState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dropOpensNewWindow": {
+      "name": "_dropOpensNewWindow",
+      "bridgedName": "_dropOpensNewWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendMovedToPointOnScreenToDragSource": {
+      "name": "_sendMovedToPointOnScreenToDragSource",
+      "bridgedName": "_sendMovedToPointOnScreenToDragSource",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTargetUnderMouse:": {
+      "name": "_setTargetUnderMouse:",
+      "bridgedName": "_setTargetUnderMouse",
+      "args": [
+        {
+          "name": "_setTargetUnderMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggingDidExitTargetWindow": {
+      "name": "_draggingDidExitTargetWindow",
+      "bridgedName": "_draggingDidExitTargetWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_draggingDidEnterTargetWindow": {
+      "name": "_draggingDidEnterTargetWindow",
+      "bridgedName": "_draggingDidEnterTargetWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performSprintToFront:": {
+      "name": "_performSprintToFront:",
+      "bridgedName": "_performSprintToFront",
+      "args": [
+        {
+          "name": "_performSprintToFront",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setWindowUnderMouse:": {
+      "name": "_setWindowUnderMouse:",
+      "bridgedName": "_setWindowUnderMouse",
+      "args": [
+        {
+          "name": "_setWindowUnderMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findWindowUnderMouse:level:viewUnderMouse:": {
+      "name": "_findWindowUnderMouse:level:viewUnderMouse:",
+      "bridgedName": "_findWindowUnderMouse_level_viewUnderMouse",
+      "args": [
+        {
+          "name": "_findWindowUnderMouse",
+          "type": "id *"
+        },
+        {
+          "name": "level",
+          "type": "int *"
+        },
+        {
+          "name": "viewUnderMouse",
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragInfoForNoTargetUnderMouse": {
+      "name": "_dragInfoForNoTargetUnderMouse",
+      "bridgedName": "_dragInfoForNoTargetUnderMouse",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragInfoForTargetUnderMouseInWindow:": {
+      "name": "_dragInfoForTargetUnderMouseInWindow:",
+      "bridgedName": "_dragInfoForTargetUnderMouseInWindow",
+      "args": [
+        {
+          "name": "_dragInfoForTargetUnderMouseInWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragInfoForTargetUnderMouse": {
+      "name": "_dragInfoForTargetUnderMouse",
+      "bridgedName": "_dragInfoForTargetUnderMouse",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateSlideBack": {
+      "name": "_animateSlideBack",
+      "bridgedName": "_animateSlideBack",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragComplete": {
+      "name": "_dragComplete",
+      "bridgedName": "_dragComplete",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_applicationDidResignActive": {
+      "name": "_applicationDidResignActive",
+      "bridgedName": "_applicationDidResignActive",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_firePeriodicEvent:": {
+      "name": "_firePeriodicEvent:",
+      "bridgedName": "_firePeriodicEvent",
+      "args": [
+        {
+          "name": "_firePeriodicEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopPeriodicEventTimer": {
+      "name": "_stopPeriodicEventTimer",
+      "bridgedName": "_stopPeriodicEventTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startPeriodicEventTimerIfNeeded": {
+      "name": "_startPeriodicEventTimerIfNeeded",
+      "bridgedName": "_startPeriodicEventTimerIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginSlideBackAnimation": {
+      "name": "_beginSlideBackAnimation",
+      "bridgedName": "_beginSlideBackAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleMouseUp": {
+      "name": "_handleMouseUp",
+      "bridgedName": "_handleMouseUp",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dropTabOnScreenIfPossible": {
+      "name": "_dropTabOnScreenIfPossible",
+      "bridgedName": "_dropTabOnScreenIfPossible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didAcceptDrop": {
+      "name": "_didAcceptDrop",
+      "bridgedName": "_didAcceptDrop",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canPerformTabDrag": {
+      "name": "_canPerformTabDrag",
+      "bridgedName": "_canPerformTabDrag",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleFlagsChanged": {
+      "name": "_handleFlagsChanged",
+      "bridgedName": "_handleFlagsChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleMouseDragged": {
+      "name": "_handleMouseDragged",
+      "bridgedName": "_handleMouseDragged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleEvent:": {
+      "name": "_handleEvent:",
+      "bridgedName": "_handleEvent",
+      "args": [
+        {
+          "name": "_handleEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_runDrag": {
+      "name": "_runDrag",
+      "bridgedName": "_runDrag",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareForDragWithImage:": {
+      "name": "_prepareForDragWithImage:",
+      "bridgedName": "_prepareForDragWithImage",
+      "args": [
+        {
+          "name": "_prepareForDragWithImage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dragTabWithDraggingItem:tabButtonImage:pinnedTabButtonImage:windowImage:fromView:at:source:": {
+      "name": "_dragTabWithDraggingItem:tabButtonImage:pinnedTabButtonImage:windowImage:fromView:at:source:",
+      "bridgedName": "_dragTabWithDraggingItem_tabButtonImage_pinnedTabButtonImage_windowImage_fromView_at_source",
+      "args": [
+        {
+          "name": "_dragTabWithDraggingItem",
+          "type": "id"
+        },
+        {
+          "name": "tabButtonImage",
+          "type": "id"
+        },
+        {
+          "name": "pinnedTabButtonImage",
+          "type": "id"
+        },
+        {
+          "name": "windowImage",
+          "type": "id"
+        },
+        {
+          "name": "fromView",
+          "type": "id"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "source",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "dragWindow": {
+      "name": "dragWindow",
+      "pointer": true,
+      "type": "NSTearOffTabWindow",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

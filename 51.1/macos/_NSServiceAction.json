@@ -1,0 +1,331 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSKeyboardShortcut",
+    "NSOperationQueue",
+    "NSPasteboard",
+    "NSResponder",
+    "NSSet",
+    "NSString",
+    "NSUUID"
+  ],
+  "protocol": true,
+  "className": "_NSServiceAction",
+  "interfaces": [],
+  "methods": {
+    "resetToDefaultAvailability": {
+      "name": "resetToDefaultAvailability",
+      "bridgedName": "resetToDefaultAvailability",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetToDefaultKeyboardShortcut": {
+      "name": "resetToDefaultKeyboardShortcut",
+      "bridgedName": "resetToDefaultKeyboardShortcut",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateWithResponder:completionHandler:": {
+      "name": "validateWithResponder:completionHandler:",
+      "bridgedName": "validateWithResponder_completionHandler",
+      "args": [
+        {
+          "name": "validateWithResponder",
+          "type": "NSResponder *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(BOOL)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithPasteboard:": {
+      "name": "invokeWithPasteboard:",
+      "bridgedName": "invokeWithPasteboard",
+      "args": [
+        {
+          "name": "invokeWithPasteboard",
+          "type": "NSPasteboard *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invokeWithResponder:": {
+      "name": "invokeWithResponder:",
+      "bridgedName": "invokeWithResponder",
+      "args": [
+        {
+          "name": "invokeWithResponder",
+          "type": "NSResponder *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadBackgroundColorOnQueue:completionHandler:": {
+      "name": "loadBackgroundColorOnQueue:completionHandler:",
+      "bridgedName": "loadBackgroundColorOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadBackgroundColorOnQueue",
+          "type": "NSOperationQueue *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(NSColor *)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadImageOnQueue:completionHandler:": {
+      "name": "loadImageOnQueue:completionHandler:",
+      "bridgedName": "loadImageOnQueue_completionHandler",
+      "args": [
+        {
+          "name": "loadImageOnQueue",
+          "type": "NSOperationQueue *"
+        },
+        {
+          "name": "completionHandler",
+          "type": "void (^)(NSImage *)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "isSpellChecker": {
+      "name": "isSpellChecker",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isAvailableInServicesMenu": {
+      "name": "isAvailableInServicesMenu",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "isAvailableInContextMenu": {
+      "name": "isAvailableInContextMenu",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "isRestricted": {
+      "name": "isRestricted",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isWorkflow": {
+      "name": "isWorkflow",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "bundleIdentifier": {
+      "name": "bundleIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "serviceUUID": {
+      "name": "serviceUUID",
+      "pointer": true,
+      "type": "NSUUID",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "keyEquivalent": {
+      "name": "keyEquivalent",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "keyboardShortcut": {
+      "name": "keyboardShortcut",
+      "pointer": true,
+      "type": "NSKeyboardShortcut",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "defaultKeyboardShortcut": {
+      "name": "defaultKeyboardShortcut",
+      "pointer": true,
+      "type": "NSKeyboardShortcut",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "returnTypes": {
+      "name": "returnTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "sendFileTypes": {
+      "name": "sendFileTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "combinedSendTypes": {
+      "name": "combinedSendTypes",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasBackgroundColor": {
+      "name": "hasBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hasCustomIcon": {
+      "name": "hasCustomIcon",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "availablePresentationModes": {
+      "name": "availablePresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "defaultPresentationModes": {
+      "name": "defaultPresentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "presentationModes": {
+      "name": "presentationModes",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "localizedServiceDescription": {
+      "name": "localizedServiceDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "bundlePath": {
+      "name": "bundlePath",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "localizedCategoryTitle": {
+      "name": "localizedCategoryTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "categoryTitle": {
+      "name": "categoryTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "localizedTitle": {
+      "name": "localizedTitle",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "title": {
+      "name": "title",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

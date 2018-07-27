@@ -1,0 +1,553 @@
+{
+  "imports": [],
+  "classes": [
+    "NSButton",
+    "NSMutableDictionary",
+    "NSSavePanel",
+    "NSString",
+    "NSTextField"
+  ],
+  "protocol": false,
+  "className": "NSNavFilepathInputController",
+  "extends": "NSWindowController",
+  "interfaces": [],
+  "methods": {
+    "controlTextDidEndEditing:": {
+      "name": "controlTextDidEndEditing:",
+      "bridgedName": "controlTextDidEndEditing",
+      "args": [
+        {
+          "name": "controlTextDidEndEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidChange:": {
+      "name": "controlTextDidChange:",
+      "bridgedName": "controlTextDidChange",
+      "args": [
+        {
+          "name": "controlTextDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textShouldBeginEditing:": {
+      "name": "control:textShouldBeginEditing:",
+      "bridgedName": "control_textShouldBeginEditing",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textShouldBeginEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:doCommandBySelector:": {
+      "name": "control:textView:doCommandBySelector:",
+      "bridgedName": "control_textView_doCommandBySelector",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleTabKey:": {
+      "name": "_handleTabKey:",
+      "bridgedName": "_handleTabKey",
+      "args": [
+        {
+          "name": "_handleTabKey",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doDelayedAutocomplete": {
+      "name": "_doDelayedAutocomplete",
+      "bridgedName": "_doDelayedAutocomplete",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldExecuteDelayedAutocomplete": {
+      "name": "_shouldExecuteDelayedAutocomplete",
+      "bridgedName": "_shouldExecuteDelayedAutocomplete",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doUserComplete": {
+      "name": "_doUserComplete",
+      "bridgedName": "_doUserComplete",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doFileCompletion:isAutoComplete:reverseCycle:": {
+      "name": "doFileCompletion:isAutoComplete:reverseCycle:",
+      "bridgedName": "doFileCompletion_isAutoComplete_reverseCycle",
+      "args": [
+        {
+          "name": "doFileCompletion",
+          "type": "id"
+        },
+        {
+          "name": "isAutoComplete",
+          "type": "BOOL"
+        },
+        {
+          "name": "reverseCycle",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_completePathWithPrefix:intoString:matchesIntoArray:": {
+      "name": "_completePathWithPrefix:intoString:matchesIntoArray:",
+      "bridgedName": "_completePathWithPrefix_intoString_matchesIntoArray",
+      "args": [
+        {
+          "name": "_completePathWithPrefix",
+          "type": "id"
+        },
+        {
+          "name": "intoString",
+          "type": "id *"
+        },
+        {
+          "name": "matchesIntoArray",
+          "type": "id *"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_simpleCompletePathWithPrefix:intoString:caseSensitive:matchesIntoArray:filterTypes:": {
+      "name": "_simpleCompletePathWithPrefix:intoString:caseSensitive:matchesIntoArray:filterTypes:",
+      "bridgedName": "_simpleCompletePathWithPrefix_intoString_caseSensitive_matchesIntoArray_filterTypes",
+      "args": [
+        {
+          "name": "_simpleCompletePathWithPrefix",
+          "type": "id"
+        },
+        {
+          "name": "intoString",
+          "type": "id *"
+        },
+        {
+          "name": "caseSensitive",
+          "type": "BOOL"
+        },
+        {
+          "name": "matchesIntoArray",
+          "type": "id *"
+        },
+        {
+          "name": "filterTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancel:": {
+      "name": "cancel:",
+      "bridgedName": "cancel",
+      "args": [
+        {
+          "name": "cancel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "ok:": {
+      "name": "ok:",
+      "bridgedName": "ok",
+      "args": [
+        {
+          "name": "ok",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_containsValidFilePath": {
+      "name": "_containsValidFilePath",
+      "bridgedName": "_containsValidFilePath",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopGotoWithCode:": {
+      "name": "_stopGotoWithCode:",
+      "bridgedName": "_stopGotoWithCode",
+      "args": [
+        {
+          "name": "_stopGotoWithCode",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForSavePanel:": {
+      "name": "runModalForSavePanel:",
+      "bridgedName": "runModalForSavePanel",
+      "args": [
+        {
+          "name": "runModalForSavePanel",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "runModalForSavePanel:withFilepath:": {
+      "name": "runModalForSavePanel:withFilepath:",
+      "bridgedName": "runModalForSavePanel_withFilepath",
+      "args": [
+        {
+          "name": "runModalForSavePanel",
+          "type": "id"
+        },
+        {
+          "name": "withFilepath",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sheetDidEnd:returnCode:contextInfo:": {
+      "name": "sheetDidEnd:returnCode:contextInfo:",
+      "bridgedName": "sheetDidEnd_returnCode_contextInfo",
+      "args": [
+        {
+          "name": "sheetDidEnd",
+          "type": "id"
+        },
+        {
+          "name": "returnCode",
+          "type": "long long"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSheetForSavePanel:withFilepath:delegate:didEndSelector:contextInfo:": {
+      "name": "beginSheetForSavePanel:withFilepath:delegate:didEndSelector:contextInfo:",
+      "bridgedName": "beginSheetForSavePanel_withFilepath_delegate_didEndSelector_contextInfo",
+      "args": [
+        {
+          "name": "beginSheetForSavePanel",
+          "type": "id"
+        },
+        {
+          "name": "withFilepath",
+          "type": "id"
+        },
+        {
+          "name": "delegate",
+          "type": "id"
+        },
+        {
+          "name": "didEndSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRunning": {
+      "name": "isRunning",
+      "bridgedName": "isRunning",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_prepareToRunForSavePanel:withFilepath:": {
+      "name": "_prepareToRunForSavePanel:withFilepath:",
+      "bridgedName": "_prepareToRunForSavePanel_withFilepath",
+      "args": [
+        {
+          "name": "_prepareToRunForSavePanel",
+          "type": "id"
+        },
+        {
+          "name": "withFilepath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDefaultWindowKeyViewLoop": {
+      "name": "_setDefaultWindowKeyViewLoop",
+      "bridgedName": "_setDefaultWindowKeyViewLoop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filepath": {
+      "name": "filepath",
+      "bridgedName": "filepath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentInputFilepath": {
+      "name": "_currentInputFilepath",
+      "bridgedName": "_currentInputFilepath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCurrentInputFilepath:": {
+      "name": "_setCurrentInputFilepath:",
+      "bridgedName": "_setCurrentInputFilepath",
+      "args": [
+        {
+          "name": "_setCurrentInputFilepath",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "filepathLabel": {
+      "name": "filepathLabel",
+      "bridgedName": "filepathLabel",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFilepathLabel:": {
+      "name": "setFilepathLabel:",
+      "bridgedName": "setFilepathLabel",
+      "args": [
+        {
+          "name": "setFilepathLabel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "title": {
+      "name": "title",
+      "bridgedName": "title",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTitle:": {
+      "name": "setTitle:",
+      "bridgedName": "setTitle",
+      "args": [
+        {
+          "name": "setTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prompt": {
+      "name": "prompt",
+      "bridgedName": "prompt",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setPrompt:": {
+      "name": "setPrompt:",
+      "bridgedName": "setPrompt",
+      "args": [
+        {
+          "name": "setPrompt",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "action": {
+      "name": "action",
+      "bridgedName": "action",
+      "args": [],
+      "returns": "SEL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAction:": {
+      "name": "setAction:",
+      "bridgedName": "setAction",
+      "args": [
+        {
+          "name": "setAction",
+          "type": "SEL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "target": {
+      "name": "target",
+      "bridgedName": "target",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTarget:": {
+      "name": "setTarget:",
+      "bridgedName": "setTarget",
+      "args": [
+        {
+          "name": "setTarget",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadWindow": {
+      "name": "loadWindow",
+      "bridgedName": "loadWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadUIIfNecessary": {
+      "name": "_loadUIIfNecessary",
+      "bridgedName": "_loadUIIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateUIToMatchCachedValues": {
+      "name": "_updateUIToMatchCachedValues",
+      "bridgedName": "_updateUIToMatchCachedValues",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scheduleDelayedAutocomplete": {
+      "name": "_scheduleDelayedAutocomplete",
+      "bridgedName": "_scheduleDelayedAutocomplete",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelDelayedAutocomplete": {
+      "name": "_cancelDelayedAutocomplete",
+      "bridgedName": "_cancelDelayedAutocomplete",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithWindow:": {
+      "name": "initWithWindow:",
+      "bridgedName": "initWithWindow",
+      "args": [
+        {
+          "name": "initWithWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "errorMessage": {
+      "name": "errorMessage",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

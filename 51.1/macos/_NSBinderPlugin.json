@@ -1,0 +1,353 @@
+{
+  "imports": [
+    "NSObject.h",
+    "_NSBinderPlugin.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSString",
+    "_NSBindingInfo"
+  ],
+  "protocol": true,
+  "className": "_NSBinderPlugin",
+  "extends": "NSObject",
+  "interfaces": [
+    "_NSBinderPlugin"
+  ],
+  "methods": {
+    "_deprecatedBindings": {
+      "name": "_deprecatedBindings",
+      "bridgedName": "_deprecatedBindings",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "objectMechanismsRequiredForObject:": {
+      "name": "objectMechanismsRequiredForObject:",
+      "bridgedName": "objectMechanismsRequiredForObject",
+      "args": [
+        {
+          "name": "objectMechanismsRequiredForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isUsableWithObject:": {
+      "name": "isUsableWithObject:",
+      "bridgedName": "isUsableWithObject",
+      "args": [
+        {
+          "name": "isUsableWithObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "shouldUseInvalidationForObject:": {
+      "name": "shouldUseInvalidationForObject:",
+      "bridgedName": "shouldUseInvalidationForObject",
+      "args": [
+        {
+          "name": "shouldUseInvalidationForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsMarker:binding:overrideWithPlaceholderIfDefined:": {
+      "name": "acceptsMarker:binding:overrideWithPlaceholderIfDefined:",
+      "bridgedName": "acceptsMarker_binding_overrideWithPlaceholderIfDefined",
+      "args": [
+        {
+          "name": "acceptsMarker",
+          "type": "id"
+        },
+        {
+          "name": "binding",
+          "type": "id"
+        },
+        {
+          "name": "overrideWithPlaceholderIfDefined",
+          "type": "char *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultPlaceholderLookupClassForBinding:object:": {
+      "name": "defaultPlaceholderLookupClassForBinding:object:",
+      "bridgedName": "defaultPlaceholderLookupClassForBinding_object",
+      "args": [
+        {
+          "name": "defaultPlaceholderLookupClassForBinding",
+          "type": "id"
+        },
+        {
+          "name": "object",
+          "type": "id"
+        }
+      ],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connectionWasBroken:": {
+      "name": "connectionWasBroken:",
+      "bridgedName": "connectionWasBroken",
+      "args": [
+        {
+          "name": "connectionWasBroken",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "connectionWasEstablished:": {
+      "name": "connectionWasEstablished:",
+      "bridgedName": "connectionWasEstablished",
+      "args": [
+        {
+          "name": "connectionWasEstablished",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeKeyPathForBindingInfo:registerOrUnregister:object:": {
+      "name": "observeKeyPathForBindingInfo:registerOrUnregister:object:",
+      "bridgedName": "observeKeyPathForBindingInfo_registerOrUnregister_object",
+      "args": [
+        {
+          "name": "observeKeyPathForBindingInfo",
+          "type": "id"
+        },
+        {
+          "name": "registerOrUnregister",
+          "type": "BOOL"
+        },
+        {
+          "name": "object",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleObservingRefresh:": {
+      "name": "handleObservingRefresh:",
+      "bridgedName": "handleObservingRefresh",
+      "args": [
+        {
+          "name": "handleObservingRefresh",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithBinder:object:": {
+      "name": "initWithBinder:object:",
+      "bridgedName": "initWithBinder_object",
+      "args": [
+        {
+          "name": "initWithBinder",
+          "type": "id"
+        },
+        {
+          "name": "object",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectMechanismsRequired": {
+      "name": "objectMechanismsRequired",
+      "bridgedName": "objectMechanismsRequired",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "needsAction": {
+      "name": "needsAction",
+      "bridgedName": "needsAction",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEditingAtIndex:withObject:": {
+      "name": "isEditingAtIndex:withObject:",
+      "bridgedName": "isEditingAtIndex_withObject",
+      "args": [
+        {
+          "name": "isEditingAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "withObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEditingAtIndexPath:withObject:": {
+      "name": "isEditingAtIndexPath:withObject:",
+      "bridgedName": "isEditingAtIndexPath_withObject",
+      "args": [
+        {
+          "name": "isEditingAtIndexPath",
+          "type": "id"
+        },
+        {
+          "name": "withObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEditingWithObject:": {
+      "name": "isEditingWithObject:",
+      "bridgedName": "isEditingWithObject",
+      "args": [
+        {
+          "name": "isEditingWithObject",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "editorWithObject:": {
+      "name": "editorWithObject:",
+      "bridgedName": "editorWithObject",
+      "args": [
+        {
+          "name": "editorWithObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isInvalidationCapableObject:withSelector:": {
+      "name": "isInvalidationCapableObject:withSelector:",
+      "bridgedName": "isInvalidationCapableObject_withSelector",
+      "args": [
+        {
+          "name": "isInvalidationCapableObject",
+          "type": "id"
+        },
+        {
+          "name": "withSelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexPathForOutlineView:row:": {
+      "name": "indexPathForOutlineView:row:",
+      "bridgedName": "indexPathForOutlineView_row",
+      "args": [
+        {
+          "name": "indexPathForOutlineView",
+          "type": "id"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewForObject:": {
+      "name": "viewForObject:",
+      "bridgedName": "viewForObject",
+      "args": [
+        {
+          "name": "viewForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellOrControlForObject:": {
+      "name": "cellOrControlForObject:",
+      "bridgedName": "cellOrControlForObject",
+      "args": [
+        {
+          "name": "cellOrControlForObject",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

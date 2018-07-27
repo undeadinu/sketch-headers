@@ -1,0 +1,676 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSPasteboardReading.h",
+    "NSPasteboardWriting.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "NSSound",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSSecureCoding",
+    "NSPasteboardReading",
+    "NSPasteboardWriting"
+  ],
+  "methods": {
+    "_alertType": {
+      "name": "_alertType",
+      "bridgedName": "_alertType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_setAlertType:": {
+      "name": "_setAlertType:",
+      "bridgedName": "_setAlertType",
+      "args": [
+        {
+          "name": "_setAlertType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_areUISoundEffectsEnabled": {
+      "name": "_areUISoundEffectsEnabled",
+      "bridgedName": "_areUISoundEffectsEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "playSound:flags:completionHandler:": {
+      "name": "playSound:flags:completionHandler:",
+      "bridgedName": "playSound_flags_completionHandler",
+      "args": [
+        {
+          "name": "playSound",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "canInitWithPasteboard:": {
+      "name": "canInitWithPasteboard:",
+      "bridgedName": "canInitWithPasteboard",
+      "args": [
+        {
+          "name": "canInitWithPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "readingOptionsForType:pasteboard:": {
+      "name": "readingOptionsForType:pasteboard:",
+      "bridgedName": "readingOptionsForType_pasteboard",
+      "args": [
+        {
+          "name": "readingOptionsForType",
+          "type": "id"
+        },
+        {
+          "name": "pasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "readableTypesForPasteboard:": {
+      "name": "readableTypesForPasteboard:",
+      "bridgedName": "readableTypesForPasteboard",
+      "args": [
+        {
+          "name": "readableTypesForPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_forceSoundEngine:": {
+      "name": "_forceSoundEngine:",
+      "bridgedName": "_forceSoundEngine",
+      "args": [
+        {
+          "name": "_forceSoundEngine",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "soundNamed:": {
+      "name": "soundNamed:",
+      "bridgedName": "soundNamed",
+      "args": [
+        {
+          "name": "soundNamed",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_searchForSoundNamed:": {
+      "name": "_searchForSoundNamed:",
+      "bridgedName": "_searchForSoundNamed",
+      "args": [
+        {
+          "name": "_searchForSoundNamed",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "soundUnfilteredPasteboardTypes": {
+      "name": "soundUnfilteredPasteboardTypes",
+      "bridgedName": "soundUnfilteredPasteboardTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "soundUnfilteredFileTypes": {
+      "name": "soundUnfilteredFileTypes",
+      "bridgedName": "soundUnfilteredFileTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "soundUnfilteredTypes": {
+      "name": "soundUnfilteredTypes",
+      "bridgedName": "soundUnfilteredTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_systemSoundIDCreateIfNecessary:": {
+      "name": "_systemSoundIDCreateIfNecessary:",
+      "bridgedName": "_systemSoundIDCreateIfNecessary",
+      "args": [
+        {
+          "name": "_systemSoundIDCreateIfNecessary",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToPasteboard:": {
+      "name": "writeToPasteboard:",
+      "bridgedName": "writeToPasteboard",
+      "args": [
+        {
+          "name": "writeToPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboard:": {
+      "name": "initWithPasteboard:",
+      "bridgedName": "initWithPasteboard",
+      "args": [
+        {
+          "name": "initWithPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pasteboardPropertyListForType:": {
+      "name": "pasteboardPropertyListForType:",
+      "bridgedName": "pasteboardPropertyListForType",
+      "args": [
+        {
+          "name": "pasteboardPropertyListForType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writableTypesForPasteboard:": {
+      "name": "writableTypesForPasteboard:",
+      "bridgedName": "writableTypesForPasteboard",
+      "args": [
+        {
+          "name": "writableTypesForPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboardPropertyList:ofType:": {
+      "name": "initWithPasteboardPropertyList:ofType:",
+      "bridgedName": "initWithPasteboardPropertyList_ofType",
+      "args": [
+        {
+          "name": "initWithPasteboardPropertyList",
+          "type": "id"
+        },
+        {
+          "name": "ofType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_qtMovieDidEnd:": {
+      "name": "_qtMovieDidEnd:",
+      "bridgedName": "_qtMovieDidEnd",
+      "args": [
+        {
+          "name": "_qtMovieDidEnd",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSoundShouldLoopByStoredLoopFlag": {
+      "name": "_updateSoundShouldLoopByStoredLoopFlag",
+      "bridgedName": "_updateSoundShouldLoopByStoredLoopFlag",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateVolumeByStoredVolume": {
+      "name": "_updateVolumeByStoredVolume",
+      "bridgedName": "_updateVolumeByStoredVolume",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stop": {
+      "name": "stop",
+      "bridgedName": "stop",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "play": {
+      "name": "play",
+      "bridgedName": "play",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resume": {
+      "name": "resume",
+      "bridgedName": "resume",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pause": {
+      "name": "pause",
+      "bridgedName": "pause",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "channelMapping": {
+      "name": "channelMapping",
+      "bridgedName": "channelMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setChannelMapping:": {
+      "name": "setChannelMapping:",
+      "bridgedName": "setChannelMapping",
+      "args": [
+        {
+          "name": "setChannelMapping",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setChannelMapping:error:": {
+      "name": "_setChannelMapping:error:",
+      "bridgedName": "_setChannelMapping_error",
+      "args": [
+        {
+          "name": "_setChannelMapping",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAudioDeviceUID:channels:error:": {
+      "name": "_setAudioDeviceUID:channels:error:",
+      "bridgedName": "_setAudioDeviceUID_channels_error",
+      "args": [
+        {
+          "name": "_setAudioDeviceUID",
+          "type": "id"
+        },
+        {
+          "name": "channels",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPlayingAndRetainIfUnset": {
+      "name": "_setPlayingAndRetainIfUnset",
+      "bridgedName": "_setPlayingAndRetainIfUnset",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unsetPlayingReturningIfWasSet": {
+      "name": "_unsetPlayingReturningIfWasSet",
+      "bridgedName": "_unsetPlayingReturningIfWasSet",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registersName": {
+      "name": "_registersName",
+      "bridgedName": "_registersName",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setRegistersName:": {
+      "name": "_setRegistersName:",
+      "bridgedName": "_setRegistersName",
+      "args": [
+        {
+          "name": "_setRegistersName",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setName:": {
+      "name": "setName:",
+      "bridgedName": "setName",
+      "args": [
+        {
+          "name": "setName",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "url": {
+      "name": "url",
+      "bridgedName": "url",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_url": {
+      "name": "_url",
+      "bridgedName": "_url",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isValidDecodedChannelMap:error:": {
+      "name": "_isValidDecodedChannelMap:error:",
+      "bridgedName": "_isValidDecodedChannelMap_error",
+      "args": [
+        {
+          "name": "_isValidDecodedChannelMap",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithData:": {
+      "name": "initWithData:",
+      "bridgedName": "initWithData",
+      "args": [
+        {
+          "name": "initWithData",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:byReference:": {
+      "name": "initWithContentsOfURL:byReference:",
+      "bridgedName": "initWithContentsOfURL_byReference",
+      "args": [
+        {
+          "name": "initWithContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "byReference",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfFile:byReference:": {
+      "name": "initWithContentsOfFile:byReference:",
+      "bridgedName": "initWithContentsOfFile_byReference",
+      "args": [
+        {
+          "name": "initWithContentsOfFile",
+          "type": "id"
+        },
+        {
+          "name": "byReference",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocateExtraFields": {
+      "name": "_allocateExtraFields",
+      "bridgedName": "_allocateExtraFields",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_postInitialization": {
+      "name": "_postInitialization",
+      "bridgedName": "_postInitialization",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "duration": {
+      "name": "duration",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "playing": {
+      "name": "playing",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "getter=isPlaying"
+      ]
+    },
+    "playbackDeviceIdentifier": {
+      "name": "playbackDeviceIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "name": {
+      "name": "name",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

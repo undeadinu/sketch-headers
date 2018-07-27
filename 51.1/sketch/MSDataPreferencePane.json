@@ -1,0 +1,556 @@
+{
+  "imports": [
+    "MSPreferencePane.h",
+    "MSDropableViewDelegate.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h"
+  ],
+  "classes": [
+    "MSDataSupplierManager",
+    "MSDataTableView",
+    "NSArray",
+    "NSArrayController",
+    "NSMenu",
+    "NSString",
+    "NSWindow"
+  ],
+  "protocol": false,
+  "className": "MSDataPreferencePane",
+  "extends": "MSPreferencePane",
+  "interfaces": [
+    "MSDropableViewDelegate",
+    "NSTableViewDelegate",
+    "NSTableViewDataSource"
+  ],
+  "methods": {
+    "toolbarIcon": {
+      "name": "toolbarIcon",
+      "bridgedName": "toolbarIcon",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "title": {
+      "name": "title",
+      "bridgedName": "title",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "identifier": {
+      "name": "identifier",
+      "bridgedName": "identifier",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionDidChange": {
+      "name": "selectionDidChange",
+      "bridgedName": "selectionDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reloadData": {
+      "name": "reloadData",
+      "bridgedName": "reloadData",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "learnMore:": {
+      "name": "learnMore:",
+      "bridgedName": "learnMore",
+      "args": [
+        {
+          "name": "learnMore",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidAppear": {
+      "name": "viewDidAppear",
+      "bridgedName": "viewDidAppear",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showContextMenu:": {
+      "name": "showContextMenu:",
+      "bridgedName": "showContextMenu",
+      "args": [
+        {
+          "name": "showContextMenu",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "menuForEvent:": {
+      "name": "menuForEvent:",
+      "bridgedName": "menuForEvent",
+      "args": [
+        {
+          "name": "menuForEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateRevealInFinderMenuItem:": {
+      "name": "validateRevealInFinderMenuItem:",
+      "bridgedName": "validateRevealInFinderMenuItem",
+      "args": [
+        {
+          "name": "validateRevealInFinderMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revealInFinder:": {
+      "name": "revealInFinder:",
+      "bridgedName": "revealInFinder",
+      "args": [
+        {
+          "name": "revealInFinder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revealLocalDataItemInFinder:": {
+      "name": "revealLocalDataItemInFinder:",
+      "bridgedName": "revealLocalDataItemInFinder",
+      "args": [
+        {
+          "name": "revealLocalDataItemInFinder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revealInFinderAction:": {
+      "name": "revealInFinderAction:",
+      "bridgedName": "revealInFinderAction",
+      "args": [
+        {
+          "name": "revealInFinderAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pluraliseMenuItemTitle:": {
+      "name": "pluraliseMenuItemTitle:",
+      "bridgedName": "pluraliseMenuItemTitle",
+      "args": [
+        {
+          "name": "pluraliseMenuItemTitle",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:draggingUpdated:": {
+      "name": "view:draggingUpdated:",
+      "bridgedName": "view_draggingUpdated",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "draggingUpdated",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:draggingEntered:": {
+      "name": "view:draggingEntered:",
+      "bridgedName": "view_draggingEntered",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "draggingEntered",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggedURLsFromPasteboard:": {
+      "name": "draggedURLsFromPasteboard:",
+      "bridgedName": "draggedURLsFromPasteboard",
+      "args": [
+        {
+          "name": "draggedURLsFromPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:performDragOperation:": {
+      "name": "view:performDragOperation:",
+      "bridgedName": "view_performDragOperation",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "performDragOperation",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "draggedTypesForView:": {
+      "name": "draggedTypesForView:",
+      "bridgedName": "draggedTypesForView",
+      "args": [
+        {
+          "name": "draggedTypesForView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dismissAlertSheet": {
+      "name": "dismissAlertSheet",
+      "bridgedName": "dismissAlertSheet",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateRemoveLocalDataMenuItem:": {
+      "name": "validateRemoveLocalDataMenuItem:",
+      "bridgedName": "validateRemoveLocalDataMenuItem",
+      "args": [
+        {
+          "name": "validateRemoveLocalDataMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeLocalDataAction:": {
+      "name": "removeLocalDataAction:",
+      "bridgedName": "removeLocalDataAction",
+      "args": [
+        {
+          "name": "removeLocalDataAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "importLocalData:": {
+      "name": "importLocalData:",
+      "bridgedName": "importLocalData",
+      "args": [
+        {
+          "name": "importLocalData",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayAddLocalDataErrorWithMessage:info:": {
+      "name": "displayAddLocalDataErrorWithMessage:info:",
+      "bridgedName": "displayAddLocalDataErrorWithMessage_info",
+      "args": [
+        {
+          "name": "displayAddLocalDataErrorWithMessage",
+          "type": "id"
+        },
+        {
+          "name": "info",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataSupplierForURL:": {
+      "name": "dataSupplierForURL:",
+      "bridgedName": "dataSupplierForURL",
+      "args": [
+        {
+          "name": "dataSupplierForURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addLocalDataFromURLs:": {
+      "name": "addLocalDataFromURLs:",
+      "bridgedName": "addLocalDataFromURLs",
+      "args": [
+        {
+          "name": "addLocalDataFromURLs",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:viewForTableColumn:row:": {
+      "name": "tableView:viewForTableColumn:row:",
+      "bridgedName": "tableView_viewForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "viewForTableColumn",
+          "type": "id"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:objectValueForTableColumn:row:": {
+      "name": "tableView:objectValueForTableColumn:row:",
+      "bridgedName": "tableView_objectValueForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "objectValueForTableColumn",
+          "type": "id"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "name": "numberOfRowsInTableView",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewSelectionDidChange:": {
+      "name": "tableViewSelectionDidChange:",
+      "bridgedName": "tableViewSelectionDidChange",
+      "args": [
+        {
+          "name": "tableViewSelectionDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "chooseDataPanelWindow": {
+      "name": "chooseDataPanelWindow",
+      "pointer": true,
+      "type": "__weak NSWindow",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "data": {
+      "name": "data",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "enableShowInFinder": {
+      "name": "enableShowInFinder",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "shouldEnableCogMenu": {
+      "name": "shouldEnableCogMenu",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "contextMenu": {
+      "name": "contextMenu",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "dataArrayController": {
+      "name": "dataArrayController",
+      "pointer": true,
+      "type": "NSArrayController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "tableView": {
+      "name": "tableView",
+      "pointer": true,
+      "type": "__weak MSDataTableView",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectedData": {
+      "name": "selectedData",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dataSupplierManager": {
+      "name": "dataSupplierManager",
+      "pointer": true,
+      "type": "MSDataSupplierManager",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSProgressRegistrar.h",
+    "NSXPCListenerDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSProgressValues",
+    "NSSet",
+    "NSString",
+    "NSURL",
+    "NSFileAccessNode",
+    "NSMutableDictionary",
+    "NSMutableSet",
+    "NSObject<OS_dispatch_queue>"
+  ],
+  "protocol": true,
+  "className": "NSProgressRegistrar",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSXPCListenerDelegate",
+    "NSProgressRegistrar"
+  ],
+  "methods": {
+    "removeSubscriberForID:": {
+      "name": "removeSubscriberForID:",
+      "bridgedName": "removeSubscriberForID",
+      "args": [
+        {
+          "name": "removeSubscriberForID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSubscriber:forID:appBundleID:fileURL:completionHandler:": {
+      "name": "addSubscriber:forID:appBundleID:fileURL:completionHandler:",
+      "bridgedName": "addSubscriber_forID_appBundleID_fileURL_completionHandler",
+      "args": [
+        {
+          "name": "addSubscriber",
+          "type": "id"
+        },
+        {
+          "name": "forID",
+          "type": "id"
+        },
+        {
+          "name": "appBundleID",
+          "type": "id"
+        },
+        {
+          "name": "fileURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addSubscriber:forID:appBundleID:category:completionHandler:": {
+      "name": "addSubscriber:forID:appBundleID:category:completionHandler:",
+      "bridgedName": "addSubscriber_forID_appBundleID_category_completionHandler",
+      "args": [
+        {
+          "name": "addSubscriber",
+          "type": "id"
+        },
+        {
+          "name": "forID",
+          "type": "id"
+        },
+        {
+          "name": "appBundleID",
+          "type": "id"
+        },
+        {
+          "name": "category",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePublisherForID:": {
+      "name": "removePublisherForID:",
+      "bridgedName": "removePublisherForID",
+      "args": [
+        {
+          "name": "removePublisherForID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observePublisherUserInfoForID:value:forKey:": {
+      "name": "observePublisherUserInfoForID:value:forKey:",
+      "bridgedName": "observePublisherUserInfoForID_value_forKey",
+      "args": [
+        {
+          "name": "observePublisherUserInfoForID",
+          "type": "id"
+        },
+        {
+          "name": "value",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observePublisherForID:values:forKeys:": {
+      "name": "observePublisherForID:values:forKeys:",
+      "bridgedName": "observePublisherForID_values_forKeys",
+      "args": [
+        {
+          "name": "observePublisherForID",
+          "type": "id"
+        },
+        {
+          "name": "values",
+          "type": "id"
+        },
+        {
+          "name": "forKeys",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPublisher:forID:acknowledgementAppBundleIDs:category:fileURL:initialValues:completionHandler:": {
+      "name": "addPublisher:forID:acknowledgementAppBundleIDs:category:fileURL:initialValues:completionHandler:",
+      "bridgedName": "addPublisher_forID_acknowledgementAppBundleIDs_category_fileURL_initialValues_completionHandler",
+      "args": [
+        {
+          "name": "addPublisher",
+          "type": "id"
+        },
+        {
+          "name": "forID",
+          "type": "id"
+        },
+        {
+          "name": "acknowledgementAppBundleIDs",
+          "type": "id"
+        },
+        {
+          "name": "category",
+          "type": "id"
+        },
+        {
+          "name": "fileURL",
+          "type": "id"
+        },
+        {
+          "name": "initialValues",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getRemoteProcessWithAuditToken:canReadItemAtURL:completionHandler:": {
+      "name": "_getRemoteProcessWithAuditToken:canReadItemAtURL:completionHandler:",
+      "bridgedName": "_getRemoteProcessWithAuditToken_canReadItemAtURL_completionHandler",
+      "args": [
+        {
+          "name": "_getRemoteProcessWithAuditToken",
+          "type": "CDStruct_4c969caf"
+        },
+        {
+          "name": "canReadItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "listener:shouldAcceptNewConnection:": {
+      "name": "listener:shouldAcceptNewConnection:",
+      "bridgedName": "listener_shouldAcceptNewConnection",
+      "args": [
+        {
+          "name": "listener",
+          "type": "id"
+        },
+        {
+          "name": "shouldAcceptNewConnection",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithQueue:rootFileAccessNode:": {
+      "name": "initWithQueue:rootFileAccessNode:",
+      "bridgedName": "initWithQueue_rootFileAccessNode",
+      "args": [
+        {
+          "name": "initWithQueue",
+          "type": "id"
+        },
+        {
+          "name": "rootFileAccessNode",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

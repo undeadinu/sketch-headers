@@ -1,0 +1,156 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSDictionary",
+    "NSImage",
+    "NSPasteboard",
+    "NSURL",
+    "NSView",
+    "NSWindow"
+  ],
+  "protocol": true,
+  "className": "NSDraggingInfo",
+  "interfaces": [],
+  "methods": {
+    "resetSpringLoading": {
+      "name": "resetSpringLoading",
+      "bridgedName": "resetSpringLoading",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:": {
+      "name": "enumerateDraggingItemsWithOptions:forView:classes:searchOptions:usingBlock:",
+      "bridgedName": "enumerateDraggingItemsWithOptions_forView_classes_searchOptions_usingBlock",
+      "args": [
+        {
+          "name": "enumerateDraggingItemsWithOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "forView",
+          "type": "NSView *"
+        },
+        {
+          "name": "classes",
+          "type": "NSArray *"
+        },
+        {
+          "name": "searchOptions",
+          "type": "NSDictionary *"
+        },
+        {
+          "name": "usingBlock",
+          "type": "void (^)(NSDraggingItem *, long long, char *)"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "namesOfPromisedFilesDroppedAtDestination:": {
+      "name": "namesOfPromisedFilesDroppedAtDestination:",
+      "bridgedName": "namesOfPromisedFilesDroppedAtDestination",
+      "args": [
+        {
+          "name": "namesOfPromisedFilesDroppedAtDestination",
+          "type": "NSURL *"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "slideDraggedImageTo:": {
+      "name": "slideDraggedImageTo:",
+      "bridgedName": "slideDraggedImageTo",
+      "args": [
+        {
+          "name": "slideDraggedImageTo",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "springLoadingHighlight": {
+      "name": "springLoadingHighlight",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSequenceNumber": {
+      "name": "draggingSequenceNumber",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSource": {
+      "name": "draggingSource",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingPasteboard": {
+      "name": "draggingPasteboard",
+      "pointer": true,
+      "type": "NSPasteboard",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggedImage": {
+      "name": "draggedImage",
+      "pointer": true,
+      "type": "NSImage",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggedImageLocation": {
+      "name": "draggedImageLocation",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingLocation": {
+      "name": "draggingLocation",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingSourceOperationMask": {
+      "name": "draggingSourceOperationMask",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggingDestinationWindow": {
+      "name": "draggingDestinationWindow",
+      "pointer": true,
+      "type": "NSWindow",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

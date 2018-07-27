@@ -1,0 +1,3923 @@
+{
+  "imports": [
+    "NSString.h",
+    "NSPasteboardReading.h",
+    "NSPasteboardWriting.h",
+    "NSObject.h",
+    "NSCopying.h",
+    "NSItemProviderReading.h",
+    "NSItemProviderWriting.h",
+    "NSMutableCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSArray"
+  ],
+  "protocol": false,
+  "className": "NSString",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSItemProviderReading",
+    "NSItemProviderWriting",
+    "NSCopying",
+    "NSMutableCopying",
+    "NSSecureCoding"
+  ],
+  "methods": {
+    "readableTypesForPasteboard:": {
+      "name": "readableTypesForPasteboard:",
+      "bridgedName": "readableTypesForPasteboard",
+      "args": [
+        {
+          "name": "readableTypesForPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pasteboardPropertyListForType:": {
+      "name": "pasteboardPropertyListForType:",
+      "bridgedName": "pasteboardPropertyListForType",
+      "args": [
+        {
+          "name": "pasteboardPropertyListForType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writableTypesForPasteboard:": {
+      "name": "writableTypesForPasteboard:",
+      "bridgedName": "writableTypesForPasteboard",
+      "args": [
+        {
+          "name": "writableTypesForPasteboard",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPasteboardPropertyList:ofType:": {
+      "name": "initWithPasteboardPropertyList:ofType:",
+      "bridgedName": "initWithPasteboardPropertyList_ofType",
+      "args": [
+        {
+          "name": "initWithPasteboardPropertyList",
+          "type": "id"
+        },
+        {
+          "name": "ofType",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasLocalizedCaseInsensitivePrefix:": {
+      "name": "_hasLocalizedCaseInsensitivePrefix:",
+      "bridgedName": "_hasLocalizedCaseInsensitivePrefix",
+      "args": [
+        {
+          "name": "_hasLocalizedCaseInsensitivePrefix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringWithoutAmpersand": {
+      "name": "stringWithoutAmpersand",
+      "bridgedName": "stringWithoutAmpersand",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfGraphicalSegmentAtIndex:": {
+      "name": "rangeOfGraphicalSegmentAtIndex:",
+      "bridgedName": "rangeOfGraphicalSegmentAtIndex",
+      "args": [
+        {
+          "name": "rangeOfGraphicalSegmentAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endOfParagraphAtIndex:": {
+      "name": "_endOfParagraphAtIndex:",
+      "bridgedName": "_endOfParagraphAtIndex",
+      "args": [
+        {
+          "name": "_endOfParagraphAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textfinder_firstMatchForRegularExpression:inRange:": {
+      "name": "_textfinder_firstMatchForRegularExpression:inRange:",
+      "bridgedName": "_textfinder_firstMatchForRegularExpression_inRange",
+      "args": [
+        {
+          "name": "_textfinder_firstMatchForRegularExpression",
+          "type": "id"
+        },
+        {
+          "name": "inRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfFile:usedEncoding:error:": {
+      "name": "stringWithContentsOfFile:usedEncoding:error:",
+      "bridgedName": "stringWithContentsOfFile_usedEncoding_error",
+      "args": [
+        {
+          "name": "stringWithContentsOfFile",
+          "type": "id"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfFile:encoding:error:": {
+      "name": "stringWithContentsOfFile:encoding:error:",
+      "bridgedName": "stringWithContentsOfFile_encoding_error",
+      "args": [
+        {
+          "name": "stringWithContentsOfFile",
+          "type": "id"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfURL:usedEncoding:error:": {
+      "name": "stringWithContentsOfURL:usedEncoding:error:",
+      "bridgedName": "stringWithContentsOfURL_usedEncoding_error",
+      "args": [
+        {
+          "name": "stringWithContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfURL:encoding:error:": {
+      "name": "stringWithContentsOfURL:encoding:error:",
+      "bridgedName": "stringWithContentsOfURL_encoding_error",
+      "args": [
+        {
+          "name": "stringWithContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfURL:": {
+      "name": "stringWithContentsOfURL:",
+      "bridgedName": "stringWithContentsOfURL",
+      "args": [
+        {
+          "name": "stringWithContentsOfURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithContentsOfFile:": {
+      "name": "stringWithContentsOfFile:",
+      "bridgedName": "stringWithContentsOfFile",
+      "args": [
+        {
+          "name": "stringWithContentsOfFile",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithFormat:locale:": {
+      "name": "stringWithFormat:locale:",
+      "bridgedName": "stringWithFormat_locale",
+      "args": [
+        {
+          "name": "stringWithFormat",
+          "type": "id"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithFormat:": {
+      "name": "stringWithFormat:",
+      "bridgedName": "stringWithFormat",
+      "args": [
+        {
+          "name": "stringWithFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithValidatedFormat:validFormatSpecifiers:error:": {
+      "name": "stringWithValidatedFormat:validFormatSpecifiers:error:",
+      "bridgedName": "stringWithValidatedFormat_validFormatSpecifiers_error",
+      "args": [
+        {
+          "name": "stringWithValidatedFormat",
+          "type": "id"
+        },
+        {
+          "name": "validFormatSpecifiers",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "localizedStringWithFormat:": {
+      "name": "localizedStringWithFormat:",
+      "bridgedName": "localizedStringWithFormat",
+      "args": [
+        {
+          "name": "localizedStringWithFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "localizedStringWithValidatedFormat:validFormatSpecifiers:error:": {
+      "name": "localizedStringWithValidatedFormat:validFormatSpecifiers:error:",
+      "bridgedName": "localizedStringWithValidatedFormat_validFormatSpecifiers_error",
+      "args": [
+        {
+          "name": "localizedStringWithValidatedFormat",
+          "type": "id"
+        },
+        {
+          "name": "validFormatSpecifiers",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithBytes:length:encoding:": {
+      "name": "stringWithBytes:length:encoding:",
+      "bridgedName": "stringWithBytes_length_encoding",
+      "args": [
+        {
+          "name": "stringWithBytes",
+          "type": "const void *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithUTF8String:": {
+      "name": "stringWithUTF8String:",
+      "bridgedName": "stringWithUTF8String",
+      "args": [
+        {
+          "name": "stringWithUTF8String",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithCString:encoding:": {
+      "name": "stringWithCString:encoding:",
+      "bridgedName": "stringWithCString_encoding",
+      "args": [
+        {
+          "name": "stringWithCString",
+          "type": "const char *"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithCString:length:": {
+      "name": "stringWithCString:length:",
+      "bridgedName": "stringWithCString_length",
+      "args": [
+        {
+          "name": "stringWithCString",
+          "type": "const char *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithCString:": {
+      "name": "stringWithCString:",
+      "bridgedName": "stringWithCString",
+      "args": [
+        {
+          "name": "stringWithCString",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithCharacters:length:": {
+      "name": "stringWithCharacters:length:",
+      "bridgedName": "stringWithCharacters_length",
+      "args": [
+        {
+          "name": "stringWithCharacters",
+          "type": "const unsigned short *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringWithString:": {
+      "name": "stringWithString:",
+      "bridgedName": "stringWithString",
+      "args": [
+        {
+          "name": "stringWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "string": {
+      "name": "string",
+      "bridgedName": "string",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "name": "allocWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pathWithComponents:": {
+      "name": "pathWithComponents:",
+      "bridgedName": "pathWithComponents",
+      "args": [
+        {
+          "name": "pathWithComponents",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newZStringWithUTF8String:": {
+      "name": "_newZStringWithUTF8String:",
+      "bridgedName": "_newZStringWithUTF8String",
+      "args": [
+        {
+          "name": "_newZStringWithUTF8String",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newZStringWithString:": {
+      "name": "_newZStringWithString:",
+      "bridgedName": "_newZStringWithString",
+      "args": [
+        {
+          "name": "_newZStringWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_newZStringWithCharacters:length:": {
+      "name": "_newZStringWithCharacters:length:",
+      "bridgedName": "_newZStringWithCharacters_length",
+      "args": [
+        {
+          "name": "_newZStringWithCharacters",
+          "type": "const unsigned short *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "stringEncodingForData:encodingOptions:convertedString:usedLossyConversion:": {
+      "name": "stringEncodingForData:encodingOptions:convertedString:usedLossyConversion:",
+      "bridgedName": "stringEncodingForData_encodingOptions_convertedString_usedLossyConversion",
+      "args": [
+        {
+          "name": "stringEncodingForData",
+          "type": "id"
+        },
+        {
+          "name": "encodingOptions",
+          "type": "id"
+        },
+        {
+          "name": "convertedString",
+          "type": "id *"
+        },
+        {
+          "name": "usedLossyConversion",
+          "type": "char *"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_scriptingTextWithDescriptor:": {
+      "name": "_scriptingTextWithDescriptor:",
+      "bridgedName": "_scriptingTextWithDescriptor",
+      "args": [
+        {
+          "name": "_scriptingTextWithDescriptor",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_scriptStringWithTabCount:": {
+      "name": "_scriptStringWithTabCount:",
+      "bridgedName": "_scriptStringWithTabCount",
+      "args": [
+        {
+          "name": "_scriptStringWithTabCount",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_scriptStringWithPropertyAccess:": {
+      "name": "_scriptStringWithPropertyAccess:",
+      "bridgedName": "_scriptStringWithPropertyAccess",
+      "args": [
+        {
+          "name": "_scriptStringWithPropertyAccess",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "writableTypeIdentifiersForItemProvider": {
+      "name": "writableTypeIdentifiersForItemProvider",
+      "bridgedName": "writableTypeIdentifiersForItemProvider",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "objectWithItemProviderData:typeIdentifier:error:": {
+      "name": "objectWithItemProviderData:typeIdentifier:error:",
+      "bridgedName": "objectWithItemProviderData_typeIdentifier_error",
+      "args": [
+        {
+          "name": "objectWithItemProviderData",
+          "type": "id"
+        },
+        {
+          "name": "typeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "readableTypeIdentifiersForItemProvider": {
+      "name": "readableTypeIdentifiersForItemProvider",
+      "bridgedName": "readableTypeIdentifiersForItemProvider",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "localizedNameOfStringEncoding:": {
+      "name": "localizedNameOfStringEncoding:",
+      "bridgedName": "localizedNameOfStringEncoding",
+      "args": [
+        {
+          "name": "localizedNameOfStringEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "availableStringEncodings": {
+      "name": "availableStringEncodings",
+      "bridgedName": "availableStringEncodings",
+      "args": [],
+      "returns": "const unsigned long long *",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "defaultCStringEncoding": {
+      "name": "defaultCStringEncoding",
+      "bridgedName": "defaultCStringEncoding",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_web_stringRepresentationForBytes:": {
+      "name": "_web_stringRepresentationForBytes:",
+      "bridgedName": "_web_stringRepresentationForBytes",
+      "args": [
+        {
+          "name": "_web_stringRepresentationForBytes",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allowsDirectEncoding": {
+      "name": "_allowsDirectEncoding",
+      "bridgedName": "_allowsDirectEncoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "classForCoder": {
+      "name": "classForCoder",
+      "bridgedName": "classForCoder",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFormat:locale:arguments:": {
+      "name": "initWithFormat:locale:arguments:",
+      "bridgedName": "initWithFormat_locale_arguments",
+      "args": [
+        {
+          "name": "initWithFormat",
+          "type": "id"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "struct __va_list_tag [1]"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithBytesNoCopy:length:encoding:freeWhenDone:": {
+      "name": "initWithBytesNoCopy:length:encoding:freeWhenDone:",
+      "bridgedName": "initWithBytesNoCopy_length_encoding_freeWhenDone",
+      "args": [
+        {
+          "name": "initWithBytesNoCopy",
+          "type": "void *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "freeWhenDone",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCStringNoCopy:length:freeWhenDone:": {
+      "name": "initWithCStringNoCopy:length:freeWhenDone:",
+      "bridgedName": "initWithCStringNoCopy_length_freeWhenDone",
+      "args": [
+        {
+          "name": "initWithCStringNoCopy",
+          "type": "char *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "freeWhenDone",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCharactersNoCopy:length:freeWhenDone:": {
+      "name": "initWithCharactersNoCopy:length:freeWhenDone:",
+      "bridgedName": "initWithCharactersNoCopy_length_freeWhenDone",
+      "args": [
+        {
+          "name": "initWithCharactersNoCopy",
+          "type": "unsigned short *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "freeWhenDone",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFormat:arguments:": {
+      "name": "initWithFormat:arguments:",
+      "bridgedName": "initWithFormat_arguments",
+      "args": [
+        {
+          "name": "initWithFormat",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "struct __va_list_tag [1]"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithValidatedFormat:validFormatSpecifiers:locale:arguments:error:": {
+      "name": "initWithValidatedFormat:validFormatSpecifiers:locale:arguments:error:",
+      "bridgedName": "initWithValidatedFormat_validFormatSpecifiers_locale_arguments_error",
+      "args": [
+        {
+          "name": "initWithValidatedFormat",
+          "type": "id"
+        },
+        {
+          "name": "validFormatSpecifiers",
+          "type": "id"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        },
+        {
+          "name": "arguments",
+          "type": "struct __va_list_tag [1]"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFormat:locale:": {
+      "name": "initWithFormat:locale:",
+      "bridgedName": "initWithFormat_locale",
+      "args": [
+        {
+          "name": "initWithFormat",
+          "type": "id"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFormat:": {
+      "name": "initWithFormat:",
+      "bridgedName": "initWithFormat",
+      "args": [
+        {
+          "name": "initWithFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithData:usedEncoding:": {
+      "name": "initWithData:usedEncoding:",
+      "bridgedName": "initWithData_usedEncoding",
+      "args": [
+        {
+          "name": "initWithData",
+          "type": "id"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfFile:usedEncoding:error:": {
+      "name": "initWithContentsOfFile:usedEncoding:error:",
+      "bridgedName": "initWithContentsOfFile_usedEncoding_error",
+      "args": [
+        {
+          "name": "initWithContentsOfFile",
+          "type": "id"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:usedEncoding:error:": {
+      "name": "initWithContentsOfURL:usedEncoding:error:",
+      "bridgedName": "initWithContentsOfURL_usedEncoding_error",
+      "args": [
+        {
+          "name": "initWithContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfFile:encoding:error:": {
+      "name": "initWithContentsOfFile:encoding:error:",
+      "bridgedName": "initWithContentsOfFile_encoding_error",
+      "args": [
+        {
+          "name": "initWithContentsOfFile",
+          "type": "id"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:encoding:error:": {
+      "name": "initWithContentsOfURL:encoding:error:",
+      "bridgedName": "initWithContentsOfURL_encoding_error",
+      "args": [
+        {
+          "name": "initWithContentsOfURL",
+          "type": "id"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfURL:": {
+      "name": "initWithContentsOfURL:",
+      "bridgedName": "initWithContentsOfURL",
+      "args": [
+        {
+          "name": "initWithContentsOfURL",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithContentsOfFile:": {
+      "name": "initWithContentsOfFile:",
+      "bridgedName": "initWithContentsOfFile",
+      "args": [
+        {
+          "name": "initWithContentsOfFile",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithDataOfUnknownEncoding:": {
+      "name": "_initWithDataOfUnknownEncoding:",
+      "bridgedName": "_initWithDataOfUnknownEncoding",
+      "args": [
+        {
+          "name": "_initWithDataOfUnknownEncoding",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithBytesOfUnknownEncoding:length:copy:usedEncoding:": {
+      "name": "_initWithBytesOfUnknownEncoding:length:copy:usedEncoding:",
+      "bridgedName": "_initWithBytesOfUnknownEncoding_length_copy_usedEncoding",
+      "args": [
+        {
+          "name": "_initWithBytesOfUnknownEncoding",
+          "type": "char *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "copy",
+          "type": "BOOL"
+        },
+        {
+          "name": "usedEncoding",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithData:encoding:": {
+      "name": "initWithData:encoding:",
+      "bridgedName": "initWithData_encoding",
+      "args": [
+        {
+          "name": "initWithData",
+          "type": "id"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithString:": {
+      "name": "initWithString:",
+      "bridgedName": "initWithString",
+      "args": [
+        {
+          "name": "initWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCharacters:length:": {
+      "name": "initWithCharacters:length:",
+      "bridgedName": "initWithCharacters_length",
+      "args": [
+        {
+          "name": "initWithCharacters",
+          "type": "const unsigned short *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithUTF8String:": {
+      "name": "initWithUTF8String:",
+      "bridgedName": "initWithUTF8String",
+      "args": [
+        {
+          "name": "initWithUTF8String",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCString:encoding:": {
+      "name": "initWithCString:encoding:",
+      "bridgedName": "initWithCString_encoding",
+      "args": [
+        {
+          "name": "initWithCString",
+          "type": "const char *"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCString:": {
+      "name": "initWithCString:",
+      "bridgedName": "initWithCString",
+      "args": [
+        {
+          "name": "initWithCString",
+          "type": "const char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCString:length:": {
+      "name": "initWithCString:length:",
+      "bridgedName": "initWithCString_length",
+      "args": [
+        {
+          "name": "initWithCString",
+          "type": "const char *"
+        },
+        {
+          "name": "length",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToURL:atomically:": {
+      "name": "writeToURL:atomically:",
+      "bridgedName": "writeToURL_atomically",
+      "args": [
+        {
+          "name": "writeToURL",
+          "type": "id"
+        },
+        {
+          "name": "atomically",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToFile:atomically:": {
+      "name": "writeToFile:atomically:",
+      "bridgedName": "writeToFile_atomically",
+      "args": [
+        {
+          "name": "writeToFile",
+          "type": "id"
+        },
+        {
+          "name": "atomically",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToFile:atomically:encoding:error:": {
+      "name": "writeToFile:atomically:encoding:error:",
+      "bridgedName": "writeToFile_atomically_encoding_error",
+      "args": [
+        {
+          "name": "writeToFile",
+          "type": "id"
+        },
+        {
+          "name": "atomically",
+          "type": "BOOL"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writeToURL:atomically:encoding:error:": {
+      "name": "writeToURL:atomically:encoding:error:",
+      "bridgedName": "writeToURL_atomically_encoding_error",
+      "args": [
+        {
+          "name": "writeToURL",
+          "type": "id"
+        },
+        {
+          "name": "atomically",
+          "type": "BOOL"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getExternalRepresentation:extendedAttributes:forWritingToURLOrPath:usingEncoding:error:": {
+      "name": "getExternalRepresentation:extendedAttributes:forWritingToURLOrPath:usingEncoding:error:",
+      "bridgedName": "getExternalRepresentation_extendedAttributes_forWritingToURLOrPath_usingEncoding_error",
+      "args": [
+        {
+          "name": "getExternalRepresentation",
+          "type": "id *"
+        },
+        {
+          "name": "extendedAttributes",
+          "type": "id *"
+        },
+        {
+          "name": "forWritingToURLOrPath",
+          "type": "id"
+        },
+        {
+          "name": "usingEncoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayableString": {
+      "name": "displayableString",
+      "bridgedName": "displayableString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateLinesUsingBlock:": {
+      "name": "enumerateLinesUsingBlock:",
+      "bridgedName": "enumerateLinesUsingBlock",
+      "args": [
+        {
+          "name": "enumerateLinesUsingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateSubstringsInRange:options:usingBlock:": {
+      "name": "enumerateSubstringsInRange:options:usingBlock:",
+      "bridgedName": "enumerateSubstringsInRange_options_usingBlock",
+      "args": [
+        {
+          "name": "enumerateSubstringsInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "usingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "paragraphRangeForRange:": {
+      "name": "paragraphRangeForRange:",
+      "bridgedName": "paragraphRangeForRange",
+      "args": [
+        {
+          "name": "paragraphRangeForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lineRangeForRange:": {
+      "name": "lineRangeForRange:",
+      "bridgedName": "lineRangeForRange",
+      "args": [
+        {
+          "name": "lineRangeForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getParagraphStart:end:contentsEnd:forRange:": {
+      "name": "getParagraphStart:end:contentsEnd:forRange:",
+      "bridgedName": "getParagraphStart_end_contentsEnd_forRange",
+      "args": [
+        {
+          "name": "getParagraphStart",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "end",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "contentsEnd",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "forRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getLineStart:end:contentsEnd:forRange:": {
+      "name": "getLineStart:end:contentsEnd:forRange:",
+      "bridgedName": "getLineStart_end_contentsEnd_forRange",
+      "args": [
+        {
+          "name": "getLineStart",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "end",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "contentsEnd",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "forRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getBlockStart:end:contentsEnd:forRange:stopAtLineSeparators:": {
+      "name": "_getBlockStart:end:contentsEnd:forRange:stopAtLineSeparators:",
+      "bridgedName": "_getBlockStart_end_contentsEnd_forRange_stopAtLineSeparators",
+      "args": [
+        {
+          "name": "_getBlockStart",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "end",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "contentsEnd",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "forRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "stopAtLineSeparators",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByApplyingTransform:reverse:": {
+      "name": "stringByApplyingTransform:reverse:",
+      "bridgedName": "stringByApplyingTransform_reverse",
+      "args": [
+        {
+          "name": "stringByApplyingTransform",
+          "type": "id"
+        },
+        {
+          "name": "reverse",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByFoldingWithOptions:locale:": {
+      "name": "stringByFoldingWithOptions:locale:",
+      "bridgedName": "stringByFoldingWithOptions_locale",
+      "args": [
+        {
+          "name": "stringByFoldingWithOptions",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "precomposedStringWithCompatibilityMapping": {
+      "name": "precomposedStringWithCompatibilityMapping",
+      "bridgedName": "precomposedStringWithCompatibilityMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decomposedStringWithCompatibilityMapping": {
+      "name": "decomposedStringWithCompatibilityMapping",
+      "bridgedName": "decomposedStringWithCompatibilityMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "precomposedStringWithCanonicalMapping": {
+      "name": "precomposedStringWithCanonicalMapping",
+      "bridgedName": "precomposedStringWithCanonicalMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decomposedStringWithCanonicalMapping": {
+      "name": "decomposedStringWithCanonicalMapping",
+      "bridgedName": "decomposedStringWithCanonicalMapping",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "capitalizedStringWithLocale:": {
+      "name": "capitalizedStringWithLocale:",
+      "bridgedName": "capitalizedStringWithLocale",
+      "args": [
+        {
+          "name": "capitalizedStringWithLocale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lowercaseStringWithLocale:": {
+      "name": "lowercaseStringWithLocale:",
+      "bridgedName": "lowercaseStringWithLocale",
+      "args": [
+        {
+          "name": "lowercaseStringWithLocale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uppercaseStringWithLocale:": {
+      "name": "uppercaseStringWithLocale:",
+      "bridgedName": "uppercaseStringWithLocale",
+      "args": [
+        {
+          "name": "uppercaseStringWithLocale",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedCapitalizedString": {
+      "name": "localizedCapitalizedString",
+      "bridgedName": "localizedCapitalizedString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedLowercaseString": {
+      "name": "localizedLowercaseString",
+      "bridgedName": "localizedLowercaseString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedUppercaseString": {
+      "name": "localizedUppercaseString",
+      "bridgedName": "localizedUppercaseString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "capitalizedString": {
+      "name": "capitalizedString",
+      "bridgedName": "capitalizedString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lowercaseString": {
+      "name": "lowercaseString",
+      "bridgedName": "lowercaseString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "uppercaseString": {
+      "name": "uppercaseString",
+      "bridgedName": "uppercaseString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "boolValue": {
+      "name": "boolValue",
+      "bridgedName": "boolValue",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "integerValue": {
+      "name": "integerValue",
+      "bridgedName": "integerValue",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "longLongValue": {
+      "name": "longLongValue",
+      "bridgedName": "longLongValue",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intValue": {
+      "name": "intValue",
+      "bridgedName": "intValue",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "floatValue": {
+      "name": "floatValue",
+      "bridgedName": "floatValue",
+      "args": [],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "doubleValue": {
+      "name": "doubleValue",
+      "bridgedName": "doubleValue",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAppendingFormat:": {
+      "name": "stringByAppendingFormat:",
+      "bridgedName": "stringByAppendingFormat",
+      "args": [
+        {
+          "name": "stringByAppendingFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAppendingString:": {
+      "name": "stringByAppendingString:",
+      "bridgedName": "stringByAppendingString",
+      "args": [
+        {
+          "name": "stringByAppendingString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "substringToIndex:": {
+      "name": "substringToIndex:",
+      "bridgedName": "substringToIndex",
+      "args": [
+        {
+          "name": "substringToIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "substringFromIndex:": {
+      "name": "substringFromIndex:",
+      "bridgedName": "substringFromIndex",
+      "args": [
+        {
+          "name": "substringFromIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "substringWithRange:": {
+      "name": "substringWithRange:",
+      "bridgedName": "substringWithRange",
+      "args": [
+        {
+          "name": "substringWithRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newSubstringWithRange:zone:": {
+      "name": "_newSubstringWithRange:zone:",
+      "bridgedName": "_newSubstringWithRange_zone",
+      "args": [
+        {
+          "name": "_newSubstringWithRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "zone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCharacters:": {
+      "name": "getCharacters:",
+      "bridgedName": "getCharacters",
+      "args": [
+        {
+          "name": "getCharacters",
+          "type": "unsigned short *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCharacters:range:": {
+      "name": "getCharacters:range:",
+      "bridgedName": "getCharacters_range",
+      "args": [
+        {
+          "name": "getCharacters",
+          "type": "unsigned short *"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByReplacingCharactersInRange:withString:": {
+      "name": "stringByReplacingCharactersInRange:withString:",
+      "bridgedName": "stringByReplacingCharactersInRange_withString",
+      "args": [
+        {
+          "name": "stringByReplacingCharactersInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByReplacingOccurrencesOfString:withString:": {
+      "name": "stringByReplacingOccurrencesOfString:withString:",
+      "bridgedName": "stringByReplacingOccurrencesOfString_withString",
+      "args": [
+        {
+          "name": "stringByReplacingOccurrencesOfString",
+          "type": "id"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByReplacingOccurrencesOfString:withString:options:range:": {
+      "name": "stringByReplacingOccurrencesOfString:withString:options:range:",
+      "bridgedName": "stringByReplacingOccurrencesOfString_withString_options_range",
+      "args": [
+        {
+          "name": "stringByReplacingOccurrencesOfString",
+          "type": "id"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByPaddingToLength:withString:startingAtIndex:": {
+      "name": "stringByPaddingToLength:withString:startingAtIndex:",
+      "bridgedName": "stringByPaddingToLength_withString_startingAtIndex",
+      "args": [
+        {
+          "name": "stringByPaddingToLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        },
+        {
+          "name": "startingAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByTrimmingCharactersInSet:": {
+      "name": "stringByTrimmingCharactersInSet:",
+      "bridgedName": "stringByTrimmingCharactersInSet",
+      "args": [
+        {
+          "name": "stringByTrimmingCharactersInSet",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedStandardRangeOfString:": {
+      "name": "localizedStandardRangeOfString:",
+      "bridgedName": "localizedStandardRangeOfString",
+      "args": [
+        {
+          "name": "localizedStandardRangeOfString",
+          "type": "id"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedStandardContainsString:": {
+      "name": "localizedStandardContainsString:",
+      "bridgedName": "localizedStandardContainsString",
+      "args": [
+        {
+          "name": "localizedStandardContainsString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedCaseInsensitiveContainsString:": {
+      "name": "localizedCaseInsensitiveContainsString:",
+      "bridgedName": "localizedCaseInsensitiveContainsString",
+      "args": [
+        {
+          "name": "localizedCaseInsensitiveContainsString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsString:": {
+      "name": "containsString:",
+      "bridgedName": "containsString",
+      "args": [
+        {
+          "name": "containsString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedHasSuffix:": {
+      "name": "localizedHasSuffix:",
+      "bridgedName": "localizedHasSuffix",
+      "args": [
+        {
+          "name": "localizedHasSuffix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedHasPrefix:": {
+      "name": "localizedHasPrefix:",
+      "bridgedName": "localizedHasPrefix",
+      "args": [
+        {
+          "name": "localizedHasPrefix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasSuffix:": {
+      "name": "hasSuffix:",
+      "bridgedName": "hasSuffix",
+      "args": [
+        {
+          "name": "hasSuffix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasPrefix:": {
+      "name": "hasPrefix:",
+      "bridgedName": "hasPrefix",
+      "args": [
+        {
+          "name": "hasPrefix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "commonPrefixWithString:options:": {
+      "name": "commonPrefixWithString:options:",
+      "bridgedName": "commonPrefixWithString_options",
+      "args": [
+        {
+          "name": "commonPrefixWithString",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "componentsSeparatedByCharactersInSet:": {
+      "name": "componentsSeparatedByCharactersInSet:",
+      "bridgedName": "componentsSeparatedByCharactersInSet",
+      "args": [
+        {
+          "name": "componentsSeparatedByCharactersInSet",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "componentsSeparatedByString:": {
+      "name": "componentsSeparatedByString:",
+      "bridgedName": "componentsSeparatedByString",
+      "args": [
+        {
+          "name": "componentsSeparatedByString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfCharacterFromSet:": {
+      "name": "rangeOfCharacterFromSet:",
+      "bridgedName": "rangeOfCharacterFromSet",
+      "args": [
+        {
+          "name": "rangeOfCharacterFromSet",
+          "type": "id"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfCharacterFromSet:options:": {
+      "name": "rangeOfCharacterFromSet:options:",
+      "bridgedName": "rangeOfCharacterFromSet_options",
+      "args": [
+        {
+          "name": "rangeOfCharacterFromSet",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfCharacterFromSet:options:range:": {
+      "name": "rangeOfCharacterFromSet:options:range:",
+      "bridgedName": "rangeOfCharacterFromSet_options_range",
+      "args": [
+        {
+          "name": "rangeOfCharacterFromSet",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfString:": {
+      "name": "rangeOfString:",
+      "bridgedName": "rangeOfString",
+      "args": [
+        {
+          "name": "rangeOfString",
+          "type": "id"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfString:options:": {
+      "name": "rangeOfString:options:",
+      "bridgedName": "rangeOfString_options",
+      "args": [
+        {
+          "name": "rangeOfString",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfString:options:range:": {
+      "name": "rangeOfString:options:range:",
+      "bridgedName": "rangeOfString_options_range",
+      "args": [
+        {
+          "name": "rangeOfString",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfString:options:range:locale:": {
+      "name": "rangeOfString:options:range:locale:",
+      "bridgedName": "rangeOfString_options_range_locale",
+      "args": [
+        {
+          "name": "rangeOfString",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfComposedCharacterSequencesForRange:": {
+      "name": "rangeOfComposedCharacterSequencesForRange:",
+      "bridgedName": "rangeOfComposedCharacterSequencesForRange",
+      "args": [
+        {
+          "name": "rangeOfComposedCharacterSequencesForRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rangeOfComposedCharacterSequenceAtIndex:": {
+      "name": "rangeOfComposedCharacterSequenceAtIndex:",
+      "bridgedName": "rangeOfComposedCharacterSequenceAtIndex",
+      "args": [
+        {
+          "name": "rangeOfComposedCharacterSequenceAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedStandardCompare:": {
+      "name": "localizedStandardCompare:",
+      "bridgedName": "localizedStandardCompare",
+      "args": [
+        {
+          "name": "localizedStandardCompare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedCaseInsensitiveCompare:": {
+      "name": "localizedCaseInsensitiveCompare:",
+      "bridgedName": "localizedCaseInsensitiveCompare",
+      "args": [
+        {
+          "name": "localizedCaseInsensitiveCompare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "localizedCompare:": {
+      "name": "localizedCompare:",
+      "bridgedName": "localizedCompare",
+      "args": [
+        {
+          "name": "localizedCompare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "caseInsensitiveCompare:": {
+      "name": "caseInsensitiveCompare:",
+      "bridgedName": "caseInsensitiveCompare",
+      "args": [
+        {
+          "name": "caseInsensitiveCompare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compare:": {
+      "name": "compare:",
+      "bridgedName": "compare",
+      "args": [
+        {
+          "name": "compare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compare:options:": {
+      "name": "compare:options:",
+      "bridgedName": "compare_options",
+      "args": [
+        {
+          "name": "compare",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compare:options:range:locale:": {
+      "name": "compare:options:range:locale:",
+      "bridgedName": "compare_options_range_locale",
+      "args": [
+        {
+          "name": "compare",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compare:options:range:": {
+      "name": "compare:options:range:",
+      "bridgedName": "compare_options_range",
+      "args": [
+        {
+          "name": "compare",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualToString:": {
+      "name": "isEqualToString:",
+      "bridgedName": "isEqualToString",
+      "args": [
+        {
+          "name": "isEqualToString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mutableCopyWithZone:": {
+      "name": "mutableCopyWithZone:",
+      "bridgedName": "mutableCopyWithZone",
+      "args": [
+        {
+          "name": "mutableCopyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quotedStringRepresentation": {
+      "name": "quotedStringRepresentation",
+      "bridgedName": "quotedStringRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stringRepresentation": {
+      "name": "_stringRepresentation",
+      "bridgedName": "_stringRepresentation",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isCString": {
+      "name": "_isCString",
+      "bridgedName": "_isCString",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fastCStringContents:": {
+      "name": "_fastCStringContents:",
+      "bridgedName": "_fastCStringContents",
+      "args": [
+        {
+          "name": "_fastCStringContents",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fastCharacterContents": {
+      "name": "_fastCharacterContents",
+      "bridgedName": "_fastCharacterContents",
+      "args": [],
+      "returns": "const unsigned short *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "characterAtIndex:": {
+      "name": "characterAtIndex:",
+      "bridgedName": "characterAtIndex",
+      "args": [
+        {
+          "name": "characterAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned short",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "variantFittingPresentationWidth:": {
+      "name": "variantFittingPresentationWidth:",
+      "bridgedName": "variantFittingPresentationWidth",
+      "args": [
+        {
+          "name": "variantFittingPresentationWidth",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getCString:maxLength:encoding:": {
+      "name": "_getCString:maxLength:encoding:",
+      "bridgedName": "_getCString_maxLength_encoding",
+      "args": [
+        {
+          "name": "_getCString",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fastestEncodingInCFStringEncoding": {
+      "name": "_fastestEncodingInCFStringEncoding",
+      "bridgedName": "_fastestEncodingInCFStringEncoding",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_smallestEncodingInCFStringEncoding": {
+      "name": "_smallestEncodingInCFStringEncoding",
+      "bridgedName": "_smallestEncodingInCFStringEncoding",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodingCantBeStoredInEightBitCFString": {
+      "name": "_encodingCantBeStoredInEightBitCFString",
+      "bridgedName": "_encodingCantBeStoredInEightBitCFString",
+      "args": [],
+      "returns": "unsigned char",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createSubstringWithRange:": {
+      "name": "_createSubstringWithRange:",
+      "bridgedName": "_createSubstringWithRange",
+      "args": [
+        {
+          "name": "_createSubstringWithRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cfTypeID": {
+      "name": "_cfTypeID",
+      "bridgedName": "_cfTypeID",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "decimalValue": {
+      "name": "decimalValue",
+      "bridgedName": "decimalValue",
+      "args": [],
+      "returns": "CDStruct_5fe7aead",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getBytesAsData:maxLength:usedLength:encoding:options:range:remainingRange:": {
+      "name": "_getBytesAsData:maxLength:usedLength:encoding:options:range:remainingRange:",
+      "bridgedName": "_getBytesAsData_maxLength_usedLength_encoding_options_range_remainingRange",
+      "args": [
+        {
+          "name": "_getBytesAsData",
+          "type": "id *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "usedLength",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "remainingRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getCharactersAsStringInRange:": {
+      "name": "_getCharactersAsStringInRange:",
+      "bridgedName": "_getCharactersAsStringInRange",
+      "args": [
+        {
+          "name": "_getCharactersAsStringInRange",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__escapeString5991": {
+      "name": "__escapeString5991",
+      "bridgedName": "__escapeString5991",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_componentsSeparatedBySet:": {
+      "name": "__oldnf_componentsSeparatedBySet:",
+      "bridgedName": "__oldnf_componentsSeparatedBySet",
+      "args": [
+        {
+          "name": "__oldnf_componentsSeparatedBySet",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_containsCharFromSet:": {
+      "name": "__oldnf_containsCharFromSet:",
+      "bridgedName": "__oldnf_containsCharFromSet",
+      "args": [
+        {
+          "name": "__oldnf_containsCharFromSet",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_containsChar:": {
+      "name": "__oldnf_containsChar:",
+      "bridgedName": "__oldnf_containsChar",
+      "args": [
+        {
+          "name": "__oldnf_containsChar",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_containsString:": {
+      "name": "__oldnf_containsString:",
+      "bridgedName": "__oldnf_containsString",
+      "args": [
+        {
+          "name": "__oldnf_containsString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_stringWithSeparator:atFrequency:": {
+      "name": "__oldnf_stringWithSeparator:atFrequency:",
+      "bridgedName": "__oldnf_stringWithSeparator_atFrequency",
+      "args": [
+        {
+          "name": "__oldnf_stringWithSeparator",
+          "type": "unsigned short"
+        },
+        {
+          "name": "atFrequency",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__oldnf_copyToUnicharBuffer:saveLength:": {
+      "name": "__oldnf_copyToUnicharBuffer:saveLength:",
+      "bridgedName": "__oldnf_copyToUnicharBuffer_saveLength",
+      "args": [
+        {
+          "name": "__oldnf_copyToUnicharBuffer",
+          "type": "unsigned short **"
+        },
+        {
+          "name": "saveLength",
+          "type": "long long *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByConvertingURLToPath": {
+      "name": "stringByConvertingURLToPath",
+      "bridgedName": "stringByConvertingURLToPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByConvertingPathToURL": {
+      "name": "stringByConvertingPathToURL",
+      "bridgedName": "stringByConvertingPathToURL",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "completePathIntoString:caseSensitive:matchesIntoArray:filterTypes:": {
+      "name": "completePathIntoString:caseSensitive:matchesIntoArray:filterTypes:",
+      "bridgedName": "completePathIntoString_caseSensitive_matchesIntoArray_filterTypes",
+      "args": [
+        {
+          "name": "completePathIntoString",
+          "type": "id *"
+        },
+        {
+          "name": "caseSensitive",
+          "type": "BOOL"
+        },
+        {
+          "name": "matchesIntoArray",
+          "type": "id *"
+        },
+        {
+          "name": "filterTypes",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getFileSystemRepresentation:maxLength:": {
+      "name": "getFileSystemRepresentation:maxLength:",
+      "bridgedName": "getFileSystemRepresentation_maxLength",
+      "args": [
+        {
+          "name": "getFileSystemRepresentation",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fileSystemRepresentation": {
+      "name": "fileSystemRepresentation",
+      "bridgedName": "fileSystemRepresentation",
+      "args": [],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringsByAppendingPaths:": {
+      "name": "stringsByAppendingPaths:",
+      "bridgedName": "stringsByAppendingPaths",
+      "args": [
+        {
+          "name": "stringsByAppendingPaths",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByResolvingSymlinksInPath": {
+      "name": "stringByResolvingSymlinksInPath",
+      "bridgedName": "stringByResolvingSymlinksInPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stringByResolvingSymlinksInPathUsingCache:": {
+      "name": "_stringByResolvingSymlinksInPathUsingCache:",
+      "bridgedName": "_stringByResolvingSymlinksInPathUsingCache",
+      "args": [
+        {
+          "name": "_stringByResolvingSymlinksInPathUsingCache",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByStandardizingPath": {
+      "name": "stringByStandardizingPath",
+      "bridgedName": "stringByStandardizingPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stringByStandardizingPathUsingCache:": {
+      "name": "_stringByStandardizingPathUsingCache:",
+      "bridgedName": "_stringByStandardizingPathUsingCache",
+      "args": [
+        {
+          "name": "_stringByStandardizingPathUsingCache",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByExpandingTildeInPath": {
+      "name": "stringByExpandingTildeInPath",
+      "bridgedName": "stringByExpandingTildeInPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAbbreviatingWithTildeInPath": {
+      "name": "stringByAbbreviatingWithTildeInPath",
+      "bridgedName": "stringByAbbreviatingWithTildeInPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAppendingPathExtension:": {
+      "name": "stringByAppendingPathExtension:",
+      "bridgedName": "stringByAppendingPathExtension",
+      "args": [
+        {
+          "name": "stringByAppendingPathExtension",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByDeletingPathExtension": {
+      "name": "stringByDeletingPathExtension",
+      "bridgedName": "stringByDeletingPathExtension",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathExtension": {
+      "name": "pathExtension",
+      "bridgedName": "pathExtension",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAppendingPathComponent:": {
+      "name": "stringByAppendingPathComponent:",
+      "bridgedName": "stringByAppendingPathComponent",
+      "args": [
+        {
+          "name": "stringByAppendingPathComponent",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByDeletingLastPathComponent": {
+      "name": "stringByDeletingLastPathComponent",
+      "bridgedName": "stringByDeletingLastPathComponent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lastPathComponent": {
+      "name": "lastPathComponent",
+      "bridgedName": "lastPathComponent",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAbsolutePath": {
+      "name": "isAbsolutePath",
+      "bridgedName": "isAbsolutePath",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pathComponents": {
+      "name": "pathComponents",
+      "bridgedName": "pathComponents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isNSString__": {
+      "name": "isNSString__",
+      "bridgedName": "isNSString_",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scriptingTextDescriptor": {
+      "name": "_scriptingTextDescriptor",
+      "bridgedName": "_scriptingTextDescriptor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scriptingAlternativeValueRankWithDescriptor:": {
+      "name": "_scriptingAlternativeValueRankWithDescriptor:",
+      "bridgedName": "_scriptingAlternativeValueRankWithDescriptor",
+      "args": [
+        {
+          "name": "_scriptingAlternativeValueRankWithDescriptor",
+          "type": "id"
+        }
+      ],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "loadDataWithTypeIdentifier:forItemProviderCompletionHandler:": {
+      "name": "loadDataWithTypeIdentifier:forItemProviderCompletionHandler:",
+      "bridgedName": "loadDataWithTypeIdentifier_forItemProviderCompletionHandler",
+      "args": [
+        {
+          "name": "loadDataWithTypeIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "forItemProviderCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isCaseInsensitiveLike:": {
+      "name": "isCaseInsensitiveLike:",
+      "bridgedName": "isCaseInsensitiveLike",
+      "args": [
+        {
+          "name": "isCaseInsensitiveLike",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLike:": {
+      "name": "isLike:",
+      "bridgedName": "isLike",
+      "args": [
+        {
+          "name": "isLike",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchesPattern:": {
+      "name": "matchesPattern:",
+      "bridgedName": "matchesPattern",
+      "args": [
+        {
+          "name": "matchesPattern",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "matchesPattern:caseInsensitive:": {
+      "name": "matchesPattern:caseInsensitive:",
+      "bridgedName": "matchesPattern_caseInsensitive",
+      "args": [
+        {
+          "name": "matchesPattern",
+          "type": "id"
+        },
+        {
+          "name": "caseInsensitive",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_matchesCharacter:": {
+      "name": "_matchesCharacter:",
+      "bridgedName": "_matchesCharacter",
+      "args": [
+        {
+          "name": "_matchesCharacter",
+          "type": "unsigned short"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getBracketedStringFromBuffer:string:": {
+      "name": "_getBracketedStringFromBuffer:string:",
+      "bridgedName": "_getBracketedStringFromBuffer_string",
+      "args": [
+        {
+          "name": "_getBracketedStringFromBuffer",
+          "type": "struct _NSStringBuffer *"
+        },
+        {
+          "name": "string",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertyListFromStringsFileFormat": {
+      "name": "propertyListFromStringsFileFormat",
+      "bridgedName": "propertyListFromStringsFileFormat",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertyList": {
+      "name": "propertyList",
+      "bridgedName": "propertyList",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "formatConfiguration": {
+      "name": "formatConfiguration",
+      "bridgedName": "formatConfiguration",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_copyFormatStringWithConfiguration:": {
+      "name": "_copyFormatStringWithConfiguration:",
+      "bridgedName": "_copyFormatStringWithConfiguration",
+      "args": [
+        {
+          "name": "_copyFormatStringWithConfiguration",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getBytes:maxLength:filledLength:encoding:allowLossyConversion:range:remainingRange:": {
+      "name": "getBytes:maxLength:filledLength:encoding:allowLossyConversion:range:remainingRange:",
+      "bridgedName": "getBytes_maxLength_filledLength_encoding_allowLossyConversion_range_remainingRange",
+      "args": [
+        {
+          "name": "getBytes",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "filledLength",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "allowLossyConversion",
+          "type": "BOOL"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "remainingRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getBytes:maxLength:usedLength:encoding:options:range:remainingRange:": {
+      "name": "getBytes:maxLength:usedLength:encoding:options:range:remainingRange:",
+      "bridgedName": "getBytes_maxLength_usedLength_encoding_options_range_remainingRange",
+      "args": [
+        {
+          "name": "getBytes",
+          "type": "void *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "usedLength",
+          "type": "unsigned long long *"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "remainingRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lengthOfBytesUsingEncoding:": {
+      "name": "lengthOfBytesUsingEncoding:",
+      "bridgedName": "lengthOfBytesUsingEncoding",
+      "args": [
+        {
+          "name": "lengthOfBytesUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "maximumLengthOfBytesUsingEncoding:": {
+      "name": "maximumLengthOfBytesUsingEncoding:",
+      "bridgedName": "maximumLengthOfBytesUsingEncoding",
+      "args": [
+        {
+          "name": "maximumLengthOfBytesUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCString:maxLength:encoding:": {
+      "name": "getCString:maxLength:encoding:",
+      "bridgedName": "getCString_maxLength_encoding",
+      "args": [
+        {
+          "name": "getCString",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "encoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cStringUsingEncoding:": {
+      "name": "cStringUsingEncoding:",
+      "bridgedName": "cStringUsingEncoding",
+      "args": [
+        {
+          "name": "cStringUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataUsingEncoding:": {
+      "name": "dataUsingEncoding:",
+      "bridgedName": "dataUsingEncoding",
+      "args": [
+        {
+          "name": "dataUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataUsingEncoding:allowLossyConversion:": {
+      "name": "dataUsingEncoding:allowLossyConversion:",
+      "bridgedName": "dataUsingEncoding_allowLossyConversion",
+      "args": [
+        {
+          "name": "dataUsingEncoding",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "allowLossyConversion",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeConvertedToEncoding:": {
+      "name": "canBeConvertedToEncoding:",
+      "bridgedName": "canBeConvertedToEncoding",
+      "args": [
+        {
+          "name": "canBeConvertedToEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "smallestEncoding": {
+      "name": "smallestEncoding",
+      "bridgedName": "smallestEncoding",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fastestEncoding": {
+      "name": "fastestEncoding",
+      "bridgedName": "fastestEncoding",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "lossyCString": {
+      "name": "lossyCString",
+      "bridgedName": "lossyCString",
+      "args": [],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cStringLength": {
+      "name": "cStringLength",
+      "bridgedName": "cStringLength",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cString": {
+      "name": "cString",
+      "bridgedName": "cString",
+      "args": [],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "UTF8String": {
+      "name": "UTF8String",
+      "bridgedName": "UTF8String",
+      "args": [],
+      "returns": "const char *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCString:": {
+      "name": "getCString:",
+      "bridgedName": "getCString",
+      "args": [
+        {
+          "name": "getCString",
+          "type": "char *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCString:maxLength:": {
+      "name": "getCString:maxLength:",
+      "bridgedName": "getCString_maxLength",
+      "args": [
+        {
+          "name": "getCString",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getCString:maxLength:range:remainingRange:": {
+      "name": "getCString:maxLength:range:remainingRange:",
+      "bridgedName": "getCString_maxLength_range_remainingRange",
+      "args": [
+        {
+          "name": "getCString",
+          "type": "char *"
+        },
+        {
+          "name": "maxLength",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "remainingRange",
+          "type": "struct _NSRange *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_extractFourCharCode": {
+      "name": "_web_extractFourCharCode",
+      "bridgedName": "_web_extractFourCharCode",
+      "args": [],
+      "returns": "unsigned int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_filenameByFixingIllegalCharacters": {
+      "name": "_web_filenameByFixingIllegalCharacters",
+      "bridgedName": "_web_filenameByFixingIllegalCharacters",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_stringByCollapsingNonPrintingCharacters": {
+      "name": "_web_stringByCollapsingNonPrintingCharacters",
+      "bridgedName": "_web_stringByCollapsingNonPrintingCharacters",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_URLFragment": {
+      "name": "_web_URLFragment",
+      "bridgedName": "_web_URLFragment",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_isFileURL": {
+      "name": "_web_isFileURL",
+      "bridgedName": "_web_isFileURL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_looksLikeAbsoluteURL": {
+      "name": "_web_looksLikeAbsoluteURL",
+      "bridgedName": "_web_looksLikeAbsoluteURL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_rangeOfURLHost": {
+      "name": "_web_rangeOfURLHost",
+      "bridgedName": "_web_rangeOfURLHost",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_rangeOfURLUserPasswordHostPort": {
+      "name": "_web_rangeOfURLUserPasswordHostPort",
+      "bridgedName": "_web_rangeOfURLUserPasswordHostPort",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_fixedCarbonPOSIXPath": {
+      "name": "_web_fixedCarbonPOSIXPath",
+      "bridgedName": "_web_fixedCarbonPOSIXPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_stringByExpandingTildeInPath": {
+      "name": "_web_stringByExpandingTildeInPath",
+      "bridgedName": "_web_stringByExpandingTildeInPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_stringByTrimmingWhitespace": {
+      "name": "_web_stringByTrimmingWhitespace",
+      "bridgedName": "_web_stringByTrimmingWhitespace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_domainFromHost": {
+      "name": "_web_domainFromHost",
+      "bridgedName": "_web_domainFromHost",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_domainMatches:": {
+      "name": "_web_domainMatches:",
+      "bridgedName": "_web_domainMatches",
+      "args": [
+        {
+          "name": "_web_domainMatches",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_hasCountryCodeTLD": {
+      "name": "_web_hasCountryCodeTLD",
+      "bridgedName": "_web_hasCountryCodeTLD",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_looksLikeIPAddress": {
+      "name": "_web_looksLikeIPAddress",
+      "bridgedName": "_web_looksLikeIPAddress",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_countOfString:": {
+      "name": "_web_countOfString:",
+      "bridgedName": "_web_countOfString",
+      "args": [
+        {
+          "name": "_web_countOfString",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_hasCaseInsensitivePrefix:": {
+      "name": "_web_hasCaseInsensitivePrefix:",
+      "bridgedName": "_web_hasCaseInsensitivePrefix",
+      "args": [
+        {
+          "name": "_web_hasCaseInsensitivePrefix",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_isCaseInsensitiveEqualToString:": {
+      "name": "_web_isCaseInsensitiveEqualToString:",
+      "bridgedName": "_web_isCaseInsensitiveEqualToString",
+      "args": [
+        {
+          "name": "_web_isCaseInsensitiveEqualToString",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_isJavaScriptURL": {
+      "name": "_web_isJavaScriptURL",
+      "bridgedName": "_web_isJavaScriptURL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_stringByReplacingValidPercentEscapes_nowarn": {
+      "name": "_web_stringByReplacingValidPercentEscapes_nowarn",
+      "bridgedName": "_web_stringByReplacingValidPercentEscapes_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_fileNameFromContentDispositionHeader_nowarn": {
+      "name": "_web_fileNameFromContentDispositionHeader_nowarn",
+      "bridgedName": "_web_fileNameFromContentDispositionHeader_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_characterSetFromContentTypeHeader_nowarn": {
+      "name": "_web_characterSetFromContentTypeHeader_nowarn",
+      "bridgedName": "_web_characterSetFromContentTypeHeader_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_mimeTypeFromContentTypeHeader_nowarn": {
+      "name": "_web_mimeTypeFromContentTypeHeader_nowarn",
+      "bridgedName": "_web_mimeTypeFromContentTypeHeader_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_rangeOfURLResourceSpecifier_nowarn": {
+      "name": "_web_rangeOfURLResourceSpecifier_nowarn",
+      "bridgedName": "_web_rangeOfURLResourceSpecifier_nowarn",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_rangeOfURLScheme_nowarn": {
+      "name": "_web_rangeOfURLScheme_nowarn",
+      "bridgedName": "_web_rangeOfURLScheme_nowarn",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_parseAsKeyValuePairHandleQuotes_nowarn:": {
+      "name": "_web_parseAsKeyValuePairHandleQuotes_nowarn:",
+      "bridgedName": "_web_parseAsKeyValuePairHandleQuotes_nowarn",
+      "args": [
+        {
+          "name": "_web_parseAsKeyValuePairHandleQuotes_nowarn",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_parseAsKeyValuePair_nowarn": {
+      "name": "_web_parseAsKeyValuePair_nowarn",
+      "bridgedName": "_web_parseAsKeyValuePair_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_splitAtNonDateCommas_nowarn": {
+      "name": "_web_splitAtNonDateCommas_nowarn",
+      "bridgedName": "_web_splitAtNonDateCommas_nowarn",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingContains:": {
+      "name": "scriptingContains:",
+      "bridgedName": "scriptingContains",
+      "args": [
+        {
+          "name": "scriptingContains",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingEndsWith:": {
+      "name": "scriptingEndsWith:",
+      "bridgedName": "scriptingEndsWith",
+      "args": [
+        {
+          "name": "scriptingEndsWith",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingBeginsWith:": {
+      "name": "scriptingBeginsWith:",
+      "bridgedName": "scriptingBeginsWith",
+      "args": [
+        {
+          "name": "scriptingBeginsWith",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingIsGreaterThan:": {
+      "name": "scriptingIsGreaterThan:",
+      "bridgedName": "scriptingIsGreaterThan",
+      "args": [
+        {
+          "name": "scriptingIsGreaterThan",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingIsGreaterThanOrEqualTo:": {
+      "name": "scriptingIsGreaterThanOrEqualTo:",
+      "bridgedName": "scriptingIsGreaterThanOrEqualTo",
+      "args": [
+        {
+          "name": "scriptingIsGreaterThanOrEqualTo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingIsLessThan:": {
+      "name": "scriptingIsLessThan:",
+      "bridgedName": "scriptingIsLessThan",
+      "args": [
+        {
+          "name": "scriptingIsLessThan",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingIsLessThanOrEqualTo:": {
+      "name": "scriptingIsLessThanOrEqualTo:",
+      "bridgedName": "scriptingIsLessThanOrEqualTo",
+      "args": [
+        {
+          "name": "scriptingIsLessThanOrEqualTo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "scriptingIsEqualTo:": {
+      "name": "scriptingIsEqualTo:",
+      "bridgedName": "scriptingIsEqualTo",
+      "args": [
+        {
+          "name": "scriptingIsEqualTo",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAddingPercentEscapes": {
+      "name": "stringByAddingPercentEscapes",
+      "bridgedName": "stringByAddingPercentEscapes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByRemovingPercentEscapes": {
+      "name": "stringByRemovingPercentEscapes",
+      "bridgedName": "stringByRemovingPercentEscapes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "standardizedURLPath": {
+      "name": "standardizedURLPath",
+      "bridgedName": "standardizedURLPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByReplacingPercentEscapesUsingEncoding:": {
+      "name": "stringByReplacingPercentEscapesUsingEncoding:",
+      "bridgedName": "stringByReplacingPercentEscapesUsingEncoding",
+      "args": [
+        {
+          "name": "stringByReplacingPercentEscapesUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAddingPercentEscapesUsingEncoding:": {
+      "name": "stringByAddingPercentEscapesUsingEncoding:",
+      "bridgedName": "stringByAddingPercentEscapesUsingEncoding",
+      "args": [
+        {
+          "name": "stringByAddingPercentEscapesUsingEncoding",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringByAddingPercentEncodingWithAllowedCharacters:": {
+      "name": "stringByAddingPercentEncodingWithAllowedCharacters:",
+      "bridgedName": "stringByAddingPercentEncodingWithAllowedCharacters",
+      "args": [
+        {
+          "name": "stringByAddingPercentEncodingWithAllowedCharacters",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stringMarkingUpcaseTransitionsWithDelimiter2:": {
+      "name": "stringMarkingUpcaseTransitionsWithDelimiter2:",
+      "bridgedName": "stringMarkingUpcaseTransitionsWithDelimiter2",
+      "args": [
+        {
+          "name": "stringMarkingUpcaseTransitionsWithDelimiter2",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_HTTPStyleLanguageCodeWithoutRegion": {
+      "name": "_web_HTTPStyleLanguageCodeWithoutRegion",
+      "bridgedName": "_web_HTTPStyleLanguageCodeWithoutRegion",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_web_HTTPStyleLanguageCode": {
+      "name": "_web_HTTPStyleLanguageCode",
+      "bridgedName": "_web_HTTPStyleLanguageCode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateLinguisticTagsInRange:scheme:options:orthography:usingBlock:": {
+      "name": "enumerateLinguisticTagsInRange:scheme:options:orthography:usingBlock:",
+      "bridgedName": "enumerateLinguisticTagsInRange_scheme_options_orthography_usingBlock",
+      "args": [
+        {
+          "name": "enumerateLinguisticTagsInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "scheme",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "orthography",
+          "type": "id"
+        },
+        {
+          "name": "usingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "linguisticTagsInRange:scheme:options:orthography:tokenRanges:": {
+      "name": "linguisticTagsInRange:scheme:options:orthography:tokenRanges:",
+      "bridgedName": "linguisticTagsInRange_scheme_options_orthography_tokenRanges",
+      "args": [
+        {
+          "name": "linguisticTagsInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "scheme",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "orthography",
+          "type": "id"
+        },
+        {
+          "name": "tokenRanges",
+          "type": "id *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_flushRegularExpressionCaches": {
+      "name": "_flushRegularExpressionCaches",
+      "bridgedName": "_flushRegularExpressionCaches",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stringByReplacingOccurrencesOfRegularExpressionPattern:withTemplate:options:range:": {
+      "name": "_stringByReplacingOccurrencesOfRegularExpressionPattern:withTemplate:options:range:",
+      "bridgedName": "_stringByReplacingOccurrencesOfRegularExpressionPattern_withTemplate_options_range",
+      "args": [
+        {
+          "name": "_stringByReplacingOccurrencesOfRegularExpressionPattern",
+          "type": "id"
+        },
+        {
+          "name": "withTemplate",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rangeOfRegularExpressionPattern:options:range:locale:": {
+      "name": "_rangeOfRegularExpressionPattern:options:range:locale:",
+      "bridgedName": "_rangeOfRegularExpressionPattern_options_range_locale",
+      "args": [
+        {
+          "name": "_rangeOfRegularExpressionPattern",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "range",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "locale",
+          "type": "id"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "significantText": {
+      "name": "significantText",
+      "bridgedName": "significantText",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForPortCoder:": {
+      "name": "replacementObjectForPortCoder:",
+      "bridgedName": "replacementObjectForPortCoder",
+      "args": [
+        {
+          "name": "replacementObjectForPortCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "__graphemeCount": {
+      "name": "__graphemeCount",
+      "bridgedName": "__graphemeCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "length": {
+      "name": "length",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "writableTypeIdentifiersForItemProvider": {
+      "name": "writableTypeIdentifiersForItemProvider",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "stringByRemovingPercentEncoding": {
+      "name": "stringByRemovingPercentEncoding",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

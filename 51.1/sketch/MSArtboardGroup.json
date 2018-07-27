@@ -1,0 +1,766 @@
+{
+  "imports": [
+    "MSLayer.h",
+    "_MSArtboardGroup.h",
+    "MSArtboardGroup.h",
+    "MSColorConvertible.h",
+    "MSLayerWithMutableBackgroundColor.h",
+    "MSRootLayer.h"
+  ],
+  "classes": [
+    "MSArtboardPreset",
+    "MSLayoutGrid",
+    "MSPath",
+    "MSRulerData",
+    "MSSimpleGrid",
+    "NSString"
+  ],
+  "protocol": true,
+  "className": "MSArtboardGroup",
+  "extends": "_MSArtboardGroup",
+  "interfaces": [
+    "MSArtboardGroup",
+    "MSRootLayer",
+    "MSLayerWithMutableBackgroundColor",
+    "MSColorConvertible"
+  ],
+  "methods": {
+    "traits": {
+      "name": "traits",
+      "bridgedName": "traits",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "artboardRectFromLayersInArray:": {
+      "name": "artboardRectFromLayersInArray:",
+      "bridgedName": "artboardRectFromLayersInArray",
+      "args": [
+        {
+          "name": "artboardRectFromLayersInArray",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setShouldBreakMaskChain:": {
+      "name": "setShouldBreakMaskChain:",
+      "bridgedName": "setShouldBreakMaskChain",
+      "args": [
+        {
+          "name": "setShouldBreakMaskChain",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertColorsUsing:": {
+      "name": "convertColorsUsing:",
+      "bridgedName": "convertColorsUsing",
+      "args": [
+        {
+          "name": "convertColorsUsing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeChildRectsIntegral": {
+      "name": "makeChildRectsIntegral",
+      "bridgedName": "makeChildRectsIntegral",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "immutableBackgroundColor": {
+      "name": "immutableBackgroundColor",
+      "bridgedName": "immutableBackgroundColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "closestClippingLayer": {
+      "name": "closestClippingLayer",
+      "bridgedName": "closestClippingLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rootForNameUniquing": {
+      "name": "rootForNameUniquing",
+      "bridgedName": "rootForNameUniquing",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveChildrenToIdenticalPositionAfterResizeFromRect:": {
+      "name": "moveChildrenToIdenticalPositionAfterResizeFromRect:",
+      "bridgedName": "moveChildrenToIdenticalPositionAfterResizeFromRect",
+      "args": [
+        {
+          "name": "moveChildrenToIdenticalPositionAfterResizeFromRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculateMinimumSize": {
+      "name": "calculateMinimumSize",
+      "bridgedName": "calculateMinimumSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidEndResize": {
+      "name": "layerDidEndResize",
+      "bridgedName": "layerDidEndResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidResizeFromRect:corner:": {
+      "name": "layerDidResizeFromRect:corner:",
+      "bridgedName": "layerDidResizeFromRect_corner",
+      "args": [
+        {
+          "name": "layerDidResizeFromRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "corner",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExpanded": {
+      "name": "isExpanded",
+      "bridgedName": "isExpanded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canRotate": {
+      "name": "canRotate",
+      "bridgedName": "canRotate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "otherArtboardUnderArtboard": {
+      "name": "otherArtboardUnderArtboard",
+      "bridgedName": "otherArtboardUnderArtboard",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveBySuggestedOffset:": {
+      "name": "moveBySuggestedOffset:",
+      "bridgedName": "moveBySuggestedOffset",
+      "args": [
+        {
+          "name": "moveBySuggestedOffset",
+          "type": "struct CGVector"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setRect:": {
+      "name": "setRect:",
+      "bridgedName": "setRect",
+      "args": [
+        {
+          "name": "setRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resizeToFitChildrenWithOption:": {
+      "name": "resizeToFitChildrenWithOption:",
+      "bridgedName": "resizeToFitChildrenWithOption",
+      "args": [
+        {
+          "name": "resizeToFitChildrenWithOption",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentRoot": {
+      "name": "parentRoot",
+      "bridgedName": "parentRoot",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentArtboard": {
+      "name": "parentArtboard",
+      "bridgedName": "parentArtboard",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOverlayWithAbsoluteMargins:": {
+      "name": "refreshOverlayWithAbsoluteMargins:",
+      "bridgedName": "refreshOverlayWithAbsoluteMargins",
+      "args": [
+        {
+          "name": "refreshOverlayWithAbsoluteMargins",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLocked": {
+      "name": "isLocked",
+      "bridgedName": "isLocked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIsLocked:": {
+      "name": "setIsLocked:",
+      "bridgedName": "setIsLocked",
+      "args": [
+        {
+          "name": "setIsLocked",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOpen": {
+      "name": "isOpen",
+      "bridgedName": "isOpen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeTransformed": {
+      "name": "canBeTransformed",
+      "bridgedName": "canBeTransformed",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeContainedByGroup": {
+      "name": "canBeContainedByGroup",
+      "bridgedName": "canBeContainedByGroup",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isAutomaticScalingEnabled": {
+      "name": "isAutomaticScalingEnabled",
+      "bridgedName": "isAutomaticScalingEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasClickThrough": {
+      "name": "hasClickThrough",
+      "bridgedName": "hasClickThrough",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestInNameLabel:zoomValue:": {
+      "name": "hitTestInNameLabel:zoomValue:",
+      "bridgedName": "hitTestInNameLabel_zoomValue",
+      "args": [
+        {
+          "name": "hitTestInNameLabel",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "zoomValue",
+          "type": "double"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setIsVisible:": {
+      "name": "setIsVisible:",
+      "bridgedName": "setIsVisible",
+      "args": [
+        {
+          "name": "setIsVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionHitTest:options:zoomValue:resultIndex:": {
+      "name": "selectionHitTest:options:zoomValue:resultIndex:",
+      "bridgedName": "selectionHitTest_options_zoomValue_resultIndex",
+      "args": [
+        {
+          "name": "selectionHitTest",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "zoomValue",
+          "type": "double"
+        },
+        {
+          "name": "resultIndex",
+          "type": "unsigned long long *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isSelectableOnCanvasWithOptions:": {
+      "name": "isSelectableOnCanvasWithOptions:",
+      "bridgedName": "isSelectableOnCanvasWithOptions",
+      "args": [
+        {
+          "name": "isSelectableOnCanvasWithOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "defaultArtboardStyle": {
+      "name": "defaultArtboardStyle",
+      "bridgedName": "defaultArtboardStyle",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "objectDidInit": {
+      "name": "objectDidInit",
+      "bridgedName": "objectDidInit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitEmptyObject": {
+      "name": "performInitEmptyObject",
+      "bridgedName": "performInitEmptyObject",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canBeHidden": {
+      "name": "canBeHidden",
+      "bridgedName": "canBeHidden",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldRefreshOverlayForFlows": {
+      "name": "shouldRefreshOverlayForFlows",
+      "bridgedName": "shouldRefreshOverlayForFlows",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inspectorViewControllerNames": {
+      "name": "inspectorViewControllerNames",
+      "bridgedName": "inspectorViewControllerNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "canCopyToLayer:beforeLayer:": {
+      "name": "canCopyToLayer:beforeLayer:",
+      "bridgedName": "canCopyToLayer_beforeLayer",
+      "args": [
+        {
+          "name": "canCopyToLayer",
+          "type": "id"
+        },
+        {
+          "name": "beforeLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "contextualMenuPreviewImage": {
+      "name": "contextualMenuPreviewImage",
+      "bridgedName": "contextualMenuPreviewImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unselectedPreviewImage": {
+      "name": "unselectedPreviewImage",
+      "bridgedName": "unselectedPreviewImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedPreviewImage": {
+      "name": "selectedPreviewImage",
+      "bridgedName": "selectedPreviewImage",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayType": {
+      "name": "displayType",
+      "bridgedName": "displayType",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "optimalBoundingBox": {
+      "name": "optimalBoundingBox",
+      "bridgedName": "optimalBoundingBox",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentForInsertingLayers": {
+      "name": "parentForInsertingLayers",
+      "bridgedName": "parentForInsertingLayers",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayName": {
+      "name": "displayName",
+      "bridgedName": "displayName",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldResizeToFitRect:": {
+      "name": "shouldResizeToFitRect:",
+      "bridgedName": "shouldResizeToFitRect",
+      "args": [
+        {
+          "name": "shouldResizeToFitRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resizeToFitChildren": {
+      "name": "resizeToFitChildren",
+      "bridgedName": "resizeToFitChildren",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentRootForAbsoluteRect": {
+      "name": "parentRootForAbsoluteRect",
+      "bridgedName": "parentRootForAbsoluteRect",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "contentBounds": {
+      "name": "contentBounds",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "preset": {
+      "name": "preset",
+      "pointer": true,
+      "type": "MSArtboardPreset",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "rulerBase": {
+      "name": "rulerBase",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "rotation": {
+      "name": "rotation",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "CGTransformForFrame": {
+      "name": "CGTransformForFrame",
+      "pointer": false,
+      "type": "struct CGAffineTransform",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "bounds": {
+      "name": "bounds",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "grid": {
+      "name": "grid",
+      "pointer": true,
+      "type": "MSSimpleGrid",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "hasBackgroundColor": {
+      "name": "hasBackgroundColor",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "hasTransforms": {
+      "name": "hasTransforms",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "horizontalRulerData": {
+      "name": "horizontalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "influenceRectEdgePaddingsThatCascadeToContainedLayers": {
+      "name": "influenceRectEdgePaddingsThatCascadeToContainedLayers",
+      "pointer": false,
+      "type": "struct BCEdgePaddings",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isFlippedHorizontal": {
+      "name": "isFlippedHorizontal",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isFlippedVertical": {
+      "name": "isFlippedVertical",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "isLayerExportable": {
+      "name": "isLayerExportable",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "layout": {
+      "name": "layout",
+      "pointer": true,
+      "type": "MSLayoutGrid",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "objectID": {
+      "name": "objectID",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "origin": {
+      "name": "origin",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathForBooleanOperations": {
+      "name": "pathForBooleanOperations",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInBounds": {
+      "name": "pathInBounds",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInFrame": {
+      "name": "pathInFrame",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "pathInFrameWithTransforms": {
+      "name": "pathInFrameWithTransforms",
+      "pointer": true,
+      "type": "MSPath",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "rect": {
+      "name": "rect",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "verticalRulerData": {
+      "name": "verticalRulerData",
+      "pointer": true,
+      "type": "MSRulerData",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    }
+  }
+}

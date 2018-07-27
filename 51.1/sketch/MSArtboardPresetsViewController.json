@@ -1,0 +1,608 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "BCPopoverDelegate.h",
+    "MSEditArtboardPresetViewControllerDelegate.h",
+    "NSTableViewDataSource.h",
+    "NSTableViewDelegate.h",
+    "NSUserInterfaceValidations.h"
+  ],
+  "classes": [
+    "MSArtboardPreset",
+    "MSArtboardPresetStore",
+    "MSArtboardPresetsCategory",
+    "NSArray",
+    "NSArrayController",
+    "NSSegmentedControl",
+    "NSString",
+    "NSTableView"
+  ],
+  "protocol": false,
+  "className": "MSArtboardPresetsViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "NSTableViewDataSource",
+    "NSTableViewDelegate",
+    "MSEditArtboardPresetViewControllerDelegate",
+    "NSUserInterfaceValidations",
+    "BCPopoverDelegate"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "popoverWillShow:": {
+      "name": "popoverWillShow:",
+      "bridgedName": "popoverWillShow",
+      "args": [
+        {
+          "name": "popoverWillShow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "editArtboardPresetViewController:savePreset:": {
+      "name": "editArtboardPresetViewController:savePreset:",
+      "bridgedName": "editArtboardPresetViewController_savePreset",
+      "args": [
+        {
+          "name": "editArtboardPresetViewController",
+          "type": "id"
+        },
+        {
+          "name": "savePreset",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewSelectionDidChange:": {
+      "name": "tableViewSelectionDidChange:",
+      "bridgedName": "tableViewSelectionDidChange",
+      "args": [
+        {
+          "name": "tableViewSelectionDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldSelectRow:": {
+      "name": "tableView:shouldSelectRow:",
+      "bridgedName": "tableView_shouldSelectRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "shouldSelectRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:didAddRowView:forRow:": {
+      "name": "tableView:didAddRowView:forRow:",
+      "bridgedName": "tableView_didAddRowView_forRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "didAddRowView",
+          "type": "id"
+        },
+        {
+          "name": "forRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:heightOfRow:": {
+      "name": "tableView:heightOfRow:",
+      "bridgedName": "tableView_heightOfRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "heightOfRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:isGroupRow:": {
+      "name": "tableView:isGroupRow:",
+      "bridgedName": "tableView_isGroupRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "isGroupRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewForGroupRow:": {
+      "name": "viewForGroupRow:",
+      "bridgedName": "viewForGroupRow",
+      "args": [
+        {
+          "name": "viewForGroupRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:viewForTableColumn:row:": {
+      "name": "tableView:viewForTableColumn:row:",
+      "bridgedName": "tableView_viewForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "id"
+        },
+        {
+          "name": "viewForTableColumn",
+          "type": "id"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "numberOfRowsInTableView:": {
+      "name": "numberOfRowsInTableView:",
+      "bridgedName": "numberOfRowsInTableView",
+      "args": [
+        {
+          "name": "numberOfRowsInTableView",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareForSegue:sender:": {
+      "name": "prepareForSegue:sender:",
+      "bridgedName": "prepareForSegue_sender",
+      "args": [
+        {
+          "name": "prepareForSegue",
+          "type": "id"
+        },
+        {
+          "name": "sender",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateUserInterfaceItem:": {
+      "name": "validateUserInterfaceItem:",
+      "bridgedName": "validateUserInterfaceItem",
+      "args": [
+        {
+          "name": "validateUserInterfaceItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deleteRowAction:": {
+      "name": "deleteRowAction:",
+      "bridgedName": "deleteRowAction",
+      "args": [
+        {
+          "name": "deleteRowAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "editRowAction:": {
+      "name": "editRowAction:",
+      "bridgedName": "editRowAction",
+      "args": [
+        {
+          "name": "editRowAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refresh": {
+      "name": "refresh",
+      "bridgedName": "refresh",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFauxSeparatorSectionAtIndex:": {
+      "name": "isFauxSeparatorSectionAtIndex:",
+      "bridgedName": "isFauxSeparatorSectionAtIndex",
+      "args": [
+        {
+          "name": "isFauxSeparatorSectionAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isSectionAtIndex:": {
+      "name": "isSectionAtIndex:",
+      "bridgedName": "isSectionAtIndex",
+      "args": [
+        {
+          "name": "isSectionAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presetForPreset:landscape:": {
+      "name": "presetForPreset:landscape:",
+      "bridgedName": "presetForPreset_landscape",
+      "args": [
+        {
+          "name": "presetForPreset",
+          "type": "id"
+        },
+        {
+          "name": "landscape",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rearrangeObjects": {
+      "name": "rearrangeObjects",
+      "bridgedName": "rearrangeObjects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "itemIsUserPreset:": {
+      "name": "itemIsUserPreset:",
+      "bridgedName": "itemIsUserPreset",
+      "args": [
+        {
+          "name": "itemIsUserPreset",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addUserPreset:": {
+      "name": "addUserPreset:",
+      "bridgedName": "addUserPreset",
+      "args": [
+        {
+          "name": "addUserPreset",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "presetAtIndexPath:": {
+      "name": "presetAtIndexPath:",
+      "bridgedName": "presetAtIndexPath",
+      "args": [
+        {
+          "name": "presetAtIndexPath",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshOrientationControl": {
+      "name": "refreshOrientationControl",
+      "bridgedName": "refreshOrientationControl",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectOrientation:": {
+      "name": "selectOrientation:",
+      "bridgedName": "selectOrientation",
+      "args": [
+        {
+          "name": "selectOrientation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showCreateCustomSizeSheet:": {
+      "name": "showCreateCustomSizeSheet:",
+      "bridgedName": "showCreateCustomSizeSheet",
+      "args": [
+        {
+          "name": "showCreateCustomSizeSheet",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectCategory:": {
+      "name": "selectCategory:",
+      "bridgedName": "selectCategory",
+      "args": [
+        {
+          "name": "selectCategory",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "categoryForPreset:": {
+      "name": "categoryForPreset:",
+      "bridgedName": "categoryForPreset",
+      "args": [
+        {
+          "name": "categoryForPreset",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "artboardPresetStoreDidChange:": {
+      "name": "artboardPresetStoreDidChange:",
+      "bridgedName": "artboardPresetStoreDidChange",
+      "args": [
+        {
+          "name": "artboardPresetStoreDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "editingPreset": {
+      "name": "editingPreset",
+      "pointer": true,
+      "type": "MSArtboardPreset",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "arrangedObjects": {
+      "name": "arrangedObjects",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "arrangedSections": {
+      "name": "arrangedSections",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "categories": {
+      "name": "categories",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "tableView": {
+      "name": "tableView",
+      "pointer": true,
+      "type": "NSTableView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "orientationSegmentedControl": {
+      "name": "orientationSegmentedControl",
+      "pointer": true,
+      "type": "NSSegmentedControl",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "categoriesController": {
+      "name": "categoriesController",
+      "pointer": true,
+      "type": "NSArrayController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "delegate": {
+      "name": "delegate",
+      "pointer": false,
+      "type": "__weak id <MSArtboardPresetsViewControllerDelegate>",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectedPresetSize": {
+      "name": "selectedPresetSize",
+      "pointer": false,
+      "type": "struct CGSize",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "extraPresets": {
+      "name": "extraPresets",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "orientation": {
+      "name": "orientation",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "selectedCategory": {
+      "name": "selectedCategory",
+      "pointer": true,
+      "type": "MSArtboardPresetsCategory",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "presetStore": {
+      "name": "presetStore",
+      "pointer": true,
+      "type": "MSArtboardPresetStore",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "imports": [
+    "NSSearchFieldDelegate.h"
+  ],
+  "classes": [
+    "NSResponder",
+    "NSString",
+    "NSTextFinderBarView"
+  ],
+  "protocol": false,
+  "className": "_NSBarTextFinder",
+  "extends": "_NSTextFinderImpl",
+  "interfaces": [
+    "NSSearchFieldDelegate"
+  ],
+  "methods": {
+    "_replaceField": {
+      "name": "_replaceField",
+      "bridgedName": "_replaceField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findField": {
+      "name": "_findField",
+      "bridgedName": "_findField",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findPatternSelected:": {
+      "name": "_findPatternSelected:",
+      "bridgedName": "_findPatternSelected",
+      "args": [
+        {
+          "name": "_findPatternSelected",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addStringToRecentReplaceStrings:": {
+      "name": "addStringToRecentReplaceStrings:",
+      "bridgedName": "addStringToRecentReplaceStrings",
+      "args": [
+        {
+          "name": "addStringToRecentReplaceStrings",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addStringToRecentSearchStrings:": {
+      "name": "addStringToRecentSearchStrings:",
+      "bridgedName": "addStringToRecentSearchStrings",
+      "args": [
+        {
+          "name": "addStringToRecentSearchStrings",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleResult:forAction:": {
+      "name": "handleResult:forAction:",
+      "bridgedName": "handleResult_forAction",
+      "args": [
+        {
+          "name": "handleResult",
+          "type": "long long"
+        },
+        {
+          "name": "forAction",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didFindMatchInRange:wrapped:forward:": {
+      "name": "_didFindMatchInRange:wrapped:forward:",
+      "bridgedName": "_didFindMatchInRange_wrapped_forward",
+      "args": [
+        {
+          "name": "_didFindMatchInRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "wrapped",
+          "type": "BOOL"
+        },
+        {
+          "name": "forward",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_performFindBarAction:": {
+      "name": "_performFindBarAction:",
+      "bridgedName": "_performFindBarAction",
+      "args": [
+        {
+          "name": "_performFindBarAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "control:textView:doCommandBySelector:": {
+      "name": "control:textView:doCommandBySelector:",
+      "bridgedName": "control_textView_doCommandBySelector",
+      "args": [
+        {
+          "name": "control",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "takeSearchString:": {
+      "name": "takeSearchString:",
+      "bridgedName": "takeSearchString",
+      "args": [
+        {
+          "name": "takeSearchString",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidChange:": {
+      "name": "controlTextDidChange:",
+      "bridgedName": "controlTextDidChange",
+      "args": [
+        {
+          "name": "controlTextDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "controlTextDidEndEditing:": {
+      "name": "controlTextDidEndEditing:",
+      "bridgedName": "controlTextDidEndEditing",
+      "args": [
+        {
+          "name": "controlTextDidEndEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchFieldAction:": {
+      "name": "_searchFieldAction:",
+      "bridgedName": "_searchFieldAction",
+      "args": [
+        {
+          "name": "_searchFieldAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_divergeFromPasteboard": {
+      "name": "_divergeFromPasteboard",
+      "bridgedName": "_divergeFromPasteboard",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "observeValueForKeyPath:ofObject:change:context:": {
+      "name": "observeValueForKeyPath:ofObject:change:context:",
+      "bridgedName": "observeValueForKeyPath_ofObject_change_context",
+      "args": [
+        {
+          "name": "observeValueForKeyPath",
+          "type": "id"
+        },
+        {
+          "name": "ofObject",
+          "type": "id"
+        },
+        {
+          "name": "change",
+          "type": "id"
+        },
+        {
+          "name": "context",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findBarWindowDidBecomeKey:": {
+      "name": "_findBarWindowDidBecomeKey:",
+      "bridgedName": "_findBarWindowDidBecomeKey",
+      "args": [
+        {
+          "name": "_findBarWindowDidBecomeKey",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideReplace": {
+      "name": "hideReplace",
+      "bridgedName": "hideReplace",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showReplace": {
+      "name": "showReplace",
+      "bridgedName": "showReplace",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "deactivate": {
+      "name": "deactivate",
+      "bridgedName": "deactivate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "activate": {
+      "name": "activate",
+      "bridgedName": "activate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_activateWithReplace:": {
+      "name": "_activateWithReplace:",
+      "bridgedName": "_activateWithReplace",
+      "args": [
+        {
+          "name": "_activateWithReplace",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeSearchOptions:": {
+      "name": "_changeSearchOptions:",
+      "bridgedName": "_changeSearchOptions",
+      "args": [
+        {
+          "name": "_changeSearchOptions",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_changeMatchSettings:": {
+      "name": "_changeMatchSettings:",
+      "bridgedName": "_changeMatchSettings",
+      "args": [
+        {
+          "name": "_changeMatchSettings",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "substringMatchType": {
+      "name": "substringMatchType",
+      "bridgedName": "substringMatchType",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSubstringMatchType:": {
+      "name": "setSubstringMatchType:",
+      "bridgedName": "setSubstringMatchType",
+      "args": [
+        {
+          "name": "setSubstringMatchType",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchOptions": {
+      "name": "searchOptions",
+      "bridgedName": "searchOptions",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSearchOptions:": {
+      "name": "setSearchOptions:",
+      "bridgedName": "setSearchOptions",
+      "args": [
+        {
+          "name": "setSearchOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setMatchCount:": {
+      "name": "_setMatchCount:",
+      "bridgedName": "_setMatchCount",
+      "args": [
+        {
+          "name": "_setMatchCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_statusStringForMatchCount:": {
+      "name": "_statusStringForMatchCount:",
+      "bridgedName": "_statusStringForMatchCount",
+      "args": [
+        {
+          "name": "_statusStringForMatchCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_newSearchForString:showFirstMatch:": {
+      "name": "_newSearchForString:showFirstMatch:",
+      "bridgedName": "_newSearchForString_showFirstMatch",
+      "args": [
+        {
+          "name": "_newSearchForString",
+          "type": "id"
+        },
+        {
+          "name": "showFirstMatch",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setReplacementCount:": {
+      "name": "_setReplacementCount:",
+      "bridgedName": "_setReplacementCount",
+      "args": [
+        {
+          "name": "_setReplacementCount",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateForwardBackButtons": {
+      "name": "_updateForwardBackButtons",
+      "bridgedName": "_updateForwardBackButtons",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSearchString:": {
+      "name": "setSearchString:",
+      "bridgedName": "setSearchString",
+      "args": [
+        {
+          "name": "setSearchString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchString": {
+      "name": "searchString",
+      "bridgedName": "searchString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementString": {
+      "name": "replacementString",
+      "bridgedName": "replacementString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_replacementString": {
+      "name": "_replacementString",
+      "bridgedName": "_replacementString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "style": {
+      "name": "style",
+      "bridgedName": "style",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isVisible": {
+      "name": "isVisible",
+      "bridgedName": "isVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clearAllMatches": {
+      "name": "_clearAllMatches",
+      "bridgedName": "_clearAllMatches",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needToRefreshFromPasteboard": {
+      "name": "_needToRefreshFromPasteboard",
+      "bridgedName": "_needToRefreshFromPasteboard",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "appDidActivate:": {
+      "name": "appDidActivate:",
+      "bridgedName": "appDidActivate",
+      "args": [
+        {
+          "name": "appDidActivate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_findBarViewWillMoveToWindow:": {
+      "name": "_findBarViewWillMoveToWindow:",
+      "bridgedName": "_findBarViewWillMoveToWindow",
+      "args": [
+        {
+          "name": "_findBarViewWillMoveToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setView:": {
+      "name": "_setView:",
+      "bridgedName": "_setView",
+      "args": [
+        {
+          "name": "_setView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerObserversForWindow:": {
+      "name": "_registerObserversForWindow:",
+      "bridgedName": "_registerObserversForWindow",
+      "args": [
+        {
+          "name": "_registerObserversForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unregisterObserversForWindow:": {
+      "name": "_unregisterObserversForWindow:",
+      "bridgedName": "_unregisterObserversForWindow",
+      "args": [
+        {
+          "name": "_unregisterObserversForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_view": {
+      "name": "_view",
+      "bridgedName": "_view",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setFinder:": {
+      "name": "_setFinder:",
+      "bridgedName": "_setFinder",
+      "args": [
+        {
+          "name": "_setFinder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadUI": {
+      "name": "_loadUI",
+      "bridgedName": "_loadUI",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

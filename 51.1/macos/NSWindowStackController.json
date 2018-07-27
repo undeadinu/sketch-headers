@@ -1,0 +1,1862 @@
+{
+  "imports": [
+    "NSTabBarDelegate.h",
+    "NSTabPickerDelegate.h"
+  ],
+  "classes": [
+    "NSMenu",
+    "NSMutableArray",
+    "NSMutableDictionary",
+    "NSString",
+    "NSTabBar",
+    "NSTabPickerViewController",
+    "NSWindow",
+    "NSWindowTab",
+    "_NSFullScreenModalStackController"
+  ],
+  "protocol": false,
+  "className": "NSWindowStackController",
+  "extends": "NSWindowTabGroup",
+  "interfaces": [
+    "NSTabBarDelegate",
+    "NSTabPickerDelegate"
+  ],
+  "methods": {
+    "enableTabBar": {
+      "name": "enableTabBar",
+      "bridgedName": "enableTabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "disableTabBar": {
+      "name": "disableTabBar",
+      "bridgedName": "disableTabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setTabPlusButtonWasClicked:": {
+      "name": "setTabPlusButtonWasClicked:",
+      "bridgedName": "setTabPlusButtonWasClicked",
+      "args": [
+        {
+          "name": "setTabPlusButtonWasClicked",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "tabPlusButtonWasClicked": {
+      "name": "tabPlusButtonWasClicked",
+      "bridgedName": "tabPlusButtonWasClicked",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "didFinishRestoring": {
+      "name": "didFinishRestoring",
+      "bridgedName": "didFinishRestoring",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "mergeAllWindowsWithWindow:": {
+      "name": "mergeAllWindowsWithWindow:",
+      "bridgedName": "mergeAllWindowsWithWindow",
+      "args": [
+        {
+          "name": "mergeAllWindowsWithWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "moveWindow:toModalStackController:": {
+      "name": "moveWindow:toModalStackController:",
+      "bridgedName": "moveWindow_toModalStackController",
+      "args": [
+        {
+          "name": "moveWindow",
+          "type": "id"
+        },
+        {
+          "name": "toModalStackController",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_tabBarIsVisibleForIdentifier:": {
+      "name": "_tabBarIsVisibleForIdentifier:",
+      "bridgedName": "_tabBarIsVisibleForIdentifier",
+      "args": [
+        {
+          "name": "_tabBarIsVisibleForIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "topStackController": {
+      "name": "topStackController",
+      "bridgedName": "topStackController",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "findStackControllerForIdentifier:stateIdentifier:": {
+      "name": "findStackControllerForIdentifier:stateIdentifier:",
+      "bridgedName": "findStackControllerForIdentifier_stateIdentifier",
+      "args": [
+        {
+          "name": "findStackControllerForIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "stateIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setupStackControllerForWindow:attemptToJoinExistingStack:makeIfNeeded:": {
+      "name": "setupStackControllerForWindow:attemptToJoinExistingStack:makeIfNeeded:",
+      "bridgedName": "setupStackControllerForWindow_attemptToJoinExistingStack_makeIfNeeded",
+      "args": [
+        {
+          "name": "setupStackControllerForWindow",
+          "type": "id"
+        },
+        {
+          "name": "attemptToJoinExistingStack",
+          "type": "BOOL"
+        },
+        {
+          "name": "makeIfNeeded",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "setupStackControllerIfTabBarShownForWindow:": {
+      "name": "setupStackControllerIfTabBarShownForWindow:",
+      "bridgedName": "setupStackControllerIfTabBarShownForWindow",
+      "args": [
+        {
+          "name": "setupStackControllerIfTabBarShownForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "canJoinExistingStackForWindow:": {
+      "name": "canJoinExistingStackForWindow:",
+      "bridgedName": "canJoinExistingStackForWindow",
+      "args": [
+        {
+          "name": "canJoinExistingStackForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reattachFullScreenModalTabBar": {
+      "name": "reattachFullScreenModalTabBar",
+      "bridgedName": "reattachFullScreenModalTabBar",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "detachedFullScreenModalTabBar": {
+      "name": "detachedFullScreenModalTabBar",
+      "bridgedName": "detachedFullScreenModalTabBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOverviewVisible:": {
+      "name": "setOverviewVisible:",
+      "bridgedName": "setOverviewVisible",
+      "args": [
+        {
+          "name": "setOverviewVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOverviewVisible": {
+      "name": "isOverviewVisible",
+      "bridgedName": "isOverviewVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeTabPickerAnimated:": {
+      "name": "_closeTabPickerAnimated:",
+      "bridgedName": "_closeTabPickerAnimated",
+      "args": [
+        {
+          "name": "_closeTabPickerAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_openTabPickerAnimated:": {
+      "name": "_openTabPickerAnimated:",
+      "bridgedName": "_openTabPickerAnimated",
+      "args": [
+        {
+          "name": "_openTabPickerAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_syncInactiveTabWindowSizesForSnapshot": {
+      "name": "_syncInactiveTabWindowSizesForSnapshot",
+      "bridgedName": "_syncInactiveTabWindowSizesForSnapshot",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_moveTabPickerToWindow:": {
+      "name": "_moveTabPickerToWindow:",
+      "bridgedName": "_moveTabPickerToWindow",
+      "args": [
+        {
+          "name": "_moveTabPickerToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addTabPickerView:toWindow:": {
+      "name": "_addTabPickerView:toWindow:",
+      "bridgedName": "_addTabPickerView_toWindow",
+      "args": [
+        {
+          "name": "_addTabPickerView",
+          "type": "id"
+        },
+        {
+          "name": "toWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTabPickerFromWindow:": {
+      "name": "_removeTabPickerFromWindow:",
+      "bridgedName": "_removeTabPickerFromWindow",
+      "args": [
+        {
+          "name": "_removeTabPickerFromWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureTabPickerViewController": {
+      "name": "_ensureTabPickerViewController",
+      "bridgedName": "_ensureTabPickerViewController",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerDidOpen:": {
+      "name": "tabPickerDidOpen:",
+      "bridgedName": "tabPickerDidOpen",
+      "args": [
+        {
+          "name": "tabPickerDidOpen",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerWillOpen:": {
+      "name": "tabPickerWillOpen:",
+      "bridgedName": "tabPickerWillOpen",
+      "args": [
+        {
+          "name": "tabPickerWillOpen",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerDidClose:": {
+      "name": "tabPickerDidClose:",
+      "bridgedName": "tabPickerDidClose",
+      "args": [
+        {
+          "name": "tabPickerDidClose",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerWillClose:": {
+      "name": "tabPickerWillClose:",
+      "bridgedName": "tabPickerWillClose",
+      "args": [
+        {
+          "name": "tabPickerWillClose",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendTabOverviewIsVisibleDidChange": {
+      "name": "_sendTabOverviewIsVisibleDidChange",
+      "bridgedName": "_sendTabOverviewIsVisibleDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPicker:thumbnailViewForTabItem:": {
+      "name": "tabPicker:thumbnailViewForTabItem:",
+      "bridgedName": "tabPicker_thumbnailViewForTabItem",
+      "args": [
+        {
+          "name": "tabPicker",
+          "type": "id"
+        },
+        {
+          "name": "thumbnailViewForTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBarSnapshotForTabPicker:": {
+      "name": "tabBarSnapshotForTabPicker:",
+      "bridgedName": "tabBarSnapshotForTabPicker",
+      "args": [
+        {
+          "name": "tabBarSnapshotForTabPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerItemsForTabPicker:": {
+      "name": "tabPickerItemsForTabPicker:",
+      "bridgedName": "tabPickerItemsForTabPicker",
+      "args": [
+        {
+          "name": "tabPickerItemsForTabPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerCurrentlySelectedTabItem:": {
+      "name": "tabPickerCurrentlySelectedTabItem:",
+      "bridgedName": "tabPickerCurrentlySelectedTabItem",
+      "args": [
+        {
+          "name": "tabPickerCurrentlySelectedTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPickerCreatingNewTabItem:": {
+      "name": "tabPickerCreatingNewTabItem:",
+      "bridgedName": "tabPickerCreatingNewTabItem",
+      "args": [
+        {
+          "name": "tabPickerCreatingNewTabItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPicker:nextTabPickerItemAfterClosingItem:": {
+      "name": "tabPicker:nextTabPickerItemAfterClosingItem:",
+      "bridgedName": "tabPicker_nextTabPickerItemAfterClosingItem",
+      "args": [
+        {
+          "name": "tabPicker",
+          "type": "id"
+        },
+        {
+          "name": "nextTabPickerItemAfterClosingItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPicker:didSelectTabItemWhenClosing:": {
+      "name": "tabPicker:didSelectTabItemWhenClosing:",
+      "bridgedName": "tabPicker_didSelectTabItemWhenClosing",
+      "args": [
+        {
+          "name": "tabPicker",
+          "type": "id"
+        },
+        {
+          "name": "didSelectTabItemWhenClosing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_checkIfWindowWasClosedByTabPicker:": {
+      "name": "_checkIfWindowWasClosedByTabPicker:",
+      "bridgedName": "_checkIfWindowWasClosedByTabPicker",
+      "args": [
+        {
+          "name": "_checkIfWindowWasClosedByTabPicker",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabPicker:closeTabBarItem:": {
+      "name": "tabPicker:closeTabBarItem:",
+      "bridgedName": "tabPicker_closeTabBarItem",
+      "args": [
+        {
+          "name": "tabPicker",
+          "type": "id"
+        },
+        {
+          "name": "closeTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "plusTab": {
+      "name": "plusTab",
+      "bridgedName": "plusTab",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabBar": {
+      "name": "_tabBar",
+      "bridgedName": "_tabBar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTabBarEnabled:": {
+      "name": "setTabBarEnabled:",
+      "bridgedName": "setTabBarEnabled",
+      "args": [
+        {
+          "name": "setTabBarEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isTabBarEnabled": {
+      "name": "isTabBarEnabled",
+      "bridgedName": "isTabBarEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "createNewTabInTabBar:": {
+      "name": "createNewTabInTabBar:",
+      "bridgedName": "createNewTabInTabBar",
+      "args": [
+        {
+          "name": "createNewTabInTabBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didExitFullScreenForWindow:": {
+      "name": "didExitFullScreenForWindow:",
+      "bridgedName": "didExitFullScreenForWindow",
+      "args": [
+        {
+          "name": "didExitFullScreenForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willEnterFullScreenForWindow:": {
+      "name": "willEnterFullScreenForWindow:",
+      "bridgedName": "willEnterFullScreenForWindow",
+      "args": [
+        {
+          "name": "willEnterFullScreenForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didEnterFullScreenForWindow:": {
+      "name": "didEnterFullScreenForWindow:",
+      "bridgedName": "didEnterFullScreenForWindow",
+      "args": [
+        {
+          "name": "didEnterFullScreenForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTALTabIndex:forWindow:": {
+      "name": "setTALTabIndex:forWindow:",
+      "bridgedName": "setTALTabIndex_forWindow",
+      "args": [
+        {
+          "name": "setTALTabIndex",
+          "type": "long long"
+        },
+        {
+          "name": "forWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabRectForWindow:": {
+      "name": "tabRectForWindow:",
+      "bridgedName": "tabRectForWindow",
+      "args": [
+        {
+          "name": "tabRectForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabIndexForWindow:": {
+      "name": "tabIndexForWindow:",
+      "bridgedName": "tabIndexForWindow",
+      "args": [
+        {
+          "name": "tabIndexForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveTabToNewWindow:": {
+      "name": "moveTabToNewWindow:",
+      "bridgedName": "moveTabToNewWindow",
+      "args": [
+        {
+          "name": "moveTabToNewWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "unpinTabForWindow:": {
+      "name": "unpinTabForWindow:",
+      "bridgedName": "unpinTabForWindow",
+      "args": [
+        {
+          "name": "unpinTabForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pinTabForWindow:": {
+      "name": "pinTabForWindow:",
+      "bridgedName": "pinTabForWindow",
+      "args": [
+        {
+          "name": "pinTabForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_onePastLastPinnedTab": {
+      "name": "_onePastLastPinnedTab",
+      "bridgedName": "_onePastLastPinnedTab",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateTabMergeOfWindowsFromTargetWindow:": {
+      "name": "_animateTabMergeOfWindowsFromTargetWindow:",
+      "bridgedName": "_animateTabMergeOfWindowsFromTargetWindow",
+      "args": [
+        {
+          "name": "_animateTabMergeOfWindowsFromTargetWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_regularTabMergeOfWindowsFromTargetWindow:": {
+      "name": "_regularTabMergeOfWindowsFromTargetWindow:",
+      "bridgedName": "_regularTabMergeOfWindowsFromTargetWindow",
+      "args": [
+        {
+          "name": "_regularTabMergeOfWindowsFromTargetWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enumerateTabMergableWindows:targetWindow:": {
+      "name": "_enumerateTabMergableWindows:targetWindow:",
+      "bridgedName": "_enumerateTabMergableWindows_targetWindow",
+      "args": [
+        {
+          "name": "_enumerateTabMergableWindows",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "targetWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doDockWindowMinimizeOfSelectedWindow": {
+      "name": "_doDockWindowMinimizeOfSelectedWindow",
+      "bridgedName": "_doDockWindowMinimizeOfSelectedWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleDeminimizingWindow:": {
+      "name": "handleDeminimizingWindow:",
+      "bridgedName": "handleDeminimizingWindow",
+      "args": [
+        {
+          "name": "handleDeminimizingWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "didFinishDeminiaturizeWindow:": {
+      "name": "didFinishDeminiaturizeWindow:",
+      "bridgedName": "didFinishDeminiaturizeWindow",
+      "args": [
+        {
+          "name": "didFinishDeminiaturizeWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleMinimizingWindow:": {
+      "name": "handleMinimizingWindow:",
+      "bridgedName": "handleMinimizingWindow",
+      "args": [
+        {
+          "name": "handleMinimizingWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:canCloseTabBarViewItem:": {
+      "name": "tabBar:canCloseTabBarViewItem:",
+      "bridgedName": "tabBar_canCloseTabBarViewItem",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "canCloseTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:droppedWindowTabShouldMoveToSpace:": {
+      "name": "tabBar:droppedWindowTabShouldMoveToSpace:",
+      "bridgedName": "tabBar_droppedWindowTabShouldMoveToSpace",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "droppedWindowTabShouldMoveToSpace",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBarCanDragItems:": {
+      "name": "tabBarCanDragItems:",
+      "bridgedName": "tabBarCanDragItems",
+      "args": [
+        {
+          "name": "tabBarCanDragItems",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:showWindowForDraggingItemAtIndex:": {
+      "name": "tabBar:showWindowForDraggingItemAtIndex:",
+      "bridgedName": "tabBar_showWindowForDraggingItemAtIndex",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "showWindowForDraggingItemAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:hideWindowForDraggingItemAtIndex:": {
+      "name": "tabBar:hideWindowForDraggingItemAtIndex:",
+      "bridgedName": "tabBar_hideWindowForDraggingItemAtIndex",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "hideWindowForDraggingItemAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:didFinishTransitionAnimationForWindow:": {
+      "name": "tabBar:didFinishTransitionAnimationForWindow:",
+      "bridgedName": "tabBar_didFinishTransitionAnimationForWindow",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "didFinishTransitionAnimationForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:destinationWindowForDetachedTabBarViewItem:": {
+      "name": "tabBar:destinationWindowForDetachedTabBarViewItem:",
+      "bridgedName": "tabBar_destinationWindowForDetachedTabBarViewItem",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "destinationWindowForDetachedTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:detachedWindowImageForDraggedTabBarViewItem:": {
+      "name": "tabBar:detachedWindowImageForDraggedTabBarViewItem:",
+      "bridgedName": "tabBar_detachedWindowImageForDraggedTabBarViewItem",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "detachedWindowImageForDraggedTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:acceptDrop:index:": {
+      "name": "tabBar:acceptDrop:index:",
+      "bridgedName": "tabBar_acceptDrop_index",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "acceptDrop",
+          "type": "id"
+        },
+        {
+          "name": "index",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:validateDrop:": {
+      "name": "tabBar:validateDrop:",
+      "bridgedName": "tabBar_validateDrop",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "validateDrop",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:acceptTabDrop:index:": {
+      "name": "tabBar:acceptTabDrop:index:",
+      "bridgedName": "tabBar_acceptTabDrop_index",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "acceptTabDrop",
+          "type": "id"
+        },
+        {
+          "name": "index",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginNextSheetAfterWindow:": {
+      "name": "beginNextSheetAfterWindow:",
+      "bridgedName": "beginNextSheetAfterWindow",
+      "args": [
+        {
+          "name": "beginNextSheetAfterWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveWindow:toWindowStackController:atIndex:": {
+      "name": "moveWindow:toWindowStackController:atIndex:",
+      "bridgedName": "moveWindow_toWindowStackController_atIndex",
+      "args": [
+        {
+          "name": "moveWindow",
+          "type": "id"
+        },
+        {
+          "name": "toWindowStackController",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertDraggedItemAtIndex:fromController:sourceIndex:": {
+      "name": "_insertDraggedItemAtIndex:fromController:sourceIndex:",
+      "bridgedName": "_insertDraggedItemAtIndex_fromController_sourceIndex",
+      "args": [
+        {
+          "name": "_insertDraggedItemAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "fromController",
+          "type": "id"
+        },
+        {
+          "name": "sourceIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:validateTabDrop:": {
+      "name": "tabBar:validateTabDrop:",
+      "bridgedName": "tabBar_validateTabDrop",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "validateTabDrop",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:menuForTabBarViewItem:event:": {
+      "name": "tabBar:menuForTabBarViewItem:event:",
+      "bridgedName": "tabBar_menuForTabBarViewItem_event",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "menuForTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "event",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_currentTabMenuTargetedForWindow:": {
+      "name": "_currentTabMenuTargetedForWindow:",
+      "bridgedName": "_currentTabMenuTargetedForWindow",
+      "args": [
+        {
+          "name": "_currentTabMenuTargetedForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:didMoveTabBarViewItem:fromIndex:toIndex:isChangingPinnedness:": {
+      "name": "tabBar:didMoveTabBarViewItem:fromIndex:toIndex:isChangingPinnedness:",
+      "bridgedName": "tabBar_didMoveTabBarViewItem_fromIndex_toIndex_isChangingPinnedness",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "didMoveTabBarViewItem",
+          "type": "id"
+        },
+        {
+          "name": "fromIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "isChangingPinnedness",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_moveItemAtIndex:toIndex:": {
+      "name": "_moveItemAtIndex:toIndex:",
+      "bridgedName": "_moveItemAtIndex_toIndex",
+      "args": [
+        {
+          "name": "_moveItemAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performCloseAllWindowsExcept:": {
+      "name": "performCloseAllWindowsExcept:",
+      "bridgedName": "performCloseAllWindowsExcept",
+      "args": [
+        {
+          "name": "performCloseAllWindowsExcept",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:closeTabBarViewItem:": {
+      "name": "tabBar:closeTabBarViewItem:",
+      "bridgedName": "tabBar_closeTabBarViewItem",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "closeTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeAllWindowsExceptItemAtIndex:": {
+      "name": "_closeAllWindowsExceptItemAtIndex:",
+      "bridgedName": "_closeAllWindowsExceptItemAtIndex",
+      "args": [
+        {
+          "name": "_closeAllWindowsExceptItemAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doCloseButtonCloseOnWindow:withHighlight:": {
+      "name": "_doCloseButtonCloseOnWindow:withHighlight:",
+      "bridgedName": "_doCloseButtonCloseOnWindow_withHighlight",
+      "args": [
+        {
+          "name": "_doCloseButtonCloseOnWindow",
+          "type": "id"
+        },
+        {
+          "name": "withHighlight",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_closeWindowAtIndex:": {
+      "name": "_closeWindowAtIndex:",
+      "bridgedName": "_closeWindowAtIndex",
+      "args": [
+        {
+          "name": "_closeWindowAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptToCloseEntireStack:": {
+      "name": "attemptToCloseEntireStack:",
+      "bridgedName": "attemptToCloseEntireStack",
+      "args": [
+        {
+          "name": "attemptToCloseEntireStack",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectWindowWithoutOrderingFront:": {
+      "name": "_selectWindowWithoutOrderingFront:",
+      "bridgedName": "_selectWindowWithoutOrderingFront",
+      "args": [
+        {
+          "name": "_selectWindowWithoutOrderingFront",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedTabBarViewItemAfterClosingCurrentTabInTabBar:": {
+      "name": "selectedTabBarViewItemAfterClosingCurrentTabInTabBar:",
+      "bridgedName": "selectedTabBarViewItemAfterClosingCurrentTabInTabBar",
+      "args": [
+        {
+          "name": "selectedTabBarViewItemAfterClosingCurrentTabInTabBar",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tabBar:selectTabBarViewItem:": {
+      "name": "tabBar:selectTabBarViewItem:",
+      "bridgedName": "tabBar_selectTabBarViewItem",
+      "args": [
+        {
+          "name": "tabBar",
+          "type": "id"
+        },
+        {
+          "name": "selectTabBarViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doTabSelectionAndWindowOrderingAtIndex:makeKeyAndOrderFront:justOrderFront:": {
+      "name": "_doTabSelectionAndWindowOrderingAtIndex:makeKeyAndOrderFront:justOrderFront:",
+      "bridgedName": "_doTabSelectionAndWindowOrderingAtIndex_makeKeyAndOrderFront_justOrderFront",
+      "args": [
+        {
+          "name": "_doTabSelectionAndWindowOrderingAtIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "makeKeyAndOrderFront",
+          "type": "BOOL"
+        },
+        {
+          "name": "justOrderFront",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doWindowOrderingToSwapPriorWindow:withNewWindow:": {
+      "name": "_doWindowOrderingToSwapPriorWindow:withNewWindow:",
+      "bridgedName": "_doWindowOrderingToSwapPriorWindow_withNewWindow",
+      "args": [
+        {
+          "name": "_doWindowOrderingToSwapPriorWindow",
+          "type": "id"
+        },
+        {
+          "name": "withNewWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureWindowHasTabBar:": {
+      "name": "_ensureWindowHasTabBar:",
+      "bridgedName": "_ensureWindowHasTabBar",
+      "args": [
+        {
+          "name": "_ensureWindowHasTabBar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_exitWindowFromFullScreenIfNeeded:basedOnWindow:": {
+      "name": "_exitWindowFromFullScreenIfNeeded:basedOnWindow:",
+      "bridgedName": "_exitWindowFromFullScreenIfNeeded_basedOnWindow",
+      "args": [
+        {
+          "name": "_exitWindowFromFullScreenIfNeeded",
+          "type": "id"
+        },
+        {
+          "name": "basedOnWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enterWindow:intoFullScreenWithWindow:": {
+      "name": "_enterWindow:intoFullScreenWithWindow:",
+      "bridgedName": "_enterWindow_intoFullScreenWithWindow",
+      "args": [
+        {
+          "name": "_enterWindow",
+          "type": "id"
+        },
+        {
+          "name": "intoFullScreenWithWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doTabSelectionAndWindowOrderingAtIndex:": {
+      "name": "_doTabSelectionAndWindowOrderingAtIndex:",
+      "bridgedName": "_doTabSelectionAndWindowOrderingAtIndex",
+      "args": [
+        {
+          "name": "_doTabSelectionAndWindowOrderingAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectPreviousTab": {
+      "name": "selectPreviousTab",
+      "bridgedName": "selectPreviousTab",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectNextTab": {
+      "name": "selectNextTab",
+      "bridgedName": "selectNextTab",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setSelectedTabButtonIndex:": {
+      "name": "setSelectedTabButtonIndex:",
+      "bridgedName": "setSelectedTabButtonIndex",
+      "args": [
+        {
+          "name": "setSelectedTabButtonIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectedTabButtonIndex": {
+      "name": "selectedTabButtonIndex",
+      "bridgedName": "selectedTabButtonIndex",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowYankedOutIntoNewControllerFromIndex:": {
+      "name": "_windowYankedOutIntoNewControllerFromIndex:",
+      "bridgedName": "_windowYankedOutIntoNewControllerFromIndex",
+      "args": [
+        {
+          "name": "_windowYankedOutIntoNewControllerFromIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_yankWindowFromIndex:": {
+      "name": "_yankWindowFromIndex:",
+      "bridgedName": "_yankWindowFromIndex",
+      "args": [
+        {
+          "name": "_yankWindowFromIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeSyncedItemAtIndex:": {
+      "name": "_removeSyncedItemAtIndex:",
+      "bridgedName": "_removeSyncedItemAtIndex",
+      "args": [
+        {
+          "name": "_removeSyncedItemAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectNextTabWhenRemovingTabAtIndex:": {
+      "name": "_selectNextTabWhenRemovingTabAtIndex:",
+      "bridgedName": "_selectNextTabWhenRemovingTabAtIndex",
+      "args": [
+        {
+          "name": "_selectNextTabWhenRemovingTabAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextSelectedIndexAfterRemovingIndex:": {
+      "name": "_nextSelectedIndexAfterRemovingIndex:",
+      "bridgedName": "_nextSelectedIndexAfterRemovingIndex",
+      "args": [
+        {
+          "name": "_nextSelectedIndexAfterRemovingIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "nextWindowToSelectAfterClosingWindow:": {
+      "name": "nextWindowToSelectAfterClosingWindow:",
+      "bridgedName": "nextWindowToSelectAfterClosingWindow",
+      "args": [
+        {
+          "name": "nextWindowToSelectAfterClosingWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeSyncedTabBarItem:": {
+      "name": "_removeSyncedTabBarItem:",
+      "bridgedName": "_removeSyncedTabBarItem",
+      "args": [
+        {
+          "name": "_removeSyncedTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wrapperForTabBarItem:": {
+      "name": "_wrapperForTabBarItem:",
+      "bridgedName": "_wrapperForTabBarItem",
+      "args": [
+        {
+          "name": "_wrapperForTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfWrapperForTabBarItem:": {
+      "name": "_indexOfWrapperForTabBarItem:",
+      "bridgedName": "_indexOfWrapperForTabBarItem",
+      "args": [
+        {
+          "name": "_indexOfWrapperForTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_syncedWrapperForTabBarItem:": {
+      "name": "_syncedWrapperForTabBarItem:",
+      "bridgedName": "_syncedWrapperForTabBarItem",
+      "args": [
+        {
+          "name": "_syncedWrapperForTabBarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_noteTabbingChangedForWindow:": {
+      "name": "_noteTabbingChangedForWindow:",
+      "bridgedName": "_noteTabbingChangedForWindow",
+      "args": [
+        {
+          "name": "_noteTabbingChangedForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addSyncedTabBarItemForWindow:atIndex:": {
+      "name": "_addSyncedTabBarItemForWindow:atIndex:",
+      "bridgedName": "_addSyncedTabBarItemForWindow_atIndex",
+      "args": [
+        {
+          "name": "_addSyncedTabBarItemForWindow",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldAnimateTabInsertion": {
+      "name": "_shouldAnimateTabInsertion",
+      "bridgedName": "_shouldAnimateTabInsertion",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabPickerIsVisible": {
+      "name": "_tabPickerIsVisible",
+      "bridgedName": "_tabPickerIsVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tabBarShouldBeVisible": {
+      "name": "_tabBarShouldBeVisible",
+      "bridgedName": "_tabBarShouldBeVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTabBarIsVisible:force:": {
+      "name": "_setTabBarIsVisible:force:",
+      "bridgedName": "_setTabBarIsVisible_force",
+      "args": [
+        {
+          "name": "_setTabBarIsVisible",
+          "type": "BOOL"
+        },
+        {
+          "name": "force",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowTabBarKey": {
+      "name": "_shouldShowTabBarKey",
+      "bridgedName": "_shouldShowTabBarKey",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectedWindow": {
+      "name": "_selectedWindow",
+      "bridgedName": "_selectedWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTabbingIdentifier:": {
+      "name": "initWithTabbingIdentifier:",
+      "bridgedName": "initWithTabbingIdentifier",
+      "args": [
+        {
+          "name": "initWithTabbingIdentifier",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeWindow:": {
+      "name": "removeWindow:",
+      "bridgedName": "removeWindow",
+      "args": [
+        {
+          "name": "removeWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowCount": {
+      "name": "windowCount",
+      "bridgedName": "windowCount",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windows": {
+      "name": "windows",
+      "bridgedName": "windows",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "makeActiveStack": {
+      "name": "makeActiveStack",
+      "bridgedName": "makeActiveStack",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertWindow:atIndex:": {
+      "name": "insertWindow:atIndex:",
+      "bridgedName": "insertWindow_atIndex",
+      "args": [
+        {
+          "name": "insertWindow",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addWindow:": {
+      "name": "addWindow:",
+      "bridgedName": "addWindow",
+      "args": [
+        {
+          "name": "addWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowForTabViewItem:": {
+      "name": "_windowForTabViewItem:",
+      "bridgedName": "_windowForTabViewItem",
+      "args": [
+        {
+          "name": "_windowForTabViewItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncToolbarsBasedOnWindow:": {
+      "name": "syncToolbarsBasedOnWindow:",
+      "bridgedName": "syncToolbarsBasedOnWindow",
+      "args": [
+        {
+          "name": "syncToolbarsBasedOnWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_syncToolbarOfWindow:withPropertiesOfWindow:": {
+      "name": "_syncToolbarOfWindow:withPropertiesOfWindow:",
+      "bridgedName": "_syncToolbarOfWindow_withPropertiesOfWindow",
+      "args": [
+        {
+          "name": "_syncToolbarOfWindow",
+          "type": "id"
+        },
+        {
+          "name": "withPropertiesOfWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTabBarAccessoryViewControllerForWindow:": {
+      "name": "_removeTabBarAccessoryViewControllerForWindow:",
+      "bridgedName": "_removeTabBarAccessoryViewControllerForWindow",
+      "args": [
+        {
+          "name": "_removeTabBarAccessoryViewControllerForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureAccessoryViewControllerExistsForWindow:": {
+      "name": "_ensureAccessoryViewControllerExistsForWindow:",
+      "bridgedName": "_ensureAccessoryViewControllerExistsForWindow",
+      "args": [
+        {
+          "name": "_ensureAccessoryViewControllerExistsForWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ensureTabBarBasedOnWindow:": {
+      "name": "_ensureTabBarBasedOnWindow:",
+      "bridgedName": "_ensureTabBarBasedOnWindow",
+      "args": [
+        {
+          "name": "_ensureTabBarBasedOnWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowDidGainToolbar:": {
+      "name": "windowDidGainToolbar:",
+      "bridgedName": "windowDidGainToolbar",
+      "args": [
+        {
+          "name": "windowDidGainToolbar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeTabBarForWindow:visible:": {
+      "name": "_makeTabBarForWindow:visible:",
+      "bridgedName": "_makeTabBarForWindow_visible",
+      "args": [
+        {
+          "name": "_makeTabBarForWindow",
+          "type": "id"
+        },
+        {
+          "name": "visible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "windowBeingDragged": {
+      "name": "windowBeingDragged",
+      "pointer": true,
+      "type": "__weak NSWindow",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "stateIdentifier": {
+      "name": "stateIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "tabBarVisible": {
+      "name": "tabBarVisible",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "getter=isTabBarVisible"
+      ]
+    },
+    "numberOfTabs": {
+      "name": "numberOfTabs",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

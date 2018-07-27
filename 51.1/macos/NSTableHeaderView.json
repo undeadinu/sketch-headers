@@ -1,0 +1,1459 @@
+{
+  "imports": [
+    "NSViewToolTipOwner.h"
+  ],
+  "classes": [
+    "NSImage",
+    "NSString",
+    "NSTableView"
+  ],
+  "protocol": false,
+  "className": "NSTableHeaderView",
+  "extends": "NSView",
+  "interfaces": [
+    "NSViewToolTipOwner"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateColumnViewWidthsAnimated:": {
+      "name": "_updateColumnViewWidthsAnimated:",
+      "bridgedName": "_updateColumnViewWidthsAnimated",
+      "args": [
+        {
+          "name": "_updateColumnViewWidthsAnimated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endDraggingColumn:animated:": {
+      "name": "_endDraggingColumn:animated:",
+      "bridgedName": "_endDraggingColumn_animated",
+      "args": [
+        {
+          "name": "_endDraggingColumn",
+          "type": "long long"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didMoveFromColumn:toColumn:animated:": {
+      "name": "_didMoveFromColumn:toColumn:animated:",
+      "bridgedName": "_didMoveFromColumn_toColumn_animated",
+      "args": [
+        {
+          "name": "_didMoveFromColumn",
+          "type": "long long"
+        },
+        {
+          "name": "toColumn",
+          "type": "long long"
+        },
+        {
+          "name": "animated",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToWindow:": {
+      "name": "viewWillMoveToWindow:",
+      "bridgedName": "viewWillMoveToWindow",
+      "args": [
+        {
+          "name": "viewWillMoveToWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setAlignTitleWithDataCell:": {
+      "name": "_setAlignTitleWithDataCell:",
+      "bridgedName": "_setAlignTitleWithDataCell",
+      "args": [
+        {
+          "name": "_setAlignTitleWithDataCell",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alignTitleWithDataCell": {
+      "name": "_alignTitleWithDataCell",
+      "bridgedName": "_alignTitleWithDataCell",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishedMakingConnections": {
+      "name": "_finishedMakingConnections",
+      "bridgedName": "_finishedMakingConnections",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowChangedKeyState": {
+      "name": "_windowChangedKeyState",
+      "bridgedName": "_windowChangedKeyState",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resizeableColumnAtPoint:": {
+      "name": "_resizeableColumnAtPoint:",
+      "bridgedName": "_resizeableColumnAtPoint",
+      "args": [
+        {
+          "name": "_resizeableColumnAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_previousNonHiddenColumnStartingAtColumn:": {
+      "name": "_previousNonHiddenColumnStartingAtColumn:",
+      "bridgedName": "_previousNonHiddenColumnStartingAtColumn",
+      "args": [
+        {
+          "name": "_previousNonHiddenColumnStartingAtColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCursorRects": {
+      "name": "resetCursorRects",
+      "bridgedName": "resetCursorRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cursorRectForColumn:": {
+      "name": "_cursorRectForColumn:",
+      "bridgedName": "_cursorRectForColumn",
+      "args": [
+        {
+          "name": "_cursorRectForColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_ltrCursorRectForColumn:": {
+      "name": "_ltrCursorRectForColumn:",
+      "bridgedName": "_ltrCursorRectForColumn",
+      "args": [
+        {
+          "name": "_ltrCursorRectForColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rtlCursorRectForColumn:": {
+      "name": "_rtlCursorRectForColumn:",
+      "bridgedName": "_rtlCursorRectForColumn",
+      "args": [
+        {
+          "name": "_rtlCursorRectForColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isOpaque": {
+      "name": "isOpaque",
+      "bridgedName": "isOpaque",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isFlipped": {
+      "name": "isFlipped",
+      "bridgedName": "isFlipped",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstResponder": {
+      "name": "acceptsFirstResponder",
+      "bridgedName": "acceptsFirstResponder",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstMouse:": {
+      "name": "acceptsFirstMouse:",
+      "bridgedName": "acceptsFirstMouse",
+      "args": [
+        {
+          "name": "acceptsFirstMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDownCanMoveWindow": {
+      "name": "mouseDownCanMoveWindow",
+      "bridgedName": "mouseDownCanMoveWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
+      "args": [
+        {
+          "name": "drawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewWillMoveToSuperview:": {
+      "name": "viewWillMoveToSuperview:",
+      "bridgedName": "viewWillMoveToSuperview",
+      "args": [
+        {
+          "name": "viewWillMoveToSuperview",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidMoveToSuperview": {
+      "name": "viewDidMoveToSuperview",
+      "bridgedName": "viewDidMoveToSuperview",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrantBlendingStyleForSubtree": {
+      "name": "_vibrantBlendingStyleForSubtree",
+      "bridgedName": "_vibrantBlendingStyleForSubtree",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeBackgroundView": {
+      "name": "_removeBackgroundView",
+      "bridgedName": "_removeBackgroundView",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setBackgroundView:": {
+      "name": "_setBackgroundView:",
+      "bridgedName": "_setBackgroundView",
+      "args": [
+        {
+          "name": "_setBackgroundView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_backgroundView": {
+      "name": "_backgroundView",
+      "bridgedName": "_backgroundView",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateClipViewBackgroundColors": {
+      "name": "_updateClipViewBackgroundColors",
+      "bridgedName": "_updateClipViewBackgroundColors",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setLayer:": {
+      "name": "setLayer:",
+      "bridgedName": "setLayer",
+      "args": [
+        {
+          "name": "setLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateBackgroundViewFrame": {
+      "name": "_updateBackgroundViewFrame",
+      "bridgedName": "_updateBackgroundViewFrame",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addOrRemoveBlurViewAsNecessary": {
+      "name": "_addOrRemoveBlurViewAsNecessary",
+      "bridgedName": "_addOrRemoveBlurViewAsNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeBlurBackgroundViewWithFrame:": {
+      "name": "_makeBlurBackgroundViewWithFrame:",
+      "bridgedName": "_makeBlurBackgroundViewWithFrame",
+      "args": [
+        {
+          "name": "_makeBlurBackgroundViewWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasTranslucency": {
+      "name": "_hasTranslucency",
+      "bridgedName": "_hasTranslucency",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setWantsTranslucency:": {
+      "name": "_setWantsTranslucency:",
+      "bridgedName": "_setWantsTranslucency",
+      "args": [
+        {
+          "name": "_setWantsTranslucency",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsTranslucency": {
+      "name": "_wantsTranslucency",
+      "bridgedName": "_wantsTranslucency",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawsBackground": {
+      "name": "drawsBackground",
+      "bridgedName": "drawsBackground",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDrawsBackground:": {
+      "name": "setDrawsBackground:",
+      "bridgedName": "setDrawsBackground",
+      "args": [
+        {
+          "name": "setDrawsBackground",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preferredAppearance": {
+      "name": "_preferredAppearance",
+      "bridgedName": "_preferredAppearance",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_viewBasedRawRect:": {
+      "name": "_viewBasedRawRect:",
+      "bridgedName": "_viewBasedRawRect",
+      "args": [
+        {
+          "name": "_viewBasedRawRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchToNonViewBasedIfNeeded": {
+      "name": "_switchToNonViewBasedIfNeeded",
+      "bridgedName": "_switchToNonViewBasedIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_switchToViewBasedIfNeeded": {
+      "name": "_switchToViewBasedIfNeeded",
+      "bridgedName": "_switchToViewBasedIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_supportsViewsForAnimations": {
+      "name": "_supportsViewsForAnimations",
+      "bridgedName": "_supportsViewsForAnimations",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "view:stringForToolTip:point:userData:": {
+      "name": "view:stringForToolTip:point:userData:",
+      "bridgedName": "view_stringForToolTip_point_userData",
+      "args": [
+        {
+          "name": "view",
+          "type": "id"
+        },
+        {
+          "name": "stringForToolTip",
+          "type": "long long"
+        },
+        {
+          "name": "point",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "userData",
+          "type": "void *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addToolTipRects": {
+      "name": "_addToolTipRects",
+      "bridgedName": "_addToolTipRects",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateOrComputeNewCursorRectsIfNecessary": {
+      "name": "_invalidateOrComputeNewCursorRectsIfNecessary",
+      "bridgedName": "_invalidateOrComputeNewCursorRectsIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setToolTipRectsDirty:": {
+      "name": "_setToolTipRectsDirty:",
+      "bridgedName": "_setToolTipRectsDirty",
+      "args": [
+        {
+          "name": "_setToolTipRectsDirty",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_windowKeyChanged:": {
+      "name": "_windowKeyChanged:",
+      "bridgedName": "_windowKeyChanged",
+      "args": [
+        {
+          "name": "_windowKeyChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_old_encodeWithCoder_NSTableHeaderView:": {
+      "name": "_old_encodeWithCoder_NSTableHeaderView:",
+      "bridgedName": "_old_encodeWithCoder_NSTableHeaderView",
+      "args": [
+        {
+          "name": "_old_encodeWithCoder_NSTableHeaderView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startObservingKeyWindow:": {
+      "name": "_startObservingKeyWindow:",
+      "bridgedName": "_startObservingKeyWindow",
+      "args": [
+        {
+          "name": "_startObservingKeyWindow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stopObservingKeyWindow": {
+      "name": "_stopObservingKeyWindow",
+      "bridgedName": "_stopObservingKeyWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isColumnReordering": {
+      "name": "_isColumnReordering",
+      "bridgedName": "_isColumnReordering",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isColumnResizing": {
+      "name": "_isColumnResizing",
+      "bridgedName": "_isColumnResizing",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resizeColumn:withEvent:": {
+      "name": "_resizeColumn:withEvent:",
+      "bridgedName": "_resizeColumn_withEvent",
+      "args": [
+        {
+          "name": "_resizeColumn",
+          "type": "long long"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canUseReorderResizeImageCache": {
+      "name": "_canUseReorderResizeImageCache",
+      "bridgedName": "_canUseReorderResizeImageCache",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dropTableViewOverdrawIfNecessary": {
+      "name": "_dropTableViewOverdrawIfNecessary",
+      "bridgedName": "_dropTableViewOverdrawIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reorderColumn:withEvent:": {
+      "name": "_reorderColumn:withEvent:",
+      "bridgedName": "_reorderColumn_withEvent",
+      "args": [
+        {
+          "name": "_reorderColumn",
+          "type": "long long"
+        },
+        {
+          "name": "withEvent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setNeedsDisplayForDraggedDelta:": {
+      "name": "_setNeedsDisplayForDraggedDelta:",
+      "bridgedName": "_setNeedsDisplayForDraggedDelta",
+      "args": [
+        {
+          "name": "_setNeedsDisplayForDraggedDelta",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resizeCursorForTableColumn:": {
+      "name": "_resizeCursorForTableColumn:",
+      "bridgedName": "_resizeCursorForTableColumn",
+      "args": [
+        {
+          "name": "_resizeCursorForTableColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lastDraggedOrUpEventFollowing:canceled:": {
+      "name": "_lastDraggedOrUpEventFollowing:canceled:",
+      "bridgedName": "_lastDraggedOrUpEventFollowing_canceled",
+      "args": [
+        {
+          "name": "_lastDraggedOrUpEventFollowing",
+          "type": "id"
+        },
+        {
+          "name": "canceled",
+          "type": "char *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lastDraggedEventFollowing:": {
+      "name": "_lastDraggedEventFollowing:",
+      "bridgedName": "_lastDraggedEventFollowing",
+      "args": [
+        {
+          "name": "_lastDraggedEventFollowing",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endDraggingColumn:": {
+      "name": "_endDraggingColumn:",
+      "bridgedName": "_endDraggingColumn",
+      "args": [
+        {
+          "name": "_endDraggingColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginDraggingColumn:": {
+      "name": "_beginDraggingColumn:",
+      "bridgedName": "_beginDraggingColumn",
+      "args": [
+        {
+          "name": "_beginDraggingColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawHeaderDragImageForColumn:": {
+      "name": "_drawHeaderDragImageForColumn:",
+      "bridgedName": "_drawHeaderDragImageForColumn",
+      "args": [
+        {
+          "name": "_drawHeaderDragImageForColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unobstructedVisibleHeaderRectOfColumn:": {
+      "name": "_unobstructedVisibleHeaderRectOfColumn:",
+      "bridgedName": "_unobstructedVisibleHeaderRectOfColumn",
+      "args": [
+        {
+          "name": "_unobstructedVisibleHeaderRectOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackAndModifySelectionWithEvent:onColumn:stopOnReorderGesture:": {
+      "name": "_trackAndModifySelectionWithEvent:onColumn:stopOnReorderGesture:",
+      "bridgedName": "_trackAndModifySelectionWithEvent_onColumn_stopOnReorderGesture",
+      "args": [
+        {
+          "name": "_trackAndModifySelectionWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "onColumn",
+          "type": "long long"
+        },
+        {
+          "name": "stopOnReorderGesture",
+          "type": "char *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_scheduleDelayedShowOpenHandCursorIfNecessary": {
+      "name": "_scheduleDelayedShowOpenHandCursorIfNecessary",
+      "bridgedName": "_scheduleDelayedShowOpenHandCursorIfNecessary",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unshowOpenHandCursor:": {
+      "name": "_unshowOpenHandCursor:",
+      "bridgedName": "_unshowOpenHandCursor",
+      "args": [
+        {
+          "name": "_unshowOpenHandCursor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelDelayedShowOpenHandCursor": {
+      "name": "_cancelDelayedShowOpenHandCursor",
+      "bridgedName": "_cancelDelayedShowOpenHandCursor",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showOpenHandCursor:": {
+      "name": "_showOpenHandCursor:",
+      "bridgedName": "_showOpenHandCursor",
+      "args": [
+        {
+          "name": "_showOpenHandCursor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_headerRectForInvalidation:": {
+      "name": "_headerRectForInvalidation:",
+      "bridgedName": "_headerRectForInvalidation",
+      "args": [
+        {
+          "name": "_headerRectForInvalidation",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_doModifySelectionWithEvent:onColumn:": {
+      "name": "_doModifySelectionWithEvent:onColumn:",
+      "bridgedName": "_doModifySelectionWithEvent_onColumn",
+      "args": [
+        {
+          "name": "_doModifySelectionWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "onColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawColumnHeaderWithIndexes:": {
+      "name": "_drawColumnHeaderWithIndexes:",
+      "bridgedName": "_drawColumnHeaderWithIndexes",
+      "args": [
+        {
+          "name": "_drawColumnHeaderWithIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawingEndSeparator": {
+      "name": "_drawingEndSeparator",
+      "bridgedName": "_drawingEndSeparator",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasRowHeaderColumn": {
+      "name": "_hasRowHeaderColumn",
+      "bridgedName": "_hasRowHeaderColumn",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rowHeaderScrollableContentVisibleRect": {
+      "name": "_rowHeaderScrollableContentVisibleRect",
+      "bridgedName": "_rowHeaderScrollableContentVisibleRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rowHeaderFixedContentRect": {
+      "name": "_rowHeaderFixedContentRect",
+      "bridgedName": "_rowHeaderFixedContentRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_layoutIsSameAsCachedLayoutWithFrame:": {
+      "name": "_layoutIsSameAsCachedLayoutWithFrame:",
+      "bridgedName": "_layoutIsSameAsCachedLayoutWithFrame",
+      "args": [
+        {
+          "name": "_layoutIsSameAsCachedLayoutWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrameSize:": {
+      "name": "setFrameSize:",
+      "bridgedName": "setFrameSize",
+      "args": [
+        {
+          "name": "setFrameSize",
+          "type": "struct CGSize"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFrameOrigin:": {
+      "name": "setFrameOrigin:",
+      "bridgedName": "setFrameOrigin",
+      "args": [
+        {
+          "name": "setFrameOrigin",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateRightMostLineIfNeeded": {
+      "name": "_invalidateRightMostLineIfNeeded",
+      "bridgedName": "_invalidateRightMostLineIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawOverflowHeaderInRect:": {
+      "name": "_drawOverflowHeaderInRect:",
+      "bridgedName": "_drawOverflowHeaderInRect",
+      "args": [
+        {
+          "name": "_drawOverflowHeaderInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overflowRectForBounds:": {
+      "name": "_overflowRectForBounds:",
+      "bridgedName": "_overflowRectForBounds",
+      "args": [
+        {
+          "name": "_overflowRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawHeaderOfColumn:": {
+      "name": "_drawHeaderOfColumn:",
+      "bridgedName": "_drawHeaderOfColumn",
+      "args": [
+        {
+          "name": "_drawHeaderOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextColumnDrawsLeftSeparatorFromColumn:": {
+      "name": "_nextColumnDrawsLeftSeparatorFromColumn:",
+      "bridgedName": "_nextColumnDrawsLeftSeparatorFromColumn",
+      "args": [
+        {
+          "name": "_nextColumnDrawsLeftSeparatorFromColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_nextColumnAfterOneBeingDrawnIsSelected": {
+      "name": "_nextColumnAfterOneBeingDrawnIsSelected",
+      "bridgedName": "_nextColumnAfterOneBeingDrawnIsSelected",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preparedHeaderCellAtColumn:": {
+      "name": "_preparedHeaderCellAtColumn:",
+      "bridgedName": "_preparedHeaderCellAtColumn",
+      "args": [
+        {
+          "name": "_preparedHeaderCellAtColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawBackgroundOverhangInRect:": {
+      "name": "drawBackgroundOverhangInRect:",
+      "bridgedName": "drawBackgroundOverhangInRect",
+      "args": [
+        {
+          "name": "drawBackgroundOverhangInRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawHeaderFillerInRect:matchLastState:": {
+      "name": "_drawHeaderFillerInRect:matchLastState:",
+      "bridgedName": "_drawHeaderFillerInRect_matchLastState",
+      "args": [
+        {
+          "name": "_drawHeaderFillerInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "matchLastState",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_vibrancyBlendMode": {
+      "name": "_vibrancyBlendMode",
+      "bridgedName": "_vibrancyBlendMode",
+      "args": [],
+      "returns": "int",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsVibrancy": {
+      "name": "allowsVibrancy",
+      "bridgedName": "allowsVibrancy",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_preparedHeaderFillerCell": {
+      "name": "_preparedHeaderFillerCell",
+      "bridgedName": "_preparedHeaderFillerCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tableView:didRemoveTableColumnAtIndex:": {
+      "name": "_tableView:didRemoveTableColumnAtIndex:",
+      "bridgedName": "_tableView_didRemoveTableColumnAtIndex",
+      "args": [
+        {
+          "name": "_tableView",
+          "type": "id"
+        },
+        {
+          "name": "didRemoveTableColumnAtIndex",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tableView:willRemoveTableColumn:": {
+      "name": "_tableView:willRemoveTableColumn:",
+      "bridgedName": "_tableView_willRemoveTableColumn",
+      "args": [
+        {
+          "name": "_tableView",
+          "type": "id"
+        },
+        {
+          "name": "willRemoveTableColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tableView:didAddTableColumn:": {
+      "name": "_tableView:didAddTableColumn:",
+      "bridgedName": "_tableView_didAddTableColumn",
+      "args": [
+        {
+          "name": "_tableView",
+          "type": "id"
+        },
+        {
+          "name": "didAddTableColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tableView:willAddTableColumn:": {
+      "name": "_tableView:willAddTableColumn:",
+      "bridgedName": "_tableView_willAddTableColumn",
+      "args": [
+        {
+          "name": "_tableView",
+          "type": "id"
+        },
+        {
+          "name": "willAddTableColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_overflowHeaderCellPrototype": {
+      "name": "_overflowHeaderCellPrototype",
+      "bridgedName": "_overflowHeaderCellPrototype",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setOverflowHeaderCellPrototype:": {
+      "name": "_setOverflowHeaderCellPrototype:",
+      "bridgedName": "_setOverflowHeaderCellPrototype",
+      "args": [
+        {
+          "name": "_setOverflowHeaderCellPrototype",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawHeaderCell:withFrame:withStateFromColumn:": {
+      "name": "_drawHeaderCell:withFrame:withStateFromColumn:",
+      "bridgedName": "_drawHeaderCell_withFrame_withStateFromColumn",
+      "args": [
+        {
+          "name": "_drawHeaderCell",
+          "type": "id"
+        },
+        {
+          "name": "withFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "withStateFromColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "columnAtPoint:": {
+      "name": "columnAtPoint:",
+      "bridgedName": "columnAtPoint",
+      "args": [
+        {
+          "name": "columnAtPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "headerRectOfColumn:": {
+      "name": "headerRectOfColumn:",
+      "bridgedName": "headerRectOfColumn",
+      "args": [
+        {
+          "name": "headerRectOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wantsClipViewToDoOverhangViews": {
+      "name": "_wantsClipViewToDoOverhangViews",
+      "bridgedName": "_wantsClipViewToDoOverhangViews",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultHeight": {
+      "name": "_defaultHeight",
+      "bridgedName": "_defaultHeight",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_canSupportTallerHeight": {
+      "name": "_canSupportTallerHeight",
+      "bridgedName": "_canSupportTallerHeight",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySizeOfChild:": {
+      "name": "accessibilitySizeOfChild:",
+      "bridgedName": "accessibilitySizeOfChild",
+      "args": [
+        {
+          "name": "accessibilitySizeOfChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPositionOfChild:": {
+      "name": "accessibilityPositionOfChild:",
+      "bridgedName": "accessibilityPositionOfChild",
+      "args": [
+        {
+          "name": "accessibilityPositionOfChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsChildFocusable:": {
+      "name": "accessibilityIsChildFocusable:",
+      "bridgedName": "accessibilityIsChildFocusable",
+      "args": [
+        {
+          "name": "accessibilityIsChildFocusable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHelpStringForChild:": {
+      "name": "accessibilityHelpStringForChild:",
+      "bridgedName": "accessibilityHelpStringForChild",
+      "args": [
+        {
+          "name": "accessibilityHelpStringForChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHitTest:": {
+      "name": "accessibilityHitTest:",
+      "bridgedName": "accessibilityHitTest",
+      "args": [
+        {
+          "name": "accessibilityHitTest",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsIgnored": {
+      "name": "accessibilityIsIgnored",
+      "bridgedName": "accessibilityIsIgnored",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildrenAttribute": {
+      "name": "accessibilityChildrenAttribute",
+      "bridgedName": "accessibilityChildrenAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityParentAttribute": {
+      "name": "accessibilityParentAttribute",
+      "bridgedName": "accessibilityParentAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRoleAttribute": {
+      "name": "accessibilityRoleAttribute",
+      "bridgedName": "accessibilityRoleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityColumnForChild:": {
+      "name": "accessibilityColumnForChild:",
+      "bridgedName": "accessibilityColumnForChild",
+      "args": [
+        {
+          "name": "accessibilityColumnForChild",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildForColumn:": {
+      "name": "accessibilityChildForColumn:",
+      "bridgedName": "accessibilityChildForColumn",
+      "args": [
+        {
+          "name": "accessibilityChildForColumn",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "draggedDistance": {
+      "name": "draggedDistance",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "draggedColumn": {
+      "name": "draggedColumn",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "resizedColumn": {
+      "name": "resizedColumn",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

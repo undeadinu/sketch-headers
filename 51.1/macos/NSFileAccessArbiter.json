@@ -1,0 +1,882 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSFileAccessArbiterXPCInterface.h",
+    "NSXPCListenerDelegate.h"
+  ],
+  "classes": [
+    "NSSet",
+    "NSString",
+    "NSURLPromisePair",
+    "NSFileAccessNode",
+    "NSMutableDictionary",
+    "NSObject<OS_dispatch_queue>",
+    "NSObject<OS_dispatch_source>",
+    "NSXPCConnection",
+    "NSXPCListener"
+  ],
+  "protocol": true,
+  "className": "NSFileAccessArbiter",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSXPCListenerDelegate",
+    "NSFileAccessArbiterXPCInterface"
+  ],
+  "methods": {
+    "tiePresenterForID:toItemAtURL:": {
+      "name": "tiePresenterForID:toItemAtURL:",
+      "bridgedName": "tiePresenterForID_toItemAtURL",
+      "args": [
+        {
+          "name": "tiePresenterForID",
+          "type": "id"
+        },
+        {
+          "name": "toItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didVersionChangeOfKind:toItemAtURL:withClientID:name:": {
+      "name": "writerWithPurposeID:didVersionChangeOfKind:toItemAtURL:withClientID:name:",
+      "bridgedName": "writerWithPurposeID_didVersionChangeOfKind_toItemAtURL_withClientID_name",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didVersionChangeOfKind",
+          "type": "id"
+        },
+        {
+          "name": "toItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "withClientID",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didChangeItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didMakeItemDisappearAtURL:": {
+      "name": "writerWithPurposeID:didMakeItemDisappearAtURL:",
+      "bridgedName": "writerWithPurposeID_didMakeItemDisappearAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didMakeItemDisappearAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeUbiquityAttributes:ofItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeUbiquityAttributes:ofItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeUbiquityAttributes_ofItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didChangeUbiquityAttributes",
+          "type": "id"
+        },
+        {
+          "name": "ofItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeSharingOfItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeSharingOfItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeSharingOfItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didChangeSharingOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didChangeUbiquityOfItemAtURL:": {
+      "name": "writerWithPurposeID:didChangeUbiquityOfItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didChangeUbiquityOfItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didChangeUbiquityOfItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didReconnectItemAtURL:": {
+      "name": "writerWithPurposeID:didReconnectItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didReconnectItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didReconnectItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didDisconnectItemAtURL:": {
+      "name": "writerWithPurposeID:didDisconnectItemAtURL:",
+      "bridgedName": "writerWithPurposeID_didDisconnectItemAtURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didDisconnectItemAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "writerWithPurposeID:didMoveItemAtURL:toURL:": {
+      "name": "writerWithPurposeID:didMoveItemAtURL:toURL:",
+      "bridgedName": "writerWithPurposeID_didMoveItemAtURL_toURL",
+      "args": [
+        {
+          "name": "writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didMoveItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "toURL",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelAccessClaimForID:": {
+      "name": "cancelAccessClaimForID:",
+      "bridgedName": "cancelAccessClaimForID",
+      "args": [
+        {
+          "name": "cancelAccessClaimForID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revokeSubarbitrationClaimForID:": {
+      "name": "revokeSubarbitrationClaimForID:",
+      "bridgedName": "revokeSubarbitrationClaimForID",
+      "args": [
+        {
+          "name": "revokeSubarbitrationClaimForID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "revokeAccessClaimForID:": {
+      "name": "revokeAccessClaimForID:",
+      "bridgedName": "revokeAccessClaimForID",
+      "args": [
+        {
+          "name": "revokeAccessClaimForID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_lostBirdProvider:": {
+      "name": "_lostBirdProvider:",
+      "bridgedName": "_lostBirdProvider",
+      "args": [
+        {
+          "name": "_lostBirdProvider",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_gainedBirdProvider:": {
+      "name": "_gainedBirdProvider:",
+      "bridgedName": "_gainedBirdProvider",
+      "args": [
+        {
+          "name": "_gainedBirdProvider",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "ensureProvidersIfNecessaryForClaim:atLocation:queue:thenContinue:": {
+      "name": "ensureProvidersIfNecessaryForClaim:atLocation:queue:thenContinue:",
+      "bridgedName": "ensureProvidersIfNecessaryForClaim_atLocation_queue_thenContinue",
+      "args": [
+        {
+          "name": "ensureProvidersIfNecessaryForClaim",
+          "type": "id"
+        },
+        {
+          "name": "atLocation",
+          "type": "id"
+        },
+        {
+          "name": "queue",
+          "type": "id"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_wakeUpBirdWithUID:urls:queue:thenContinue:": {
+      "name": "_wakeUpBirdWithUID:urls:queue:thenContinue:",
+      "bridgedName": "_wakeUpBirdWithUID_urls_queue_thenContinue",
+      "args": [
+        {
+          "name": "_wakeUpBirdWithUID",
+          "type": "unsigned int"
+        },
+        {
+          "name": "urls",
+          "type": "id"
+        },
+        {
+          "name": "queue",
+          "type": "id"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_registerForDebugInfoRequests": {
+      "name": "_registerForDebugInfoRequests",
+      "bridgedName": "_registerForDebugInfoRequests",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getDebugInformationIncludingEverything:withString:fromPid:thenContinue:": {
+      "name": "getDebugInformationIncludingEverything:withString:fromPid:thenContinue:",
+      "bridgedName": "getDebugInformationIncludingEverything_withString_fromPid_thenContinue",
+      "args": [
+        {
+          "name": "getDebugInformationIncludingEverything",
+          "type": "BOOL"
+        },
+        {
+          "name": "withString",
+          "type": "id"
+        },
+        {
+          "name": "fromPid",
+          "type": "int"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "getItemHasPresentersAtURL:completionHandler:": {
+      "name": "getItemHasPresentersAtURL:completionHandler:",
+      "bridgedName": "getItemHasPresentersAtURL_completionHandler",
+      "args": [
+        {
+          "name": "getItemHasPresentersAtURL",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_handleCanceledClient:": {
+      "name": "_handleCanceledClient:",
+      "bridgedName": "_handleCanceledClient",
+      "args": [
+        {
+          "name": "_handleCanceledClient",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performBarrierWithCompletionHandler:": {
+      "name": "performBarrierWithCompletionHandler:",
+      "bridgedName": "performBarrierWithCompletionHandler",
+      "args": [
+        {
+          "name": "performBarrierWithCompletionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideSubarbiterDebugInfoIncludingEverything:completionHandler:": {
+      "name": "provideSubarbiterDebugInfoIncludingEverything:completionHandler:",
+      "bridgedName": "provideSubarbiterDebugInfoIncludingEverything_completionHandler",
+      "args": [
+        {
+          "name": "provideSubarbiterDebugInfoIncludingEverything",
+          "type": "BOOL"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "provideDebugInfoWithLocalInfo:completionHandler:": {
+      "name": "provideDebugInfoWithLocalInfo:completionHandler:",
+      "bridgedName": "provideDebugInfoWithLocalInfo_completionHandler",
+      "args": [
+        {
+          "name": "provideDebugInfoWithLocalInfo",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startArbitratingWithReply:": {
+      "name": "startArbitratingWithReply:",
+      "bridgedName": "startArbitratingWithReply",
+      "args": [
+        {
+          "name": "startArbitratingWithReply",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareToArbitrateForURLs:": {
+      "name": "prepareToArbitrateForURLs:",
+      "bridgedName": "prepareToArbitrateForURLs",
+      "args": [
+        {
+          "name": "prepareToArbitrateForURLs",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeProviderWithID:uniqueID:": {
+      "name": "removeProviderWithID:uniqueID:",
+      "bridgedName": "removeProviderWithID_uniqueID",
+      "args": [
+        {
+          "name": "removeProviderWithID",
+          "type": "id"
+        },
+        {
+          "name": "uniqueID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addProvider:withID:uniqueID:forProvidedItemsURL:options:withServer:reply:": {
+      "name": "addProvider:withID:uniqueID:forProvidedItemsURL:options:withServer:reply:",
+      "bridgedName": "addProvider_withID_uniqueID_forProvidedItemsURL_options_withServer_reply",
+      "args": [
+        {
+          "name": "addProvider",
+          "type": "id"
+        },
+        {
+          "name": "withID",
+          "type": "id"
+        },
+        {
+          "name": "uniqueID",
+          "type": "id"
+        },
+        {
+          "name": "forProvidedItemsURL",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "withServer",
+          "type": "id"
+        },
+        {
+          "name": "reply",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePresenterWithID:": {
+      "name": "removePresenterWithID:",
+      "bridgedName": "removePresenterWithID",
+      "args": [
+        {
+          "name": "removePresenterWithID",
+          "type": "id"
+        }
+      ],
+      "returns": "oneway void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPresenter:withID:fileURL:lastPresentedItemEventIdentifier:ubiquityAttributes:options:responses:": {
+      "name": "addPresenter:withID:fileURL:lastPresentedItemEventIdentifier:ubiquityAttributes:options:responses:",
+      "bridgedName": "addPresenter_withID_fileURL_lastPresentedItemEventIdentifier_ubiquityAttributes_options_responses",
+      "args": [
+        {
+          "name": "addPresenter",
+          "type": "id"
+        },
+        {
+          "name": "withID",
+          "type": "id"
+        },
+        {
+          "name": "fileURL",
+          "type": "id"
+        },
+        {
+          "name": "lastPresentedItemEventIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "ubiquityAttributes",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "responses",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantSubarbitrationClaim:withServer:reply:": {
+      "name": "grantSubarbitrationClaim:withServer:reply:",
+      "bridgedName": "grantSubarbitrationClaim_withServer_reply",
+      "args": [
+        {
+          "name": "grantSubarbitrationClaim",
+          "type": "id"
+        },
+        {
+          "name": "withServer",
+          "type": "id"
+        },
+        {
+          "name": "reply",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "grantAccessClaim:withReply:": {
+      "name": "grantAccessClaim:withReply:",
+      "bridgedName": "grantAccessClaim_withReply",
+      "args": [
+        {
+          "name": "grantAccessClaim",
+          "type": "id"
+        },
+        {
+          "name": "withReply",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_enumerateSubarbitersUsingBlock:": {
+      "name": "_enumerateSubarbitersUsingBlock:",
+      "bridgedName": "_enumerateSubarbitersUsingBlock",
+      "args": [
+        {
+          "name": "_enumerateSubarbitersUsingBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "rootNode": {
+      "name": "rootNode",
+      "bridgedName": "rootNode",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopArbitrating": {
+      "name": "stopArbitrating",
+      "bridgedName": "stopArbitrating",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_startArbitratingItemsAtURLs:withSuperarbitrationServer:": {
+      "name": "_startArbitratingItemsAtURLs:withSuperarbitrationServer:",
+      "bridgedName": "_startArbitratingItemsAtURLs_withSuperarbitrationServer",
+      "args": [
+        {
+          "name": "_startArbitratingItemsAtURLs",
+          "type": "id"
+        },
+        {
+          "name": "withSuperarbitrationServer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeReactorForID:": {
+      "name": "_removeReactorForID:",
+      "bridgedName": "_removeReactorForID",
+      "args": [
+        {
+          "name": "_removeReactorForID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_willRemoveReactor:": {
+      "name": "_willRemoveReactor:",
+      "bridgedName": "_willRemoveReactor",
+      "args": [
+        {
+          "name": "_willRemoveReactor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addProvider:ofItemsAtURL:": {
+      "name": "_addProvider:ofItemsAtURL:",
+      "bridgedName": "_addProvider_ofItemsAtURL",
+      "args": [
+        {
+          "name": "_addProvider",
+          "type": "id"
+        },
+        {
+          "name": "ofItemsAtURL",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addPresenter:ofItemAtURL:watchingFile:withLastEventID:": {
+      "name": "_addPresenter:ofItemAtURL:watchingFile:withLastEventID:",
+      "bridgedName": "_addPresenter_ofItemAtURL_watchingFile_withLastEventID",
+      "args": [
+        {
+          "name": "_addPresenter",
+          "type": "id"
+        },
+        {
+          "name": "ofItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "watchingFile",
+          "type": "BOOL"
+        },
+        {
+          "name": "withLastEventID",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_writerWithPurposeID:didMoveItemAtURL:toURL:": {
+      "name": "_writerWithPurposeID:didMoveItemAtURL:toURL:",
+      "bridgedName": "_writerWithPurposeID_didMoveItemAtURL_toURL",
+      "args": [
+        {
+          "name": "_writerWithPurposeID",
+          "type": "id"
+        },
+        {
+          "name": "didMoveItemAtURL",
+          "type": "id"
+        },
+        {
+          "name": "toURL",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_grantSubarbitrationClaim:withServer:": {
+      "name": "_grantSubarbitrationClaim:withServer:",
+      "bridgedName": "_grantSubarbitrationClaim_withServer",
+      "args": [
+        {
+          "name": "_grantSubarbitrationClaim",
+          "type": "id"
+        },
+        {
+          "name": "withServer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_revokeAccessClaimForID:fromLocal:": {
+      "name": "_revokeAccessClaimForID:fromLocal:",
+      "bridgedName": "_revokeAccessClaimForID_fromLocal",
+      "args": [
+        {
+          "name": "_revokeAccessClaimForID",
+          "type": "id"
+        },
+        {
+          "name": "fromLocal",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_grantAccessClaim:": {
+      "name": "_grantAccessClaim:",
+      "bridgedName": "_grantAccessClaim",
+      "args": [
+        {
+          "name": "_grantAccessClaim",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "listener:shouldAcceptNewConnection:": {
+      "name": "listener:shouldAcceptNewConnection:",
+      "bridgedName": "listener_shouldAcceptNewConnection",
+      "args": [
+        {
+          "name": "listener",
+          "type": "id"
+        },
+        {
+          "name": "shouldAcceptNewConnection",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithQueue:isSubarbiter:listener:": {
+      "name": "initWithQueue:isSubarbiter:listener:",
+      "bridgedName": "initWithQueue_isSubarbiter_listener",
+      "args": [
+        {
+          "name": "initWithQueue",
+          "type": "id"
+        },
+        {
+          "name": "isSubarbiter",
+          "type": "BOOL"
+        },
+        {
+          "name": "listener",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "superarbitrationConnection": {
+      "name": "superarbitrationConnection",
+      "pointer": true,
+      "type": "NSXPCConnection",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

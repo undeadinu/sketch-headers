@@ -1,0 +1,195 @@
+{
+  "imports": [
+    "NSObject.h"
+  ],
+  "classes": [
+    "NSDocument",
+    "NSIndexSet"
+  ],
+  "protocol": false,
+  "className": "NSDocumentErrorRecoveryAttempter",
+  "extends": "NSObject",
+  "interfaces": [],
+  "methods": {
+    "cancelRecovery": {
+      "name": "cancelRecovery",
+      "bridgedName": "cancelRecovery",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptSilentRecoveryFromError:error:": {
+      "name": "attemptSilentRecoveryFromError:error:",
+      "bridgedName": "attemptSilentRecoveryFromError_error",
+      "args": [
+        {
+          "name": "attemptSilentRecoveryFromError",
+          "type": "id"
+        },
+        {
+          "name": "error",
+          "type": "id *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptSilentRecoveryFromError:thenContinue:": {
+      "name": "attemptSilentRecoveryFromError:thenContinue:",
+      "bridgedName": "attemptSilentRecoveryFromError_thenContinue",
+      "args": [
+        {
+          "name": "attemptSilentRecoveryFromError",
+          "type": "id"
+        },
+        {
+          "name": "thenContinue",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptRecoveryFromError:optionIndex:": {
+      "name": "attemptRecoveryFromError:optionIndex:",
+      "bridgedName": "attemptRecoveryFromError_optionIndex",
+      "args": [
+        {
+          "name": "attemptRecoveryFromError",
+          "type": "id"
+        },
+        {
+          "name": "optionIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:": {
+      "name": "attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:",
+      "bridgedName": "attemptRecoveryFromError_optionIndex_delegate_didRecoverSelector_contextInfo",
+      "args": [
+        {
+          "name": "attemptRecoveryFromError",
+          "type": "id"
+        },
+        {
+          "name": "optionIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "delegate",
+          "type": "id"
+        },
+        {
+          "name": "didRecoverSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:silentRecoveryOptionIndex:docModalRecoveryAttempter:appModalRecoveryAttempter:recoveryCanceler:": {
+      "name": "initWithDocument:silentRecoveryOptionIndex:docModalRecoveryAttempter:appModalRecoveryAttempter:recoveryCanceler:",
+      "bridgedName": "initWithDocument_silentRecoveryOptionIndex_docModalRecoveryAttempter_appModalRecoveryAttempter_recoveryCanceler",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "silentRecoveryOptionIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "docModalRecoveryAttempter",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "appModalRecoveryAttempter",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "recoveryCanceler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:wrappedRecoveryAttempter:customOptionIndexes:docModalRecoveryAttempter:appModalRecoveryAttempter:recoveryCanceler:": {
+      "name": "initWithDocument:wrappedRecoveryAttempter:customOptionIndexes:docModalRecoveryAttempter:appModalRecoveryAttempter:recoveryCanceler:",
+      "bridgedName": "initWithDocument_wrappedRecoveryAttempter_customOptionIndexes_docModalRecoveryAttempter_appModalRecoveryAttempter_recoveryCanceler",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "wrappedRecoveryAttempter",
+          "type": "id"
+        },
+        {
+          "name": "customOptionIndexes",
+          "type": "id"
+        },
+        {
+          "name": "docModalRecoveryAttempter",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "appModalRecoveryAttempter",
+          "type": "CDUnknownBlockType"
+        },
+        {
+          "name": "recoveryCanceler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDocument:wrappedRecoveryAttempter:continuer:": {
+      "name": "initWithDocument:wrappedRecoveryAttempter:continuer:",
+      "bridgedName": "initWithDocument_wrappedRecoveryAttempter_continuer",
+      "args": [
+        {
+          "name": "initWithDocument",
+          "type": "id"
+        },
+        {
+          "name": "wrappedRecoveryAttempter",
+          "type": "id"
+        },
+        {
+          "name": "continuer",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

@@ -1,0 +1,428 @@
+{
+  "imports": [
+    "MSEventHandler.h"
+  ],
+  "classes": [
+    "MSLayer",
+    "MSStyledLayer",
+    "NSMutableDictionary"
+  ],
+  "protocol": false,
+  "className": "MSPointsEventHandler",
+  "extends": "MSEventHandler",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertPointToAbsoluteCoordinates:": {
+      "name": "convertPointToAbsoluteCoordinates:",
+      "bridgedName": "convertPointToAbsoluteCoordinates",
+      "args": [
+        {
+          "name": "convertPointToAbsoluteCoordinates",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapPoint:toLines:": {
+      "name": "snapPoint:toLines:",
+      "bridgedName": "snapPoint_toLines",
+      "args": [
+        {
+          "name": "snapPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "toLines",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointsToSnap": {
+      "name": "pointsToSnap",
+      "bridgedName": "pointsToSnap",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "snapTargetsForPoints:": {
+      "name": "snapTargetsForPoints:",
+      "bridgedName": "snapTargetsForPoints",
+      "args": [
+        {
+          "name": "snapTargetsForPoints",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "useSnaps": {
+      "name": "useSnaps",
+      "bridgedName": "useSnaps",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHandleAtPoint:index:selected:": {
+      "name": "drawHandleAtPoint:index:selected:",
+      "bridgedName": "drawHandleAtPoint_index_selected",
+      "args": [
+        {
+          "name": "drawHandleAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "index",
+          "type": "long long"
+        },
+        {
+          "name": "selected",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHandles": {
+      "name": "drawHandles",
+      "bridgedName": "drawHandles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawSnaps": {
+      "name": "drawSnaps",
+      "bridgedName": "drawSnaps",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleLinesPath": {
+      "name": "handleLinesPath",
+      "bridgedName": "handleLinesPath",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handleLinesColor": {
+      "name": "handleLinesColor",
+      "bridgedName": "handleLinesColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHandleLines": {
+      "name": "drawHandleLines",
+      "bridgedName": "drawHandleLines",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInRect:context:": {
+      "name": "drawInRect:context:",
+      "bridgedName": "drawInRect_context",
+      "args": [
+        {
+          "name": "drawInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "context",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldReturnToDefaultHandlerInCurrentState": {
+      "name": "shouldReturnToDefaultHandlerInCurrentState",
+      "bridgedName": "shouldReturnToDefaultHandlerInCurrentState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "name": "absoluteMouseUp",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDragged:flags:": {
+      "name": "absoluteMouseDragged:flags:",
+      "bridgedName": "absoluteMouseDragged_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDragged",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointAtIndex:toLocation:modifierFlags:": {
+      "name": "movePointAtIndex:toLocation:modifierFlags:",
+      "bridgedName": "movePointAtIndex_toLocation_modifierFlags",
+      "args": [
+        {
+          "name": "movePointAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacePointAtIndex:withPoint:": {
+      "name": "replacePointAtIndex:withPoint:",
+      "bridgedName": "replacePointAtIndex_withPoint",
+      "args": [
+        {
+          "name": "replacePointAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "withPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointAtIndex:": {
+      "name": "pointAtIndex:",
+      "bridgedName": "pointAtIndex",
+      "args": [
+        {
+          "name": "pointAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "point:isNearPoint:": {
+      "name": "point:isNearPoint:",
+      "bridgedName": "point_isNearPoint",
+      "args": [
+        {
+          "name": "point",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "isNearPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "indexOfPointAtLocation:": {
+      "name": "indexOfPointAtLocation:",
+      "bridgedName": "indexOfPointAtLocation",
+      "args": [
+        {
+          "name": "indexOfPointAtLocation",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "allowsEmptySelection": {
+      "name": "allowsEmptySelection",
+      "bridgedName": "allowsEmptySelection",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertPointToUnitCoordinateSpace:": {
+      "name": "convertPointToUnitCoordinateSpace:",
+      "bridgedName": "convertPointToUnitCoordinateSpace",
+      "args": [
+        {
+          "name": "convertPointToUnitCoordinateSpace",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "sendUpdate": {
+      "name": "sendUpdate",
+      "bridgedName": "sendUpdate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bounds": {
+      "name": "bounds",
+      "bridgedName": "bounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "points": {
+      "name": "points",
+      "bridgedName": "points",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerWillLoseFocus": {
+      "name": "handlerWillLoseFocus",
+      "bridgedName": "handlerWillLoseFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerGotFocus": {
+      "name": "handlerGotFocus",
+      "bridgedName": "handlerGotFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "findSelectedLayer": {
+      "name": "findSelectedLayer",
+      "bridgedName": "findSelectedLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithManager:": {
+      "name": "initWithManager:",
+      "bridgedName": "initWithManager",
+      "args": [
+        {
+          "name": "initWithManager",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "indexForSelectedPoint": {
+      "name": "indexForSelectedPoint",
+      "pointer": false,
+      "type": "long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "layer": {
+      "name": "layer",
+      "pointer": true,
+      "type": "MSStyledLayer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "pointer": true,
+      "type": "MSLayer",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

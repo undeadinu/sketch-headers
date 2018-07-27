@@ -1,0 +1,382 @@
+{
+  "imports": [
+    "MSPointsEventHandler.h"
+  ],
+  "classes": [
+    "DKDistortionTransform",
+    "MSLayerGroup",
+    "MSPointArray",
+    "NSMapTable",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "MSTransformEventHandler",
+  "extends": "MSPointsEventHandler",
+  "interfaces": [],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "bounds": {
+      "name": "bounds",
+      "bridgedName": "bounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "coordinateSpace": {
+      "name": "coordinateSpace",
+      "bridgedName": "coordinateSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawHandleLines": {
+      "name": "drawHandleLines",
+      "bridgedName": "drawHandleLines",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetTransformsForLayer:": {
+      "name": "resetTransformsForLayer:",
+      "bridgedName": "resetTransformsForLayer",
+      "args": [
+        {
+          "name": "resetTransformsForLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "transformLayers": {
+      "name": "transformLayers",
+      "bridgedName": "transformLayers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorForCorner:": {
+      "name": "cursorForCorner:",
+      "bridgedName": "cursorForCorner",
+      "args": [
+        {
+          "name": "cursorForCorner",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseUp:flags:": {
+      "name": "absoluteMouseUp:flags:",
+      "bridgedName": "absoluteMouseUp_flags",
+      "args": [
+        {
+          "name": "absoluteMouseUp",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDragged:flags:": {
+      "name": "absoluteMouseDragged:flags:",
+      "bridgedName": "absoluteMouseDragged_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDragged",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "absoluteMouseDown:clickCount:flags:": {
+      "name": "absoluteMouseDown:clickCount:flags:",
+      "bridgedName": "absoluteMouseDown_clickCount_flags",
+      "args": [
+        {
+          "name": "absoluteMouseDown",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "clickCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:": {
+      "name": "trackMouse:",
+      "bridgedName": "trackMouse",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:": {
+      "name": "keyDown:",
+      "bridgedName": "keyDown",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "useSnaps": {
+      "name": "useSnaps",
+      "bridgedName": "useSnaps",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointsToSnap": {
+      "name": "pointsToSnap",
+      "bridgedName": "pointsToSnap",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacePointAtCorner:withPoint:": {
+      "name": "replacePointAtCorner:withPoint:",
+      "bridgedName": "replacePointAtCorner_withPoint",
+      "args": [
+        {
+          "name": "replacePointAtCorner",
+          "type": "long long"
+        },
+        {
+          "name": "withPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pointAtCorner:": {
+      "name": "pointAtCorner:",
+      "bridgedName": "pointAtCorner",
+      "args": [
+        {
+          "name": "pointAtCorner",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointsRelatedToCorner:newLocation:previous:modifierFlags:": {
+      "name": "movePointsRelatedToCorner:newLocation:previous:modifierFlags:",
+      "bridgedName": "movePointsRelatedToCorner_newLocation_previous_modifierFlags",
+      "args": [
+        {
+          "name": "movePointsRelatedToCorner",
+          "type": "long long"
+        },
+        {
+          "name": "newLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "previous",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointAtIndex:toLocation:modifierFlags:": {
+      "name": "movePointAtIndex:toLocation:modifierFlags:",
+      "bridgedName": "movePointAtIndex_toLocation_modifierFlags",
+      "args": [
+        {
+          "name": "movePointAtIndex",
+          "type": "long long"
+        },
+        {
+          "name": "toLocation",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "modifierFlags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "points": {
+      "name": "points",
+      "bridgedName": "points",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerWillLoseFocus": {
+      "name": "handlerWillLoseFocus",
+      "bridgedName": "handlerWillLoseFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "recordOriginalShapes": {
+      "name": "recordOriginalShapes",
+      "bridgedName": "recordOriginalShapes",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "handlerGotFocus": {
+      "name": "handlerGotFocus",
+      "bridgedName": "handlerGotFocus",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithManager:": {
+      "name": "initWithManager:",
+      "bridgedName": "initWithManager",
+      "args": [
+        {
+          "name": "initWithManager",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "firstSelectedLocation": {
+      "name": "firstSelectedLocation",
+      "pointer": false,
+      "type": "struct CGPoint",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "directionLock": {
+      "name": "directionLock",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "currentGroup": {
+      "name": "currentGroup",
+      "pointer": true,
+      "type": "MSLayerGroup",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "originalPoints": {
+      "name": "originalPoints",
+      "pointer": true,
+      "type": "NSMutableArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "transform": {
+      "name": "transform",
+      "pointer": true,
+      "type": "DKDistortionTransform",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "shapeMapping": {
+      "name": "shapeMapping",
+      "pointer": true,
+      "type": "NSMapTable",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "mouseDownPoints": {
+      "name": "mouseDownPoints",
+      "pointer": true,
+      "type": "MSPointArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "transformPoints": {
+      "name": "transformPoints",
+      "pointer": true,
+      "type": "MSPointArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "originalRect": {
+      "name": "originalRect",
+      "pointer": false,
+      "type": "struct CGRect",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}

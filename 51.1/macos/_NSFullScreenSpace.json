@@ -1,0 +1,1113 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSAnimationDelegate.h"
+  ],
+  "classes": [
+    "NSMutableArray",
+    "NSPointerArray",
+    "NSString",
+    "_NSFullScreenBackdropController",
+    "_NSFullScreenContentController",
+    "_NSFullScreenCreateTileDropTargetController",
+    "_NSFullScreenModalStackController",
+    "_NSFullScreenSpaceMenuRevealAnimation",
+    "_NSFullScreenTileDividerWindow",
+    "_NSFullScreenTileOverlayWindow",
+    "_NSFullScreenTileResizeCrossfadeOverlayWindow"
+  ],
+  "protocol": false,
+  "className": "_NSFullScreenSpace",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSAnimationDelegate"
+  ],
+  "methods": {
+    "tileRectForSpaceWithID:": {
+      "name": "tileRectForSpaceWithID:",
+      "bridgedName": "tileRectForSpaceWithID",
+      "args": [
+        {
+          "name": "tileRectForSpaceWithID",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "spaceWithContentWindowID:": {
+      "name": "spaceWithContentWindowID:",
+      "bridgedName": "spaceWithContentWindowID",
+      "args": [
+        {
+          "name": "spaceWithContentWindowID",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "hasTransitionForWindowID:ofClass:": {
+      "name": "hasTransitionForWindowID:ofClass:",
+      "bridgedName": "hasTransitionForWindowID_ofClass",
+      "args": [
+        {
+          "name": "hasTransitionForWindowID",
+          "type": "unsigned int"
+        },
+        {
+          "name": "ofClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "hasTransitionForWindowID:": {
+      "name": "hasTransitionForWindowID:",
+      "bridgedName": "hasTransitionForWindowID",
+      "args": [
+        {
+          "name": "hasTransitionForWindowID",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "hasSpaceEnteringOrExitingFullScreen": {
+      "name": "hasSpaceEnteringOrExitingFullScreen",
+      "bridgedName": "hasSpaceEnteringOrExitingFullScreen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fullScreenSpaceEnteringFullScreen": {
+      "name": "fullScreenSpaceEnteringFullScreen",
+      "bridgedName": "fullScreenSpaceEnteringFullScreen",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "visibleFullScreenSpaceOnScreen:": {
+      "name": "visibleFullScreenSpaceOnScreen:",
+      "bridgedName": "visibleFullScreenSpaceOnScreen",
+      "args": [
+        {
+          "name": "visibleFullScreenSpaceOnScreen",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "visibleFullScreenSpaces": {
+      "name": "visibleFullScreenSpaces",
+      "bridgedName": "visibleFullScreenSpaces",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fullScreenSpaces": {
+      "name": "fullScreenSpaces",
+      "bridgedName": "fullScreenSpaces",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "hasVisibleFullScreenSpaces": {
+      "name": "hasVisibleFullScreenSpaces",
+      "bridgedName": "hasVisibleFullScreenSpaces",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_unregisterCGSNotificationsForAllSpaces": {
+      "name": "_unregisterCGSNotificationsForAllSpaces",
+      "bridgedName": "_unregisterCGSNotificationsForAllSpaces",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_registerCGSNotificationsIfNeededForSpace:": {
+      "name": "_registerCGSNotificationsIfNeededForSpace:",
+      "bridgedName": "_registerCGSNotificationsIfNeededForSpace",
+      "args": [
+        {
+          "name": "_registerCGSNotificationsIfNeededForSpace",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "placeholderFullScreenSpace": {
+      "name": "placeholderFullScreenSpace",
+      "bridgedName": "placeholderFullScreenSpace",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fullScreenSpaceWithTileID:createIfNeeded:": {
+      "name": "fullScreenSpaceWithTileID:createIfNeeded:",
+      "bridgedName": "fullScreenSpaceWithTileID_createIfNeeded",
+      "args": [
+        {
+          "name": "fullScreenSpaceWithTileID",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "createIfNeeded",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "fullScreenSpaceWithTileID:": {
+      "name": "fullScreenSpaceWithTileID:",
+      "bridgedName": "fullScreenSpaceWithTileID",
+      "args": [
+        {
+          "name": "fullScreenSpaceWithTileID",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_placeholderFullScreenInstances": {
+      "name": "_placeholderFullScreenInstances",
+      "bridgedName": "_placeholderFullScreenInstances",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_fullScreenMapTable": {
+      "name": "_fullScreenMapTable",
+      "bridgedName": "_fullScreenMapTable",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "interruptTransitions": {
+      "name": "interruptTransitions",
+      "bridgedName": "interruptTransitions",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_showTileDividerWindows": {
+      "name": "_showTileDividerWindows",
+      "bridgedName": "_showTileDividerWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hideTileDividerWindows": {
+      "name": "_hideTileDividerWindows",
+      "bridgedName": "_hideTileDividerWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeEastTileDividerWindow": {
+      "name": "_removeEastTileDividerWindow",
+      "bridgedName": "_removeEastTileDividerWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeWestTileDividerWindow": {
+      "name": "_removeWestTileDividerWindow",
+      "bridgedName": "_removeWestTileDividerWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeTileDividerWindows": {
+      "name": "_removeTileDividerWindows",
+      "bridgedName": "_removeTileDividerWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_reshapeTileDividerWindows": {
+      "name": "_reshapeTileDividerWindows",
+      "bridgedName": "_reshapeTileDividerWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTileDividerWindows": {
+      "name": "_updateTileDividerWindows",
+      "bridgedName": "_updateTileDividerWindows",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveSpaceResizeDirections": {
+      "name": "_effectiveSpaceResizeDirections",
+      "bridgedName": "_effectiveSpaceResizeDirections",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replaceContentWithSnapshotForClose": {
+      "name": "replaceContentWithSnapshotForClose",
+      "bridgedName": "replaceContentWithSnapshotForClose",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isPerformingExternalCloseAnimation": {
+      "name": "isPerformingExternalCloseAnimation",
+      "bridgedName": "isPerformingExternalCloseAnimation",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSeparateExternalCloseAnimation": {
+      "name": "beginSeparateExternalCloseAnimation",
+      "bridgedName": "beginSeparateExternalCloseAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "backgroundWindowIDs": {
+      "name": "backgroundWindowIDs",
+      "bridgedName": "backgroundWindowIDs",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "windowIDsInTile": {
+      "name": "windowIDsInTile",
+      "bridgedName": "windowIDsInTile",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isLeftTile": {
+      "name": "isLeftTile",
+      "bridgedName": "isLeftTile",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "siblingFullScreenSpaceFromThisApp": {
+      "name": "siblingFullScreenSpaceFromThisApp",
+      "bridgedName": "siblingFullScreenSpaceFromThisApp",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasSiblingFromThisApp": {
+      "name": "hasSiblingFromThisApp",
+      "bridgedName": "hasSiblingFromThisApp",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileShapeAndReshapeContentsUsingTileFrame:ackServer:": {
+      "name": "updateTileShapeAndReshapeContentsUsingTileFrame:ackServer:",
+      "bridgedName": "updateTileShapeAndReshapeContentsUsingTileFrame_ackServer",
+      "args": [
+        {
+          "name": "updateTileShapeAndReshapeContentsUsingTileFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ackServer",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileShapeAndReshapeContentsUsingTileFrame:": {
+      "name": "updateTileShapeAndReshapeContentsUsingTileFrame:",
+      "bridgedName": "updateTileShapeAndReshapeContentsUsingTileFrame",
+      "args": [
+        {
+          "name": "updateTileShapeAndReshapeContentsUsingTileFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateTileShapeAndReshapeContentsWithAckServer:": {
+      "name": "_updateTileShapeAndReshapeContentsWithAckServer:",
+      "bridgedName": "_updateTileShapeAndReshapeContentsWithAckServer",
+      "args": [
+        {
+          "name": "_updateTileShapeAndReshapeContentsWithAckServer",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileShapeAndReshapeContents": {
+      "name": "updateTileShapeAndReshapeContents",
+      "bridgedName": "updateTileShapeAndReshapeContents",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileShapeAndReshapeContentsWithoutNotifyingServer": {
+      "name": "updateTileShapeAndReshapeContentsWithoutNotifyingServer",
+      "bridgedName": "updateTileShapeAndReshapeContentsWithoutNotifyingServer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileContentRect": {
+      "name": "tileContentRect",
+      "bridgedName": "tileContentRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileToolbarContentRect": {
+      "name": "tileToolbarContentRect",
+      "bridgedName": "tileToolbarContentRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "availableWallSpaceSize": {
+      "name": "availableWallSpaceSize",
+      "bridgedName": "availableWallSpaceSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileFillsScreen": {
+      "name": "tileFillsScreen",
+      "bridgedName": "tileFillsScreen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentSpaceCGRect": {
+      "name": "parentSpaceCGRect",
+      "bridgedName": "parentSpaceCGRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wallSpaceRect": {
+      "name": "wallSpaceRect",
+      "bridgedName": "wallSpaceRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileRect": {
+      "name": "tileRect",
+      "bridgedName": "tileRect",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateTileShape": {
+      "name": "updateTileShape",
+      "bridgedName": "updateTileShape",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cacheTileRect:": {
+      "name": "_cacheTileRect:",
+      "bridgedName": "_cacheTileRect",
+      "args": [
+        {
+          "name": "_cacheTileRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wallSpaceID": {
+      "name": "wallSpaceID",
+      "bridgedName": "wallSpaceID",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentSpaceID": {
+      "name": "parentSpaceID",
+      "bridgedName": "parentSpaceID",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "modelBackingIsValid": {
+      "name": "modelBackingIsValid",
+      "bridgedName": "modelBackingIsValid",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidateModelBacking": {
+      "name": "invalidateModelBacking",
+      "bridgedName": "invalidateModelBacking",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "screen": {
+      "name": "screen",
+      "bridgedName": "screen",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayChanged": {
+      "name": "displayChanged",
+      "bridgedName": "displayChanged",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "parentSpaceRelocated": {
+      "name": "parentSpaceRelocated",
+      "bridgedName": "parentSpaceRelocated",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suppressImplicitFullScreenForOtherWindows": {
+      "name": "suppressImplicitFullScreenForOtherWindows",
+      "bridgedName": "suppressImplicitFullScreenForOtherWindows",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_spaceConsideredVisible": {
+      "name": "_spaceConsideredVisible",
+      "bridgedName": "_spaceConsideredVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resolveTileSpaceID:": {
+      "name": "resolveTileSpaceID:",
+      "bridgedName": "resolveTileSpaceID",
+      "args": [
+        {
+          "name": "resolveTileSpaceID",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithTileSpaceID:": {
+      "name": "initWithTileSpaceID:",
+      "bridgedName": "initWithTileSpaceID",
+      "args": [
+        {
+          "name": "initWithTileSpaceID",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeTransition:": {
+      "name": "removeTransition:",
+      "bridgedName": "removeTransition",
+      "args": [
+        {
+          "name": "removeTransition",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startTransition:": {
+      "name": "startTransition:",
+      "bridgedName": "startTransition",
+      "args": [
+        {
+          "name": "startTransition",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_didBeginExitTransition": {
+      "name": "_didBeginExitTransition",
+      "bridgedName": "_didBeginExitTransition",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isExitingFullScreen": {
+      "name": "isExitingFullScreen",
+      "bridgedName": "isExitingFullScreen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEnteringFullScreen": {
+      "name": "isEnteringFullScreen",
+      "bridgedName": "isEnteringFullScreen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isInFullScreen": {
+      "name": "isInFullScreen",
+      "bridgedName": "isInFullScreen",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isTransitioning": {
+      "name": "isTransitioning",
+      "bridgedName": "isTransitioning",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inLiveResize": {
+      "name": "inLiveResize",
+      "bridgedName": "inLiveResize",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endLiveResize": {
+      "name": "endLiveResize",
+      "bridgedName": "endLiveResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startLiveResize": {
+      "name": "startLiveResize",
+      "bridgedName": "startLiveResize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cursorForResizeDirection:": {
+      "name": "cursorForResizeDirection:",
+      "bridgedName": "cursorForResizeDirection",
+      "args": [
+        {
+          "name": "cursorForResizeDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentDividerResizeDirections": {
+      "name": "currentDividerResizeDirections",
+      "bridgedName": "currentDividerResizeDirections",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performDividerDragWithEvent:forResizeDirection:": {
+      "name": "performDividerDragWithEvent:forResizeDirection:",
+      "bridgedName": "performDividerDragWithEvent_forResizeDirection",
+      "args": [
+        {
+          "name": "performDividerDragWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "forResizeDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tileOverlayWindow": {
+      "name": "tileOverlayWindow",
+      "bridgedName": "tileOverlayWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateOverlayWithBlur:": {
+      "name": "updateOverlayWithBlur:",
+      "bridgedName": "updateOverlayWithBlur",
+      "args": [
+        {
+          "name": "updateOverlayWithBlur",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hideOverlayWindow": {
+      "name": "hideOverlayWindow",
+      "bridgedName": "hideOverlayWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showOverlayWindowFromFrame:blurContent:": {
+      "name": "showOverlayWindowFromFrame:blurContent:",
+      "bridgedName": "showOverlayWindowFromFrame_blurContent",
+      "args": [
+        {
+          "name": "showOverlayWindowFromFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "blurContent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showingOverlayWindowFrame": {
+      "name": "showingOverlayWindowFrame",
+      "bridgedName": "showingOverlayWindowFrame",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_endOverlayPresentation:": {
+      "name": "_endOverlayPresentation:",
+      "bridgedName": "_endOverlayPresentation",
+      "args": [
+        {
+          "name": "_endOverlayPresentation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_beginOverlayPresentation:": {
+      "name": "_beginOverlayPresentation:",
+      "bridgedName": "_beginOverlayPresentation",
+      "args": [
+        {
+          "name": "_beginOverlayPresentation",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelSiblingOverlayAnimations": {
+      "name": "cancelSiblingOverlayAnimations",
+      "bridgedName": "cancelSiblingOverlayAnimations",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeSiblingOverlayWindow": {
+      "name": "removeSiblingOverlayWindow",
+      "bridgedName": "removeSiblingOverlayWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateSiblingOverlayWindow": {
+      "name": "updateSiblingOverlayWindow",
+      "bridgedName": "updateSiblingOverlayWindow",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "beginSiblingOverlayPresentationIfNeeded": {
+      "name": "beginSiblingOverlayPresentationIfNeeded",
+      "bridgedName": "beginSiblingOverlayPresentationIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setupSiblingOverlayWindowImmediately:blurContent:": {
+      "name": "setupSiblingOverlayWindowImmediately:blurContent:",
+      "bridgedName": "setupSiblingOverlayWindowImmediately_blurContent",
+      "args": [
+        {
+          "name": "setupSiblingOverlayWindowImmediately",
+          "type": "BOOL"
+        },
+        {
+          "name": "blurContent",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showingSiblingTileOverlayWindow": {
+      "name": "showingSiblingTileOverlayWindow",
+      "bridgedName": "showingSiblingTileOverlayWindow",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performResizeCrossfadeIfNeeded": {
+      "name": "performResizeCrossfadeIfNeeded",
+      "bridgedName": "performResizeCrossfadeIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "prepareResizeCrossfadeOverlayWithDuration:resize:": {
+      "name": "prepareResizeCrossfadeOverlayWithDuration:resize:",
+      "bridgedName": "prepareResizeCrossfadeOverlayWithDuration_resize",
+      "args": [
+        {
+          "name": "prepareResizeCrossfadeOverlayWithDuration",
+          "type": "double"
+        },
+        {
+          "name": "resize",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelResizeCrossfadeAnimation": {
+      "name": "_cancelResizeCrossfadeAnimation",
+      "bridgedName": "_cancelResizeCrossfadeAnimation",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suppressFetchingNewTileSize": {
+      "name": "suppressFetchingNewTileSize",
+      "bridgedName": "suppressFetchingNewTileSize",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "perfTestResizeWindow": {
+      "name": "perfTestResizeWindow",
+      "bridgedName": "perfTestResizeWindow",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuBarRevealUpdated:": {
+      "name": "_menuBarRevealUpdated:",
+      "bridgedName": "_menuBarRevealUpdated",
+      "args": [
+        {
+          "name": "_menuBarRevealUpdated",
+          "type": "float"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_animateMenuBarTo:startingAt:duration:": {
+      "name": "_animateMenuBarTo:startingAt:duration:",
+      "bridgedName": "_animateMenuBarTo_startingAt_duration",
+      "args": [
+        {
+          "name": "_animateMenuBarTo",
+          "type": "float"
+        },
+        {
+          "name": "startingAt",
+          "type": "double"
+        },
+        {
+          "name": "duration",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelMenuRevealAnimationIfNeeded": {
+      "name": "_cancelMenuRevealAnimationIfNeeded",
+      "bridgedName": "_cancelMenuRevealAnimationIfNeeded",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animation:valueForProgress:": {
+      "name": "animation:valueForProgress:",
+      "bridgedName": "animation_valueForProgress",
+      "args": [
+        {
+          "name": "animation",
+          "type": "id"
+        },
+        {
+          "name": "valueForProgress",
+          "type": "float"
+        }
+      ],
+      "returns": "float",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "animationDidEnd:": {
+      "name": "animationDidEnd:",
+      "bridgedName": "animationDidEnd",
+      "args": [
+        {
+          "name": "animationDidEnd",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "captureSnapshotIncludingMenuBar:contentRect:": {
+      "name": "captureSnapshotIncludingMenuBar:contentRect:",
+      "bridgedName": "captureSnapshotIncludingMenuBar_contentRect",
+      "args": [
+        {
+          "name": "captureSnapshotIncludingMenuBar",
+          "type": "BOOL"
+        },
+        {
+          "name": "contentRect",
+          "type": "struct CGRect *"
+        }
+      ],
+      "returns": "struct CGImage *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "rightReservedSpace": {
+      "name": "rightReservedSpace",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "leftReservedSpace": {
+      "name": "leftReservedSpace",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "bottomReservedSpace": {
+      "name": "bottomReservedSpace",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "exitReplacementWindowID": {
+      "name": "exitReplacementWindowID",
+      "pointer": false,
+      "type": "unsigned int",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "createTileDropTargetController": {
+      "name": "createTileDropTargetController",
+      "pointer": true,
+      "type": "_NSFullScreenCreateTileDropTargetController",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "modalStackController": {
+      "name": "modalStackController",
+      "pointer": true,
+      "type": "_NSFullScreenModalStackController",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "backdropController": {
+      "name": "backdropController",
+      "pointer": true,
+      "type": "_NSFullScreenBackdropController",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "contentController": {
+      "name": "contentController",
+      "pointer": true,
+      "type": "_NSFullScreenContentController",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "tileSpaceID": {
+      "name": "tileSpaceID",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

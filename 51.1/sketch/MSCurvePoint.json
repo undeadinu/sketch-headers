@@ -1,0 +1,255 @@
+{
+  "imports": [
+    "NSObject.h",
+    "_MSCurvePoint.h",
+    "MSCurvePoint.h",
+    "NSCopying.h"
+  ],
+  "classes": [
+    "NSString"
+  ],
+  "protocol": true,
+  "className": "MSCurvePoint",
+  "extends": "_MSCurvePoint",
+  "interfaces": [
+    "MSCurvePoint",
+    "NSCopying"
+  ],
+  "methods": {
+    "pointWithPoint:curveTo:curveFrom:": {
+      "name": "pointWithPoint:curveTo:curveFrom:",
+      "bridgedName": "pointWithPoint_curveTo_curveFrom",
+      "args": [
+        {
+          "name": "pointWithPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "curveTo",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "curveFrom",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "pointWithPoint:": {
+      "name": "pointWithPoint:",
+      "bridgedName": "pointWithPoint",
+      "args": [
+        {
+          "name": "pointWithPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "point": {
+      "name": "point",
+      "bridgedName": "point",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "multiplyBy:": {
+      "name": "multiplyBy:",
+      "bridgedName": "multiplyBy",
+      "args": [
+        {
+          "name": "multiplyBy",
+          "type": "double"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveCurveFromTo:": {
+      "name": "moveCurveFromTo:",
+      "bridgedName": "moveCurveFromTo",
+      "args": [
+        {
+          "name": "moveCurveFromTo",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveCurveToTo:": {
+      "name": "moveCurveToTo:",
+      "bridgedName": "moveCurveToTo",
+      "args": [
+        {
+          "name": "moveCurveToTo",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePointTo:": {
+      "name": "movePointTo:",
+      "bridgedName": "movePointTo",
+      "args": [
+        {
+          "name": "movePointTo",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "locationOfPoint:": {
+      "name": "locationOfPoint:",
+      "bridgedName": "locationOfPoint",
+      "args": [
+        {
+          "name": "locationOfPoint",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inferCurveMode": {
+      "name": "inferCurveMode",
+      "bridgedName": "inferCurveMode",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEffectivelyStraight": {
+      "name": "isEffectivelyStraight",
+      "bridgedName": "isEffectivelyStraight",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isRounded": {
+      "name": "isRounded",
+      "bridgedName": "isRounded",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeCurveModeTo:usingPoint:": {
+      "name": "changeCurveModeTo:usingPoint:",
+      "bridgedName": "changeCurveModeTo_usingPoint",
+      "args": [
+        {
+          "name": "changeCurveModeTo",
+          "type": "long long"
+        },
+        {
+          "name": "usingPoint",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentBehaviour": {
+      "name": "currentBehaviour",
+      "bridgedName": "currentBehaviour",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPoint:curveTo:curveFrom:": {
+      "name": "initWithPoint:curveTo:curveFrom:",
+      "bridgedName": "initWithPoint_curveTo_curveFrom",
+      "args": [
+        {
+          "name": "initWithPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "curveTo",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "curveFrom",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithPoint:": {
+      "name": "initWithPoint:",
+      "bridgedName": "initWithPoint",
+      "args": [
+        {
+          "name": "initWithPoint",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "isStraight": {
+      "name": "isStraight",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

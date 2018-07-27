@@ -1,0 +1,437 @@
+{
+  "imports": [
+    "NSViewController.h",
+    "MSFlowMenuBuilderTarget.h",
+    "MSInspectorSection.h",
+    "MSLayerChangeObserver.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSButton",
+    "NSPopUpButton",
+    "NSString",
+    "NSView"
+  ],
+  "protocol": false,
+  "className": "MSFlowInspectorViewController",
+  "extends": "NSViewController",
+  "interfaces": [
+    "MSLayerChangeObserver",
+    "MSInspectorSection",
+    "MSFlowMenuBuilderTarget"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flowAnimationTypes": {
+      "name": "flowAnimationTypes",
+      "bridgedName": "flowAnimationTypes",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flowAnimationButtons": {
+      "name": "flowAnimationButtons",
+      "bridgedName": "flowAnimationButtons",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "document": {
+      "name": "document",
+      "bridgedName": "document",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "reload": {
+      "name": "reload",
+      "bridgedName": "reload",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flowConnection": {
+      "name": "flowConnection",
+      "bridgedName": "flowConnection",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isInFlowEventHandler": {
+      "name": "isInFlowEventHandler",
+      "bridgedName": "isInFlowEventHandler",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateFixLayersToViewportButton": {
+      "name": "validateFixLayersToViewportButton",
+      "bridgedName": "validateFixLayersToViewportButton",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layerDidChange:": {
+      "name": "layerDidChange:",
+      "bridgedName": "layerDidChange",
+      "args": [
+        {
+          "name": "layerDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateFlowAnimationButtonForFlow:": {
+      "name": "validateFlowAnimationButtonForFlow:",
+      "bridgedName": "validateFlowAnimationButtonForFlow",
+      "args": [
+        {
+          "name": "validateFlowAnimationButtonForFlow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "views": {
+      "name": "views",
+      "bridgedName": "views",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowFixedLayerView": {
+      "name": "shouldShowFixedLayerView",
+      "bridgedName": "shouldShowFixedLayerView",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "shouldShowFullInspectorForFlow:": {
+      "name": "shouldShowFullInspectorForFlow:",
+      "bridgedName": "shouldShowFullInspectorForFlow",
+      "args": [
+        {
+          "name": "shouldShowFullInspectorForFlow",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateHeaderButtonsForFlow:": {
+      "name": "validateHeaderButtonsForFlow:",
+      "bridgedName": "validateHeaderButtonsForFlow",
+      "args": [
+        {
+          "name": "validateHeaderButtonsForFlow",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateLayersAndReload:": {
+      "name": "enumerateLayersAndReload:",
+      "bridgedName": "enumerateLayersAndReload",
+      "args": [
+        {
+          "name": "enumerateLayersAndReload",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "followFlowAction:": {
+      "name": "followFlowAction:",
+      "bridgedName": "followFlowAction",
+      "args": [
+        {
+          "name": "followFlowAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flowTargetAction:": {
+      "name": "flowTargetAction:",
+      "bridgedName": "flowTargetAction",
+      "args": [
+        {
+          "name": "flowTargetAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "flowBackAction:": {
+      "name": "flowBackAction:",
+      "bridgedName": "flowBackAction",
+      "args": [
+        {
+          "name": "flowBackAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "convertFlowToHotspotAction:": {
+      "name": "convertFlowToHotspotAction:",
+      "bridgedName": "convertFlowToHotspotAction",
+      "args": [
+        {
+          "name": "convertFlowToHotspotAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeFlowAction:": {
+      "name": "removeFlowAction:",
+      "bridgedName": "removeFlowAction",
+      "args": [
+        {
+          "name": "removeFlowAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "changeFlowAnimationAction:": {
+      "name": "changeFlowAnimationAction:",
+      "bridgedName": "changeFlowAnimationAction",
+      "args": [
+        {
+          "name": "changeFlowAnimationAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addFlowAction:": {
+      "name": "addFlowAction:",
+      "bridgedName": "addFlowAction",
+      "args": [
+        {
+          "name": "addFlowAction",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "viewDidLoad": {
+      "name": "viewDidLoad",
+      "bridgedName": "viewDidLoad",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "fixToViewportButton": {
+      "name": "fixToViewportButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "followFlowButton": {
+      "name": "followFlowButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "convertToHotspotButton": {
+      "name": "convertToHotspotButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "removeFlowButton": {
+      "name": "removeFlowButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "addFlowButton": {
+      "name": "addFlowButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowAnimationSlideFromTopButton": {
+      "name": "flowAnimationSlideFromTopButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowAnimationSlideFromLeftButton": {
+      "name": "flowAnimationSlideFromLeftButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowAnimationSlideFromBottomButton": {
+      "name": "flowAnimationSlideFromBottomButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowAnimationSlideFromRightButton": {
+      "name": "flowAnimationSlideFromRightButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowAnimationInstantButton": {
+      "name": "flowAnimationInstantButton",
+      "pointer": true,
+      "type": "__weak NSButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "flowDestinationButton": {
+      "name": "flowDestinationButton",
+      "pointer": true,
+      "type": "__weak NSPopUpButton",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "fixLayerView": {
+      "name": "fixLayerView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "flowView": {
+      "name": "flowView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "flowHeaderView": {
+      "name": "flowHeaderView",
+      "pointer": true,
+      "type": "NSView",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layers": {
+      "name": "layers",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCopying.h",
+    "NSSecureCoding.h"
+  ],
+  "classes": [
+    "NSDate"
+  ],
+  "protocol": false,
+  "className": "NSDateInterval",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCopying",
+    "NSSecureCoding"
+  ],
+  "methods": {
+    "supportsSecureCoding": {
+      "name": "supportsSecureCoding",
+      "bridgedName": "supportsSecureCoding",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "allocWithZone:": {
+      "name": "allocWithZone:",
+      "bridgedName": "allocWithZone",
+      "args": [
+        {
+          "name": "allocWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "containsDate:": {
+      "name": "containsDate:",
+      "bridgedName": "containsDate",
+      "args": [
+        {
+          "name": "containsDate",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intersectionWithDateInterval:": {
+      "name": "intersectionWithDateInterval:",
+      "bridgedName": "intersectionWithDateInterval",
+      "args": [
+        {
+          "name": "intersectionWithDateInterval",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "intersectsDateInterval:": {
+      "name": "intersectsDateInterval:",
+      "bridgedName": "intersectsDateInterval",
+      "args": [
+        {
+          "name": "intersectsDateInterval",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualToDateInterval:": {
+      "name": "isEqualToDateInterval:",
+      "bridgedName": "isEqualToDateInterval",
+      "args": [
+        {
+          "name": "isEqualToDateInterval",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "compare:": {
+      "name": "compare:",
+      "bridgedName": "compare",
+      "args": [
+        {
+          "name": "compare",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithStartDate:endDate:": {
+      "name": "initWithStartDate:endDate:",
+      "bridgedName": "initWithStartDate_endDate",
+      "args": [
+        {
+          "name": "initWithStartDate",
+          "type": "id"
+        },
+        {
+          "name": "endDate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithStartDate:duration:": {
+      "name": "initWithStartDate:duration:",
+      "bridgedName": "initWithStartDate_duration",
+      "args": [
+        {
+          "name": "initWithStartDate",
+          "type": "id"
+        },
+        {
+          "name": "duration",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "duration": {
+      "name": "duration",
+      "pointer": false,
+      "type": "double",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "endDate": {
+      "name": "endDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "startDate": {
+      "name": "startDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    }
+  }
+}

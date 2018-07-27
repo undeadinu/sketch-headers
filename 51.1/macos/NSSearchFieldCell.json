@@ -1,0 +1,1502 @@
+{
+  "imports": [
+    "CALayerDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSButtonCell",
+    "NSMenu",
+    "NSMutableArray",
+    "NSString",
+    "NSTimer"
+  ],
+  "protocol": false,
+  "className": "NSSearchFieldCell",
+  "extends": "NSTextFieldCell",
+  "interfaces": [
+    "CALayerDelegate"
+  ],
+  "methods": {
+    "automaticTextCompletionEnabled": {
+      "name": "automaticTextCompletionEnabled",
+      "bridgedName": "automaticTextCompletionEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_keyboardDelayForPartialSearchString:": {
+      "name": "_keyboardDelayForPartialSearchString:",
+      "bridgedName": "_keyboardDelayForPartialSearchString",
+      "args": [
+        {
+          "name": "_keyboardDelayForPartialSearchString",
+          "type": "id"
+        }
+      ],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_windowChangedKeyStateInView:": {
+      "name": "_windowChangedKeyStateInView:",
+      "bridgedName": "_windowChangedKeyStateInView",
+      "args": [
+        {
+          "name": "_windowChangedKeyStateInView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawForegroundOfTextLayer": {
+      "name": "_drawForegroundOfTextLayer",
+      "bridgedName": "_drawForegroundOfTextLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "fontSmoothingBackgroundColorForTextLayer:": {
+      "name": "fontSmoothingBackgroundColorForTextLayer:",
+      "bridgedName": "fontSmoothingBackgroundColorForTextLayer",
+      "args": [
+        {
+          "name": "fontSmoothingBackgroundColorForTextLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textLayerCanUseLinearMaskOverlay:": {
+      "name": "textLayerCanUseLinearMaskOverlay:",
+      "bridgedName": "textLayerCanUseLinearMaskOverlay",
+      "args": [
+        {
+          "name": "textLayerCanUseLinearMaskOverlay",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textLayerShouldDoSubpixelAntialiasing:": {
+      "name": "textLayerShouldDoSubpixelAntialiasing:",
+      "bridgedName": "textLayerShouldDoSubpixelAntialiasing",
+      "args": [
+        {
+          "name": "textLayerShouldDoSubpixelAntialiasing",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "displayTextLayer:": {
+      "name": "displayTextLayer:",
+      "bridgedName": "displayTextLayer",
+      "args": [
+        {
+          "name": "displayTextLayer",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawLayer:inContext:": {
+      "name": "drawLayer:inContext:",
+      "bridgedName": "drawLayer_inContext",
+      "args": [
+        {
+          "name": "drawLayer",
+          "type": "id"
+        },
+        {
+          "name": "inContext",
+          "type": "struct CGContext *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_interiorContentAppearanceInView:": {
+      "name": "_interiorContentAppearanceInView:",
+      "bridgedName": "_interiorContentAppearanceInView",
+      "args": [
+        {
+          "name": "_interiorContentAppearanceInView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "interiorBackgroundStyle": {
+      "name": "interiorBackgroundStyle",
+      "bridgedName": "interiorBackgroundStyle",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "actionForLayer:forKey:": {
+      "name": "actionForLayer:forKey:",
+      "bridgedName": "actionForLayer_forKey",
+      "args": [
+        {
+          "name": "actionForLayer",
+          "type": "id"
+        },
+        {
+          "name": "forKey",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateLayerWithFrame:inView:": {
+      "name": "updateLayerWithFrame:inView:",
+      "bridgedName": "updateLayerWithFrame_inView",
+      "args": [
+        {
+          "name": "updateLayerWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "layoutLayerWithFrame:inView:": {
+      "name": "layoutLayerWithFrame:inView:",
+      "bridgedName": "layoutLayerWithFrame_inView",
+      "args": [
+        {
+          "name": "layoutLayerWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "wantsUpdateLayerInView:": {
+      "name": "wantsUpdateLayerInView:",
+      "bridgedName": "wantsUpdateLayerInView",
+      "args": [
+        {
+          "name": "wantsUpdateLayerInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textLayerRectForBounds:": {
+      "name": "_textLayerRectForBounds:",
+      "bridgedName": "_textLayerRectForBounds",
+      "args": [
+        {
+          "name": "_textLayerRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setCancelButtonVisible:animate:": {
+      "name": "_setCancelButtonVisible:animate:",
+      "bridgedName": "_setCancelButtonVisible_animate",
+      "args": [
+        {
+          "name": "_setCancelButtonVisible",
+          "type": "BOOL"
+        },
+        {
+          "name": "animate",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_transitionInRect:ofView:becomeFirstResponder:completion:": {
+      "name": "_transitionInRect:ofView:becomeFirstResponder:completion:",
+      "bridgedName": "_transitionInRect_ofView_becomeFirstResponder_completion",
+      "args": [
+        {
+          "name": "_transitionInRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "becomeFirstResponder",
+          "type": "BOOL"
+        },
+        {
+          "name": "completion",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetResignTransition": {
+      "name": "_resetResignTransition",
+      "bridgedName": "_resetResignTransition",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuButtonLayerFrameForBounds:focus:": {
+      "name": "_searchMenuButtonLayerFrameForBounds:focus:",
+      "bridgedName": "_searchMenuButtonLayerFrameForBounds_focus",
+      "args": [
+        {
+          "name": "_searchMenuButtonLayerFrameForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "focus",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateTextLayer": {
+      "name": "_invalidateTextLayer",
+      "bridgedName": "_invalidateTextLayer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateButtonLayers": {
+      "name": "_invalidateButtonLayers",
+      "bridgedName": "_invalidateButtonLayers",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textLayer": {
+      "name": "_textLayer",
+      "bridgedName": "_textLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuButtonLayerWithMenu": {
+      "name": "_searchMenuButtonLayerWithMenu",
+      "bridgedName": "_searchMenuButtonLayerWithMenu",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuButtonLayer": {
+      "name": "_searchMenuButtonLayer",
+      "bridgedName": "_searchMenuButtonLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelButtonLayer": {
+      "name": "_cancelButtonLayer",
+      "bridgedName": "_cancelButtonLayer",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "endEditing:": {
+      "name": "endEditing:",
+      "bridgedName": "endEditing",
+      "args": [
+        {
+          "name": "endEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendActionFrom:": {
+      "name": "_sendActionFrom:",
+      "bridgedName": "_sendActionFrom",
+      "args": [
+        {
+          "name": "_sendActionFrom",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_tearDownPartialStringTimer": {
+      "name": "_tearDownPartialStringTimer",
+      "bridgedName": "_tearDownPartialStringTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "textDidChange:": {
+      "name": "textDidChange:",
+      "bridgedName": "textDidChange",
+      "args": [
+        {
+          "name": "textDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCursorRect:inView:": {
+      "name": "resetCursorRect:inView:",
+      "bridgedName": "resetCursorRect_inView",
+      "args": [
+        {
+          "name": "resetCursorRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "trackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "trackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "untilMouseUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectOrEdit:inView:target:editor:event:start:end:": {
+      "name": "_selectOrEdit:inView:target:editor:event:start:end:",
+      "bridgedName": "_selectOrEdit_inView_target_editor_event_start_end",
+      "args": [
+        {
+          "name": "_selectOrEdit",
+          "type": "const struct CGRect *"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        },
+        {
+          "name": "target",
+          "type": "id"
+        },
+        {
+          "name": "editor",
+          "type": "id"
+        },
+        {
+          "name": "event",
+          "type": "id"
+        },
+        {
+          "name": "start",
+          "type": "long long"
+        },
+        {
+          "name": "end",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldSetHighlightToFlag:": {
+      "name": "_shouldSetHighlightToFlag:",
+      "bridgedName": "_shouldSetHighlightToFlag",
+      "args": [
+        {
+          "name": "_shouldSetHighlightToFlag",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getTextColor:backgroundColor:": {
+      "name": "_getTextColor:backgroundColor:",
+      "bridgedName": "_getTextColor_backgroundColor",
+      "args": [
+        {
+          "name": "_getTextColor",
+          "type": "id *"
+        },
+        {
+          "name": "backgroundColor",
+          "type": "id *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setTextColor:": {
+      "name": "setTextColor:",
+      "bridgedName": "setTextColor",
+      "args": [
+        {
+          "name": "setTextColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawInteriorWithFrame:inView:": {
+      "name": "drawInteriorWithFrame:inView:",
+      "bridgedName": "drawInteriorWithFrame_inView",
+      "args": [
+        {
+          "name": "drawInteriorWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEnabled:": {
+      "name": "setEnabled:",
+      "bridgedName": "setEnabled",
+      "args": [
+        {
+          "name": "setEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setResumeEditingOnCancel:": {
+      "name": "setResumeEditingOnCancel:",
+      "bridgedName": "setResumeEditingOnCancel",
+      "args": [
+        {
+          "name": "setResumeEditingOnCancel",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resumeEditingOnCancel": {
+      "name": "resumeEditingOnCancel",
+      "bridgedName": "resumeEditingOnCancel",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCenteredLook:": {
+      "name": "setCenteredLook:",
+      "bridgedName": "setCenteredLook",
+      "args": [
+        {
+          "name": "setCenteredLook",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isCenteredLook": {
+      "name": "isCenteredLook",
+      "bridgedName": "isCenteredLook",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchMenuFactoryClass": {
+      "name": "searchMenuFactoryClass",
+      "bridgedName": "searchMenuFactoryClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObjectValue:": {
+      "name": "setObjectValue:",
+      "bridgedName": "setObjectValue",
+      "args": [
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawingRectForBounds:": {
+      "name": "drawingRectForBounds:",
+      "bridgedName": "drawingRectForBounds",
+      "args": [
+        {
+          "name": "drawingRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellSizeForBounds:": {
+      "name": "cellSizeForBounds:",
+      "bridgedName": "cellSizeForBounds",
+      "args": [
+        {
+          "name": "cellSizeForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cancelButtonRectForBounds:": {
+      "name": "cancelButtonRectForBounds:",
+      "bridgedName": "cancelButtonRectForBounds",
+      "args": [
+        {
+          "name": "cancelButtonRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchButtonRectForBounds:": {
+      "name": "searchButtonRectForBounds:",
+      "bridgedName": "searchButtonRectForBounds",
+      "args": [
+        {
+          "name": "searchButtonRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchTextRectForBounds:": {
+      "name": "searchTextRectForBounds:",
+      "bridgedName": "searchTextRectForBounds",
+      "args": [
+        {
+          "name": "searchTextRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchTextRectForBounds:focused:": {
+      "name": "searchTextRectForBounds:focused:",
+      "bridgedName": "searchTextRectForBounds_focused",
+      "args": [
+        {
+          "name": "searchTextRectForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "focused",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "searchButtonRectForBounds:focused:": {
+      "name": "searchButtonRectForBounds:focused:",
+      "bridgedName": "searchButtonRectForBounds_focused",
+      "args": [
+        {
+          "name": "searchButtonRectForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "focused",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_centeredSearchButtonAndTextRectForBounds:": {
+      "name": "_centeredSearchButtonAndTextRectForBounds:",
+      "bridgedName": "_centeredSearchButtonAndTextRectForBounds",
+      "args": [
+        {
+          "name": "_centeredSearchButtonAndTextRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelButtonRectForBounds:": {
+      "name": "_cancelButtonRectForBounds:",
+      "bridgedName": "_cancelButtonRectForBounds",
+      "args": [
+        {
+          "name": "_cancelButtonRectForBounds",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchTextRectForBounds:focused:": {
+      "name": "_searchTextRectForBounds:focused:",
+      "bridgedName": "_searchTextRectForBounds_focused",
+      "args": [
+        {
+          "name": "_searchTextRectForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "focused",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchButtonRectForBounds:focused:": {
+      "name": "_searchButtonRectForBounds:focused:",
+      "bridgedName": "_searchButtonRectForBounds_focused",
+      "args": [
+        {
+          "name": "_searchButtonRectForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "focused",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelButtonInsetForBounds:userInterfaceLayoutDirection:": {
+      "name": "_cancelButtonInsetForBounds:userInterfaceLayoutDirection:",
+      "bridgedName": "_cancelButtonInsetForBounds_userInterfaceLayoutDirection",
+      "args": [
+        {
+          "name": "_cancelButtonInsetForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "userInterfaceLayoutDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchButtonInsetForBounds:userInterfaceLayoutDirection:menu:": {
+      "name": "_searchButtonInsetForBounds:userInterfaceLayoutDirection:menu:",
+      "bridgedName": "_searchButtonInsetForBounds_userInterfaceLayoutDirection_menu",
+      "args": [
+        {
+          "name": "_searchButtonInsetForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "userInterfaceLayoutDirection",
+          "type": "long long"
+        },
+        {
+          "name": "menu",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelButtonSizeForBounds:userInterfaceLayoutDirection:": {
+      "name": "_cancelButtonSizeForBounds:userInterfaceLayoutDirection:",
+      "bridgedName": "_cancelButtonSizeForBounds_userInterfaceLayoutDirection",
+      "args": [
+        {
+          "name": "_cancelButtonSizeForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "userInterfaceLayoutDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchButtonSizeForBounds:userInterfaceLayoutDirection:": {
+      "name": "_searchButtonSizeForBounds:userInterfaceLayoutDirection:",
+      "bridgedName": "_searchButtonSizeForBounds_userInterfaceLayoutDirection",
+      "args": [
+        {
+          "name": "_searchButtonSizeForBounds",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "userInterfaceLayoutDirection",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_isEmpty": {
+      "name": "_isEmpty",
+      "bridgedName": "_isEmpty",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_usesCenteredLook": {
+      "name": "_usesCenteredLook",
+      "bridgedName": "_usesCenteredLook",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_defaultPlaceholderString": {
+      "name": "_defaultPlaceholderString",
+      "bridgedName": "_defaultPlaceholderString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setControlSize:": {
+      "name": "setControlSize:",
+      "bridgedName": "setControlSize",
+      "args": [
+        {
+          "name": "setControlSize",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetCancelButtonCell": {
+      "name": "resetCancelButtonCell",
+      "bridgedName": "resetCancelButtonCell",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resetSearchButtonCell": {
+      "name": "resetSearchButtonCell",
+      "bridgedName": "resetSearchButtonCell",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initTextCell:": {
+      "name": "initTextCell:",
+      "bridgedName": "initTextCell",
+      "args": [
+        {
+          "name": "initTextCell",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_needRedrawOnWindowChangedKeyState": {
+      "name": "_needRedrawOnWindowChangedKeyState",
+      "bridgedName": "_needRedrawOnWindowChangedKeyState",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_loadRecentSearchList": {
+      "name": "_loadRecentSearchList",
+      "bridgedName": "_loadRecentSearchList",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autosaveRecentSearchList": {
+      "name": "_autosaveRecentSearchList",
+      "bridgedName": "_autosaveRecentSearchList",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textDidEndEditing:": {
+      "name": "_textDidEndEditing:",
+      "bridgedName": "_textDidEndEditing",
+      "args": [
+        {
+          "name": "_textDidEndEditing",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_menuLocationInFrame:": {
+      "name": "_menuLocationInFrame:",
+      "bridgedName": "_menuLocationInFrame",
+      "args": [
+        {
+          "name": "_menuLocationInFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGPoint",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trackButton:forEvent:inRect:ofView:": {
+      "name": "_trackButton:forEvent:inRect:ofView:",
+      "bridgedName": "_trackButton_forEvent_inRect_ofView",
+      "args": [
+        {
+          "name": "_trackButton",
+          "type": "id"
+        },
+        {
+          "name": "forEvent",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_trimRecentSearchList": {
+      "name": "_trimRecentSearchList",
+      "bridgedName": "_trimRecentSearchList",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addStringToRecentSearches:": {
+      "name": "_addStringToRecentSearches:",
+      "bridgedName": "_addStringToRecentSearches",
+      "args": [
+        {
+          "name": "_addStringToRecentSearches",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustCancelButtonCellImages:": {
+      "name": "_adjustCancelButtonCellImages:",
+      "bridgedName": "_adjustCancelButtonCellImages",
+      "args": [
+        {
+          "name": "_adjustCancelButtonCellImages",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustSearchButtonCellImages:": {
+      "name": "_adjustSearchButtonCellImages:",
+      "bridgedName": "_adjustSearchButtonCellImages",
+      "args": [
+        {
+          "name": "_adjustSearchButtonCellImages",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateAutosavedRecents:": {
+      "name": "_updateAutosavedRecents:",
+      "bridgedName": "_updateAutosavedRecents",
+      "args": [
+        {
+          "name": "_updateAutosavedRecents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deregisterForAutosaveNotification": {
+      "name": "_deregisterForAutosaveNotification",
+      "bridgedName": "_deregisterForAutosaveNotification",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForAutosaveNotification": {
+      "name": "_registerForAutosaveNotification",
+      "bridgedName": "_registerForAutosaveNotification",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSearchMenu": {
+      "name": "_updateSearchMenu",
+      "bridgedName": "_updateSearchMenu",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuTemplate": {
+      "name": "_searchMenuTemplate",
+      "bridgedName": "_searchMenuTemplate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendPartialString": {
+      "name": "_sendPartialString",
+      "bridgedName": "_sendPartialString",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchFieldClearRecents:": {
+      "name": "_searchFieldClearRecents:",
+      "bridgedName": "_searchFieldClearRecents",
+      "args": [
+        {
+          "name": "_searchFieldClearRecents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchFieldDoRecent:": {
+      "name": "_searchFieldDoRecent:",
+      "bridgedName": "_searchFieldDoRecent",
+      "args": [
+        {
+          "name": "_searchFieldDoRecent",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchFieldCancel:": {
+      "name": "_searchFieldCancel:",
+      "bridgedName": "_searchFieldCancel",
+      "args": [
+        {
+          "name": "_searchFieldCancel",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_controlView:textView:doCommandBySelector:": {
+      "name": "_controlView:textView:doCommandBySelector:",
+      "bridgedName": "_controlView_textView_doCommandBySelector",
+      "args": [
+        {
+          "name": "_controlView",
+          "type": "id"
+        },
+        {
+          "name": "textView",
+          "type": "id"
+        },
+        {
+          "name": "doCommandBySelector",
+          "type": "SEL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_restartEditingWithTextView:": {
+      "name": "_restartEditingWithTextView:",
+      "bridgedName": "_restartEditingWithTextView",
+      "args": [
+        {
+          "name": "_restartEditingWithTextView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchFieldSearch:": {
+      "name": "_searchFieldSearch:",
+      "bridgedName": "_searchFieldSearch",
+      "args": [
+        {
+          "name": "_searchFieldSearch",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_realMaximumRecents": {
+      "name": "_realMaximumRecents",
+      "bridgedName": "_realMaximumRecents",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setProCancelVisible:": {
+      "name": "_setProCancelVisible:",
+      "bridgedName": "_setProCancelVisible",
+      "args": [
+        {
+          "name": "_setProCancelVisible",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_proCancelVisible": {
+      "name": "_proCancelVisible",
+      "bridgedName": "_proCancelVisible",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuTracking": {
+      "name": "_searchMenuTracking",
+      "bridgedName": "_searchMenuTracking",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_searchMenuForProxy": {
+      "name": "_searchMenuForProxy",
+      "bridgedName": "_searchMenuForProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySizeOfChild:": {
+      "name": "accessibilitySizeOfChild:",
+      "bridgedName": "accessibilitySizeOfChild",
+      "args": [
+        {
+          "name": "accessibilitySizeOfChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityPositionOfChild:": {
+      "name": "accessibilityPositionOfChild:",
+      "bridgedName": "accessibilityPositionOfChild",
+      "args": [
+        {
+          "name": "accessibilityPositionOfChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsChildFocusable:": {
+      "name": "accessibilityIsChildFocusable:",
+      "bridgedName": "accessibilityIsChildFocusable",
+      "args": [
+        {
+          "name": "accessibilityIsChildFocusable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHelpStringForChild:": {
+      "name": "accessibilityHelpStringForChild:",
+      "bridgedName": "accessibilityHelpStringForChild",
+      "args": [
+        {
+          "name": "accessibilityHelpStringForChild",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityHitTest:": {
+      "name": "accessibilityHitTest:",
+      "bridgedName": "accessibilityHitTest",
+      "args": [
+        {
+          "name": "accessibilityHitTest",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_accessibilitySearchFieldCellBounds": {
+      "name": "_accessibilitySearchFieldCellBounds",
+      "bridgedName": "_accessibilitySearchFieldCellBounds",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsChildrenAttributeSettable": {
+      "name": "accessibilityIsChildrenAttributeSettable",
+      "bridgedName": "accessibilityIsChildrenAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildrenAttribute": {
+      "name": "accessibilityChildrenAttribute",
+      "bridgedName": "accessibilityChildrenAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityChildrenInNavigationOrderAttribute": {
+      "name": "accessibilityChildrenInNavigationOrderAttribute",
+      "bridgedName": "accessibilityChildrenInNavigationOrderAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsClearButtonAttributeSettable": {
+      "name": "accessibilityIsClearButtonAttributeSettable",
+      "bridgedName": "accessibilityIsClearButtonAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityClearButtonAttribute": {
+      "name": "accessibilityClearButtonAttribute",
+      "bridgedName": "accessibilityClearButtonAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsSearchButtonAttributeSettable": {
+      "name": "accessibilityIsSearchButtonAttributeSettable",
+      "bridgedName": "accessibilityIsSearchButtonAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySearchButtonAttribute": {
+      "name": "accessibilitySearchButtonAttribute",
+      "bridgedName": "accessibilitySearchButtonAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsSubroleAttributeSettable": {
+      "name": "accessibilityIsSubroleAttributeSettable",
+      "bridgedName": "accessibilityIsSubroleAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySubroleAttribute": {
+      "name": "accessibilitySubroleAttribute",
+      "bridgedName": "accessibilitySubroleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "recentsAutosaveName": {
+      "name": "recentsAutosaveName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "recentSearches": {
+      "name": "recentSearches",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "searchMenuTemplate": {
+      "name": "searchMenuTemplate",
+      "pointer": true,
+      "type": "NSMenu",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "cancelButtonCell": {
+      "name": "cancelButtonCell",
+      "pointer": true,
+      "type": "NSButtonCell",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "searchButtonCell": {
+      "name": "searchButtonCell",
+      "pointer": true,
+      "type": "NSButtonCell",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

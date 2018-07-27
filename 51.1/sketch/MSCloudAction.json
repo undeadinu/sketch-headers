@@ -1,0 +1,413 @@
+{
+  "imports": [
+    "MSPopoverAction.h",
+    "MSCloudShareUploadControllerDelegate.h"
+  ],
+  "classes": [
+    "MSCloudShareUploadController",
+    "NSArray",
+    "NSString",
+    "NSViewController",
+    "SCKAPIOperation"
+  ],
+  "protocol": false,
+  "className": "MSCloudAction",
+  "extends": "MSPopoverAction",
+  "interfaces": [
+    "MSCloudShareUploadControllerDelegate"
+  ],
+  "methods": {
+    "addRemoteLibraryWithURL:parameters:": {
+      "name": "addRemoteLibraryWithURL:parameters:",
+      "bridgedName": "addRemoteLibraryWithURL_parameters",
+      "args": [
+        {
+          "name": "addRemoteLibraryWithURL",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "openCloudUploadURL:parameters:": {
+      "name": "openCloudUploadURL:parameters:",
+      "bridgedName": "openCloudUploadURL_parameters",
+      "args": [
+        {
+          "name": "openCloudUploadURL",
+          "type": "id"
+        },
+        {
+          "name": "parameters",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "popoverClass": {
+      "name": "popoverClass",
+      "bridgedName": "popoverClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "cloudEnabled": {
+      "name": "cloudEnabled",
+      "bridgedName": "cloudEnabled",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "attemptRecoveryFromCloudError:optionIndex:": {
+      "name": "attemptRecoveryFromCloudError:optionIndex:",
+      "bridgedName": "attemptRecoveryFromCloudError_optionIndex",
+      "args": [
+        {
+          "name": "attemptRecoveryFromCloudError",
+          "type": "id"
+        },
+        {
+          "name": "optionIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "cloudError:addingRecoveryOptionsWithAttempter:": {
+      "name": "cloudError:addingRecoveryOptionsWithAttempter:",
+      "bridgedName": "cloudError_addingRecoveryOptionsWithAttempter",
+      "args": [
+        {
+          "name": "cloudError",
+          "type": "id"
+        },
+        {
+          "name": "addingRecoveryOptionsWithAttempter",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "isErrorRecoverable:": {
+      "name": "isErrorRecoverable:",
+      "bridgedName": "isErrorRecoverable",
+      "args": [
+        {
+          "name": "isErrorRecoverable",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setCloudPlatform:": {
+      "name": "setCloudPlatform:",
+      "bridgedName": "setCloudPlatform",
+      "args": [
+        {
+          "name": "setCloudPlatform",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validate": {
+      "name": "validate",
+      "bridgedName": "validate",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateToolbarItem:": {
+      "name": "validateToolbarItem:",
+      "bridgedName": "validateToolbarItem",
+      "args": [
+        {
+          "name": "validateToolbarItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "validateMenuItem:": {
+      "name": "validateMenuItem:",
+      "bridgedName": "validateMenuItem",
+      "args": [
+        {
+          "name": "validateMenuItem",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "updateProgressImage": {
+      "name": "updateProgressImage",
+      "bridgedName": "updateProgressImage",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "image": {
+      "name": "image",
+      "bridgedName": "image",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "label": {
+      "name": "label",
+      "bridgedName": "label",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tooltip": {
+      "name": "tooltip",
+      "bridgedName": "tooltip",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "showInToolbar": {
+      "name": "showInToolbar",
+      "bridgedName": "showInToolbar",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:": {
+      "name": "attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo:",
+      "bridgedName": "attemptRecoveryFromError_optionIndex_delegate_didRecoverSelector_contextInfo",
+      "args": [
+        {
+          "name": "attemptRecoveryFromError",
+          "type": "id"
+        },
+        {
+          "name": "optionIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "delegate",
+          "type": "id"
+        },
+        {
+          "name": "didRecoverSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "contextInfo",
+          "type": "void *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willPresentError:": {
+      "name": "willPresentError:",
+      "bridgedName": "willPresentError",
+      "args": [
+        {
+          "name": "willPresentError",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:didChangeProgress:": {
+      "name": "cloudShareController:didChangeProgress:",
+      "bridgedName": "cloudShareController_didChangeProgress",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "didChangeProgress",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:uploadDidFailWithError:": {
+      "name": "cloudShareController:uploadDidFailWithError:",
+      "bridgedName": "cloudShareController_uploadDidFailWithError",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "uploadDidFailWithError",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cloudShareController:didUploadShare:": {
+      "name": "cloudShareController:didUploadShare:",
+      "bridgedName": "cloudShareController_didUploadShare",
+      "args": [
+        {
+          "name": "cloudShareController",
+          "type": "id"
+        },
+        {
+          "name": "didUploadShare",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "refreshShareWithHandler:": {
+      "name": "refreshShareWithHandler:",
+      "bridgedName": "refreshShareWithHandler",
+      "args": [
+        {
+          "name": "refreshShareWithHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startUploadUpdating:": {
+      "name": "startUploadUpdating:",
+      "bridgedName": "startUploadUpdating",
+      "args": [
+        {
+          "name": "startUploadUpdating",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "refreshOperation": {
+      "name": "refreshOperation",
+      "pointer": true,
+      "type": "SCKAPIOperation",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "upload": {
+      "name": "upload",
+      "pointer": true,
+      "type": "MSCloudShareUploadController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "popoverViewController": {
+      "name": "popoverViewController",
+      "pointer": true,
+      "type": "NSViewController",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "progressImages": {
+      "name": "progressImages",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "exportedDocument": {
+      "name": "exportedDocument",
+      "pointer": false,
+      "type": "id <MSCloudExportableDocument>",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
+}

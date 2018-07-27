@@ -1,0 +1,249 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSCoding.h"
+  ],
+  "classes": [
+    "NSString"
+  ],
+  "protocol": false,
+  "className": "MSDataSupplier",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSCoding"
+  ],
+  "methods": {
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataForItem:": {
+      "name": "dataForItem:",
+      "bridgedName": "dataForItem",
+      "args": [
+        {
+          "name": "dataForItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqual:": {
+      "name": "isEqual:",
+      "bridgedName": "isEqual",
+      "args": [
+        {
+          "name": "isEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "isEqualToDataSupplier:": {
+      "name": "isEqualToDataSupplier:",
+      "bridgedName": "isEqualToDataSupplier",
+      "args": [
+        {
+          "name": "isEqualToDataSupplier",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hash": {
+      "name": "hash",
+      "bridgedName": "hash",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "imageFileURLForDataItem:": {
+      "name": "imageFileURLForDataItem:",
+      "bridgedName": "imageFileURLForDataItem",
+      "args": [
+        {
+          "name": "imageFileURLForDataItem",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "generateDataWithCount:dataSupplierManager:dataApplier:": {
+      "name": "generateDataWithCount:dataSupplierManager:dataApplier:",
+      "bridgedName": "generateDataWithCount_dataSupplierManager_dataApplier",
+      "args": [
+        {
+          "name": "generateDataWithCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "dataSupplierManager",
+          "type": "id"
+        },
+        {
+          "name": "dataApplier",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "applyDataWithCount:data:dataApplier:": {
+      "name": "applyDataWithCount:data:dataApplier:",
+      "bridgedName": "applyDataWithCount_data_dataApplier",
+      "args": [
+        {
+          "name": "applyDataWithCount",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "data",
+          "type": "id"
+        },
+        {
+          "name": "dataApplier",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithDataIdentifier:dataName:dataType:": {
+      "name": "initWithDataIdentifier:dataName:dataType:",
+      "bridgedName": "initWithDataIdentifier_dataName_dataType",
+      "args": [
+        {
+          "name": "initWithDataIdentifier",
+          "type": "id"
+        },
+        {
+          "name": "dataName",
+          "type": "id"
+        },
+        {
+          "name": "dataType",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inAGroup": {
+      "name": "inAGroup",
+      "bridgedName": "inAGroup",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dataNameWithoutGroup": {
+      "name": "dataNameWithoutGroup",
+      "bridgedName": "dataNameWithoutGroup",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "inGroupWithName:": {
+      "name": "inGroupWithName:",
+      "bridgedName": "inGroupWithName",
+      "args": [
+        {
+          "name": "inGroupWithName",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "enabled": {
+      "name": "enabled",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "dataIdentifier": {
+      "name": "dataIdentifier",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dataType": {
+      "name": "dataType",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "dataName": {
+      "name": "dataName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "valid": {
+      "name": "valid",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    }
+  }
+}

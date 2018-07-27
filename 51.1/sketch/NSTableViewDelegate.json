@@ -1,0 +1,576 @@
+{
+  "imports": [
+    "NSControlTextEditingDelegate.h"
+  ],
+  "classes": [
+    "NSArray",
+    "NSCell",
+    "NSEvent",
+    "NSIndexSet",
+    "NSNotification",
+    "NSString",
+    "NSTableColumn",
+    "NSTableRowView",
+    "NSTableView",
+    "NSView"
+  ],
+  "protocol": true,
+  "className": "NSTableViewDelegate",
+  "interfaces": [],
+  "methods": {
+    "tableViewSelectionIsChanging:": {
+      "name": "tableViewSelectionIsChanging:",
+      "bridgedName": "tableViewSelectionIsChanging",
+      "args": [
+        {
+          "name": "tableViewSelectionIsChanging",
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewColumnDidResize:": {
+      "name": "tableViewColumnDidResize:",
+      "bridgedName": "tableViewColumnDidResize",
+      "args": [
+        {
+          "name": "tableViewColumnDidResize",
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewColumnDidMove:": {
+      "name": "tableViewColumnDidMove:",
+      "bridgedName": "tableViewColumnDidMove",
+      "args": [
+        {
+          "name": "tableViewColumnDidMove",
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableViewSelectionDidChange:": {
+      "name": "tableViewSelectionDidChange:",
+      "bridgedName": "tableViewSelectionDidChange",
+      "args": [
+        {
+          "name": "tableViewSelectionDidChange",
+          "type": "NSNotification *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:rowActionsForRow:edge:": {
+      "name": "tableView:rowActionsForRow:edge:",
+      "bridgedName": "tableView_rowActionsForRow_edge",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "rowActionsForRow",
+          "type": "long long"
+        },
+        {
+          "name": "edge",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSArray *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldReorderColumn:toColumn:": {
+      "name": "tableView:shouldReorderColumn:toColumn:",
+      "bridgedName": "tableView_shouldReorderColumn_toColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldReorderColumn",
+          "type": "long long"
+        },
+        {
+          "name": "toColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:sizeToFitWidthOfColumn:": {
+      "name": "tableView:sizeToFitWidthOfColumn:",
+      "bridgedName": "tableView_sizeToFitWidthOfColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "sizeToFitWidthOfColumn",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:isGroupRow:": {
+      "name": "tableView:isGroupRow:",
+      "bridgedName": "tableView_isGroupRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "isGroupRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldTypeSelectForEvent:withCurrentSearchString:": {
+      "name": "tableView:shouldTypeSelectForEvent:withCurrentSearchString:",
+      "bridgedName": "tableView_shouldTypeSelectForEvent_withCurrentSearchString",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldTypeSelectForEvent",
+          "type": "NSEvent *"
+        },
+        {
+          "name": "withCurrentSearchString",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:nextTypeSelectMatchFromRow:toRow:forString:": {
+      "name": "tableView:nextTypeSelectMatchFromRow:toRow:forString:",
+      "bridgedName": "tableView_nextTypeSelectMatchFromRow_toRow_forString",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "nextTypeSelectMatchFromRow",
+          "type": "long long"
+        },
+        {
+          "name": "toRow",
+          "type": "long long"
+        },
+        {
+          "name": "forString",
+          "type": "NSString *"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:typeSelectStringForTableColumn:row:": {
+      "name": "tableView:typeSelectStringForTableColumn:row:",
+      "bridgedName": "tableView_typeSelectStringForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "typeSelectStringForTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:heightOfRow:": {
+      "name": "tableView:heightOfRow:",
+      "bridgedName": "tableView_heightOfRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "heightOfRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:didDragTableColumn:": {
+      "name": "tableView:didDragTableColumn:",
+      "bridgedName": "tableView_didDragTableColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "didDragTableColumn",
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:didClickTableColumn:": {
+      "name": "tableView:didClickTableColumn:",
+      "bridgedName": "tableView_didClickTableColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "didClickTableColumn",
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:mouseDownInHeaderOfTableColumn:": {
+      "name": "tableView:mouseDownInHeaderOfTableColumn:",
+      "bridgedName": "tableView_mouseDownInHeaderOfTableColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "mouseDownInHeaderOfTableColumn",
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldSelectTableColumn:": {
+      "name": "tableView:shouldSelectTableColumn:",
+      "bridgedName": "tableView_shouldSelectTableColumn",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldSelectTableColumn",
+          "type": "NSTableColumn *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:selectionIndexesForProposedSelection:": {
+      "name": "tableView:selectionIndexesForProposedSelection:",
+      "bridgedName": "tableView_selectionIndexesForProposedSelection",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "selectionIndexesForProposedSelection",
+          "type": "NSIndexSet *"
+        }
+      ],
+      "returns": "NSIndexSet *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldSelectRow:": {
+      "name": "tableView:shouldSelectRow:",
+      "bridgedName": "tableView_shouldSelectRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldSelectRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "selectionShouldChangeInTableView:": {
+      "name": "selectionShouldChangeInTableView:",
+      "bridgedName": "selectionShouldChangeInTableView",
+      "args": [
+        {
+          "name": "selectionShouldChangeInTableView",
+          "type": "NSTableView *"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:dataCellForTableColumn:row:": {
+      "name": "tableView:dataCellForTableColumn:row:",
+      "bridgedName": "tableView_dataCellForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "dataCellForTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSCell *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldTrackCell:forTableColumn:row:": {
+      "name": "tableView:shouldTrackCell:forTableColumn:row:",
+      "bridgedName": "tableView_shouldTrackCell_forTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldTrackCell",
+          "type": "NSCell *"
+        },
+        {
+          "name": "forTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldShowCellExpansionForTableColumn:row:": {
+      "name": "tableView:shouldShowCellExpansionForTableColumn:row:",
+      "bridgedName": "tableView_shouldShowCellExpansionForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldShowCellExpansionForTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:toolTipForCell:rect:tableColumn:row:mouseLocation:": {
+      "name": "tableView:toolTipForCell:rect:tableColumn:row:mouseLocation:",
+      "bridgedName": "tableView_toolTipForCell_rect_tableColumn_row_mouseLocation",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "toolTipForCell",
+          "type": "NSCell *"
+        },
+        {
+          "name": "rect",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "tableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        },
+        {
+          "name": "mouseLocation",
+          "type": "struct CGPoint"
+        }
+      ],
+      "returns": "NSString *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:shouldEditTableColumn:row:": {
+      "name": "tableView:shouldEditTableColumn:row:",
+      "bridgedName": "tableView_shouldEditTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "shouldEditTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:willDisplayCell:forTableColumn:row:": {
+      "name": "tableView:willDisplayCell:forTableColumn:row:",
+      "bridgedName": "tableView_willDisplayCell_forTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "willDisplayCell",
+          "type": "id"
+        },
+        {
+          "name": "forTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:didRemoveRowView:forRow:": {
+      "name": "tableView:didRemoveRowView:forRow:",
+      "bridgedName": "tableView_didRemoveRowView_forRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "didRemoveRowView",
+          "type": "NSTableRowView *"
+        },
+        {
+          "name": "forRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:didAddRowView:forRow:": {
+      "name": "tableView:didAddRowView:forRow:",
+      "bridgedName": "tableView_didAddRowView_forRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "didAddRowView",
+          "type": "NSTableRowView *"
+        },
+        {
+          "name": "forRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:rowViewForRow:": {
+      "name": "tableView:rowViewForRow:",
+      "bridgedName": "tableView_rowViewForRow",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "rowViewForRow",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSTableRowView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "tableView:viewForTableColumn:row:": {
+      "name": "tableView:viewForTableColumn:row:",
+      "bridgedName": "tableView_viewForTableColumn_row",
+      "args": [
+        {
+          "name": "tableView",
+          "type": "NSTableView *"
+        },
+        {
+          "name": "viewForTableColumn",
+          "type": "NSTableColumn *"
+        },
+        {
+          "name": "row",
+          "type": "long long"
+        }
+      ],
+      "returns": "NSView *",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {}
+}

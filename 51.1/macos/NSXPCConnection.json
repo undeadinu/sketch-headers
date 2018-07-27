@@ -1,0 +1,996 @@
+{
+  "imports": [
+    "NSObject.h",
+    "NSXPCProxyCreating.h"
+  ],
+  "classes": [
+    "NSObject<OS_dispatch_queue>",
+    "NSString",
+    "NSXPCInterface",
+    "NSXPCListenerEndpoint"
+  ],
+  "protocol": false,
+  "className": "NSXPCConnection",
+  "extends": "NSObject",
+  "interfaces": [
+    "NSXPCProxyCreating"
+  ],
+  "methods": {
+    "endTransaction": {
+      "name": "endTransaction",
+      "bridgedName": "endTransaction",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "beginTransaction": {
+      "name": "beginTransaction",
+      "bridgedName": "beginTransaction",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_currentBoost": {
+      "name": "_currentBoost",
+      "bridgedName": "_currentBoost",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "currentConnection": {
+      "name": "currentConnection",
+      "bridgedName": "currentConnection",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_decodeProgressMessageWithData:flags:": {
+      "name": "_decodeProgressMessageWithData:flags:",
+      "bridgedName": "_decodeProgressMessageWithData_flags",
+      "args": [
+        {
+          "name": "_decodeProgressMessageWithData",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resumeProgress:": {
+      "name": "_resumeProgress:",
+      "bridgedName": "_resumeProgress",
+      "args": [
+        {
+          "name": "_resumeProgress",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_pauseProgress:": {
+      "name": "_pauseProgress:",
+      "bridgedName": "_pauseProgress",
+      "args": [
+        {
+          "name": "_pauseProgress",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelProgress:": {
+      "name": "_cancelProgress:",
+      "bridgedName": "_cancelProgress",
+      "args": [
+        {
+          "name": "_cancelProgress",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendProgressMessage:forSequence:": {
+      "name": "_sendProgressMessage:forSequence:",
+      "bridgedName": "_sendProgressMessage_forSequence",
+      "args": [
+        {
+          "name": "_sendProgressMessage",
+          "type": "id"
+        },
+        {
+          "name": "forSequence",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_xpcConnection": {
+      "name": "_xpcConnection",
+      "bridgedName": "_xpcConnection",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_killConnection:": {
+      "name": "_killConnection:",
+      "bridgedName": "_killConnection",
+      "args": [
+        {
+          "name": "_killConnection",
+          "type": "int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setTargetUserIdentifier:": {
+      "name": "_setTargetUserIdentifier:",
+      "bridgedName": "_setTargetUserIdentifier",
+      "args": [
+        {
+          "name": "_setTargetUserIdentifier",
+          "type": "unsigned int"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setUUID:": {
+      "name": "_setUUID:",
+      "bridgedName": "_setUUID",
+      "args": [
+        {
+          "name": "_setUUID",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_removeImportedProxy:": {
+      "name": "_removeImportedProxy:",
+      "bridgedName": "_removeImportedProxy",
+      "args": [
+        {
+          "name": "_removeImportedProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addImportedProxy:": {
+      "name": "_addImportedProxy:",
+      "bridgedName": "_addImportedProxy",
+      "args": [
+        {
+          "name": "_addImportedProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remoteObjectProxyWithTimeout:errorHandler:": {
+      "name": "remoteObjectProxyWithTimeout:errorHandler:",
+      "bridgedName": "remoteObjectProxyWithTimeout_errorHandler",
+      "args": [
+        {
+          "name": "remoteObjectProxyWithTimeout",
+          "type": "double"
+        },
+        {
+          "name": "errorHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "synchronousRemoteObjectProxyWithErrorHandler:": {
+      "name": "synchronousRemoteObjectProxyWithErrorHandler:",
+      "bridgedName": "synchronousRemoteObjectProxyWithErrorHandler",
+      "args": [
+        {
+          "name": "synchronousRemoteObjectProxyWithErrorHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remoteObjectProxyWithUserInfo:errorHandler:": {
+      "name": "remoteObjectProxyWithUserInfo:errorHandler:",
+      "bridgedName": "remoteObjectProxyWithUserInfo_errorHandler",
+      "args": [
+        {
+          "name": "remoteObjectProxyWithUserInfo",
+          "type": "id"
+        },
+        {
+          "name": "errorHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "remoteObjectProxyWithErrorHandler:": {
+      "name": "remoteObjectProxyWithErrorHandler:",
+      "bridgedName": "remoteObjectProxyWithErrorHandler",
+      "args": [
+        {
+          "name": "remoteObjectProxyWithErrorHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unboostingRemoteObjectProxy": {
+      "name": "_unboostingRemoteObjectProxy",
+      "bridgedName": "_unboostingRemoteObjectProxy",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_remoteObjectInterfaceClass": {
+      "name": "_remoteObjectInterfaceClass",
+      "bridgedName": "_remoteObjectInterfaceClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addClassToDecodeCache:": {
+      "name": "_addClassToDecodeCache:",
+      "bridgedName": "_addClassToDecodeCache",
+      "args": [
+        {
+          "name": "_addClassToDecodeCache",
+          "type": "Class"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decodeCacheContainsClass:": {
+      "name": "_decodeCacheContainsClass:",
+      "bridgedName": "_decodeCacheContainsClass",
+      "args": [
+        {
+          "name": "_decodeCacheContainsClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addClassToEncodeCache:": {
+      "name": "_addClassToEncodeCache:",
+      "bridgedName": "_addClassToEncodeCache",
+      "args": [
+        {
+          "name": "_addClassToEncodeCache",
+          "type": "Class"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_encodeCacheContainsClass:": {
+      "name": "_encodeCacheContainsClass:",
+      "bridgedName": "_encodeCacheContainsClass",
+      "args": [
+        {
+          "name": "_encodeCacheContainsClass",
+          "type": "Class"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "description": {
+      "name": "description",
+      "bridgedName": "description",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_errorDescription": {
+      "name": "_errorDescription",
+      "bridgedName": "_errorDescription",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_queue": {
+      "name": "_queue",
+      "bridgedName": "_queue",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setQueue:": {
+      "name": "_setQueue:",
+      "bridgedName": "_setQueue",
+      "args": [
+        {
+          "name": "_setQueue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "replacementObjectForEncoder:object:": {
+      "name": "replacementObjectForEncoder:object:",
+      "bridgedName": "replacementObjectForEncoder_object",
+      "args": [
+        {
+          "name": "replacementObjectForEncoder",
+          "type": "id"
+        },
+        {
+          "name": "object",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "delegate": {
+      "name": "delegate",
+      "bridgedName": "delegate",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setDelegate:": {
+      "name": "setDelegate:",
+      "bridgedName": "setDelegate",
+      "args": [
+        {
+          "name": "setDelegate",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setUserInfo:": {
+      "name": "setUserInfo:",
+      "bridgedName": "setUserInfo",
+      "args": [
+        {
+          "name": "setUserInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "userInfo": {
+      "name": "userInfo",
+      "bridgedName": "userInfo",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_generationCount": {
+      "name": "_generationCount",
+      "bridgedName": "_generationCount",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "valueForEntitlement:": {
+      "name": "valueForEntitlement:",
+      "bridgedName": "valueForEntitlement",
+      "args": [
+        {
+          "name": "valueForEntitlement",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "auditToken": {
+      "name": "auditToken",
+      "bridgedName": "auditToken",
+      "args": [],
+      "returns": "CDStruct_4c969caf",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setOptions:": {
+      "name": "setOptions:",
+      "bridgedName": "setOptions",
+      "args": [
+        {
+          "name": "setOptions",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_exportTable": {
+      "name": "_exportTable",
+      "bridgedName": "_exportTable",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_additionalInvalidationHandler": {
+      "name": "_additionalInvalidationHandler",
+      "bridgedName": "_additionalInvalidationHandler",
+      "args": [],
+      "returns": "CDUnknownBlockType",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "set_additionalInvalidationHandler:": {
+      "name": "set_additionalInvalidationHandler:",
+      "bridgedName": "set_additionalInvalidationHandler",
+      "args": [
+        {
+          "name": "set_additionalInvalidationHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendInvocation:orArguments:count:methodSignature:selector:withProxy:": {
+      "name": "_sendInvocation:orArguments:count:methodSignature:selector:withProxy:",
+      "bridgedName": "_sendInvocation_orArguments_count_methodSignature_selector_withProxy",
+      "args": [
+        {
+          "name": "_sendInvocation",
+          "type": "id"
+        },
+        {
+          "name": "orArguments",
+          "type": "id *"
+        },
+        {
+          "name": "count",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "methodSignature",
+          "type": "id"
+        },
+        {
+          "name": "selector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendInvocation:withProxy:": {
+      "name": "_sendInvocation:withProxy:",
+      "bridgedName": "_sendInvocation_withProxy",
+      "args": [
+        {
+          "name": "_sendInvocation",
+          "type": "id"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelector:withProxy:arg1:arg2:arg3:arg4:": {
+      "name": "_sendSelector:withProxy:arg1:arg2:arg3:arg4:",
+      "bridgedName": "_sendSelector_withProxy_arg1_arg2_arg3_arg4",
+      "args": [
+        {
+          "name": "_sendSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        },
+        {
+          "name": "arg1",
+          "type": "id"
+        },
+        {
+          "name": "arg2",
+          "type": "id"
+        },
+        {
+          "name": "arg3",
+          "type": "id"
+        },
+        {
+          "name": "arg4",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelector:withProxy:arg1:arg2:arg3:": {
+      "name": "_sendSelector:withProxy:arg1:arg2:arg3:",
+      "bridgedName": "_sendSelector_withProxy_arg1_arg2_arg3",
+      "args": [
+        {
+          "name": "_sendSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        },
+        {
+          "name": "arg1",
+          "type": "id"
+        },
+        {
+          "name": "arg2",
+          "type": "id"
+        },
+        {
+          "name": "arg3",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelector:withProxy:arg1:arg2:": {
+      "name": "_sendSelector:withProxy:arg1:arg2:",
+      "bridgedName": "_sendSelector_withProxy_arg1_arg2",
+      "args": [
+        {
+          "name": "_sendSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        },
+        {
+          "name": "arg1",
+          "type": "id"
+        },
+        {
+          "name": "arg2",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelector:withProxy:arg1:": {
+      "name": "_sendSelector:withProxy:arg1:",
+      "bridgedName": "_sendSelector_withProxy_arg1",
+      "args": [
+        {
+          "name": "_sendSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        },
+        {
+          "name": "arg1",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendSelector:withProxy:": {
+      "name": "_sendSelector:withProxy:",
+      "bridgedName": "_sendSelector_withProxy",
+      "args": [
+        {
+          "name": "_sendSelector",
+          "type": "SEL"
+        },
+        {
+          "name": "withProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_sendDesistForProxy:": {
+      "name": "_sendDesistForProxy:",
+      "bridgedName": "_sendDesistForProxy",
+      "args": [
+        {
+          "name": "_sendDesistForProxy",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addBarrierBlock:": {
+      "name": "addBarrierBlock:",
+      "bridgedName": "addBarrierBlock",
+      "args": [
+        {
+          "name": "addBarrierBlock",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "invalidate": {
+      "name": "invalidate",
+      "bridgedName": "invalidate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stop": {
+      "name": "stop",
+      "bridgedName": "stop",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "start": {
+      "name": "start",
+      "bridgedName": "start",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resume": {
+      "name": "resume",
+      "bridgedName": "resume",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "suspend": {
+      "name": "suspend",
+      "bridgedName": "suspend",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithListenerEndpoint:": {
+      "name": "initWithListenerEndpoint:",
+      "bridgedName": "initWithListenerEndpoint",
+      "args": [
+        {
+          "name": "initWithListenerEndpoint",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithEndpoint:": {
+      "name": "initWithEndpoint:",
+      "bridgedName": "initWithEndpoint",
+      "args": [
+        {
+          "name": "initWithEndpoint",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMachServiceName:": {
+      "name": "initWithMachServiceName:",
+      "bridgedName": "initWithMachServiceName",
+      "args": [
+        {
+          "name": "initWithMachServiceName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithMachServiceName:options:": {
+      "name": "initWithMachServiceName:options:",
+      "bridgedName": "initWithMachServiceName_options",
+      "args": [
+        {
+          "name": "initWithMachServiceName",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithServiceName:": {
+      "name": "initWithServiceName:",
+      "bridgedName": "initWithServiceName",
+      "args": [
+        {
+          "name": "initWithServiceName",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithServiceName:options:": {
+      "name": "initWithServiceName:options:",
+      "bridgedName": "initWithServiceName_options",
+      "args": [
+        {
+          "name": "initWithServiceName",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_initWithPeerConnection:name:options:": {
+      "name": "_initWithPeerConnection:name:options:",
+      "bridgedName": "_initWithPeerConnection_name_options",
+      "args": [
+        {
+          "name": "_initWithPeerConnection",
+          "type": "id"
+        },
+        {
+          "name": "name",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decodeAndInvokeMessageWithEvent:flags:": {
+      "name": "_decodeAndInvokeMessageWithEvent:flags:",
+      "bridgedName": "_decodeAndInvokeMessageWithEvent_flags",
+      "args": [
+        {
+          "name": "_decodeAndInvokeMessageWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "flags",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decodeAndInvokeReplyBlockWithEvent:sequence:replyInfo:": {
+      "name": "_decodeAndInvokeReplyBlockWithEvent:sequence:replyInfo:",
+      "bridgedName": "_decodeAndInvokeReplyBlockWithEvent_sequence_replyInfo",
+      "args": [
+        {
+          "name": "_decodeAndInvokeReplyBlockWithEvent",
+          "type": "id"
+        },
+        {
+          "name": "sequence",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "replyInfo",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "remoteObjectInterface": {
+      "name": "remoteObjectInterface",
+      "pointer": true,
+      "type": "NSXPCInterface",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "effectiveGroupIdentifier": {
+      "name": "effectiveGroupIdentifier",
+      "pointer": false,
+      "type": "unsigned int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "effectiveUserIdentifier": {
+      "name": "effectiveUserIdentifier",
+      "pointer": false,
+      "type": "unsigned int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "processIdentifier": {
+      "name": "processIdentifier",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "auditSessionIdentifier": {
+      "name": "auditSessionIdentifier",
+      "pointer": false,
+      "type": "int",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "remoteObjectProxy": {
+      "name": "remoteObjectProxy",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "exportedInterface": {
+      "name": "exportedInterface",
+      "pointer": true,
+      "type": "NSXPCInterface",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "exportedObject": {
+      "name": "exportedObject",
+      "pointer": false,
+      "type": "id",
+      "attributes": [
+        "retain"
+      ]
+    },
+    "endpoint": {
+      "name": "endpoint",
+      "pointer": true,
+      "type": "NSXPCListenerEndpoint",
+      "attributes": [
+        "readonly",
+        "retain"
+      ]
+    },
+    "serviceName": {
+      "name": "serviceName",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "invalidationHandler": {
+      "name": "invalidationHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "interruptionHandler": {
+      "name": "interruptionHandler",
+      "pointer": false,
+      "type": "CDUnknownBlockType",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

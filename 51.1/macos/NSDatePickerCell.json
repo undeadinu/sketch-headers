@@ -1,0 +1,2084 @@
+{
+  "imports": [],
+  "classes": [
+    "NSCalendar",
+    "NSColor",
+    "NSDate",
+    "NSLocale",
+    "NSTimeZone"
+  ],
+  "protocol": false,
+  "className": "NSDatePickerCell",
+  "extends": "NSActionCell",
+  "interfaces": [],
+  "methods": {
+    "_sharedDateFormatter": {
+      "name": "_sharedDateFormatter",
+      "bridgedName": "_sharedDateFormatter",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "initialize": {
+      "name": "initialize",
+      "bridgedName": "initialize",
+      "args": [],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_calendarWeekDayHeaderFont": {
+      "name": "_calendarWeekDayHeaderFont",
+      "bridgedName": "_calendarWeekDayHeaderFont",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_calendarHeaderFontSize": {
+      "name": "_calendarHeaderFontSize",
+      "bridgedName": "_calendarHeaderFontSize",
+      "args": [],
+      "returns": "double",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_calendarHeaderFontOfSize:": {
+      "name": "_calendarHeaderFontOfSize:",
+      "bridgedName": "_calendarHeaderFontOfSize",
+      "args": [
+        {
+          "name": "_calendarHeaderFontOfSize",
+          "type": "double"
+        }
+      ],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_calendarHeaderFont": {
+      "name": "_calendarHeaderFont",
+      "bridgedName": "_calendarHeaderFont",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "encodeWithCoder:": {
+      "name": "encodeWithCoder:",
+      "bridgedName": "encodeWithCoder",
+      "args": [
+        {
+          "name": "encodeWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initWithCoder:": {
+      "name": "initWithCoder:",
+      "bridgedName": "initWithCoder",
+      "args": [
+        {
+          "name": "initWithCoder",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "keyDown:inRect:ofView:": {
+      "name": "keyDown:inRect:ofView:",
+      "bridgedName": "keyDown_inRect_ofView",
+      "args": [
+        {
+          "name": "keyDown",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "stopTracking:at:inView:mouseIsUp:": {
+      "name": "stopTracking:at:inView:mouseIsUp:",
+      "bridgedName": "stopTracking_at_inView_mouseIsUp",
+      "args": [
+        {
+          "name": "stopTracking",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        },
+        {
+          "name": "mouseIsUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "continueTracking:at:inView:": {
+      "name": "continueTracking:at:inView:",
+      "bridgedName": "continueTracking_at_inView",
+      "args": [
+        {
+          "name": "continueTracking",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "startTrackingAt:inView:": {
+      "name": "startTrackingAt:inView:",
+      "bridgedName": "startTrackingAt_inView",
+      "args": [
+        {
+          "name": "startTrackingAt",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "trackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "trackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "trackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "name": "trackMouse",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "untilMouseUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hitTestForEvent:inRect:ofView:": {
+      "name": "hitTestForEvent:inRect:ofView:",
+      "bridgedName": "hitTestForEvent_inRect_ofView",
+      "args": [
+        {
+          "name": "hitTestForEvent",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawFocusRingMaskWithFrame:inView:": {
+      "name": "drawFocusRingMaskWithFrame:inView:",
+      "bridgedName": "drawFocusRingMaskWithFrame_inView",
+      "args": [
+        {
+          "name": "drawFocusRingMaskWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "drawWithFrame:inView:": {
+      "name": "drawWithFrame:inView:",
+      "bridgedName": "drawWithFrame_inView",
+      "args": [
+        {
+          "name": "drawWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "focusRingMaskBoundsForFrame:inView:": {
+      "name": "focusRingMaskBoundsForFrame:inView:",
+      "bridgedName": "focusRingMaskBoundsForFrame_inView",
+      "args": [
+        {
+          "name": "focusRingMaskBoundsForFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "cellSize": {
+      "name": "cellSize",
+      "bridgedName": "cellSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setObjectValue:": {
+      "name": "setObjectValue:",
+      "bridgedName": "setObjectValue",
+      "args": [
+        {
+          "name": "setObjectValue",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setFont:": {
+      "name": "setFont:",
+      "bridgedName": "setFont",
+      "args": [
+        {
+          "name": "setFont",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setEnabled:": {
+      "name": "setEnabled:",
+      "bridgedName": "setEnabled",
+      "args": [
+        {
+          "name": "setEnabled",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyWithZone:": {
+      "name": "copyWithZone:",
+      "bridgedName": "copyWithZone",
+      "args": [
+        {
+          "name": "copyWithZone",
+          "type": "struct _NSZone *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "dealloc": {
+      "name": "dealloc",
+      "bridgedName": "dealloc",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initTextCell:": {
+      "name": "initTextCell:",
+      "bridgedName": "initTextCell",
+      "args": [
+        {
+          "name": "initTextCell",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setWrapsDateComponentArithmetic:": {
+      "name": "_setWrapsDateComponentArithmetic:",
+      "bridgedName": "_setWrapsDateComponentArithmetic",
+      "args": [
+        {
+          "name": "_setWrapsDateComponentArithmetic",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_wrapsDateComponentArithmetic": {
+      "name": "_wrapsDateComponentArithmetic",
+      "bridgedName": "_wrapsDateComponentArithmetic",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setForcesLeadingZeroes:": {
+      "name": "_setForcesLeadingZeroes:",
+      "bridgedName": "_setForcesLeadingZeroes",
+      "args": [
+        {
+          "name": "_setForcesLeadingZeroes",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_forcesLeadingZeroes": {
+      "name": "_forcesLeadingZeroes",
+      "bridgedName": "_forcesLeadingZeroes",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setDisabledTextColor:": {
+      "name": "_setDisabledTextColor:",
+      "bridgedName": "_setDisabledTextColor",
+      "args": [
+        {
+          "name": "_setDisabledTextColor",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_disabledTextColor": {
+      "name": "_disabledTextColor",
+      "bridgedName": "_disabledTextColor",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constrainDateValue:timeInterval:": {
+      "name": "_constrainDateValue:timeInterval:",
+      "bridgedName": "_constrainDateValue_timeInterval",
+      "args": [
+        {
+          "name": "_constrainDateValue",
+          "type": "id"
+        },
+        {
+          "name": "timeInterval",
+          "type": "double *"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_finishPendingEdit": {
+      "name": "_finishPendingEdit",
+      "bridgedName": "_finishPendingEdit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_constrainAndSetDateValue:timeInterval:sendActionIfChanged:beepIfNoChange:returnCalendarToHomeMonth:preserveFractionalSeconds:": {
+      "name": "_constrainAndSetDateValue:timeInterval:sendActionIfChanged:beepIfNoChange:returnCalendarToHomeMonth:preserveFractionalSeconds:",
+      "bridgedName": "_constrainAndSetDateValue_timeInterval_sendActionIfChanged_beepIfNoChange_returnCalendarToHomeMonth_preserveFractionalSeconds",
+      "args": [
+        {
+          "name": "_constrainAndSetDateValue",
+          "type": "id"
+        },
+        {
+          "name": "timeInterval",
+          "type": "double"
+        },
+        {
+          "name": "sendActionIfChanged",
+          "type": "BOOL"
+        },
+        {
+          "name": "beepIfNoChange",
+          "type": "BOOL"
+        },
+        {
+          "name": "returnCalendarToHomeMonth",
+          "type": "BOOL"
+        },
+        {
+          "name": "preserveFractionalSeconds",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_toggleAMPM": {
+      "name": "_toggleAMPM",
+      "bridgedName": "_toggleAMPM",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustDatePickerElement:by:returnCalendarToHomeMonth:": {
+      "name": "_adjustDatePickerElement:by:returnCalendarToHomeMonth:",
+      "bridgedName": "_adjustDatePickerElement_by_returnCalendarToHomeMonth",
+      "args": [
+        {
+          "name": "_adjustDatePickerElement",
+          "type": "int"
+        },
+        {
+          "name": "by",
+          "type": "long long"
+        },
+        {
+          "name": "returnCalendarToHomeMonth",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_digitForLocalizedDigitCharacter:": {
+      "name": "_digitForLocalizedDigitCharacter:",
+      "bridgedName": "_digitForLocalizedDigitCharacter",
+      "args": [
+        {
+          "name": "_digitForLocalizedDigitCharacter",
+          "type": "unsigned short"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_rangeOfDaysForMonth:year:": {
+      "name": "_rangeOfDaysForMonth:year:",
+      "bridgedName": "_rangeOfDaysForMonth_year",
+      "args": [
+        {
+          "name": "_rangeOfDaysForMonth",
+          "type": "long long"
+        },
+        {
+          "name": "year",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_localeIsRTL": {
+      "name": "_localeIsRTL",
+      "bridgedName": "_localeIsRTL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveLocale": {
+      "name": "_effectiveLocale",
+      "bridgedName": "_effectiveLocale",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_effectiveCalendar": {
+      "name": "_effectiveCalendar",
+      "bridgedName": "_effectiveCalendar",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dayOfWeekForDate:": {
+      "name": "_dayOfWeekForDate:",
+      "bridgedName": "_dayOfWeekForDate",
+      "args": [
+        {
+          "name": "_dayOfWeekForDate",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dateIsAM:": {
+      "name": "_dateIsAM:",
+      "bridgedName": "_dateIsAM",
+      "args": [
+        {
+          "name": "_dateIsAM",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dateFromComponents:": {
+      "name": "_dateFromComponents:",
+      "bridgedName": "_dateFromComponents",
+      "args": [
+        {
+          "name": "_dateFromComponents",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_componentsOfInterestToDatePickerFromDate:": {
+      "name": "_componentsOfInterestToDatePickerFromDate:",
+      "bridgedName": "_componentsOfInterestToDatePickerFromDate",
+      "args": [
+        {
+          "name": "_componentsOfInterestToDatePickerFromDate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clampDayToValidRangeInDateComponents:": {
+      "name": "_clampDayToValidRangeInDateComponents:",
+      "bridgedName": "_clampDayToValidRangeInDateComponents",
+      "args": [
+        {
+          "name": "_clampDayToValidRangeInDateComponents",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_adjustDate:byEras:years:months:days:hours:minutes:seconds:": {
+      "name": "_adjustDate:byEras:years:months:days:hours:minutes:seconds:",
+      "bridgedName": "_adjustDate_byEras_years_months_days_hours_minutes_seconds",
+      "args": [
+        {
+          "name": "_adjustDate",
+          "type": "id"
+        },
+        {
+          "name": "byEras",
+          "type": "long long"
+        },
+        {
+          "name": "years",
+          "type": "long long"
+        },
+        {
+          "name": "months",
+          "type": "long long"
+        },
+        {
+          "name": "days",
+          "type": "long long"
+        },
+        {
+          "name": "hours",
+          "type": "long long"
+        },
+        {
+          "name": "minutes",
+          "type": "long long"
+        },
+        {
+          "name": "seconds",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_numberFormatter": {
+      "name": "_numberFormatter",
+      "bridgedName": "_numberFormatter",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_invalidateDateFormatter": {
+      "name": "_invalidateDateFormatter",
+      "bridgedName": "_invalidateDateFormatter",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_dateFormatter": {
+      "name": "_dateFormatter",
+      "bridgedName": "_dateFormatter",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calenderWeekdayHeaderTextColorBasedOnEnabledState": {
+      "name": "_calenderWeekdayHeaderTextColorBasedOnEnabledState",
+      "bridgedName": "_calenderWeekdayHeaderTextColorBasedOnEnabledState",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calenderHeaderTextColorBasedOnEnabledState": {
+      "name": "_calenderHeaderTextColorBasedOnEnabledState",
+      "bridgedName": "_calenderHeaderTextColorBasedOnEnabledState",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textColorBasedOnEnabledState": {
+      "name": "_textColorBasedOnEnabledState",
+      "bridgedName": "_textColorBasedOnEnabledState",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_fixUpDatePickerElementFlags": {
+      "name": "_fixUpDatePickerElementFlags",
+      "bridgedName": "_fixUpDatePickerElementFlags",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_allocateDatePickerCellExtraIvars": {
+      "name": "_allocateDatePickerCellExtraIvars",
+      "bridgedName": "_allocateDatePickerCellExtraIvars",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_unregisterForDatePreferencesChanges": {
+      "name": "_unregisterForDatePreferencesChanges",
+      "bridgedName": "_unregisterForDatePreferencesChanges",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_registerForDatePreferencesChanges": {
+      "name": "_registerForDatePreferencesChanges",
+      "bridgedName": "_registerForDatePreferencesChanges",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_datePreferencesDidChange:": {
+      "name": "_datePreferencesDidChange:",
+      "bridgedName": "_datePreferencesDidChange",
+      "args": [
+        {
+          "name": "_datePreferencesDidChange",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stepperCellValueChanged:": {
+      "name": "_stepperCellValueChanged:",
+      "bridgedName": "_stepperCellValueChanged",
+      "args": [
+        {
+          "name": "_stepperCellValueChanged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stepperCell": {
+      "name": "_stepperCell",
+      "bridgedName": "_stepperCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stepper": {
+      "name": "_stepper",
+      "bridgedName": "_stepper",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setStepper:": {
+      "name": "_setStepper:",
+      "bridgedName": "_setStepper",
+      "args": [
+        {
+          "name": "_setStepper",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectLastSubfield": {
+      "name": "_selectLastSubfield",
+      "bridgedName": "_selectLastSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectFirstSubfield": {
+      "name": "_selectFirstSubfield",
+      "bridgedName": "_selectFirstSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectPreviousSubfield": {
+      "name": "_selectPreviousSubfield",
+      "bridgedName": "_selectPreviousSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_selectNextSubfield": {
+      "name": "_selectNextSubfield",
+      "bridgedName": "_selectNextSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_notifyDelegateIndexOfSelectedSubfieldDidChange": {
+      "name": "_notifyDelegateIndexOfSelectedSubfieldDidChange",
+      "bridgedName": "_notifyDelegateIndexOfSelectedSubfieldDidChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_setPM:": {
+      "name": "_setPM:",
+      "bridgedName": "_setPM",
+      "args": [
+        {
+          "name": "_setPM",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_insertDigit:": {
+      "name": "_insertDigit:",
+      "bridgedName": "_insertDigit",
+      "args": [
+        {
+          "name": "_insertDigit",
+          "type": "long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelSubfieldFieldChanges": {
+      "name": "_cancelSubfieldFieldChanges",
+      "bridgedName": "_cancelSubfieldFieldChanges",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_commitSubfieldFieldChanges": {
+      "name": "_commitSubfieldFieldChanges",
+      "bridgedName": "_commitSubfieldFieldChanges",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_deleteDigit": {
+      "name": "_deleteDigit",
+      "bridgedName": "_deleteDigit",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_cancelUserEditTimer": {
+      "name": "_cancelUserEditTimer",
+      "bridgedName": "_cancelUserEditTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_resetUserEditTimer": {
+      "name": "_resetUserEditTimer",
+      "bridgedName": "_resetUserEditTimer",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_userEditExpired:": {
+      "name": "_userEditExpired:",
+      "bridgedName": "_userEditExpired",
+      "args": [
+        {
+          "name": "_userEditExpired",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_incrementSelectedSubfield": {
+      "name": "_incrementSelectedSubfield",
+      "bridgedName": "_incrementSelectedSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_decrementSelectedSubfield": {
+      "name": "_decrementSelectedSubfield",
+      "bridgedName": "_decrementSelectedSubfield",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textFieldWithStepperKeyDown:inRect:ofView:": {
+      "name": "_textFieldWithStepperKeyDown:inRect:ofView:",
+      "bridgedName": "_textFieldWithStepperKeyDown_inRect_ofView",
+      "args": [
+        {
+          "name": "_textFieldWithStepperKeyDown",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textFieldWithStepperTrackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "_textFieldWithStepperTrackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "_textFieldWithStepperTrackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "name": "_textFieldWithStepperTrackMouse",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "untilMouseUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfSelectedSubfield": {
+      "name": "_indexOfSelectedSubfield",
+      "bridgedName": "_indexOfSelectedSubfield",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subfields": {
+      "name": "_subfields",
+      "bridgedName": "_subfields",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_updateSubfieldStringsForDateChange": {
+      "name": "_updateSubfieldStringsForDateChange",
+      "bridgedName": "_updateSubfieldStringsForDateChange",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stringForDatePickerElement:usingDateFormat:": {
+      "name": "_stringForDatePickerElement:usingDateFormat:",
+      "bridgedName": "_stringForDatePickerElement_usingDateFormat",
+      "args": [
+        {
+          "name": "_stringForDatePickerElement",
+          "type": "int"
+        },
+        {
+          "name": "usingDateFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_makeSubfieldsWithHandler:": {
+      "name": "_makeSubfieldsWithHandler:",
+      "bridgedName": "_makeSubfieldsWithHandler",
+      "args": [
+        {
+          "name": "_makeSubfieldsWithHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_concoctUnholyAbominationOfADateFormatThatMakesAMockeryOfLocalization": {
+      "name": "_concoctUnholyAbominationOfADateFormatThatMakesAMockeryOfLocalization",
+      "bridgedName": "_concoctUnholyAbominationOfADateFormatThatMakesAMockeryOfLocalization",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addSubfieldForElement:withDateFormat:referenceStrings:": {
+      "name": "_addSubfieldForElement:withDateFormat:referenceStrings:",
+      "bridgedName": "_addSubfieldForElement_withDateFormat_referenceStrings",
+      "args": [
+        {
+          "name": "_addSubfieldForElement",
+          "type": "int"
+        },
+        {
+          "name": "withDateFormat",
+          "type": "id"
+        },
+        {
+          "name": "referenceStrings",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addStaticSubfieldWithString:": {
+      "name": "_addStaticSubfieldWithString:",
+      "bridgedName": "_addStaticSubfieldWithString",
+      "args": [
+        {
+          "name": "_addStaticSubfieldWithString",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_addEditableSubfieldForElement:dateFormat:": {
+      "name": "_addEditableSubfieldForElement:dateFormat:",
+      "bridgedName": "_addEditableSubfieldForElement_dateFormat",
+      "args": [
+        {
+          "name": "_addEditableSubfieldForElement",
+          "type": "int"
+        },
+        {
+          "name": "dateFormat",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_referenceDatesForElement:": {
+      "name": "_referenceDatesForElement:",
+      "bridgedName": "_referenceDatesForElement",
+      "args": [
+        {
+          "name": "_referenceDatesForElement",
+          "type": "int"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_createSubfields": {
+      "name": "_createSubfields",
+      "bridgedName": "_createSubfields",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subfieldsFrame": {
+      "name": "_subfieldsFrame",
+      "bridgedName": "_subfieldsFrame",
+      "args": [],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_subfieldOffsetForTextAreaFrame:": {
+      "name": "_subfieldOffsetForTextAreaFrame:",
+      "bridgedName": "_subfieldOffsetForTextAreaFrame",
+      "args": [
+        {
+          "name": "_subfieldOffsetForTextAreaFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textFieldCellSize": {
+      "name": "_textFieldCellSize",
+      "bridgedName": "_textFieldCellSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textFieldWithStepperCellSize": {
+      "name": "_textFieldWithStepperCellSize",
+      "bridgedName": "_textFieldWithStepperCellSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_indexOfSubfieldAtPoint:inTextAreaFrame:": {
+      "name": "_indexOfSubfieldAtPoint:inTextAreaFrame:",
+      "bridgedName": "_indexOfSubfieldAtPoint_inTextAreaFrame",
+      "args": [
+        {
+          "name": "_indexOfSubfieldAtPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inTextAreaFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_getTextAreaFrame:stepperCellFrame:forDatePickerCellFrame:": {
+      "name": "_getTextAreaFrame:stepperCellFrame:forDatePickerCellFrame:",
+      "bridgedName": "_getTextAreaFrame_stepperCellFrame_forDatePickerCellFrame",
+      "args": [
+        {
+          "name": "_getTextAreaFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "stepperCellFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "forDatePickerCellFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stepperCellTopAndBottomTrim": {
+      "name": "_stepperCellTopAndBottomTrim",
+      "bridgedName": "_stepperCellTopAndBottomTrim",
+      "args": [],
+      "returns": "double",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_desiredTextAreaSize": {
+      "name": "_desiredTextAreaSize",
+      "bridgedName": "_desiredTextAreaSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_textFieldAlignment": {
+      "name": "_textFieldAlignment",
+      "bridgedName": "_textFieldAlignment",
+      "args": [],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_stepperIsRTL": {
+      "name": "_stepperIsRTL",
+      "bridgedName": "_stepperIsRTL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_shouldShowFocusRingInView:": {
+      "name": "_shouldShowFocusRingInView:",
+      "bridgedName": "_shouldShowFocusRingInView",
+      "args": [
+        {
+          "name": "_shouldShowFocusRingInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hasFocusRingInView:": {
+      "name": "_hasFocusRingInView:",
+      "bridgedName": "_hasFocusRingInView",
+      "args": [
+        {
+          "name": "_hasFocusRingInView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawTextFieldWithStepperWithFrame:inView:": {
+      "name": "_drawTextFieldWithStepperWithFrame:inView:",
+      "bridgedName": "_drawTextFieldWithStepperWithFrame_inView",
+      "args": [
+        {
+          "name": "_drawTextFieldWithStepperWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawThemeBezelWithFrame:inView:": {
+      "name": "_drawThemeBezelWithFrame:inView:",
+      "bridgedName": "_drawThemeBezelWithFrame_inView",
+      "args": [
+        {
+          "name": "_drawThemeBezelWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_contentInsetsForThemeBezelWithFrame:inView:": {
+      "name": "_contentInsetsForThemeBezelWithFrame:inView:",
+      "bridgedName": "_contentInsetsForThemeBezelWithFrame_inView",
+      "args": [
+        {
+          "name": "_contentInsetsForThemeBezelWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_alignmentRectInsetsForThemeBezelWithFrame:inView:": {
+      "name": "_alignmentRectInsetsForThemeBezelWithFrame:inView:",
+      "bridgedName": "_alignmentRectInsetsForThemeBezelWithFrame_inView",
+      "args": [
+        {
+          "name": "_alignmentRectInsetsForThemeBezelWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "struct NSEdgeInsets",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_coreUIDrawOptionsForThemeBezelWithFrame:inView:": {
+      "name": "_coreUIDrawOptionsForThemeBezelWithFrame:inView:",
+      "bridgedName": "_coreUIDrawOptionsForThemeBezelWithFrame_inView",
+      "args": [
+        {
+          "name": "_coreUIDrawOptionsForThemeBezelWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hitTestTextFieldWithStepper:inRect:ofView:": {
+      "name": "_hitTestTextFieldWithStepper:inRect:ofView:",
+      "bridgedName": "_hitTestTextFieldWithStepper_inRect_ofView",
+      "args": [
+        {
+          "name": "_hitTestTextFieldWithStepper",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarTakeDisplayedMonthFromTodaysDate": {
+      "name": "_clockAndCalendarTakeDisplayedMonthFromTodaysDate",
+      "bridgedName": "_clockAndCalendarTakeDisplayedMonthFromTodaysDate",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarTakeDisplayedMonthFromDateValue": {
+      "name": "_clockAndCalendarTakeDisplayedMonthFromDateValue",
+      "bridgedName": "_clockAndCalendarTakeDisplayedMonthFromDateValue",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarReturnToHomeMonth:": {
+      "name": "_clockAndCalendarReturnToHomeMonth:",
+      "bridgedName": "_clockAndCalendarReturnToHomeMonth",
+      "args": [
+        {
+          "name": "_clockAndCalendarReturnToHomeMonth",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarRightArrowClicked:": {
+      "name": "_clockAndCalendarRightArrowClicked:",
+      "bridgedName": "_clockAndCalendarRightArrowClicked",
+      "args": [
+        {
+          "name": "_clockAndCalendarRightArrowClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarLeftArrowClicked:": {
+      "name": "_clockAndCalendarLeftArrowClicked:",
+      "bridgedName": "_clockAndCalendarLeftArrowClicked",
+      "args": [
+        {
+          "name": "_clockAndCalendarLeftArrowClicked",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarAdvanceMonth": {
+      "name": "_clockAndCalendarAdvanceMonth",
+      "bridgedName": "_clockAndCalendarAdvanceMonth",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarRetreatMonth": {
+      "name": "_clockAndCalendarRetreatMonth",
+      "bridgedName": "_clockAndCalendarRetreatMonth",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarIsTargetMonthLeapMonth:offset:": {
+      "name": "_clockAndCalendarIsTargetMonthLeapMonth:offset:",
+      "bridgedName": "_clockAndCalendarIsTargetMonthLeapMonth_offset",
+      "args": [
+        {
+          "name": "_clockAndCalendarIsTargetMonthLeapMonth",
+          "type": "id"
+        },
+        {
+          "name": "offset",
+          "type": "long long"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarReturnToHomeMonthButtonCell": {
+      "name": "_clockAndCalendarReturnToHomeMonthButtonCell",
+      "bridgedName": "_clockAndCalendarReturnToHomeMonthButtonCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarAdvanceMonthCell": {
+      "name": "_clockAndCalendarAdvanceMonthCell",
+      "bridgedName": "_clockAndCalendarAdvanceMonthCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarRetreatMonthCell": {
+      "name": "_clockAndCalendarRetreatMonthCell",
+      "bridgedName": "_clockAndCalendarRetreatMonthCell",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarKeyDown:inRect:ofView:": {
+      "name": "_clockAndCalendarKeyDown:inRect:ofView:",
+      "bridgedName": "_clockAndCalendarKeyDown_inRect_ofView",
+      "args": [
+        {
+          "name": "_clockAndCalendarKeyDown",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_autoAdvanceCalendar:": {
+      "name": "_autoAdvanceCalendar:",
+      "bridgedName": "_autoAdvanceCalendar",
+      "args": [
+        {
+          "name": "_autoAdvanceCalendar",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarStopTracking:at:inView:mouseIsUp:": {
+      "name": "_clockAndCalendarStopTracking:at:inView:mouseIsUp:",
+      "bridgedName": "_clockAndCalendarStopTracking_at_inView_mouseIsUp",
+      "args": [
+        {
+          "name": "_clockAndCalendarStopTracking",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        },
+        {
+          "name": "mouseIsUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarContinueTracking:at:inView:": {
+      "name": "_clockAndCalendarContinueTracking:at:inView:",
+      "bridgedName": "_clockAndCalendarContinueTracking_at_inView",
+      "args": [
+        {
+          "name": "_clockAndCalendarContinueTracking",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "at",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarStartTrackingAt:inView:": {
+      "name": "_clockAndCalendarStartTrackingAt:inView:",
+      "bridgedName": "_clockAndCalendarStartTrackingAt_inView",
+      "args": [
+        {
+          "name": "_clockAndCalendarStartTrackingAt",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarDateComponentsForPoint:inCalendarRect:": {
+      "name": "_calendarDateComponentsForPoint:inCalendarRect:",
+      "bridgedName": "_calendarDateComponentsForPoint_inCalendarRect",
+      "args": [
+        {
+          "name": "_calendarDateComponentsForPoint",
+          "type": "struct CGPoint"
+        },
+        {
+          "name": "inCalendarRect",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarTrackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "_clockAndCalendarTrackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "_clockAndCalendarTrackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "name": "_clockAndCalendarTrackMouse",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "untilMouseUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarGetClockFrame:calendarFrame:retreatMonthCellFrame:advanceMonthCellFrame:returnToHomeMonthButtonCellFrame:forDatePickerCellFrame:": {
+      "name": "_clockAndCalendarGetClockFrame:calendarFrame:retreatMonthCellFrame:advanceMonthCellFrame:returnToHomeMonthButtonCellFrame:forDatePickerCellFrame:",
+      "bridgedName": "_clockAndCalendarGetClockFrame_calendarFrame_retreatMonthCellFrame_advanceMonthCellFrame_returnToHomeMonthButtonCellFrame_forDatePickerCellFrame",
+      "args": [
+        {
+          "name": "_clockAndCalendarGetClockFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "calendarFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "retreatMonthCellFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "advanceMonthCellFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "returnToHomeMonthButtonCellFrame",
+          "type": "struct CGRect *"
+        },
+        {
+          "name": "forDatePickerCellFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarDaysFrameForDatePickerCellFrame:": {
+      "name": "_calendarDaysFrameForDatePickerCellFrame:",
+      "bridgedName": "_calendarDaysFrameForDatePickerCellFrame",
+      "args": [
+        {
+          "name": "_calendarDaysFrameForDatePickerCellFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "struct CGRect",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarCellSize": {
+      "name": "_clockAndCalendarCellSize",
+      "bridgedName": "_clockAndCalendarCellSize",
+      "args": [],
+      "returns": "struct CGSize",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawClockAndCalendarWithFrame:inView:": {
+      "name": "_drawClockAndCalendarWithFrame:inView:",
+      "bridgedName": "_drawClockAndCalendarWithFrame_inView",
+      "args": [
+        {
+          "name": "_drawClockAndCalendarWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_hitTestClockAndCalendar:inRect:ofView:": {
+      "name": "_hitTestClockAndCalendar:inRect:ofView:",
+      "bridgedName": "_hitTestClockAndCalendar_inRect_ofView",
+      "args": [
+        {
+          "name": "_hitTestClockAndCalendar",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        }
+      ],
+      "returns": "unsigned long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarFillDayCell:withColor:inFrame:inView:": {
+      "name": "_clockAndCalendarFillDayCell:withColor:inFrame:inView:",
+      "bridgedName": "_clockAndCalendarFillDayCell_withColor_inFrame_inView",
+      "args": [
+        {
+          "name": "_clockAndCalendarFillDayCell",
+          "type": "long long"
+        },
+        {
+          "name": "withColor",
+          "type": "id"
+        },
+        {
+          "name": "inFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_clockAndCalendarFillDayCellRange:withColor:inFrame:inView:": {
+      "name": "_clockAndCalendarFillDayCellRange:withColor:inFrame:inView:",
+      "bridgedName": "_clockAndCalendarFillDayCellRange_withColor_inFrame_inView",
+      "args": [
+        {
+          "name": "_clockAndCalendarFillDayCellRange",
+          "type": "struct _NSRange"
+        },
+        {
+          "name": "withColor",
+          "type": "id"
+        },
+        {
+          "name": "inFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarContentAttributedStringWithSelectedDayCells:": {
+      "name": "_calendarContentAttributedStringWithSelectedDayCells:",
+      "bridgedName": "_calendarContentAttributedStringWithSelectedDayCells",
+      "args": [
+        {
+          "name": "_calendarContentAttributedStringWithSelectedDayCells",
+          "type": "struct _NSRange"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarIsRTL": {
+      "name": "_calendarIsRTL",
+      "bridgedName": "_calendarIsRTL",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarDayNamesStringForFirstWeekday:": {
+      "name": "_calendarDayNamesStringForFirstWeekday:",
+      "bridgedName": "_calendarDayNamesStringForFirstWeekday",
+      "args": [
+        {
+          "name": "_calendarDayNamesStringForFirstWeekday",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarRangeOfSelectedDaysForDisplayedMonthOffset:": {
+      "name": "_calendarRangeOfSelectedDaysForDisplayedMonthOffset:",
+      "bridgedName": "_calendarRangeOfSelectedDaysForDisplayedMonthOffset",
+      "args": [
+        {
+          "name": "_calendarRangeOfSelectedDaysForDisplayedMonthOffset",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarRangeOfAllDaysForDisplayedMonth": {
+      "name": "_calendarRangeOfAllDaysForDisplayedMonth",
+      "bridgedName": "_calendarRangeOfAllDaysForDisplayedMonth",
+      "args": [],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarRangeOfAllDaysForDisplayedMonthOffset:": {
+      "name": "_calendarRangeOfAllDaysForDisplayedMonthOffset:",
+      "bridgedName": "_calendarRangeOfAllDaysForDisplayedMonthOffset",
+      "args": [
+        {
+          "name": "_calendarRangeOfAllDaysForDisplayedMonthOffset",
+          "type": "long long"
+        }
+      ],
+      "returns": "struct _NSRange",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarFirstWeekday": {
+      "name": "_calendarFirstWeekday",
+      "bridgedName": "_calendarFirstWeekday",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarFirstDayOfDisplayedMonthDateComponents": {
+      "name": "_calendarFirstDayOfDisplayedMonthDateComponents",
+      "bridgedName": "_calendarFirstDayOfDisplayedMonthDateComponents",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_calendarDateComponentsOfFirstDayOfDisplayedMonthOffset:": {
+      "name": "_calendarDateComponentsOfFirstDayOfDisplayedMonthOffset:",
+      "bridgedName": "_calendarDateComponentsOfFirstDayOfDisplayedMonthOffset",
+      "args": [
+        {
+          "name": "_calendarDateComponentsOfFirstDayOfDisplayedMonthOffset",
+          "type": "long long"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_analogClockTrackMouse:inRect:ofView:untilMouseUp:": {
+      "name": "_analogClockTrackMouse:inRect:ofView:untilMouseUp:",
+      "bridgedName": "_analogClockTrackMouse_inRect_ofView_untilMouseUp",
+      "args": [
+        {
+          "name": "_analogClockTrackMouse",
+          "type": "id"
+        },
+        {
+          "name": "inRect",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "ofView",
+          "type": "id"
+        },
+        {
+          "name": "untilMouseUp",
+          "type": "BOOL"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_drawAnalogClockWithFrame:inView:": {
+      "name": "_drawAnalogClockWithFrame:inView:",
+      "bridgedName": "_drawAnalogClockWithFrame_inView",
+      "args": [
+        {
+          "name": "_drawAnalogClockWithFrame",
+          "type": "struct CGRect"
+        },
+        {
+          "name": "inView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_formatGregorianYearWithDate:": {
+      "name": "_formatGregorianYearWithDate:",
+      "bridgedName": "_formatGregorianYearWithDate",
+      "args": [
+        {
+          "name": "_formatGregorianYearWithDate",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "_useChineseSetting": {
+      "name": "_useChineseSetting",
+      "bridgedName": "_useChineseSetting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsDateTimeComponentsAttributeSettable": {
+      "name": "accessibilityIsDateTimeComponentsAttributeSettable",
+      "bridgedName": "accessibilityIsDateTimeComponentsAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityDateTimeComponentsAttribute": {
+      "name": "accessibilityDateTimeComponentsAttribute",
+      "bridgedName": "accessibilityDateTimeComponentsAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsMaxValueAttributeSettable": {
+      "name": "accessibilityIsMaxValueAttributeSettable",
+      "bridgedName": "accessibilityIsMaxValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMaxValueAttribute": {
+      "name": "accessibilityMaxValueAttribute",
+      "bridgedName": "accessibilityMaxValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsMinValueAttributeSettable": {
+      "name": "accessibilityIsMinValueAttributeSettable",
+      "bridgedName": "accessibilityIsMinValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityMinValueAttribute": {
+      "name": "accessibilityMinValueAttribute",
+      "bridgedName": "accessibilityMinValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilitySetValueAttribute:": {
+      "name": "accessibilitySetValueAttribute:",
+      "bridgedName": "accessibilitySetValueAttribute",
+      "args": [
+        {
+          "name": "accessibilitySetValueAttribute",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityIsValueAttributeSettable": {
+      "name": "accessibilityIsValueAttributeSettable",
+      "bridgedName": "accessibilityIsValueAttributeSettable",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityValueAttribute": {
+      "name": "accessibilityValueAttribute",
+      "bridgedName": "accessibilityValueAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityRoleAttribute": {
+      "name": "accessibilityRoleAttribute",
+      "bridgedName": "accessibilityRoleAttribute",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "accessibilityAttributeNames": {
+      "name": "accessibilityAttributeNames",
+      "bridgedName": "accessibilityAttributeNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "maxDate": {
+      "name": "maxDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "minDate": {
+      "name": "minDate",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "dateValue": {
+      "name": "dateValue",
+      "pointer": true,
+      "type": "NSDate",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "timeZone": {
+      "name": "timeZone",
+      "pointer": true,
+      "type": "NSTimeZone",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "locale": {
+      "name": "locale",
+      "pointer": true,
+      "type": "NSLocale",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "calendar": {
+      "name": "calendar",
+      "pointer": true,
+      "type": "NSCalendar",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "textColor": {
+      "name": "textColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    },
+    "backgroundColor": {
+      "name": "backgroundColor",
+      "pointer": true,
+      "type": "NSColor",
+      "attributes": [
+        "copy"
+      ]
+    }
+  }
+}

@@ -1,0 +1,957 @@
+{
+  "imports": [
+    "MSModelObject.h"
+  ],
+  "classes": [
+    "MSAssetCollection",
+    "MSSharedStyleContainer",
+    "MSSharedTextStyleContainer",
+    "MSSymbolContainer",
+    "NSArray",
+    "NSDictionary",
+    "NSMutableArray"
+  ],
+  "protocol": false,
+  "className": "_MSDocumentData",
+  "extends": "MSModelObject",
+  "interfaces": [],
+  "methods": {
+    "allowsFaulting": {
+      "name": "allowsFaulting",
+      "bridgedName": "allowsFaulting",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "immutableClass": {
+      "name": "immutableClass",
+      "bridgedName": "immutableClass",
+      "args": [],
+      "returns": "Class",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    ".cxx_destruct": {
+      "name": ".cxx_destruct",
+      "bridgedName": ".cxx_destruct",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "syncPropertiesFromObject:": {
+      "name": "syncPropertiesFromObject:",
+      "bridgedName": "syncPropertiesFromObject",
+      "args": [
+        {
+          "name": "syncPropertiesFromObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "propertiesAreEqual:": {
+      "name": "propertiesAreEqual:",
+      "bridgedName": "propertiesAreEqual",
+      "args": [
+        {
+          "name": "propertiesAreEqual",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "copyPropertiesToObject:options:": {
+      "name": "copyPropertiesToObject:options:",
+      "bridgedName": "copyPropertiesToObject_options",
+      "args": [
+        {
+          "name": "copyPropertiesToObject",
+          "type": "id"
+        },
+        {
+          "name": "options",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "setAsParentOnChildren": {
+      "name": "setAsParentOnChildren",
+      "bridgedName": "setAsParentOnChildren",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "movePageIndex:toIndex:": {
+      "name": "movePageIndex:toIndex:",
+      "bridgedName": "movePageIndex_toIndex",
+      "args": [
+        {
+          "name": "movePageIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllPages": {
+      "name": "removeAllPages",
+      "bridgedName": "removeAllPages",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePagesAtIndexes:": {
+      "name": "removePagesAtIndexes:",
+      "bridgedName": "removePagesAtIndexes",
+      "args": [
+        {
+          "name": "removePagesAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePageAtIndex:": {
+      "name": "removePageAtIndex:",
+      "bridgedName": "removePageAtIndex",
+      "args": [
+        {
+          "name": "removePageAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removePage:": {
+      "name": "removePage:",
+      "bridgedName": "removePage",
+      "args": [
+        {
+          "name": "removePage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPages:afterPage:": {
+      "name": "insertPages:afterPage:",
+      "bridgedName": "insertPages_afterPage",
+      "args": [
+        {
+          "name": "insertPages",
+          "type": "id"
+        },
+        {
+          "name": "afterPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPage:afterPage:": {
+      "name": "insertPage:afterPage:",
+      "bridgedName": "insertPage_afterPage",
+      "args": [
+        {
+          "name": "insertPage",
+          "type": "id"
+        },
+        {
+          "name": "afterPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPages:beforePage:": {
+      "name": "insertPages:beforePage:",
+      "bridgedName": "insertPages_beforePage",
+      "args": [
+        {
+          "name": "insertPages",
+          "type": "id"
+        },
+        {
+          "name": "beforePage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPage:beforePage:": {
+      "name": "insertPage:beforePage:",
+      "bridgedName": "insertPage_beforePage",
+      "args": [
+        {
+          "name": "insertPage",
+          "type": "id"
+        },
+        {
+          "name": "beforePage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertPage:atIndex:": {
+      "name": "insertPage:atIndex:",
+      "bridgedName": "insertPage_atIndex",
+      "args": [
+        {
+          "name": "insertPage",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPages:": {
+      "name": "addPages:",
+      "bridgedName": "addPages",
+      "args": [
+        {
+          "name": "addPages",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addPage:": {
+      "name": "addPage:",
+      "bridgedName": "addPage",
+      "args": [
+        {
+          "name": "addPage",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveForeignTextStyleIndex:toIndex:": {
+      "name": "moveForeignTextStyleIndex:toIndex:",
+      "bridgedName": "moveForeignTextStyleIndex_toIndex",
+      "args": [
+        {
+          "name": "moveForeignTextStyleIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllForeignTextStyles": {
+      "name": "removeAllForeignTextStyles",
+      "bridgedName": "removeAllForeignTextStyles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignTextStylesAtIndexes:": {
+      "name": "removeForeignTextStylesAtIndexes:",
+      "bridgedName": "removeForeignTextStylesAtIndexes",
+      "args": [
+        {
+          "name": "removeForeignTextStylesAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignTextStyleAtIndex:": {
+      "name": "removeForeignTextStyleAtIndex:",
+      "bridgedName": "removeForeignTextStyleAtIndex",
+      "args": [
+        {
+          "name": "removeForeignTextStyleAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignTextStyle:": {
+      "name": "removeForeignTextStyle:",
+      "bridgedName": "removeForeignTextStyle",
+      "args": [
+        {
+          "name": "removeForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignTextStyles:afterForeignTextStyle:": {
+      "name": "insertForeignTextStyles:afterForeignTextStyle:",
+      "bridgedName": "insertForeignTextStyles_afterForeignTextStyle",
+      "args": [
+        {
+          "name": "insertForeignTextStyles",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignTextStyle:afterForeignTextStyle:": {
+      "name": "insertForeignTextStyle:afterForeignTextStyle:",
+      "bridgedName": "insertForeignTextStyle_afterForeignTextStyle",
+      "args": [
+        {
+          "name": "insertForeignTextStyle",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignTextStyles:beforeForeignTextStyle:": {
+      "name": "insertForeignTextStyles:beforeForeignTextStyle:",
+      "bridgedName": "insertForeignTextStyles_beforeForeignTextStyle",
+      "args": [
+        {
+          "name": "insertForeignTextStyles",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignTextStyle:beforeForeignTextStyle:": {
+      "name": "insertForeignTextStyle:beforeForeignTextStyle:",
+      "bridgedName": "insertForeignTextStyle_beforeForeignTextStyle",
+      "args": [
+        {
+          "name": "insertForeignTextStyle",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignTextStyle:atIndex:": {
+      "name": "insertForeignTextStyle:atIndex:",
+      "bridgedName": "insertForeignTextStyle_atIndex",
+      "args": [
+        {
+          "name": "insertForeignTextStyle",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignTextStyles:": {
+      "name": "addForeignTextStyles:",
+      "bridgedName": "addForeignTextStyles",
+      "args": [
+        {
+          "name": "addForeignTextStyles",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignTextStyle:": {
+      "name": "addForeignTextStyle:",
+      "bridgedName": "addForeignTextStyle",
+      "args": [
+        {
+          "name": "addForeignTextStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveForeignSymbolIndex:toIndex:": {
+      "name": "moveForeignSymbolIndex:toIndex:",
+      "bridgedName": "moveForeignSymbolIndex_toIndex",
+      "args": [
+        {
+          "name": "moveForeignSymbolIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllForeignSymbols": {
+      "name": "removeAllForeignSymbols",
+      "bridgedName": "removeAllForeignSymbols",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignSymbolsAtIndexes:": {
+      "name": "removeForeignSymbolsAtIndexes:",
+      "bridgedName": "removeForeignSymbolsAtIndexes",
+      "args": [
+        {
+          "name": "removeForeignSymbolsAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignSymbolAtIndex:": {
+      "name": "removeForeignSymbolAtIndex:",
+      "bridgedName": "removeForeignSymbolAtIndex",
+      "args": [
+        {
+          "name": "removeForeignSymbolAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignSymbol:": {
+      "name": "removeForeignSymbol:",
+      "bridgedName": "removeForeignSymbol",
+      "args": [
+        {
+          "name": "removeForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignSymbols:afterForeignSymbol:": {
+      "name": "insertForeignSymbols:afterForeignSymbol:",
+      "bridgedName": "insertForeignSymbols_afterForeignSymbol",
+      "args": [
+        {
+          "name": "insertForeignSymbols",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignSymbol:afterForeignSymbol:": {
+      "name": "insertForeignSymbol:afterForeignSymbol:",
+      "bridgedName": "insertForeignSymbol_afterForeignSymbol",
+      "args": [
+        {
+          "name": "insertForeignSymbol",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignSymbols:beforeForeignSymbol:": {
+      "name": "insertForeignSymbols:beforeForeignSymbol:",
+      "bridgedName": "insertForeignSymbols_beforeForeignSymbol",
+      "args": [
+        {
+          "name": "insertForeignSymbols",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignSymbol:beforeForeignSymbol:": {
+      "name": "insertForeignSymbol:beforeForeignSymbol:",
+      "bridgedName": "insertForeignSymbol_beforeForeignSymbol",
+      "args": [
+        {
+          "name": "insertForeignSymbol",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignSymbol:atIndex:": {
+      "name": "insertForeignSymbol:atIndex:",
+      "bridgedName": "insertForeignSymbol_atIndex",
+      "args": [
+        {
+          "name": "insertForeignSymbol",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignSymbols:": {
+      "name": "addForeignSymbols:",
+      "bridgedName": "addForeignSymbols",
+      "args": [
+        {
+          "name": "addForeignSymbols",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignSymbol:": {
+      "name": "addForeignSymbol:",
+      "bridgedName": "addForeignSymbol",
+      "args": [
+        {
+          "name": "addForeignSymbol",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "moveForeignLayerStyleIndex:toIndex:": {
+      "name": "moveForeignLayerStyleIndex:toIndex:",
+      "bridgedName": "moveForeignLayerStyleIndex_toIndex",
+      "args": [
+        {
+          "name": "moveForeignLayerStyleIndex",
+          "type": "unsigned long long"
+        },
+        {
+          "name": "toIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeAllForeignLayerStyles": {
+      "name": "removeAllForeignLayerStyles",
+      "bridgedName": "removeAllForeignLayerStyles",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignLayerStylesAtIndexes:": {
+      "name": "removeForeignLayerStylesAtIndexes:",
+      "bridgedName": "removeForeignLayerStylesAtIndexes",
+      "args": [
+        {
+          "name": "removeForeignLayerStylesAtIndexes",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignLayerStyleAtIndex:": {
+      "name": "removeForeignLayerStyleAtIndex:",
+      "bridgedName": "removeForeignLayerStyleAtIndex",
+      "args": [
+        {
+          "name": "removeForeignLayerStyleAtIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "removeForeignLayerStyle:": {
+      "name": "removeForeignLayerStyle:",
+      "bridgedName": "removeForeignLayerStyle",
+      "args": [
+        {
+          "name": "removeForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignLayerStyles:afterForeignLayerStyle:": {
+      "name": "insertForeignLayerStyles:afterForeignLayerStyle:",
+      "bridgedName": "insertForeignLayerStyles_afterForeignLayerStyle",
+      "args": [
+        {
+          "name": "insertForeignLayerStyles",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignLayerStyle:afterForeignLayerStyle:": {
+      "name": "insertForeignLayerStyle:afterForeignLayerStyle:",
+      "bridgedName": "insertForeignLayerStyle_afterForeignLayerStyle",
+      "args": [
+        {
+          "name": "insertForeignLayerStyle",
+          "type": "id"
+        },
+        {
+          "name": "afterForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignLayerStyles:beforeForeignLayerStyle:": {
+      "name": "insertForeignLayerStyles:beforeForeignLayerStyle:",
+      "bridgedName": "insertForeignLayerStyles_beforeForeignLayerStyle",
+      "args": [
+        {
+          "name": "insertForeignLayerStyles",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignLayerStyle:beforeForeignLayerStyle:": {
+      "name": "insertForeignLayerStyle:beforeForeignLayerStyle:",
+      "bridgedName": "insertForeignLayerStyle_beforeForeignLayerStyle",
+      "args": [
+        {
+          "name": "insertForeignLayerStyle",
+          "type": "id"
+        },
+        {
+          "name": "beforeForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "insertForeignLayerStyle:atIndex:": {
+      "name": "insertForeignLayerStyle:atIndex:",
+      "bridgedName": "insertForeignLayerStyle_atIndex",
+      "args": [
+        {
+          "name": "insertForeignLayerStyle",
+          "type": "id"
+        },
+        {
+          "name": "atIndex",
+          "type": "unsigned long long"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignLayerStyles:": {
+      "name": "addForeignLayerStyles:",
+      "bridgedName": "addForeignLayerStyles",
+      "args": [
+        {
+          "name": "addForeignLayerStyles",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "addForeignLayerStyle:": {
+      "name": "addForeignLayerStyle:",
+      "bridgedName": "addForeignLayerStyle",
+      "args": [
+        {
+          "name": "addForeignLayerStyle",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "initializeUnsetObjectPropertiesWithDefaults": {
+      "name": "initializeUnsetObjectPropertiesWithDefaults",
+      "bridgedName": "initializeUnsetObjectPropertiesWithDefaults",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "hasDefaultValues": {
+      "name": "hasDefaultValues",
+      "bridgedName": "hasDefaultValues",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitEmptyObject": {
+      "name": "performInitEmptyObject",
+      "bridgedName": "performInitEmptyObject",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "performInitWithImmutableModelObject:": {
+      "name": "performInitWithImmutableModelObject:",
+      "bridgedName": "performInitWithImmutableModelObject",
+      "args": [
+        {
+          "name": "performInitWithImmutableModelObject",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateChildProperties:": {
+      "name": "enumerateChildProperties:",
+      "bridgedName": "enumerateChildProperties",
+      "args": [
+        {
+          "name": "enumerateChildProperties",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "enumerateProperties:": {
+      "name": "enumerateProperties:",
+      "bridgedName": "enumerateProperties",
+      "args": [
+        {
+          "name": "enumerateProperties",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    }
+  },
+  "properties": {
+    "pages": {
+      "name": "pages",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layerTextStyles": {
+      "name": "layerTextStyles",
+      "pointer": true,
+      "type": "MSSharedTextStyleContainer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layerSymbols": {
+      "name": "layerSymbols",
+      "pointer": true,
+      "type": "MSSymbolContainer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "layerStyles": {
+      "name": "layerStyles",
+      "pointer": true,
+      "type": "MSSharedStyleContainer",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "foreignTextStyles": {
+      "name": "foreignTextStyles",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "foreignSymbols": {
+      "name": "foreignSymbols",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "foreignLayerStyles": {
+      "name": "foreignLayerStyles",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "assets": {
+      "name": "assets",
+      "pointer": true,
+      "type": "MSAssetCollection",
+      "attributes": [
+        "retain",
+        "nonatomic"
+      ]
+    },
+    "userInfo": {
+      "name": "userInfo",
+      "pointer": true,
+      "type": "NSDictionary",
+      "attributes": [
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "currentPageIndex": {
+      "name": "currentPageIndex",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    },
+    "colorSpace": {
+      "name": "colorSpace",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "nonatomic"
+      ]
+    }
+  }
+}
