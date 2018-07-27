@@ -92,13 +92,13 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithPort:": {
-      "name": "initWithPort:",
-      "bridgedName": "initWithPort",
+    "initWithSendRight:": {
+      "name": "initWithSendRight:",
+      "bridgedName": "initWithSendRight",
       "args": [
         {
-          "name": "initWithPort",
-          "type": "unsigned int"
+          "name": "initWithSendRight",
+          "type": "struct _mach_right_send"
         }
       ],
       "returns": "id",
@@ -112,30 +112,13 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
-    },
-    "_initWithPort:incrementRef:": {
-      "name": "_initWithPort:incrementRef:",
-      "bridgedName": "_initWithPort_incrementRef",
-      "args": [
-        {
-          "name": "_initWithPort",
-          "type": "unsigned int"
-        },
-        {
-          "name": "incrementRef",
-          "type": "BOOL"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
     }
   },
   "properties": {
-    "port": {
-      "name": "port",
+    "sendRight": {
+      "name": "sendRight",
       "pointer": false,
-      "type": "unsigned int",
+      "type": "struct _mach_right_send",
       "attributes": [
         "readonly"
       ]

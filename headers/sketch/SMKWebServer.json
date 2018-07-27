@@ -6,8 +6,8 @@
   ],
   "classes": [
     "GCDWebServer",
-    "NSMutableArray",
-    "NSMutableDictionary",
+    "NSArray",
+    "NSDictionary",
     "NSString",
     "NSURL",
     "SMKDiskCache"
@@ -292,18 +292,17 @@
     "assetAccounts": {
       "name": "assetAccounts",
       "pointer": true,
-      "type": "NSMutableDictionary",
+      "type": "NSDictionary",
       "attributes": [
-        "retain",
-        "nonatomic"
+        "copy"
       ]
     },
     "cachedExports": {
       "name": "cachedExports",
       "pointer": true,
-      "type": "NSMutableArray",
+      "type": "NSArray",
       "attributes": [
-        "retain"
+        "copy"
       ]
     },
     "diskCache": {
@@ -311,7 +310,8 @@
       "pointer": true,
       "type": "SMKDiskCache",
       "attributes": [
-        "retain"
+        "retain",
+        "nonatomic"
       ]
     },
     "server": {

@@ -5,6 +5,7 @@
     "NSCopying.h"
   ],
   "classes": [
+    "BCReadWriteLock",
     "NSAttributedString",
     "NSSet",
     "NSString"
@@ -171,6 +172,35 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "calculateUnavailableFontNames": {
+      "name": "calculateUnavailableFontNames",
+      "bridgedName": "calculateUnavailableFontNames",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculateTransformedAttributedStringFromAtrributedString:": {
+      "name": "calculateTransformedAttributedStringFromAtrributedString:",
+      "bridgedName": "calculateTransformedAttributedStringFromAtrributedString",
+      "args": [
+        {
+          "name": "calculateTransformedAttributedStringFromAtrributedString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "calculateAttributedString": {
+      "name": "calculateAttributedString",
+      "bridgedName": "calculateAttributedString",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "hash": {
       "name": "hash",
       "bridgedName": "hash",
@@ -265,19 +295,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "initWithEncodedAttributedString:": {
-      "name": "initWithEncodedAttributedString:",
-      "bridgedName": "initWithEncodedAttributedString",
-      "args": [
-        {
-          "name": "initWithEncodedAttributedString",
-          "type": "id"
-        }
-      ],
-      "returns": "id",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "initWithAttributedString:documentColorSpace:": {
       "name": "initWithAttributedString:documentColorSpace:",
       "bridgedName": "initWithAttributedString_documentColorSpace",
@@ -316,6 +333,27 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "initWithEncodedAttributedString:": {
+      "name": "initWithEncodedAttributedString:",
+      "bridgedName": "initWithEncodedAttributedString",
+      "args": [
+        {
+          "name": "initWithEncodedAttributedString",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "init": {
+      "name": "init",
+      "bridgedName": "init",
+      "args": [],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "treeAsDictionary": {
       "name": "treeAsDictionary",
       "bridgedName": "treeAsDictionary",
@@ -326,47 +364,12 @@
     }
   },
   "properties": {
-    "fontDescriptors": {
-      "name": "fontDescriptors",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
-        "copy",
-        "nonatomic"
-      ]
-    },
-    "transformedAttributedString": {
-      "name": "transformedAttributedString",
-      "pointer": true,
-      "type": "NSAttributedString",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
     "encodedAttributedString": {
       "name": "encodedAttributedString",
       "pointer": true,
       "type": "NSAttributedString",
       "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "attributedString": {
-      "name": "attributedString",
-      "pointer": true,
-      "type": "NSAttributedString",
-      "attributes": [
-        "retain",
-        "nonatomic"
-      ]
-    },
-    "fontNames": {
-      "name": "fontNames",
-      "pointer": true,
-      "type": "NSSet",
-      "attributes": [
+        "readonly",
         "copy",
         "nonatomic"
       ]
@@ -384,6 +387,44 @@
       "name": "unavailableFontNames",
       "pointer": true,
       "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "fontNames": {
+      "name": "fontNames",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "fontDescriptors": {
+      "name": "fontDescriptors",
+      "pointer": true,
+      "type": "NSSet",
+      "attributes": [
+        "readonly",
+        "copy",
+        "nonatomic"
+      ]
+    },
+    "transformedAttributedString": {
+      "name": "transformedAttributedString",
+      "pointer": true,
+      "type": "NSAttributedString",
+      "attributes": [
+        "readonly",
+        "nonatomic"
+      ]
+    },
+    "attributedString": {
+      "name": "attributedString",
+      "pointer": true,
+      "type": "NSAttributedString",
       "attributes": [
         "readonly",
         "nonatomic"

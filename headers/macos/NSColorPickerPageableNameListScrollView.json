@@ -1,12 +1,20 @@
 {
-  "imports": [],
+  "imports": [
+    "NSColorPickerSpectrumScrollerViewDataSource.h",
+    "NSColorPickerSpectrumScrollerViewDelegate.h"
+  ],
   "classes": [
-    "NSColorPickerPageableNameList"
+    "NSColorPickerPageableNameList",
+    "NSColorPickerSpectrumScrollerView",
+    "NSString"
   ],
   "protocol": false,
   "className": "NSColorPickerPageableNameListScrollView",
   "extends": "NSScrollView",
-  "interfaces": [],
+  "interfaces": [
+    "NSColorPickerSpectrumScrollerViewDelegate",
+    "NSColorPickerSpectrumScrollerViewDataSource"
+  ],
   "methods": {
     "_arrowPlacement": {
       "name": "_arrowPlacement",
@@ -21,6 +29,127 @@
       "bridgedName": "_partMouseDown",
       "args": [],
       "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDragged:": {
+      "name": "mouseDragged:",
+      "bridgedName": "mouseDragged",
+      "args": [
+        {
+          "name": "mouseDragged",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseUp:": {
+      "name": "mouseUp:",
+      "bridgedName": "mouseUp",
+      "args": [
+        {
+          "name": "mouseUp",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "mouseDown:": {
+      "name": "mouseDown:",
+      "bridgedName": "mouseDown",
+      "args": [
+        {
+          "name": "mouseDown",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "partHit:": {
+      "name": "partHit:",
+      "bridgedName": "partHit",
+      "args": [
+        {
+          "name": "partHit",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "acceptsFirstMouse:": {
+      "name": "acceptsFirstMouse:",
+      "bridgedName": "acceptsFirstMouse",
+      "args": [
+        {
+          "name": "acceptsFirstMouse",
+          "type": "id"
+        }
+      ],
+      "returns": "BOOL",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "colorListForSpectrumView:": {
+      "name": "colorListForSpectrumView:",
+      "bridgedName": "colorListForSpectrumView",
+      "args": [
+        {
+          "name": "colorListForSpectrumView",
+          "type": "id"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pageCountForSpectrumView:": {
+      "name": "pageCountForSpectrumView:",
+      "bridgedName": "pageCountForSpectrumView",
+      "args": [
+        {
+          "name": "pageCountForSpectrumView",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "currentPageForSpectrumView:": {
+      "name": "currentPageForSpectrumView:",
+      "bridgedName": "currentPageForSpectrumView",
+      "args": [
+        {
+          "name": "currentPageForSpectrumView",
+          "type": "id"
+        }
+      ],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "pageClicked:inSpectrumView:": {
+      "name": "pageClicked:inSpectrumView:",
+      "bridgedName": "pageClicked_inSpectrumView",
+      "args": [
+        {
+          "name": "pageClicked",
+          "type": "long long"
+        },
+        {
+          "name": "inSpectrumView",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -63,19 +192,6 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawRect:": {
-      "name": "drawRect:",
-      "bridgedName": "drawRect",
-      "args": [
-        {
-          "name": "drawRect",
-          "type": "struct CGRect"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
     "tile": {
       "name": "tile",
       "bridgedName": "tile",
@@ -84,12 +200,12 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "drawScroller:": {
-      "name": "drawScroller:",
-      "bridgedName": "drawScroller",
+    "drawRect:": {
+      "name": "drawRect:",
+      "bridgedName": "drawRect",
       "args": [
         {
-          "name": "drawScroller",
+          "name": "drawRect",
           "type": "struct CGRect"
         }
       ],
@@ -158,94 +274,11 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
-    "mouseUp:": {
-      "name": "mouseUp:",
-      "bridgedName": "mouseUp",
-      "args": [
-        {
-          "name": "mouseUp",
-          "type": "id"
-        }
-      ],
+    "awakeFromNib": {
+      "name": "awakeFromNib",
+      "bridgedName": "awakeFromNib",
+      "args": [],
       "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseDragged:": {
-      "name": "mouseDragged:",
-      "bridgedName": "mouseDragged",
-      "args": [
-        {
-          "name": "mouseDragged",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouseDown:": {
-      "name": "mouseDown:",
-      "bridgedName": "mouseDown",
-      "args": [
-        {
-          "name": "mouseDown",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "mouse:": {
-      "name": "mouse:",
-      "bridgedName": "mouse",
-      "args": [
-        {
-          "name": "mouse",
-          "type": "id"
-        }
-      ],
-      "returns": "void",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "partHit:": {
-      "name": "partHit:",
-      "bridgedName": "partHit",
-      "args": [
-        {
-          "name": "partHit",
-          "type": "id"
-        }
-      ],
-      "returns": "long long",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "acceptsFirstMouse:": {
-      "name": "acceptsFirstMouse:",
-      "bridgedName": "acceptsFirstMouse",
-      "args": [
-        {
-          "name": "acceptsFirstMouse",
-          "type": "id"
-        }
-      ],
-      "returns": "BOOL",
-      "kind": "instance",
-      "kindIndicator": "-"
-    },
-    "rectForPart:": {
-      "name": "rectForPart:",
-      "bridgedName": "rectForPart",
-      "args": [
-        {
-          "name": "rectForPart",
-          "type": "long long"
-        }
-      ],
-      "returns": "struct CGRect",
       "kind": "instance",
       "kindIndicator": "-"
     },
@@ -275,6 +308,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "currentPage": {
+      "name": "currentPage",
+      "bridgedName": "currentPage",
+      "args": [],
+      "returns": "long long",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "_init": {
       "name": "_init",
       "bridgedName": "_init",
@@ -284,5 +325,40 @@
       "kindIndicator": "-"
     }
   },
-  "properties": {}
+  "properties": {
+    "debugDescription": {
+      "name": "debugDescription",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "description": {
+      "name": "description",
+      "pointer": true,
+      "type": "NSString",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "hash": {
+      "name": "hash",
+      "pointer": false,
+      "type": "unsigned long long",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "superclass": {
+      "name": "superclass",
+      "pointer": false,
+      "type": "Class",
+      "attributes": [
+        "readonly"
+      ]
+    }
+  }
 }

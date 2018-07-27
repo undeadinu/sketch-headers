@@ -309,9 +309,9 @@
       "kind": "class",
       "kindIndicator": "+"
     },
-    "_resolveConflictsForDocument:atURL:byKeepingVersions:otherVersions:currentVersion:completionHandler:": {
-      "name": "_resolveConflictsForDocument:atURL:byKeepingVersions:otherVersions:currentVersion:completionHandler:",
-      "bridgedName": "_resolveConflictsForDocument_atURL_byKeepingVersions_otherVersions_currentVersion_completionHandler",
+    "_resolveConflictsForDocument:atURL:byKeepingVersions:otherVersions:currentVersion:collectingURLsToOpen:andErrors:completionHandler:": {
+      "name": "_resolveConflictsForDocument:atURL:byKeepingVersions:otherVersions:currentVersion:collectingURLsToOpen:andErrors:completionHandler:",
+      "bridgedName": "_resolveConflictsForDocument_atURL_byKeepingVersions_otherVersions_currentVersion_collectingURLsToOpen_andErrors_completionHandler",
       "args": [
         {
           "name": "_resolveConflictsForDocument",
@@ -334,8 +334,45 @@
           "type": "id"
         },
         {
+          "name": "collectingURLsToOpen",
+          "type": "id"
+        },
+        {
+          "name": "andErrors",
+          "type": "id"
+        },
+        {
           "name": "completionHandler",
           "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "_promoteVersions:atURL:forDocument:collectingURLsToOpen:andErrors:": {
+      "name": "_promoteVersions:atURL:forDocument:collectingURLsToOpen:andErrors:",
+      "bridgedName": "_promoteVersions_atURL_forDocument_collectingURLsToOpen_andErrors",
+      "args": [
+        {
+          "name": "_promoteVersions",
+          "type": "id"
+        },
+        {
+          "name": "atURL",
+          "type": "id"
+        },
+        {
+          "name": "forDocument",
+          "type": "id"
+        },
+        {
+          "name": "collectingURLsToOpen",
+          "type": "id"
+        },
+        {
+          "name": "andErrors",
+          "type": "id"
         }
       ],
       "returns": "void",
@@ -3561,6 +3598,40 @@
       "name": "_handleConflicts",
       "bridgedName": "_handleConflicts",
       "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "resolveConflictRemotelyWithFileVersion:completionHandler:": {
+      "name": "resolveConflictRemotelyWithFileVersion:completionHandler:",
+      "bridgedName": "resolveConflictRemotelyWithFileVersion_completionHandler",
+      "args": [
+        {
+          "name": "resolveConflictRemotelyWithFileVersion",
+          "type": "id"
+        },
+        {
+          "name": "completionHandler",
+          "type": "CDUnknownBlockType"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "willResolveConflictWithFileVersion:continuer:": {
+      "name": "willResolveConflictWithFileVersion:continuer:",
+      "bridgedName": "willResolveConflictWithFileVersion_continuer",
+      "args": [
+        {
+          "name": "willResolveConflictWithFileVersion",
+          "type": "id"
+        },
+        {
+          "name": "continuer",
+          "type": "CDUnknownBlockType"
+        }
+      ],
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"

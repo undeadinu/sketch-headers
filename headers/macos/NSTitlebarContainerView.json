@@ -1,7 +1,8 @@
 {
   "imports": [],
   "classes": [
-    "NSThemeFrame"
+    "NSThemeFrame",
+    "_NSTitlebarDecorationView"
   ],
   "protocol": false,
   "className": "NSTitlebarContainerView",
@@ -124,6 +125,14 @@
       "kind": "instance",
       "kindIndicator": "-"
     },
+    "layout": {
+      "name": "layout",
+      "bridgedName": "layout",
+      "args": [],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
     "dealloc": {
       "name": "dealloc",
       "bridgedName": "dealloc",
@@ -131,9 +140,30 @@
       "returns": "void",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "initWithFrame:": {
+      "name": "initWithFrame:",
+      "bridgedName": "initWithFrame",
+      "args": [
+        {
+          "name": "initWithFrame",
+          "type": "struct CGRect"
+        }
+      ],
+      "returns": "id",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
+    "decorationView": {
+      "name": "decorationView",
+      "pointer": true,
+      "type": "_NSTitlebarDecorationView",
+      "attributes": [
+        "retain"
+      ]
+    },
     "titleHeightToHideInFullScreen": {
       "name": "titleHeightToHideInFullScreen",
       "pointer": false,

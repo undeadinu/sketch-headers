@@ -4,9 +4,11 @@
     "NSCoding.h",
     "NSTouchBarProvider.h",
     "NSTouchBarProviderContainer.h",
-    "NSUIActivityProvider.h"
+    "NSUIActivityProvider.h",
+    "_NSQuickActionItemSource.h"
   ],
   "classes": [
+    "NSArray",
     "NSMenu",
     "NSString",
     "NSTouchBar",
@@ -19,6 +21,7 @@
     "NSTouchBarProviderContainer",
     "NSUIActivityProvider",
     "NSTouchBarProvider",
+    "_NSQuickActionItemSource",
     "NSCoding"
   ],
   "methods": {
@@ -41,6 +44,54 @@
     "automaticallyNotifiesObserversOfTouchBar": {
       "name": "automaticallyNotifiesObserversOfTouchBar",
       "bridgedName": "automaticallyNotifiesObserversOfTouchBar",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSelectionItems": {
+      "name": "automaticallyNotifiesObserversOfSelectionItems",
+      "bridgedName": "automaticallyNotifiesObserversOfSelectionItems",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfCanReadSelectionFromItems": {
+      "name": "automaticallyNotifiesObserversOfCanReadSelectionFromItems",
+      "bridgedName": "automaticallyNotifiesObserversOfCanReadSelectionFromItems",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingSupportsQuickActionReturningItems": {
+      "name": "keyPathsForValuesAffectingSupportsQuickActionReturningItems",
+      "bridgedName": "keyPathsForValuesAffectingSupportsQuickActionReturningItems",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "keyPathsForValuesAffectingQuickActionItems": {
+      "name": "keyPathsForValuesAffectingQuickActionItems",
+      "bridgedName": "keyPathsForValuesAffectingQuickActionItems",
+      "args": [],
+      "returns": "id",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfQuickActionItems": {
+      "name": "automaticallyNotifiesObserversOfQuickActionItems",
+      "bridgedName": "automaticallyNotifiesObserversOfQuickActionItems",
+      "args": [],
+      "returns": "BOOL",
+      "kind": "class",
+      "kindIndicator": "+"
+    },
+    "automaticallyNotifiesObserversOfSupportsQuickActionReturningItems": {
+      "name": "automaticallyNotifiesObserversOfSupportsQuickActionReturningItems",
+      "bridgedName": "automaticallyNotifiesObserversOfSupportsQuickActionReturningItems",
       "args": [],
       "returns": "BOOL",
       "kind": "class",
@@ -4532,6 +4583,53 @@
       "returns": "id",
       "kind": "instance",
       "kindIndicator": "-"
+    },
+    "readSelectionFromItems:": {
+      "name": "readSelectionFromItems:",
+      "bridgedName": "readSelectionFromItems",
+      "args": [
+        {
+          "name": "readSelectionFromItems",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quickAction:didFailWithError:": {
+      "name": "quickAction:didFailWithError:",
+      "bridgedName": "quickAction_didFailWithError",
+      "args": [
+        {
+          "name": "quickAction",
+          "type": "id"
+        },
+        {
+          "name": "didFailWithError",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
+    },
+    "quickAction:didPerformReturningItems:": {
+      "name": "quickAction:didPerformReturningItems:",
+      "bridgedName": "quickAction_didPerformReturningItems",
+      "args": [
+        {
+          "name": "quickAction",
+          "type": "id"
+        },
+        {
+          "name": "didPerformReturningItems",
+          "type": "id"
+        }
+      ],
+      "returns": "void",
+      "kind": "instance",
+      "kindIndicator": "-"
     }
   },
   "properties": {
@@ -4573,6 +4671,40 @@
       "type": "NSTouchBar",
       "attributes": [
         "retain"
+      ]
+    },
+    "canReadSelectionFromItems": {
+      "name": "canReadSelectionFromItems",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "selectionItems": {
+      "name": "selectionItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
+      ]
+    },
+    "supportsQuickActionReturningItems": {
+      "name": "supportsQuickActionReturningItems",
+      "pointer": false,
+      "type": "BOOL",
+      "attributes": [
+        "readonly"
+      ]
+    },
+    "quickActionItems": {
+      "name": "quickActionItems",
+      "pointer": true,
+      "type": "NSArray",
+      "attributes": [
+        "readonly",
+        "copy"
       ]
     },
     "debugDescription": {
